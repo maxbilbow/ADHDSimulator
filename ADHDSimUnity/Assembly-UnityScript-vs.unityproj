@@ -5,11 +5,11 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{E1071246-3541-8AF1-E291-8D4752957B8D}</ProjectGuid>
+	<ProjectGuid>{A7CC2AA6-2A14-B84B-7A0E-2AEE00F095A2}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
 	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 	<FileAlignment>512</FileAlignment>
 	<BaseDirectory>Assets</BaseDirectory>
@@ -46,13 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ADHDSim\Scripts\ClockBehaviour.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\DragRigidbody.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\GoAwayText.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\RMXBehaviour.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\RMXCameraListener.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\RMXGameObject.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\RMXMasterControl.cs" />
+     <Compile Include="Assets\ClockFunctions.js" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
@@ -69,8 +63,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6B412B81-E476-18A8-A791-7568ED7191D2}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{6B412B81-E476-18A8-A791-7568ED7191D2}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
