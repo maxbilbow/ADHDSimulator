@@ -4,20 +4,26 @@ using UnityEngine;
 
 namespace ADHD
 {
-    public class DragRigidbody : MonoBehaviour
+    public class DragRigidbody : RMXGameObject
     {
+		private const float PI_OVER_180 = Mathf.PI/180;
         const float k_Spring = 50.0f;
         const float k_Damper = 5.0f;
         const float k_Drag = 10.0f;
         const float k_AngularDrag = 5.0f;
         const float k_Distance = 0.2f;
         const bool k_AttachToCenterOfMass = false;
+//		Rigidbody2D finger;
+		private GameObject finger;
 
         private SpringJoint2D m_SpringJoint;
 
 		void start() {
 
+
+//			finger.GetComponent<CircleCollider2D>.().enabled = false;
 		}
+
 
         private void Update()
         {
@@ -32,25 +38,42 @@ namespace ADHD
             // We need to actually hit an object
 			RaycastHit2D hit = Physics2D.Raycast (mainCamera.ScreenPointToRay (Input.mousePosition).origin,
 			                                     mainCamera.ScreenPointToRay (Input.mousePosition).direction);
+			if (!m_SpringJoint)
+			{
+				var go = new GameObject("Rigidbody dragger");
+				Rigidbody2D body = go.AddComponent<Rigidbody2D>();
+				m_SpringJoint = go.AddComponent<SpringJoint2D>();
+				body.isKinematic = true;
+			}
+
+
             if (!hit)
             {
+				if (!finger) {
+					finger = new GameObject("Finger");
+//					Rigidbody2D body = finger.AddComponent<Rigidbody2D>();
+					CircleCollider2D collider = finger.AddComponent<CircleCollider2D>();
+//					body.isKinematic = true;
+					collider.radius = 0.1f;
+					collider.sharedMaterial = new PhysicsMaterial2D();
+					collider.sharedMaterial.bounciness = 0.5f;
+					finger.SetActive (false);
+				}
 				print ("We need to actually hit an object");
+				finger.SetActive (true);
+				finger.transform.position = mainCamera.ScreenPointToRay (Input.mousePosition).origin;
+				StartCoroutine("MoveFinger", 0);// mainCamera.ScreenPointToRay (Input.mousePosition).direction);
                 return;
             }
-            // We need to hit a rigidbody that is not kinematic
-            if (!hit.rigidbody || hit.rigidbody.isKinematic)
-            {
-				print ("We need to hit a rigidbody that is not kinematic! ");
-                return;
-            }
+          
 
-            if (!m_SpringJoint)
-            {
-                var go = new GameObject("Rigidbody dragger");
-                Rigidbody2D body = go.AddComponent<Rigidbody2D>();
-                m_SpringJoint = go.AddComponent<SpringJoint2D>();
-                body.isKinematic = true;
-            }
+            
+			// We need to hit a rigidbody that is not kinematic
+			if (!hit.rigidbody || hit.rigidbody.isKinematic)
+			{
+				print ("We need to hit a rigidbody that is not kinematic! ");
+				return;
+			}
 
             m_SpringJoint.transform.position = hit.point;
             m_SpringJoint.anchor = Vector2.zero;
@@ -59,7 +82,17 @@ namespace ADHD
             m_SpringJoint.dampingRatio = k_Damper;
             m_SpringJoint.distance = k_Distance;
 			m_SpringJoint.connectedBody = hit.rigidbody;
-			m_SpringJoint.connectedAnchor = hit.point - m_SpringJoint.connectedBody.position;
+
+			var theta = m_SpringJoint.connectedBody.rotation * -PI_OVER_180;
+			var anchor = hit.point - m_SpringJoint.connectedBody.position;
+
+			var cosø = Mathf.Cos (theta);
+			var sinø = Mathf.Sin (theta);
+			var x = cosø * anchor.x - sinø * anchor.y;
+			var y = sinø * anchor.x + cosø * anchor.y;
+
+			m_SpringJoint.connectedAnchor = new Vector2 (x, y);//(hit.point - m_SpringJoint.connectedBody.position);
+	
 
             StartCoroutine("DragObject", hit.distance);
 			print (
@@ -93,14 +126,26 @@ namespace ADHD
         }
 
 
+		private IEnumerator MoveFinger(float distance)
+		{
+			var mainCamera = FindCamera();
+			while (Input.GetMouseButton(0))
+			{
+				var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+				finger.transform.position = ray.GetPoint(distance);
+				yield return null;
+			}
+			if (finger.activeSelf)
+			{
+				finger.SetActive (false);
+			}
+		}
+
+
+
         private Camera FindCamera()
         {
-            if (GetComponent<Camera>())
-            {
-                return GetComponent<Camera>();
-            }
-
-            return Camera.main;
+			return rmx.activeCamera;
         }
     }
 }
