@@ -59,8 +59,15 @@ namespace ADHD
             m_SpringJoint.dampingRatio = k_Damper;
             m_SpringJoint.distance = k_Distance;
 			m_SpringJoint.connectedBody = hit.rigidbody;
+			m_SpringJoint.connectedAnchor = hit.point - m_SpringJoint.connectedBody.position;
 
             StartCoroutine("DragObject", hit.distance);
+			print (
+				"\njoint anchor: " + m_SpringJoint.connectedAnchor +
+				"\nHit Position: " + hit.point + 
+				"\nObj Position: " + m_SpringJoint.connectedBody.position +
+				"\n  Hit Anchor: " + m_SpringJoint.anchor
+				);
         }
 
 
