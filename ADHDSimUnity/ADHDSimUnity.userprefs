@@ -1,31 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/DragRigidbody.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../aiCunity/UnityProject/Assets/Max Scripts/RMXCameraListener.cs">
     <Files>
-      <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/RMXMasterControl.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/RMXGameObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/RMXCameraListener.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/RMXBehaviour.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="57" Column="27" />
-      <File FileName="Assets/ADHDSim/Scripts/GoAwayText.cs" Line="1" Column="1" />
+      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXAiPoppy.cs" Line="44" Column="3" />
+      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXMasterControl.cs" Line="16" Column="22" />
+      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXCameraListener.cs" Line="53" Column="4" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="ADHDSim" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="DragRigidbody.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-          <Node name="Assembly-CSharp-firstpass" expanded="True">
-            <Node name="Standard Assets" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
