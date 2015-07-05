@@ -49,10 +49,12 @@
      <Compile Include="Assets\ADHDSim\Scripts\ClockBehaviour.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\DragRigidbody.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GoAwayText.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\PauseManager.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\RMXBehaviour.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\RMXCameraListener.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\RMXGameObject.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\RMXMasterControl.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\Timer.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
  <Reference Include="UnityEngine.UI">

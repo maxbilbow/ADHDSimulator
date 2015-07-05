@@ -4,6 +4,8 @@ using UnityStandardAssets.CrossPlatformInput;
 
 
 public class RMXMasterControl : RMXGameObject {
+
+	public static RMXMasterControl control;
 	private Camera[] cameras;
 	private int current = 0;
 
@@ -27,6 +29,13 @@ public class RMXMasterControl : RMXGameObject {
 	// Use this for initialization
 	protected override void Awake () {
 		base.Awake();
+		if (control == null) {
+			DontDestroyOnLoad (gameObject);
+			control = this;
+		} else if (control != this) {
+			Destroy (gameObject);
+		}
+
 		this.cameras = new Camera [Camera.allCamerasCount];
 		Camera.GetAllCameras(this.cameras);
 		this.nextCamera ();
@@ -75,28 +84,5 @@ public class RMXMasterControl : RMXGameObject {
 		
 		
 	}
-	
-	
-	//	public void move(string direction) {
-	//		int x = 0;
-	//		int y = 0;
-	//		switch (direction) {
-	//		case "w":
-	//			y = 1;
-	//			break;
-	//		case "s":
-	//			y = -1;
-	//			break;
-	//		case "a":
-	//			x = -1;
-	//			break;
-	//		case "d":
-	//			x = 1;
-	//			break;
-	//		}	
-	//		int speed = 10;
-	//		UnityEngine.EventSystems.AxisEventData.ReferenceEquals (x * speed, y * speed);
-	//		UnityEngine.EventSystems.AxisEventData.Equals(x * speed ,y * speed);
-	//		UnityEngine.Event.KeyboardEvent (direction);
-	//	}
+
 }

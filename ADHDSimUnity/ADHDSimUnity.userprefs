@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../aiCunity/UnityProject/Assets/Max Scripts/RMXCameraListener.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/Timer.cs">
     <Files>
-      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXAiPoppy.cs" Line="44" Column="3" />
-      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXMasterControl.cs" Line="16" Column="22" />
-      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXCameraListener.cs" Line="53" Column="4" />
+      <File FileName="Assets/ADHDSim/Scripts/RMXMasterControl.cs" Line="10" Column="26" />
+      <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="30" Column="30" />
+      <File FileName="Assets/ADHDSim/Scripts/PauseManager.cs" Line="18" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
