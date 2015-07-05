@@ -6,7 +6,7 @@ namespace RMX {
 	public class Timer : MonoBehaviour {
 
 		public static Timer timer;
-		public const string TimeWasted = "Time Wasted most recent game";
+		public const string TimeWasted = "Time Wasted last game";
 		public const string TotalTimeWasted = "Total Time Wasted";
 		public static PauseManager pauseManager;
 		public bool paused  {
@@ -34,7 +34,7 @@ namespace RMX {
 				var seconds = lastTime;
 				int minutes = (int) seconds / 60;
 				int hours = minutes / 60;
-				seconds = seconds % 60;
+				seconds = Mathf.Round(seconds % 60);
 				string result = "";
 				if (hours > 0) {
 					result += hours + " hours, ";
@@ -60,10 +60,10 @@ namespace RMX {
 					result += hours + " hours, ";
 				}
 				if (minutes > 0) {
-					result += minutes + " minutes, ";
+					result += minutes + " minutes and ";
 				}
 				if (seconds > 0) {
-					result += "and " + seconds + " seconds.";
+					result += seconds + " seconds.";
 				}
 				return result;
 			}
@@ -88,8 +88,8 @@ namespace RMX {
 		void Start () {
 //			time = 0;
 			print ("Last time: " + lastTime + ", total time: " + totalTime);
-			canvas.enabled = false;
-			if (lastTime > 0) {
+			Pause (false);
+			if (lastTime > 1) {
 				Pause(true);
 			}
 
@@ -100,19 +100,14 @@ namespace RMX {
 	
 		void Update()
 		{
-			var newTotal = totalTime + Time.deltaTime;
-			PlayerPrefs.SetFloat (TimeWasted, Time.fixedTime);
-			PlayerPrefs.SetFloat (TotalTimeWasted, newTotal);
-
+			if (!paused) {
+				var newTotal = totalTime + Time.deltaTime;
+				PlayerPrefs.SetFloat (TimeWasted, Time.fixedTime);
+				PlayerPrefs.SetFloat (TotalTimeWasted, newTotal);
+			}
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
 				Pause (!paused);
-			}
-			
-			if (paused && Time.timeScale > 0) {
-				Time.timeScale = 0;
-			} else if (!paused && Time.timeScale == 0) {
-				Time.timeScale = 1;
 			}
 		}
 
@@ -159,7 +154,7 @@ namespace RMX {
 						"\n of the time I've lost developing this game." +
 						"\n\n Try again?";
 				} else {
-					text = "Congratulations. You have waisted " + Timer.TimeWasted;
+					text = "Congratulations. You have wasted " + Timer.lastTimeText;
 					var activities = Timer.WhatYouCouldHaveDone (PlayerPrefs.GetFloat (Timer.TotalTimeWasted));
 					var rand = Random.Range (0, activities.Count); 
 					text += "\n\nDuring that time you could have " + activities [rand];
@@ -170,7 +165,7 @@ namespace RMX {
 				style.richText = true;
 				style.wordWrap = true;
 				style.alignment = TextAnchor.MiddleCenter;
-				style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 10;
+				style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 25;
 				
 				GUI.Label (new Rect (0, 0, Screen.width, Screen.height), text, style);
 
