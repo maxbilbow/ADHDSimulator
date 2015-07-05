@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-namespace ADHD
+namespace RMX
 {
     public class DragRigidbody : RMXGameObject
     {
@@ -32,9 +32,7 @@ namespace ADHD
             {
                 return;
             }
-
-            var mainCamera = FindCamera();
-
+			var mainCamera = Camera.main;
             // We need to actually hit an object
 			RaycastHit2D hit = Physics2D.Raycast (mainCamera.ScreenPointToRay (Input.mousePosition).origin,
 			                                     mainCamera.ScreenPointToRay (Input.mousePosition).direction);
@@ -110,7 +108,8 @@ namespace ADHD
             var oldAngularDrag = m_SpringJoint.connectedBody.angularDrag;
             m_SpringJoint.connectedBody.drag = k_Drag;
             m_SpringJoint.connectedBody.angularDrag = k_AngularDrag;
-            var mainCamera = FindCamera();
+			var mainCamera = Camera.main;
+
             while (Input.GetMouseButton(0))
             {
                 var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -128,7 +127,8 @@ namespace ADHD
 
 		private IEnumerator MoveFinger(float distance)
 		{
-			var mainCamera = FindCamera();
+			var mainCamera = Camera.main;
+
 			while (Input.GetMouseButton(0))
 			{
 				var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -141,11 +141,5 @@ namespace ADHD
 			}
 		}
 
-
-
-        private Camera FindCamera()
-        {
-			return rmx.activeCamera;
-        }
     }
 }

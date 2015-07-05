@@ -8,15 +8,16 @@ using UnityEditor;
 namespace RMX {
 	public class PauseManager : MonoBehaviour {
 
-
-		public static Canvas canvas {
+//		Text text1, text2;
+		public Canvas canvas {
 			get {
-				return Timer.pauseManager.GetComponent<Canvas>();
+				return GetComponent<Canvas>();
 			}
 		}
-		public static bool isPaused {
+		bool paused;
+		public bool isPaused {
 			get {
-				return PauseManager.canvas.enabled;
+				return paused;// PauseManager.canvas.enabled;
 			}
 		}
 
@@ -29,39 +30,46 @@ namespace RMX {
 			}
 		}
 
+
+
+
 		void Start()
 		{
 			canvas.enabled = false;
 		}
-		
+
+
 		void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				Pause(!isPaused);
+				Pause (!paused);
+			}
+
+			if (paused && Time.timeScale > 0) {
+				Time.timeScale = 0;
+			} else if (!paused && Time.timeScale == 0) {
+				Time.timeScale = 1;
 			}
 		}
 
 		public void OnApplicationPause(bool paused) {
-			Pause (true);
-		}
-
-		public void Pause(bool enableCanvas)
-		{
-			canvas.enabled = enableCanvas;
-			if (isPaused) {
-				var text = GameObject.Find ("timeText").GetComponent<Text> ();
-				var text2 = GameObject.Find ("timeText2").GetComponent<Text> ();
-				text.text = "Congratulations. You have waisted " + Timer.totalTimeText;
-
-				var activities = Timer.WhatYouCouldHaveDone (PlayerPrefs.GetFloat (Timer.TotalTimeWasted));
-				var rand = Random.Range (0, activities.Count); 
-
-				text2.text = "During that time you could have " + activities [rand];
+			if (paused) {
+				Pause (true);
 			}
-			Time.timeScale = enableCanvas ? 0 : 1;
 		}
-		
+
+
+
+		public void Pause(bool pause) {
+			canvas.enabled = pause;
+			this.paused = pause;
+			Time.timeScale = pause ? 0 : 1;
+
+		}
+
+	
+
 		public void Quit()
 		{
 			#if UNITY_EDITOR 
@@ -69,12 +77,6 @@ namespace RMX {
 			#else 
 			Application.Quit();
 			#endif
-		}
-
-		void OnGUI() {
-			if (isPaused) 
-				GUI.Label(new Rect(100, 100, 50, 30), "Game paused");
-			
 		}
 		
 		void OnApplicationFocus(bool focusStatus) {
