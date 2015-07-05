@@ -19,7 +19,6 @@ namespace RMX {
 				return PauseManager.canvas.enabled;
 			}
 		}
-//		static float pausedFrom;
 
 		void Awake() {
 			if (Timer.pauseManager == null) {
@@ -37,21 +36,20 @@ namespace RMX {
 		
 		void Update()
 		{
-//			if (isPaused && Time.fixedTime - pausedFrom > 10) {
-//				Pause ();
-//			}
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				Pause();
+				Pause(!isPaused);
 			}
 		}
-		
-		public void Pause()
-		{
 
-			canvas.enabled = !canvas.enabled;
+		public void OnApplicationPause(bool paused) {
+			Pause (true);
+		}
+
+		public void Pause(bool enableCanvas)
+		{
+			canvas.enabled = enableCanvas;
 			if (isPaused) {
-//				pausedFrom = Time.fixedTime;
 				var text = GameObject.Find ("timeText").GetComponent<Text> ();
 				var text2 = GameObject.Find ("timeText2").GetComponent<Text> ();
 				text.text = "Congratulations. You have waisted " + Timer.totalTimeText;
@@ -61,7 +59,7 @@ namespace RMX {
 
 				text2.text = "During that time you could have " + activities [rand];
 			}
-			Time.timeScale = Time.timeScale == 0 ? 1 : 0;
+			Time.timeScale = enableCanvas ? 0 : 1;
 		}
 		
 		public void Quit()
@@ -71,6 +69,18 @@ namespace RMX {
 			#else 
 			Application.Quit();
 			#endif
+		}
+
+		void OnGUI() {
+			if (isPaused) 
+				GUI.Label(new Rect(100, 100, 50, 30), "Game paused");
+			
+		}
+		
+		void OnApplicationFocus(bool focusStatus) {
+			if (!focusStatus) {
+				Pause(true);
+			}
 		}
 	}
 }

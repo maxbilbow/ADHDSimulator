@@ -77,7 +77,7 @@ namespace RMX {
 //			time = 0;
 			print ("Last time: " + lastTime + ", total time: " + totalTime);
 			if (lastTime > 0) {
-				pauseManager.Pause();
+				pauseManager.Pause(true);
 			}
 		}
 		

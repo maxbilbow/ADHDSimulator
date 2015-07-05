@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/Timer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/PauseManager.cs">
     <Files>
       <File FileName="Assets/ADHDSim/Scripts/RMXMasterControl.cs" Line="10" Column="26" />
-      <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="30" Column="30" />
-      <File FileName="Assets/ADHDSim/Scripts/PauseManager.cs" Line="18" Column="27" />
+      <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="40" Column="15" />
+      <File FileName="Assets/ADHDSim/Scripts/PauseManager.cs" Line="22" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

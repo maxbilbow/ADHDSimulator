@@ -5,19 +5,19 @@ using UnityEngine.EventSystems;
 namespace ADHD {
 	public class GoAwayText : RMXGameObject, IPointerClickHandler {
 
-		RMXGameObject objectToReset;
+		MonoBehaviour objectToReset;
 		// Use this for initialization
 //		void Start () {
 //		
 //		}
 		
-		public void ActivateWithObject(RMXGameObject obj) {
+		public void ActivateWithObject(MonoBehaviour obj) {
 			objectToReset = obj;
 			Activate();
 		}
 
 		public void OnPointerClick(PointerEventData data) {
-			objectToReset.Reset();
+			objectToReset.SendMessage("Reset");
 			Deactivate();
 		}
 	}
