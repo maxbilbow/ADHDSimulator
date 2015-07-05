@@ -9,11 +9,12 @@ namespace RMX {
 		public const string TimeWasted = "Time Wasted most recent game";
 		public const string TotalTimeWasted = "Total Time Wasted";
 		public static PauseManager pauseManager;
-		public static bool isPaused {
+		public bool paused  {
 			get {
-				return pauseManager.isPaused;// PauseManager.canvas.enabled;
+				return canvas.enabled;
 			}
 		}
+
 //		float time;
 		public static float totalTime {
 			get {
@@ -78,23 +79,42 @@ namespace RMX {
 			}
 		}
 
+		public Canvas canvas {
+			get {
+				return GetComponentInChildren<Canvas>();
+			}
+		}
+
 		void Start () {
 //			time = 0;
 			print ("Last time: " + lastTime + ", total time: " + totalTime);
+			canvas.enabled = false;
 			if (lastTime > 0) {
-				pauseManager.Pause(true);
+				Pause(true);
 			}
+
 		}
+
 		
 		// Update is called once per frame
-		void Update () {
+	
+		void Update()
+		{
 			var newTotal = totalTime + Time.deltaTime;
 			PlayerPrefs.SetFloat (TimeWasted, Time.fixedTime);
 			PlayerPrefs.SetFloat (TotalTimeWasted, newTotal);
 
-//			print ("Last time: " + lastTime + ", total time: " + totalTime);
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				Pause (!paused);
+			}
+			
+			if (paused && Time.timeScale > 0) {
+				Time.timeScale = 0;
+			} else if (!paused && Time.timeScale == 0) {
+				Time.timeScale = 1;
+			}
 		}
-
 
 		public void Save() {
 
@@ -130,7 +150,7 @@ namespace RMX {
 
 		bool information = false;
 		void OnGUI(){
-			if (isPaused) {
+			if (paused) {
 				//				myStyle.font = myFont;
 				string text;
 				if (information) {
@@ -139,7 +159,7 @@ namespace RMX {
 						"\n of the time I've lost developing this game." +
 						"\n\n Try again?";
 				} else {
-					text = "Congratulations. You have waisted " + Timer.totalTimeText;
+					text = "Congratulations. You have waisted " + Timer.TimeWasted;
 					var activities = Timer.WhatYouCouldHaveDone (PlayerPrefs.GetFloat (Timer.TotalTimeWasted));
 					var rand = Random.Range (0, activities.Count); 
 					text += "\n\nDuring that time you could have " + activities [rand];
@@ -156,6 +176,27 @@ namespace RMX {
 
 			} else if (information) {
 				information = false;
+			}
+		}
+
+		public void OnApplicationPause(bool paused) {
+			if (paused) {
+				Pause (true);
+			}
+		}
+		
+		
+		
+		public void Pause(bool pause) {
+			canvas.enabled = pause;
+			this.canvas.enabled = pause;
+			Time.timeScale = pause ? 0 : 1;
+			
+		}
+
+		void OnApplicationFocus(bool focusStatus) {
+			if (!focusStatus) {
+				Pause(true);
 			}
 		}
 	}
