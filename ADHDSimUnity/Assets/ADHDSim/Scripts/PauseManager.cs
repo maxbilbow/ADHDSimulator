@@ -22,16 +22,6 @@ namespace RMX {
 		}
 
 
-
-
-
-
-
-
-
-
-	
-
 		public void Quit()
 		{
 			#if UNITY_EDITOR 

@@ -155,7 +155,7 @@ namespace RMX {
 						"\n\n Try again?";
 				} else {
 					text = "Congratulations. You have wasted " + Timer.lastTimeText;
-					var activities = Timer.WhatYouCouldHaveDone (PlayerPrefs.GetFloat (Timer.TotalTimeWasted));
+					var activities = Timer.WhatYouCouldHaveDone (PlayerPrefs.GetFloat (Timer.TimeWasted));
 					var rand = Random.Range (0, activities.Count); 
 					text += "\n\nDuring that time you could have " + activities [rand];
 
