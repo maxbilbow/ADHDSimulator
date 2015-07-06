@@ -199,7 +199,7 @@ namespace RMX {
 
 				}
 				
-				var activities = Sentences.WhatYouCouldHaveDone (time);
+				List<string> activities = Sentences.WhatYouCouldHaveDone (time);
 				var rand = Random.Range (0, activities.Count); 
 				text += "\n\nDuring that time you could have " + activities [rand];
 					

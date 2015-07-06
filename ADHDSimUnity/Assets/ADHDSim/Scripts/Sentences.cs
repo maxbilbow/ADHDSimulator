@@ -3,17 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace RMX {
-	public class Sentences : ScriptableObject {
+	public class Sentences {
 
-		// Use this for initialization
-		void Start () {
-		
-		}
-		
-		// Update is called once per frame
-		void Update () {
-		
-		}
 
 		public static List<string> WhatYouCouldHaveDone(float time) {
 			var timeInMinutes = time / 60;
