@@ -8,6 +8,7 @@ namespace RMX {
 		public static GameController control;
 		public GameObject mobileInput;
 		public GameObject desktopInput;
+		public GameCenter gameCenter = new GameCenter ();
 
 		public Vector2 velocity {
 			get {

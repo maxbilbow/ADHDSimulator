@@ -7,6 +7,8 @@ Project("{0F82372C-367C-3214-CCBC-557125E46952}") = "ADHDSimUnity", "Assembly-CS
 EndProject
 Project("{0F82372C-367C-3214-CCBC-557125E46952}") = "ADHDSimUnity", "Assembly-CSharp-Editor.csproj", "{F2D613D9-0230-9FE9-E927-1471F48B240C}"
 EndProject
+Project("{0F82372C-367C-3214-CCBC-557125E46952}") = "ADHDSimUnity", "Assembly-UnityScript.unityproj", "{A7CC2AA6-2A14-B84B-7A0E-2AEE00F095A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,15 @@ Global
 		{F2D613D9-0230-9FE9-E927-1471F48B240C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2D613D9-0230-9FE9-E927-1471F48B240C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2D613D9-0230-9FE9-E927-1471F48B240C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CC2AA6-2A14-B84B-7A0E-2AEE00F095A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CC2AA6-2A14-B84B-7A0E-2AEE00F095A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CC2AA6-2A14-B84B-7A0E-2AEE00F095A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CC2AA6-2A14-B84B-7A0E-2AEE00F095A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																								GlobalSection(MonoDevelopProperties) = preSolution
+																													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
