@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SocialPlatforms;
 
 namespace RMX {
-	public class User : MonoBehaviour , ILocalUser{
+	public class User : ILocalUser{
 
 		// Use this for initialization
 		void Start () {

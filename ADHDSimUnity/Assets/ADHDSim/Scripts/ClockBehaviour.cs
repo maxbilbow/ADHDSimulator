@@ -6,7 +6,7 @@ namespace RMX {
 	public class ClockBehaviour : MonoBehaviour {
 		// Use this for initialization
 		public Vector3 startingPoint;
-		public static List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
+		public static List<ClockBehaviour> clocks;
 		public static ClockBehaviour original;
 	
 		private static bool IsVisible(ClockBehaviour clock) {
@@ -46,6 +46,7 @@ namespace RMX {
 				print ("ERROR"); 
 				MaxTimeOffScreen = 5;
 			}
+			clocks = new List<ClockBehaviour> ();
 		}
 
 		public static ClockBehaviour New() {

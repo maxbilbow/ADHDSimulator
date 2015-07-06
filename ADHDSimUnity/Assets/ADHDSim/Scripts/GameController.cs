@@ -8,7 +8,7 @@ namespace RMX {
 		public static GameController control;
 		public GameObject mobileInput;
 		public GameObject desktopInput;
-		public GameCenter gameCenter = new GameCenter ();
+		public GameCenter gameCenter;// = new GameCenter ();
 		public float newClockThreshold = 120;
 		public Vector2 velocity {
 			get {
@@ -59,6 +59,7 @@ namespace RMX {
 
 		void Start() {
 //			newClockThreshold = Random.Range (0, newClockThreshold);
+			gameCenter = gameObject.AddComponent<GameCenter> ();
 		}
 		
 		// Update is called once per frame
