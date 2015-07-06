@@ -1,13 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/PauseManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/Timer.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets/ADHDSim/Scripts/RMXMasterControl.cs" Line="10" Column="26" />
       <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="96" Column="4" />
       <File FileName="Assets/ADHDSim/Scripts/PauseManager.cs" Line="62" Column="41" />
       <File FileName="Assets/ADHDSim/Scripts/GoAwayText.cs" Line="21" Column="17" />
       <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="43" Column="3" />
       <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="168" Column="93" />
+      <File FileName="Assets/ADHDSim/Scripts/GameController.cs" Line="48" Column="35" />
+      <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="111" Column="33" />
+      <File FileName="Assets/ADHDSim/Scripts/GoAwayText.cs" Line="5" Column="14" />
+      <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="33" Column="7" />
+      <File FileName="Assets/ADHDSim/Scripts/PauseManager.cs" Line="27" Column="3" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

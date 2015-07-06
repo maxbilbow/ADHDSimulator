@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.EventSystems;
 
-namespace ADHD {
+namespace RMX {
 	public class GoAwayText : RMXGameObject, IPointerClickHandler {
 
 		MonoBehaviour objectToReset;

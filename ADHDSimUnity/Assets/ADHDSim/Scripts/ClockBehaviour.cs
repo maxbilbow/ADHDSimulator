@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace ADHD {
+namespace RMX {
 	public class ClockBehaviour : MonoBehaviour {
 		// Use this for initialization
 		public Vector3 startingPoint;
 		public GameObject goAwayText;
+
 		void Start () {
 			if (startingPoint == Vector3.zero && transform.position != Vector3.zero) {
 				startingPoint = transform.position;
@@ -29,13 +30,12 @@ namespace ADHD {
 			}
 		}
 
-		public bool fellOffTheScreen {
-			get {
-				return !GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.current), gameObject.GetComponent<Collider2D>().bounds);
-//				return ( self.point.y < self.ma
-			}
-		}
-
+//		public bool fellOffTheScreen {
+//			get {
+//				return !GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.current), gameObject.GetComponent<Collider2D>().bounds);
+//			}
+//		}
+//
 		public void Reset() {
 			transform.position = startingPoint;
 			GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
