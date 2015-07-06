@@ -3,17 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace RMX {
+	public struct Key {
+		public const string LastSession= "last session";
+		public const string LongestProcrastination = "longestProcrastination";
+		public const string LastProcrastination = "last uninterupted";
+		public const string Total = "Total Time Wasted";
+	}
+
 	public class Timer : MonoBehaviour {
 
 		GameCenter gameCenter;
 
 		public static Timer timer;
-		public struct Key {
-			public const string LastSession= "last session";
-			public const string LongestProcrastination = "longestProcrastination";
-			public const string LastProcrastination = "last uninterupted";
-			public const string Total = "Total Time Wasted";
-		}
+
 
 		public static PauseManager pauseManager;
 		public bool paused  {
@@ -210,6 +212,9 @@ namespace RMX {
 			Time.timeScale = pause ? 0 : 1;
 			this.canvas.enabled = pause;
 			print (this);
+			if (!pause) {
+				ClockBehaviour.New();
+			}
 		}
 
 		void OnApplicationQuit() {

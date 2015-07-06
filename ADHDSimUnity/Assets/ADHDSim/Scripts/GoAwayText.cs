@@ -1,25 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.EventSystems;
 
 namespace RMX {
-	public class GoAwayText : RMXGameObject, IPointerClickHandler {
+	public class GoAwayText : MonoBehaviour {
 
-		MonoBehaviour objectToReset;
-		// Use this for initialization
-//		void Start () {
-//		
-//		}
-		
-		public void ActivateWithObject(MonoBehaviour obj) {
-			objectToReset = obj;
-			Activate();
+		public static GoAwayText text;
+
+		void Awake () {
+			if (text == null) {
+				DontDestroyOnLoad (gameObject);
+				text = this;
+			} else if (text != this) {
+				Destroy (gameObject);
+			}
 		}
-
-		public void OnPointerClick(PointerEventData data) {
-			objectToReset.SendMessage("Reset");
-			Deactivate();
+		// Use this for initialization
+		void Start () {
+		
+		}
+		
+		// Update is called once per frame
+		void Update () {
+		
 		}
 	}
-
 }

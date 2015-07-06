@@ -3,7 +3,7 @@ using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace RMX {
-	public class GameController : RMXGameObject {
+	public class GameController : MonoBehaviour {
 		
 		public static GameController control;
 		public GameObject mobileInput;
@@ -15,11 +15,13 @@ namespace RMX {
 				return new Vector2(transform.forward.x, transform.forward.y);
 			}
 		}
+
+		public static bool isFirstPlay;
 		
 		//	private int total = Camera.GetAllCameras.count;
 		// Use this for initialization
-		protected override void Awake () {
-			base.Awake();
+		protected void Awake () {
+			isFirstPlay = PlayerPrefs.GetFloat(Key.Total) == 0;
 			if (control == null) {
 				DontDestroyOnLoad (gameObject);
 				control = this;

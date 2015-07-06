@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RMX
 {
-    public class DragRigidbody : RMXGameObject
+    public class DragRigidbody : MonoBehaviour
     {
 		private const float PI_OVER_180 = Mathf.PI/180;
         const float k_Spring = 50.0f;
