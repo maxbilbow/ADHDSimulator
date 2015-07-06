@@ -48,30 +48,40 @@
   <ItemGroup>
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameKit7.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTSpriteKit_HL.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTMultipeer.xml" />
      <None Include="Assets\U3DXT\Examples\speech\README.txt" />
-     <None Include="Assets\link.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTSpriteKit.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTIAP_HL.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTCoreImage.xml" />
      <None Include="Assets\U3DXT\Examples\gamekit7\GKMeeting\README.txt" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTMediaPlayer.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTMaps.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameController_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTSpeech.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTBluetooth.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameKit7_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTSpeech_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTCoreExtras_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTCoreExtras.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTMultipeer_HL.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTSocial.xml" />
      <None Include="Assets\U3DXT\Plugins\U3DXTSocial_HL.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTMaps_HL.xml" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\U3DXT\Plugins\U3DXTIAP.xml" />
      <None Include="Assets\U3DXT\Examples\social\SocialTest\README.txt" />
      <None Include="Assets\U3DXT\Plugins\U3DXTCore.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTPersonal.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTCoreImage_HL.xml" />
      <None Include="Assets\U3DXT\Examples\iap\IAPTest\README.txt" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTMediaPlayer_HL.xml" />
      <None Include="Assets\U3DXT\CHANGELOG.txt" />
      <None Include="Assets\U3DXT\Plugins\U3DXTGameController.xml" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\U3DXT\Plugins\U3DXTCore_HL.xml" />
- <Reference Include="Assembly-UnityScript">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
+     <None Include="Assets\U3DXT\Plugins\U3DXTBluetooth_HL.xml" />
+     <None Include="Assets\U3DXT\Plugins\U3DXTPersonal_HL.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -86,51 +96,6 @@
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTEditor">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Editor/U3DXTEditor.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTCore">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCore.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTCore_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCore_HL.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTCoreExtras">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCoreExtras.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTCoreExtras_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCoreExtras_HL.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTGameController">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameController.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTGameController_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameController_HL.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTGameKit7">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameKit7.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTGameKit7_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameKit7_HL.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTIAP">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTIAP.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTIAP_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTIAP_HL.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTSocial">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSocial.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTSocial_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSocial_HL.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTSpeech">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSpeech.dll</HintPath>
- </Reference>
- <Reference Include="U3DXTSpeech_HL">
- <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSpeech_HL.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -159,6 +124,93 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="U3DXTCoreImage">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCoreImage.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTMultipeer">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTMultipeer.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTCore">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCore.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTBluetooth_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTBluetooth_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTMultipeer_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTMultipeer_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTGameKit7">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameKit7.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTSpeech_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSpeech_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTIAP">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTIAP.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTMaps">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTMaps.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTMediaPlayer_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTMediaPlayer_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTIAP_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTIAP_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTEditor">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Editor/U3DXTEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTGameController">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameController.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTCoreImage_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCoreImage_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTPersonal">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTPersonal.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTMaps_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTMaps_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTBluetooth">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTBluetooth.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTSpeech">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSpeech.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTSocial">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSocial.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTGameKit7_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameKit7_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTCoreExtras">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCoreExtras.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTMediaPlayer">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTMediaPlayer.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTSpriteKit">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSpriteKit.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTGameController_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTGameController_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTSocial_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSocial_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTCoreExtras_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCoreExtras_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTSpriteKit_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTSpriteKit_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTPersonal_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTPersonal_HL.dll</HintPath>
+ </Reference>
+ <Reference Include="U3DXTCore_HL">
+ <HintPath>/Users/Max/Gits/ADHDSimulator/ADHDSimUnity/Assets/U3DXT/Plugins/U3DXTCore_HL.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
@@ -166,6 +218,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
       <Project>{6B412B81-E476-18A8-A791-7568ED7191D2}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp-vs.csproj">
+      <Project>{E1071246-3541-8AF1-E291-8D4752957B8D}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
