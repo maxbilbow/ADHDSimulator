@@ -65,6 +65,8 @@ namespace RMX {
 			}
 			if (seconds > 0) {
 				result += seconds + " seconds.";
+			} else {
+				result += "not a second longer.";
 			}
 			return result;
 		}
@@ -106,7 +108,12 @@ namespace RMX {
 			if (!paused) {
 				var newTotal = totalTime + Time.deltaTime;
 				PlayerPrefs.SetFloat (Key.Total, newTotal);
-
+				PlayerPrefs.SetFloat (Key.LastSession, Time.fixedTime);
+				if (ClockBehaviour.visibleClocks == 0) {
+					GoAwayText.Show();
+				} else {
+					GoAwayText.Hide();
+				}
 
 			}
 			if (Input.GetKeyDown(KeyCode.Escape))
@@ -119,24 +126,6 @@ namespace RMX {
 
 		}
 
-
-
-		public static List<string> WhatYouCouldHaveDone(float time) {
-			var timeInMinutes = time / 60;
-			List<string> result = new List<string> ();
-			if (timeInMinutes < 1) {
-				result.Add ("briefly checked for new emails");
-			} else if (timeInMinutes < 2) {
-				result.Add ("re-heated that cold cup of coffee using the microvave.");
-			} else if (timeInMinutes < 4) {
-				result.Add ("soft-boiled an egg.");
-			} else if (timeInMinutes < 6) {
-				result.Add ("hard boilded an egg.");
-			} else {
-				result.Add ("had a good long think about your existence.");
-			}
-			return result;
-		}
 		const float devTimeWasted = 6 * 60 * 60;
 	 	string ofDevTimeWasted {
 			get {
@@ -180,7 +169,14 @@ namespace RMX {
 		string text = "";
 		bool newPersonalBest = false;
 		float uninteruptedTime = 0;
+
+		bool firstLoad = true;
 		public void Pause(bool pause) {
+			if (paused && firstLoad) {
+				firstLoad = false;
+			} else if (Random.Range(0,2) == 1 && paused && !pause && totalTime > GameController.control.newClockThreshold) {
+				ClockBehaviour.New();
+			}
 			if (pause && !paused) {
 				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
 				if (lastProcrastination > longestProcrastination) {
@@ -200,9 +196,10 @@ namespace RMX {
 						text += "\nA NEW PERSONAL BEST!";
 						newPersonalBest = false;
 					}
+
 				}
 				
-				var activities = Timer.WhatYouCouldHaveDone (time);
+				var activities = Sentences.WhatYouCouldHaveDone (time);
 				var rand = Random.Range (0, activities.Count); 
 				text += "\n\nDuring that time you could have " + activities [rand];
 					
@@ -211,10 +208,8 @@ namespace RMX {
 			}
 			Time.timeScale = pause ? 0 : 1;
 			this.canvas.enabled = pause;
-			print (this);
-			if (!pause) {
-				ClockBehaviour.New();
-			}
+//			print (this);
+
 		}
 
 		void OnApplicationQuit() {

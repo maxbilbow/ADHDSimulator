@@ -7,11 +7,11 @@ namespace RMX
     public class DragRigidbody : MonoBehaviour
     {
 		private const float PI_OVER_180 = Mathf.PI/180;
-        const float k_Spring = 50.0f;
-        const float k_Damper = 5.0f;
-        const float k_Drag = 10.0f;
-        const float k_AngularDrag = 5.0f;
-        const float k_Distance = 0.2f;
+		const float k_Spring = 50.0f;
+		const float k_Damper = 5.0f;
+		const float k_Drag = 10.0f;
+		const float k_AngularDrag = 5.0f;
+		const float k_Distance = 0.2f;
         const bool k_AttachToCenterOfMass = false;
 //		Rigidbody2D finger;
 		private GameObject finger;
@@ -45,6 +45,13 @@ namespace RMX
 			}
 
 
+			// We need to hit a rigidbody that is not kinematic
+			if (hit && hit.rigidbody.isKinematic)
+			{
+				//				print ("We need to hit a rigidbody that is not kinematic! ");
+				return;
+			}
+
             if (!hit)
             {
 				if (!finger) {
@@ -52,12 +59,12 @@ namespace RMX
 //					Rigidbody2D body = finger.AddComponent<Rigidbody2D>();
 					CircleCollider2D collider = finger.AddComponent<CircleCollider2D>();
 //					body.isKinematic = true;
-					collider.radius = 0.1f;
+					collider.radius = 0.2f;
 					collider.sharedMaterial = new PhysicsMaterial2D();
 					collider.sharedMaterial.bounciness = 0.5f;
 					finger.SetActive (false);
 				}
-				print ("We need to actually hit an object");
+//				print ("We need to actually hit an object");
 				finger.SetActive (true);
 				finger.transform.position = mainCamera.ScreenPointToRay (Input.mousePosition).origin;
 				StartCoroutine("MoveFinger", 0);// mainCamera.ScreenPointToRay (Input.mousePosition).direction);
@@ -66,12 +73,7 @@ namespace RMX
           
 
             
-			// We need to hit a rigidbody that is not kinematic
-			if (!hit.rigidbody || hit.rigidbody.isKinematic)
-			{
-				print ("We need to hit a rigidbody that is not kinematic! ");
-				return;
-			}
+
 
             m_SpringJoint.transform.position = hit.point;
             m_SpringJoint.anchor = Vector2.zero;
@@ -93,14 +95,16 @@ namespace RMX
 	
 
             StartCoroutine("DragObject", hit.distance);
-			print (
-				"\njoint anchor: " + m_SpringJoint.connectedAnchor +
-				"\nHit Position: " + hit.point + 
-				"\nObj Position: " + m_SpringJoint.connectedBody.position +
-				"\n  Hit Anchor: " + m_SpringJoint.anchor
-				);
+//			print (this);
         }
 
+		public override string ToString ()
+		{
+			return  "\njoint anchor: " + m_SpringJoint.connectedAnchor +
+//			        "\nHit Position: " + hit.point +
+					"\nObj Position: " + m_SpringJoint.connectedBody.position +
+			        "\n  Hit Anchor: " + m_SpringJoint.anchor ;
+		}
 
         private IEnumerator DragObject(float distance)
         {
