@@ -103,18 +103,25 @@ namespace RMX {
 		
 		// Update is called once per frame
 //		
+		public static void UpdateScoresAndReset(bool reset) {
+			var newTotal = totalTime + Time.deltaTime;
+			var currentTotal = lastProcrastination + Time.deltaTime;
+			PlayerPrefs.SetFloat (Key.Total, newTotal);
+			PlayerPrefs.SetFloat (Key.LastSession, Time.fixedTime);
+			PlayerPrefs.SetFloat (Key.LastProcrastination, currentTotal);
+			if (lastProcrastination > longestProcrastination) {
+				timer.newPersonalBest = longestProcrastination > 0;
+				PlayerPrefs.SetFloat(Key.LongestProcrastination, lastProcrastination);
+			}
+			if (reset) {
+				PlayerPrefs.SetFloat (Key.LastProcrastination, 0);
+			}
+		}
+
 		void Update()
 		{
 			if (!paused) {
-				var newTotal = totalTime + Time.deltaTime;
-				PlayerPrefs.SetFloat (Key.Total, newTotal);
-				PlayerPrefs.SetFloat (Key.LastSession, Time.fixedTime);
-				if (ClockBehaviour.visibleClocks == 0) {
-					GoAwayText.Show();
-				} else {
-					GoAwayText.Hide();
-				}
-
+				UpdateScoresAndReset(false);
 			}
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
@@ -168,7 +175,6 @@ namespace RMX {
 		}
 		string text = "";
 		bool newPersonalBest = false;
-		float uninteruptedTime = 0;
 
 		bool firstLoad = true;
 		public void Pause(bool pause) {
@@ -178,20 +184,16 @@ namespace RMX {
 				ClockBehaviour.New();
 			}
 			if (pause && !paused) {
-				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
-				if (lastProcrastination > longestProcrastination) {
-					newPersonalBest = longestProcrastination > 0;
-					PlayerPrefs.SetFloat(Key.LongestProcrastination, lastProcrastination);
-
-				}
+//				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
+				UpdateScoresAndReset (true);
 				float time;
 				if (newSession) {
 					time = Timer.lastSessionTime;
-					text = "Congratulations. During your last session, you wasted " + GetTimeDescription(Key.LastSession);
+					text = "Congratulations. During your last session, you wasted " + GetTimeDescription (Key.LastSession);
 					newSession = false;
 				} else {
 					time = Timer.lastProcrastination;
-					text = "Congratulations. You have wasted " + GetTimeDescription(Key.LastProcrastination);
+					text = "Congratulations. You have wasted " + GetTimeDescription (Key.LastProcrastination);
 					if (newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
 						newPersonalBest = false;
@@ -204,7 +206,9 @@ namespace RMX {
 				text += "\n\nDuring that time you could have " + activities [rand];
 					
 
-				uninteruptedTime = Time.fixedTime;
+//				uninteruptedTime = Time.fixedTime;
+			} else if (!pause) {
+				ClockBehaviour.CheckVisibleClocks();
 			}
 			Time.timeScale = pause ? 0 : 1;
 			this.canvas.enabled = pause;
@@ -213,7 +217,7 @@ namespace RMX {
 		}
 
 		void OnApplicationQuit() {
-			PlayerPrefs.SetFloat (Key.LastSession, Time.fixedTime);
+			UpdateScoresAndReset (false);
 			PlayerPrefs.Save ();
 		}
 

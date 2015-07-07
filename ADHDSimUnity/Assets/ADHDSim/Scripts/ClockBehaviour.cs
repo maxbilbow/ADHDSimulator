@@ -10,17 +10,38 @@ namespace RMX {
 		public static ClockBehaviour original;
 	
 		private static bool IsVisible(ClockBehaviour clock) {
-			return clock.isOffScreen;
+			var wasOn = clock.isOnScreen;
+			clock.isOnScreen = GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), clock.gameObject.GetComponent<Collider2D>().bounds);
+			if (wasOn != clock.isOnScreen) {
+				clock.fellOffAtTime = Time.fixedTime;
+			}
+			return clock.isOnScreen;
 		}
 
-		public static int visibleClocks = 0 ;
+		public static List<ClockBehaviour> CheckVisibleClocks() {
+			return clocks.FindAll (IsVisible);
+		}
+
+		public static int VisibleClockCount {
+			get {
+				int count = 0;
+				foreach (ClockBehaviour clock in clocks) {
+					if (clock.isOnScreen) {
+						count++;
+					}
+				}
+//				print ("VisibleClockCount == " + count);
+				return count;
+			}
+		}
+
 //		{
 //			get {
 //				return clocks.FindAll(IsVisible).Count;
 //			}
 //		}
 
-		bool isOffScreen = false;
+		bool isOnScreen = true;
 		float fellOffAtTime = 0f;
 		public float MaxTimeOffScreen = 30f;
 		private float OffScreenLimit = 5f;
@@ -36,11 +57,13 @@ namespace RMX {
 			}
 		}
 
+		bool isOriginal = false;
 		float lifeSpan = float.PositiveInfinity;
 		void Awake () {
 			if (original == null) {
-//				DontDestroyOnLoad (gameObject);
+				DontDestroyOnLoad (gameObject);
 				original = this;
+				isOriginal = true;
 			} 
 			if (MaxTimeOffScreen < 5) {
 				print ("ERROR"); 
@@ -75,13 +98,12 @@ namespace RMX {
 			return clock;
 		}
 	
-
+//		public delegate void dfff;// = UpdateVisibleClockCount;
 
 		void Start () {
 			if (original != this) {
 				lifeSpan = Random.Range (0, MaxTimeOffScreen);
-			}
-
+			} 
 
 			if (startingPoint == Vector3.zero && transform.position != Vector3.zero) {
 				startingPoint = transform.position;
@@ -90,40 +112,57 @@ namespace RMX {
 
 		void OnDestroy(){
 			clocks.Remove (this);
-			print (visibleClocks);
-			if (!isOffScreen)
-				visibleClocks--;
+			print (VisibleClockCount);
+//			if (!isOffScreen)
+//				visibleClocks--;
 		}
 
 		// Update is called once per frame
 		void Update () {
-			if (this != original) {
+			if (isOriginal) {
 				lifeSpan -= Time.deltaTime;
+
 			}
 
-			if (isOffScreen) {
+			if (!isOnScreen) {
 				if (lifeSpan <= 0) {
 					Destroy(gameObject);
 				} else if (Time.fixedTime - fellOffAtTime > OffScreenLimit) {
 					var screen = new Vector3(0,Screen.height,0);
 					var world = Camera.main.ScreenToWorldPoint(screen);
 					ResetWithPosition(new Vector3(0,world.y + collisionBody.bounds.size.magnitude,0));
-					isOffScreen = false;
+					isOnScreen = willBeOnScreen;
 				}
 			}
 
 		}
 
+		/// <summary>
+		/// Gets a value indicating whether this <see cref="RMX.ClockBehaviour"/> will be on screen.
+		/// </summary>
+		/// <value><c>true</c> if will be true if gravity will pull this object into view within < second; otherwise, <c>false</c>.</value>
+		bool willBeOnScreen {
+			get {
+				return true;
+			}
+		}
+
 		void OnBecameInvisible() {
-			isOffScreen = true;
+			isOnScreen = false;
 			fellOffAtTime = Time.fixedTime;
 			OffScreenLimit = Random.Range(GameController.isFirstPlay ? 5 : 0, MaxTimeOffScreen);
-			visibleClocks--;
+//			visibleClocks--;
+//			print ("I am NOT one of " + VisibleClockCount + " visible clocks");
 		}
+
+
+
 	
 		void OnBecameVisible() {
-			isOffScreen = false;
-			visibleClocks++;
+			isOnScreen = true;
+//			visibleClocks++;
+//			print ("I AM VISIBLE, one of " + VisibleClockCount);
+
 		}
 
 		public void ResetWithPosition(Vector3 position) {

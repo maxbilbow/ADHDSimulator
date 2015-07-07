@@ -52,6 +52,7 @@
      <Compile Include="Assets\ADHDSim\Scripts\GameCenter.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameController.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GoAwayText.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\IBonus.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\PauseManager.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Sentences.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Timer.cs" />

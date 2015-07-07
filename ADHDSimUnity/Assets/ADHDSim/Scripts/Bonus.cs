@@ -7,17 +7,10 @@ namespace RMX {
 	public enum UserData {
 		CurrentSession, CurrentProcrastination, Total
 	}
-	public class Bonus : MonoBehaviour {
+	public class Bonus : IBonus<Rigidbody2D,UserData> {
 
-		public UserData data = UserData.CurrentSession;
-		public float threshold = 0;
-		Rigidbody2D body;
-		string key = Key.LastSession;
-		// Use this for initialization
-		void Start () {
-			body = GetComponent<Rigidbody2D> ();
-			body.isKinematic = threshold > 0;
-			threshold = Random.Range (0, threshold);
+
+		protected override void ChooseData() {
 			switch (data) {
 			case UserData.CurrentSession:
 				key = Key.LastSession;
@@ -28,20 +21,33 @@ namespace RMX {
 			case UserData.Total:
 				key = Key.Total;
 				break;
-
 			}
-
 		}
-		
-		// Update is called once per frame
-		void Update () {
-			if (body.isKinematic && PlayerPrefs.GetFloat(key) > threshold) {
-				body.isKinematic = false;
+	
+
+		void OnApplicationFocus(bool focus) {
+			if (data == UserData.CurrentProcrastination) {
+				Deactivate();
 			}
 		}
 
+		public override void Activate() {
+			component.isKinematic = false;
+		}
 
+		public override void Deactivate() {
+			try {
+				component.isKinematic = true;
+			} catch {
+				print ("Warning: component could not be deactivated.");
+			}
+		}
 
+		public override bool isBonusActive {
+			get{
+				return !component.isKinematic;
+			}
+		}
 
 	}
 

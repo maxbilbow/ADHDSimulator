@@ -23,7 +23,11 @@ namespace RMX {
 		
 		// Update is called once per frame
 		void Update () {
-
+			if (ClockBehaviour.VisibleClockCount == 0) {
+				Show ();
+			} else {
+				Hide ();
+			}
 		}
 
 		public static void Show() {
