@@ -4,40 +4,28 @@ using System.Collections.Generic;
 
 namespace RMX {
 
-	public enum UserData {
-		CurrentSession, CurrentProcrastination, Total
-	}
-	public class Bonus : IBonus<Rigidbody2D,UserData> {
+
+	public class Bonus : ABonus<Rigidbody2D> {
 
 
-		protected override void ChooseData() {
-			switch (data) {
-			case UserData.CurrentSession:
-				key = Key.LastSession;
-				break;
-			case UserData.CurrentProcrastination:
-				key = Key.LastProcrastination;
-				break;
-			case UserData.Total:
-				key = Key.Total;
-				break;
-			}
-		}
+
 	
 
-		void OnApplicationFocus(bool focus) {
+		protected override void OnApplicationFocus(bool focus) {
 			if (data == UserData.CurrentProcrastination) {
-				Deactivate();
+				base.OnApplicationFocus(focus);
 			}
 		}
 
 		public override void Activate() {
+			base.Activate ();
 			component.isKinematic = false;
 		}
 
 		public override void Deactivate() {
 			try {
 				component.isKinematic = true;
+				base.Deactivate();
 			} catch {
 				print ("Warning: component could not be deactivated.");
 			}

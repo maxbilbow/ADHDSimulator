@@ -8,6 +8,7 @@ namespace RMX {
 		public Vector3 startingPoint;
 		public static List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
 		public static ClockBehaviour original;
+		private Vector2 exitVelocity;
 	
 		private static bool IsVisible(ClockBehaviour clock) {
 			var wasOn = clock.isOnScreen;
@@ -44,7 +45,7 @@ namespace RMX {
 		bool isOnScreen = true;
 		float fellOffAtTime = 0f;
 		public float MaxTimeOffScreen = 30f;
-		private float OffScreenLimit = 5f;
+		private float OffScreenLimit = 2f;
 		public Rigidbody2D body {
 			get {
 				return GetComponent<Rigidbody2D>();
@@ -65,9 +66,9 @@ namespace RMX {
 				original = this;
 				isOriginal = true;
 			} 
-			if (MaxTimeOffScreen < 5) {
+			if (MaxTimeOffScreen < 2) {
 				print ("ERROR"); 
-				MaxTimeOffScreen = 5;
+				MaxTimeOffScreen = 2;
 			}
 			clocks.Add (this);
 		}
@@ -86,14 +87,20 @@ namespace RMX {
 
 			var renderer = clone.AddComponent<SpriteRenderer> ();
 			renderer.sprite = original.GetComponent<SpriteRenderer> ().sprite;
+			renderer.color = new Color(
+				(float) Random.Range(0,10) / 10, 
+				(float) Random.Range(0,10) / 10, 
+				(float) Random.Range(0,10) / 10);
 
 //			clone.AddComponent<DragRigidbody> ();
 
 			var clock = clone.AddComponent<ClockBehaviour> ();
-			clock.MaxTimeOffScreen = Random.Range (0, 120);
+			clock.MaxTimeOffScreen = Random.Range (0, 30);
+//			clock.life
 			var lastClock = clocks [clocks.Count - 1];
 			clock.startingPoint = lastClock.startingPoint;
 			clock.startingPoint.y += lastClock.collisionBody.radius * 2;
+
 			clock.Reset ();
 			return clock;
 		}
@@ -102,7 +109,7 @@ namespace RMX {
 
 		void Start () {
 			if (original != this) {
-				lifeSpan = Random.Range (0, MaxTimeOffScreen);
+//				lifeSpan = Random.Range (0, MaxTimeOffScreen);!hit
 			} 
 
 			if (startingPoint == Vector3.zero && transform.position != Vector3.zero) {
@@ -113,8 +120,6 @@ namespace RMX {
 		void OnDestroy(){
 			clocks.Remove (this);
 			print (VisibleClockCount);
-//			if (!isOffScreen)
-//				visibleClocks--;
 		}
 
 		// Update is called once per frame
@@ -128,9 +133,10 @@ namespace RMX {
 				if (lifeSpan <= 0) {
 					Destroy(gameObject);
 				} else if (Time.fixedTime - fellOffAtTime > OffScreenLimit) {
-					var screen = new Vector3(0,Screen.height,0);
-					var world = Camera.main.ScreenToWorldPoint(screen);
-					ResetWithPosition(new Vector3(0,world.y + collisionBody.bounds.size.magnitude,0));
+//					var screen = new Vector3(0,Screen.height,0);
+//					var world = Camera.main.ScreenToWorldPoint(screen);
+//					ResetWithPosition(new Vector3(0,world.y / 2+ collisionBody.bounds.size.magnitude,0));
+					ResetWithVelocity(exitVelocity);
 					isOnScreen = willBeOnScreen;
 				}
 			}
@@ -147,12 +153,14 @@ namespace RMX {
 			}
 		}
 
+		Vector3 pointOfExit;
 		void OnBecameInvisible() {
 			isOnScreen = false;
 			fellOffAtTime = Time.fixedTime;
 			OffScreenLimit = Random.Range(GameController.isFirstPlay ? 5 : 0, MaxTimeOffScreen);
-//			visibleClocks--;
-//			print ("I am NOT one of " + VisibleClockCount + " visible clocks");
+			pointOfExit = transform.position;
+//			print ("Exited at point: " + pointOfExit + "with velocity: " + body.velocity);
+			exitVelocity = body.velocity;
 		}
 
 
@@ -163,6 +171,33 @@ namespace RMX {
 //			visibleClocks++;
 //			print ("I AM VISIBLE, one of " + VisibleClockCount);
 
+		}
+
+		Bounds GetScreenSizeInWorld() {
+			var cam = Camera.main;
+			var bounds = new Bounds ();
+			bounds.size = cam.ScreenToWorldPoint(new Vector3(Screen.width,  Screen.height,0));
+			bounds.max = cam.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height,0));
+			bounds.min = cam.ScreenToWorldPoint (Vector3.zero);
+			return bounds;
+		}
+		public float maxVelocity = 30f;
+		public void ResetWithVelocity (Vector2 direction) {
+			var bounds = GetScreenSizeInWorld ();
+			var v = body.velocity;
+			if (v.magnitude > maxVelocity) {
+				v = direction.normalized * maxVelocity;
+			} else {
+				if (Mathf.Abs (v.x) < Mathf.Abs(Physics2D.gravity.x)) {
+					pointOfExit.x = 0;
+				} 
+				if (Mathf.Abs (v.y) < Mathf.Abs(Physics2D.gravity.y)) {
+					pointOfExit.y = bounds.min.y - collisionBody.radius * 2;
+				}
+			}
+			body.velocity = v;
+//			print ("New position will be: " + -pointOfExit + ", with velocity: " + body.velocity);
+			transform.position = -pointOfExit;
 		}
 
 		public void ResetWithPosition(Vector3 position) {

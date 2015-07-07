@@ -3,8 +3,45 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace RMX {
-	public class Sentences {
+	public enum UserData {
+		CurrentSession, CurrentProcrastination, Total
+	}
 
+	public struct Key {
+		public const string LastSession= "last session";
+		public const string LongestProcrastination = "longestProcrastination";
+		public const string LastProcrastination = "last uninterupted";
+		public const string Total = "Total Time Wasted";
+	}
+
+
+	public class GameData {
+
+		public static string GetKey(UserData data) {
+			switch (data) {
+			case UserData.CurrentSession:
+				return Key.LastSession;
+			case UserData.CurrentProcrastination:
+				return Key.LastProcrastination;
+			case UserData.Total:
+				return Key.Total;
+			}
+			return null;
+		}
+
+		public static UserData GetEnum(string key) {
+			switch (key) {
+			case Key.LastSession:
+				return UserData.CurrentSession;
+			case Key.LastProcrastination:
+				return UserData.CurrentProcrastination;
+			case Key.Total:
+				return UserData.Total;
+			default:
+				throw new System.ArgumentNullException("Key was not recognised in GameData.GetEnum(string key)");
+			} 
+
+		}
 
 		public static List<string> WhatYouCouldHaveDone(float time) {
 			var timeInMinutes = time / 60;

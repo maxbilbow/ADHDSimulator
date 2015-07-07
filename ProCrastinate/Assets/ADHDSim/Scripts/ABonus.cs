@@ -2,15 +2,15 @@
 using System.Collections;
 
 namespace RMX {
-	public abstract class IBonus<TComponent, Enum> : MonoBehaviour
-	where TComponent : Component
-	where Enum : struct, System.IConvertible {
+	public abstract class ABonus<TComponent> : MonoBehaviour
+	where TComponent : Object {
 
 //		public enum UserData {
 //			CurrentSession, CurrentProcrastination, Total
 		//		}
-			
-		public Enum data;
+		private bool isActive = false;
+		public bool deactivateOnPause = true;
+		public UserData data;
 		protected float threshold = 0;
 		public float min = 30;
 		public float max = 45;
@@ -23,7 +23,7 @@ namespace RMX {
 		}
 		void Start () {
 			threshold = min > max ? min : Random.Range (min, max);
-
+			key = GameData.GetKey (data);
 			try {
 				SetComponent(GetComponent<TComponent> ());
 			} catch {
@@ -33,35 +33,35 @@ namespace RMX {
 					print ("Warning: component could not be set at start! Consider overriding SetComponent method.");
 				}
 			}
+			Deactivate ();
 
-			try {
-				ChooseData ();
-			} catch {
-				print ("Warning: ChooseData() not implemented");
-			} finally {
-				Deactivate ();
+		}
+
+		protected virtual void OnApplicationFocus(bool focus) {
+			if (!focus && deactivateOnPause) {
+				Deactivate();
 			}
 		}
 
-		protected abstract void ChooseData ();
+
 		// Update is called once per frame
-		protected void Update () {
+		void Update () {
 			if (!isBonusActive && PlayerPrefs.GetFloat (key) > threshold) {
 				Activate ();
-			} 
+			}
 		}
 		
 		public virtual void Activate () {
-			gameObject.SetActive (true);
+			isActive = true;
 		}
 		
 		public virtual void Deactivate () {
-			gameObject.SetActive (false);
+			isActive = false;
 		}
 		
 		public virtual bool isBonusActive {
 			get {
-				return isActiveAndEnabled;
+				return isActiveAndEnabled && isActive;
 			}
 		}
 			

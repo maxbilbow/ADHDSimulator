@@ -3,12 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace RMX {
-	public struct Key {
-		public const string LastSession= "last session";
-		public const string LongestProcrastination = "longestProcrastination";
-		public const string LastProcrastination = "last uninterupted";
-		public const string Total = "Total Time Wasted";
-	}
 
 	public class Timer : MonoBehaviour {
 
@@ -201,7 +195,7 @@ namespace RMX {
 
 				}
 				
-				List<string> activities = Sentences.WhatYouCouldHaveDone (time);
+				List<string> activities = GameData.WhatYouCouldHaveDone (time);
 				var rand = Random.Range (0, activities.Count); 
 				text += "\n\nDuring that time you could have " + activities [rand];
 					

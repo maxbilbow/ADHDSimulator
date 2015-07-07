@@ -46,16 +46,16 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ADHDSim\Scripts\ABonus.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Bonus.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\ClockBehaviour.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\DragRigidbody.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameCenter.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameController.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\GameData.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GoAwayText.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Gyro.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\IBonus.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\PauseManager.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\Sentences.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Timer.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\User.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

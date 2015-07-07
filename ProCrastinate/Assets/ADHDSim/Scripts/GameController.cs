@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace RMX {
 	public class GameController : MonoBehaviour {
-		
+		public Vector2 defaultGravity = new Vector2 (0f, -9.81f);
 		public static GameController control;
 		public GameObject mobileInput;
 		public GameObject desktopInput;
@@ -21,6 +21,7 @@ namespace RMX {
 		//	private int total = Camera.GetAllCameras.count;
 		// Use this for initialization
 		protected void Awake () {
+			Physics2D.gravity = defaultGravity;
 			isFirstPlay = PlayerPrefs.GetFloat(Key.Total) == 0;
 			if (control == null) {
 				DontDestroyOnLoad (gameObject);
@@ -45,16 +46,16 @@ namespace RMX {
 					print ("Mobile input not found");
 				}
 			}
-			
+
+
 			#if MOBILE_INPUT
-			if (desktopInput) {
-				desktopInput.SetActive(false);
-			}
+			var set = GameObject.FindGameObjectsWithTag ("DesktopOnly");
 			#else
-			if (mobileInput) {
-				mobileInput.SetActive(false);
-			}
+			var set = GameObject.FindGameObjectsWithTag ("MobileOnly");
 			#endif
+			foreach (GameObject obj in set) {
+				obj.SetActive(false);
+			}
 		}
 
 		void Start() {
@@ -68,7 +69,9 @@ namespace RMX {
 		}
 		
 
-			
+		public void CheckForAnomalies() {
+			print(ClockBehaviour.CheckVisibleClocks ());
+		}
 		
 	}
 }
