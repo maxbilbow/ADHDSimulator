@@ -57,6 +57,7 @@ namespace RMX {
 			var timeInMinutes = time / 60;
 			List<string> result = new List<string> ();
 			if (timeInMinutes < 0.5) {
+				result.Add("approved this app for distribution through the app store!");
 				result.Add("done very little else. And I'm glad you did not");
 			} else if (timeInMinutes < 1) {
 				result.Add("trolled someone on Twitter");
