@@ -9,7 +9,7 @@ namespace RMX {
 		GameCenter gameCenter;
 
 		public static Timer timer;
-
+		public int newClockPercent = 50;
 
 		public static PauseManager pauseManager;
 		public bool paused  {
@@ -82,14 +82,13 @@ namespace RMX {
 		}
 
 		void Start () {
-//			time = 0;
-			print (this);
-			Pause (false);
 			if (lastSessionTime > 0) {
 				newSession = true;
+				canvas.enabled = false;
 				Pause (true);
 			} else {
 				newSession = false;
+				canvas.enabled = true;
 			}
 
 		}
@@ -172,11 +171,6 @@ namespace RMX {
 
 		bool firstLoad = true;
 		public void Pause(bool pause) {
-			if (paused && firstLoad) {
-				firstLoad = false;
-			} else if (Random.Range(0,2) == 1 && paused && !pause && totalTime > GameController.control.newClockThreshold) {
-				ClockBehaviour.New();
-			}
 			if (pause && !paused) {
 //				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
 //				UpdateScoresAndReset (true);
@@ -198,14 +192,22 @@ namespace RMX {
 				List<string> activities = GameData.WhatYouCouldHaveDone (time);
 				var rand = Random.Range (0, activities.Count); 
 				text += "\n\nDuring that time you could have " + activities [rand];
-					
+				canvas.enabled = true;
 
 //				uninteruptedTime = Time.fixedTime;
-			} else if (!pause) {
+			} else if (!pause && paused) {
 				ClockBehaviour.CheckVisibleClocks();
+				UpdateScoresAndReset (true);
+				canvas.enabled = false;
+
+				if (firstLoad) {
+					firstLoad = false;
+				} else if (Random.Range(0,100) > newClockPercent && paused && !pause && totalTime > GameController.control.newClockThreshold) {
+					ClockBehaviour.New();
+				}
 			}
 			Time.timeScale = pause ? 0 : 1;
-			this.canvas.enabled = pause;
+//			this.canvas.enabled = pause;
 //			print (this);
 
 		}
