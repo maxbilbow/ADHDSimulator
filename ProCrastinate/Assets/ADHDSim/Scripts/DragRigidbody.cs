@@ -13,6 +13,7 @@ namespace RMX
 		const float k_AngularDrag = 5.0f;
 		const float k_Distance = 0.2f;
         const bool k_AttachToCenterOfMass = false;
+		public float fingerWidth = 0.1f;
 //		Rigidbody2D finger;
 		private GameObject finger;
 
@@ -59,7 +60,7 @@ namespace RMX
 //					Rigidbody2D body = finger.AddComponent<Rigidbody2D>();
 					CircleCollider2D collider = finger.AddComponent<CircleCollider2D>();
 //					body.isKinematic = true;
-					collider.radius = 0.2f;
+					collider.radius = fingerWidth;
 					collider.sharedMaterial = new PhysicsMaterial2D();
 					collider.sharedMaterial.bounciness = 0.5f;
 					finger.SetActive (false);
