@@ -16,7 +16,7 @@ namespace RMX {
 
 
 	public class GameData {
-
+		public const float devTimeWasted = 6 * 60 * 60;
 		public static string GetKey(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
@@ -54,7 +54,7 @@ namespace RMX {
 		}
 
 		public static List<string> WhatYouCouldHaveDone(float time) {
-			var timeInMinutes = time / 60;
+			float timeInMinutes = time / 60;
 			List<string> result = new List<string> ();
 			if (timeInMinutes < 0.5) {
 				result.Add("approved this app for distribution through the app store!");
@@ -69,7 +69,7 @@ namespace RMX {
 				result.Add ("soft-boiled an egg.");
 			} else if (timeInMinutes < 10) {
 				result.Add ("hard boilded an egg.");
-			} if (timeInMinutes < 12) {
+			} else if (timeInMinutes < 12) {
 				result.Add ("had a short bath");
 			} else {
 				result.Add ("had a good hard think about the meaning of it all.");

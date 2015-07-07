@@ -82,13 +82,12 @@ namespace RMX {
 		}
 
 		void Start () {
+			canvas.enabled = false;
 			if (lastSessionTime > 0) {
 				newSession = true;
-				canvas.enabled = false;
 				Pause (true);
 			} else {
 				newSession = false;
-				canvas.enabled = true;
 			}
 
 		}
@@ -126,10 +125,10 @@ namespace RMX {
 
 		}
 
-		const float devTimeWasted = 6 * 60 * 60;
+
 	 	string ofDevTimeWasted {
 			get {
-				return Mathf.Round(Timer.totalTime * 100 / devTimeWasted) / 100 + "%";
+				return Mathf.Round(Timer.totalTime * 100 / GameData.devTimeWasted) / 100 + "%";
 					
 			}
 		}
