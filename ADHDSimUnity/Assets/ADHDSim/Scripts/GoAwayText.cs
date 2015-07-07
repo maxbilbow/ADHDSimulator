@@ -18,7 +18,7 @@ namespace RMX {
 		}
 		// Use this for initialization
 		void Start () {
-//			Hide ();
+			Hide ();
 		}
 		
 		// Update is called once per frame

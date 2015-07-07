@@ -6,14 +6,14 @@ namespace RMX {
 	public class ClockBehaviour : MonoBehaviour {
 		// Use this for initialization
 		public Vector3 startingPoint;
-		public static List<ClockBehaviour> clocks;
+		public static List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
 		public static ClockBehaviour original;
 	
 		private static bool IsVisible(ClockBehaviour clock) {
 			return clock.isOffScreen;
 		}
 
-		public static int visibleClocks ;
+		public static int visibleClocks = 0 ;
 //		{
 //			get {
 //				return clocks.FindAll(IsVisible).Count;
@@ -46,7 +46,7 @@ namespace RMX {
 				print ("ERROR"); 
 				MaxTimeOffScreen = 5;
 			}
-			clocks = new List<ClockBehaviour> ();
+			clocks.Add (this);
 		}
 
 		public static ClockBehaviour New() {
@@ -81,7 +81,7 @@ namespace RMX {
 			if (original != this) {
 				lifeSpan = Random.Range (0, MaxTimeOffScreen);
 			}
-			clocks.Add (this);
+
 
 			if (startingPoint == Vector3.zero && transform.position != Vector3.zero) {
 				startingPoint = transform.position;
