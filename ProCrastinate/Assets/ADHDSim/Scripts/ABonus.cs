@@ -16,6 +16,7 @@ namespace RMX {
 		public float max = 45;
 		protected TComponent component;
 		public string key = Key.LastSession;
+		public float probability = 0.5f;
 		
 		// Use this for initialization
 		protected virtual void SetComponent(TComponent component) {

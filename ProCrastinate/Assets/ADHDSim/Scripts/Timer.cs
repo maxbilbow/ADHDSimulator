@@ -179,7 +179,7 @@ namespace RMX {
 			}
 			if (pause && !paused) {
 //				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
-				UpdateScoresAndReset (true);
+//				UpdateScoresAndReset (true);
 				float time;
 				if (newSession) {
 					time = Timer.lastSessionTime;
