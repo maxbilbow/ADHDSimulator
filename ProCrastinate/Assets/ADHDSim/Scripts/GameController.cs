@@ -69,8 +69,8 @@ namespace RMX {
 		}
 		
 
-		public void CheckForAnomalies() {
-			print(ClockBehaviour.CheckVisibleClocks ());
+		public static void CheckForAnomalies() {
+			ClockBehaviour.CheckVisibleClocks ();
 		}
 		
 	}

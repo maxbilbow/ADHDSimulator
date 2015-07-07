@@ -119,14 +119,12 @@ namespace RMX {
 
 		void OnDestroy(){
 			clocks.Remove (this);
-			print (VisibleClockCount);
 		}
 
 		// Update is called once per frame
 		void Update () {
 			if (isOriginal) {
 				lifeSpan -= Time.deltaTime;
-
 			}
 
 			if (!isOnScreen) {

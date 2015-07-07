@@ -142,7 +142,7 @@ namespace RMX
 			}
 			if (finger.activeSelf)
 			{
-				GameController.control.CheckForAnomalies();
+				GameController.CheckForAnomalies();
 				finger.SetActive (false);
 			}
 		}

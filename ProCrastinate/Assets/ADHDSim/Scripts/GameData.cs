@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using System.Xml;
 namespace RMX {
 	public enum UserData {
 		CurrentSession, CurrentProcrastination, Total
@@ -41,6 +41,16 @@ namespace RMX {
 				throw new System.ArgumentNullException("Key was not recognised in GameData.GetEnum(string key)");
 			} 
 
+		}
+
+
+
+		public static void LoadGameData () {
+//			var fileData : String  = System.IO.File.ReadAllText(path)
+//				var lines : String[] = fileData.Split("\n"[0]);
+//			var lineData : String[] = (lines[0].Trim()).Split(","[0]);
+//			var x : float;
+//			float.TryParse(lineData[0], x);
 		}
 
 		public static List<string> WhatYouCouldHaveDone(float time) {

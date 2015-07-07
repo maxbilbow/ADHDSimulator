@@ -149,11 +149,11 @@ namespace RMX {
 							"\n of the time I've lost developing this game." +
 							"\n\n Try again?";
 				GUIStyle style = new GUIStyle ();
-				style.fontSize = 20;
+				style.fontSize = 50;
 				style.richText = true;
 				style.wordWrap = true;
 				style.alignment = TextAnchor.MiddleCenter;
-				style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 25;
+				style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 50;
 				
 				GUI.Label (new Rect (0, 0, Screen.width, Screen.height), text, style);
 
