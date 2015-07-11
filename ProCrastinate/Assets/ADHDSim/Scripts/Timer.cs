@@ -134,6 +134,7 @@ namespace RMX {
 		bool firstLoad = true;
 		public void Pause(bool pause) {
 			if (pause && !paused) {
+				GameCenter.ReportScore(GameData.GetLong(UserData.CurrentProcrastination), UserData.LongestProctrastination);
 //				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
 //				UpdateScoresAndReset (true);
 				float time;
@@ -147,7 +148,6 @@ namespace RMX {
 					if (GameData.newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
 						GameData.newPersonalBest = false;
-//						GameCenter.ReportScore(GameData.GetLong(UserData.LongestProctrastination), UserData.LongestProctrastination);
 
 					}
 

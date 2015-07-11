@@ -72,7 +72,7 @@ namespace RMX {
 				}
 				if (score > 100) score = 100;
 				Social.ReportProgress (achievementID, score, result => {
-					print (GameData.GetKey(data) + ": " + score + ", result: " + result);
+					Debug.Log (GameData.GetKey(data) + ": " + score + ", result: " + result);
 					if (result) {
 						completed = true;
 						Debug.Log("Achievement Success");
