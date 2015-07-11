@@ -19,34 +19,11 @@ namespace RMX {
 		}
 
 //		float time;
-		public static float totalTime {
-			get {
-				return PlayerPrefs.GetFloat(Key.Total);
-			}
-		}
 
-
-		public static float lastProcrastination {
-			get {
-				return PlayerPrefs.GetFloat(Key.LastProcrastination);
-			}
-		}
-
-		public static float lastSessionTime {
-			get {
-				return PlayerPrefs.GetFloat(Key.LastSession);
-			}
-		}
-
-		public static float longestProcrastination {
-			get {
-				return PlayerPrefs.GetFloat(Key.LongestProcrastination);
-			}
-		}
 
 	
-		public static string GetTimeDescription(string key) {
-			var seconds = PlayerPrefs.GetFloat(key);
+		public static string GetTimeDescription(float timeInSeconds) {
+			var seconds = timeInSeconds;//PlayerPrefs.GetFloat(GameData.GetKey(key));
 			int minutes = (int) seconds / 60;
 			int hours = minutes / 60;
 			seconds = Mathf.Round(seconds % 60);
@@ -83,7 +60,7 @@ namespace RMX {
 
 		void Start () {
 			canvas.enabled = false;
-			if (lastSessionTime > 0) {
+			if (GameData.currentSessionTime > 0) {
 				newSession = true;
 				Pause (true);
 			} else {
@@ -112,7 +89,9 @@ namespace RMX {
 
 	 	string ofDevTimeWasted {
 			get {
-				return Mathf.Round(Timer.totalTime * 100 / GameData.devTimeWasted) / 100 + "%";
+				float percent = Mathf.Round(100 * GameData.totalTime / GameData.devTimeWasted) / 100;
+//				print ("Total: " + GameData.totalTime + ", dev: " + GameData.devTimeWasted + " = " + percent);
+				return percent + "%";
 					
 			}
 		}
@@ -150,7 +129,7 @@ namespace RMX {
 			}
 		}
 		string text = "";
-		public bool newPersonalBest = false;
+
 
 		bool firstLoad = true;
 		public void Pause(bool pause) {
@@ -159,16 +138,16 @@ namespace RMX {
 //				UpdateScoresAndReset (true);
 				float time;
 				if (newSession) {
-					time = Timer.lastSessionTime;
-					text = "Congratulations. During your last session, you wasted " + GetTimeDescription (Key.LastSession);
+					time = GameData.currentSessionTime;
+					text = "Congratulations. During your last session, you wasted " + GetTimeDescription (GameData.currentSessionTime);
 					newSession = false;
 				} else {
-					time = Timer.lastProcrastination;
-					text = "Congratulations. You have wasted " + GetTimeDescription (Key.LastProcrastination);
-					if (newPersonalBest) {
+					time = GameData.currentProcrastination;
+					text = "Congratulations. You have wasted " + GetTimeDescription (GameData.currentProcrastination);
+					if (GameData.newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
-						newPersonalBest = false;
-						GameCenter.ReportScore(GameData.GetLong(UserData.LongestProctrastination), UserData.LongestProctrastination);
+						GameData.newPersonalBest = false;
+//						GameCenter.ReportScore(GameData.GetLong(UserData.LongestProctrastination), UserData.LongestProctrastination);
 
 					}
 
@@ -187,7 +166,7 @@ namespace RMX {
 
 				if (firstLoad) {
 					firstLoad = false;
-				} else if (Random.Range(0,100) > 60 && paused && !pause && totalTime > GameController.control.newClockThreshold) {
+				} else if (Random.Range(0,100) > 60 && paused && !pause && GameData.totalTime > GameController.control.newClockThreshold) {
 					ClockBehaviour.New();
 				}
 				canvas.enabled = false;
@@ -203,10 +182,10 @@ namespace RMX {
 		public override string ToString ()
 		{
 			string s = 
-					"          Last time: " + lastSessionTime + ", last coninuous: " + lastProcrastination + ", total time: " + totalTime +
-					"\nLast Uniterrupted: " + GetTimeDescription(Key.LastProcrastination) + " and top: " + GetTimeDescription(Key.LongestProcrastination) +
-					"\n     Last Session: " + GetTimeDescription(Key.LastSession) +
-					"\n            Total: " + GetTimeDescription(Key.Total)
+				"              Last time: " + GameData.currentSessionTime + ", last coninuous: " + GameData.currentProcrastination + ", total time: " + GameData.totalTime +
+					"\nLast Uniterrupted: " + GetTimeDescription(GameData.currentProcrastination) + " and top: " + GetTimeDescription(GameData.longestProcrastination) +
+					"\n     Last Session: " + GetTimeDescription(GameData.currentSessionTime) +
+					"\n            Total: " + GetTimeDescription(GameData.totalTime)
 					;
 			return s;
 		}

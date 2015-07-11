@@ -52,26 +52,35 @@ namespace RMX {
 				return true;
 			} else {
 				switch (data) {
-				case UserData.CurrentSession:
+				case UserData.AmeteurCrastinator:
+					score = GameData.totalTime * 100 / 30;
 					break;
-				case UserData.CurrentProcrastination:
+				case UserData.TimeWaster:
+					score = GameData.totalTime * 100 / 5 * 60;
 					break;
-				case UserData.Total:
+				case UserData.SemiPro:
+					score = GameData.totalTime * 100 / 60 * 60;
 					break;
-				case UserData.OfDevTime:
-					if (score > GameData.devTimeWasted) {
-						Social.ReportProgress (achievementID, score, result => {
-							if (result) {
-								completed = true;
-								Debug.Log("Achievement Success");
-							} else {
-								completed = false;
-								Debug.Log("Achievement Failed to report");
-							}
-						});
-					}
+				case UserData.Apathetic:
+					score = GameData.totalTime * 100 / 3 * 60 * 60;
 					break;
+				case UserData.Pro:
+					score = GameData.totalTime * GameData.devTimeWasted;
+					break;
+				default:
+					return false;
 				}
+				if (score > 100) score = 100;
+				Social.ReportProgress (achievementID, score, result => {
+					print (GameData.GetKey(data) + ": " + score + ", result: " + result);
+					if (result) {
+						completed = true;
+						Debug.Log("Achievement Success");
+					} else {
+						completed = false;
+						Debug.Log("Achievement Failed to report");
+					}
+				});
 				return completed;
 			}
 

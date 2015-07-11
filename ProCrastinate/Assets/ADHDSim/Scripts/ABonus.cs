@@ -15,7 +15,11 @@ namespace RMX {
 		public float min = 30;
 		public float max = 45;
 		protected TComponent component;
-		public string key = Key.LastSession;
+		public string key {
+			get {
+				return GameData.GetKey(data);
+			}
+		}
 		public float probability = 0.5f;
 		
 		// Use this for initialization
@@ -24,7 +28,7 @@ namespace RMX {
 		}
 		void Start () {
 			threshold = min > max ? min : Random.Range (min, max);
-			key = GameData.GetKey (data);
+//			key = GameData.GetKey (data);
 			try {
 				SetComponent(GetComponent<TComponent> ());
 			} catch {

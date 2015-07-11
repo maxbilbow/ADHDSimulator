@@ -21,9 +21,8 @@ namespace RMX {
 		//	private int total = Camera.GetAllCameras.count;
 		// Use this for initialization
 		protected void Awake () {
-			GameCenter.Authenticate ();
 			Physics2D.gravity = defaultGravity;
-			isFirstPlay = PlayerPrefs.GetFloat(Key.Total) == 0;
+			isFirstPlay = PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total)) == 0;
 			if (control == null) {
 				DontDestroyOnLoad (gameObject);
 				control = this;
@@ -61,7 +60,17 @@ namespace RMX {
 
 		void Start() {
 //			newClockThreshold = Random.Range (0, newClockThreshold);
-			gameCenter = gameObject.AddComponent<GameCenter> ();
+//			gameCenter = gameObject.AddComponent<GameCenter> ();
+			GameCenter.Authenticate ();
+
+			var time = GameData.totalTime;
+			GameCenter.UpdateAchievement (UserData.AmeteurCrastinator, time);
+			GameCenter.UpdateAchievement (UserData.TimeWaster, time);
+			GameCenter.UpdateAchievement (UserData.SemiPro, time);
+			GameCenter.UpdateAchievement (UserData.Apathetic, time);
+			GameCenter.UpdateAchievement (UserData.Pro, time);
+
+
 		}
 		
 		// Update is called once per frame
@@ -69,19 +78,19 @@ namespace RMX {
 
 		}
 
-		
+
 		public static void UpdateScoresAndReset(bool reset) {
-			var newTotal = Timer.totalTime + Time.deltaTime;
-			var currentTotal = Timer.lastProcrastination + Time.deltaTime;
-			PlayerPrefs.SetFloat (Key.Total, newTotal);
-			PlayerPrefs.SetFloat (Key.LastSession, Time.fixedTime);
-			PlayerPrefs.SetFloat (Key.LastProcrastination, currentTotal);
-			if (Timer.lastProcrastination > Timer.longestProcrastination) {
-				Timer.timer.newPersonalBest = Timer.longestProcrastination > 0;
-				PlayerPrefs.SetFloat(Key.LongestProcrastination, Timer.lastProcrastination);
+			var newTotal = GameData.totalTime + Time.deltaTime;
+			var currentTotal = GameData.currentProcrastination + Time.deltaTime;
+			PlayerPrefs.SetFloat (GameData.GetKey(UserData.Total), newTotal);
+			PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentSession), Time.fixedTime);
+			PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentProcrastination), currentTotal);
+			GameData.newPersonalBest = GameData.currentProcrastination > GameData.longestProcrastination;
+			if (GameData.newPersonalBest) {
+				PlayerPrefs.SetFloat(GameData.GetKey(UserData.LongestProctrastination), GameData.currentProcrastination);
 			}
 			if (reset) {
-				PlayerPrefs.SetFloat (Key.LastProcrastination, 0);
+				PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentProcrastination), 0);
 			}
 		}
 
@@ -89,7 +98,6 @@ namespace RMX {
 			UpdateScoresAndReset (false);
 			long ofDevTime = GameData.GetLong (UserData.OfDevTime);
 			GameCenter.ReportScore(ofDevTime, UserData.OfDevTime);
-			GameCenter.UpdateAchievement (UserData.OfDevTime, ofDevTime);
 			PlayerPrefs.Save ();
 		}
 		

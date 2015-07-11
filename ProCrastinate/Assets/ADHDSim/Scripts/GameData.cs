@@ -9,18 +9,37 @@ namespace RMX {
 		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro
 	}
 
-	public struct Key {
-		public const string LastSession= "last session";
-		public const string LongestProcrastination = "longestProcrastination";
-		public const string LastProcrastination = "last uninterupted";
-		public const string Total = "Total Time Wasted";
-	}
+
 
 
 	public class GameData  {
 
 
-
+		public static float totalTime {
+			get {
+				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total));
+			}
+		}
+		
+		
+		public static float currentProcrastination {
+			get {
+				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.CurrentProcrastination));
+			}
+		}
+		
+		public static float currentSessionTime {
+			get {
+				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.CurrentSession));
+			}
+		}
+		
+		public static float longestProcrastination {
+			get {
+				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.LongestProctrastination));
+			}
+		}
+		public static bool newPersonalBest = false;
 //		public static Social.D
 //		public static GameData data;
 
@@ -32,15 +51,28 @@ namespace RMX {
 //				Destroy (gameObject);
 //			}
 //		}
-		public const float devTimeWasted = 6 * 60 * 60;
+
+		public const float devTimeWasted = 3 * 60 * 60;
 		public static string GetKey(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
-				return Key.LastSession;
+				return "last session";
 			case UserData.CurrentProcrastination:
-				return Key.LastProcrastination;
+				return "last uninterupted";
 			case UserData.Total:
-				return Key.Total;
+				return "Total Time Wasted";
+			case UserData.LongestProctrastination:
+				return "longestProcrastination";
+			case UserData.AmeteurCrastinator:
+				return "Ameteur Crastinator";
+			case UserData.TimeWaster:
+				return "Time Waster";
+			case UserData.SemiPro:
+				return "Semi-Pro";
+			case UserData.Apathetic:
+				return "Apathetic";
+			case UserData.Pro:
+				return "Pro-Crastinator";
 			}
 			return null;
 		}
@@ -48,13 +80,13 @@ namespace RMX {
 		public static long GetLong(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
-				return (long) PlayerPrefs.GetFloat(Key.LastSession);
+				return (long) GameData.currentSessionTime;
 			case UserData.CurrentProcrastination:
-				return (long) PlayerPrefs.GetFloat(Key.LastProcrastination);
+				return (long) currentProcrastination;
 			case UserData.Total:
-				return (long) PlayerPrefs.GetFloat(Key.Total);
+				return (long) totalTime;
 			case UserData.OfDevTime:
-				return (long) (10000 * PlayerPrefs.GetFloat(Key.Total) / devTimeWasted);
+				return (long) (10000 * GameData.totalTime / devTimeWasted);
 			}
 			return -1;
 		}
@@ -82,6 +114,7 @@ namespace RMX {
 			return "-1";
 		}
 
+		/*
 		public static UserData GetEnum(string key) {
 			switch (key) {
 			case Key.LastSession:
@@ -95,7 +128,7 @@ namespace RMX {
 			} 
 
 		}
-
+*/
 
 
 		public static void LoadGameData () {
