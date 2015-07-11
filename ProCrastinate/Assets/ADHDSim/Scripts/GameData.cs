@@ -5,7 +5,7 @@ using System.Xml;
 namespace RMX {
 	public enum UserData {
 		CurrentSession, CurrentProcrastination, Total, 
-		LongestProctrastination, OfDevTime
+		LongestProctrastination, OfDevTime, AmeteurCrastinator 
 	}
 
 	public struct Key {
@@ -63,9 +63,11 @@ namespace RMX {
 		public static string GetID(UserData key) {
 			switch (key) {
 			case UserData.LongestProctrastination:
-				return "55415446";
+				return "";//"55415446";
 			case UserData.OfDevTime:
-				return "55415445";
+				return "CgkI2PKS_coeEAIQAg";//"55415445";
+			case UserData.AmeteurCrastinator:
+				return "CgkI2PKS_coeEAIQAQ";
 			}
 			return "";
 		}

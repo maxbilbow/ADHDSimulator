@@ -21,9 +21,10 @@ namespace RMX {
 			});
 		}
 
-		public static void ReportScore (long score, string leaderboardID) {
+		public static void ReportScore (float score, UserData data) {
+			var leaderboardID = GameData.GetID (data);
 			Debug.Log ("Reporting score " + score + " on leaderboard " + leaderboardID);
-			Social.ReportScore (score, leaderboardID, success => {
+			Social.ReportScore ((long) score * 100, leaderboardID, success => {
 				Debug.Log(success ? "Reported score successfully" : "Failed to report score");
 			});
 		}

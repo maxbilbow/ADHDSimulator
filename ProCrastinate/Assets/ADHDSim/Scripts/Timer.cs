@@ -168,7 +168,7 @@ namespace RMX {
 					if (newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
 						newPersonalBest = false;
-						GameCenter.ReportScore((long) time, GameData.GetID(UserData.LongestProctrastination));
+						GameCenter.ReportScore(time, UserData.LongestProctrastination);
 
 					}
 
