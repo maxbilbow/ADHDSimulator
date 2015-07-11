@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Xml;
 namespace RMX {
 	public enum UserData {
-		CurrentSession, CurrentProcrastination, Total
+		CurrentSession, CurrentProcrastination, Total, 
+		LongestProctrastination, OfDevTime
 	}
 
 	public struct Key {
@@ -15,7 +16,21 @@ namespace RMX {
 	}
 
 
-	public class GameData {
+	public class GameData  {
+
+
+
+//		public static Social.D
+//		public static GameData data;
+
+//		void Awake() {
+//			if (control == null) {
+//				DontDestroyOnLoad (gameObject);
+//				control = this;
+//			} else if (control != this) {
+//				Destroy (gameObject);
+//			}
+//		}
 		public const float devTimeWasted = 6 * 60 * 60;
 		public static string GetKey(UserData data) {
 			switch (data) {
@@ -27,6 +42,32 @@ namespace RMX {
 				return Key.Total;
 			}
 			return null;
+		}
+
+		public static float GetFloat(UserData data) {
+			switch (data) {
+			case UserData.CurrentSession:
+				return PlayerPrefs.GetFloat(Key.LastSession);
+			case UserData.CurrentProcrastination:
+				return PlayerPrefs.GetFloat(Key.LastProcrastination);
+			case UserData.Total:
+				return PlayerPrefs.GetFloat(Key.Total);
+			case UserData.OfDevTime:
+				return PlayerPrefs.GetFloat(Key.Total) / devTimeWasted;
+			}
+			return -1;
+		}
+
+
+
+		public static string GetID(UserData key) {
+			switch (key) {
+			case UserData.LongestProctrastination:
+				return "55415446";
+			case UserData.OfDevTime:
+				return "55415445";
+			}
+			return "";
 		}
 
 		public static UserData GetEnum(string key) {

@@ -4,8 +4,78 @@ using System;
 using UnityEngine.SocialPlatforms;
 
 namespace RMX {
-	public class GameCenter : MonoBehaviour, ISocialPlatform {
+	public class GameCenter : MonoBehaviour {
 
+
+		public static void Authenticate() {
+			Social.localUser.Authenticate (success => {
+				if (success) {
+					Debug.Log ("Authentication successful");
+					string userInfo = "Username: " + Social.localUser.userName + 
+						"\nUser ID: " + Social.localUser.id + 
+							"\nIsUnderage: " + Social.localUser.underage;
+					Debug.Log (userInfo);
+				}
+				else
+					Debug.Log ("Authentication failed");
+			});
+		}
+
+		public static void ReportScore (long score, string leaderboardID) {
+			Debug.Log ("Reporting score " + score + " on leaderboard " + leaderboardID);
+			Social.ReportScore (score, leaderboardID, success => {
+				Debug.Log(success ? "Reported score successfully" : "Failed to report score");
+			});
+		}
+
+
+
+		public static bool UpdateAchievement(UserData data, float score) {
+			bool completed = false;
+			string achievementID = GameData.GetID (UserData.OfDevTime);
+			Social.LoadAchievements (achievements => {
+				if (achievements.Length > 0) {
+//					Debug.Log ("Got " + achievements.Length + " achievement instances");
+//					string myAchievements = "My achievements:\n";
+					foreach (IAchievement achievement in achievements) {
+						if (achievement.id == achievementID) {
+							completed = achievement.completed;
+						}
+					}
+//					Debug.Log (myAchievements);
+				} else
+					Debug.Log ("No achievements returned");
+			});
+			if (completed) {
+				return true;
+			} else {
+				switch (data) {
+				case UserData.CurrentSession:
+					break;
+				case UserData.CurrentProcrastination:
+					break;
+				case UserData.Total:
+					break;
+				case UserData.OfDevTime:
+					if (score > GameData.devTimeWasted) {
+						Social.ReportProgress (achievementID, score, result => {
+							if (result) {
+								completed = true;
+								Debug.Log("Achievement Success");
+							} else {
+								completed = false;
+								Debug.Log("Achievement Failed to report");
+							}
+						});
+					}
+					break;
+				}
+				return completed;
+			}
+
+		}
+
+			/*
 		public static GameCenter gameKit;
 
 		void Awake() {
@@ -16,9 +86,11 @@ namespace RMX {
 				Destroy (gameObject);
 			}
 		}
+
+		
 		// Use this for initialization
 		void Start () {
-		
+
 		}
 		
 		// Update is called once per frame
@@ -95,5 +167,6 @@ namespace RMX {
 		public void ShowLeaderboardUI () {
 			
 		}
+		*/
 	}
 }

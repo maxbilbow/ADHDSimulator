@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine.SocialPlatforms;
 namespace RMX {
 
 	public class Timer : MonoBehaviour {
@@ -92,28 +92,12 @@ namespace RMX {
 
 		}
 
-		
-		// Update is called once per frame
-//		
-		public static void UpdateScoresAndReset(bool reset) {
-			var newTotal = totalTime + Time.deltaTime;
-			var currentTotal = lastProcrastination + Time.deltaTime;
-			PlayerPrefs.SetFloat (Key.Total, newTotal);
-			PlayerPrefs.SetFloat (Key.LastSession, Time.fixedTime);
-			PlayerPrefs.SetFloat (Key.LastProcrastination, currentTotal);
-			if (lastProcrastination > longestProcrastination) {
-				timer.newPersonalBest = longestProcrastination > 0;
-				PlayerPrefs.SetFloat(Key.LongestProcrastination, lastProcrastination);
-			}
-			if (reset) {
-				PlayerPrefs.SetFloat (Key.LastProcrastination, 0);
-			}
-		}
+
 
 		void Update()
 		{
 			if (!paused) {
-				UpdateScoresAndReset(false);
+				GameController.UpdateScoresAndReset(false);
 			}
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
@@ -166,7 +150,7 @@ namespace RMX {
 			}
 		}
 		string text = "";
-		bool newPersonalBest = false;
+		public bool newPersonalBest = false;
 
 		bool firstLoad = true;
 		public void Pause(bool pause) {
@@ -184,6 +168,8 @@ namespace RMX {
 					if (newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
 						newPersonalBest = false;
+						GameCenter.ReportScore((long) time, GameData.GetID(UserData.LongestProctrastination));
+
 					}
 
 				}
@@ -196,7 +182,7 @@ namespace RMX {
 //				uninteruptedTime = Time.fixedTime;
 			} else if (!pause && paused) {
 				ClockBehaviour.CheckVisibleClocks();
-				UpdateScoresAndReset (true);
+				GameController.UpdateScoresAndReset (true);
 				canvas.enabled = false;
 
 				if (firstLoad) {
@@ -211,16 +197,7 @@ namespace RMX {
 
 		}
 
-		void OnApplicationQuit() {
-			UpdateScoresAndReset (false);
-			PlayerPrefs.Save ();
-		}
 
-		void OnApplicationFocus(bool focusStatus) {
-			if (!focusStatus) {
-				Pause(true);
-			}
-		}
 
 		public override string ToString ()
 		{
