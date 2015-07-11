@@ -168,7 +168,7 @@ namespace RMX {
 					if (newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
 						newPersonalBest = false;
-						GameCenter.ReportScore(time, UserData.LongestProctrastination);
+						GameCenter.ReportScore(GameData.GetLong(UserData.LongestProctrastination), UserData.LongestProctrastination);
 
 					}
 
@@ -183,13 +183,14 @@ namespace RMX {
 			} else if (!pause && paused) {
 				ClockBehaviour.CheckVisibleClocks();
 				GameController.UpdateScoresAndReset (true);
-				canvas.enabled = false;
+
 
 				if (firstLoad) {
 					firstLoad = false;
-				} else if (Random.Range(0,100) > newClockPercent && paused && !pause && totalTime > GameController.control.newClockThreshold) {
+				} else if (Random.Range(0,100) > 60 && paused && !pause && totalTime > GameController.control.newClockThreshold) {
 					ClockBehaviour.New();
 				}
+				canvas.enabled = false;
 			}
 			Time.timeScale = pause ? 0 : 1;
 //			this.canvas.enabled = pause;

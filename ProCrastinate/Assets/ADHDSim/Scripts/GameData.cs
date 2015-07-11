@@ -5,7 +5,8 @@ using System.Xml;
 namespace RMX {
 	public enum UserData {
 		CurrentSession, CurrentProcrastination, Total, 
-		LongestProctrastination, OfDevTime, AmeteurCrastinator 
+		LongestProctrastination, OfDevTime, 
+		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro
 	}
 
 	public struct Key {
@@ -44,16 +45,16 @@ namespace RMX {
 			return null;
 		}
 
-		public static float GetFloat(UserData data) {
+		public static long GetLong(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
-				return PlayerPrefs.GetFloat(Key.LastSession);
+				return (long) PlayerPrefs.GetFloat(Key.LastSession);
 			case UserData.CurrentProcrastination:
-				return PlayerPrefs.GetFloat(Key.LastProcrastination);
+				return (long) PlayerPrefs.GetFloat(Key.LastProcrastination);
 			case UserData.Total:
-				return PlayerPrefs.GetFloat(Key.Total);
+				return (long) PlayerPrefs.GetFloat(Key.Total);
 			case UserData.OfDevTime:
-				return PlayerPrefs.GetFloat(Key.Total) / devTimeWasted;
+				return (long) (10000 * PlayerPrefs.GetFloat(Key.Total) / devTimeWasted);
 			}
 			return -1;
 		}
@@ -63,13 +64,22 @@ namespace RMX {
 		public static string GetID(UserData key) {
 			switch (key) {
 			case UserData.LongestProctrastination:
-				return "";//"55415446";
+				return "CgkI2PKS_coeEAIQAw";//"55415446";
 			case UserData.OfDevTime:
+			case UserData.Total:
 				return "CgkI2PKS_coeEAIQAg";//"55415445";
 			case UserData.AmeteurCrastinator:
 				return "CgkI2PKS_coeEAIQAQ";
+			case UserData.TimeWaster:
+				return "CgkI2PKS_coeEAIQBA";
+			case UserData.Apathetic:
+				return "CgkI2PKS_coeEAIQBw";
+			case UserData.SemiPro:
+				return "CgkI2PKS_coeEAIQBQ";
+			case UserData.Pro:
+				return "CgkI2PKS_coeEAIQBg";
 			}
-			return "";
+			return "-1";
 		}
 
 		public static UserData GetEnum(string key) {

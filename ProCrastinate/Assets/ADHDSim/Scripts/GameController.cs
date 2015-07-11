@@ -87,8 +87,8 @@ namespace RMX {
 
 		void OnApplicationQuit() {
 			UpdateScoresAndReset (false);
-			float ofDevTime = GameData.GetFloat (UserData.OfDevTime);
-			GameCenter.ReportScore(ofDevTime, UserData.CurrentSession);
+			long ofDevTime = GameData.GetLong (UserData.OfDevTime);
+			GameCenter.ReportScore(ofDevTime, UserData.OfDevTime);
 			GameCenter.UpdateAchievement (UserData.OfDevTime, ofDevTime);
 			PlayerPrefs.Save ();
 		}
