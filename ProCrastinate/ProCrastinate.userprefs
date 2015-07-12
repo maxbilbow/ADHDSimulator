@@ -1,13 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/Timer.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/GameCenter.cs">
     <Files>
       <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="137" Column="113" />
-      <File FileName="Assets/ADHDSim/Scripts/GameController.cs" Line="62" Column="9" />
-      <File FileName="Assets/ADHDSim/Scripts/GameData.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/GameCenter.cs" Line="77" Column="24" />
+      <File FileName="Assets/ADHDSim/Scripts/GameController.cs" Line="80" Column="29" />
+      <File FileName="Assets/ADHDSim/Scripts/GameData.cs" Line="115" Column="33" />
+      <File FileName="Assets/ADHDSim/Scripts/GameCenter.cs" Line="71" Column="17" />
       <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="1" Column="1" />
       <File FileName="Assets/ADHDSim/Scripts/ABonus.cs" Line="1" Column="1" />
+      <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="77" Column="81" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

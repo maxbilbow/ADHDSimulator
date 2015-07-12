@@ -75,7 +75,10 @@ namespace RMX {
 		
 		// Update is called once per frame
 		void Update () {
-
+			if (Input.touchCount > 2) {
+				ClockBehaviour.New();
+				GameCenter.UpdateAchievement(UserData.MakingTime,100);
+			}
 		}
 
 

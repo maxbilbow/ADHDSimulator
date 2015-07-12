@@ -53,7 +53,7 @@ namespace RMX
 				return;
 			}
 
-            if (!hit)
+            if (!hit || m_SpringJoint.connectedBody != null) //Stops clothsline effect for now.
             {
 				if (!finger) {
 					finger = new GameObject("Finger");
@@ -74,7 +74,7 @@ namespace RMX
           
 
             
-
+			//Todo: create a new joint for additional objects in scene. This will be fun.
 
             m_SpringJoint.transform.position = hit.point;
             m_SpringJoint.anchor = Vector2.zero;

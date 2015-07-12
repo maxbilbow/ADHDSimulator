@@ -6,7 +6,8 @@ namespace RMX {
 	public enum UserData {
 		CurrentSession, CurrentProcrastination, Total, 
 		LongestProctrastination, OfDevTime, 
-		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro
+		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro,
+		MakingTime
 	}
 
 
@@ -110,6 +111,8 @@ namespace RMX {
 				return "CgkI2PKS_coeEAIQBQ";
 			case UserData.Pro:
 				return "CgkI2PKS_coeEAIQBg";
+			case UserData.MakingTime:
+				return "CgkI2PKS_coeEAIQCQ";
 			}
 			return "-1";
 		}

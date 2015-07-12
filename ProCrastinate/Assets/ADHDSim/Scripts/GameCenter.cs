@@ -67,6 +67,9 @@ namespace RMX {
 				case UserData.Pro:
 					score = GameData.totalTime * GameData.devTimeWasted;
 					break;
+				case UserData.MakingTime:
+					score = 100;
+					break;
 				default:
 					return false;
 				}
