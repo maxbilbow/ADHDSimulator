@@ -95,7 +95,7 @@ namespace RMX {
 //			clone.AddComponent<DragRigidbody> ();
 
 			var clock = clone.AddComponent<ClockBehaviour> ();
-			clock.MaxTimeOffScreen = Random.Range (0, 30);
+			clock.MaxTimeOffScreen = Random.Range (0, 10);
 //			clock.life
 			var lastClock = clocks [clocks.Count - 1];
 			clock.startingPoint = lastClock.startingPoint;
