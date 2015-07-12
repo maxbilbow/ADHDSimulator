@@ -8,7 +8,7 @@ namespace RMX {
 		public static GameController control;
 		public GameObject mobileInput;
 		public GameObject desktopInput;
-		public GameCenter gameCenter;// = new GameCenter ();
+//		public GameCenter gameCenter;// = new GameCenter ();
 		public float newClockThreshold = 120;
 		public float maxNumberOfClocks = 50;
 		public Vector2 velocity {

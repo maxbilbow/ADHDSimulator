@@ -3,11 +3,16 @@ using System.Collections;
 using System;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.GameCenter;
+using System.Runtime.InteropServices;
 
+//[DllImport("__Internal")]
+//private static extern void _ReportAchievement( string achievementID, float progress );
 
 namespace RMX {
-	public class GameCenter : MonoBehaviour {
+	public static class GameCenter {
 
+		[DllImport("__Internal")]
+		private static extern void _ReportAchievement( string achievementID, float progress );
 
 		public static void Authenticate() {
 //			GameCenterPlatform.Activate();
@@ -80,12 +85,11 @@ namespace RMX {
 					return false;
 				}
 				if (progress > 100) progress = 100;
-//				#ifUNITY_IPHONE
-//				[DllImport("__Internal")]
-//				private static extern void _ReportAchievement( string achievementID, float progress );
-//				
-//				#else
-				//#ifUNITY_ANDROID
+				#if UNITY_IOS 
+				_ReportAchievement( string achievementID, float progress );
+						
+				#else
+				//TODO: Or Standalone OSX(if needed)
 				Social.ReportProgress (achievementID, progress, result => {
 					Debug.Log (GameData.GetKey(data) + ": " + progress + ", result: " + result);
 					if (result) {
@@ -97,7 +101,7 @@ namespace RMX {
 						Debug.Log("Achievement Failed to report");
 					}
 				});
-//				#endif
+				#endif
 
 				return completed;
 			}

@@ -6,7 +6,7 @@ namespace RMX {
 
 	public class Timer : MonoBehaviour {
 
-		GameCenter gameCenter;
+//		GameCenter gameCenter;
 
 		public static Timer timer;
 		public int newClockPercent = 50;
