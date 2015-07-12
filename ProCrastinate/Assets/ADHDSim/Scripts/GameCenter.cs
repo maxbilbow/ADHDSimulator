@@ -10,6 +10,7 @@ namespace RMX {
 
 
 		public static void Authenticate() {
+//			GameCenterPlatform.Activate();
 			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 			Social.localUser.Authenticate (success => {
 				if (success) {
