@@ -55,7 +55,7 @@ namespace RMX {
 
 
 
-		public const float devTimeWasted = 3 * 60 * 60;
+		public const float devTimeWasted = 5 * 60 * 60;
 		public static string GetKey(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:

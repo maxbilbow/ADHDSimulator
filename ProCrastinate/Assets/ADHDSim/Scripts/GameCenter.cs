@@ -87,13 +87,13 @@ namespace RMX {
 					progress = GameData.totalTime > 20 ? 100 : 0;
 					break;
 				case UserData.TimeWaster:
-					progress = GameData.totalTime / (5 * 60);
+					progress = GameData.totalTime / (10 * 60);
 					break;
 				case UserData.SemiPro:
-					progress = GameData.totalTime / (60 * 60);
+					progress = GameData.totalTime / (GameData.devTimeWasted / 4);
 					break;
 				case UserData.Apathetic:
-					progress = GameData.totalTime / (3 * 60 * 60);
+					progress = GameData.totalTime / (GameData.devTimeWasted / 2);
 					break;
 				case UserData.Pro:
 					progress = GameData.totalTime / GameData.devTimeWasted;
