@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.GameCenter;
@@ -11,10 +12,13 @@ using System.Runtime.InteropServices;
 namespace RMX {
 	public static class GameCenter {
 
+//		public static List<IAchievement> achievements;
+		public static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
 		public static void Authenticate() {
+			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 			Social.localUser.Authenticate (success => {
 				if (success) {
 					Debug.Log ("Authentication successful");
@@ -26,7 +30,7 @@ namespace RMX {
 				else
 					Debug.Log ("Authentication failed");
 			});
-			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
+
 
 			
 		}
@@ -40,57 +44,78 @@ namespace RMX {
 			});
 		}
 
-
+		public static void CheckProgress() {
+			var time = GameData.totalTime;
+			achievement[UserData.AmeteurCrastinator]	= UpdateAchievement (UserData.AmeteurCrastinator, time);
+			achievement[UserData.TimeWaster] 			= UpdateAchievement (UserData.TimeWaster, time);
+			achievement[UserData.SemiPro] 				= UpdateAchievement (UserData.SemiPro, time);
+			achievement[UserData.Apathetic] 			= UpdateAchievement (UserData.Apathetic, time);
+			achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
+		}
 
 		public static bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
 			string achievementID = GameData.GetID (data);
-			Social.LoadAchievements (achievements => {
-				if (achievements.Length > 0) {
-//					Debug.Log ("Got " + achievements.Length + " achievement instances");
-//					string myAchievements = "My achievements:\n";
-					foreach (IAchievement achievement in achievements) {
-						if (achievement.id == achievementID) {
-							completed = achievement.completed;
+			try {
+				Social.LoadAchievements (achievements => {
+					if (achievements.Length > 0) {
+	//					Debug.Log ("Got " + achievements.Length + " achievement instances");
+	//					string myAchievements = "My achievements:\n";
+						foreach (IAchievement achievement in achievements) {
+							if (achievement.id == achievementID) {
+								completed = achievement.completed;
+								Debug.Log ("Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed);
+								break;
+							}
 						}
+	//					Debug.Log (myAchievements);
+					} else {
+	//					Debug.Log ("No achievements returned");
+						throw new System.ArgumentException("No achievements returned");
 					}
-//					Debug.Log (myAchievements);
-				} else
-					Debug.Log ("No achievements returned");
-			});
+				});
+			} catch (System.ArgumentException exception) {
+				Debug.Log (exception.Message);
+				return false;
+			}
 			if (completed) {
 				return true;
 			} else {
 				double progress;
 				switch (data) {
 				case UserData.AmeteurCrastinator:
-					progress = GameData.totalTime * 100 / 30;
+					progress = GameData.totalTime > 20 ? 100 : 0;
 					break;
 				case UserData.TimeWaster:
-					progress = GameData.totalTime * 100 / (5 * 60);
+					progress = GameData.totalTime / (5 * 60);
 					break;
 				case UserData.SemiPro:
-					progress = GameData.totalTime * 100 / (60 * 60);
+					progress = GameData.totalTime / (60 * 60);
 					break;
 				case UserData.Apathetic:
-					progress = GameData.totalTime * 100 / (3 * 60 * 60);
+					progress = GameData.totalTime / (3 * 60 * 60);
 					break;
 				case UserData.Pro:
-					progress = GameData.totalTime * 100 / GameData.devTimeWasted;
+					progress = GameData.totalTime / GameData.devTimeWasted;
 					break;
 				case UserData.MakingTime:
-					progress = 100;
+					progress = 1;
 					break;
 				default:
 					return false;
 				}
-				if (progress > 100) progress = 100;
+				progress *= 100;
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
-//				_ReportAchievement( achievementID, (float) progress );
+				if (progress >= 100) {
+					progress = 100;
+					completed = true;
+				} else {
+					progress = 0;
+					completed = false;
+				}
 				GKAchievementReporter.ReportAchievement(achievementID, (float) progress, true);
 						
 				#else
-				//TODO: Or Standalone OSX(if needed)
 				Social.ReportProgress (achievementID, progress, result => {
 					Debug.Log (GameData.GetKey(data) + ": " + progress + ", result: " + result);
 					if (result) {
@@ -104,6 +129,9 @@ namespace RMX {
 				});
 				#endif
 
+				if (completed) {
+
+				}
 				return completed;
 			}
 

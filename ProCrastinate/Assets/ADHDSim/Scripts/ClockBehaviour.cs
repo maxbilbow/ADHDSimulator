@@ -10,6 +10,12 @@ namespace RMX {
 		public static ClockBehaviour original;
 		private Vector2 exitVelocity;
 	
+		bool isOnScreen = true;
+		float fellOffAtTime = 0f;
+		public float MaxTimeOffScreen = 30f;
+		private float OffScreenLimit = 2f;
+		public float maxVelocity = 15f;
+
 		private static bool IsVisible(ClockBehaviour clock) {
 			var wasOn = clock.isOnScreen;
 			clock.isOnScreen = GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), clock.gameObject.GetComponent<Collider2D>().bounds);
@@ -42,10 +48,7 @@ namespace RMX {
 //			}
 //		}
 
-		bool isOnScreen = true;
-		float fellOffAtTime = 0f;
-		public float MaxTimeOffScreen = 30f;
-		private float OffScreenLimit = 2f;
+
 		public Rigidbody2D body {
 			get {
 				return GetComponent<Rigidbody2D>();
@@ -179,7 +182,7 @@ namespace RMX {
 			bounds.min = cam.ScreenToWorldPoint (Vector3.zero);
 			return bounds;
 		}
-		public float maxVelocity = 30f;
+
 		public void ResetWithVelocity (Vector2 direction) {
 			var bounds = GetScreenSizeInWorld ();
 			var v = body.velocity;

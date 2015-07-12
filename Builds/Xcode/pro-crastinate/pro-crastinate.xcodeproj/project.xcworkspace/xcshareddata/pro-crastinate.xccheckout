@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D2A4E1B5-AD05-4874-ADF6-D9DCE01F98A1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E2A848F4E4461DF4D6328422434CB0BFA96C8FDD</key>
+		<string>https://github.com/maxbilbow/ADHDSimulator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Builds/Xcode/pro-crastinate/pro-crastinate.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E2A848F4E4461DF4D6328422434CB0BFA96C8FDD</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/maxbilbow/ADHDSimulator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E2A848F4E4461DF4D6328422434CB0BFA96C8FDD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E2A848F4E4461DF4D6328422434CB0BFA96C8FDD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ADHDSimulator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

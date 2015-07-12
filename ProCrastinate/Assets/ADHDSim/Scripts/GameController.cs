@@ -59,24 +59,23 @@ namespace RMX {
 			}
 		}
 
+
+
 		void Start() {
 //			newClockThreshold = Random.Range (0, newClockThreshold);
 //			gameCenter = gameObject.AddComponent<GameCenter> ();
 			GameCenter.Authenticate ();
-
-			var time = GameData.totalTime;
-			GameCenter.UpdateAchievement (UserData.AmeteurCrastinator, time);
-			GameCenter.UpdateAchievement (UserData.TimeWaster, time);
-			GameCenter.UpdateAchievement (UserData.SemiPro, time);
-			GameCenter.UpdateAchievement (UserData.Apathetic, time);
-			GameCenter.UpdateAchievement (UserData.Pro, time);
-
-
+			GameCenter.CheckProgress ();
 		}
 		
 		// Update is called once per frame
+		private float _checkTime = 30;
 		void Update () {
-			if (Input.touchCount > 2) {
+			if (Time.fixedTime > _checkTime) {
+				GameCenter.CheckProgress();
+				_checkTime += 30;
+			}
+			if (Input.touchCount > 2 && GameCenter.achievement[UserData.AmeteurCrastinator]) {
 				ClockBehaviour.New();
 				GameCenter.UpdateAchievement(UserData.MakingTime,100);
 				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
@@ -114,6 +113,7 @@ namespace RMX {
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
 				Timer.timer.Pause(true);
+				GameCenter.CheckProgress ();
 			}
 		}
 
