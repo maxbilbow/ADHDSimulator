@@ -14,7 +14,7 @@ namespace RMX {
 			if (isBonusActive) {
 				Physics2D.gravity = new Vector2 (Input.acceleration.x, Input.acceleration.y) * 9.81f;
 			}
-			print (Physics2D.gravity);
+//			print (Physics2D.gravity);
 		}
 	
 	}
