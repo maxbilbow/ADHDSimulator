@@ -16,7 +16,6 @@ namespace RMX {
 
 		public static void Authenticate() {
 //			GameCenterPlatform.Activate();
-			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 			Social.localUser.Authenticate (success => {
 				if (success) {
 					Debug.Log ("Authentication successful");
@@ -28,7 +27,9 @@ namespace RMX {
 				else
 					Debug.Log ("Authentication failed");
 			});
+			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 
+			
 		}
 
 		public static void ReportScore (long score, UserData data) {
