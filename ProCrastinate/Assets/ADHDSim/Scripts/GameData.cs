@@ -95,26 +95,39 @@ namespace RMX {
 
 
 		public static string GetID(UserData key) {
+			#if UNITY_IOS || UNITY_STANDALONE_OSX
+			string id = "grp.";
+			#else
+			string id = "";
+			#endif
 			switch (key) {
 			case UserData.LongestProctrastination:
-				return "CgkI2PKS_coeEAIQAw";//"55415446";
+				id += "CgkI2PKS_coeEAIQAw";//"55415446";
+				break;
 			case UserData.OfDevTime:
 			case UserData.Total:
-				return "CgkI2PKS_coeEAIQCA";//"55415445";
+				id += "CgkI2PKS_coeEAIQCA";//"55415445";
+				break;
 			case UserData.AmeteurCrastinator:
-				return "CgkI2PKS_coeEAIQAQ";
+				id += "CgkI2PKS_coeEAIQAQ";
+				break;
 			case UserData.TimeWaster:
-				return "CgkI2PKS_coeEAIQBA";
+				id += "CgkI2PKS_coeEAIQBA";
+				break;
 			case UserData.Apathetic:
-				return "CgkI2PKS_coeEAIQBw";
+				id += "CgkI2PKS_coeEAIQBw";
+				break;
 			case UserData.SemiPro:
-				return "CgkI2PKS_coeEAIQBQ";
+				id += "CgkI2PKS_coeEAIQBQ";
+				break;
 			case UserData.Pro:
-				return "CgkI2PKS_coeEAIQBg";
+				id += "CgkI2PKS_coeEAIQBg";
+				break;
 			case UserData.MakingTime:
-				return "CgkI2PKS_coeEAIQCQ";
+				id += "CgkI2PKS_coeEAIQCQ";
+				break;
 			}
-			return "-1";
+			return id;
 		}
 
 		/*
