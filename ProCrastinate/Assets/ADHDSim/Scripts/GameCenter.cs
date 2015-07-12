@@ -11,11 +11,10 @@ using System.Runtime.InteropServices;
 namespace RMX {
 	public static class GameCenter {
 
-		[DllImport("__Internal")]
-		private static extern void _ReportAchievement( string achievementID, float progress );
+//		[DllImport("__Internal")]
+//		private static extern void _ReportAchievement( string achievementID, float progress );
 
 		public static void Authenticate() {
-//			GameCenterPlatform.Activate();
 			Social.localUser.Authenticate (success => {
 				if (success) {
 					Debug.Log ("Authentication successful");
@@ -87,7 +86,8 @@ namespace RMX {
 				}
 				if (progress > 100) progress = 100;
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
-				_ReportAchievement( achievementID, (float) progress );
+//				_ReportAchievement( achievementID, (float) progress );
+				GKAchievementReporter.ReportAchievement(achievementID, (float) progress, true);
 						
 				#else
 				//TODO: Or Standalone OSX(if needed)
