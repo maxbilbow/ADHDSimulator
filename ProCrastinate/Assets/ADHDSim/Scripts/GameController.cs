@@ -80,6 +80,7 @@ namespace RMX {
 				ClockBehaviour.New();
 				GameCenter.UpdateAchievement(UserData.MakingTime,100);
 				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
+//					GameCenter.UpdateAchievement(UserData.TooMuchTime,100);
 					var toDestroy = ClockBehaviour.clocks[1];
 					ClockBehaviour.clocks.RemoveAt(1);
 					Destroy(toDestroy.gameObject);

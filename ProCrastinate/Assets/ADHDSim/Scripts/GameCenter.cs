@@ -10,6 +10,7 @@ namespace RMX {
 
 
 		public static void Authenticate() {
+			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 			Social.localUser.Authenticate (success => {
 				if (success) {
 					Debug.Log ("Authentication successful");
@@ -21,7 +22,7 @@ namespace RMX {
 				else
 					Debug.Log ("Authentication failed");
 			});
-			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
+
 		}
 
 		public static void ReportScore (long score, UserData data) {
@@ -54,31 +55,38 @@ namespace RMX {
 			if (completed) {
 				return true;
 			} else {
+				double progress;
 				switch (data) {
 				case UserData.AmeteurCrastinator:
-					score = GameData.totalTime * 100 / 30;
+					progress = GameData.totalTime * 100 / 30;
 					break;
 				case UserData.TimeWaster:
-					score = GameData.totalTime * 100 / 5 * 60;
+					progress = GameData.totalTime * 100 / (5 * 60);
 					break;
 				case UserData.SemiPro:
-					score = GameData.totalTime * 100 / 60 * 60;
+					progress = GameData.totalTime * 100 / (60 * 60);
 					break;
 				case UserData.Apathetic:
-					score = GameData.totalTime * 100 / 3 * 60 * 60;
+					progress = GameData.totalTime * 100 / (3 * 60 * 60);
 					break;
 				case UserData.Pro:
-					score = GameData.totalTime * 100 / GameData.devTimeWasted;
+					progress = GameData.totalTime * 100 / GameData.devTimeWasted;
 					break;
 				case UserData.MakingTime:
-					score = 100;
+					progress = 100;
 					break;
 				default:
 					return false;
 				}
-				if (score > 100) score = 100;
-				Social.ReportProgress (achievementID, score, result => {
-					Debug.Log (GameData.GetKey(data) + ": " + score + ", result: " + result);
+				if (progress > 100) progress = 100;
+//				#ifUNITY_IPHONE
+//				[DllImport("__Internal")]
+//				private static extern void _ReportAchievement( string achievementID, float progress );
+//				
+//				#else
+				//#ifUNITY_ANDROID
+				Social.ReportProgress (achievementID, progress, result => {
+					Debug.Log (GameData.GetKey(data) + ": " + progress + ", result: " + result);
 					if (result) {
 						completed = true;
 						Debug.Log("Achievement Success");
@@ -88,6 +96,8 @@ namespace RMX {
 						Debug.Log("Achievement Failed to report");
 					}
 				});
+//				#endif
+
 				return completed;
 			}
 
