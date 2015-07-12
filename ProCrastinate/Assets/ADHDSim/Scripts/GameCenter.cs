@@ -85,8 +85,8 @@ namespace RMX {
 					return false;
 				}
 				if (progress > 100) progress = 100;
-				#if UNITY_IOS 
-				_ReportAchievement( achievementID, progress );
+				#if UNITY_IOS || UNITY_STANDALONE_OSX
+				_ReportAchievement( achievementID, (float) progress );
 						
 				#else
 				//TODO: Or Standalone OSX(if needed)
