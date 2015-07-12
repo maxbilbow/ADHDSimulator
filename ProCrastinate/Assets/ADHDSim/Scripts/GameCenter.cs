@@ -2,6 +2,8 @@
 using System.Collections;
 using System;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.SocialPlatforms.GameCenter;
+
 
 namespace RMX {
 	public class GameCenter : MonoBehaviour {
@@ -19,6 +21,7 @@ namespace RMX {
 				else
 					Debug.Log ("Authentication failed");
 			});
+			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 		}
 
 		public static void ReportScore (long score, UserData data) {
@@ -34,7 +37,7 @@ namespace RMX {
 
 		public static bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
-			string achievementID = GameData.GetID (UserData.OfDevTime);
+			string achievementID = GameData.GetID (data);
 			Social.LoadAchievements (achievements => {
 				if (achievements.Length > 0) {
 //					Debug.Log ("Got " + achievements.Length + " achievement instances");
@@ -65,7 +68,7 @@ namespace RMX {
 					score = GameData.totalTime * 100 / 3 * 60 * 60;
 					break;
 				case UserData.Pro:
-					score = GameData.totalTime * GameData.devTimeWasted;
+					score = GameData.totalTime * 100 / GameData.devTimeWasted;
 					break;
 				case UserData.MakingTime:
 					score = 100;
@@ -79,6 +82,7 @@ namespace RMX {
 					if (result) {
 						completed = true;
 						Debug.Log("Achievement Success");
+
 					} else {
 						completed = false;
 						Debug.Log("Achievement Failed to report");

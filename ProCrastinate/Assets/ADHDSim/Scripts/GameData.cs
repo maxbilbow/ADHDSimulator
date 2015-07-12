@@ -87,7 +87,7 @@ namespace RMX {
 			case UserData.Total:
 				return (long) totalTime;
 			case UserData.OfDevTime:
-				return (long) (10000 * GameData.totalTime / devTimeWasted);
+				return (long) (100 * GameData.totalTime / devTimeWasted);
 			}
 			return -1;
 		}

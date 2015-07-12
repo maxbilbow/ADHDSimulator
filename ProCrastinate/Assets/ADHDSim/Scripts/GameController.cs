@@ -10,6 +10,7 @@ namespace RMX {
 		public GameObject desktopInput;
 		public GameCenter gameCenter;// = new GameCenter ();
 		public float newClockThreshold = 120;
+		public float maxNumberOfClocks = 50;
 		public Vector2 velocity {
 			get {
 				return new Vector2(transform.forward.x, transform.forward.y);
@@ -78,6 +79,11 @@ namespace RMX {
 			if (Input.touchCount > 2) {
 				ClockBehaviour.New();
 				GameCenter.UpdateAchievement(UserData.MakingTime,100);
+				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
+					var toDestroy = ClockBehaviour.clocks[1];
+					ClockBehaviour.clocks.RemoveAt(1);
+					Destroy(toDestroy.gameObject);
+				}
 			}
 		}
 
