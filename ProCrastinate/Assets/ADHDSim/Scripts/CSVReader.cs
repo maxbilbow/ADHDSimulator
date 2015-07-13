@@ -1,82 +1,236 @@
-﻿/*
-	CSVReader by Dock. (24/8/11)
-	http://starfruitgames.com
- 
-	usage: 
-	CSVReader.SplitCsvGrid(textString)
- 
-	returns a 2D string array. 
- 
-	Drag onto a gameobject for a demo of CSV parsing.
-*/
+﻿/// <summary>
+/// Author: Mario Di Vece <mario@unosquare.com>
+/// Date: 3/19/2014
+/// Updated: 9/18/2014
+/// License: MIT
+/// </summary>
 
-using UnityEngine;
-using System.Collections;
-using System.Linq; 
 
-public class CSVReader : MonoBehaviour 
+
+namespace RMX
 {
-	public TextAsset csvFile; 
-	public void Start()
-	{
-		string[,] grid = SplitCsvGrid(csvFile.text);
-		Debug.Log("size = " + (1+ grid.GetUpperBound(0)) + "," + (1 + grid.GetUpperBound(1))); 
-		
-		DebugOutputGrid(grid); 
-	}
+
+	using System;
+	using System.Collections.Generic;
+	using System.Text;
+	using System.Linq;
+	using UnityEngine;
 	
-	// outputs the content of a 2D array, useful for checking the importer
-	static public void DebugOutputGrid(string[,] grid)
+	/// <summary>
+	/// A simple class to read small CSV files
+	/// Do not attempt to read very large files with this because
+	/// the entire contents of the file are read at once. Also,
+	/// The result is produced at once.
+	/// </summary>
+	public static class CsvReader
 	{
-		string textOutput = ""; 
-		for (int y = 0; y < grid.GetUpperBound(1); y++) {	
-			for (int x = 0; x < grid.GetUpperBound(0); x++) {
-				
-				textOutput += grid[x,y]; 
-				textOutput += "|"; 
-			}
-			textOutput += "\n"; 
-		}
-		Debug.Log(textOutput);
-	}
-	
-	// splits a CSV file into a 2D string array
-	static public string[,] SplitCsvGrid(string csvText)
-	{
-		string[] lines = csvText.Split("\n"[0]); 
+		private const char DoubleQuote = '"';
+		private const char Comma = ',';
+		static public readonly Encoding Windows1252Encoding = Encoding.GetEncoding(1252);
 		
-		// finds the max width of row
-		int width = 0; 
-		for (int i = 0; i < lines.Length; i++)
+		public class CsvRecord : List<string>
 		{
-			string[] row = SplitCsvLine( lines[i] ); 
-			width = Mathf.Max(width, row.Length); 
-		}
-		
-		// creates new 2D string grid to output to
-		string[,] outputGrid = new string[width + 1, lines.Length + 1]; 
-		for (int y = 0; y < lines.Length; y++)
-		{
-			string[] row = SplitCsvLine( lines[y] ); 
-			for (int x = 0; x < row.Length; x++) 
+			public override string ToString()
 			{
-				outputGrid[x,y] = row[x]; 
-				
-				// This line was to replace "" with " in my output. 
-				// Include or edit it as you wish.
-				outputGrid[x,y] = outputGrid[x,y].Replace("\"\"", "\"");
+				return string.Join(",", this.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
 			}
 		}
+		public class CsvRecordList : List<CsvRecord> { }
 		
-		return outputGrid; 
-	}
-	
-	// splits a CSV row 
-	static public string[] SplitCsvLine(string line)
-	{
-		return (from System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(line,
-		                                                                                                    @"(((?<x>(?=[,\r\n]+))|""(?<x>([^""]|"""")+)""|(?<x>[^,\r\n]+)),?)", 
-		                                                                                                    System.Text.RegularExpressions.RegexOptions.ExplicitCapture)
-		        select m.Groups[1].Value).ToArray();
+		/// <summary>
+		/// Defines the 3 different read states
+		/// </summary>
+		private enum ReadState
+		{
+			WaitingForNewField,
+			PushingNormal,
+			PushingQuoted,
+		}
+		
+		/// <summary>
+		/// Parses the specified CSV string into a CsvRecordList.
+		/// </summary>
+		/// <param name="csvString">The CSV string.</param>
+		/// <returns></returns>
+		static public CsvRecordList Parse(string csvString)
+		{
+			var records = new CsvReader.CsvRecordList();
+			{
+				var lines = csvString.Split(new string[] { "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+				foreach (var line in lines)
+				{
+					if (string.IsNullOrEmpty(line))//TODO: account for whitespace
+						continue;
+					records.Add(CsvReader.ParseLine(line.Trim()));
+				}
+			}
+			
+			return records;
+		}
+
+		/// <summary>
+		/// Reads the CSV records from specified path at once.
+		/// </summary>
+		/// <param name="path">The path.</param>
+		/// <returns></returns>
+		static public CsvRecordList Read(TextAsset file)
+		{
+			var csvLines = file.text.Split ('\n');//System.IO.File.ReadAllLines(path, encoding);
+			var csvRecords = new CsvRecordList();
+			
+			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
+			{
+				var currentLine = csvLines[lineIndex];
+				var record = ParseLine(currentLine);
+				csvRecords.Add(record);
+			}
+			
+			return csvRecords;
+		}
+
+		/// <summary>
+		/// Reads the CSV records from specified path at once.
+		/// </summary>
+		/// <param name="path">The path.</param>
+		/// <returns></returns>
+		static public CsvRecordList Read(string path)
+		{
+			return Read(path, Encoding.UTF8);
+		}
+		
+		/// <summary>
+		/// Reads a single line from the the currently open reader.
+		/// If a reader
+		/// </summary>
+		/// <param name="reader">The reader.</param>
+		/// <returns></returns>
+		static public CsvRecord ReadLine(System.IO.StreamReader reader)
+		{
+			string line = null;
+			if ((line = reader.ReadLine()) != null)
+			{
+				return ParseLine(line);
+			}
+			
+			return null;
+		}
+		
+		/// <summary>
+		/// Reads the specified csv file in the given file path.
+		/// </summary>
+		/// <param name="path">The path.</param>
+		/// <param name="encoding">The encoding.</param>
+		/// <returns></returns>
+		static public CsvRecordList Read(string path, Encoding encoding)
+		{
+			var csvLines = System.IO.File.ReadAllLines(path, encoding);
+			var csvRecords = new CsvRecordList();
+			
+			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
+			{
+				var currentLine = csvLines[lineIndex];
+				var record = ParseLine(currentLine);
+				csvRecords.Add(record);
+			}
+			
+			return csvRecords;
+		}
+		
+		/// <summary>
+		/// Parses the line into a list of strings.
+		/// </summary>
+		/// <param name="line">The line.</param>
+		/// <returns></returns>
+		public static CsvRecord ParseLine(string line)
+		{
+			var values = new CsvRecord();
+			var currentValue = new StringBuilder(1024);
+			char currentChar;
+			Nullable<char> nextChar = null;
+			var currentState = ReadState.WaitingForNewField;
+			
+			for (var charIndex = 0; charIndex < line.Length; charIndex++)
+			{
+				// Get the current and next character
+				currentChar = line[charIndex];
+				nextChar = charIndex < line.Length - 1 ? line[charIndex + 1] : new Nullable<char>();
+				
+				// Perform logic based on state and decide on next state
+				switch (currentState)
+				{
+				case ReadState.WaitingForNewField:
+				{
+					currentValue.Length = 0;//.Clear();
+					if (currentChar == DoubleQuote)
+					{
+						currentState = ReadState.PushingQuoted;
+						continue;
+					}
+					else if (currentChar == Comma)
+					{
+						values.Add(currentValue.ToString());
+						currentState = ReadState.WaitingForNewField;
+						continue;
+					}
+					else
+					{
+						currentValue.Append(currentChar);
+						currentState = ReadState.PushingNormal;
+						continue;
+					}
+				}
+				case ReadState.PushingNormal:
+				{
+					// Handle field content delimiter by comma
+					if (currentChar == Comma)
+					{
+						currentState = ReadState.WaitingForNewField;
+						values.Add(currentValue.ToString().Trim());
+						currentValue.Length = 0;//();
+						continue;
+					}
+					
+					// Handle double quote escaping
+					if (currentChar == DoubleQuote && nextChar == DoubleQuote)
+					{
+						// advance 1 character now. The loop will advance one more.
+						currentValue.Append(currentChar);
+						charIndex++;
+						continue;
+					}
+					
+					currentValue.Append(currentChar);
+					break;
+				}
+				case ReadState.PushingQuoted:
+				{
+					// Handle field content delimiter by ending double quotes
+					if (currentChar == DoubleQuote && nextChar != DoubleQuote)
+					{
+						currentState = ReadState.PushingNormal;
+						continue;
+					}
+					
+					// Handle double quote escaping
+					if (currentChar == DoubleQuote && nextChar == DoubleQuote)
+					{
+						// advance 1 character now. The loop will advance one more.
+						currentValue.Append(currentChar);
+						charIndex++;
+						continue;
+					}
+					
+					currentValue.Append(currentChar);
+					break;
+				}
+					
+				}
+				
+			}
+			
+			// push anything that has not been pushed (flush)
+			values.Add(currentValue.ToString().Trim());
+			return values;
+		}
 	}
 }

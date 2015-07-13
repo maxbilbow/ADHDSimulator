@@ -48,8 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\ADHDSim\Scripts\ABonus.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Bonus.cs" />
-     <Compile Include="Assets\ADHDSim\Scripts\CSVReader.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\CSVReaderOld.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\ClockBehaviour.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\CsvReader.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\DataReader.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\DragRigidbody.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameCenter.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameController.cs" />

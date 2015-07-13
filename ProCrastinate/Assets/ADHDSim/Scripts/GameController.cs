@@ -11,6 +11,7 @@ namespace RMX {
 //		public GameCenter gameCenter;// = new GameCenter ();
 		public float newClockThreshold = 120;
 		public float maxNumberOfClocks = 50;
+		public TextAsset database;
 		public Vector2 velocity {
 			get {
 				return new Vector2(transform.forward.x, transform.forward.y);
@@ -66,6 +67,9 @@ namespace RMX {
 //			gameCenter = gameObject.AddComponent<GameCenter> ();
 			GameCenter.Authenticate ();
 			GameCenter.CheckProgress ();
+#if DEBUG
+//			GameData.TestData ();
+#endif
 		}
 		
 		// Update is called once per frame
