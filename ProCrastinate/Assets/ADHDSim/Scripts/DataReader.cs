@@ -10,6 +10,7 @@ namespace RMX
 		public const float variation = 0.2f;
 		public const int csv_time = 2;
 		public const int csv_text = 1;
+		public const int csv_approved = 3;
 
 
 		public static float TimeHMSToFloat(string time, char parser) {
@@ -61,9 +62,14 @@ namespace RMX
 			
 			var list = reader.FindAll(match => {
 				try {
-					return IsWithinTime(match[csv_time], inTime);
+					if (match.Count > csv_approved && match[csv_approved] == "true") {
+						return IsWithinTime(match[csv_time], inTime);
+					} else {
+						return false;
+					}
+
 				} catch (Exception e) {
-					Console.WriteLine(e.Message + ": " + match[csv_time]);
+					Debug.Log(e.Message + ": " + match[csv_time]);
 					return false;
 				}
 			});
