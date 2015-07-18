@@ -12,11 +12,11 @@ using System.Runtime.InteropServices;
 namespace RMX {
 	public static class GameCenter {
 
-		private static bool _willUpdateAwards = false;
-		public static void AnAwardWasAchieved() {
+//		private static bool _willUpdateAwards = false;
+//		public static void AnAwardWasAchieved() {
+//			_willUpdateAwards = true
+//		}
 
-		}
-//		public static List<IAchievement> achievements;
 		public static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );

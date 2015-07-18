@@ -58,28 +58,38 @@ namespace RMX
 		
 		private static List<CsvReader.CsvRecord> GetActivities(float inTime) {
 //			Debug.Log (GameController.control.database.name);
-			var reader = CsvReader.Read (GameController.control.database);
+			try {
+				var reader = CsvReader.Read (GameController.control.database);
+		
 			
-			var list = reader.FindAll(match => {
-				try {
-					if (match.Count > csv_approved && match[csv_approved] == "true") {
-						return IsWithinTime(match[csv_time], inTime);
-					} else {
+				var list = reader.FindAll(match => {
+					try {
+						if (match.Count > csv_approved && match[csv_approved] == "true") {
+							return IsWithinTime(match[csv_time], inTime);
+						} else {
+							return false;
+						}
+
+					} catch (Exception e) {
+						Debug.Log(e.Message + ": " + match[csv_time]);
 						return false;
 					}
-
-				} catch (Exception e) {
-					Debug.Log(e.Message + ": " + match[csv_time]);
-					return false;
-				}
-			});
+				});
 			return list;
+			} catch  (Exception e) {
+				throw e;
+			}
+			
 		}
 
 		public static List<string> GetActivityList(float forTime) {
 			List<string> list = new List<string> ();
-			foreach (CsvReader.CsvRecord thing in GetActivities(forTime)) {
-				list.Add (thing[csv_text]);
+			try {
+				foreach (CsvReader.CsvRecord thing in GetActivities(forTime)) {
+					list.Add (thing[csv_text]);
+				}
+			} catch (Exception e) {
+				Debug.Log(e.Message);
 			}
 			return list;
 		}

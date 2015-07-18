@@ -7,8 +7,6 @@
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -define:UNITY_5_1_1
@@ -71,7 +69,6 @@
 -define:CROSS_PLATFORM_INPUT
 'Assets/ADHDSim/Scripts/ABonus.cs'
 'Assets/ADHDSim/Scripts/Bonus.cs'
-'Assets/ADHDSim/Scripts/CSVReaderOld.cs'
 'Assets/ADHDSim/Scripts/ClockBehaviour.cs'
 'Assets/ADHDSim/Scripts/CsvReader.cs'
 'Assets/ADHDSim/Scripts/DataReader.cs'

@@ -93,10 +93,10 @@ namespace RMX
 		/// </summary>
 		/// <param name="path">The path.</param>
 		/// <returns></returns>
-		static public CsvRecordList Read(string path)
-		{
-			return Read(path, Encoding.UTF8);
-		}
+//		static public CsvRecordList Read(string path)
+//		{
+//			return Read(path, Encoding.UTF8);
+//		}
 		
 		/// <summary>
 		/// Reads a single line from the the currently open reader.
@@ -121,20 +121,20 @@ namespace RMX
 		/// <param name="path">The path.</param>
 		/// <param name="encoding">The encoding.</param>
 		/// <returns></returns>
-		static public CsvRecordList Read(string path, Encoding encoding)
-		{
-			var csvLines = System.IO.File.ReadAllLines(path, encoding);
-			var csvRecords = new CsvRecordList();
-			
-			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
-			{
-				var currentLine = csvLines[lineIndex];
-				var record = ParseLine(currentLine);
-				csvRecords.Add(record);
-			}
-			
-			return csvRecords;
-		}
+//		static public CsvRecordList Read(string path, Encoding encoding)
+//		{
+//			var csvLines = System.IO.File.ReadAllLines(path, encoding);
+//			var csvRecords = new CsvRecordList();
+//			
+//			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
+//			{
+//				var currentLine = csvLines[lineIndex];
+//				var record = ParseLine(currentLine);
+//				csvRecords.Add(record);
+//			}
+//			
+//			return csvRecords;
+//		}
 		
 		/// <summary>
 		/// Parses the line into a list of strings.
