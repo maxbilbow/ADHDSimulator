@@ -4,17 +4,15 @@ using UnityEngine.UI;
 namespace RMX {
 	public class GoAwayText : MonoBehaviour {
 
-		public static GoAwayText text;
+
 		public Text label;
 
 		void Awake () {
-			if (text == null) {
-				DontDestroyOnLoad (gameObject);
-				text = this;
-			} else if (text != this) {
-				Destroy (gameObject);
+			label = GetComponentInChildren<Text> ();
+			if (label == null) {
+				//TODO: create own label
+				throw new System.Exception("No Text Component");
 			}
-			label = this.GetComponentInChildren<Text> ();
 		}
 		// Use this for initialization
 		void Start () {
@@ -30,11 +28,12 @@ namespace RMX {
 			}
 		}
 
-		public static void Show() {
-			text.label.enabled = true;
+		public void Show() {
+			label.enabled = true;
 		}
-		public static void Hide() {
-			text.label.enabled = false;
+		public void Hide() {
+			label.enabled = false;
 		}
+
 	}
 }

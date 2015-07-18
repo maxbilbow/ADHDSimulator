@@ -13,34 +13,46 @@ namespace RMX {
 
 
 
-	public class GameData  {
+	public class GameData : ASingleton<GameData>  {
+
+		public bool newSession = true;
+		void Start () {
+			newSession = currentSessionTime > 0;
+			gameController.PauseGame (newSession);
+//			if (currentSessionTime > 0) {
+//				newSession = true;
+//				gameController.PauseGame (true);
+//			} else {
+//				newSession = false;
+//			}
+		}
 
 
-		public static float totalTime {
+		public float totalTime {
 			get {
 				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total));
 			}
 		}
 		
 		
-		public static float currentProcrastination {
+		public float currentProcrastination {
 			get {
 				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.CurrentProcrastination));
 			}
 		}
 		
-		public static float currentSessionTime {
+		public float currentSessionTime {
 			get {
 				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.CurrentSession));
 			}
 		}
 		
-		public static float longestProcrastination {
+		public float longestProcrastination {
 			get {
 				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.LongestProctrastination));
 			}
 		}
-		public static bool newPersonalBest = false;
+		public bool newPersonalBest = false;
 //		public static Social.D
 //		public static GameData data;
 
@@ -54,8 +66,16 @@ namespace RMX {
 //		}
 
 
+		/// <summary>
+		/// The dev time wasted.
+		/// </summary>
+		public float devTimeWasted = 5 * 60 * 60;
 
-		public const float devTimeWasted = 5 * 60 * 60;
+		/// <summary>
+		/// Gets the String Key used to get and set PlayerPrefs. This is NOT the same as the ID used by GameKit
+		/// </summary>
+		/// <returns>The key.</returns>
+		/// <param name="data">Data.</param>
 		public static string GetKey(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
@@ -80,18 +100,27 @@ namespace RMX {
 			return null;
 		}
 
-		public static long GetLong(UserData data) {
+		public long GetLong(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
-				return (long) GameData.currentSessionTime;
+				return (long) currentSessionTime;
 			case UserData.CurrentProcrastination:
 				return (long) currentProcrastination;
 			case UserData.Total:
 				return (long) totalTime;
 			case UserData.OfDevTime:
-				return (long) (100 * GameData.totalTime / devTimeWasted);
+				return (long) (100 * totalTime / devTimeWasted);
 			}
 			return -1;
+		}
+
+		public string ofDevTimeWasted {
+			get {
+				float percent = Mathf.Round(100 * GameData.current.totalTime / GameData.current.devTimeWasted) / 100;
+				//				print ("Total: " + GameData.totalTime + ", dev: " + GameData.devTimeWasted + " = " + percent);
+				return percent + "%";
+				
+			}
 		}
 
 
@@ -147,7 +176,7 @@ namespace RMX {
 
 		}
 */
-		public static void TestData ()
+		public void TestData ()
 		{
 			float[] testTimes = { 10f, 20f, 30f, 45f, 60f, 120f, 3000f, 6000f, 80000f };
 			foreach (float time in testTimes) {
@@ -160,11 +189,10 @@ namespace RMX {
 			
 		}
 
-		public static List<string> WhatYouCouldHaveDone(float time) {
+		public List<string> WhatYouCouldHaveDone(float time) {
 			List <string> result = DataReader.GetActivityList (time);
-#if DEBUG 
-			Debug.Log("List accessed with time: " + time + ", and " + result.Count + " sentences.");
-#endif
+			if (Bugger.WillTest(Testing.GameDataLists))
+				Debug.Log("List accessed with time: " + time + ", and " + result.Count + " sentences.");
 			if (result.Count > 0) {
 				return result;
 			} else {
@@ -193,6 +221,7 @@ namespace RMX {
 				return result;
 			}
 		}
+
 	}
 
 }

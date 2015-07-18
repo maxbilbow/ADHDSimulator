@@ -47,16 +47,19 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ADHDSim\Scripts\ABonus.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\ASingleton.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\BodyBecomesActive.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\ClockBehaviour.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\CsvReader.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\DataReader.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\Debug.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\DragRigidbody.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameCenter.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameController.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GameData.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\GoAwayText.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Gyro.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\PauseCanvas.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\PauseManager.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Timer.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\User.cs" />

@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/PauseCanvas.cs">
+    <Files>
+      <File FileName="Assets/ADHDSim/Scripts/PauseCanvas.cs" Line="67" Column="28" />
+      <File FileName="Assets/ADHDSim/Scripts/Timer.cs" Line="55" Column="3" />
+      <File FileName="Assets/ADHDSim/Scripts/ASingleton.cs" Line="99" Column="41" />
+      <File FileName="Assets/ADHDSim/Scripts/Debug.cs" Line="72" Column="32" />
+      <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="7" Column="1" />
+      <File FileName="Assets/ADHDSim/Scripts/GameController.cs" Line="117" Column="5" />
+      <File FileName="Assets/ADHDSim/Scripts/GameData.cs" Line="27" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

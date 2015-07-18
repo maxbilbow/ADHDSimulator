@@ -59,7 +59,7 @@ namespace RMX
 		private static List<List<string> > GetActivities(float inTime) {
 //			Debug.Log (GameController.control.database.name);
 			try {
-				var reader = CsvReader.Read (GameController.control.database);
+				var reader = CsvReader.Read (GameController.current.database);
 		
 			
 				var list = reader.FindAll(match => {

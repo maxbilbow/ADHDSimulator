@@ -12,15 +12,15 @@ namespace RMX {
 
 
 
-		void Awake() {
-			if (Timer.pauseManager == null) {
-				DontDestroyOnLoad (gameObject);
-				Timer.pauseManager = this;
-			} else if (Timer.pauseManager != this) {
-				Destroy (gameObject);
-			}
-		}
-
+//		void Awake() {
+//			if (Timer.pauseManager == null) {
+//				DontDestroyOnLoad (gameObject);
+//				Timer.pauseManager = this;
+//			} else if (Timer.pauseManager != this) {
+//				Destroy (gameObject);
+//			}
+//		}
+//
 
 		public void Quit()
 		{

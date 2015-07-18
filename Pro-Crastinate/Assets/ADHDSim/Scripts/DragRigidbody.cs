@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace RMX
 {
-    public class DragRigidbody : MonoBehaviour
+    public class DragRigidbody : ASingleton<DragRigidbody>
     {
 		private const float PI_OVER_180 = Mathf.PI/180;
 		const float k_Spring = 50.0f;
@@ -14,17 +14,10 @@ namespace RMX
 		const float k_Distance = 0.2f;
         const bool k_AttachToCenterOfMass = false;
 		public float fingerWidth = 0.1f;
-//		Rigidbody2D finger;
+
 		private GameObject finger;
 
         private SpringJoint2D m_SpringJoint;
-
-		void start() {
-
-
-//			finger.GetComponent<CircleCollider2D>.().enabled = false;
-		}
-
 
         private void Update()
         {

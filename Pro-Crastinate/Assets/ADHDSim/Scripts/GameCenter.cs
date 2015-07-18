@@ -10,55 +10,66 @@ using System.Runtime.InteropServices;
 //private static extern void _ReportAchievement( string achievementID, float progress );
 
 namespace RMX {
-	public static class GameCenter {
+	public class GameCenter : ASingleton<GameCenter> {
 
 //		private static bool _willUpdateAwards = false;
 //		public static void AnAwardWasAchieved() {
 //			_willUpdateAwards = true
 //		}
 
-		private static Dictionary<UserData, bool> _achievements = new Dictionary<UserData, bool> ();
+		public Dictionary<UserData, bool> _achievements = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
-		public static void Authenticate() {
+		void Start() {
+			Authenticate ();
+			CheckProgress ();
+		}
+
+		void Authenticate() {
+			var userInfo = Bugger.StartLog (Testing.GameCenter);
 			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 			Social.localUser.Authenticate (success => {
 				if (success) {
-					Debug.Log ("Authentication successful");
-					string userInfo = "Username: " + Social.localUser.userName + 
+					if (Bugger.WillTest(Testing.GameCenter)) Debug.Log ("Authentication successful");
+					userInfo.log = "Username: " + Social.localUser.userName + 
 						"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
-					Debug.Log (userInfo);
+					if (Bugger.WillTest(Testing.GameCenter)) Debug.Log(userInfo);
 				}
 				else
-					Debug.Log ("Authentication failed");
+					if (Bugger.WillTest(Testing.GameCenter)) Debug.Log ("Authentication failed");
 			});
-
-
-			
 		}
 
-		public static bool HasAchieved(UserData key) {
+		public bool HasAchieved(UserData key) {
 			try {
 				return _achievements [key];
 			} catch {
-				Debug.Log("HasAchieved() threw an error!");
+				if (Bugger.WillTest(Testing.Achievements)) Debug.Log("HasAchieved() threw an error!");
 				return false;
 			}
 		}
 
-		public static void ReportScore (long score, UserData data) {
+		public void ReportScore (long score, UserData data) {
 			string leaderboardID = GameData.GetID (data);
-//			long score = (long) scoref * 100;
-			Debug.Log ("Reporting score " + score + " on leaderboard " + leaderboardID);
-			Social.ReportScore (score, leaderboardID, success => {
-				Debug.Log(success ? "Reported score successfully" : "Failed to report score");
-			});
+			var log = Bugger.StartLog (Testing.GameCenter);
+			log.log += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
+			try {
+				Social.ReportScore (score, leaderboardID, success => {
+					log.log += success ? "Reported score successfully" : "Failed to report score";	
+				});
+			} catch (System.Exception e) {
+				if ( Bugger.WillTest(Testing.Exceptions) )
+					UnityEngine.Debug.Log(e);//, Testing.Exceptions);
+			} finally {
+				if (Bugger.WillTest(Testing.GameCenter))
+					Debug.Log(log);
+			}
 		}
 
-		public static void CheckProgress() {
-			var time = GameData.totalTime;
+		public void CheckProgress() {
+			var time = GameData.current.totalTime;
 
 			foreach (KeyValuePair<UserData, bool> entry in _achievements) {
 				if (entry.Value == false)
@@ -76,7 +87,7 @@ namespace RMX {
 //				achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
 		}
 
-		public static bool UpdateAchievement(UserData data, float score) {
+		public bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
 			string achievementID = GameData.GetID (data);
 			try {
@@ -107,19 +118,19 @@ namespace RMX {
 				double progress;
 				switch (data) {
 				case UserData.AmeteurCrastinator:
-					progress = GameData.totalTime > 20 ? 100 : 0;
+					progress = GameData.current.totalTime > 20 ? 100 : 0;
 					break;
 				case UserData.TimeWaster:
-					progress = GameData.totalTime / (10 * 60);
+					progress = GameData.current.totalTime / (10 * 60);
 					break;
 				case UserData.SemiPro:
-					progress = GameData.totalTime / (GameData.devTimeWasted / 4);
+					progress = GameData.current.totalTime / (GameData.current.devTimeWasted / 4);
 					break;
 				case UserData.Apathetic:
-					progress = GameData.totalTime / (GameData.devTimeWasted / 2);
+					progress = GameData.current.totalTime / (GameData.current.devTimeWasted / 2);
 					break;
 				case UserData.Pro:
-					progress = GameData.totalTime / GameData.devTimeWasted;
+					progress = GameData.current.totalTime / GameData.current.devTimeWasted;
 					break;
 				case UserData.MakingTime:
 					progress = 1;

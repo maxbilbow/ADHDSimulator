@@ -3,12 +3,9 @@ using System.Collections;
 //using UnityStandardAssets.CrossPlatformInput;
 
 namespace RMX {
-	public class GameController : MonoBehaviour {
+	public class GameController : ASingleton<GameController> {
 		public Vector2 defaultGravity = new Vector2 (0f, -9.81f);
-		public static GameController control;
-		public GameObject mobileInput;
-		public GameObject desktopInput;
-//		public static GameCenter gameCenter = new GameCenter ();
+		public GameData gameData;
 		public float newClockThreshold = 120;
 		public float maxNumberOfClocks = 50;
 		public TextAsset database;
@@ -18,81 +15,60 @@ namespace RMX {
 			}
 		}
 
+		public PauseCanvas pauseCanvas {
+			get {
+				return PauseCanvas.current;
+			}
+		}
 		public static bool isFirstPlay;
 		
 		//	private int total = Camera.GetAllCameras.count;
 		// Use this for initialization
-		void Awake () {
+		protected override void Awake () {
+			base.Awake ();
 			Physics2D.gravity = defaultGravity;
 			isFirstPlay = PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total)) == 0;
-			if (control == null) {
-				DontDestroyOnLoad (gameObject);
-				control = this;
-			} else if (control != this) {
-				Destroy (gameObject);
-			}
-
-			if (!desktopInput) {
-				try {
-					desktopInput = GameObject.Find ("DesktopInput");
-				} catch {
-					print ("Desktop input not found");
-				} finally {
-					
-				}
-			}
-			if (!mobileInput) {
-				try {
-					mobileInput = GameObject.Find ("MobileInput");
-				} catch {
-					print ("Mobile input not found");
-				}
-			}
-
-
-			#if MOBILE_INPUT
-			StartMobile();
-			#else
-			StartDesktop();
-			#endif
 
 		}
 
+		void StartSingletons() {
+			this.gameData = GameData.Initialize ();
+			GameCenter.Initialize ();
+			Timer.Initialize ();
+			DragRigidbody.Initialize ();
+		}
 
 		void StartDesktop() {
 
 		}
 
 		void StartMobile() {
-			Gyro.Start();
+			Gyro.Initialize();
 		}
 
 
 		void Start() {
-//			newClockThreshold = Random.Range (0, newClockThreshold);
-//			gameCenter = gameObject.AddComponent<GameCenter> ();
-			try {
-				GameCenter.Authenticate ();
-				GameCenter.CheckProgress ();
-			} catch (System.Exception e) {
-				Debug.Log(e.Message);
-			}
-#if DEBUG
-//			GameData.TestData ();
-#endif
+			StartSingletons ();
+			#if MOBILE_INPUT
+			StartMobile();
+			#else
+			StartDesktop();
+			#endif
 		}
+	
+
 		
 		// Update is called once per frame
 		private float _checkTime = 30;
 		void Update () {
 			if (Time.fixedTime > _checkTime) {
-				GameCenter.CheckProgress();
+				GameCenter.current.CheckProgress();
 				_checkTime += 30;
 			}
-			if (Input.touchCount > 2 && GameCenter.HasAchieved(UserData.AmeteurCrastinator)) {
+			if (Input.touchCount > 2 && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator)) {
 				ClockBehaviour.New();
-				if (!GameCenter.HasAchieved(UserData.MakingTime))
-					GameCenter.UpdateAchievement(UserData.MakingTime,100);
+				if (!GameCenter.current.HasAchieved(UserData.MakingTime))
+					GameCenter.current.UpdateAchievement(UserData.MakingTime,100);
 				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
 //					GameCenter.UpdateAchievement(UserData.TooMuchTime,100);
 					var toDestroy = ClockBehaviour.clocks[1];
@@ -103,15 +79,15 @@ namespace RMX {
 		}
 
 
-		public static void UpdateScoresAndReset(bool reset) {
-			var newTotal = GameData.totalTime + Time.deltaTime;
-			var currentTotal = GameData.currentProcrastination + Time.deltaTime;
+		public void UpdateScoresAndReset(bool reset) {
+			var newTotal = gameData.totalTime + Time.deltaTime;
+			var currentTotal = gameData.currentProcrastination + Time.deltaTime;
 			PlayerPrefs.SetFloat (GameData.GetKey(UserData.Total), newTotal);
 			PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentSession), Time.fixedTime);
 			PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentProcrastination), currentTotal);
-			GameData.newPersonalBest = GameData.currentProcrastination > GameData.longestProcrastination;
-			if (GameData.newPersonalBest) {
-				PlayerPrefs.SetFloat(GameData.GetKey(UserData.LongestProctrastination), GameData.currentProcrastination);
+			gameData.newPersonalBest = gameData.currentProcrastination > gameData.longestProcrastination;
+			if (gameData.newPersonalBest) {
+				PlayerPrefs.SetFloat(GameData.GetKey(UserData.LongestProctrastination), gameData.currentProcrastination);
 			}
 			if (reset) {
 				PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentProcrastination), 0);
@@ -120,20 +96,26 @@ namespace RMX {
 
 		void OnApplicationQuit() {
 			UpdateScoresAndReset (false);
-			long ofDevTime = GameData.GetLong (UserData.OfDevTime);
-			GameCenter.ReportScore(ofDevTime, UserData.OfDevTime);
+			long ofDevTime = gameData.GetLong (UserData.OfDevTime);
+			GameCenter.current.ReportScore(ofDevTime, UserData.OfDevTime);
 			PlayerPrefs.Save ();
 		}
 		
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
-				Timer.timer.Pause(true);
-				GameCenter.CheckProgress ();
+				PauseGame (true);
 			}
 		}
 
 		public static void CheckForAnomalies() {
 			ClockBehaviour.CheckVisibleClocks ();
+		}
+
+		public void PauseGame(bool pause) {
+			pauseCanvas.Pause (pause);
+			if (pause) {
+				GameCenter.current.CheckProgress ();
+			}
 		}
 		
 	}

@@ -28,13 +28,7 @@ namespace RMX
 		private const char Comma = ',';
 		static public readonly Encoding Windows1252Encoding = Encoding.GetEncoding(1252);
 		
-//		public class CsvRecord : List<string>
-//		{
-//			public override string ToString()
-//			{
-//				return string.Join(",", this.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
-//			}
-//		}
+
 
 		public static string ToString(List<string> record)
 		{
@@ -240,6 +234,14 @@ namespace RMX
 			// push anything that has not been pushed (flush)
 			values.Add(currentValue.ToString().Trim());
 			return values;
+		}
+	}
+
+	public class CsvRecord : List<string>
+	{
+		public override string ToString()
+		{
+			return string.Join(",", this.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
 		}
 	}
 }
