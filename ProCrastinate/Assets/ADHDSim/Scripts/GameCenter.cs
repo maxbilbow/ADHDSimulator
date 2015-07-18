@@ -17,7 +17,7 @@ namespace RMX {
 //			_willUpdateAwards = true
 //		}
 
-		public static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
+		private static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
@@ -37,6 +37,10 @@ namespace RMX {
 
 
 			
+		}
+
+		public static bool HasAchieved(UserData key) {
+			return achievement [key];
 		}
 
 		public static void ReportScore (long score, UserData data) {

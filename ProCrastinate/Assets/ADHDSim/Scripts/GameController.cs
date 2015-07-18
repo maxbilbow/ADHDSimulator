@@ -65,8 +65,12 @@ namespace RMX {
 		void Start() {
 //			newClockThreshold = Random.Range (0, newClockThreshold);
 //			gameCenter = gameObject.AddComponent<GameCenter> ();
-			GameCenter.Authenticate ();
-			GameCenter.CheckProgress ();
+			try {
+				GameCenter.Authenticate ();
+				GameCenter.CheckProgress ();
+			} catch (System.Exception e) {
+				Debug.Log(e.Message);
+			}
 #if DEBUG
 //			GameData.TestData ();
 #endif
@@ -79,7 +83,7 @@ namespace RMX {
 				GameCenter.CheckProgress();
 				_checkTime += 30;
 			}
-			if (Input.touchCount > 2 && GameCenter.achievement[UserData.AmeteurCrastinator]) {
+			if (Input.touchCount > 2 && GameCenter.HasAchieved(UserData.AmeteurCrastinator)) {
 				ClockBehaviour.New();
 				GameCenter.UpdateAchievement(UserData.MakingTime,100);
 				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {

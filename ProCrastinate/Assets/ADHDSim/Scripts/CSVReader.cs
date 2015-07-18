@@ -35,8 +35,7 @@ namespace RMX
 				return string.Join(",", this.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
 			}
 		}
-		public class CsvRecordList : List<CsvRecord> { }
-		
+
 		/// <summary>
 		/// Defines the 3 different read states
 		/// </summary>
@@ -52,9 +51,9 @@ namespace RMX
 		/// </summary>
 		/// <param name="csvString">The CSV string.</param>
 		/// <returns></returns>
-		static public CsvRecordList Parse(string csvString)
+		static public List<CsvRecord> Parse(string csvString)
 		{
-			var records = new CsvReader.CsvRecordList();
+			var records = new List<CsvRecord>();
 			{
 				var lines = csvString.Split(new string[] { "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
 				foreach (var line in lines)
@@ -73,10 +72,10 @@ namespace RMX
 		/// </summary>
 		/// <param name="path">The path.</param>
 		/// <returns></returns>
-		static public CsvRecordList Read(TextAsset file)
+		static public List<CsvRecord> Read(TextAsset file)
 		{
 			var csvLines = file.text.Split ('\n');//System.IO.File.ReadAllLines(path, encoding);
-			var csvRecords = new CsvRecordList();
+			var csvRecords = new List<CsvRecord>();
 			
 			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
 			{
@@ -93,10 +92,10 @@ namespace RMX
 		/// </summary>
 		/// <param name="path">The path.</param>
 		/// <returns></returns>
-//		static public CsvRecordList Read(string path)
-//		{
-//			return Read(path, Encoding.UTF8);
-//		}
+		static public List<CsvRecord> Read(string path)
+		{
+			return Read(path, Encoding.UTF8);
+		}
 		
 		/// <summary>
 		/// Reads a single line from the the currently open reader.
@@ -121,20 +120,20 @@ namespace RMX
 		/// <param name="path">The path.</param>
 		/// <param name="encoding">The encoding.</param>
 		/// <returns></returns>
-//		static public CsvRecordList Read(string path, Encoding encoding)
-//		{
-//			var csvLines = System.IO.File.ReadAllLines(path, encoding);
-//			var csvRecords = new CsvRecordList();
-//			
-//			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
-//			{
-//				var currentLine = csvLines[lineIndex];
-//				var record = ParseLine(currentLine);
-//				csvRecords.Add(record);
-//			}
-//			
-//			return csvRecords;
-//		}
+		static public List<CsvRecord> Read(string path, Encoding encoding)
+		{
+			var csvLines = System.IO.File.ReadAllLines(path, encoding);
+			var csvRecords = new List<CsvRecord>();
+			
+			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
+			{
+				var currentLine = csvLines[lineIndex];
+				var record = ParseLine(currentLine);
+				csvRecords.Add(record);
+			}
+			
+			return csvRecords;
+		}
 		
 		/// <summary>
 		/// Parses the line into a list of strings.
