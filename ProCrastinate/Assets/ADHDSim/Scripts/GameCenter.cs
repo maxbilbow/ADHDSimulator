@@ -51,9 +51,9 @@ namespace RMX {
 		public static void CheckProgress() {
 			var time = GameData.totalTime;
 
-			foreach (DictionaryEntry entry in achievement) {
-				if (!entry.Value)
-					entry.Value = UpdateAchievement (entry.Key, time);
+			foreach (KeyValuePair<UserData, bool> entry in achievement) {
+				if (entry.Value == false)
+					achievement[entry.Key] = UpdateAchievement (entry.Key, time);
 			}
 //			if (!achievement[UserData.AmeteurCrastinator]) 
 //				achievement[UserData.AmeteurCrastinator] = UpdateAchievement (UserData.AmeteurCrastinator, time);
