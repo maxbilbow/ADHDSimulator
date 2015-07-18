@@ -17,7 +17,7 @@ namespace RMX {
 //			_willUpdateAwards = true
 //		}
 
-		private static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
+		private static Dictionary<UserData, bool> _achievements = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
@@ -40,7 +40,12 @@ namespace RMX {
 		}
 
 		public static bool HasAchieved(UserData key) {
-			return achievement [key];
+			try {
+				return _achievements [key];
+			} catch {
+				Debug.Log("HasAchieved() threw an error!");
+				return false;
+			}
 		}
 
 		public static void ReportScore (long score, UserData data) {
@@ -55,9 +60,9 @@ namespace RMX {
 		public static void CheckProgress() {
 			var time = GameData.totalTime;
 
-			foreach (KeyValuePair<UserData, bool> entry in achievement) {
+			foreach (KeyValuePair<UserData, bool> entry in _achievements) {
 				if (entry.Value == false)
-					achievement[entry.Key] = UpdateAchievement (entry.Key, time);
+					_achievements[entry.Key] = UpdateAchievement (entry.Key, time);
 			}
 //			if (!achievement[UserData.AmeteurCrastinator]) 
 //				achievement[UserData.AmeteurCrastinator] = UpdateAchievement (UserData.AmeteurCrastinator, time);
