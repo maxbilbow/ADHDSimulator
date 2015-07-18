@@ -12,12 +12,8 @@ using System.Runtime.InteropServices;
 namespace RMX {
 	public static class GameCenter {
 
-//		private static bool _willUpdateAwards = false;
-//		public static void AnAwardWasAchieved() {
-//			_willUpdateAwards = true
-//		}
-
-		private static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
+//		public static List<IAchievement> achievements;
+		public static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
@@ -39,10 +35,6 @@ namespace RMX {
 			
 		}
 
-		public static bool HasAchieved(UserData key) {
-			return achievement [key];
-		}
-
 		public static void ReportScore (long score, UserData data) {
 			string leaderboardID = GameData.GetID (data);
 //			long score = (long) scoref * 100;
@@ -54,21 +46,11 @@ namespace RMX {
 
 		public static void CheckProgress() {
 			var time = GameData.totalTime;
-
-			foreach (KeyValuePair<UserData, bool> entry in achievement) {
-				if (entry.Value == false)
-					achievement[entry.Key] = UpdateAchievement (entry.Key, time);
-			}
-//			if (!achievement[UserData.AmeteurCrastinator]) 
-//				achievement[UserData.AmeteurCrastinator] = UpdateAchievement (UserData.AmeteurCrastinator, time);
-//			if (!achievement[UserData.TimeWaster]) 
-//				achievement[UserData.TimeWaster] 			= UpdateAchievement (UserData.TimeWaster, time);
-//			if (!achievement[UserData.SemiPro]) 
-//				achievement[UserData.SemiPro] 				= UpdateAchievement (UserData.SemiPro, time);
-//			if (!achievement[UserData.Apathetic]) 
-//				achievement[UserData.Apathetic] 			= UpdateAchievement (UserData.Apathetic, time);
-//			if (!achievement[UserData.Pro]) 
-//				achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
+			achievement[UserData.AmeteurCrastinator]	= UpdateAchievement (UserData.AmeteurCrastinator, time);
+			achievement[UserData.TimeWaster] 			= UpdateAchievement (UserData.TimeWaster, time);
+			achievement[UserData.SemiPro] 				= UpdateAchievement (UserData.SemiPro, time);
+			achievement[UserData.Apathetic] 			= UpdateAchievement (UserData.Apathetic, time);
+			achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
 		}
 
 		public static bool UpdateAchievement(UserData data, float score) {
@@ -81,7 +63,7 @@ namespace RMX {
 	//					string myAchievements = "My achievements:\n";
 						foreach (IAchievement achievement in achievements) {
 							if (achievement.id == achievementID) {
-								completed = achievement.completed || achievement.percentCompleted == 100;
+								completed = achievement.completed;
 								Debug.Log ("Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed);
 								break;
 							}

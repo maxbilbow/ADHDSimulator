@@ -8,7 +8,7 @@ namespace RMX {
 		public static GameController control;
 		public GameObject mobileInput;
 		public GameObject desktopInput;
-//		public static GameCenter gameCenter = new GameCenter ();
+//		public GameCenter gameCenter;// = new GameCenter ();
 		public float newClockThreshold = 120;
 		public float maxNumberOfClocks = 50;
 		public TextAsset database;
@@ -65,12 +65,8 @@ namespace RMX {
 		void Start() {
 //			newClockThreshold = Random.Range (0, newClockThreshold);
 //			gameCenter = gameObject.AddComponent<GameCenter> ();
-			try {
-				GameCenter.Authenticate ();
-				GameCenter.CheckProgress ();
-			} catch (System.Exception e) {
-				Debug.Log(e.Message);
-			}
+			GameCenter.Authenticate ();
+			GameCenter.CheckProgress ();
 #if DEBUG
 //			GameData.TestData ();
 #endif
@@ -83,7 +79,7 @@ namespace RMX {
 				GameCenter.CheckProgress();
 				_checkTime += 30;
 			}
-			if (Input.touchCount > 2 && GameCenter.HasAchieved(UserData.AmeteurCrastinator)) {
+			if (Input.touchCount > 2 && GameCenter.achievement[UserData.AmeteurCrastinator]) {
 				ClockBehaviour.New();
 				GameCenter.UpdateAchievement(UserData.MakingTime,100);
 				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
