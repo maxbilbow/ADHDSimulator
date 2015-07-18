@@ -28,13 +28,19 @@ namespace RMX
 		private const char Comma = ',';
 		static public readonly Encoding Windows1252Encoding = Encoding.GetEncoding(1252);
 		
-		public class CsvRecord : List<string>
+//		public class CsvRecord : List<string>
+//		{
+//			public override string ToString()
+//			{
+//				return string.Join(",", this.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
+//			}
+//		}
+
+		public static string ToString(List<string> record)
 		{
-			public override string ToString()
-			{
-				return string.Join(",", this.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
-			}
+			return string.Join(",", record.Select(s => string.Format("\"{0}\"", s.Replace("\"", "\"\""))).ToArray());
 		}
+
 
 		/// <summary>
 		/// Defines the 3 different read states
@@ -51,9 +57,9 @@ namespace RMX
 		/// </summary>
 		/// <param name="csvString">The CSV string.</param>
 		/// <returns></returns>
-		static public List<CsvRecord> Parse(string csvString)
+		static public List<List<string> > Parse(string csvString)
 		{
-			var records = new List<CsvRecord>();
+			var records = new List<List<string> >();
 			{
 				var lines = csvString.Split(new string[] { "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries);
 				foreach (var line in lines)
@@ -72,10 +78,10 @@ namespace RMX
 		/// </summary>
 		/// <param name="path">The path.</param>
 		/// <returns></returns>
-		static public List<CsvRecord> Read(TextAsset file)
+		static public List<List<string> > Read(TextAsset file)
 		{
 			var csvLines = file.text.Split ('\n');//System.IO.File.ReadAllLines(path, encoding);
-			var csvRecords = new List<CsvRecord>();
+			var csvRecords = new List<List<string> >();
 			
 			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
 			{
@@ -92,9 +98,11 @@ namespace RMX
 		/// </summary>
 		/// <param name="path">The path.</param>
 		/// <returns></returns>
-		static public List<CsvRecord> Read(string path)
+		static public List<List<string> > Read(string path)
 		{
-			return Read(path, Encoding.UTF8);
+			throw new System.Exception ("Balls.");
+//			return Read(path, Encoding.UTF8);
+
 		}
 		
 		/// <summary>
@@ -103,7 +111,7 @@ namespace RMX
 		/// </summary>
 		/// <param name="reader">The reader.</param>
 		/// <returns></returns>
-		static public CsvRecord ReadLine(System.IO.StreamReader reader)
+		static public List<string> ReadLine(System.IO.StreamReader reader)
 		{
 			string line = null;
 			if ((line = reader.ReadLine()) != null)
@@ -120,19 +128,21 @@ namespace RMX
 		/// <param name="path">The path.</param>
 		/// <param name="encoding">The encoding.</param>
 		/// <returns></returns>
-		static public List<CsvRecord> Read(string path, Encoding encoding)
+		static public List<List<string> > Read(string path, Encoding encoding)
 		{
-			var csvLines = System.IO.File.ReadAllLines(path, encoding);
-			var csvRecords = new List<CsvRecord>();
-			
-			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
-			{
-				var currentLine = csvLines[lineIndex];
-				var record = ParseLine(currentLine);
-				csvRecords.Add(record);
-			}
-			
-			return csvRecords;
+			throw new System.Exception("Depricated");
+//
+//			var csvLines = System.IO.File.ReadAllLines(path, encoding);
+//			var csvRecords = new List<List<string> >();
+//			
+//			for (var lineIndex = 0; lineIndex < csvLines.Length; lineIndex++)
+//			{
+//				var currentLine = csvLines[lineIndex];
+//				var record = ParseLine(currentLine);
+//				csvRecords.Add(record);
+//			}
+//			
+//			return csvRecords;
 		}
 		
 		/// <summary>
@@ -140,9 +150,9 @@ namespace RMX
 		/// </summary>
 		/// <param name="line">The line.</param>
 		/// <returns></returns>
-		public static CsvRecord ParseLine(string line)
+		public static List<string> ParseLine(string line)
 		{
-			var values = new CsvRecord();
+			var values = new List<string>();
 			var currentValue = new StringBuilder(1024);
 			char currentChar;
 			Nullable<char> nextChar = null;

@@ -30,7 +30,7 @@ namespace RMX
 				seconds += float.Parse(hms [1]) * 60;
 				seconds += float.Parse(hms [0]) * 60 * 60;
 			} catch (Exception e) {
-				throw e;//Console.WriteLine(e.Message);//TODO: Change to Debug.Log
+				throw e;
 			}
 			return seconds;
 			
@@ -56,7 +56,7 @@ namespace RMX
 			} 
 		}
 		
-		private static List<CsvReader.CsvRecord> GetActivities(float inTime) {
+		private static List<List<string> > GetActivities(float inTime) {
 //			Debug.Log (GameController.control.database.name);
 			try {
 				var reader = CsvReader.Read (GameController.control.database);
@@ -71,7 +71,7 @@ namespace RMX
 						}
 
 					} catch (Exception e) {
-						Debug.Log(e.Message + ": " + match[csv_time]);
+						Debug.Log(e.Message);// + ": " + match[csv_time]);
 						return false;
 					}
 				});
@@ -85,7 +85,7 @@ namespace RMX
 		public static List<string> GetActivityList(float forTime) {
 			List<string> list = new List<string> ();
 			try {
-				foreach (CsvReader.CsvRecord thing in GetActivities(forTime)) {
+				foreach (List<string> thing in GetActivities(forTime)) {
 					list.Add (thing[csv_text]);
 				}
 			} catch (Exception e) {
