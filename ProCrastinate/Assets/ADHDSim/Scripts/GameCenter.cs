@@ -12,6 +12,10 @@ using System.Runtime.InteropServices;
 namespace RMX {
 	public static class GameCenter {
 
+		private static bool _willUpdateAwards = false;
+		public static void AnAwardWasAchieved() {
+
+		}
 //		public static List<IAchievement> achievements;
 		public static Dictionary<UserData, bool> achievement = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
@@ -46,11 +50,21 @@ namespace RMX {
 
 		public static void CheckProgress() {
 			var time = GameData.totalTime;
-			achievement[UserData.AmeteurCrastinator]	= UpdateAchievement (UserData.AmeteurCrastinator, time);
-			achievement[UserData.TimeWaster] 			= UpdateAchievement (UserData.TimeWaster, time);
-			achievement[UserData.SemiPro] 				= UpdateAchievement (UserData.SemiPro, time);
-			achievement[UserData.Apathetic] 			= UpdateAchievement (UserData.Apathetic, time);
-			achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
+
+			foreach (DictionaryEntry entry in achievement) {
+				if (!entry.Value)
+					entry.Value = UpdateAchievement (entry.Key, time);
+			}
+//			if (!achievement[UserData.AmeteurCrastinator]) 
+//				achievement[UserData.AmeteurCrastinator] = UpdateAchievement (UserData.AmeteurCrastinator, time);
+//			if (!achievement[UserData.TimeWaster]) 
+//				achievement[UserData.TimeWaster] 			= UpdateAchievement (UserData.TimeWaster, time);
+//			if (!achievement[UserData.SemiPro]) 
+//				achievement[UserData.SemiPro] 				= UpdateAchievement (UserData.SemiPro, time);
+//			if (!achievement[UserData.Apathetic]) 
+//				achievement[UserData.Apathetic] 			= UpdateAchievement (UserData.Apathetic, time);
+//			if (!achievement[UserData.Pro]) 
+//				achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
 		}
 
 		public static bool UpdateAchievement(UserData data, float score) {
