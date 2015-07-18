@@ -63,7 +63,7 @@ namespace RMX {
 	//					string myAchievements = "My achievements:\n";
 						foreach (IAchievement achievement in achievements) {
 							if (achievement.id == achievementID) {
-								completed = achievement.completed;
+								completed = achievement.completed || achievement.percentCompleted == 100;
 								Debug.Log ("Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed);
 								break;
 							}
