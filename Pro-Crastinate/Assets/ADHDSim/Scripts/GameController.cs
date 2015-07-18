@@ -22,7 +22,7 @@ namespace RMX {
 		
 		//	private int total = Camera.GetAllCameras.count;
 		// Use this for initialization
-		protected void Awake () {
+		void Awake () {
 			Physics2D.gravity = defaultGravity;
 			isFirstPlay = PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total)) == 0;
 			if (control == null) {
@@ -51,15 +51,21 @@ namespace RMX {
 
 
 			#if MOBILE_INPUT
-			var set = GameObject.FindGameObjectsWithTag ("DesktopOnly");
+			StartMobile();
 			#else
-			var set = GameObject.FindGameObjectsWithTag ("MobileOnly");
+			StartDesktop();
 			#endif
-			foreach (GameObject obj in set) {
-				obj.SetActive(false);
-			}
+
 		}
 
+
+		void StartDesktop() {
+
+		}
+
+		void StartMobile() {
+			Gyro.Start();
+		}
 
 
 		void Start() {
@@ -85,7 +91,8 @@ namespace RMX {
 			}
 			if (Input.touchCount > 2 && GameCenter.HasAchieved(UserData.AmeteurCrastinator)) {
 				ClockBehaviour.New();
-				GameCenter.UpdateAchievement(UserData.MakingTime,100);
+				if (!GameCenter.HasAchieved(UserData.MakingTime))
+					GameCenter.UpdateAchievement(UserData.MakingTime,100);
 				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
 //					GameCenter.UpdateAchievement(UserData.TooMuchTime,100);
 					var toDestroy = ClockBehaviour.clocks[1];

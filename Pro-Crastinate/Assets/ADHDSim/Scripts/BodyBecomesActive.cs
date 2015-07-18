@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace RMX {
 
 
-	public class Bonus : ABonus<Rigidbody2D> {
+	public class BodyBecomesActive : ABonus<Rigidbody2D> {
 
 
 
