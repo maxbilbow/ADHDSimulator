@@ -16,12 +16,13 @@ namespace RMX {
 
 	public class SavedData {
 
-
 		private string key;
 		public SavedData(UserData key) {
 			Version.Patch();
 			this.key = GetKey(key);
 		}
+
+		public string value;
 
 		public long Long {
 			get {
