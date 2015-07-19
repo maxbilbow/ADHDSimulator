@@ -2,7 +2,7 @@
 using System.Collections;
 
 namespace RMX {
-	public class Version {
+	public class Version  {
 	
 		public const float v0_3_6 = 3.06f;
 		public const float v0_3_5 = 3.05f;
@@ -15,6 +15,7 @@ namespace RMX {
 			}
 		}
 
+		private static bool _failedPatch = false;
 		private static float currentVersion {
 			get {
 				return PlayerPrefs.GetFloat (Version.Key);
@@ -23,7 +24,11 @@ namespace RMX {
 			}
 		}
 
-		public static bool needsPatch = currentVersion < Version.latest;
+		public static bool needsPatch {
+			get {
+				return currentVersion < latest && !_failedPatch;
+			}
+		}
 		
 		enum Type {
 			Float, Int, String
@@ -35,10 +40,10 @@ namespace RMX {
 				try {
 					PatchX ();
 					currentVersion = latest;
-					needsPatch = false;
+//					needsPatch = false;
 					log.message += "Update Successful";
 				} catch (UnityException e) {
-					needsPatch = true;
+					_failedPatch = true;
 					log.message += "Update failed: " + e.Message;
 				}
 				if (log.isActive)
@@ -62,7 +67,7 @@ namespace RMX {
 		}
 
 		private static void Patchv0_3_6() {
-			needsPatch = false;
+//			needsPatch = false;
 			Set (UserData.CurrentSession);
 			Set (UserData.CurrentProcrastination);
 			Set (UserData.TotalTime);
@@ -81,7 +86,7 @@ namespace RMX {
 		}
 		
 		private static void Patchv0_3_5() {
-			needsPatch = false;
+//			needsPatch = false;
 			Setf (UserData.CurrentSession);
 			Setf (UserData.CurrentProcrastination);
 			Setf (UserData.TotalTime);

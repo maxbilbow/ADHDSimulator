@@ -45,23 +45,22 @@ namespace RMX
 			if (isInitialized) 
 				return _singleton;
 			else {
-				var aSingleton = new GameObject ().AddComponent<T> ();
 				var parent = GameObject.Find("Singletons");
 				if (!parent)
 					parent = new GameObject("Singletons");
+				var aSingleton = new GameObject().AddComponent<T> ();
 				aSingleton.gameObject.name = aSingleton.GetType().Name;
 				aSingleton.transform.SetParent(parent.transform);
 				return aSingleton;
 			}
 		}
 
-		public static T Initialize(GameObject withParent) {
+		public static T Initialize(GameObject withGameObjet) {
 			if (isInitialized) 
 				return _singleton;
 			else {
-				var aSingleton = new GameObject ().AddComponent<T> ();
+				var aSingleton = withGameObjet.AddComponent<T> ();
 				aSingleton.gameObject.name = aSingleton.GetType().Name;
-				aSingleton.transform.SetParent(withParent.transform);
 				return aSingleton;
 			}
 		}

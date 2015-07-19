@@ -21,12 +21,21 @@ namespace RMX {
 	}
 
 
-	public class SavedData {
+	public class SavedData : ScriptableObject {
 
 		private string key;
-		public SavedData(UserData key) {
-			Version.Patch();
-			this.key = GetKey(key);
+		private static bool first = true;
+		void Awake() {
+			if (first) {
+				Version.Patch ();
+				first = false;
+			}
+		}
+
+		public static SavedData New(UserData key) {
+			var sd = ScriptableObject.CreateInstance<SavedData>();
+			sd.key = GetKey(key);
+			return sd;
 		}
 
 		public string value;
@@ -127,12 +136,12 @@ namespace RMX {
 		}
 
 		private static Dictionary<UserData, SavedData> _data = new Dictionary<UserData, SavedData>() {
-			{ UserData.NotFirstTime, new SavedData(UserData.NotFirstTime) } 
+			{ UserData.NotFirstTime, SavedData.New(UserData.NotFirstTime) } 
 		};
 
 		public static SavedData Get(UserData key) {
 			if (!_data.ContainsKey (key)) {
-				_data[key] = new SavedData(key);
+				_data[key] = SavedData.New(key);
 			}
 			return _data[key];
 		}

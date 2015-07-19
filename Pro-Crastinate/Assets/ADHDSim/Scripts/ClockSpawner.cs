@@ -11,13 +11,14 @@ namespace RMX {
 			}
 		}
 		// Use this for initialization
-		void Start () {
-			
+		protected override void Awake () {
+			base.Awake ();
+			firstLoad = !SavedData.Get(UserData.NotFirstTime).Bool;
 		}
 		
 		// Update is called once per frame
 		void Update () {
-			if (Input.touchCount > 0 && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator)) {
+			if (Input.touchCount > 1 && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator)) {
 				ClockBehaviour.New();
 				if (!GameCenter.current.HasAchieved(UserData.MakingTime))
 					GameCenter.current.UpdateAchievement(UserData.MakingTime,100);
@@ -30,7 +31,7 @@ namespace RMX {
 			}
 		}
 
-		bool firstLoad = !SavedData.Get(UserData.NotFirstTime).Bool;
+		bool firstLoad;
 		public void Spawn() {
 			if (firstLoad) {
 				firstLoad = false;
