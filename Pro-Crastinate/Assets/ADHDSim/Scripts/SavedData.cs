@@ -43,20 +43,20 @@ namespace RMX {
 
 		public int Int {
 			get {
-				//int result;
-				//return int.TryParse(PlayerPrefs.GetString(key), out result) ? result : -1;
-				return PlayerPrefs.GetInt(key);
+				int result;
+				return int.TryParse(PlayerPrefs.GetString(key), out result) ? result : -1;
 			}
 			set {
-				PlayerPrefs.SetInt(key,value);
+				PlayerPrefs.SetString(key,value.ToString());
 			}
 		}
 
 		public float Float {
 			get {
-				return PlayerPrefs.GetFloat(key);
+				float result;
+				return float.TryParse(PlayerPrefs.GetString(key), out result) ? result : -1;
 			} set {
-				PlayerPrefs.SetFloat(key,value);
+				PlayerPrefs.SetString(key,value.ToString());
 			}
 		}
 		
@@ -65,7 +65,7 @@ namespace RMX {
 		/// </summary>
 		/// <returns>The key.</returns>
 		/// <param name="data">Data.</param>
-		private static string GetKey(UserData data) {
+		public static string GetKey(UserData data) {
 			switch (data) {
 			case UserData.CurrentSession:
 				return "last_session";

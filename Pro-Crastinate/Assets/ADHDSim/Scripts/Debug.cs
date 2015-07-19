@@ -29,11 +29,11 @@ namespace RMX
 
 		public static Dictionary<Testing,bool> features = new Dictionary<Testing, bool>()
 		{
-			{ Testing.Misc 				, true 	},
+			{ Testing.Misc 				, false },
 			{ Testing.GameCenter		, false },
 			{ Testing.Achievements		, false },
 			{ Testing.Exceptions		, true  },
-			{ Testing.Singletons		, true  },
+			{ Testing.Singletons		, false },
 			{ Testing.GameDataLists		, false }
 		};
 
