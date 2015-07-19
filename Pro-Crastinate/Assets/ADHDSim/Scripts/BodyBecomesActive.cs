@@ -12,7 +12,7 @@ namespace RMX {
 	
 
 		protected override void OnApplicationFocus(bool focus) {
-			if (data == UserData.CurrentProcrastination) {
+			if (key == UserData.CurrentProcrastination) {
 				base.OnApplicationFocus(focus);
 			}
 		}

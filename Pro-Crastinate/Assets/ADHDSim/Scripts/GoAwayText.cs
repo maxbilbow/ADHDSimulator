@@ -1,23 +1,41 @@
 ﻿using UnityEngine;
+using UnityStandardAssets;
 using System.Collections;
 using UnityEngine.UI;
 namespace RMX {
 	public class GoAwayText : MonoBehaviour {
 
 
-		public Text label;
+		Text label;
+		public string text = "Stop wasting time!";
+		public FontStyle fontStyle = FontStyle.Normal;
+		public bool bestFit = false;
+		public Color color = Color.white;
+	
 
-		void Awake () {
+		void Start () {
 			label = GetComponentInChildren<Text> ();
 			if (label == null) {
-				//TODO: create own label
-				throw new System.Exception("No Text Component");
+				label = gameObject.AddComponent<Text> ();
+				label.font = LookAndFeel.current.mainFont;
+				label.fontSize = 62;
+				label.fontStyle = fontStyle;
+				label.lineSpacing = 1;
+				label.supportRichText = true;
+				label.alignment = TextAnchor.MiddleCenter;
+				label.horizontalOverflow = HorizontalWrapMode.Wrap;
+				label.verticalOverflow = VerticalWrapMode.Truncate;
+				label.resizeTextForBestFit = bestFit;
+				label.color = color;
+//				label.material = null;
+				label.text = text;
 			}
-		}
-		// Use this for initialization
-		void Start () {
 			Hide ();
 		}
+//		// Use this for initialization
+//		void Start () {
+//
+//		}
 		
 		// Update is called once per frame
 		void Update () {

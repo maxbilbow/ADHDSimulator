@@ -3,12 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml;
 namespace RMX {
-	public enum UserData {
-		CurrentSession, CurrentProcrastination, Total, 
-		LongestProctrastination, OfDevTime, 
-		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro,
-		MakingTime
-	}
 
 
 
@@ -30,40 +24,29 @@ namespace RMX {
 
 		public float totalTime {
 			get {
-				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total));
+				return SavedData.Get(UserData.TotalTime).Float;
 			}
 		}
 		
 		
 		public float currentProcrastination {
 			get {
-				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.CurrentProcrastination));
+				return SavedData.Get(UserData.CurrentProcrastination).Float;
 			}
 		}
 		
 		public float currentSessionTime {
 			get {
-				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.CurrentSession));
+				return SavedData.Get(UserData.CurrentSession).Float;
 			}
 		}
 		
 		public float longestProcrastination {
 			get {
-				return PlayerPrefs.GetFloat(GameData.GetKey(UserData.LongestProctrastination));
+				return SavedData.Get(UserData.LongestProctrastination).Float;
 			}
 		}
 		public bool newPersonalBest = false;
-//		public static Social.D
-//		public static GameData data;
-
-//		void Awake() {
-//			if (control == null) {
-//				DontDestroyOnLoad (gameObject);
-//				control = this;
-//			} else if (control != this) {
-//				Destroy (gameObject);
-//			}
-//		}
 
 
 		/// <summary>
@@ -71,34 +54,11 @@ namespace RMX {
 		/// </summary>
 		public float devTimeWasted = 5 * 60 * 60;
 
-		/// <summary>
-		/// Gets the String Key used to get and set PlayerPrefs. This is NOT the same as the ID used by GameKit
-		/// </summary>
-		/// <returns>The key.</returns>
-		/// <param name="data">Data.</param>
-		public static string GetKey(UserData data) {
-			switch (data) {
-			case UserData.CurrentSession:
-				return "last session";
-			case UserData.CurrentProcrastination:
-				return "last uninterupted";
-			case UserData.Total:
-				return "Total Time Wasted";
-			case UserData.LongestProctrastination:
-				return "longestProcrastination";
-			case UserData.AmeteurCrastinator:
-				return "Ameteur Crastinator";
-			case UserData.TimeWaster:
-				return "Time Waster";
-			case UserData.SemiPro:
-				return "Semi-Pro";
-			case UserData.Apathetic:
-				return "Apathetic";
-			case UserData.Pro:
-				return "Pro-Crastinator";
-			}
-			return null;
-		}
+
+
+
+
+//		public bool GetSavedData()
 
 		public long GetLong(UserData data) {
 			switch (data) {
@@ -106,7 +66,7 @@ namespace RMX {
 				return (long) currentSessionTime;
 			case UserData.CurrentProcrastination:
 				return (long) currentProcrastination;
-			case UserData.Total:
+			case UserData.TotalTime:
 				return (long) totalTime;
 			case UserData.OfDevTime:
 				return (long) (100 * totalTime / devTimeWasted);
@@ -125,7 +85,7 @@ namespace RMX {
 
 
 
-		public static string GetID(UserData key) {
+		public string GetID(UserData key) {
 			#if UNITY_IOS || UNITY_STANDALONE_OSX
 			string id = "grp.";
 			#else
@@ -136,7 +96,7 @@ namespace RMX {
 				id += "CgkI2PKS_coeEAIQAw";//"55415446";
 				break;
 			case UserData.OfDevTime:
-			case UserData.Total:
+			case UserData.TotalTime:
 				id += "CgkI2PKS_coeEAIQCA";//"55415445";
 				break;
 			case UserData.AmeteurCrastinator:
@@ -222,6 +182,9 @@ namespace RMX {
 			}
 		}
 
+
 	}
+
+
 
 }

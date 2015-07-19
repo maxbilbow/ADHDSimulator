@@ -6,8 +6,7 @@ namespace RMX {
 	public class GameController : ASingleton<GameController> {
 		public Vector2 defaultGravity = new Vector2 (0f, -9.81f);
 		public GameData gameData;
-		public float newClockThreshold = 120;
-		public float maxNumberOfClocks = 50;
+		public int maxNumberOfClocks = 50;
 		public TextAsset database;
 		public Vector2 velocity {
 			get {
@@ -27,7 +26,7 @@ namespace RMX {
 		protected override void Awake () {
 			base.Awake ();
 			Physics2D.gravity = defaultGravity;
-			isFirstPlay = PlayerPrefs.GetFloat(GameData.GetKey(UserData.Total)) == 0;
+			isFirstPlay = SavedData.Get(UserData.TotalTime).Float == 0;
 
 		}
 
@@ -36,6 +35,8 @@ namespace RMX {
 			GameCenter.Initialize ();
 			Timer.Initialize ();
 			DragRigidbody.Initialize ();
+			ClockSpawner.Initialize ();
+			PauseCanvas.Initialize ();
 		}
 
 		void StartDesktop() {
@@ -65,32 +66,21 @@ namespace RMX {
 				GameCenter.current.CheckProgress();
 				_checkTime += 30;
 			}
-			if (Input.touchCount > 2 && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator)) {
-				ClockBehaviour.New();
-				if (!GameCenter.current.HasAchieved(UserData.MakingTime))
-					GameCenter.current.UpdateAchievement(UserData.MakingTime,100);
-				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
-//					GameCenter.UpdateAchievement(UserData.TooMuchTime,100);
-					var toDestroy = ClockBehaviour.clocks[1];
-					ClockBehaviour.clocks.RemoveAt(1);
-					Destroy(toDestroy.gameObject);
-				}
-			}
 		}
 
 
 		public void UpdateScoresAndReset(bool reset) {
-			var newTotal = gameData.totalTime + Time.deltaTime;
+			var newTotal = SavedData.Get(UserData.TotalTime).Float + Time.deltaTime;
 			var currentTotal = gameData.currentProcrastination + Time.deltaTime;
-			PlayerPrefs.SetFloat (GameData.GetKey(UserData.Total), newTotal);
-			PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentSession), Time.fixedTime);
-			PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentProcrastination), currentTotal);
+			SavedData.Get(UserData.TotalTime).Float = newTotal;
+			SavedData.Get(UserData.CurrentSession).Float = Time.fixedTime;
+			SavedData.Get(UserData.CurrentProcrastination).Float = currentTotal;
 			gameData.newPersonalBest = gameData.currentProcrastination > gameData.longestProcrastination;
 			if (gameData.newPersonalBest) {
-				PlayerPrefs.SetFloat(GameData.GetKey(UserData.LongestProctrastination), gameData.currentProcrastination);
+				SavedData.Get(UserData.LongestProctrastination).Float = gameData.currentProcrastination;
 			}
 			if (reset) {
-				PlayerPrefs.SetFloat (GameData.GetKey(UserData.CurrentProcrastination), 0);
+				SavedData.Get(UserData.CurrentProcrastination).Float = 0;
 			}
 		}
 

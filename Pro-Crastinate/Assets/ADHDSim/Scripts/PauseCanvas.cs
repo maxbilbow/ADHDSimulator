@@ -57,8 +57,8 @@ namespace RMX {
 
 
 		// Use this for initialization
-		void Start () {
-
+		protected override void Awake () {
+			base.Awake ();
 			canvas = gameObject.GetComponent<Canvas> ();
 			if (!canvas) {
 				canvas = gameObject.AddComponent<Canvas> ();
@@ -157,10 +157,11 @@ namespace RMX {
 				Pause (true);
 			}
 		}
+
 		string text = "";
 		
 		
-		bool firstLoad = true;
+
 		
 		GameData gameData {
 			get {
@@ -207,11 +208,7 @@ namespace RMX {
 				gameController.UpdateScoresAndReset (true);
 				
 				
-				if (firstLoad) {
-					firstLoad = false;
-				} else if (Random.Range(0,100) > 60 && paused && !pause && gameData.totalTime > gameController.newClockThreshold) {
-					ClockBehaviour.New();
-				}
+				ClockSpawner.current.Spawn();
 				canvas.enabled = false;
 			}
 			Time.timeScale = pause ? 0 : 1;

@@ -21,7 +21,8 @@ namespace RMX {
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
-		void Start() {
+		protected override void Awake() {
+			base.Awake ();
 			Authenticate ();
 			CheckProgress ();
 		}
@@ -52,7 +53,7 @@ namespace RMX {
 		}
 
 		public void ReportScore (long score, UserData data) {
-			string leaderboardID = GameData.GetID (data);
+			string leaderboardID = GameData.current.GetID (data);
 			var log = Bugger.StartLog (Testing.GameCenter);
 			log.log += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
 			try {
@@ -69,7 +70,7 @@ namespace RMX {
 		}
 
 		public void CheckProgress() {
-			var time = GameData.current.totalTime;
+			var time = SavedData.Get (UserData.TotalTime).Float;
 
 			foreach (KeyValuePair<UserData, bool> entry in _achievements) {
 				if (entry.Value == false)
@@ -89,7 +90,7 @@ namespace RMX {
 
 		public bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
-			string achievementID = GameData.GetID (data);
+			string achievementID = GameData.current.GetID (data);
 			try {
 				Social.LoadAchievements (achievements => {
 					if (achievements.Length > 0) {
@@ -116,21 +117,22 @@ namespace RMX {
 				return true;
 			} else {
 				double progress;
+				float totalTime = SavedData.Get(UserData.TotalTime).Float;
 				switch (data) {
 				case UserData.AmeteurCrastinator:
-					progress = GameData.current.totalTime > 20 ? 100 : 0;
+					progress = totalTime > 20 ? 100 : 0;
 					break;
 				case UserData.TimeWaster:
-					progress = GameData.current.totalTime / (10 * 60);
+					progress = totalTime / (10 * 60);
 					break;
 				case UserData.SemiPro:
-					progress = GameData.current.totalTime / (GameData.current.devTimeWasted / 4);
+					progress = totalTime / (GameData.current.devTimeWasted / 4);
 					break;
 				case UserData.Apathetic:
-					progress = GameData.current.totalTime / (GameData.current.devTimeWasted / 2);
+					progress = totalTime / (GameData.current.devTimeWasted / 2);
 					break;
 				case UserData.Pro:
-					progress = GameData.current.totalTime / GameData.current.devTimeWasted;
+					progress = totalTime / GameData.current.devTimeWasted;
 					break;
 				case UserData.MakingTime:
 					progress = 1;
@@ -171,98 +173,5 @@ namespace RMX {
 
 		}
 
-			/*
-		public static GameCenter gameKit;
-
-		void Awake() {
-			if (gameKit == null) {
-				DontDestroyOnLoad (gameObject);
-				gameKit = this;
-			} else if (gameKit != this) {
-				Destroy (gameObject);
-			}
-		}
-
-		
-		// Use this for initialization
-		void Start () {
-
-		}
-		
-		// Update is called once per frame
-		void Update () {
-		
-		}
-
-		//
-		// Properties
-		//
-		private User _user = new User();
-		public ILocalUser localUser
-		{
-			get {
-				return _user;
-			}
-		}
-		
-		//
-		// Methods
-		//
-		public void Authenticate (ILocalUser user, Action<bool> callback){
-
-		}
-		
-		public IAchievement CreateAchievement () {
-			return null;
-		}
-		
-		public ILeaderboard CreateLeaderboard () {
-			return null;
-		}
-		
-		public bool GetLoading (ILeaderboard board) {
-			return false;
-		}
-		
-		public void LoadAchievementDescriptions (Action<IAchievementDescription[]> callback) {
-			
-		}
-		
-		public void LoadAchievements (Action<IAchievement[]> callback) {
-			
-		}
-		
-		public void LoadFriends (ILocalUser user, Action<bool> callback) {
-			
-		}
-		
-		public void LoadScores (ILeaderboard board, Action<bool> callback) {
-			
-		}
-		
-		public void LoadScores (string leaderboardID, Action<IScore[]> callback) {
-			
-		}
-		
-		public void LoadUsers (string[] userIDs, Action<IUserProfile[]> callback) {
-			
-		}
-		
-		public void ReportProgress (string achievementID, double progress, Action<bool> callback) {
-			
-		}
-		
-		public void ReportScore (long score, string board, Action<bool> callback) {
-			
-		}
-		
-		public void ShowAchievementsUI () {
-			
-		}
-		
-		public void ShowLeaderboardUI () {
-			
-		}
-		*/
 	}
 }

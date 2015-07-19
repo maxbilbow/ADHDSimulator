@@ -10,14 +10,14 @@ namespace RMX {
 		//		}
 		private bool isActive = false;
 		public bool deactivateOnPause = true;
-		public UserData data;
+		public UserData key;
 		protected float threshold = 0;
 		public float min = 30;
 		public float max = 45;
 		protected TComponent component;
-		public string key {
+		public SavedData data {
 			get {
-				return GameData.GetKey(data);
+				return SavedData.Get(key);
 			}
 		}
 		public float probability = 0.5f;
@@ -51,7 +51,7 @@ namespace RMX {
 
 		// Update is called once per frame
 		void Update () {
-			if (!isBonusActive && PlayerPrefs.GetFloat (key) > threshold) {
+			if (!isBonusActive && data.Float > threshold) {
 				Activate ();
 			}
 		}
