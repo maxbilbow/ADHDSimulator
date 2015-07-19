@@ -4,13 +4,13 @@ using System.Collections;
 namespace RMX {
 	public class Version {
 	
-		public const float v0_3_4 = 3.04f;
+		public const float v0_3_5 = 3.05f;
 
 		public const string Key = "current_version";
 
 		public static float current {
 			get {
-				return v0_3_4;
+				return v0_3_5;
 			}
 		}
 
@@ -18,7 +18,7 @@ namespace RMX {
 			if (needsPatch) {
 				Debug.Log ("PATCH!!!!!");
 				try {
-					Patchv0_3_3();
+					Patchv0_3_5();
 					PlayerPrefs.SetFloat(Version.Key, current);
 				} catch (UnityException e){
 					needsPatch = true;
@@ -42,38 +42,41 @@ namespace RMX {
 			object value = null;// = PlayerPrefs.GetFloat
 			var oldKey = OldKey (key);
 			var newKey = SavedData.GetKey (key);
-			switch (type) {
-			case Type.Float:
-				value = PlayerPrefs.GetFloat(oldKey);
-				break;
-			case Type.Int:
-				value = PlayerPrefs.GetInt(oldKey);
-				break;
-			case Type.String:
-				value = PlayerPrefs.GetString(oldKey);
-				break;
-			default:
-				throw new UnityException(oldKey + " could not be updated");
+
+			if (PlayerPrefs.HasKey (oldKey)) {
+				switch (type) {
+				case Type.Float:
+					value = PlayerPrefs.GetFloat (oldKey);
+					break;
+				case Type.Int:
+					value = PlayerPrefs.GetInt (oldKey);
+					break;
+				case Type.String:
+					value = PlayerPrefs.GetString (oldKey);
+					break;
+				default:
+					throw new UnityException (oldKey + " could not be updated");
+				}
+				Debug.Log (oldKey + " Is Being Updated to " + newKey);
+				PlayerPrefs.SetString (newKey, value.ToString ());
+				if (oldKey != newKey) 
+					PlayerPrefs.DeleteKey (oldKey);
 			}
-			Debug.Log (oldKey + " Is Being Updated to " + newKey);
-			PlayerPrefs.SetString (newKey, value.ToString());
-			PlayerPrefs.DeleteKey (oldKey);
 
 		}
 
-
-
-		private static void Patchv0_3_3() {
+	
+		private static void Patchv0_3_5() {
 			needsPatch = false;
 			Setf (UserData.CurrentSession);
 			Setf (UserData.CurrentProcrastination);
-		
-
+			Setf (UserData.TotalTime);
+			Setf (UserData.LongestProctrastination);
 		}
 	
 		private static string OldKey(UserData data) {
 			float version = PlayerPrefs.GetInt (Version.Key);
-			if (version < current) {
+			if (version < v0_3_5) {
 				switch (data) {
 				case UserData.CurrentSession:
 					return "last session";
