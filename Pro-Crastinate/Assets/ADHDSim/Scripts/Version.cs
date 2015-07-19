@@ -31,15 +31,18 @@ namespace RMX {
 
 		public static void Patch() {
 			if (needsPatch) {
-				Debug.Log ("PATCH!!!!!");
+				var log = Bugger.StartLog(Testing.Patches);
 				try {
 					PatchX ();
 					currentVersion = latest;
 					needsPatch = false;
+					log.message += "Update Successful";
 				} catch (UnityException e) {
 					needsPatch = true;
-					Debug.Log (e);
+					log.message += "Update failed: " + e.Message;
 				}
+				if (log.isActive)
+					Debug.Log (log);
 			} 
 //			else if (Bugger.WillTest (Testing.Patches)) {
 //				var log = Bugger.StartLog(Testing.Patches);
