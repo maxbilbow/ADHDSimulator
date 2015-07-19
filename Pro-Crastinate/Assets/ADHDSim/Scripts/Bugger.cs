@@ -21,12 +21,14 @@ namespace RMX
 
 	public class Bugger : ASingleton<Bugger>
 	{
-		#if DEBUG || true
-		public bool beta = true;
+		#if UNITY_ANDROID
+		public bool beta = false;
+		public bool printToScreen = false;
 		#else
-		private static bool _willTest = false;
-		#endif
+		public bool beta = true;
 		public bool printToScreen = true;
+		#endif
+
 		public const float maxDisplayTime = 5;
 
 		public List<string> queue = new List<string>();
@@ -179,7 +181,7 @@ namespace RMX
 			}
 			public override string ToString() {
 				string log;// = this.log;
-				if (isActive && this.log.Length > 0) {
+				if (isActive) {
 					log = ProcessLog();
 					if (current.printToScreen) {
 						current.AddToQueue(log);

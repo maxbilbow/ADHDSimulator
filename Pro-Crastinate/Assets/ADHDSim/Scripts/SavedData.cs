@@ -68,6 +68,15 @@ namespace RMX {
 			}
 		}
 
+		public double Double {
+			get {
+				double result;
+				return double.TryParse(PlayerPrefs.GetString(key), out result) ? result : -1;
+			} set {
+				PlayerPrefs.SetString(key,value.ToString());
+			}
+		}
+
 		public override string ToString() {
 			return this.value;
 		}

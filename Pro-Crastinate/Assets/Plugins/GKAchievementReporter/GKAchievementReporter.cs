@@ -12,7 +12,7 @@ namespace UnityEngine.SocialPlatforms {
 		/// </summary>
 		public static void ReportAchievement(string achievementID, float progress, bool showsCompletionBanner) {
 
-			if (Social.Active is GameCenter.GameCenterPlatform && Application.platform == RuntimePlatform.IPhonePlayer) {
+			if (Social.Active is GameCenter.GameCenterPlatform) {// && Application.platform == RuntimePlatform.IPhonePlayer) {
 
 				// Use native iOS code if running GameCenter on an iOS device
 				_ReportAchievement(achievementID, progress, showsCompletionBanner);
