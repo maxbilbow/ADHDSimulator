@@ -78,22 +78,26 @@ namespace RMX
 
 
 		protected virtual void Awake() {
+			Bugger.DebugLog log = this is Bugger ? null : Bugger.StartLog (Testing.Singletons);;
+		
 			if (GetSingleton() == null) {
 				DontDestroyOnLoad (gameObject);
 				SetSingleton(this as T);// as T;
-				if (Bugger.WillTest(Testing.Singletons))
-					Debug.Log("<color=green>CREATING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length);
+				if (log != null)
+					log.message += "<color=green>CREATING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
 			} else if (GetSingleton() != this) {
 				if (gameObject.GetComponents<Component>().Length <= 2) {// gameObject.name == this.GetType().Name &&
-					if (Bugger.WillTest(Testing.Singletons))
-						Debug.Log("<color=red>DELETING Singleton's GameObject: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length);
+					if (log != null)
+						log.message += "<color=red>DELETING Singleton's GameObject: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
 					Destroy (gameObject);
 				} else {
-					if (Bugger.WillTest(Testing.Singletons))
-						Debug.Log("<color=orange>DELETING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length);
+					if (log != null)
+						log.message += "<color=orange>DELETING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
 					Destroy(this);
 				}
 			}
+			if (log != null && log.isActive)
+				Debug.Log (log);
 		}
 
 //		protected abstract T GetSingleton();

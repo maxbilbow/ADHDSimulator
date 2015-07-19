@@ -6,10 +6,17 @@ using UnityEngine.SocialPlatforms;
 namespace RMX {
 
 	public enum UserData {
+		// Saved Game Data
 		CurrentSession, CurrentProcrastination, TotalTime,
-		LongestProctrastination, OfDevTime, 
-		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro,
-		MakingTime,
+		// Saved & Top Scores
+		LongestProctrastination,
+		// Top Scores
+		OfDevTime, 
+
+		// Achievements
+		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro, MakingTime, OverTime,
+
+		// Other System and Game Data
 		Version, NotFirstTime
 	}
 
@@ -60,6 +67,10 @@ namespace RMX {
 				PlayerPrefs.SetString(key,value.ToString());
 			}
 		}
+
+		public override string ToString() {
+			return this.value;
+		}
 		
 		/// <summary>
 		/// Gets the String Key used to get and set PlayerPrefs. This is NOT the same as the ID used by GameKit
@@ -68,26 +79,37 @@ namespace RMX {
 		/// <param name="data">Data.</param>
 		public static string GetKey(UserData data) {
 			switch (data) {
+			// Saved Game Data
 			case UserData.CurrentSession:
-				return "last_session";
+				return "gd_current_session";
 			case UserData.CurrentProcrastination:
-				return "last_uninterupted";
+				return "gd_current_procrastination";
 			case UserData.TotalTime:
-				return "Total_Time_Wasted";
+				return "gd_total_time_Wasted";
 			case UserData.LongestProctrastination:
-				return "longest_Procrastination";
+				return "sc_longest_procrastination";
+
+			// Top Scores
+			case UserData.OfDevTime:
+				return "sc_total_as_percent_of_dev";
+
+			// Achievements
 			case UserData.AmeteurCrastinator:
-				return "AmeteurCrastinator";
+				return "ach_ameteur_crastinator";
 			case UserData.TimeWaster:
-				return "Time_Waster";
+				return "ach_time_waster";
+			case UserData.OverTime:
+				return "ach_overtime";
 			case UserData.SemiPro:
-				return "Semi_Pro";
+				return "ach_semi_pro";
 			case UserData.Apathetic:
-				return "Apathetic";
+				return "ach_apathetic";
 			case UserData.Pro:
-				return "Pro_Crastinator";
+				return "ach_pro_crastinator";
+
+			// Other System and Game Data
 			case UserData.NotFirstTime:
-				return "Has_Played_Before";
+				return "gd_has_played_before";
 			case UserData.Version:
 				return Version.Key;
 			}

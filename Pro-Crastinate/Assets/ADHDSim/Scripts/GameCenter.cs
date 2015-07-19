@@ -32,22 +32,25 @@ namespace RMX {
 			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
 			Social.localUser.Authenticate (success => {
 				if (success) {
-					if (Bugger.WillTest(Testing.GameCenter)) Debug.Log ("Authentication successful");
-					userInfo.log = "Username: " + Social.localUser.userName + 
+					userInfo.message += "Authentication successful\n";
+					userInfo.message += "Username: " + Social.localUser.userName + 
 						"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
 					if (Bugger.WillTest(Testing.GameCenter)) Debug.Log(userInfo);
 				}
 				else
-					if (Bugger.WillTest(Testing.GameCenter)) Debug.Log ("Authentication failed");
+					userInfo.message += "\nAuthentication failed";
 			});
+			if (userInfo.isActive)
+				Debug.Log(userInfo);
 		}
 
 		public bool HasAchieved(UserData key) {
 			try {
 				return _achievements [key];
 			} catch {
-				if (Bugger.WillTest(Testing.Achievements)) Debug.Log("HasAchieved() threw an error!");
+				if (Bugger.WillLog(Testing.Achievements, "HasAchieved() threw an error!"))
+				    Debug.Log(Bugger.Last);
 				return false;
 			}
 		}
@@ -55,16 +58,16 @@ namespace RMX {
 		public void ReportScore (long score, UserData data) {
 			string leaderboardID = GameData.current.GetID (data);
 			var log = Bugger.StartLog (Testing.GameCenter);
-			log.log += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
+			log.message += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
 			try {
 				Social.ReportScore (score, leaderboardID, success => {
-					log.log += success ? "Reported score successfully" : "Failed to report score";	
+					log.message += success ? "Reported score successfully" : "Failed to report score";	
 				});
 			} catch (System.Exception e) {
 				if ( Bugger.WillTest(Testing.Exceptions) )
 					UnityEngine.Debug.Log(e);//, Testing.Exceptions);
 			} finally {
-				if (Bugger.WillTest(Testing.GameCenter))
+				if (log.isActive)
 					Debug.Log(log);
 			}
 		}
@@ -91,6 +94,7 @@ namespace RMX {
 		public bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
 			string achievementID = GameData.current.GetID (data);
+			var log = Bugger.StartLog(Testing.Achievements);
 			try {
 				Social.LoadAchievements (achievements => {
 					if (achievements.Length > 0) {
@@ -99,21 +103,24 @@ namespace RMX {
 						foreach (IAchievement achievement in achievements) {
 							if (achievement.id == achievementID) {
 								completed = achievement.completed || achievement.percentCompleted == 100;
-								Debug.Log ("Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed);
+								log.message += "Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed + "\n";
 								break;
 							}
 						}
-	//					Debug.Log (myAchievements);
 					} else {
-	//					Debug.Log ("No achievements returned");
+						if (log.isActive) 
+							Debug.Log (log);
 						throw new System.ArgumentException("No achievements returned");
 					}
 				});
 			} catch (System.ArgumentException exception) {
-				Debug.Log (exception.Message);
+				log.message += exception.Message;
+				Debug.Log(log);
 				return false;
 			}
+
 			if (completed) {
+				log.message += "\nAlready Completed!";
 				return true;
 			} else {
 				double progress;
@@ -164,7 +171,8 @@ namespace RMX {
 					}
 				});
 				#endif
-
+				log.message += "\n New status isCompleted: " + completed;
+				Debug.Log(log);
 				if (completed) {
 
 				}

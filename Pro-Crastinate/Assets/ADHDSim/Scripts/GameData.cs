@@ -151,11 +151,12 @@ namespace RMX {
 
 		public List<string> WhatYouCouldHaveDone(float time) {
 			List <string> result = DataReader.GetActivityList (time);
-			if (Bugger.WillTest(Testing.GameDataLists))
-				Debug.Log("List accessed with time: " + time + ", and " + result.Count + " sentences.");
+			var log = Bugger.StartLog (Testing.GameDataLists);
+			log.message += "List accessed with time: " + time + ", and " + result.Count + " sentences.";
 			if (result.Count > 0) {
-				return result;
+				log.message += "\n - Adding from database...";
 			} else {
+				log.message += "\n - Found none in Database...";
 				float timeInMinutes = time / 60;
 				if (timeInMinutes < 0.5) {
 					result.Add("approved this app for distribution through the app store!");
@@ -178,8 +179,14 @@ namespace RMX {
 					result.Add ("learned a new Spanish phrase on Duolingo");
 					result.Add ("helped a blind person to see with \"Be My Eyes\"");
 				}
-				return result;
 			}
+			if (log.isActive) {
+				foreach (string s in result) {
+					log.message += "\n => " + s;
+				}
+				Debug.Log(log);
+			}
+			return result;
 		}
 
 
