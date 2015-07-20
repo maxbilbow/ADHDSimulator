@@ -15,25 +15,13 @@ using GooglePlayGames;
 namespace RMX {
 	public class GameCenter : ASingleton<GameCenter> {
 
-//		private static bool _willUpdateAwards = false;
-//		public static void AnAwardWasAchieved() {
-//			_willUpdateAwards = true
-//		}
-
-//		public Dictionary<UserData, bool> achievements = new Dictionary<UserData, bool> ();
-//		[DllImport("__Internal")]
-//		private static extern void _ReportAchievement( string achievementID, float progress );
-
-		protected override void Awake() {
-			base.Awake ();
-//			Authenticate ();
-//			CheckProgress ();
-		}
 
 		void Start() {
 			GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
 			Authenticate ();
 			CheckProgress ();
+			settings.willPauseOnLoad = SavedData.Get(UserData.CurrentSession).Float > 0;
+			gameController.PauseGame (settings.willPauseOnLoad);
 		}
 
 		public void Authenticate() {
@@ -110,13 +98,13 @@ namespace RMX {
 				result = totalTime / (10 * 60);
 				break;
 			case UserData.SemiPro:
-				result = totalTime / (GameData.current.devTimeWasted / 4);
+				result = totalTime / (settings.TotalDevTimeWasted / 4);
 				break;
 			case UserData.Apathetic:
-				result = totalTime / (GameData.current.devTimeWasted / 2);
+				result = totalTime / (settings.TotalDevTimeWasted / 2);
 				break;
 			case UserData.Pro:
-				result = totalTime / GameData.current.devTimeWasted;
+				result = totalTime / settings.TotalDevTimeWasted;
 				break;
 			case UserData.MakingTime:
 			case UserData.BigTime:

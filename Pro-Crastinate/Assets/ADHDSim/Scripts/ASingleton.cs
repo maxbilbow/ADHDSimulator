@@ -13,12 +13,19 @@ using System.Collections.Generic;
 
 namespace RMX
 {
-	public abstract class ASingleton<T> : MonoBehaviour 
+	public interface ISingleton {
+		string name { get; }
+//		ISingleton Singleton { get; set; }
+		bool Destroyed { get; }
+	}
+
+
+	public abstract class ASingleton<T> : MonoBehaviour, ISingleton
 	where T : MonoBehaviour {
 
 		private static T _singleton = null;
 
-		public static bool isInitialized {
+		public static bool IsInitialized {
 			get {
 				return _singleton != null;
 			}
@@ -30,40 +37,76 @@ namespace RMX
 			}
 		}
 
+		protected GameData gameData {
+			get {
+				return GameData.current;
+			}
+		}
+
+		protected GameCenter gameCenter {
+			get {
+				return GameCenter.current;
+			}
+		}
+
+		protected Settings settings {
+			get {
+				return Settings.current;
+			}
+		}
 
 		public static T current {
 			get {
-				if (isInitialized) {
-					return _singleton;
+				if (IsInitialized) {
+					return _singleton as T;
 				} else {
-					return Initialize();
+					return Initialize() as T;
 				}
 			}
 		}
 
-		public static T Initialize() {
-			if (isInitialized) 
-				return _singleton;
-			else {
-				var parent = GameObject.Find("Singletons");
-				if (!parent)
-					parent = new GameObject("Singletons");
-				var aSingleton = new GameObject().AddComponent<T> ();
-				aSingleton.gameObject.name = aSingleton.GetType().Name;
-				aSingleton.transform.SetParent(parent.transform);
-				return aSingleton;
+		const string tempName = "324329hrNhfeuwh9";
+		private bool _destroyed = false;
+		public bool Destroyed {
+			get {
+				return _destroyed;
 			}
 		}
 
-		public static T Initialize(GameObject withGameObjet) {
-			if (isInitialized) 
+
+
+
+		public static T Initialize() {
+			if (IsInitialized) 
 				return _singleton;
-			else {
-				var aSingleton = withGameObjet.AddComponent<T> ();
-				aSingleton.gameObject.name = aSingleton.GetType().Name;
+			else {// if (ReadyToInitialize<T>()) {
+				var aSingleton = new GameObject (tempName).AddComponent<T> ();
+				if ((aSingleton as ISingleton).Destroyed) {
+					return null;
+				}
+				aSingleton.gameObject.name = aSingleton.GetType ().Name;
+				if (!(aSingleton is GameController)) {
+					var parent = GameController.current.gameObject;
+					aSingleton.gameObject.transform.SetParent (parent.transform);
+				}
 				return aSingleton;
-			}
+			} 
+//			else {
+//				Debug.LogError("Gamecontroller should happen before this...");
+////				GameController.lateInits.Add(Initialize);
+//				return null;
+//			}
 		}
+
+//		public static T Initialize(GameObject withGameObjet) {
+//			if (isInitialized) 
+//				return _singleton;
+//			else {
+//				var aSingleton = withGameObjet.AddComponent<T> ();
+//				aSingleton.gameObject.name = aSingleton.GetType().Name;
+//				return aSingleton;
+//			}
+//		}
 
 		protected  T SetSingleton (T aSingleton)
 		{
@@ -71,32 +114,32 @@ namespace RMX
 			return _singleton;
 		}
 
-		protected  T GetSingleton() {
+		public T GetSingleton() {
 			return _singleton;
 		}
 
 
 		protected virtual void Awake() {
-			Bugger.DebugLog log = this is Bugger ? null : Bugger.StartLog (Testing.Singletons);;
+			var message = "";
 		
-			if (GetSingleton() == null) {
+			if (_singleton == null) {
 				DontDestroyOnLoad (gameObject);
 				SetSingleton(this as T);// as T;
-				if (log != null)
-					log.message += "<color=green>CREATING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+				message += "<color=green>CREATING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
 			} else if (GetSingleton() != this) {
-				if (gameObject.GetComponents<Component>().Length <= 2) {// gameObject.name == this.GetType().Name &&
-					if (log != null)
-						log.message += "<color=red>DELETING Singleton's GameObject: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+				if (gameObject.name == tempName) {// gameObject.name == this.GetType().Name &&
+					message += "<color=red>DELETING Singleton's GameObject: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+					_destroyed = true;
 					Destroy (gameObject);
+					Destroy (this);
 				} else {
-					if (log != null)
-						log.message += "<color=orange>DELETING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+					message += "<color=orange>DELETING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+					_destroyed = true;
 					Destroy(this);
 				}
 			}
-			if (log != null && log.isActive)
-				Debug.Log (log);
+			if (!(this is GameController) && !(this is Bugger) && Bugger.WillLog(Testing.Singletons, message))
+				Debug.Log (Bugger.Last);
 		}
 
 //		protected abstract T GetSingleton();

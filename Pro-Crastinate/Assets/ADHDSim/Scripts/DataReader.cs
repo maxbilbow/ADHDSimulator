@@ -5,12 +5,18 @@ using System;
 
 namespace RMX
 {
-	class DataReader 
+	public class Wychd : List<string> {}
+	public class DataReader : ASingleton<DataReader>
 	{
 		public const float variation = 0.2f;
 		public const int csv_time = 2;
 		public const int csv_text = 1;
 		public const int csv_approved = 3;
+		TextAsset database {
+			get {
+				return settings.Database;
+			}
+		}
 
 
 		public static float TimeHMSToFloat(string time, char parser) {
@@ -56,10 +62,10 @@ namespace RMX
 			} 
 		}
 		
-		private static List<List<string> > GetActivities(float inTime) {
+		private List<List<string>> GetActivities(float inTime) {
 //			Debug.Log (GameController.control.database.name);
 			try {
-				var reader = CsvReader.Read (GameController.current.database);
+				var reader = CsvReader.Read (database);
 		
 			
 				var list = reader.FindAll(match => {
@@ -82,14 +88,16 @@ namespace RMX
 			
 		}
 
-		public static List<string> GetActivityList(float forTime) {
-			List<string> list = new List<string> ();
+
+		public Wychd GetActivityList(float forTime) {
+			Wychd list = new Wychd ();
 			try {
-				foreach (List<string> thing in GetActivities(forTime)) {
+				foreach (Wychd thing in GetActivities(forTime)) {
 					list.Add (thing[csv_text]);
 				}
 			} catch (Exception e) {
-				Debug.Log(e.Message);
+				if (Bugger.WillLog(Testing.Exceptions, e.Message))
+					Debug.Log(Bugger.Last);
 			}
 			return list;
 		}

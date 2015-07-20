@@ -8,18 +8,12 @@ namespace RMX {
 
 
 	public class GameData : ASingleton<GameData>  {
+		/// <summary>
+		/// Usually true after the game was turned off and on
+		/// </summary>
+		/// <value><c>true</c> if new session; otherwise, <c>false</c>.</value>
+	
 
-		public bool newSession = true;
-		void Start () {
-			newSession = currentSessionTime > 0;
-			gameController.PauseGame (newSession);
-//			if (currentSessionTime > 0) {
-//				newSession = true;
-//				gameController.PauseGame (true);
-//			} else {
-//				newSession = false;
-//			}
-		}
 
 
 		public float totalTime {
@@ -46,13 +40,7 @@ namespace RMX {
 				return SavedData.Get(UserData.LongestProctrastination).Float;
 			}
 		}
-		public bool newPersonalBest = false;
 
-
-		/// <summary>
-		/// The dev time wasted.
-		/// </summary>
-		public float devTimeWasted = 5 * 60 * 60;
 
 
 
@@ -69,14 +57,14 @@ namespace RMX {
 			case UserData.TotalTime:
 				return (long) totalTime;
 			case UserData.OfDevTime:
-				return (long) (100 * totalTime / devTimeWasted);
+				return (long) (100 * totalTime / settings.TotalDevTimeWasted);
 			}
 			return -1;
 		}
 
 		public string ofDevTimeWasted {
 			get {
-				float percent = Mathf.Round(100 * GameData.current.totalTime / GameData.current.devTimeWasted) / 100;
+				float percent = Mathf.Round(100 * GameData.current.totalTime / settings.TotalDevTimeWasted) / 100;
 				//				print ("Total: " + GameData.totalTime + ", dev: " + GameData.devTimeWasted + " = " + percent);
 				return percent + "%";
 				
@@ -106,7 +94,7 @@ namespace RMX {
 			float[] testTimes = { 10f, 20f, 30f, 45f, 60f, 120f, 3000f, 6000f, 80000f };
 			foreach (float time in testTimes) {
 				Debug.Log("\n\n--------- Testing: " + time + "---------");
-				var list = DataReader.GetActivityList (time);
+				var list = DataReader.current.GetActivityList (time);
 				foreach (string thing in list) {
 					Debug.Log (thing);
 				}
@@ -114,8 +102,8 @@ namespace RMX {
 			
 		}
 
-		public List<string> WhatYouCouldHaveDone(float time) {
-			List <string> result = DataReader.GetActivityList (time);
+		public Wychd WhatYouCouldHaveDone(float time) {
+			Wychd result = DataReader.current.GetActivityList (time);
 			var log = Bugger.StartLog (Testing.GameDataLists);
 			log.message += "List accessed with time: " + time + ", and " + result.Count + " sentences.";
 			if (result.Count > 0) {

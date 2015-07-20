@@ -13,7 +13,11 @@ namespace RMX
 		const float k_AngularDrag = 5.0f;
 		const float k_Distance = 0.2f;
         const bool k_AttachToCenterOfMass = false;
-		public float fingerWidth = 0.1f;
+		float fingerWidth { 
+			get {
+				return settings.FingerSize;
+			}
+		}
 
 		private GameObject finger;
 

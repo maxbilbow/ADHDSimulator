@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 //using UnityStandardAssets.CrossPlatformInput;
 
 namespace RMX {
 	public class GameController : ASingleton<GameController> {
 		public Vector2 defaultGravity = new Vector2 (0f, -9.81f);
-		public GameData gameData;
-		public int maxNumberOfClocks = 50;
-		public TextAsset database;
+
 		public Vector2 velocity {
 			get {
 				return new Vector2(transform.forward.x, transform.forward.y);
@@ -26,18 +25,32 @@ namespace RMX {
 		protected override void Awake () {
 			base.Awake ();
 			Physics2D.gravity = defaultGravity;
-			isFirstPlay = SavedData.Get(UserData.TotalTime).Float == 0;
-
+			isFirstPlay = PlayerPrefs.GetString(SavedData.GetKey(UserData.TotalTime)) != null;
 		}
 
+		public delegate ISingleton LateInit();
+//		public static List<LateInit> lateInits = new List<LateInit>() {
+//			Bugger.Initialize,
+//			GameCenter.Initialize ,
+//			GameData.Initialize ,
+//			DataReader.Initialize ,
+//			Timer.Initialize ,
+//			DragRigidbody.Initialize ,
+//			ClockSpawner.Initialize ,
+//			PauseCanvas.Initialize 
+//		};
+
 		void StartSingletons() {
+			Bugger.Initialize ();
 			GameCenter.Initialize ();
-			this.gameData = GameData.Initialize ();
+			GameData.Initialize ();
+			DataReader.Initialize ();
 			Timer.Initialize ();
 			DragRigidbody.Initialize ();
 			ClockSpawner.Initialize ();
 			PauseCanvas.Initialize ();
 		}
+
 
 		void StartDesktop() {
 
@@ -75,8 +88,8 @@ namespace RMX {
 			SavedData.Get(UserData.TotalTime).Float = newTotal;
 			SavedData.Get(UserData.CurrentSession).Float = Time.fixedTime;
 			SavedData.Get(UserData.CurrentProcrastination).Float = currentTotal;
-			gameData.newPersonalBest = gameData.currentProcrastination > gameData.longestProcrastination;
-			if (gameData.newPersonalBest) {
+			settings.newPersonalBest = gameData.currentProcrastination > gameData.longestProcrastination;
+			if (settings.newPersonalBest) {
 				SavedData.Get(UserData.LongestProctrastination).Float = gameData.currentProcrastination;
 			}
 			if (reset) {

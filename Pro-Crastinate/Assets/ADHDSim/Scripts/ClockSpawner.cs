@@ -6,26 +6,28 @@ namespace RMX {
 	public class ClockSpawner : ASingleton<ClockSpawner> {
 
 		public List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
-		private int _chance = 100;
+		private int _chance = 50;
 
 
 		void Start() {
 			_chance = Random.Range (10,90);
-#if !DEBUG
-			spawnMode = Random.Range (1,3) == 1 ? SpawnMode.Inflate : SpawnMode.Multiply;
-#endif
 		}
 
 		public enum SpawnMode {
 			Multiply, Inflate
 		}
-		public SpawnMode spawnMode = SpawnMode.Inflate;
+
+	 	SpawnMode spawnMode {
+			get {
+				return settings.ClockSpawnMode;
+			}
+		}	
 
 
-		public int maxNumberOfClocks {
+	 	bool ShouldKillClocks {
 			get {
 				int time = (int) Time.fixedTime;
-				return time < gameController.maxNumberOfClocks ? time : gameController.maxNumberOfClocks;
+				return clocks.Count > (time < settings.MaxNumberOfClocks ? time : settings.MaxNumberOfClocks);
 			}
 		}
 		// Use this for initialization
@@ -43,7 +45,7 @@ namespace RMX {
 				if (Input.touchCount > 1) {
 					if (Spawn () && !GameCenter.current.HasAchieved (UserData.MakingTime))
 						GameCenter.current.UpdateAchievement (UserData.MakingTime, 100);
-					if (clocks.Count > maxNumberOfClocks) {
+					if (ShouldKillClocks) {
 						if (!GameCenter.current.HasAchieved (UserData.OverTime))
 							GameCenter.current.UpdateAchievement (UserData.OverTime, 100);
 						var toDestroy = clocks [1];

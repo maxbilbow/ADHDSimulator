@@ -21,15 +21,7 @@ namespace RMX
 
 	public class Bugger : ASingleton<Bugger>
 	{
-		#if UNITY_ANDROID
-		public bool beta = false;
-		public bool printToScreen = false;
-		#else
-		public bool beta = true;
-		public bool printToScreen = true;
-		#endif
 
-		public const float maxDisplayTime = 5;
 
 		public List<string> queue = new List<string>();
 		public Dictionary<Testing,bool> features = new Dictionary<Testing, bool>()
@@ -38,31 +30,31 @@ namespace RMX
 			{ Testing.GameCenter		, true },
 			{ Testing.Achievements		, true },
 			{ Testing.Exceptions		, true },
-			{ Testing.Singletons		, false },
+			{ Testing.Singletons		, true },
 			{ Testing.GameDataLists		, true },
 			{ Testing.Patches			, true }
 		};
 
-		protected override void Awake() {
-//			TestAll(true);
-			base.Awake ();
-		}
+	
 
 		public static bool WillTest(Testing featureToTest) {
-			return current.beta && current.features [featureToTest];
+			return GameController.IsInitialized && Settings.current.beta && current.features [featureToTest];
 		}
 
 		public static string Last {
 			get {
-				return current.log.message;
+				return GameController.IsInitialized ? current.log.message : null;
 			}
 		}
 
 		public static DebugLog StartLog(Testing featureToTest, string message) {
-			var log = StartLog (featureToTest);
-			log.message = message;
-			current.log = log;
-			return log;
+			if (GameController.IsInitialized) {
+				var log = StartLog (featureToTest);
+				log.message = message;
+				current.log = log;
+				return log; 
+			} else 
+				return null;
 		}
 
 		public static bool WillLog(Testing featureToTest, string message) {
@@ -72,8 +64,12 @@ namespace RMX
 		}
 
 		public static DebugLog StartLog(Testing featureToTest) {
-			current.log.Start (featureToTest);
-			return current.log;
+			if (GameController.IsInitialized) {
+				current.log.Start (featureToTest);
+				return current.log;
+			} else {
+				return null;
+			}
 		}
 
 
@@ -83,20 +79,19 @@ namespace RMX
 			}
 		}
 
-		public DebugLog log = new DebugLog();
+		DebugLog log = new DebugLog();
 
 		private bool timesUp {
 			get{ 
-				return beta && queue.Count > 0 && Time.fixedTime - _startedAt > maxDisplayTime;
+				return settings.beta && queue.Count > 0 && Time.fixedTime - _startedAt > settings.maxDisplayTime;
 			}
 		}
 
 		private int timeRemaining {
 			get {
-				return (int) (maxDisplayTime - (Time.fixedTime - _startedAt));
+				return (int) (settings.maxDisplayTime - (Time.fixedTime - _startedAt));
 			}
 		}
-
 
 		void Update() {
 			if (timesUp) {
@@ -116,7 +111,7 @@ namespace RMX
 		}
 
 		void OnGUI () {
-			if (beta && printToScreen && queue.Count > 0) {
+			if (settings.beta && settings.printToScreen && queue.Count > 0) {
 				var text = timeRemaining + " – " + queue[0];
 				GUIStyle style = new GUIStyle ();
 //				style.fontSize = 50;
@@ -183,7 +178,7 @@ namespace RMX
 				string log;// = this.log;
 				if (isActive) {
 					log = ProcessLog();
-					if (current.printToScreen) {
+					if (Settings.current.printToScreen) {
 						current.AddToQueue(log);
 					}
 				} else {

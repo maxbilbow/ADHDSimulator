@@ -57,8 +57,8 @@ namespace RMX {
 
 
 		// Use this for initialization
-		protected override void Awake () {
-			base.Awake ();
+		 void Start () {
+//			base.Awake ();
 			canvas = gameObject.GetComponent<Canvas> ();
 			if (!canvas) {
 				canvas = gameObject.AddComponent<Canvas> ();
@@ -162,19 +162,9 @@ namespace RMX {
 		
 		
 
+	
 		
-		GameData gameData {
-			get {
-				return GameData.current;
-			}
-		}
-		
-		GameCenter gameCenter {
-			get {
-				return GameCenter.current;
-			}
-		}
-		
+
 		
 		public void Pause(bool pause) {
 			if (pause && !paused) {
@@ -182,16 +172,16 @@ namespace RMX {
 				//				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
 				//				UpdateScoresAndReset (true);
 				float time;
-				if (gameData.newSession) {
+				if (settings.willPauseOnLoad) {
 					time = gameData.currentSessionTime;
 					text = "Congratulations. During your last session, you wasted " + Timer.GetTimeDescription (gameData.currentSessionTime);
-					gameData.newSession = false;
+					settings.willPauseOnLoad = false;
 				} else {
 					time = gameData.currentProcrastination;
 					text = "Congratulations. You have wasted " + Timer.GetTimeDescription (gameData.currentProcrastination);
-					if (gameData.newPersonalBest) {
+					if (settings.newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
-						gameData.newPersonalBest = false;
+						settings.newPersonalBest = false;
 						
 					}
 					

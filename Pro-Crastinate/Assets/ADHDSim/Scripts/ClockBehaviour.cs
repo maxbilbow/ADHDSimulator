@@ -83,15 +83,7 @@ namespace RMX {
 
 		bool isOriginal = false;
 		float lifeSpan = float.PositiveInfinity;
-		void Awake () {
-			if (original == null) {
-				DontDestroyOnLoad (gameObject);
-				original = this;
-				isOriginal = true;
-			} 
 
-			ClockSpawner.current.clocks.Add (this);
-		}
 
 		public static ClockBehaviour New() {
 			GameObject clone = new GameObject ();
@@ -130,6 +122,14 @@ namespace RMX {
 //		public delegate void dfff;// = UpdateVisibleClockCount;
 
 		void Start () {
+			if (original == null) {
+				DontDestroyOnLoad (gameObject);
+				original = this;
+				isOriginal = true;
+			} 
+			
+			ClockSpawner.current.clocks.Add (this);
+
 			if (MaxTimeOffScreen < 2) {
 				MaxTimeOffScreen = 2;
 			}
@@ -146,7 +146,8 @@ namespace RMX {
 		}
 
 		void OnDestroy(){
-			ClockSpawner.current.clocks.Remove (this);
+			if (ClockSpawner.IsInitialized)
+				ClockSpawner.current.clocks.Remove (this);
 		}
 
 		// Update is called once per frame
