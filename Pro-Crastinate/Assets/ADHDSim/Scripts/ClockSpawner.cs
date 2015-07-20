@@ -12,7 +12,7 @@ namespace RMX {
 		void Start() {
 			_chance = Random.Range (10,90);
 #if !DEBUG
-			spawnMode = Chance ? SpawnMode.Inflate : SpawnMode.Multiply;
+			spawnMode = Random.Range (1,3) == 1 ? SpawnMode.Inflate : SpawnMode.Multiply;
 #endif
 		}
 
