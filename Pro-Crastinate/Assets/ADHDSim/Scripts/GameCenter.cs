@@ -5,8 +5,9 @@ using System;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.GameCenter;
 using System.Runtime.InteropServices;
+#if !UNITY_IOS && !UNITY_STANDALONE_OSX
 using GooglePlayGames;
-
+#endif
 
 //[DllImport("__Internal")]
 //private static extern void _ReportAchievement( string achievementID, float progress );
@@ -25,26 +26,32 @@ namespace RMX {
 
 		protected override void Awake() {
 			base.Awake ();
+//			Authenticate ();
+//			CheckProgress ();
+		}
+
+		void Start() {
+			GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
 			Authenticate ();
 			CheckProgress ();
 		}
 
-		void Authenticate() {
-			var userInfo = Bugger.StartLog (Testing.GameCenter);
-			GameCenterPlatform.ShowDefaultAchievementCompletionBanner(true);
-			Social.localUser.Authenticate (success => {
-				if (success) {
-					userInfo.message += "Authentication successful\n";
-					userInfo.message += "Username: " + Social.localUser.userName + 
-						"\nUser ID: " + Social.localUser.id + 
+		public void Authenticate() {
+			if (!Social.localUser.authenticated) {
+				var userInfo = Bugger.StartLog (Testing.GameCenter);
+				Social.localUser.Authenticate (success => {
+					if (success) {
+						userInfo.message += "Authentication successful\n";
+						userInfo.message += "Username: " + Social.localUser.userName + 
+							"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
-				}
-				else
-					userInfo.message += "\nAuthentication failed";
-			});
+					} else
+						userInfo.message += "\nAuthentication failed";
+				});
 
-			if (userInfo.isActive)
-				Debug.Log(userInfo);
+				if (userInfo.isActive)
+					Debug.Log (userInfo);
+			}
 		}
 
 		public bool HasAchieved(UserData key) {
@@ -60,19 +67,21 @@ namespace RMX {
 		}
 
 		public void ReportScore (long score, UserData data) {
-			string leaderboardID = GetID (data);
-			var log = Bugger.StartLog (Testing.GameCenter);
-			log.message += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
-			try {
-				Social.ReportScore (score, leaderboardID, success => {
-					log.message += success ? "Reported score successfully" : "Failed to report score";	
-				});
-			} catch (System.Exception e) {
-				log.message += e;
-				log.feature = Testing.Exceptions;
-			} finally {
-				if (log.isActive)
-					Debug.Log(log);
+			if (Social.localUser.authenticated) {
+				string leaderboardID = GetID (data);
+				var log = Bugger.StartLog (Testing.GameCenter);
+				log.message += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
+				try {
+					Social.ReportScore (score, leaderboardID, success => {
+						log.message += success ? "Reported score successfully" : "Failed to report score";	
+					});
+				} catch (System.Exception e) {
+					log.message += e;
+					log.feature = Testing.Exceptions;
+				} finally {
+					if (log.isActive)
+						Debug.Log(log);
+				}
 			}
 		}
 
@@ -83,7 +92,6 @@ namespace RMX {
 
 		public void CheckProgress() {
 			var time = SavedData.Get (UserData.TotalTime).Float;
-
 			foreach (UserData key in timeBasedAchievements) {
 				if (!SavedData.Get(key).Bool)
 					SavedData.Get(key).Bool = UpdateAchievement (key, time);
@@ -93,24 +101,39 @@ namespace RMX {
 
 		public double CheckProgress(UserData key) {
 			var totalTime = SavedData.Get(UserData.TotalTime).Double;
+			double result = 0;
 			switch (key) {
 			case UserData.AmeteurCrastinator:
-				return totalTime > 20 ? 100 : 0;
+				result = totalTime > 20 ? 100 : 0;
+				break;
 			case UserData.TimeWaster:
-				return totalTime / (10 * 60);
+				result = totalTime / (10 * 60);
+				break;
 			case UserData.SemiPro:
-				return totalTime / (GameData.current.devTimeWasted / 4);
+				result = totalTime / (GameData.current.devTimeWasted / 4);
+				break;
 			case UserData.Apathetic:
-				return totalTime / (GameData.current.devTimeWasted / 2);
+				result = totalTime / (GameData.current.devTimeWasted / 2);
+				break;
 			case UserData.Pro:
-				return totalTime / GameData.current.devTimeWasted;
+				result = totalTime / GameData.current.devTimeWasted;
+				break;
 			case UserData.MakingTime:
+			case UserData.BigTime:
 			case UserData.OverTime:
-				SavedData.Get(key).Bool = true;
-				return 1;
+				result = 1;
+				break;
 			default:
 				return 0;
 			}
+			if (result >= 1) {
+				result = 1;
+				SavedData.Get (key).Bool = true;
+			} else {
+				SavedData.Get (key).Bool = false;
+			}
+			return result;
+
 		}
 
 
@@ -118,39 +141,40 @@ namespace RMX {
 			bool completed = false;
 			string achievementID = GetID (data);
 			var log = Bugger.StartLog(Testing.Achievements, data.ToString());
-			try {
-				Social.LoadAchievements (achievements => {
-					if (achievements.Length > 0) {
-						log.message += "Got " + achievements.Length + " achievement instances:\n";
-						foreach (IAchievement achievement in achievements) {
-							if (achievement.id == achievementID) {
-								completed = achievement.completed || achievement.percentCompleted == 100;
-								log.message += "Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed + "\n";
-								break;
+			if (Social.localUser.authenticated) { //TODO: Check this works
+				try {
+					Social.LoadAchievements (achievements => {
+						if (achievements.Length > 0) {
+							log.message += "Got " + achievements.Length + " achievement instances:\n";
+							foreach (IAchievement achievement in achievements) {
+								if (achievement.id == achievementID) {
+									completed = achievement.completed || achievement.percentCompleted == 100;
+									log.message += "Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed + "\n";
+									break;
+								}
 							}
+						} else {
+							if (log.isActive) 
+								Debug.Log (log);
+							throw new System.ArgumentException ("No achievements returned");
 						}
-					} else {
-						if (log.isActive) 
-							Debug.Log (log);
-						throw new System.ArgumentException("No achievements returned");
-					}
-				});
-			} catch (System.ArgumentException exception) {
-				log.message += exception.Message;
-				log.feature = Testing.Exceptions;
-				Debug.Log(log);
-//				return false;
+					});
+				} catch (System.ArgumentException exception) {
+					log.message += exception.Message;
+					log.feature = Testing.Exceptions;
+					if (log.isActive)
+						Debug.Log (log);
+					log.feature = Testing.Achievements;
+				}
 			}
-
 			if (completed) {
 				log.message += "\nAlready Completed!";
 				return true;
-			} else {
+			} else if (Social.localUser.authenticated) {
 				log.message += "\n" + data + ": ";
 				double progress = CheckProgress(data) * 100;
-			
-				if (progress >= 100) 
-					SavedData.Get(data).Bool = true;
+
+
 				log.message += ", Progress: " + (int) progress + "%";
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
 				if (progress >= 100) {
@@ -163,31 +187,44 @@ namespace RMX {
 				try {
 					GKAchievementReporter.ReportAchievement(achievementID, (float) progress, true);
 					log.message += "\n => SUCCESS";
-				} catch (Exception e) {
-					log.message += " FAILED\n" + e.Message;
-
+				} catch (Exception e){
+					if (log.isActive) 
+						Debug.Log(log);
+					log.feature = Testing.Exceptions;
+					log.message += e.Message;
+					if (log.isActive) 
+						Debug.Log(log);
+					log.feature = Testing.Achievements;
 				}
-						
-				#else
-				Social.ReportProgress (achievementID, progress, result => {
-					log.message += ", result: " + result;
-					if (result) {
-						completed = true;
-						log.message += "\n => SUCCESS";
-					} else {
-						completed = false;
-						log.message += "\n => Achievement Failed to report";
-					}
-				});
-				#endif
+					#else
+				try {
+					Social.ReportProgress (achievementID, progress, result => {
+						log.message += ", result: " + result;
+						if (result) {
+							completed = true;
+							log.message += "\n => SUCCESS";
+						} else {
+							completed = false;
+							log.message += "\n => Achievement Failed to report";
+						}
+					});
+				} catch (Exception e){
+					if (log.isActive) 
+						Debug.Log(log);
+					log.feature = Testing.Exceptions;
+					log.message += e.Message;
+					if (log.isActive) 
+						Debug.Log(log);
+					log.feature = Testing.Achievements;
+				}
+					#endif
 				log.message += "\n New status isCompleted: " + completed;
-				if (log.isActive)
-					Debug.Log(log);
-				if (completed) {
 
-				}
-				return completed;
 			}
+			if (log.isActive)
+				Debug.Log(log);
+			
+			return completed;
 		}
 
 		public string GetID(UserData key) {
@@ -228,7 +265,7 @@ namespace RMX {
 				id += "CgkI2PKS_coeEAIQDA";
 				break;
 			case UserData.OverTime:
-				id += "CgkI2PKS_coeEAIQDQ"; //TODO
+				id += "CgkI2PKS_coeEAIQDQ";
 				break;
 			}
 			return id;

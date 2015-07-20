@@ -31,8 +31,8 @@ namespace RMX {
 		}
 
 		void StartSingletons() {
-			this.gameData = GameData.Initialize ();
 			GameCenter.Initialize ();
+			this.gameData = GameData.Initialize ();
 			Timer.Initialize ();
 			DragRigidbody.Initialize ();
 			ClockSpawner.Initialize ();
@@ -105,6 +105,9 @@ namespace RMX {
 			pauseCanvas.Pause (pause);
 			if (pause) {
 				GameCenter.current.CheckProgress ();
+			} else {
+				if (!Social.localUser.authenticated)
+					GameCenter.current.Authenticate();
 			}
 		}
 		
