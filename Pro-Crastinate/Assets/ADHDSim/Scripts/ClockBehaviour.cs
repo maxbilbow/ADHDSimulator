@@ -6,17 +6,45 @@ namespace RMX {
 	public class ClockBehaviour : MonoBehaviour {
 		// Use this for initialization
 		public Vector3 startingPoint;
-		public static List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
+
 		public static ClockBehaviour original;
 		private Vector2 exitVelocity;
-	
+		public float maxSizeOfInflatable = 10f;
 		bool isOnScreen = true;
 		float fellOffAtTime = 0f;
 		public float MaxTimeOffScreen = 30f;
 		private float OffScreenLimit = 2f;
 		public float maxVelocity = 15f;
+		public Vector3 lastScale = Vector3.zero;
+		public float inflationSpeed = 0.1f;
+		private bool doOnce = true;
+		public bool didPop {
+			get {
+				inflationSpeed *= 0.975f;
+				transform.localScale *= 1 + inflationSpeed;
+				if (inflationSpeed < 0.0004) { 
+					Pop ();
+					return true;
+				} else if (inflationSpeed < 0.005) {
+					if (doOnce) {
+						SoundEffects.Play("poppy1");
+						doOnce = false;
+					}
+					var color = spriteRenderer.color;
+					spriteRenderer.color = new Color(color.r * 1.01f, color.g * 0.98f, color.b * 0.99f);
+				}
+				lastScale = transform.localScale;
+				return false;
+			}
+		}
 
-		private static bool IsVisible(ClockBehaviour clock) {
+		public SpriteRenderer spriteRenderer {
+			get {
+				return GetComponent<SpriteRenderer> ();
+			}
+		}
+
+		public static bool IsVisible(ClockBehaviour clock) {
 			var wasOn = clock.isOnScreen;
 			clock.isOnScreen = GeometryUtility.TestPlanesAABB(GeometryUtility.CalculateFrustumPlanes(Camera.main), clock.gameObject.GetComponent<Collider2D>().bounds);
 			if (wasOn != clock.isOnScreen) {
@@ -25,14 +53,12 @@ namespace RMX {
 			return clock.isOnScreen;
 		}
 
-		public static List<ClockBehaviour> CheckVisibleClocks() {
-			return clocks.FindAll (IsVisible);
-		}
+
 
 		public static int VisibleClockCount {
 			get {
 				int count = 0;
-				foreach (ClockBehaviour clock in clocks) {
+				foreach (ClockBehaviour clock in ClockSpawner.current.clocks) {
 					if (clock.isOnScreen) {
 						count++;
 					}
@@ -41,12 +67,6 @@ namespace RMX {
 				return count;
 			}
 		}
-
-//		{
-//			get {
-//				return clocks.FindAll(IsVisible).Count;
-//			}
-//		}
 
 
 		public Rigidbody2D body {
@@ -69,11 +89,8 @@ namespace RMX {
 				original = this;
 				isOriginal = true;
 			} 
-			if (MaxTimeOffScreen < 2) {
-				print ("ERROR"); 
-				MaxTimeOffScreen = 2;
-			}
-			clocks.Add (this);
+
+			ClockSpawner.current.clocks.Add (this);
 		}
 
 		public static ClockBehaviour New() {
@@ -95,38 +112,46 @@ namespace RMX {
 				(float) Random.Range(0,10) / 10, 
 				(float) Random.Range(0,10) / 10);
 
-//			clone.AddComponent<DragRigidbody> ();
 
 			var clock = clone.AddComponent<ClockBehaviour> ();
 			clock.MaxTimeOffScreen = Random.Range (0, 10);
 //			clock.life
-			var lastClock = clocks [clocks.Count - 1];
-			clock.startingPoint = lastClock.startingPoint;
-			clock.startingPoint.y += lastClock.collisionBody.radius * 2;
+			clock.startingPoint = ClockSpawner.current.SpawnPoint;
+
 
 			clock.Reset ();
 			return clock;
+		}
+
+		public static List<ClockBehaviour> CheckVisibleClocks() {
+			return ClockSpawner.current.clocks.FindAll (IsVisible);
 		}
 	
 //		public delegate void dfff;// = UpdateVisibleClockCount;
 
 		void Start () {
+			if (MaxTimeOffScreen < 2) {
+				MaxTimeOffScreen = 2;
+			}
+
 			if (original != this) {
-//				lifeSpan = Random.Range (0, MaxTimeOffScreen);!hit
+				lifeSpan = Random.Range (0, MaxTimeOffScreen);
+				startingPoint = ClockSpawner.current.SpawnPoint;
 			} 
 
 			if (startingPoint == Vector3.zero && transform.position != Vector3.zero) {
 				startingPoint = transform.position;
 			}
+
 		}
 
 		void OnDestroy(){
-			clocks.Remove (this);
+			ClockSpawner.current.clocks.Remove (this);
 		}
 
 		// Update is called once per frame
 		void Update () {
-			if (isOriginal) {
+			if (!isOriginal) {
 				lifeSpan -= Time.deltaTime;
 			}
 
@@ -171,6 +196,14 @@ namespace RMX {
 			isOnScreen = true;
 //			visibleClocks++;
 //			print ("I AM VISIBLE, one of " + VisibleClockCount);
+
+		}
+
+		public void Pop() {
+			SoundEffects.Play ("pop");
+//			this.gameObject.SetActive (false);
+			Destroy (this.gameObject);
+			SoundEffects.Play("poppy2");
 
 		}
 

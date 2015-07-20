@@ -73,7 +73,7 @@ namespace RMX
             m_SpringJoint.anchor = Vector2.zero;
 
             m_SpringJoint.frequency = k_Spring;
-            m_SpringJoint.dampingRatio = k_Damper;
+            m_SpringJoint.dampingRatio = k_Damper * hit.transform.localScale.magnitude;
             m_SpringJoint.distance = k_Distance;
 			m_SpringJoint.connectedBody = hit.rigidbody;
 

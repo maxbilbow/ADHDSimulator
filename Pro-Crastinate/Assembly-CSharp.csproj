@@ -64,6 +64,7 @@
      <Compile Include="Assets\ADHDSim\Scripts\PauseCanvas.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\PauseManager.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\SavedData.cs" />
+     <Compile Include="Assets\ADHDSim\Scripts\SoundEffects.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Timer.cs" />
      <Compile Include="Assets\ADHDSim\Scripts\Version.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />

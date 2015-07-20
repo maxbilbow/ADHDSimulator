@@ -1,18 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/ClockSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/ClockBehaviour.cs">
     <Files>
-      <File FileName="Assets/ADHDSim/Scripts/Version.cs" Line="5" Column="23" />
-      <File FileName="Assets/ADHDSim/Scripts/ClockSpawner.cs" Line="15" Column="18" />
-      <File FileName="Assets/ADHDSim/Scripts/GameData.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/LookAndFeel.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/SavedData.cs" Line="55" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/Bugger.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/GameCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/PauseCanvas.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/Utility/AutoMobileShaderSwitch.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/ASingleton.cs" Line="48" Column="24" />
-      <File FileName="Assets/Plugins/GKAchievementReporter/GKAchievementReporter.cs" Line="1" Column="1" />
+      <File FileName="Assets/ADHDSim/Scripts/ClockSpawner.cs" Line="62" Column="74" />
+      <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="43" Column="41" />
+      <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="31" Column="22" />
+      <File FileName="Assets/ADHDSim/Scripts/GameCenter.cs" Line="222" Column="21" />
+      <File FileName="Assets/ADHDSim/Scripts/SavedData.cs" Line="1" Column="1" />
+      <File FileName="Assets/ADHDSim/Scripts/Version.cs" Line="1" Column="1" />
+      <File FileName="Assets/ADHDSim/Scripts/GameData.cs" Line="88" Column="3" />
+      <File FileName="Assets/ADHDSim/Scripts/SoundEffects.cs" Line="7" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

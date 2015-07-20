@@ -13,18 +13,24 @@ namespace RMX {
 		// Top Scores
 		OfDevTime, 
 
-		// Achievements
-		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro, MakingTime, OverTime,
+		// Achievements (time based)
+		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro, 
+		// Achievements (Event Based)
+		MakingTime, OverTime, BigTime,
 
 		// Other System and Game Data
 		Version, NotFirstTime
 	}
 
 
+
 	public class SavedData : ScriptableObject {
 
 		private string key;
 		private static bool first = true;
+
+
+
 		void Awake() {
 			if (first) {
 				Version.Patch ();
@@ -111,19 +117,25 @@ namespace RMX {
 			case UserData.OfDevTime:
 				return "sc_total_as_percent_of_dev";
 
-			// Achievements
+			// Time Based Achievements
 			case UserData.AmeteurCrastinator:
 				return "ach_ameteur_crastinator";
 			case UserData.TimeWaster:
 				return "ach_time_waster";
-			case UserData.OverTime:
-				return "ach_overtime";
 			case UserData.SemiPro:
 				return "ach_semi_pro";
 			case UserData.Apathetic:
 				return "ach_apathetic";
 			case UserData.Pro:
 				return "ach_pro_crastinator";
+
+			// Event based Achievements
+			case UserData.OverTime:
+				return "ach_overtime";
+			case UserData.MakingTime:
+				return "ach_making_time";
+			case UserData.BigTime:
+				return "ach_big_time";
 
 			// Other System and Game Data
 			case UserData.NotFirstTime:

@@ -85,41 +85,6 @@ namespace RMX {
 
 
 
-		public string GetID(UserData key) {
-			#if UNITY_IOS || UNITY_STANDALONE_OSX
-			string id = "grp.";
-			#else
-			string id = "";
-			#endif
-			switch (key) {
-			case UserData.LongestProctrastination:
-				id += "CgkI2PKS_coeEAIQAw";//"55415446";
-				break;
-			case UserData.OfDevTime:
-			case UserData.TotalTime:
-				id += "CgkI2PKS_coeEAIQCA";//"55415445";
-				break;
-			case UserData.AmeteurCrastinator:
-				id += "CgkI2PKS_coeEAIQAQ";
-				break;
-			case UserData.TimeWaster:
-				id += "CgkI2PKS_coeEAIQBA";
-				break;
-			case UserData.Apathetic:
-				id += "CgkI2PKS_coeEAIQBw";
-				break;
-			case UserData.SemiPro:
-				id += "CgkI2PKS_coeEAIQBQ";
-				break;
-			case UserData.Pro:
-				id += "CgkI2PKS_coeEAIQBg";
-				break;
-			case UserData.MakingTime:
-				id += "CgkI2PKS_coeEAIQCQ";
-				break;
-			}
-			return id;
-		}
 
 		/*
 		public static UserData GetEnum(string key) {

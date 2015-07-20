@@ -17,7 +17,7 @@ namespace RMX {
 //			_willUpdateAwards = true
 //		}
 
-		public Dictionary<UserData, bool> achievements = new Dictionary<UserData, bool> ();
+//		public Dictionary<UserData, bool> achievements = new Dictionary<UserData, bool> ();
 //		[DllImport("__Internal")]
 //		private static extern void _ReportAchievement( string achievementID, float progress );
 
@@ -46,9 +46,9 @@ namespace RMX {
 
 		public bool HasAchieved(UserData key) {
 			try {
-				return achievements [key];
+				return SavedData.Get (key).Bool;
 			} catch (Exception e) {
-				achievements[key] = false;
+				SavedData.Get (key).Bool = false;
 				var log = Bugger.StartLog(Testing.Exceptions, "HasAchieved(" + key + ") threw an error!\n" + e.Message);
 				if (log.isActive)
 				    Debug.Log(log);
@@ -57,7 +57,7 @@ namespace RMX {
 		}
 
 		public void ReportScore (long score, UserData data) {
-			string leaderboardID = GameData.current.GetID (data);
+			string leaderboardID = GetID (data);
 			var log = Bugger.StartLog (Testing.GameCenter);
 			log.message += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
 			try {
@@ -73,23 +73,18 @@ namespace RMX {
 			}
 		}
 
+		private UserData[] timeBasedAchievements = {
+			UserData.AmeteurCrastinator, 
+			UserData.Apathetic, UserData.SemiPro, UserData.Pro, 
+		};
+
 		public void CheckProgress() {
 			var time = SavedData.Get (UserData.TotalTime).Float;
 
-			foreach (KeyValuePair<UserData, bool> entry in achievements) {
-				if (entry.Value == false)
-					achievements[entry.Key] = UpdateAchievement (entry.Key, time);
+			foreach (UserData key in timeBasedAchievements) {
+				if (!SavedData.Get(key).Bool)
+					SavedData.Get(key).Bool = UpdateAchievement (key, time);
 			}
-//			if (!achievement[UserData.AmeteurCrastinator]) 
-//				achievement[UserData.AmeteurCrastinator] = UpdateAchievement (UserData.AmeteurCrastinator, time);
-//			if (!achievement[UserData.TimeWaster]) 
-//				achievement[UserData.TimeWaster] 			= UpdateAchievement (UserData.TimeWaster, time);
-//			if (!achievement[UserData.SemiPro]) 
-//				achievement[UserData.SemiPro] 				= UpdateAchievement (UserData.SemiPro, time);
-//			if (!achievement[UserData.Apathetic]) 
-//				achievement[UserData.Apathetic] 			= UpdateAchievement (UserData.Apathetic, time);
-//			if (!achievement[UserData.Pro]) 
-//				achievement[UserData.Pro] 					= UpdateAchievement (UserData.Pro, time);
 		}
 
 
@@ -108,7 +103,7 @@ namespace RMX {
 				return totalTime / GameData.current.devTimeWasted;
 			case UserData.MakingTime:
 			case UserData.OverTime:
-				achievements[key] = true;
+				SavedData.Get(key).Bool = true;
 				return 1;
 			default:
 				return 0;
@@ -118,7 +113,7 @@ namespace RMX {
 
 		public bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
-			string achievementID = GameData.current.GetID (data);
+			string achievementID = GetID (data);
 			var log = Bugger.StartLog(Testing.Achievements, data.ToString());
 			try {
 				Social.LoadAchievements (achievements => {
@@ -141,7 +136,7 @@ namespace RMX {
 				log.message += exception.Message;
 				log.feature = Testing.Exceptions;
 				Debug.Log(log);
-				return false;
+//				return false;
 			}
 
 			if (completed) {
@@ -151,6 +146,8 @@ namespace RMX {
 				log.message += "\n" + data + ": ";
 				double progress = CheckProgress(data) * 100;
 			
+				if (progress >= 100) 
+					SavedData.Get(data).Bool = true;
 				log.message += ", Progress: " + (int) progress + "%";
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
 				if (progress >= 100) {
@@ -165,6 +162,7 @@ namespace RMX {
 					log.message += "\n => SUCCESS";
 				} catch (Exception e) {
 					log.message += " FAILED\n" + e.Message;
+
 				}
 						
 				#else
@@ -180,14 +178,53 @@ namespace RMX {
 				});
 				#endif
 				log.message += "\n New status isCompleted: " + completed;
-				Debug.Log(log);
+				if (log.isActive)
+					Debug.Log(log);
 				if (completed) {
 
 				}
 				return completed;
 			}
-
 		}
+
+		public string GetID(UserData key) {
+			#if UNITY_IOS || UNITY_STANDALONE_OSX
+			string id = "grp.";
+			#else
+			string id = "";
+			#endif
+			switch (key) {
+			case UserData.LongestProctrastination:
+				id += "CgkI2PKS_coeEAIQAw";//"55415446";
+				break;
+			case UserData.OfDevTime:
+				id += "CgkI2PKS_coeEAIQCA";//"55415445";
+				break;
+			case UserData.AmeteurCrastinator:
+				id += "CgkI2PKS_coeEAIQAQ";
+				break;
+			case UserData.TimeWaster:
+				id += "CgkI2PKS_coeEAIQBA";
+				break;
+			case UserData.Apathetic:
+				id += "CgkI2PKS_coeEAIQBw";
+				break;
+			case UserData.SemiPro:
+				id += "CgkI2PKS_coeEAIQBQ";
+				break;
+			case UserData.Pro:
+				id += "CgkI2PKS_coeEAIQBg";
+				break;
+			case UserData.MakingTime:
+				id += "CgkI2PKS_coeEAIQCQ";
+				break;
+			case UserData.BigTime:
+				id += ""; //TODO
+				break;
+			}
+			return id;
+		}
+
 
 	}
 }

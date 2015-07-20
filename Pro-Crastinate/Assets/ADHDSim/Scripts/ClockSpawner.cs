@@ -1,8 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace RMX {
 	public class ClockSpawner : ASingleton<ClockSpawner> {
+
+		public List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
+		private int _chance = 100;
+
+
+		void Start() {
+			_chance = Random.Range (10,90);
+#if !DEBUG
+			spawnMode = Chance ? SpawnMode.Inflate : SpawnMode.Multiply;
+#endif
+		}
+
+		public enum SpawnMode {
+			Multiply, Inflate
+		}
+		public SpawnMode spawnMode = SpawnMode.Inflate;
+
 
 		public int maxNumberOfClocks {
 			get {
@@ -15,29 +33,81 @@ namespace RMX {
 			base.Awake ();
 			firstLoad = !SavedData.Get(UserData.NotFirstTime).Bool;
 		}
-		
+
+		ClockBehaviour inflatableClock;
+
 		// Update is called once per frame
 		void Update () {
-			if (Input.touchCount > 1 && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator)) {
-				ClockBehaviour.New();
-				if (!GameCenter.current.HasAchieved(UserData.MakingTime))
-					GameCenter.current.UpdateAchievement(UserData.MakingTime,100);
-				if (ClockBehaviour.clocks.Count > maxNumberOfClocks) {
-					//					GameCenter.UpdateAchievement(UserData.TooMuchTime,100);
-					var toDestroy = ClockBehaviour.clocks[1];
-					ClockBehaviour.clocks.RemoveAt(1);
-					Destroy(toDestroy.gameObject);
+			switch (spawnMode) {
+			case SpawnMode.Multiply:
+				if (Input.touchCount > 1) {
+					if (Spawn () && !GameCenter.current.HasAchieved (UserData.MakingTime))
+						GameCenter.current.UpdateAchievement (UserData.MakingTime, 100);
+					if (clocks.Count > maxNumberOfClocks) {
+						if (!GameCenter.current.HasAchieved (UserData.OverTime))
+							GameCenter.current.UpdateAchievement (UserData.OverTime, 100);
+						var toDestroy = clocks [1];
+						//					clocks.RemoveAt(1);
+						Destroy (toDestroy.gameObject);
+					}
 				}
+				break;
+			case SpawnMode.Inflate:
+				if (Input.touchCount == 2) {
+					forTouch = 1;
+					if (!inflatableClock) {
+
+						inflatableClock = ClockBehaviour.New();
+//						inflatableClock.lastScale = inflatableClock.transform.localScale;
+						inflatableClock.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
+					} else {
+
+						if (inflatableClock.didPop ) {
+							inflatableClock = null;
+						}
+					}
+
+				}
+				break;
+			}
+
+		}
+	
+		bool firstLoad;
+
+		bool Chance {
+			get {
+				return Random.Range(0,100) <= _chance && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator);
 			}
 		}
 
-		bool firstLoad;
-		public void Spawn() {
+		public Vector3 SpawnPoint {
+			get {
+				if (forTouch > 0 && forTouch < Input.touchCount) {
+					var pos = Input.touches[forTouch].position;
+					pos = Camera.current.ScreenPointToRay(new Vector3(pos.x,pos.y,0)).origin;
+					return pos;
+				} else {
+					var startingPoint = ClockBehaviour.original.startingPoint;
+					startingPoint.y += ClockBehaviour.original.collisionBody.radius * 2;
+					return startingPoint;
+				}
+			}
+		}
+		int forTouch = 0;
+		public bool Spawn() {
 			if (firstLoad) {
 				firstLoad = false;
-			} else if (Random.Range(0,100) > 60 /* && paused && !pause */ && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator)) {
-				ClockBehaviour.New();
+				return false;
+			} else if (Chance) {
+				var count = Input.touchCount;
+//				for (int i = 0; i < count; ++i) {
+					forTouch = Random.Range(1,count);
+					ClockBehaviour.New();
+//				}
+				return true;
 			}
+			return false;
 		}
 	}
 }
