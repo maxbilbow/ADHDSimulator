@@ -103,7 +103,7 @@ namespace RMX {
 //			long ofDevTime = gameData.GetLong (UserData.OfDevTime);
 //			SavedData.Get (UserData.CurrentProcrastination).ReportToGameCenter ();
 			GameCenter.current.ReportScore(gameData.PercentageOfDevTimeWastedX10000, UserData.PercentageOfDevTime);
-			Debug.LogWarning (gameData.PercentageOfDevTimeWastedX10000);
+//			Debug.LogWarning (gameData.PercentageOfDevTimeWastedX10000);
 			PlayerPrefs.Save ();
 		}
 		
