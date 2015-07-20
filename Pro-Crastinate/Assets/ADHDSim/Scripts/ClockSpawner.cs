@@ -83,15 +83,22 @@ namespace RMX {
 
 		public Vector3 SpawnPoint {
 			get {
-				if (forTouch > 0 && forTouch < Input.touchCount) {
-					var pos = Input.touches[forTouch].position;
-					pos = Camera.current.ScreenPointToRay(new Vector3(pos.x,pos.y,0)).origin;
-					return pos;
-				} else {
-					var startingPoint = ClockBehaviour.original.startingPoint;
-					startingPoint.y += ClockBehaviour.original.collisionBody.radius * 2;
-					return startingPoint;
+				Vector3 pos;
+				try {
+					if (forTouch > 0 && forTouch < Input.touchCount) {
+						pos = Input.touches[forTouch].position;
+						pos = Camera.current.ScreenPointToRay(new Vector3(pos.x,pos.y,0)).origin;
+						return pos;
+					}
+				} catch (System.Exception e) {
+					var log = Bugger.StartLog(Testing.Exceptions,e.Message);
+					if (log.isActive)
+						Debug.Log(log);
+				} finally {
+					pos = ClockBehaviour.original.startingPoint;
+					pos.y += ClockBehaviour.original.collisionBody.radius * 2;
 				}
+				return pos;
 			}
 		}
 		int forTouch = 0;

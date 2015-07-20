@@ -1,0 +1,6 @@
+lastUpgrade=00921
+proj.AppId=1050918828376
+android.SetupDone=true
+ios.ClientId=1050918828376-8q42vihu9d94g32rqhhabnc0ofc35jmr.apps.googleusercontent.com
+ios.BundleId=com.rattle.adhdSim
+ios.SetupDone=true

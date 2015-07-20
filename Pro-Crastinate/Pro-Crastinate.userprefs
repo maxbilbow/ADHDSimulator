@@ -1,11 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ADHDSim/Scripts/GameCenter.cs">
     <Files>
-      <File FileName="Assets/ADHDSim/Scripts/ClockSpawner.cs" Line="1" Column="1" />
       <File FileName="Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="1" Column="1" />
-      <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="31" Column="22" />
-      <File FileName="Assets/ADHDSim/Scripts/GameCenter.cs" Line="228" Column="39" />
+      <File FileName="Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="1" Column="1" />
+      <File FileName="Assets/ADHDSim/Scripts/GameCenter.cs" Line="45" Column="4" />
       <File FileName="Assets/ADHDSim/Scripts/SavedData.cs" Line="1" Column="1" />
       <File FileName="Assets/ADHDSim/Scripts/Version.cs" Line="1" Column="1" />
       <File FileName="Assets/ADHDSim/Scripts/GameData.cs" Line="88" Column="3" />

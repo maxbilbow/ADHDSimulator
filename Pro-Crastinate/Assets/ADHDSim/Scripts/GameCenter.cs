@@ -5,6 +5,8 @@ using System;
 using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.GameCenter;
 using System.Runtime.InteropServices;
+using GooglePlayGames;
+
 
 //[DllImport("__Internal")]
 //private static extern void _ReportAchievement( string achievementID, float progress );
@@ -40,6 +42,7 @@ namespace RMX {
 				else
 					userInfo.message += "\nAuthentication failed";
 			});
+
 			if (userInfo.isActive)
 				Debug.Log(userInfo);
 		}
