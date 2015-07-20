@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Pro-Crastinate/Assets/ADHDSim/Scripts/ClockBehaviour.cs">
+    <Files>
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/ClockSpawner.cs" Line="13" Column="64" />
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/DragRigidbody.cs" Line="32" Column="55" />
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/ClockBehaviour.cs" Line="174" Column="22" />
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/GameCenter.cs" Line="222" Column="21" />
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/SavedData.cs" Line="138" Column="26" />
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/Version.cs" Line="2" Column="13" />
+      <File FileName="../Pro-Crastinate/Assets/ADHDSim/Scripts/GameData.cs" Line="88" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
