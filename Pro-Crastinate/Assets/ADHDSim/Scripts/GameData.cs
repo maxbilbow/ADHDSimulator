@@ -48,28 +48,32 @@ namespace RMX {
 
 //		public bool GetSavedData()
 
-		public long GetLong(UserData data) {
-			switch (data) {
-			case UserData.CurrentSession:
-				return (long) currentSessionTime;
-			case UserData.CurrentProcrastination:
-				return (long) currentProcrastination;
-			case UserData.TotalTime:
-				return (long) totalTime;
-			case UserData.OfDevTime:
-				return (long) (100 * totalTime / settings.TotalDevTimeWasted);
+//		private long GetLong(UserData data) {
+//			switch (data) {
+//			case UserData.CurrentSession:
+//				return (long) currentSessionTime;
+//			case UserData.CurrentProcrastination:
+//				return (long) currentProcrastination;
+//			case UserData.TotalTime:
+//				return (long) totalTime;
+//			case UserData.OfDevTime:
+//				return (long) (100 * totalTime / settings.TotalDevTimeWasted);
+//			}
+//			return -1;
+//		}
+
+		public long PercentageOfDevTimeWastedX10000 {
+			get {
+				return (long) (PercentageOfDevTimeWasted * 10000);
 			}
-			return -1;
 		}
 
-		public string ofDevTimeWasted {
+		public double PercentageOfDevTimeWasted {
 			get {
-				float percent = Mathf.Round(100 * GameData.current.totalTime / settings.TotalDevTimeWasted) / 100;
-				//				print ("Total: " + GameData.totalTime + ", dev: " + GameData.devTimeWasted + " = " + percent);
-				return percent + "%";
-				
+				return GameData.current.totalTime / settings.TotalDevTimeWasted;
 			}
 		}
+
 
 
 

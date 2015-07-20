@@ -75,13 +75,13 @@ namespace RMX {
 
 		private UserData[] timeBasedAchievements = {
 			UserData.AmeteurCrastinator, 
-			UserData.Apathetic, UserData.SemiPro, UserData.Pro, 
+			UserData.Apathetic, UserData.SemiPro, UserData.Pro 
 		};
 
 		public void CheckProgress() {
 			var time = SavedData.Get (UserData.TotalTime).Float;
 			foreach (UserData key in timeBasedAchievements) {
-				if (!SavedData.Get(key).Bool)
+//				if (!SavedData.Get(key).Bool)
 					SavedData.Get(key).Bool = UpdateAchievement (key, time);
 			}
 		}
@@ -104,7 +104,8 @@ namespace RMX {
 				result = totalTime / (settings.TotalDevTimeWasted / 2);
 				break;
 			case UserData.Pro:
-				result = totalTime / settings.TotalDevTimeWasted;
+				result = totalTime / settings.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;
+
 				break;
 			case UserData.MakingTime:
 			case UserData.BigTime:
@@ -120,6 +121,7 @@ namespace RMX {
 			} else {
 				SavedData.Get (key).Bool = false;
 			}
+//			Debug.LogWarning(string.Format("{0:N2}: " + key.ToString(),result));
 			return result;
 
 		}
@@ -128,6 +130,8 @@ namespace RMX {
 		public bool UpdateAchievement(UserData data, float score) {
 			bool completed = false;
 			string achievementID = GetID (data);
+			double progress = CheckProgress(data) * 100;
+
 			var log = Bugger.StartLog(Testing.Achievements, data.ToString());
 			if (Social.localUser.authenticated) { //TODO: Check this works
 				try {
@@ -160,7 +164,7 @@ namespace RMX {
 				return true;
 			} else if (Social.localUser.authenticated) {
 				log.message += "\n" + data + ": ";
-				double progress = CheckProgress(data) * 100;
+
 
 
 				log.message += ", Progress: " + (int) progress + "%";
@@ -226,7 +230,7 @@ namespace RMX {
 			case UserData.LongestProctrastination:
 				id += "CgkI2PKS_coeEAIQAw";//"55415446";
 				break;
-			case UserData.OfDevTime:
+			case UserData.PercentageOfDevTime:
 				id += "CgkI2PKS_coeEAIQCA";//"55415445";
 				break;
 			// Time Based Achievements

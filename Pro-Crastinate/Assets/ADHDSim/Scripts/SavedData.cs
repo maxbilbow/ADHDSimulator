@@ -11,7 +11,7 @@ namespace RMX {
 		// Saved & Top Scores
 		LongestProctrastination,
 		// Top Scores
-		OfDevTime, 
+		PercentageOfDevTime, 
 
 		// Achievements (time based)
 		AmeteurCrastinator, TimeWaster, Apathetic, SemiPro, Pro, 
@@ -95,6 +95,11 @@ namespace RMX {
 		public override string ToString() {
 			return this.value;
 		}
+
+		public bool ReportToGameCenter() {
+
+			return false;
+		}
 		
 		/// <summary>
 		/// Gets the String Key used to get and set PlayerPrefs. This is NOT the same as the ID used by GameKit
@@ -114,7 +119,7 @@ namespace RMX {
 				return "sc_longest_procrastination";
 
 			// Top Scores
-			case UserData.OfDevTime:
+			case UserData.PercentageOfDevTime:
 				return "sc_total_as_percent_of_dev";
 
 			// Time Based Achievements

@@ -135,7 +135,7 @@ namespace RMX {
 			if (paused) {
 				//				myStyle.font = myFont;
 				string text = !information ? this.text :
-					"In total you've only managed to waste " + GameData.current.ofDevTimeWasted + 
+					"In total you've only managed to waste " + string.Format("{0:N2}%",gameData.PercentageOfDevTimeWasted) + 
 						"\n of the time I've lost developing this game." +
 						"\n\n Try again?";
 				GUIStyle style = new GUIStyle ();
@@ -168,7 +168,7 @@ namespace RMX {
 		
 		public void Pause(bool pause) {
 			if (pause && !paused) {
-				gameCenter.ReportScore(gameData.GetLong(UserData.CurrentProcrastination), UserData.LongestProctrastination);
+				gameCenter.ReportScore(SavedData.Get(UserData.CurrentProcrastination).Long, UserData.LongestProctrastination);
 				//				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
 				//				UpdateScoresAndReset (true);
 				float time;

@@ -73,7 +73,7 @@ namespace RMX {
 			Set (UserData.TotalTime);
 			Set (UserData.LongestProctrastination);
 			// Top Scores
-			Set (UserData.OfDevTime);
+			Set (UserData.PercentageOfDevTime);
 			// Achievements
 			Set (UserData.AmeteurCrastinator);
 			Set (UserData.TimeWaster);
@@ -132,7 +132,7 @@ namespace RMX {
 					return "longest_Procrastination";
 					
 					// Top Scores
-				case UserData.OfDevTime:
+				case UserData.PercentageOfDevTime:
 					return "total_as_percent_of_dev";
 					
 					// Achievements

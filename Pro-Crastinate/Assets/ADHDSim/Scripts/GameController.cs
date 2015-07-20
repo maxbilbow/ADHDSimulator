@@ -41,6 +41,7 @@ namespace RMX {
 //		};
 
 		void StartSingletons() {
+			Settings.Initialize ();
 			Bugger.Initialize ();
 			GameCenter.Initialize ();
 			GameData.Initialize ();
@@ -99,8 +100,10 @@ namespace RMX {
 
 		void OnApplicationQuit() {
 			UpdateScoresAndReset (false);
-			long ofDevTime = gameData.GetLong (UserData.OfDevTime);
-			GameCenter.current.ReportScore(ofDevTime, UserData.OfDevTime);
+//			long ofDevTime = gameData.GetLong (UserData.OfDevTime);
+//			SavedData.Get (UserData.CurrentProcrastination).ReportToGameCenter ();
+			GameCenter.current.ReportScore(gameData.PercentageOfDevTimeWastedX10000, UserData.PercentageOfDevTime);
+			Debug.LogWarning (gameData.PercentageOfDevTimeWastedX10000);
 			PlayerPrefs.Save ();
 		}
 		
