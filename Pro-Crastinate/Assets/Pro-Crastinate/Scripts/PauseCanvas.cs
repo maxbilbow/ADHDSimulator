@@ -6,9 +6,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace RMX {
-	public class PauseCanvas : ASingleton<PauseCanvas> {
+	public class PauseCanvas : ASingleton<PauseCanvas> , EventListener {
 
-		Canvas canvas;
+//		Canvas canvas;
 		Button infoButton;
 		// Canvas Variables
 		public RenderMode renderMode = RenderMode.ScreenSpaceOverlay;
@@ -58,15 +58,14 @@ namespace RMX {
 
 		// Use this for initialization
 		 void Start () {
-//			base.Awake ();
-			canvas = gameObject.GetComponent<Canvas> ();
-			if (!canvas) {
-				canvas = gameObject.AddComponent<Canvas> ();
+
+			if (!gameObject.GetComponent<Canvas> ()) {
+				var canvas = gameObject.AddComponent<Canvas> ();
 				canvas.renderMode = renderMode;
 				canvas.pixelPerfect = pixelPerfect;
 				canvas.enabled = false;
 			}
-
+			_canvasReady = true;
 			if (!gameObject.GetComponent<CanvasScaler> ()) {
 				var scalar = gameObject.AddComponent<CanvasScaler> ();
 				scalar.uiScaleMode = uiScaleMode;
@@ -116,7 +115,7 @@ namespace RMX {
 		void Update () {
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				GameController.current.PauseGame (!paused);
+				gameController.PauseGame(!paused);
 			}
 		}
 
@@ -124,9 +123,19 @@ namespace RMX {
 			information = !information;
 		}
 
+		public bool Paused {
+			get {
+				return paused;
+			}
+		}
+
+
+		bool _canvasReady = false;
 		bool paused {
 			get {
-				return canvas.enabled;
+				return _canvasReady? gameObject.GetComponent<Canvas> ().enabled : false;
+			} set {
+					gameObject.GetComponent<Canvas> ().enabled = value;
 			}
 		}
 
@@ -152,25 +161,30 @@ namespace RMX {
 			}
 		}
 		
-		public void OnApplicationPause(bool paused) {
-			if (paused) {
-				Pause (true);
-			}
-		}
+
 
 		string text = "";
 		
 		
-
 	
+
 		
+		public override void OnEventDidStart(Event theEvent, object info) {
+			switch (theEvent) {
+			case Event.PauseSession:
+				Pause(true);
+				break;
+			case Event.ResumeSession:
+				Pause(false);
+				break;
+			default:
+				return;
+			}
+		}
 
 		
 		public void Pause(bool pause) {
 			if (pause && !paused) {
-				gameCenter.ReportScore(SavedData.Get(UserData.CurrentProcrastination).Long, UserData.LongestProctrastination);
-				//				PlayerPrefs.SetFloat (Key.LastProcrastination, Time.fixedTime - uninteruptedTime);
-				//				UpdateScoresAndReset (true);
 				float time;
 				if (settings.willPauseOnLoad) {
 					time = gameData.currentSessionTime;
@@ -182,28 +196,14 @@ namespace RMX {
 					if (settings.newPersonalBest) {
 						text += "\nA NEW PERSONAL BEST!";
 						settings.newPersonalBest = false;
-						
 					}
 					
-				}
-				
+				}		
 				List<string> activities = gameData.WhatYouCouldHaveDone (time);
 				var rand = Random.Range (0, activities.Count); 
 				text += "\n\nDuring that time you could have " + activities [rand];
-				canvas.enabled = true;
-				
-				//				uninteruptedTime = Time.fixedTime;
-			} else if (!pause && paused) {
-				ClockBehaviour.CheckVisibleClocks();
-				gameController.UpdateScoresAndReset (true);
-				
-				
-				ClockSpawner.current.Spawn();
-				canvas.enabled = false;
 			}
-			Time.timeScale = pause ? 0 : 1;
-			//			this.canvas.enabled = pause;
-			//			print (this);
+			paused = pause;
 			
 		}
 

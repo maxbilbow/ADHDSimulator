@@ -21,7 +21,12 @@ namespace RMX {
 //			TimeBasedAchievementsShouldUpdate ();
 
 			settings.willPauseOnLoad = SavedData.Get(UserData.CurrentSession).Float > 0;
-			gameController.PauseGame (settings.willPauseOnLoad);
+			if (settings.willPauseOnLoad) {
+				PauseCanvas.current.Pause(true);
+			}
+		
+
+		
 			UpdateGameCenterAchievements ();
 
 		}
@@ -32,26 +37,27 @@ namespace RMX {
 					ReportProgress (id.Key, true);
 		}
 
-		public void OnEventDidStart(Event theEvent, object info) {
+		public override void OnEventDidStart(Event theEvent, object info) {
 			switch (theEvent) {
-			case Event.SessionPaused:
+			case Event.PauseSession:
 				Authenticate ();
+				break;
+
+			}
+		}
+
+		public override void OnEventDidEnd(Event theEvent, object info) {
+			switch (theEvent) {
+			case Event.PauseSession:
 				UpdateGameCenterAchievements ();
+				ReportScore(SavedData.Get(UserData.CurrentProcrastination).Long, UserData.LongestProctrastination);
 				break;
 			}
 		}
 
-		public void OnEventDidEnd(Event theEvent, object info) {
+		public override void OnEvent(Event theEvent, object info) {
 			switch (theEvent) {
-			case Event.SessionPaused:
-
-				break;
-			}
-		}
-
-		public void OnEvent(Event theEvent, object info) {
-			switch (theEvent) {
-			case Event.AchievementGained:
+			case Event.GC_AchievementGained:
 				if (info == typeof(UserData)) {
 					ReportProgress ((UserData)info, true);
 					if (Bugger.WillLog (Testing.EventCenter, info.ToString ()))
@@ -61,22 +67,29 @@ namespace RMX {
 			}
 		}
 
-		public void Authenticate() {
-			if (!Social.localUser.authenticated) {
+		void Authenticate() {
+			if (!UserAuthenticated) {
+				WillBeginEvent(Event.GC_UserAuthentication);
 				var userInfo = Bugger.StartNewLog (Testing.GameCenter);
 				Social.localUser.Authenticate (success => {
 					if (success) {
+						DidFinishEvent (Event.GC_UserAuthentication, EventStatus.Success);
 						userInfo.message += "Authentication successful\n";
 						userInfo.message += "Username: " + Social.localUser.userName + 
 							"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
-					} else
+					} else {
+						DidFinishEvent (Event.GC_UserAuthentication, EventStatus.Failure);
 						userInfo.message += "\nAuthentication failed";
+					}
 				});
 
 				if (userInfo.isActive)
 					Debug.Log (userInfo);
+			} else {
+				DidFinishEvent(Event.GC_UserAuthentication, EventStatus.Success);
 			}
+
 		}
 
 		public bool HasAchieved(UserData key) {
@@ -92,7 +105,7 @@ namespace RMX {
 		}
 
 		public void ReportScore (long score, UserData data) {
-			if (Social.localUser.authenticated) {
+			if (UserAuthenticated && score > 0) {
 				string leaderboardID = UniqueID [data];
 				var log = Bugger.StartNewLog (Testing.GameCenter);
 				log.message += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
@@ -151,7 +164,7 @@ namespace RMX {
 			}
 			if (result && !SavedData.Get (key).Bool) { 
 				SavedData.Get (key).Bool = true;
-				Notifications.EventDidOccur (Event.AchievementGained, key);
+				Notifications.EventDidOccur (Event.GC_AchievementGained, key);
 				try {
 					current.ReportProgress(key, true);
 				} catch (Exception e){
@@ -163,7 +176,11 @@ namespace RMX {
 			}
 
 		}
-
+		static bool UserAuthenticated {
+			get {
+				return Notifications.StatusOf(Event.GC_UserAuthentication) == EventStatus.Success;
+			}
+		}
 		const double EVENT_BASED_ACHIEVEMENT = -1;
 		public void ReportProgress(UserData data, bool achieved) {
 			var log = Bugger.StartNewLog (Testing.Achievements, "Reporting Progress: " + achieved + "\n");
@@ -175,7 +192,7 @@ namespace RMX {
 				return;
 			}
 			
-			if (Social.localUser.authenticated) {
+			if (UserAuthenticated) {
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
 				try {
 					GKAchievementReporter.ReportAchievement(UniqueID[data], progress, true);
@@ -221,7 +238,7 @@ namespace RMX {
 			var achievementID = UniqueID [key];
 			var isComplete = false;
 			var log = Bugger.StartNewLog(Testing.Achievements);
-			if (Social.localUser.authenticated) { //TODO: Check this works
+			if (UserAuthenticated) { //TODO: Check this works
 				try {
 					Social.LoadAchievements (achievements => {
 						if (achievements.Length > 0) {
@@ -265,7 +282,7 @@ namespace RMX {
 		const string _grp = "";
 		#endif
 
-		public static Dictionary<UserData,string> UniqueID = new Dictionary<UserData,string> () {
+		static Dictionary<UserData,string> UniqueID = new Dictionary<UserData,string> () {
 			{ UserData.LongestProctrastination, _grp + "CgkI2PKS_coeEAIQAw" },//"55415446";
 			{ UserData.PercentageOfDevTime, _grp + "CgkI2PKS_coeEAIQCA" },
 			{ UserData.AmeteurCrastinator, _grp + "CgkI2PKS_coeEAIQAQ" },

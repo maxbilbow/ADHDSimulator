@@ -24,7 +24,7 @@ namespace RMX {
 			if (minutes > 0) {
 				result += minutes + " minutes and ";
 			}
-			if (seconds > 0) {
+			if (seconds > 1) {
 				result += seconds + " seconds.";
 			} else {
 				result += "not a second longer.";

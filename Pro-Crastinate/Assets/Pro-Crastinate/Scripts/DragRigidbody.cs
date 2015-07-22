@@ -96,6 +96,35 @@ namespace RMX
 //			print (this);
         }
 
+		void AttachBody(Rigidbody2D body, Touch touch, float distance) {
+//			StopAllCoroutines ();
+			var point2D = touch.position;
+			var point3D = new Vector3 (point2D.x, point2D.y, distance);
+			var point3DWorld = Camera.main.ScreenToWorldPoint (point3D);
+			var point = new Vector2 (point3DWorld.x, point3DWorld.y);// Physics2D.Raycast (Camera.main.ScreenPointToRay (touch.position),
+//			                               Camera.main.ScreenPointToRay (touch.deltaPosition));
+			m_SpringJoint.transform.position = point;
+			m_SpringJoint.anchor = Vector2.zero;
+			
+			m_SpringJoint.frequency = k_Spring;
+			m_SpringJoint.dampingRatio = k_Damper * body.transform.localScale.magnitude;
+			m_SpringJoint.distance = k_Distance;
+			m_SpringJoint.connectedBody = body;
+			
+			var theta = m_SpringJoint.connectedBody.rotation * -PI_OVER_180;
+			var anchor = point - m_SpringJoint.connectedBody.position;
+			
+			var cosø = Mathf.Cos (theta);
+			var sinø = Mathf.Sin (theta);
+			var x = cosø * anchor.x - sinø * anchor.y;
+			var y = sinø * anchor.x + cosø * anchor.y;
+			
+			m_SpringJoint.connectedAnchor = new Vector2 (x, y);//(hit.point - m_SpringJoint.connectedBody.position);
+			
+			
+			StartCoroutine("DragObject", distance);
+		}
+
 		public override string ToString ()
 		{
 			return  "\njoint anchor: " + m_SpringJoint.connectedAnchor +
@@ -144,5 +173,15 @@ namespace RMX
 			}
 		}
 
+		public override void OnEventDidEnd (Event theEvent, object args)
+		{
+			switch (theEvent) {
+			case Event.SpawnInflatableClock:
+				if (args is ClockBehaviour) {
+					AttachBody((args as ClockBehaviour).body, Input.GetTouch(Input.touchCount - 1),0);
+				}
+				break;
+			}
+		}
     }
 }

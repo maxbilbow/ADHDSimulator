@@ -4,7 +4,7 @@ using System.Collections.Generic;
 //using UnityStandardAssets.CrossPlatformInput;
 
 namespace RMX {
-	public class GameController : ASingleton<GameController> {
+	public class GameController : ASingleton<GameController> , EventListener {
 		public Vector2 defaultGravity = new Vector2 (0f, -9.81f);
 
 		public Vector2 velocity {
@@ -40,6 +40,7 @@ namespace RMX {
 			ClockSpawner.Initialize ();
 			PauseCanvas.Initialize ();
 			Notifications.Initialize ();
+			PauseCanvas.Initialize ();
 			#if MOBILE_INPUT
 			StartMobile();
 			#else
@@ -62,7 +63,10 @@ namespace RMX {
 		void Start() {
 			Physics2D.gravity = defaultGravity;
 			StartSingletons ();
-			
+			if (settings.willPauseOnLoad) {
+				pauseCanvas.Pause(true);
+				gameController.PauseGame (settings.willPauseOnLoad, SoundEffects.Args.MusicKeepsPlaying);
+			}
 		}
 	
 
@@ -76,6 +80,9 @@ namespace RMX {
 			}
 		}
 
+//		public void OnApplicationPause(bool paused) {
+//			PauseGame(paused);
+//		}
 
 		public void UpdateScoresAndReset(bool reset) {
 			var newTotal = SavedData.Get(UserData.TotalTime).Float + Time.deltaTime;
@@ -103,7 +110,9 @@ namespace RMX {
 		
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
+				WillBeginEvent(Event.PauseSession);//
 				PauseGame (true);
+				DidFinishEvent(Event.PauseSession);
 			}
 		}
 
@@ -112,11 +121,26 @@ namespace RMX {
 		}
 
 		public void PauseGame(bool pause) {
-			pauseCanvas.Pause (pause);
+			PauseGame (pause, null);
+		}
+		public void PauseGame(bool pause, object args) {
 			if (pause) {
-				WillBeginEvent(Event.SessionPaused);
+				WillBeginEvent (Event.PauseSession, args);
+				Time.timeScale =  0 ;
+				DidFinishEvent (Event.PauseSession, args);
 			} else {
-				DidFinishEvent(Event.SessionPaused);
+				WillBeginEvent(Event.ResumeSession, args);
+				Time.timeScale = 1;
+				DidFinishEvent(Event.ResumeSession, args);
+			}
+
+		}
+
+		public override void OnEventDidEnd(Event theEvent, object args) {
+			switch (theEvent) {
+			case Event.ResumeSession:
+				UpdateScoresAndReset (true);
+				break;
 			}
 		}
 		

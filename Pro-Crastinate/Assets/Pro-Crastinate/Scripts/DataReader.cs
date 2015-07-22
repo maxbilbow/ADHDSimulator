@@ -96,7 +96,7 @@ namespace RMX
 					list.Add (thing[csv_text]);
 				}
 			} catch (Exception e) {
-				if (Bugger.WillLog(Testing.Exceptions, e.Message))
+				if (Bugger.WillLog(Testing.Exceptions, e.ToString()))
 					Debug.Log(Bugger.Last);
 			}
 			return list;

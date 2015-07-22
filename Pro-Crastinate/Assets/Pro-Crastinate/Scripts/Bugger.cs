@@ -34,16 +34,29 @@ namespace RMX
 
 		private static List<LateLog> _logOnLoad = new List<LateLog> ();
 	
+		bool _setupComplete = false;
+		protected override bool SetupComplete {
+			get {
+				return _setupComplete ;
+			}
+		}
+
 
 		void Start() {
+			_setupComplete = true;
 			foreach (LateLog log in _logOnLoad) {
+				try {
 				if (Bugger.WillLog(log.feature, " _LATE_ " + log.message))
 					Debug.Log(Bugger.Last);
+				} catch (Exception e) {
+					Debug.LogWarning(e.Message);
+				}
 			}
 			_logOnLoad.Clear ();
 //			Debug.LogWarning ("_logOnLoad.Count = " + _logOnLoad.Count);
 			_logOnLoad = null;
 
+//			foreach (object in classType.GetMethods())
 		}
 
 
@@ -51,8 +64,8 @@ namespace RMX
 		public static bool WillTest(Testing feature) {
 			if (IsInitialized)
 				return Settings.current.IsDebugging (feature);
-			else 
-				Debug.LogWarning ("Settings have not yet been initialized before attepting to test " + feature.ToString());
+//			else 
+//				Debug.LogWarning ("Settings have not yet been initialized before attepting to test " + feature.ToString());
 			return false;
 		}
 
@@ -62,7 +75,9 @@ namespace RMX
 			}
 		}
 
-		public static void AddLateLog(Testing feature, string message) {
+	 public static void AddLateLog(Testing feature, string message) {
+			if (IsInitialized)
+				throw new Exception ("Late Log Was Added too Late! - " + feature + "\n " + message);
 //			Debug.LogWarning (feature + " LateLog added: " + message);
 			if (_logOnLoad != null) {
 				_logOnLoad.Add (new LateLog (feature, message));
@@ -82,11 +97,6 @@ namespace RMX
 		}
 	
 
-		protected override bool SetupComplete {
-			get {
-				return GameController.IsInitialized && Settings.IsInitialized;;
-			}
-		}
 
 		public static bool WillLog(Testing feature, string message) {
 			if (IsInitialized) 

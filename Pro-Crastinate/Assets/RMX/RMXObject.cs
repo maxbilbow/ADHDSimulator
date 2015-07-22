@@ -8,7 +8,7 @@ namespace RMX {
 		void OnValueForKeyWillChange(string key, object value);
 		void OnValueForKeyDidChange(string key, object value);
 	}
-	public class RMXObject : MonoBehaviour, KeyValueObserver {
+	public class RMXObject : MonoBehaviour, KeyValueObserver, EventListener {
 
 	 	Dictionary<string, object> values = new Dictionary<string, object> ();
 		List<KeyValueObserver> observers = new List<KeyValueObserver> ();
@@ -79,7 +79,20 @@ namespace RMX {
 				observers.Remove(observer);
 		}
 
+
 		public virtual void OnValueForKeyWillChange(string key, object value) {}
 		public virtual void OnValueForKeyDidChange (string key, object value) {}
+
+		protected static string[] ListenerMethods = {
+			"OnEvent",
+			"OnEventDidStart",
+			"OnEventDidEnd"
+		};
+
+		public virtual void OnEvent(Event theEvent, object args) {}
+		
+		public virtual void OnEventDidStart(Event theEvent, object args){}
+		
+		public virtual void OnEventDidEnd(Event theEvent, object args){}
 	}
 }

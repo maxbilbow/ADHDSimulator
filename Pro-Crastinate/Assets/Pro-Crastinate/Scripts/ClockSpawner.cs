@@ -37,37 +37,40 @@ namespace RMX {
 
 		// Update is called once per frame
 		void Update () {
-			if (GameCenter.current.HasAchieved (UserData.AmeteurCrastinator))
+
 				switch (spawnMode) {
 				case SpawnMode.Multiply:
-					if (Input.touchCount > 1) {
-						if (Spawn () && !GameCenter.current.HasAchieved (UserData.MakingTime))
-							WillBeginEvent(Event.AchievementGained, UserData.MakingTime);
-						if (ShouldKillClocks) {
-							if (!GameCenter.current.HasAchieved (UserData.OverTime) && clocks.Count > settings.MaxNumberOfClocks)
-								WillBeginEvent(Event.AchievementGained, UserData.OverTime);
-							var toDestroy = clocks [1];
-							//					clocks.RemoveAt(1);
-							Destroy (toDestroy.gameObject);
-						}
-					}
-					break;
-				case SpawnMode.Inflate:
-					if (Input.touchCount == 2) {
-						forTouch = 1;
-						if (!inflatableClock) {
-
-							inflatableClock = ClockBehaviour.New();
-	//						inflatableClock.lastScale = inflatableClock.transform.localScale;
-							inflatableClock.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
-						} else {
-
-							if (inflatableClock.didPop ) {
-								inflatableClock = null;
+					if (GameCenter.current.HasAchieved (UserData.TimeWaster))
+						if (Input.touchCount > 1) {
+							if (Spawn () && !GameCenter.current.HasAchieved (UserData.MakingTime))
+								WillBeginEvent(Event.GC_AchievementGained, UserData.MakingTime);
+							if (ShouldKillClocks) {
+								if (!GameCenter.current.HasAchieved (UserData.OverTime) && clocks.Count > settings.MaxNumberOfClocks)
+									WillBeginEvent(Event.GC_AchievementGained, UserData.OverTime);
+								var toDestroy = clocks [1];
+								//					clocks.RemoveAt(1);
+								Destroy (toDestroy.gameObject);
 							}
 						}
+					break;
+				case SpawnMode.Inflate:
+					if (GameCenter.current.HasAchieved (UserData.AmeteurCrastinator))
+						if (Input.touchCount == 2) {
+							forTouch = 1;
+							if (!inflatableClock) {
+								WillBeginEvent(Event.SpawnInflatableClock);
+								inflatableClock = ClockBehaviour.New();
+								DidFinishEvent(Event.SpawnInflatableClock, inflatableClock);
+		//						inflatableClock.lastScale = inflatableClock.transform.localScale;
+								inflatableClock.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
 
-					}
+							} else {
+								if (inflatableClock.didPop ) {
+									inflatableClock = null;
+									
+								}
+							}
+						}
 					break;
 				}
 
@@ -101,40 +104,38 @@ namespace RMX {
 				return pos;
 			}
 		}
+
 		int forTouch = 0;
-		public bool Spawn() {
+		bool Spawn() {
 			if (firstLoad) {
 				firstLoad = false;
 				return false;
 			} else if (Chance) {
+				WillBeginEvent(Event.SpawnMultipleClocks);
 				var count = Input.touchCount;
-//				for (int i = 0; i < count; ++i) {
-					forTouch = Random.Range(1,count);
-					ClockBehaviour.New();
-//				}
+				forTouch = Random.Range(1,count);
+				ClockBehaviour.New();
+				DidFinishEvent(Event.SpawnMultipleClocks);
 				return true;
 			}
 			return false;
 		}
 
 
-		public void OnEventDidStart(Event theEvent, object info) {
-			
-		}
 		
-		public void OnEvent(Event theEvent, object info) {
-		
-		}
-		
-		public void OnEventDidEnd(Event theEvent, object info) {
+		public override void OnEventDidEnd(Event theEvent, object info) {
 			switch (theEvent) {
-			case Event.SessionPaused:
-				if (settings.ClockSpawnMode == SpawnMode.Inflate)
+			case Event.ResumeSession:
+				if (settings.ClockSpawnMode == SpawnMode.Inflate) {
 					settings.ClockSpawnMode = SpawnMode.Multiply;
-				else
+					Spawn();
+				} else
 					settings.ClockSpawnMode = SpawnMode.Inflate;
+				ClockBehaviour.CheckVisibleClocks();
 				break;
 			}
+			if (Bugger.WillLog (Testing.EventCenter, theEvent.ToString() + " DidEnd!"))
+				Debug.Log (Bugger.Last);
 		}
 
 	}

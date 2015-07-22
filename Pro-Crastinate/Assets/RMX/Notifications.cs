@@ -5,15 +5,15 @@ using System.Collections.Generic;
 namespace RMX {
 
 	public interface EventListener {
-		void OnEvent(Event e, object o);
-		void OnEventDidStart(Event e, object o);
-		void OnEventDidEnd(Event e, object o);
+		void OnEvent(Event theEvent, object args);
+		void OnEventDidStart(Event theEvent, object args);
+		void OnEventDidEnd(Event theEvent, object args);
 		void SendMessage(string message, SendMessageOptions sendMessageOptions);
 		string name { get; }
 	}
 
 	public enum EventStatus {
-		Active, Completed, Idle
+		Active, Completed, Idle, Success, Failure, ForceNewEvent
 	}
 
 	public enum Event {
@@ -21,17 +21,20 @@ namespace RMX {
 		ClockIsAboutToBurst,
 		ScreenBecameEmpty,
 		SomethingBurst,
-		SessionPaused,
-		AchievementGained
+		PauseSession, ResumeSession,
+		GC_AchievementGained,
+		GC_UserAuthentication,
+		SpawnMultipleClocks,
+		SpawnInflatableClock
 
 	}
 
-	public class Notifications : ASingleton<Notifications> {
+	public class Notifications : ASingleton<Notifications> , EventListener {
 		static Dictionary<string,EventListener> earlyListeners = new Dictionary<string,EventListener> ();
-		Dictionary<string,EventListener> eventListeners;
+		Dictionary<string,EventListener> lateListeners;
 		static Dictionary<string,EventListener> Listeners {
 			get {
-				return IsInitialized ? current.eventListeners : earlyListeners;
+				return IsInitialized ? current.lateListeners : earlyListeners;
 			}
 		}
 
@@ -54,15 +57,27 @@ namespace RMX {
 
 
 		void Start() {
-			eventListeners = earlyListeners;
+//			Debug.LogWarning ("Listeners: " + Listeners.Count);
+			lateListeners = earlyListeners;
 			earlyListeners = null;
 			events = earlyEvents;
 			earlyEvents = null;
 			_setupComplete = true;
+			Debug.Log ("Listeners: " + Listeners.Count);
+		}
+
+		public static bool HasListener(EventListener listener) {
+			return Listeners.ContainsValue (listener);
+		}
+		public static void Reset(Event theEvent) {
+			Events[theEvent] = EventStatus.Idle;
 		}
 
 		public static void AddListener(EventListener listener) {
-			Listeners[listener.name]= listener;
+			Listeners[listener.GetType().Name] = listener;
+			if (Bugger.WillLog (Testing.EventCenter, listener.GetType () + " was added to Listeners ("+ Listeners.Count + ")"))
+				Debug.Log (Bugger.Last);
+
 		}
 
 		public static EventStatus StatusOf(Event theEvent) {
@@ -83,7 +98,7 @@ namespace RMX {
 
 		public static void EventDidOccur(Event theEvent, object o) {
 			var listeners = Listeners;
-			Events [theEvent] = EventStatus.Completed;
+			Events [theEvent] = Events [theEvent] = o is EventStatus ? (EventStatus) o : EventStatus.Completed;
 			foreach (KeyValuePair<string, EventListener> listener in listeners) {
 				listener.Value.OnEvent(theEvent,o);
 			}
@@ -100,28 +115,37 @@ namespace RMX {
 
 		public static void EventWillStart(Event theEvent, object o) {
 			if (!IsActive (theEvent)) {
-				var listeners = Listeners;
-				Events [theEvent] = EventStatus.Active;
-				foreach (KeyValuePair<string, EventListener> listener in listeners) {
+				Events [theEvent] = o is EventStatus ? (EventStatus) o : EventStatus.Active;
+				foreach (KeyValuePair<string, EventListener> listener in Listeners) {
 					listener.Value.OnEventDidStart (theEvent, o);
 				}
 			}
 		}
 		public static void EventDidEnd(Event theEvent) {
-				EventDidEnd (theEvent, null);
+			EventDidEnd (theEvent, null);
 		}
 		public static void EventDidEnd(Event theEvent, object o) {
 			var listeners = Listeners;
-			Events [theEvent] = EventStatus.Completed;
+			Events [theEvent] = Events [theEvent] = o is EventStatus ? (EventStatus) o : EventStatus.Completed;
 			foreach (KeyValuePair<string, EventListener> listener in listeners) {
 				listener.Value.OnEventDidEnd(theEvent,o);
 			}
 		}
 
 		public static void NotifyListeners(string message) {
-			var listeners = Listeners;
-			foreach (KeyValuePair<string, EventListener> listener in listeners) {
+			foreach (KeyValuePair<string, EventListener> listener in Listeners) {
 				listener.Value.SendMessage (message, SendMessageOptions.DontRequireReceiver);
+			}
+		}
+
+	
+		public override void OnEventDidEnd(Event theEvent, object args){
+			switch (theEvent) {
+			case Event.GC_UserAuthentication:
+				if (Bugger.WillLog(Testing.GameCenter, args.ToString()))
+				    Debug.Log(Bugger.Last);
+				break;
+
 			}
 		}
 	}

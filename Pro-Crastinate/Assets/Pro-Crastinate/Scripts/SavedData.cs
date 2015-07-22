@@ -48,6 +48,8 @@ namespace RMX {
 		public long Long {
 			get {
 				long result;
+//				if (!long.TryParse (PlayerPrefs.GetString (key), out result))
+//					Debug.LogWarning(key.ToString() + " GET: " + PlayerPrefs.GetString (key));
 				return long.TryParse (PlayerPrefs.GetString (key), out result) ? result : -1;
 			} set {
 				PlayerPrefs.SetString(key, value.ToString());
@@ -56,10 +58,11 @@ namespace RMX {
 
 		public bool Bool {
 			get {
-				bool result;
-				return bool.TryParse (PlayerPrefs.GetString (key), out result) ? result : false;
+//				Debug.LogWarning(key.ToString() + " GET: " + PlayerPrefs.GetString (key));
+				return PlayerPrefs.GetString (key) == true.ToString();
 			} set {
-				PlayerPrefs.SetString(key, value.ToString());
+//				Debug.LogWarning(key.ToString() + " SET: " + value);
+				PlayerPrefs.SetString(key, value.ToString());// ? "True" : "False");
 			}
 		}
 
@@ -95,10 +98,6 @@ namespace RMX {
 			return this.value;
 		}
 
-		public bool ReportToGameCenter() {
-
-			return false;
-		}
 		
 		/// <summary>
 		/// Gets the String Key used to get and set PlayerPrefs. This is NOT the same as the ID used by GameKit

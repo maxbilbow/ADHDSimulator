@@ -10,6 +10,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace RMX
 {
@@ -20,8 +21,8 @@ namespace RMX
 	}
 
 
-	public abstract class ASingleton<T> : RMXObject, ISingleton
-	where T : MonoBehaviour {
+	public abstract class ASingleton<T> : RMXObject, ISingleton, EventListener
+	where T : RMXObject, EventListener, ISingleton {
 
 		private static T _singleton = null;
 
@@ -96,43 +97,50 @@ namespace RMX
 					return null;
 				}
 				aSingleton.gameObject.name = aSingleton.GetType ().Name;
+//				aSingleton.name = aSingleton.gameObject.name;
 				if (!(aSingleton is GameController)) {
 					var parent = GameController.current.gameObject;
 					aSingleton.gameObject.transform.SetParent (parent.transform);
 				}
+//				if ((aSingleton as ASingleton<T>).AddToGlobalListeners) {
+//					Notifications.AddListener(aSingleton);
+//				}
 				return aSingleton;
 			} 
-//			else {
-//				Debug.LogError("Gamecontroller should happen before this...");
-////				GameController.lateInits.Add(Initialize);
-//				return null;
-//			}
 		}
 
-//		public static T Initialize(GameObject withGameObjet) {
-//			if (isInitialized) 
-//				return _singleton;
-//			else {
-//				var aSingleton = withGameObjet.AddComponent<T> ();
-//				aSingleton.gameObject.name = aSingleton.GetType().Name;
-//				return aSingleton;
-//			}
-//		}
+		/// <summary>
+		/// Gets a value indicating whether this <see cref="RMX.ASingleton`1"/> add to global listeners.
+		/// </summary>
+		/// <value><c>true</c> if add to global listeners; otherwise, <c>false</c>.</value>
+		private bool AddToGlobalListeners { 
+			get {
+				System.Type classType = typeof(T);
+				foreach (string vMethod in ListenerMethods) {
+					MethodInfo method = classType.GetMethod (vMethod);
+					if (method.DeclaringType != typeof(RMXObject)) 
+						return true;
+				}
+				return false;
+			}
+		}
 
 		private void warining() {
 			if (!Settings.IsInitialized)
 				Debug.LogWarning ("Setting not initialized before debugger");
 		}
 
+		/// <summary>
+		/// Checks whether a singleton already exists. If so, object is destroyed.
+		/// Otherwise it checks whether the EventListener methods have been overriden. If so, the object is added to the global EventListeners.
+		/// </summary>
 		protected void Awake() {
 			var message = "<color=cyan> new </color> <color=lightblue>" + this.GetType().Name + "</color>()";
 			if (_singleton == null) {
 				DontDestroyOnLoad (gameObject);
 				_singleton = this as T;// as T;
-				if (this is EventListener) {
-					Notifications.AddListener(this as EventListener);
-				}
-				_isInitialized = true;
+				if (AddToGlobalListeners)
+					Notifications.AddListener(this);
 			} 
 			else if (_singleton != this) {
 				if (gameObject.name == tempName) {// gameObject.name == this.GetType().Name &&
@@ -148,6 +156,8 @@ namespace RMX
 			}
 			if (Bugger.WillLog(Testing.Singletons, message))
 				Debug.Log (Bugger.Last);
+
+			_isInitialized = true;
 		}
 
 	}

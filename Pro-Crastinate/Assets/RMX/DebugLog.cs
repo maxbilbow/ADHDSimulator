@@ -79,11 +79,10 @@ public class DebugLog {
 		string log;// = this.log;
 		if (isActive) {
 			log = ProcessLog();
-			if (Bugger.IsInitialized && Settings.current.printToScreen) {
+			if (!Bugger.IsInitialized)
+					Bugger.AddLateLog(feature,message);
+			else if (Settings.IsInitialized && Settings.current.printToScreen) 
 				Bugger.current.AddToQueue(log);
-			} else {
-				Bugger.AddLateLog(feature,message);
-			}
 		} else {
 			log = null;
 		}
