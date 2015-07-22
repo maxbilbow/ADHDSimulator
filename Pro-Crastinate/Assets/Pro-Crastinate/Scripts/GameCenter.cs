@@ -59,7 +59,8 @@ namespace RMX {
 			switch (theEvent) {
 			case Event.GC_AchievementGained:
 				if (info == typeof(UserData)) {
-					ReportProgress ((UserData)info, true);
+					var key = (UserData) info;
+					ReportProgress (key, true);
 					if (Bugger.WillLog (Testing.EventCenter, info.ToString ()))
 						Debug.Log (Bugger.Last);
 				}
@@ -183,6 +184,7 @@ namespace RMX {
 		}
 		const double EVENT_BASED_ACHIEVEMENT = -1;
 		public void ReportProgress(UserData data, bool achieved) {
+			SavedData.Get(data).Bool = achieved;
 			var log = Bugger.StartNewLog (Testing.Achievements, "Reporting Progress: " + achieved + "\n");
 
 			float progress = achieved ? 100 : 0;

@@ -42,11 +42,11 @@ namespace RMX {
 				case SpawnMode.Multiply:
 					if (GameCenter.current.HasAchieved (UserData.TimeWaster))
 						if (Input.touchCount > 1) {
-							if (Spawn () && !GameCenter.current.HasAchieved (UserData.MakingTime))
-								WillBeginEvent(Event.GC_AchievementGained, UserData.MakingTime);
+							if (Spawn ())// && !GameCenter.current.HasAchieved (UserData.MakingTime))
+								DidCauseEvent(Event.GC_AchievementGained, UserData.MakingTime);
 							if (ShouldKillClocks) {
-								if (!GameCenter.current.HasAchieved (UserData.OverTime) && clocks.Count > settings.MaxNumberOfClocks)
-									WillBeginEvent(Event.GC_AchievementGained, UserData.OverTime);
+								if (clocks.Count > settings.MaxNumberOfClocks)// && !GameCenter.current.HasAchieved (UserData.OverTime))
+									DidCauseEvent(Event.GC_AchievementGained, UserData.OverTime);
 								var toDestroy = clocks [1];
 								//					clocks.RemoveAt(1);
 								Destroy (toDestroy.gameObject);
@@ -67,7 +67,7 @@ namespace RMX {
 							} else {
 								if (inflatableClock.didPop ) {
 									inflatableClock = null;
-									
+									DidCauseEvent(Event.GC_AchievementGained,UserData.BigTime);
 								}
 							}
 						}
