@@ -18,29 +18,18 @@ namespace RMX {
 				return PauseCanvas.current;
 			}
 		}
-		public static bool isFirstPlay;
-		
-		//	private int total = Camera.GetAllCameras.count;
-		// Use this for initialization
-		protected override void Awake () {
-			base.Awake ();
-			Physics2D.gravity = defaultGravity;
-			isFirstPlay = PlayerPrefs.GetString(SavedData.GetKey(UserData.TotalTime)) != null;
+		public static bool isFirstPlay {
+			get {
+				return PlayerPrefs.GetString(SavedData.GetKey(UserData.TotalTime)) != null;
+			}
 		}
 
-		public delegate ISingleton LateInit();
-//		public static List<LateInit> lateInits = new List<LateInit>() {
-//			Bugger.Initialize,
-//			GameCenter.Initialize ,
-//			GameData.Initialize ,
-//			DataReader.Initialize ,
-//			Timer.Initialize ,
-//			DragRigidbody.Initialize ,
-//			ClockSpawner.Initialize ,
-//			PauseCanvas.Initialize 
-//		};
+
+//		public delegate ISingleton LateInit();
+
 
 		void StartSingletons() {
+			Notifications.EventWillStart (Event.SingletonInitialization);
 			Settings.Initialize ();
 			Bugger.Initialize ();
 			GameCenter.Initialize ();
@@ -50,6 +39,14 @@ namespace RMX {
 			DragRigidbody.Initialize ();
 			ClockSpawner.Initialize ();
 			PauseCanvas.Initialize ();
+			Notifications.Initialize ();
+			#if MOBILE_INPUT
+			StartMobile();
+			#else
+			StartDesktop();
+			#endif
+			Notifications.EventDidEnd (Event.SingletonInitialization);
+
 		}
 
 
@@ -63,12 +60,9 @@ namespace RMX {
 
 
 		void Start() {
+			Physics2D.gravity = defaultGravity;
 			StartSingletons ();
-			#if MOBILE_INPUT
-			StartMobile();
-			#else
-			StartDesktop();
-			#endif
+			
 		}
 	
 
@@ -77,7 +71,7 @@ namespace RMX {
 		private float _checkTime = 30;
 		void Update () {
 			if (Time.fixedTime > _checkTime) {
-				GameCenter.current.CheckProgress();
+				GameCenter.current.HasPlayerAchieved();
 				_checkTime += 30;
 			}
 		}
@@ -120,10 +114,9 @@ namespace RMX {
 		public void PauseGame(bool pause) {
 			pauseCanvas.Pause (pause);
 			if (pause) {
-				GameCenter.current.CheckProgress ();
+				WillBeginEvent(Event.SessionPaused);
 			} else {
-				if (!Social.localUser.authenticated)
-					GameCenter.current.Authenticate();
+				DidFinishEvent(Event.SessionPaused);
 			}
 		}
 		

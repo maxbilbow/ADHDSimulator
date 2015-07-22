@@ -108,7 +108,7 @@ namespace RMX {
 
 		public Wychd WhatYouCouldHaveDone(float time) {
 			Wychd result = DataReader.current.GetActivityList (time);
-			var log = Bugger.StartLog (Testing.GameDataLists);
+			var log = Bugger.StartNewLog (Testing.GameDataLists);
 			log.message += "List accessed with time: " + time + ", and " + result.Count + " sentences.";
 			if (result.Count > 0) {
 				log.message += "\n - Adding from database...";

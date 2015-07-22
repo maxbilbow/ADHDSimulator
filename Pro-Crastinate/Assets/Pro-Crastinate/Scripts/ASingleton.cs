@@ -20,16 +20,27 @@ namespace RMX
 	}
 
 
-	public abstract class ASingleton<T> : MonoBehaviour, ISingleton
+	public abstract class ASingleton<T> : RMXObject, ISingleton
 	where T : MonoBehaviour {
 
 		private static T _singleton = null;
 
-		public static bool IsInitialized {
-			get {
-				return _singleton != null;
+		private static bool _isInitialized = false;
+
+
+		protected virtual bool SetupComplete {
+			get{ 
+				return true;
 			}
 		}
+
+		public static bool IsInitialized {
+			get {
+				return _isInitialized && (_singleton as ASingleton<T>).SetupComplete;
+			}
+		}
+
+
 
 		protected GameController gameController {
 			get {
@@ -108,43 +119,37 @@ namespace RMX
 //			}
 //		}
 
-		protected  T SetSingleton (T aSingleton)
-		{
-			_singleton = aSingleton;
-			return _singleton;
+		private void warining() {
+			if (!Settings.IsInitialized)
+				Debug.LogWarning ("Setting not initialized before debugger");
 		}
 
-		public T GetSingleton() {
-			return _singleton;
-		}
-
-
-		protected virtual void Awake() {
-			var message = "";
-		
+		protected void Awake() {
+			var message = "<color=cyan> new </color> <color=lightblue>" + this.GetType().Name + "</color>()";
 			if (_singleton == null) {
 				DontDestroyOnLoad (gameObject);
-				SetSingleton(this as T);// as T;
-				message += "<color=green>CREATING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
-			} else if (GetSingleton() != this) {
+				_singleton = this as T;// as T;
+				if (this is EventListener) {
+					Notifications.AddListener(this as EventListener);
+				}
+				_isInitialized = true;
+			} 
+			else if (_singleton != this) {
 				if (gameObject.name == tempName) {// gameObject.name == this.GetType().Name &&
-					message += "<color=red>DELETING Singleton's GameObject: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+					message += " -- <color=red> DELETING REDUNDANT " + this.GetType().Name + "</color>()";
 					_destroyed = true;
 					Destroy (gameObject);
 					Destroy (this);
 				} else {
-					message += "<color=orange>DELETING ASingleton: </color> " + this.GetType().Name + ", Components in gameObject: " + gameObject.GetComponents<Component>().Length;
+					message += " -- <color=orange> DELETING REDUNDANT ASingleton: </color> " + this.GetType().Name + "</color>()";
 					_destroyed = true;
 					Destroy(this);
 				}
 			}
-			if (!(this is GameController) && !(this is Bugger) && Bugger.WillLog(Testing.Singletons, message))
+			if (Bugger.WillLog(Testing.Singletons, message))
 				Debug.Log (Bugger.Last);
 		}
 
-//		protected abstract T GetSingleton();
-//
-//		protected abstract T SetSingleton(T aSingleton);
 	}
 }
 

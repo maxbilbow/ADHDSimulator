@@ -116,7 +116,7 @@ namespace RMX {
 		void Update () {
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				Pause (!paused);
+				GameController.current.PauseGame (!paused);
 			}
 		}
 

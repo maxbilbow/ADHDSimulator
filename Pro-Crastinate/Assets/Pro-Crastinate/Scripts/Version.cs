@@ -36,7 +36,7 @@ namespace RMX {
 
 		public static void Patch() {
 			if (needsPatch) {
-				var log = Bugger.StartLog(Testing.Patches);
+				var log = Bugger.StartNewLog(Testing.Patches);
 				try {
 					PatchX ();
 					currentVersion = latest;
@@ -169,7 +169,7 @@ namespace RMX {
 		}
 
 		private static void Set(UserData key, Type type) {
-			var record = Bugger.StartLog (Testing.Patches);
+			var record = Bugger.StartNewLog (Testing.Patches);
 			object value = null;// = PlayerPrefs.GetFloat
 			var oldKey = OldKey (key);
 			var newKey = SavedData.GetKey (key);

@@ -30,7 +30,6 @@ namespace RMX {
 		private static bool first = true;
 
 
-
 		void Awake() {
 			if (first) {
 				Version.Patch ();

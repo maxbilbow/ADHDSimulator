@@ -10,80 +10,102 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 namespace RMX
 {
 
-	public enum Testing {
-		Misc, GameCenter, Achievements, Exceptions, GameDataLists, Singletons, Patches
-
+	struct LateLog {
+		public LateLog(Testing feature, string message) {
+			this.feature = feature;
+			this.message = message;
+		}
+		public Testing feature;
+		public string message;
 	}
 
 	public class Bugger : ASingleton<Bugger>
 	{
 
 
-		public List<string> queue = new List<string>();
-		public Dictionary<Testing,bool> features = new Dictionary<Testing, bool>()
-		{
-			{ Testing.Misc 				, true },
-			{ Testing.GameCenter		, true },
-			{ Testing.Achievements		, true },
-			{ Testing.Exceptions		, true },
-			{ Testing.Singletons		, true },
-			{ Testing.GameDataLists		, true },
-			{ Testing.Patches			, true }
-		};
+
+		public List<string> Queue = new List<string>();
+//		public bool[] f = new bool[(int) Testing.__NULL__];
+
+		private static List<LateLog> _logOnLoad = new List<LateLog> ();
+	
+
+		void Start() {
+			foreach (LateLog log in _logOnLoad) {
+				if (Bugger.WillLog(log.feature, " _LATE_ " + log.message))
+					Debug.Log(Bugger.Last);
+			}
+			_logOnLoad.Clear ();
+//			Debug.LogWarning ("_logOnLoad.Count = " + _logOnLoad.Count);
+			_logOnLoad = null;
+
+		}
+
+
+
+		public static bool WillTest(Testing feature) {
+			if (IsInitialized)
+				return Settings.current.IsDebugging (feature);
+			else 
+				Debug.LogWarning ("Settings have not yet been initialized before attepting to test " + feature.ToString());
+			return false;
+		}
+
+		public static DebugLog Last {
+			get {
+				return IsInitialized ? log : null;
+			}
+		}
+
+		public static void AddLateLog(Testing feature, string message) {
+//			Debug.LogWarning (feature + " LateLog added: " + message);
+			if (_logOnLoad != null) {
+				_logOnLoad.Add (new LateLog (feature, message));
+			} else if (IsInitialized) {
+				Debug.LogWarning ("Tried to add late log but _logOnLoad had already been destroyed:\n" + feature.ToString () + ": " + message); 
+			} else {
+				_logOnLoad = new List<LateLog> ();
+			}
+		}
+
+		public static DebugLog StartNewLog(Testing feature) {
+			return StartNewLog (feature, "");
+		}
+
+		public static DebugLog StartNewLog(Testing feature, string message) {
+			return new DebugLog (feature, message);
+		}
+	
+
+		protected override bool SetupComplete {
+			get {
+				return GameController.IsInitialized && Settings.IsInitialized;;
+			}
+		}
+
+		public static bool WillLog(Testing feature, string message) {
+			if (IsInitialized) 
+				return log.Set (feature, message);
+			else if (Settings.IsInitialized && !Settings.current.IsDebugging (feature)) 
+				return false;
+			else 
+				AddLateLog (feature, message);
+			return false;
+		}
+
 
 	
 
-		public static bool WillTest(Testing featureToTest) {
-			return GameController.IsInitialized && Settings.current.beta && current.features [featureToTest];
-		}
-
-		public static string Last {
-			get {
-				return GameController.IsInitialized ? current.log.message : null;
-			}
-		}
-
-		public static DebugLog StartLog(Testing featureToTest, string message) {
-			if (GameController.IsInitialized) {
-				var log = StartLog (featureToTest);
-				log.message = message;
-				current.log = log;
-				return log; 
-			} else 
-				return null;
-		}
-
-		public static bool WillLog(Testing featureToTest, string message) {
-			if (!WillTest (featureToTest))
-				return false;
-			return StartLog (featureToTest, message).isActive;
-		}
-
-		public static DebugLog StartLog(Testing featureToTest) {
-			if (GameController.IsInitialized) {
-				current.log.Start (featureToTest);
-				return current.log;
-			} else {
-				return null;
-			}
-		}
-
-
-		public void TestAll(bool willTest) {
-			foreach (KeyValuePair<Testing,bool> entry in features) {
-				features[entry.Key] = willTest;
-			}
-		}
-
-		DebugLog log = new DebugLog();
+		static DebugLog log = new DebugLog();
 
 		private bool timesUp {
 			get{ 
-				return settings.beta && queue.Count > 0 && Time.fixedTime - _startedAt > settings.maxDisplayTime;
+				return settings.printToScreen && Queue.Count > 0 && Time.fixedTime - _startedAt > settings.maxDisplayTime;
 			}
 		}
 
@@ -95,24 +117,24 @@ namespace RMX
 
 		void Update() {
 			if (timesUp) {
-				queue.RemoveAt(0);
+				Queue.RemoveAt(0);
 				_startedAt = Time.fixedTime;
 			}
 		}
 		private float _startedAt = 0;
 
 		public void AddToQueue(string log) {
-			if (queue.Count == 0)
+			if (Queue.Count == 0)
 				_startedAt = Time.fixedTime;
-			if (!queue.Exists( val =>  {
+			if (!Queue.Exists( val =>  {
 				return val == log;
 			}))
-				queue.Add (log);
+				Queue.Add (log);
 		}
 
 		void OnGUI () {
-			if (settings.beta && settings.printToScreen && queue.Count > 0) {
-				var text = timeRemaining + " – " + queue[0];
+			if (settings.printToScreen && Queue.Count > 0) {
+				var text = timeRemaining + " – " + Queue[0];
 				GUIStyle style = new GUIStyle ();
 //				style.fontSize = 50;
 				style.richText = true;
@@ -123,71 +145,8 @@ namespace RMX
 				GUI.Label (new Rect (0, 0, Screen.width, Screen.height), text, style);
 			}
 		}
-		public class DebugLog {
-			private string log = "";
 
-			public string message {
-				get {
-					return log;
-				} set {
-					if (WillTest(this.feature))
-						log = value;
-				}
-			}
 
-			public Testing feature = Testing.Misc;
-
-			public void Clear() {
-				log = "";
-			}
-
-			public bool isActive {
-				get {
-					return WillTest(this.feature);
-				}
-			}
-			public void Start(Testing feature) {
-				this.feature = feature;
-				this.log = "";
-			}
-
-			private string color {
-				get {
-					switch (this.feature) {
-					case Testing.Exceptions:
-						return "red";
-					case Testing.GameCenter:
-						return "yellow";
-					case Testing.Patches:
-						return "green";
-					default:
-						return "blue";
-					}
-				}
-			}
-
-			private string ProcessLog() {
-				string header = "<color=" + color + ">" + this.feature + ": </color>\n";
-				var log = this.message.Replace ("Failed", "<color=red>FAILED</color>");
-				log = log.Replace ("succeeded", "<color=green>SUCCEEDED</color>");
-				log = log.Replace ("successful", "<color=green>SUCCESSFUL</color>");
-				log = log.Replace (" success", "<color=green> SUCCESS</color>");
-				return header + log;
-			}
-			public override string ToString() {
-				string log;// = this.log;
-				if (isActive) {
-					log = ProcessLog();
-					if (Settings.current.printToScreen) {
-						current.AddToQueue(log);
-					}
-				} else {
-					log = null;
-				}
-				Clear ();
-				return log;
-			}
-		}
 	}
 
 

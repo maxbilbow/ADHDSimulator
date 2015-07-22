@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace RMX {
+	public enum Testing {
+		Misc, GameCenter, Achievements, Exceptions, GameDataLists, Singletons, Patches, Database, EventCenter
+		
+	}
+
 	public class Settings : ASingleton<Settings> {
 
 		public int MaxNumberOfClocks = 50; 
@@ -11,28 +17,46 @@ namespace RMX {
 		public bool willPauseOnLoad = false;
 		public bool newPersonalBest = false;
 		#if UNITY_ANDROID
-		public bool beta = false;
+//		public bool beta = false;
 		public bool printToScreen = false;
 		#else
-		public bool beta = true;
+//		public bool beta = true;
 		public bool printToScreen = true;
 		#endif
-		public struct DebugSettings {
-			public bool beta;
-			public bool printToScreen;
-		}
+//		public struct DebugSettings {
+//			public bool beta;
+//			public bool printToScreen;
+//		}
+//
 
-		public DebugSettings debugSettings;
+		public bool DebugMisc;
+		public bool DebugGameCenter;
+		public bool DebugAchievements;
+		public bool DebugExceptions;
+		public bool DebugSingletons;
+		public bool DebugGameDataLists;
+		public bool DebugDatabase;
+		public bool DebugPatches;
+		public bool DebugEvents;
 
-//		public DebugSettings DebugSettings = new DebugSettings (true, true);
-		public float maxDisplayTime = 5;
-		
+		public bool ClearAchievementsOnLoad;
+
+
+
+	
+		public float maxDisplayTime = 5f;
+	
 		/// <summary>
 		/// The dev time wasted.
 		/// </summary>
 		public float TotalDevTimeWasted = 5 * 60 * 60;
 
 		void Start() {
+			if (Settings.current.ClearAchievementsOnLoad) {
+				//				Debug.LogWarning("Deleting: " + key);
+				//				PlayerPrefs.DeleteKey (key);
+				PlayerPrefs.DeleteAll();
+			}
 			if (!Database) {
 				Debug.LogWarning("database asset not set");
 			}
@@ -41,6 +65,42 @@ namespace RMX {
 		}
 
 
+		public bool IsDebugging(Testing feature) {
+			if (!GameController.IsInitialized) {
+				Debug.LogWarning ("GameController was not initialized before trying to test " + feature.ToString ());
+				return false;
+			} else {
+				switch (feature) {
+				case Testing.Misc:
+					return DebugMisc;
+				case Testing.GameCenter:
+					return DebugGameCenter;
+				case Testing.Achievements:
+					return DebugAchievements;
+				case Testing.Exceptions:
+					return DebugExceptions;
+				case Testing.Singletons:
+					return DebugSingletons;
+				case Testing.GameDataLists:
+					return DebugGameDataLists;
+				case Testing.Patches:
+					return DebugPatches;
+				case Testing.Database:
+					return DebugDatabase;
+				case Testing.EventCenter:
+					return DebugEvents;
+				default:
+					Debug.LogWarning (feature.ToString () + " has not been recorded in Settings.IsTesting(feature)");
+					return false;
+				}
+			}
+		}
+		void Update() {
+#if UNITY_EDITOR
+
+#endif
+
+		}
 //		const string tempName = "324329hrNhfeuwh9";
 //		public static T CreateSingleton<T>() where T : ASingleton<T>
 //		{

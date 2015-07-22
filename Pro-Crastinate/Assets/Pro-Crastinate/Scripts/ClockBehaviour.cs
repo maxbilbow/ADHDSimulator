@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 namespace RMX {
-	public class ClockBehaviour : MonoBehaviour {
+	public class ClockBehaviour : RMXObject {
 		// Use this for initialization
 		public Vector3 startingPoint;
 
@@ -17,19 +17,18 @@ namespace RMX {
 		public float maxVelocity = 15f;
 		public Vector3 lastScale = Vector3.zero;
 		public float inflationSpeed = 0.1f;
-		private bool doOnce = true;
+
 		public bool didPop {
 			get {
 				inflationSpeed *= 0.975f;
 				transform.localScale *= 1 + inflationSpeed;
 				if (inflationSpeed < 0.0004) { 
-					Pop ();
+					DidCauseEvent(Event.SomethingBurst);
+					DidFinishEvent(Event.ClockIsAboutToBurst);
+					Destroy (this.gameObject);
 					return true;
 				} else if (inflationSpeed < 0.005) {
-					if (doOnce) {
-						SoundEffects.Play("poppy1");
-						doOnce = false;
-					}
+					WillBeginEvent(Event.ClockIsAboutToBurst);
 					var color = spriteRenderer.color;
 					spriteRenderer.color = new Color(color.r * 1.01f, color.g * 0.98f, color.b * 0.99f);
 				}
@@ -200,13 +199,7 @@ namespace RMX {
 
 		}
 
-		public void Pop() {
-			SoundEffects.Play ("pop");
-//			this.gameObject.SetActive (false);
-			Destroy (this.gameObject);
-			SoundEffects.Play("poppy2");
 
-		}
 
 		Bounds GetScreenSizeInWorld() {
 			var cam = Camera.main;
