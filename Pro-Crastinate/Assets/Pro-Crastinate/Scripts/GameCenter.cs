@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms;
 using UnityEngine.SocialPlatforms.GameCenter;
 using System.Runtime.InteropServices;
 #if !UNITY_IOS && !UNITY_STANDALONE_OSX
-//using GooglePlayGames;
+using GooglePlayGames;
 #endif
 
 
