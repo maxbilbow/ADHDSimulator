@@ -70,7 +70,10 @@ namespace RMX {
 		}
 	
 
-		
+		void Update()
+		{
+			UpdateScoresAndReset(false);
+		}
 
 
 //		public void OnApplicationPause(bool paused) {

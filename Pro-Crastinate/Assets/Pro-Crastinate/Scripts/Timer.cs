@@ -6,11 +6,7 @@ namespace RMX {
 
 	public class Timer : ASingleton<Timer> {
 
-		public bool paused  {
-			get {
-				return false; //TODO canvas.enabled;
-			}
-		}
+
 
 		public static string GetTimeDescription(float timeInSeconds) {
 			var seconds = timeInSeconds;//PlayerPrefs.GetFloat(GameData.GetKey(key));
@@ -34,14 +30,7 @@ namespace RMX {
 
 
 
-		void Update()
-		{
-//			Debug.Log (Time.fixedTime);
-			if (!paused) {
-				GameController.current.UpdateScoresAndReset(false);
-			}
 
-		}
 
 		public void Save() {
 
