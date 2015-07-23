@@ -29,6 +29,8 @@ namespace RMX {
 //		}
 //
 
+
+		public float updateScoresEvery = 1f;
 		public bool DebugMisc;
 		public bool DebugGameCenter;
 		public bool DebugAchievements;
@@ -38,6 +40,7 @@ namespace RMX {
 		public bool DebugDatabase;
 		public bool DebugPatches;
 		public bool DebugEvents;
+
 
 		public bool ClearAchievementsOnLoad;
 
@@ -51,12 +54,28 @@ namespace RMX {
 		/// </summary>
 		public float TotalDevTimeWasted = 5 * 60 * 60;
 
+
+		private int _chance = 50;
+		public bool Chance {
+			get {
+				return Random.Range(0,100) <= _chance;
+			}
+		}
+		public bool ChanceGiven(UserData key) {
+			return Chance && GameCenter.HasPlayerAlreadyAchieved (key);
+		}
+
+
 		void Start() {
+			_chance = Random.Range (10,90);
+
+#if DEBUG
 			if (Settings.current.ClearAchievementsOnLoad) {
 				//				Debug.LogWarning("Deleting: " + key);
 				//				PlayerPrefs.DeleteKey (key);
 				PlayerPrefs.DeleteAll();
 			}
+#endif
 			if (!Database) {
 				Debug.LogWarning("database asset not set");
 			}

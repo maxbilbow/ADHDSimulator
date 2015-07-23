@@ -1,23 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/Gyro.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/Settings.cs">
     <Files>
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="74" Column="3" />
       <File FileName="Assets/Pro-Crastinate/Scripts/GameData.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/SoundEffects.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="1" Column="1" />
-      <File FileName="Assets/RMX/Notifications.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/ClockSpawner.cs" Line="52" Column="40" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Bugger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/SavedData.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/DragRigidbody.cs" Line="1" Column="1" />
-      <File FileName="Assets/RMX/RMXObject.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/ASingleton.cs" Line="1" Column="1" />
-      <File FileName="Assets/RMX/DebugLog.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Timer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Gyro.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="96" Column="44" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/Settings.cs" Line="77" Column="5" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/ClockSpawner.cs" Line="104" Column="45" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/ClockBehaviour.cs" Line="28" Column="65" />
+      <File FileName="Assets/RMX/Notifications.cs" Line="146" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

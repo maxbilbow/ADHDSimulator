@@ -6,12 +6,10 @@ namespace RMX {
 	public class ClockSpawner : ASingleton<ClockSpawner>, EventListener {
 
 		public List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
-		private int _chance = 50;
 
 
-		void Start() {
-			_chance = Random.Range (10,90);
-		}
+
+
 
 		public enum SpawnMode {
 			Multiply, Inflate
@@ -40,7 +38,7 @@ namespace RMX {
 
 				switch (spawnMode) {
 				case SpawnMode.Multiply:
-					if (GameCenter.current.HasAchieved (UserData.TimeWaster))
+					if (GameCenter.HasPlayerAlreadyAchieved (UserData.TimeWaster))
 						if (Input.touchCount > 1) {
 							if (Spawn ())// && !GameCenter.current.HasAchieved (UserData.MakingTime))
 								DidCauseEvent(Event.GC_AchievementGained, UserData.MakingTime);
@@ -54,7 +52,7 @@ namespace RMX {
 						}
 					break;
 				case SpawnMode.Inflate:
-					if (GameCenter.current.HasAchieved (UserData.AmeteurCrastinator))
+					if (GameCenter.HasPlayerAlreadyAchieved (UserData.AmeteurCrastinator))
 						if (Input.touchCount == 2) {
 							forTouch = 1;
 							if (!inflatableClock) {
@@ -67,7 +65,6 @@ namespace RMX {
 							} else {
 								if (inflatableClock.didPop ) {
 									inflatableClock = null;
-									DidCauseEvent(Event.GC_AchievementGained,UserData.BigTime);
 								}
 							}
 						}
@@ -77,12 +74,6 @@ namespace RMX {
 		}
 	
 
-
-		bool Chance {
-			get {
-				return Random.Range(0,100) <= _chance && GameCenter.current.HasAchieved(UserData.AmeteurCrastinator);
-			}
-		}
 
 		public Vector3 SpawnPoint {
 			get {
@@ -110,7 +101,7 @@ namespace RMX {
 			if (firstLoad) {
 				firstLoad = false;
 				return false;
-			} else if (Chance) {
+			} else if (settings.ChanceGiven(UserData.TimeWaster)) {
 				WillBeginEvent(Event.SpawnMultipleClocks);
 				var count = Input.touchCount;
 				forTouch = Random.Range(1,count);

@@ -69,41 +69,41 @@ namespace RMX {
 		}
 
 		void Authenticate() {
+			var userInfo = Bugger.StartNewLog (Testing.GameCenter);
 			if (!UserAuthenticated) {
 				WillBeginEvent(Event.GC_UserAuthentication);
-				var userInfo = Bugger.StartNewLog (Testing.GameCenter);
 				Social.localUser.Authenticate (success => {
 					if (success) {
 						DidFinishEvent (Event.GC_UserAuthentication, EventStatus.Success);
-						userInfo.message += "Authentication successful\n";
+						userInfo.message += "Authentication successful";
 						userInfo.message += "Username: " + Social.localUser.userName + 
 							"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
 					} else {
 						DidFinishEvent (Event.GC_UserAuthentication, EventStatus.Failure);
-						userInfo.message += "\nAuthentication failed";
+						userInfo.message += "Authentication failed";
 					}
 				});
 
-				if (userInfo.isActive)
-					Debug.Log (userInfo);
+
 			} else {
-				DidFinishEvent(Event.GC_UserAuthentication, EventStatus.Success);
+				userInfo.message += "Authentication already completed\n";
 			}
-
+			if (userInfo.isActive)
+				Debug.Log (userInfo);
 		}
 
-		public bool HasAchieved(UserData key) {
-			try {
-				return SavedData.Get (key).Bool;
-			} catch (Exception e) {
-				SavedData.Get (key).Bool = false;
-				var log = Bugger.StartNewLog(Testing.Exceptions, "HasAchieved(" + key + ") threw an error!\n" + e.Message);
-				if (log.isActive)
-				    Debug.Log(log);
-				return false;
-			}
-		}
+//		public bool HasAchieved(UserData key) {
+//			try {
+//				return SavedData.Get (key).Bool;
+//			} catch (Exception e) {
+//				SavedData.Get (key).Bool = false;
+//				var log = Bugger.StartNewLog(Testing.Exceptions, "HasAchieved(" + key + ") threw an error!\n" + e.Message);
+//				if (log.isActive)
+//				    Debug.Log(log);
+//				return false;
+//			}
+//		}
 
 		public void ReportScore (long score, UserData data) {
 			if (UserAuthenticated && score > 0) {
@@ -131,15 +131,61 @@ namespace RMX {
 		};
 
 
-		public void HasPlayerAchieved() {
-			foreach (UserData key in timeBasedAchievements) {
-				HasPlayerAchieved(key);
+
+		// Update is called once per frame
+		float _checkTime = 0;
+		void Update () {
+			if (Time.fixedTime > _checkTime) {
+				foreach (UserData key in timeBasedAchievements)
+					HasMetTimeCriteria(key);
+				_checkTime = Time.fixedTime + settings.updateScoresEvery;
 			}
 		}
 
-		public static bool HasPlayerAchieved(UserData key) {
-			return HasPlayerAchieved (key, false);
+
+		public static bool HasPlayerAlreadyAchieved(UserData key) {
+			return SavedData.Get(key).Bool;
 		}
+
+		public static bool HasMetTimeCriteria(UserData key) {
+			var totalTime = SavedData.Get(UserData.TotalTime).Float;
+			var result = false;
+			switch (key) {
+			case UserData.AmeteurCrastinator:
+				result = SavedData.Get(key).Bool ? true : totalTime > 20;
+				break;
+			case UserData.TimeWaster:
+				result = SavedData.Get(key).Bool ? true : totalTime > (10 * 60);
+				break;
+			case UserData.SemiPro:
+				result = SavedData.Get(key).Bool ? true : totalTime > (Settings.current.TotalDevTimeWasted / 4);
+				break;
+			case UserData.Apathetic:
+				result = SavedData.Get(key).Bool ? true : totalTime > (Settings.current.TotalDevTimeWasted / 2);
+				break;
+			case UserData.Pro:
+				result = SavedData.Get(key).Bool ? true : totalTime > Settings.current.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;	
+				break;
+			default:
+				throw new Exception(key + " Has not ben accounded for in HasMetTimeCriteria(UserData key)");
+			}
+	
+			if (result && result != SavedData.Get (key).Bool) { 
+				SavedData.Get (key).Bool = true;
+				Notifications.EventDidOccur (Event.GC_AchievementGained, key);
+//				try {
+//					current.ReportProgress(key, true);
+//				} catch (Exception e){
+//					Debug.LogWarning(e.Message);
+//				}
+				return true;
+			} else {
+				return result; 
+			}
+
+		}
+
+		/*
 		public static bool HasPlayerAchieved(UserData key, bool result) {
 			var totalTime = SavedData.Get(UserData.TotalTime).Double;
 			switch (key) {
@@ -177,6 +223,7 @@ namespace RMX {
 			}
 
 		}
+		*/
 		static bool UserAuthenticated {
 			get {
 				return Notifications.StatusOf(Event.GC_UserAuthentication) == EventStatus.Success;

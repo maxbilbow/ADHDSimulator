@@ -71,14 +71,7 @@ namespace RMX {
 	
 
 		
-		// Update is called once per frame
-		private float _checkTime = 30;
-		void Update () {
-			if (Time.fixedTime > _checkTime) {
-				GameCenter.current.HasPlayerAchieved();
-				_checkTime += 30;
-			}
-		}
+
 
 //		public void OnApplicationPause(bool paused) {
 //			PauseGame(paused);

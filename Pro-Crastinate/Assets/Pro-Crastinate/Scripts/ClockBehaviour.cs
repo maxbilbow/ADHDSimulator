@@ -25,6 +25,7 @@ namespace RMX {
 				if (inflationSpeed < 0.0004) { 
 					DidCauseEvent(Event.SomethingBurst);
 					DidFinishEvent(Event.ClockIsAboutToBurst);
+					DidCauseEvent(Event.GC_AchievementGained,UserData.BigTime);
 					Destroy (this.gameObject);
 					return true;
 				} else if (inflationSpeed < 0.005) {

@@ -135,7 +135,7 @@ namespace RMX
 		/// Otherwise it checks whether the EventListener methods have been overriden. If so, the object is added to the global EventListeners.
 		/// </summary>
 		protected void Awake() {
-			var message = "<color=cyan> new </color> <color=lightblue>" + this.GetType().Name + "</color>()";
+			var message = "__new__ <color=lightblue>" + this.GetType().Name + "</color>()";
 			if (_singleton == null) {
 				DontDestroyOnLoad (gameObject);
 				_singleton = this as T;// as T;
