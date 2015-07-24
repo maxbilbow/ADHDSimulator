@@ -171,17 +171,11 @@ namespace RMX {
 				throw new Exception(key + " Has not ben accounded for in HasMetTimeCriteria(UserData key)");
 			}
 	
-			if (result && result != SavedData.Get (key).Bool) { 
-				SavedData.Get (key).Bool = true;
+			if (result) {// && result != SavedData.Get (key).Bool) { 
 				Notifications.EventDidOccur (Event.GC_AchievementGained, key);
-//				try {
-//					current.ReportProgress(key, true);
-//				} catch (Exception e){
-//					Debug.LogWarning(e.Message);
-//				}
 				return true;
 			} else {
-				return result; 
+				return false; 
 			}
 
 		}

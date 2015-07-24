@@ -13,7 +13,6 @@ namespace RMX {
 		// Use this for initialization
 		void Start () {
 			Hide ();
-			
 		}
 
 		bool _show = false;
@@ -33,21 +32,22 @@ namespace RMX {
 //			info.text = "Width: " + Camera.main.pixelWidth.ToString();
 		}
 
-		string GetData(UserData key, bool round) {
-			var val = round ? SavedData.Get (key).Long.ToString() : SavedData.Get (key).ToString ();
-			return "\n – " + key.ToString () + ": " + val;
+		string GetTime(UserData key) {
+			return "\n – " + key.ToString () + ": <color=yellow>" + Timer.GetTimeDescription(SavedData.Get (key).Float) + "</color>";
 		}
 		// Update is called once per frame
 		void OnGUI() {
 			if (_show) {
 				string info = "DEBUG =>";
 				foreach (KeyValuePair<UserData,string> data in GameCenter.UniqueID) {
-					var val = SavedData.Get(data.Key).String.Length == 0 ? "False" : SavedData.Get(data.Key).String;
+					var val = data.Key == UserData.LongestProctrastination ? GetTime(data.Key)
+						: SavedData.Get(data.Key).String.Length == 0 ? "False" 
+						: SavedData.Get(data.Key).String;
 					info += "\n – " + data.Key.ToString() + ": " + val;
 				}
-				info += GetData(UserData.CurrentProcrastination, true);
-				info += GetData(UserData.CurrentSession, true);
-				info += GetData(UserData.TotalTime, true);
+				info += GetTime(UserData.CurrentProcrastination);
+				info += GetTime(UserData.CurrentSession);
+				info += GetTime(UserData.TotalTime);
 
 				GUIStyle style = new GUIStyle ();
 //				style.fontSize = 50;
