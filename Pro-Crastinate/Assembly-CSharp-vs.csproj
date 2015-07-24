@@ -47,15 +47,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Pro-Crastinate\Scripts\ABonus.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\ASingleton.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\BodyBecomesActive.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\Bugger.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\ClockBehaviour.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\ClockSpawner.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\CsvReader.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\DataReader.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\DebugHUD.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\DragRigidbody.cs" />
+     <Compile Include="Assets\Pro-Crastinate\Scripts\Events.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\GameCenter.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\GameController.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\GameData.cs" />
@@ -67,12 +65,9 @@
      <Compile Include="Assets\Pro-Crastinate\Scripts\SavedData.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Settings.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\SoundEffects.cs" />
+     <Compile Include="Assets\Pro-Crastinate\Scripts\Testing.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Timer.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Version.cs" />
-     <Compile Include="Assets\RMX\DebugLog.cs" />
-     <Compile Include="Assets\RMX\Notifications.cs" />
-     <Compile Include="Assets\RMX\RMXObject.cs" />
-     <Compile Include="Assets\RMX\TextFomatter.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

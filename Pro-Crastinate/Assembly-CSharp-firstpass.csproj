@@ -47,6 +47,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\GKAchievementReporter\GKAchievementReporter.cs" />
+     <Compile Include="Assets\Plugins\RMX\ASingleton.cs" />
+     <Compile Include="Assets\Plugins\RMX\Bugger.cs" />
+     <Compile Include="Assets\Plugins\RMX\CsvReader.cs" />
+     <Compile Include="Assets\Plugins\RMX\DebugLog.cs" />
+     <Compile Include="Assets\Plugins\RMX\Event.cs" />
+     <Compile Include="Assets\Plugins\RMX\Notifications.cs" />
+     <Compile Include="Assets\Plugins\RMX\RMXObject.cs" />
+     <Compile Include="Assets\Plugins\RMX\TextFomatter.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
