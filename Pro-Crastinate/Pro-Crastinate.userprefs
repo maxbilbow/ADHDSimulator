@@ -1,20 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../GameOfLife-Unity/Assets/GameOfLife/Scripts/GameOfLifeController.cs">
     <Files>
-      <File FileName="Assets/Plugins/RMX/Notifications.cs" Line="54" Column="50" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/ClockSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMX/Event.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Events.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMX/ASingleton.cs" Line="229" Column="1" />
-      <File FileName="Assets/Plugins/RMX/Bugger.cs" Line="62" Column="55" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="147" Column="50" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Settings.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="53" Column="3" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="51" Column="33" />
-      <File FileName="Assets/Plugins/RMX/DebugLog.cs" Line="97" Column="43" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/SoundEffects.cs" Line="6" Column="30" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Testing.cs" Line="12" Column="1" />
+      <File FileName="../../GameOfLife-Unity/Assets/Plugins/RMX/ASingleton.cs" Line="194" Column="54" />
+      <File FileName="../../GameOfLife-Unity/Assets/GameOfLife/Scripts/GameOfLife.cs" Line="1" Column="1" />
+      <File FileName="../../GameOfLife-Unity/Assets/GameOfLife/Scripts/GameOfLifeController.cs" Line="4" Column="7" />
+      <File FileName="../../GameOfLife-Unity/Assets/Plugins/RMX/RMXObject.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
