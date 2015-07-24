@@ -24,22 +24,8 @@ namespace RMX
 		public string message;
 	}
 
-	public class Bugger : RMX.Singletons.ASingleton<Bugger>
+	public class Bugger : Singletons.ASingleton<Bugger>
 	{
-
-
-//		Settings settings {
-//			get {
-//				return Settings.current;
-//			}
-//		}
-//		
-//		GameController gameController {
-//			get {
-//				return GameController.current as GameController;
-//			}
-//		}
-		
 		
 
 		public List<string> Queue = new List<string>();
@@ -59,27 +45,24 @@ namespace RMX
 			_setupComplete = true;
 			foreach (LateLog log in _logOnLoad) {
 				try {
-				if (Bugger.WillLog(log.feature, " _LATE_ " + log.message))
-					Debug.Log(Bugger.Last);
+					if (Bugger.WillLog(log.feature, " _LATE_ " + log.message))
+						Debug.Log(Bugger.Last);
 				} catch (Exception e) {
 					Debug.LogWarning(e.Message);
 				}
 			}
 			_logOnLoad.Clear ();
-//			Debug.LogWarning ("_logOnLoad.Count = " + _logOnLoad.Count);
 			_logOnLoad = null;
 
-//			foreach (object in classType.GetMethods())
 		}
 
 
 
 		public static bool WillTest(string feature) {
-			if (IsInitialized)
-				return Singletons.SettingsInitialized && Singletons.Settings.IsDebugging (feature);
-//			else 
-//				Debug.LogWarning ("Settings have not yet been initialized before attepting to test " + feature.ToString());
-			return false;
+			if (IsInitialized && Singletons.SettingsInitialized)
+				return Singletons.Settings.IsDebugging (feature);
+			else 
+				return false;
 		}
 
 		public static DebugLog Last {
@@ -89,16 +72,15 @@ namespace RMX
 		}
 
 	 public static void AddLateLog(string feature, string message) {
-			if (IsInitialized)
+			if (_logOnLoad == null)
 				throw new Exception ("Late Log Was Added too Late! - " + feature + "\n " + message);
-//			Debug.LogWarning (feature + " LateLog added: " + message);
-			if (_logOnLoad != null) {
+			else		
 				_logOnLoad.Add (new LateLog (feature, message));
-			} else if (IsInitialized) {
-				Debug.LogWarning ("Tried to add late log but _logOnLoad had already been destroyed:\n" + feature.ToString () + ": " + message); 
-			} else {
-				_logOnLoad = new List<LateLog> ();
-			}
+//			} else if (IsInitialized) {
+//				Debug.LogWarning ("Tried to add late log but _logOnLoad had already been destroyed:\n" + feature.ToString () + ": " + message); 
+//			} else {
+//				_logOnLoad = new List<LateLog> ();
+//			}
 		}
 
 		public static DebugLog StartNewLog(string feature) {
@@ -112,9 +94,9 @@ namespace RMX
 
 
 		public static bool WillLog(string feature, string message) {
-			if (IsInitialized) 
+			if (IsInitialized)
 				return log.Set (feature, message);
-			else if (Singletons.SettingsInitialized && !Singletons.Settings.IsDebugging (feature)) 
+			else if (Singletons.Settings != null && !Singletons.Settings.IsDebugging (feature)) 
 				return false;
 			else 
 				AddLateLog (feature, message);
@@ -122,13 +104,11 @@ namespace RMX
 		}
 
 
-	
-
 		static DebugLog log = new DebugLog();
 
 		private bool timesUp {
 			get{ 
-				return settings.PrintToScreen && Queue.Count > 0 && Time.fixedTime - _startedAt > Singletons.Settings.MaxDisplayTime;
+				return Singletons.Settings != null && settings.PrintToScreen && Queue.Count > 0 && Time.fixedTime - _startedAt > Singletons.Settings.MaxDisplayTime;
 			}
 		}
 
@@ -156,7 +136,7 @@ namespace RMX
 		}
 
 		void OnGUI () {
-			if (settings.PrintToScreen && Queue.Count > 0) {
+			if (Singletons.Settings != null && settings.PrintToScreen && Queue.Count > 0) {
 				var text = timeRemaining + " – " + Queue[0];
 				GUIStyle style = new GUIStyle ();
 //				style.fontSize = 50;

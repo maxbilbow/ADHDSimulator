@@ -35,18 +35,51 @@ namespace RMX
 		GameObject gameObject { get; }
 	}
 
+	public abstract class AGameController<T> : Singletons.ASingleton<T> , IGameController
+	where T : AGameController<T> , IGameController {
+		public Vector2 defaultGravity = new Vector2 (0f, -9.81f);
+		protected void Start() {
+			Physics2D.gravity = defaultGravity;
+			WillBeginEvent (Events.SingletonInitialization);
+			StartSingletons ();
+			#if MOBILE_INPUT
+			StartMobile();
+			#else
+			StartDesktop();
+			#endif
+			DidFinishEvent (Events.SingletonInitialization);
+			
+		}
+		protected abstract void StartSingletons ();
+		protected abstract void StartDesktop ();
+		protected abstract void StartMobile ();
+		public void PauseGame(bool pause) {
+			PauseGame (pause, null);
+		}
+
+		public abstract void PauseGame (bool pause, object args);
+	}
+
+	public abstract class ASettings<T> : Singletons.ASingleton<T> , ISettings
+	where T : ASettings<T> , ISettings {
+		public abstract bool PrintToScreen { get; set; }
+		public abstract TextAsset Database { get; }
+		public abstract bool IsDebugging(string feature);
+		public abstract float MaxDisplayTime { get;}
+	}
+
 	public static class Singletons {
 
-		static bool _GC_Initialized = false;
+//		static bool _gameControllerInitialized = false;
 		public static bool GameControllerInitialized {
 			get {
-				return _GC_Initialized;
+				return _gameController != null;//_gameControllerInitialized;
 			}
 		}
-		static bool _SettingsInitialized = false;
+//		static bool _settingsInitialized = false;
 		public static bool SettingsInitialized {
 			get {
-				return _SettingsInitialized;
+				return _settings != null;//_settingsInitialized;
 			}
 		}
 
@@ -179,19 +212,22 @@ namespace RMX
 				}
 			}
 
-			private void warining() {
-				if (!(_SettingsInitialized))
-					Debug.LogWarning ("Setting not initialized before debugger");
-			}
 
 			private void MainInitCheck() {
-				if (this is IGameController) {
+				if (this is IGameController && _gameController == null) {
 					Singletons._gameController = this as IGameController;
-					_GC_Initialized = true;
-				} else if (this is ISettings) {
-						Singletons._settings = this as ISettings;
-					_SettingsInitialized = true;
-				} 
+//					_gameControllerInitialized = true;
+//					Debug.Log(this.GetType().Name + " was set to GC: " + GameControllerInitialized);
+					return;
+				} else if (this is ISettings && _settings == null) {
+					Singletons._settings = this as ISettings;
+//					_settingsInitialized = true;
+//					Debug.Log(this.GetType().Name + " was set to Settings: " + SettingsInitialized);
+					return;
+				} else if (_gameController == null)
+					Debug.LogWarning ("GameController should be initialized before " + this.GetType().Name);
+				else if (_settings == null)
+					Debug.LogWarning ("Settings should be initialized before " + this.GetType().Name);
 			}
 
 			/// <summary>

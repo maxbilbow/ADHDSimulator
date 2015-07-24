@@ -87,6 +87,7 @@ public class DebugLog {
 		
 		return header + TextFormatter.Format (this.message);
 	}
+
 	public override string ToString() {
 		string log;// = this.log;
 		if (isActive) {

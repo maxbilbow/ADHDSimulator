@@ -40,8 +40,8 @@ namespace RMX
 		public static Event GC_AchievementGained	 = new Event("GC_AchievementGained");
 		public static Event GC_UserAuthentication	 = new Event("GC_UserAuthentication");
 
-
 	}
+
 	public class Event : IEvent {
 		string _type;
 		public string Type {
@@ -58,6 +58,7 @@ namespace RMX
 
 		public Event(string type) {
 			this._type = type;
+			this._status = EventStatus.Idle;
 		}
 
 		public bool IsType(IEvent theEvent) {
