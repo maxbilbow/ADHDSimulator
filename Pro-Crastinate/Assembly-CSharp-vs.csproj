@@ -54,6 +54,7 @@
      <Compile Include="Assets\Pro-Crastinate\Scripts\ClockSpawner.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\CsvReader.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\DataReader.cs" />
+     <Compile Include="Assets\Pro-Crastinate\Scripts\DebugHUD.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\DragRigidbody.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\GameCenter.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\GameController.cs" />

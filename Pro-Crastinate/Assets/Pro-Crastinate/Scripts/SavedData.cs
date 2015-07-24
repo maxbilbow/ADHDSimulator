@@ -43,14 +43,18 @@ namespace RMX {
 			return sd;
 		}
 
-		public string value;
+		public string String {
+			get {
+				return PlayerPrefs.GetString(key);
+			}
+		}
 
 		public long Long {
 			get {
-				long result;
+				float result;
 //				if (!long.TryParse (PlayerPrefs.GetString (key), out result))
 //					Debug.LogWarning(key.ToString() + " GET: " + PlayerPrefs.GetString (key));
-				return long.TryParse (PlayerPrefs.GetString (key), out result) ? result : -1;
+				return float.TryParse (PlayerPrefs.GetString (key), out result) ? (long) result : -1;
 			} set {
 				PlayerPrefs.SetString(key, value.ToString());
 			}
@@ -95,7 +99,7 @@ namespace RMX {
 		}
 
 		public override string ToString() {
-			return this.value;
+			return this.String;
 		}
 
 		

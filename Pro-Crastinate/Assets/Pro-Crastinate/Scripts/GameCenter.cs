@@ -31,6 +31,7 @@ namespace RMX {
 
 		}
 
+
 		void UpdateGameCenterAchievements () {
 			foreach (KeyValuePair<UserData,string> id in UniqueID)
 				if (!CheckAchievementsWithGameCenter (id.Key) && SavedData.Get (id.Key).Bool) 
@@ -58,7 +59,7 @@ namespace RMX {
 		public override void OnEvent(Event theEvent, object info) {
 			switch (theEvent) {
 			case Event.GC_AchievementGained:
-				if (info == typeof(UserData)) {
+				if (info is UserData) {
 					var key = (UserData) info;
 					ReportProgress (key, true);
 					if (Bugger.WillLog (Testing.EventCenter, info.ToString ()))
@@ -331,7 +332,7 @@ namespace RMX {
 		const string _grp = "";
 		#endif
 
-		static Dictionary<UserData,string> UniqueID = new Dictionary<UserData,string> () {
+		public static Dictionary<UserData,string> UniqueID = new Dictionary<UserData,string> () {
 			{ UserData.LongestProctrastination, _grp + "CgkI2PKS_coeEAIQAw" },//"55415446";
 			{ UserData.PercentageOfDevTime, _grp + "CgkI2PKS_coeEAIQCA" },
 			{ UserData.AmeteurCrastinator, _grp + "CgkI2PKS_coeEAIQAQ" },
