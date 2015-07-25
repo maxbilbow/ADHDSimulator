@@ -28,6 +28,7 @@ namespace RMX
 		public static string Patches = "Patches";
 		public static string Database = "Database";
 		public static string EventCenter = "EventCenter";
+		public static string EarlyInits = "DebugInits";
 	}
 
 
@@ -94,16 +95,17 @@ namespace RMX
 				Debug.LogError ("Setting MUST be initialized before Bugger");
 			_setupComplete = true;
 
-			foreach (Log log in _lateLogs) {
-				try {
-					if (settings.IsDebugging(log.feature)) {
-						var message = TextFormatter.Format(  ": _LATE_ " + log.message);
-						Debug.Log(new Log(log.feature, message));
+			if (Singletons.Settings.IsDebugging(Testing.EarlyInits))
+				foreach (Log log in _lateLogs) {
+					try {
+						if (settings.IsDebugging(log.feature)) {
+							var message = TextFormatter.Format(  ": _LATE_ " + log.message);
+							Debug.Log(new Log(log.feature, message));
+						}
+					} catch (Exception e) {
+						Debug.LogWarning(e.Message);
 					}
-				} catch (Exception e) {
-					Debug.LogWarning(e.Message);
 				}
-			}
 			_lateLogs.Clear ();
 			_lateLogs = null;
 

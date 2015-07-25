@@ -56,7 +56,7 @@ namespace Procrastinate {
 					var key = (UserData)info;
 					SavedData.Set (key, true);
 					ReportProgress (key);
-					if (Bugger.WillLog (Testing.EventCenter, info.ToString ()))
+					if (Bugger.WillLog (Testing.EventCenter, "Achievement Gained: " + info.ToString ()))
 						Debug.Log (Bugger.Last);
 				}
 		}
@@ -69,7 +69,7 @@ namespace Procrastinate {
 					if (success) {
 						DidFinishEvent (Events.GC_UserAuthentication, EventStatus.Success);
 						userInfo += "Authentication successful";
-						userInfo += "Username: " + Social.localUser.userName + 
+						userInfo += "\nUsername: " + Social.localUser.userName + 
 							"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
 					} else {
@@ -118,10 +118,7 @@ namespace Procrastinate {
 		}
 
 
-		private UserData[] timeBasedAchievements = {
-			UserData.ach_ameteur_crastinator, 
-			UserData.ach_apathetic, UserData.ach_semi_pro, UserData.ach_pro_crastinator 
-		};
+
 
 
 
@@ -129,8 +126,18 @@ namespace Procrastinate {
 		float _checkTime = 0;
 		void Update () {
 			if (Time.fixedTime > _checkTime) {
-				foreach (UserData key in timeBasedAchievements)
-					HasMetTimeCriteria(key);
+				var log = "";
+				foreach (UserData key in System.Enum.GetValues(typeof(UserData)))
+				{
+					try {
+						log += " => "+ key + ": " + HasMetTimeCriteria (key) + "\n";
+
+					} catch {
+//						log += " => "+ key + ": is NOT a time-based achievement\n";
+					}
+				}
+				if (Bugger.WillLog(Tests.Achievements, log))
+					Debug.Log(Bugger.Last);
 				_checkTime = Time.fixedTime + Settings.current.updateScoresEvery;
 			}
 		}
@@ -143,22 +150,24 @@ namespace Procrastinate {
 		const float MINUTES = 60f, HOURS = 60 * 60f;
 		public static bool HasMetTimeCriteria(UserData key) {
 			var totalTime = SavedData.Get<float>(UserData.gd_total_time_Wasted);
-			var result = false; var record = SavedData.Get<bool> (key);
+			if (SavedData.Get<bool> (key))
+				return true;
+			var result = false;
 			switch (key) {
 			case UserData.ach_ameteur_crastinator:
-				result = record || totalTime > 20;
+				result = totalTime > 20;
 				break;
 			case UserData.ach_time_waster:
-				result = record || totalTime > (10 * MINUTES);
+				result = totalTime > (10 * MINUTES);
 				break;
 			case UserData.ach_semi_pro:
-				result = record || totalTime > (Settings.current.TotalDevTimeWasted / 4);
+				result = totalTime > (Settings.current.TotalDevTimeWasted / 4);
 				break;
 			case UserData.ach_apathetic:
-				result = record || totalTime > (Settings.current.TotalDevTimeWasted / 2);
+				result = totalTime > (Settings.current.TotalDevTimeWasted / 2);
 				break;
 			case UserData.ach_pro_crastinator:
-				result = record || totalTime > Settings.current.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;	
+				result = totalTime > Settings.current.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;	
 				break;
 			default:
 				throw new Exception(key + " Has not ben accounded for in HasMetTimeCriteria(UserData key)");
@@ -223,7 +232,7 @@ namespace Procrastinate {
 		const double EVENT_BASED_ACHIEVEMENT = -1;
 		public void ReportProgress(UserData data) {
 			var achieved = SavedData.Get<bool> (data);
-			var log = "Reporting Progress: " + achieved; var feature = Testing.Achievements;
+			var log = data.ToString() + " => Reporting Progress: " + achieved; var feature = Testing.Achievements;
 
 			float progress = achieved ? 100 : 0;
 
@@ -281,13 +290,13 @@ namespace Procrastinate {
 								}
 							}
 						} else {
-							if (Bugger.WillLog(Testing.GameCenter,log) )
+							if (Bugger.WillLog(Testing.Achievements,log) )
 								Debug.Log(Bugger.Last);
 							throw new System.ArgumentException ("No achievements returned");
 						}
 					});
 				} catch (System.ArgumentException e) {
-					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.GameCenter,e.Message) )
+					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 			}

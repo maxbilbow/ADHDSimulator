@@ -67,6 +67,7 @@ namespace RMX
 	public abstract class ASettings<T> : Singletons.ASingleton<T> , ISettings
 	where T : ASettings<T> , ISettings {
 		public bool DebugMisc;
+		public bool DebugEarlyInits;
 		public bool DebugGameCenter;
 		public bool DebugAchievements;
 		public bool DebugExceptions;
@@ -104,6 +105,8 @@ namespace RMX
 					return DebugDatabase;
 				else if (feature == Testing.EventCenter)
 					return DebugEvents;
+				else if (feature == Testing.EarlyInits)
+					return DebugEarlyInits;
 				else
 					Debug.LogWarning (feature.ToString () + " has not been recorded in Settings.IsTesting(feature)");
 				return false;

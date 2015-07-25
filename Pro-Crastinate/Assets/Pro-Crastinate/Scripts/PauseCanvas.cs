@@ -173,11 +173,7 @@ using RMX;  namespace Procrastinate {
 
 
 		string text = "";
-		
-		
-	
 
-		
 		public override void OnEventDidStart(IEvent theEvent, object info) {
 			if (theEvent.IsType( Events.PauseSession))
 				Pause(true);

@@ -53,8 +53,12 @@ namespace Procrastinate {
 		/// <summary>
 		/// The dev time wasted.
 		/// </summary>
-		public float TotalDevTimeWasted = 5 * 60 * 60;
-
+		public float _totalDevTimeWastedInHours = 5;
+		public float TotalDevTimeWasted {
+			get {
+				return _totalDevTimeWastedInHours * 60 * 60;
+			}
+		}
 
 		private int _chance = 50;
 		public bool Chance {
