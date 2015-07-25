@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 //using GooglePlayGames;
 #endif
 
+using RMX;  
 
-
-using RMX;  namespace Procrastinate {
+namespace Procrastinate {
 	public class GameCenter : RMX.Singletons.ASingleton<GameCenter> {
 
 
@@ -51,13 +51,14 @@ using RMX;  namespace Procrastinate {
 		}
 
 		public override void OnEvent(IEvent theEvent, object info) {
-			if (theEvent.IsType(Events.GC_AchievementGained))
+			if (theEvent.IsType (Events.GC_AchievementGained))
 				if (info is UserData) {
-					var key = (UserData) info;
+					var key = (UserData)info;
+					SavedData.Get (key).Bool = true;
 					ReportProgress (key);
 					if (Bugger.WillLog (Testing.EventCenter, info.ToString ()))
 						Debug.Log (Bugger.Last);
-			}
+				}
 		}
 
 		void Authenticate() {
