@@ -20,14 +20,15 @@ namespace Procrastinate {
 			Authenticate ();
 //			TimeBasedAchievementsShouldUpdate ();
 
-			Settings.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
-			if (Settings.current.willPauseOnLoad) {
-				PauseCanvas.current.Pause(true);
-			}
+
 		
 
 		
 			UpdateGameCenterAchievements ();
+			Settings.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
+			if (Settings.current.willPauseOnLoad) {
+				GameController.current.PauseGame(true);
+			}
 
 		}
 
@@ -105,17 +106,7 @@ namespace Procrastinate {
 				Debug.Log (Bugger.Last);
 		}
 
-//		public bool HasAchieved(UserData key) {
-//			try {
-//				return SavedData.Get (key).Bool;
-//			} catch (Exception e) {
-//				SavedData.Get (key).Bool = false;
-//				var log = Bugger.StartNewLog(Testing.Exceptions, "HasAchieved(" + key + ") threw an error!\n" + e.Message);
-//				if (log.isActive)
-//				    Debug.Log(log);
-//				return false;
-//			}
-//		}
+
 
 		public void ReportScore (long score, UserData data) {
 			if (UserAuthenticated && score > 0) {
@@ -144,6 +135,7 @@ namespace Procrastinate {
 		// Update is called once per frame
 		float _checkTime = 0;
 		void Update () {
+
 			if (Time.fixedTime > _checkTime) {
 				var log = "";
 				foreach (UserData key in System.Enum.GetValues(typeof(UserData)))

@@ -94,7 +94,7 @@ namespace RMX {
 		public virtual void OnEventDidStart(IEvent theEvent, object args){}
 		
 		public virtual void OnEventDidEnd(IEvent theEvent, object args){}
-		protected bool OneIn10 {
+		public static bool OneIn10 {
 			get {
 				return Random.Range(0,10) == 1;
 			}

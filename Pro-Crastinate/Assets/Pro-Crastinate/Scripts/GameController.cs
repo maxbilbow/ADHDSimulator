@@ -88,6 +88,12 @@ namespace Procrastinate {
 
 		}
 
+		void Update() {
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				gameController.PauseGame(!isPaused);
+			}
+		}
 
 		
 	}
