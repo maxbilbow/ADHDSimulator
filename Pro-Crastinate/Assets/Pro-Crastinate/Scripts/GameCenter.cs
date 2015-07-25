@@ -130,7 +130,7 @@ namespace Procrastinate {
 				foreach (UserData key in System.Enum.GetValues(typeof(UserData)))
 				{
 					try {
-						log += " => "+ key + ": " + HasMetTimeCriteria (key) + "\n";
+						log += " => "+ key + ": " + SavedData.Get<bool> (key) + ", First Time: " +  HasMetTimeCriteria (key) + "\n";
 
 					} catch {
 //						log += " => "+ key + ": is NOT a time-based achievement\n";
@@ -148,10 +148,16 @@ namespace Procrastinate {
 		}
 
 		const float MINUTES = 60f, HOURS = 60 * 60f;
+
+		/// <summary>
+		/// Determines if has met time criteria the specified key.
+		/// </summary>
+		/// <returns><c>true</c> iff the criteria is met for the first time otherwise, <c>false</c>.</returns>
+		/// <param name="key">Key.</param>
 		public static bool HasMetTimeCriteria(UserData key) {
 			var totalTime = SavedData.Get<float>(UserData.gd_total_time_Wasted);
 			if (SavedData.Get<bool> (key))
-				return true;
+				return false;
 			var result = false;
 			switch (key) {
 			case UserData.ach_ameteur_crastinator:
