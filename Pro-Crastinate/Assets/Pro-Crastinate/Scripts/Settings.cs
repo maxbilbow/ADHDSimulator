@@ -85,46 +85,19 @@ namespace Procrastinate {
 		}
 
 
-
-		void Update() {
-#if UNITY_EDITOR
-
-#endif
-		}
-
 		public static bool ShouldDebug(string feature) {
-//			return false;
-			if (Singletons.Settings != null) {
+			if (Singletons.SettingsInitialized) {
 				var settings = Singletons.Settings as Settings;
-				if (feature == Testing.Misc)
-					return settings.DebugMisc;
-				else if (feature == Testing.GameCenter)
-					return settings.DebugGameCenter;
-				else if (feature == Testing.Achievements)
-					return settings.DebugAchievements;
-				else if (feature == Testing.Exceptions)
-					return settings.DebugExceptions;
-				else if (feature == Testing.Singletons)
-					return settings.DebugSingletons;
-				else if (feature == Tests.GameDataLists)
+				if (feature == Tests.GameDataLists)
 					return settings.DebugGameDataLists;
-				else if (feature == Testing.Patches)
-					return settings.DebugPatches;
-				else if (feature == Testing.Database)
-					return settings.DebugDatabase;
-				else if (feature == Testing.EventCenter)
-					return settings.DebugEvents;
-				else
-					Debug.LogWarning (feature.ToString () + " has not been recorded in Settings.IsTesting(feature)");
 				return false;
-			} else {
-				Debug.LogWarning("Setting not initialized so debugging anyway: " + feature);
-				return true;
 			}
+			throw new UnityException ("Setting should be initialized by now (Testing: " + feature);
+
 		}
 
 		public override bool IsDebugging(string feature) {
-			return ShouldDebug(feature);
+			return ShouldDebug(feature) || base.IsDebugging(feature);
 		}
 	}
 }
