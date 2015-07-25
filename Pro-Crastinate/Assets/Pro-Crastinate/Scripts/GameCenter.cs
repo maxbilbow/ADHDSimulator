@@ -27,7 +27,7 @@ namespace Procrastinate {
 			UpdateGameCenterAchievements ();
 			Settings.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
 			if (Settings.current.willPauseOnLoad) {
-				GameController.current.PauseGame(true);
+				GameController.current.PauseGame(true, null);
 			}
 
 		}

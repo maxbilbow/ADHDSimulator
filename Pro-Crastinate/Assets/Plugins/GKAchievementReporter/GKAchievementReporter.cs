@@ -11,7 +11,7 @@ namespace UnityEngine.SocialPlatforms {
 		/// Reports an achievement natively if running Game Center on iOS. Otherwise using Social.ReportProgress
 		/// </summary>
 		public static void ReportAchievement(string achievementID, float progress, bool showsCompletionBanner) {
-
+			#if !DEBUG
 			if (Social.Active is GameCenter.GameCenterPlatform && Application.platform == RuntimePlatform.IPhonePlayer) {
 
 				// Use native iOS code if running GameCenter on an iOS device
@@ -19,6 +19,7 @@ namespace UnityEngine.SocialPlatforms {
 
 			} else {
 				// Otherwise trust the Unity Social API
+
 				Social.ReportProgress(achievementID, progress, success => {
 					if (!success) {
 						var message = achievementID + " Not Found";
@@ -28,6 +29,7 @@ namespace UnityEngine.SocialPlatforms {
 				});
 
 			}
+#endif
 		}
 
 		[DllImport("__Internal")]

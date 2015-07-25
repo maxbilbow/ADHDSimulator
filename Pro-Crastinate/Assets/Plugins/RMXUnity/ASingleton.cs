@@ -17,8 +17,7 @@ namespace RMX
 
 
 	public interface IGameController : ISingleton {
-		void PauseGame(bool pause);
-		void PauseGame (bool pause, object args);
+		void PauseGame (bool pause, object args = null);
 		void Patch();
 	}
 	public interface ISettings : ISingleton {
@@ -57,9 +56,7 @@ namespace RMX
 		protected abstract void StartDesktop ();
 		protected abstract void StartMobile ();
 		public abstract void Patch ();
-		public void PauseGame(bool pause) {
-			PauseGame (pause, null);
-		}
+
 
 		public abstract void PauseGame (bool pause, object args);
 	}

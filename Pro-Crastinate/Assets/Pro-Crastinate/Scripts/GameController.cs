@@ -57,7 +57,7 @@ namespace Procrastinate {
 		
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
-				PauseGame (true);
+				PauseGame (true, null);
 			}
 		}
 
@@ -75,7 +75,7 @@ namespace Procrastinate {
 			}
 		}
 
-		public override void PauseGame(bool pause, object args) {
+		public override void PauseGame(bool pause, object args = null) {
 			if (pause) {
 				WillBeginEvent (Events.PauseSession, args);
 				Time.timeScale = 0;
@@ -91,7 +91,7 @@ namespace Procrastinate {
 		void Update() {
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
-				gameController.PauseGame(!isPaused);
+				PauseGame(!isPaused, null);
 			}
 		}
 

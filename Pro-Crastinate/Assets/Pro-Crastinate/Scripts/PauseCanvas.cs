@@ -38,7 +38,7 @@ using RMX;  namespace Procrastinate {
 		};
 
 		static void UnPauseGame(BaseEventData data) {
-			GameController.current.PauseGame (false);
+			GameController.current.PauseGame (false, null);
 		}
 
 		class Trigger : EventTrigger.Entry {
@@ -178,7 +178,7 @@ using RMX;  namespace Procrastinate {
 		
 
 
-		public override void OnEventDidStart(IEvent theEvent, object info) {
+		public override void OnEventDidEnd(IEvent theEvent, object info) {
 			if (theEvent.IsType (Events.PauseSession)) {
 				var time = SavedData.Get<float>(
 					Settings.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);

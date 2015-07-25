@@ -1,16 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs">
     <Files>
-      <File FileName="Assets/Pro-Crastinate/Scripts/SoundEffects.cs" Line="65" Column="35" />
-      <File FileName="Assets/Plugins/RMXUnity/ASingleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/SoundEffects.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/RMXUnity/ASingleton.cs" Line="59" Column="3" />
       <File FileName="Assets/Pro-Crastinate/Scripts/GoAwayText.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/RMXUnity/Bugger.cs" Line="1" Column="1" />
       <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="157" Column="32" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="41" Column="51" />
       <File FileName="Assets/Pro-Crastinate/Scripts/Version.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="30" Column="44" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="94" Column="41" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="30" Column="50" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="95" Column="5" />
+      <File FileName="Assets/Plugins/RMXUnity/Event.cs" Line="29" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
