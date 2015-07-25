@@ -40,7 +40,8 @@ namespace RMX {
 			events = earlyEvents;
 			earlyEvents = null;
 			_setupComplete = true;
-			Debug.Log ("Listeners: " + Listeners.Count);
+			if (Bugger.WillLog(Testing.EventCenter, "Listeners: " + Listeners.Count))
+				Debug.Log (Bugger.Last);
 		}
 
 		public static bool HasListener(EventListener listener) {

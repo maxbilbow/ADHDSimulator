@@ -13,6 +13,9 @@ using RMX;  namespace Procrastinate {
 		// Use this for initialization
 		void Start () {
 			Hide ();
+			if (!Settings.current.PrintToScreen) {
+				showButton.SetActive(false);
+			}
 		}
 
 		bool _show = false;

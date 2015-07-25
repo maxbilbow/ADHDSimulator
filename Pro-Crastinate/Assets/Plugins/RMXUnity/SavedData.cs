@@ -78,7 +78,7 @@ namespace RMX {
 
 		static object Int(string key) {
 			try {
-				return PlayerPrefs.HasKey(key) ? int.Parse(PlayerPrefs.GetString (key)) : -1;
+				return PlayerPrefs.HasKey(key) ? int.Parse(PlayerPrefs.GetString (key)) : (int) -1;
 			} catch (System.Exception e){
 				Debug.LogError(e);
 				if (Bugger.WillLog(Testing.Exceptions,e.Message))
