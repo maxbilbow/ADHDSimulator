@@ -38,16 +38,7 @@ namespace Procrastinate {
 			}
 		}
 		public bool _printToScreen = true;
-		public bool DebugMisc;
-		public bool DebugGameCenter;
-		public bool DebugAchievements;
-		public bool DebugExceptions;
-		public bool DebugSingletons;
-		public bool DebugGameDataLists;
-		public bool DebugDatabase;
-		public bool DebugPatches;
-		public bool DebugEvents;
-		public bool ClearAchievementsOnLoad;
+
 
 
 	
