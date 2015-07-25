@@ -184,6 +184,8 @@ namespace RMX
 					if (IsInitialized) {
 						return _singleton as T;
 					} else {
+						if (typeof(T) is IGameController || typeof(T) is ISettings)
+							throw new System.Exception(typeof(T).Name + "Should never be initialized with static Getter method 'current'");
 						return Initialize() as T;
 					}
 				}
@@ -201,6 +203,8 @@ namespace RMX
 
 
 			public static T Initialize() {
+				if (typeof(T) is IGameController || typeof(T) is ISettings)
+					throw new System.Exception(typeof(T).Name + "Should never be initialized with static Getter method 'current'");
 				if (IsInitialized) 
 					return _singleton;
 				else {
@@ -237,11 +241,11 @@ namespace RMX
 
 
 			private void MainInitCheck() {
-				if (this is IGameController && _gameController == null) {
+				if (this is IGameController) {
 					Singletons._gameController = this as IGameController;
 					_gameController.Patch();
 				}
-				else if (this is ISettings && _settings == null) 
+				else if (this is ISettings) 
 					Singletons._settings = this as ISettings;
 			 	else if (_gameController == null)
 					Debug.LogWarning ("GameController should be initialized before " + this.GetType().Name);

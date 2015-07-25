@@ -71,6 +71,11 @@ namespace Procrastinate {
 			Version.Patch ();
 		}
 
+		public bool isPaused {
+			get {
+				return Time.timeScale == 0;
+			}
+		}
 
 		public override void PauseGame(bool pause, object args) {
 			if (pause) {
