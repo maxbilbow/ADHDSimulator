@@ -54,13 +54,13 @@ using RMX;  namespace Procrastinate {
 				info += "\n" + DragRigidbody.current;
 
 				GUIStyle style = new GUIStyle ();
-//				style.fontSize = 50;
+//				
 				style.richText = true;
 				style.wordWrap = true;
 				style.alignment = TextAnchor.UpperRight;
 				style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 20;
 				//				style.border
-				GUI.Label (new Rect (0, 0, Screen.width, Screen.height), TextFormatter.Format(info), style);
+				GUI.Label (new Rect (0, 0, Screen.width, Screen.height), TextFormatter.Format(info,Time.timeScale == 0 ? "black" : "white"), style);
 
 			}
 		}

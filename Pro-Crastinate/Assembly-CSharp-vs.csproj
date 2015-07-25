@@ -59,7 +59,6 @@
      <Compile Include="Assets\Pro-Crastinate\Scripts\GameData.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\GoAwayText.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Gyro.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\LookAndFeel.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\PauseCanvas.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\PauseManager.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Settings.cs" />

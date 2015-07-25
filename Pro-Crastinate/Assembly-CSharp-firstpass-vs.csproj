@@ -52,6 +52,7 @@
      <Compile Include="Assets\Plugins\RMXUnity\CsvReader.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\DebugLog.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\Event.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\LookAndFeel.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\Notifications.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\RMXObject.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\SavedData.cs" />
