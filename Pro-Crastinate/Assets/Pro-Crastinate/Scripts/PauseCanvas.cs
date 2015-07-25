@@ -187,7 +187,7 @@ using RMX;  namespace Procrastinate {
 
 		
 		public void Pause(bool pause) {
-			if (pause && !paused) {
+			if (pause) {// && !paused) {
 				float time;
 				if (Settings.current.willPauseOnLoad) {
 					time = GameData.current.currentSessionTime;

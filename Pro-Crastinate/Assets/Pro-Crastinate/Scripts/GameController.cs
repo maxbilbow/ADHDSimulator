@@ -75,7 +75,7 @@ namespace Procrastinate {
 		public override void PauseGame(bool pause, object args) {
 			if (pause) {
 				WillBeginEvent (Events.PauseSession, args);
-				Time.timeScale =  0 ;
+				Time.timeScale = 0;
 				DidFinishEvent (Events.PauseSession, args);
 			} else {
 				WillBeginEvent(Events.ResumeSession, args);

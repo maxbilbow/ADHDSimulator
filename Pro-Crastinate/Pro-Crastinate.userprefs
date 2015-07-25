@@ -1,6 +1,6 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/DataReader.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs">
     <Files>
       <File FileName="../../rAnts/Ants/Assets/Sources/HeightmapGenerator.js" Line="1" Column="1" />
       <File FileName="../../rAnts/Ants/Assets/Sources/~ControlScripts/KeyboardOrbit.js" Line="1" Column="1" />
@@ -12,6 +12,8 @@
       <File FileName="Assets/Pro-Crastinate/Scripts/GoAwayText.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/RMXUnity/Bugger.cs" Line="1" Column="1" />
       <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="96" Column="30" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="78" Column="24" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="190" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
