@@ -18,34 +18,34 @@ using RMX;  namespace Procrastinate {
 
 		public float totalTime {
 			get {
-				return SavedData.Get(UserData.TotalTime).Float;
+				return SavedData.Get<float>(UserData.gd_total_time_Wasted);
 			} set {
-				SavedData.Get(UserData.TotalTime).Float = value;
+				SavedData.Set(UserData.gd_total_time_Wasted, value);
 			}
 		}
 		
 		
 		public float currentProcrastination {
 			get {
-				return SavedData.Get(UserData.CurrentProcrastination).Float;
+				return SavedData.Get<float>(UserData.gd_current_procrastination);
 			} set {
-				SavedData.Get(UserData.CurrentProcrastination).Float = value;
+				SavedData.Set(UserData.gd_current_procrastination, value);
 			}
 		}
 		
 		public float currentSessionTime {
 			get {
-				return SavedData.Get(UserData.CurrentSession).Float;
+				return SavedData.Get<float>(UserData.gd_current_session);
 			} set {
-				SavedData.Get(UserData.CurrentSession).Float = value;
+				SavedData.Set(UserData.gd_current_session, value);
 			}
 		}
 		
 		public float longestProcrastination {
 			get {
-				return SavedData.Get(UserData.LongestProctrastination).Float;
+				return SavedData.Get<float>(UserData.sc_longest_procrastination);
 			} set {
-				SavedData.Get(UserData.LongestProctrastination).Float = value;
+				SavedData.Set(UserData.sc_longest_procrastination, value);
 			}
 		}
 

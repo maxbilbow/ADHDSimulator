@@ -32,8 +32,8 @@ using RMX;  namespace Procrastinate {
 //			info.text = "Width: " + Camera.main.pixelWidth.ToString();
 		}
 
-		string GetTime(UserData key) {
-			var time = SavedData.Get (key).Float;
+		string GetTime(object key) {
+			var time = SavedData.Get<float> (key);
 			var timeString = time > 0 ? Timer.GetTimeDescription (time) : time.ToString ();
 			return "\n – " + key.ToString () + ": <color=yellow>" + timeString + "</color>";
 		}
@@ -42,14 +42,14 @@ using RMX;  namespace Procrastinate {
 			if (_show) {
 				string info = "DEBUG =>";
 				foreach (KeyValuePair<UserData,string> data in GameCenter.UniqueID) {
-					var val = data.Key == UserData.LongestProctrastination ? GetTime(data.Key)
-						: SavedData.Get(data.Key).String.Length == 0 ? "False" 
-						: SavedData.Get(data.Key).String;
+					var val = data.Key == UserData.sc_longest_procrastination ? GetTime(data.Key)
+						: SavedData.Get<string>(data.Key).Length == 0 ? "False" 
+						: SavedData.Get<string>(data.Key);
 					info += "\n – " + data.Key.ToString() + ": " + val;
 				}
-				info += GetTime(UserData.CurrentProcrastination);
-				info += GetTime(UserData.CurrentSession);
-				info += GetTime(UserData.TotalTime);
+				info += GetTime(UserData.gd_current_procrastination);
+				info += GetTime(UserData.gd_current_session);
+				info += GetTime(UserData.gd_total_time_Wasted);
 
 				GUIStyle style = new GUIStyle ();
 //				style.fontSize = 50;

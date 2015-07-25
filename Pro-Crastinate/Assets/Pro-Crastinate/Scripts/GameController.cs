@@ -16,7 +16,7 @@ namespace Procrastinate {
 
 		public static bool isFirstPlay {
 			get {
-				return PlayerPrefs.GetString(SavedData.GetKey(UserData.TotalTime)) != null;
+				return PlayerPrefs.GetString(UserData.gd_total_time_Wasted.ToString()) != null;
 			}
 		}
 
@@ -65,6 +65,10 @@ namespace Procrastinate {
 
 		public static void CheckForAnomalies() {
 			ClockBehaviour.CheckVisibleClocks ();
+		}
+
+		public override void Patch() {
+			Version.Patch ();
 		}
 
 

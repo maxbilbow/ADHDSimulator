@@ -54,6 +54,7 @@
      <Compile Include="Assets\Plugins\RMXUnity\Event.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\Notifications.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\RMXObject.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\SavedData.cs" />
      <Compile Include="Assets\Plugins\RMXUnity\TextFomatter.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />

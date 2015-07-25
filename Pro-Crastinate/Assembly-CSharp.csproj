@@ -62,7 +62,6 @@
      <Compile Include="Assets\Pro-Crastinate\Scripts\LookAndFeel.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\PauseCanvas.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\PauseManager.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\SavedData.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Settings.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\SoundEffects.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\Testing.cs" />

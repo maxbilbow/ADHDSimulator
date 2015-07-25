@@ -36,13 +36,13 @@ using RMX;  namespace Procrastinate {
 
 				switch (spawnMode) {
 				case SpawnMode.Multiply:
-					if (GameCenter.HasPlayerAlreadyAchieved (UserData.TimeWaster))
+					if (GameCenter.HasPlayerAlreadyAchieved (UserData.ach_time_waster))
 						if (Input.touchCount > 1) {
 							if (Spawn ())// && !GameCenter.current.HasAchieved (UserData.MakingTime))
-								DidCauseEvent(Events.GC_AchievementGained, UserData.MakingTime);
+								DidCauseEvent(Events.GC_AchievementGained, UserData.ach_making_time);
 							if (ShouldKillClocks) {
 						if (clocks.Count > Settings.current.MaxNumberOfClocks)// && !GameCenter.current.HasAchieved (UserData.OverTime))
-									DidCauseEvent(Events.GC_AchievementGained, UserData.OverTime);
+									DidCauseEvent(Events.GC_AchievementGained, UserData.ach_overtime);
 								var toDestroy = clocks [1];
 								//					clocks.RemoveAt(1);
 								Destroy (toDestroy.gameObject);
@@ -50,7 +50,7 @@ using RMX;  namespace Procrastinate {
 						}
 					break;
 				case SpawnMode.Inflate:
-					if (GameCenter.HasPlayerAlreadyAchieved (UserData.AmeteurCrastinator))
+					if (GameCenter.HasPlayerAlreadyAchieved (UserData.ach_ameteur_crastinator))
 						if (Input.touchCount == 2) {
 							forTouch = 1;
 							if (!inflatableClock) {
@@ -99,7 +99,7 @@ using RMX;  namespace Procrastinate {
 			if (firstLoad) {
 				firstLoad = false;
 				return false;
-			} else if (Settings.current.ChanceGiven(UserData.TimeWaster)) {
+			} else if (Settings.current.ChanceGiven(UserData.ach_time_waster)) {
 				WillBeginEvent(Events.SpawnMultipleClocks);
 				var count = Input.touchCount;
 				forTouch = Random.Range(1,count);
