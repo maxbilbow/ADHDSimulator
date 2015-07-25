@@ -57,9 +57,7 @@ namespace Procrastinate {
 		
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
-				WillBeginEvent(Events.PauseSession);//
 				PauseGame (true);
-				DidFinishEvent(Events.PauseSession);
 			}
 		}
 
