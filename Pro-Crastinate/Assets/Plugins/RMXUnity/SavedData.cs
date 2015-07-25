@@ -22,12 +22,12 @@ namespace RMX {
 		
 		static object Long(string key) {
 			try {
-				return PlayerPrefs.HasKey(key) ? (long) float.Parse(PlayerPrefs.GetString (key)) : (double) -1;
+				return PlayerPrefs.HasKey(key) ? (long) float.Parse(PlayerPrefs.GetString (key)) : (long) -1;
 			} catch (System.Exception e){
 				Debug.LogError(e);
 				if (Bugger.WillLog(Testing.Exceptions,e.Message))
 					Debug.Log(Bugger.Last);
-				return (double) -1;
+				return (long) -1;
 			}
 		}
 

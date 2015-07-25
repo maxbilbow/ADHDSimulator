@@ -1,19 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/RMXUnity/SavedData.cs">
     <Files>
-      <File FileName="../../rAnts/Ants/Assets/Sources/HeightmapGenerator.js" Line="1" Column="1" />
-      <File FileName="../../rAnts/Ants/Assets/Sources/~ControlScripts/KeyboardOrbit.js" Line="1" Column="1" />
-      <File FileName="../../rAnts/Ants/Assets/Sources/~ControlScripts/VPS.js" Line="1" Column="1" />
-      <File FileName="../../rAnts/Ants/Assets/Sources/~ControlScripts/DragTransform.js" Line="1" Column="1" />
       <File FileName="Assets/Pro-Crastinate/Scripts/DebugHUD.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/RMXUnity/TextFomatter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/ASingleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/RMXUnity/ASingleton.cs" Line="248" Column="31" />
       <File FileName="Assets/Pro-Crastinate/Scripts/GoAwayText.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/RMXUnity/Bugger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="96" Column="30" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="78" Column="24" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="190" Column="18" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="71" Column="16" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="41" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/Version.cs" Line="92" Column="71" />
+      <File FileName="Assets/Plugins/RMXUnity/SavedData.cs" Line="100" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
