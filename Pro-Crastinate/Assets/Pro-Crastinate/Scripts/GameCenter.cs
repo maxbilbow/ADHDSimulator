@@ -32,10 +32,29 @@ namespace Procrastinate {
 		}
 
 
-		void UpdateGameCenterAchievements () { //TODO
-			foreach (KeyValuePair<UserData,string> id in UniqueID)
-				if (!CheckAchievementsWithGameCenter (id.Key) && SavedData.Get<bool> (id.Key)) 
-					ReportProgress (id.Key);
+		void UpdateGameCenterAchievements () { 
+			var log = "";
+			foreach (KeyValuePair<UserData,string> id in UniqueID) {
+				if (id.Key.ToString ().StartsWith ("ach_")) {
+					var successInSD = SavedData.Get<bool> (id.Key);
+					try {
+						var successInGC = CheckAchievementsWithGameCenter (id.Key);
+						if (successInSD != successInGC) 
+							DidCauseEvent (Events.GC_AchievementGained, id.Key);
+						log += " => " + id.Key + " SD: " + successInSD + ", GC: " + successInGC + "\n";
+					
+					} catch {
+						log += " => " + id.Key + " Should be in GC: " + successInSD + "\n";
+					}
+				}
+				if (Bugger.WillLog (Tests.Misc, log))
+					Debug.Log (Bugger.Last);
+			}
+//			foreach (KeyValuePair<UserData,string> id in UniqueID) {
+//				if (!CheckAchievementsWithGameCenter (id.Key) && SavedData.Get<bool> (id.Key)) 
+//					ReportProgress (id.Key);
+//
+//			}
 		}
 
 		public override void OnEventDidStart(IEvent theEvent, object info) {
@@ -235,7 +254,7 @@ namespace Procrastinate {
 				return Notifications.StatusOf(Events.GC_UserAuthentication) == EventStatus.Success;
 			}
 		}
-		const double EVENT_BASED_ACHIEVEMENT = -1;
+
 		public void ReportProgress(UserData data) {
 			var achieved = SavedData.Get<bool> (data);
 			var log = data.ToString() + " => Reporting Progress: " + achieved; var feature = Testing.Achievements;
@@ -251,7 +270,7 @@ namespace Procrastinate {
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
 				try {
 					GKAchievementReporter.ReportAchievement(UniqueID[data], progress, true);
-					log += "\n => SUCCESS";
+					log += " => SUCCESS";
 				} catch (Exception e){
 					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
 						Debug.Log(Bugger.Last);
