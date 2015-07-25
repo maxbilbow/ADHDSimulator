@@ -88,20 +88,25 @@ namespace Procrastinate {
 
 		private static void Patchv0_3_6() {
 //			needsPatch = false;
-			Set (UserData.gd_current_session);
-			Set (UserData.gd_current_procrastination);
-			Set (UserData.gd_total_time_Wasted);
-			Set (UserData.sc_longest_procrastination);
-			// Top Scores
-			Set (UserData.sc_total_as_percent_of_dev);
-			// Achievements
-			Set (UserData.ach_ameteur_crastinator);
-			Set (UserData.ach_time_waster);
-			Set (UserData.ach_overtime);
-			Set (UserData.ach_semi_pro);
-			Set (UserData.ach_apathetic);
-			Set (UserData.ach_pro_crastinator);
-			Set (UserData.gd_has_played_before);
+
+			foreach (UserData key in System.Enum.GetValues(typeof(UserData)))
+			{
+				Set (key);
+			}
+//			Set (UserData.gd_current_session);
+//			Set (UserData.gd_current_procrastination);
+//			Set (UserData.gd_total_time_Wasted);
+//			Set (UserData.sc_longest_procrastination);
+//			// Top Scores
+//			Set (UserData.sc_total_as_percent_of_dev);
+//			// Achievements
+//			Set (UserData.ach_ameteur_crastinator);
+//			Set (UserData.ach_time_waster);
+//			Set (UserData.ach_overtime);
+//			Set (UserData.ach_semi_pro);
+//			Set (UserData.ach_apathetic);
+//			Set (UserData.ach_pro_crastinator);
+//			Set (UserData.gd_has_played_before);
 			currentVersion = v0_3_6;
 		}
 		
