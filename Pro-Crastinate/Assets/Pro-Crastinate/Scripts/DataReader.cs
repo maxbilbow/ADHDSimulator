@@ -94,13 +94,13 @@ namespace Procrastinate
 
 		public Wychd GetActivityList(float forTime) {
 			Wychd list = new Wychd ();
-			try {
-				foreach (Wychd thing in GetActivities(forTime)) {
-					list.Add (thing[csv_text]);
+			foreach (List<string> thing in GetActivities(forTime)) {
+				try {
+					list.Add (thing [csv_text]);
+				} catch (Exception e) {
+					if (Bugger.WillLog (Testing.Exceptions, thing + " :: " + e.ToString ()))
+						Debug.Log (Bugger.Last);
 				}
-			} catch (Exception e) {
-				if (Bugger.WillLog(Testing.Exceptions, e.ToString()))
-					Debug.Log(Bugger.Last);
 			}
 			return list;
 		}
