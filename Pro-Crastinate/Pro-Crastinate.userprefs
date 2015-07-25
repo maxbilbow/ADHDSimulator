@@ -1,8 +1,21 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../aiCunity/UnityProject/Assets/Max Scripts/RMXMasterControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/DragRigidbody.cs">
     <Files>
-      <File FileName="../../aiCunity/UnityProject/Assets/Max Scripts/RMXMasterControl.cs" Line="18" Column="22" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/Settings.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/RMXUnity/ASingleton.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/DragRigidbody.cs" Line="134" Column="36" />
+      <File FileName="Assets/Plugins/RMXUnity/SavedData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/Version.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/RMXUnity/Bugger.cs" Line="151" Column="103" />
+      <File FileName="Assets/Plugins/RMXUnity/Notifications.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="291" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/ClockSpawner.cs" Line="121" Column="41" />
+      <File FileName="Assets/Plugins/GKAchievementReporter/GKAchievementReporter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/RMXUnity/TextFomatter.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/DebugHUD.cs" Line="54" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

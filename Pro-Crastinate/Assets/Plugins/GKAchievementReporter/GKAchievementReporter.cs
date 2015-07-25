@@ -1,5 +1,5 @@
 ﻿using System.Runtime.InteropServices;
-
+using RMX;
 namespace UnityEngine.SocialPlatforms {
 
 	/// <summary>
@@ -18,9 +18,15 @@ namespace UnityEngine.SocialPlatforms {
 				_ReportAchievement(achievementID, progress, showsCompletionBanner);
 
 			} else {
-
 				// Otherwise trust the Unity Social API
-				Social.ReportProgress(achievementID, progress, null);
+				Social.ReportProgress(achievementID, progress, success => {
+					if (!success) {
+						var message = achievementID + " Not Found";
+						if (Bugger.WillLog(Testing.Exceptions,message) || Bugger.WillLog(Testing.GameCenter,message) )
+							Debug.Log(Bugger.Last);
+					}
+				});
+
 			}
 		}
 

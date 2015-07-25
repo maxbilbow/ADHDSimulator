@@ -80,7 +80,7 @@ namespace Procrastinate {
 
 
 			} else {
-				userInfo += "Authentication already completed\n";
+				userInfo += "Authentication already completed";
 			}
 			if (Bugger.WillLog(Testing.GameCenter, userInfo))
 				Debug.Log (Bugger.Last);
@@ -102,10 +102,10 @@ namespace Procrastinate {
 			if (UserAuthenticated && score > 0) {
 				string leaderboardID = UniqueID [data];
 				var log = ""; var feature = Testing.GameCenter;
-				log += "Reporting score " + score + " on leaderboard " + leaderboardID + "\n";
+				log += "Reporting score " + score + " on leaderboard " + leaderboardID;
 				try {
 					Social.ReportScore (score, leaderboardID, success => {
-						log += success ? "Reported score successfully" : "Failed to report score";	
+						log += success ? ": Reported score successfully" : ": Failed to report score";	
 					});
 				} catch (System.Exception e) {
 					log += e;
@@ -223,7 +223,7 @@ namespace Procrastinate {
 		const double EVENT_BASED_ACHIEVEMENT = -1;
 		public void ReportProgress(UserData data) {
 			var achieved = SavedData.Get<bool> (data);
-			var log = Bugger.StartNewLog (Testing.Achievements, "Reporting Progress: " + achieved + "\n");
+			var log = "Reporting Progress: " + achieved; var feature = Testing.Achievements;
 
 			float progress = achieved ? 100 : 0;
 
@@ -236,72 +236,59 @@ namespace Procrastinate {
 				#if UNITY_IOS || UNITY_STANDALONE_OSX
 				try {
 					GKAchievementReporter.ReportAchievement(UniqueID[data], progress, true);
-					log.message += "\n => SUCCESS";
+					log += "\n => SUCCESS";
 				} catch (Exception e){
-					if (log.isActive) 
-						Debug.Log(log);
-					log.feature = Testing.Exceptions;
-					log.message += e.Message;
-					if (log.isActive) 
-						Debug.Log(log);
-					log.feature = Testing.Achievements;
+					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
+						Debug.Log(Bugger.Last);
 				}
 				#else
 				try {
 					Social.ReportProgress (UniqueID[data], progress, result => {
-						log.message += ", result: " + result;
+						log += ", result: " + result;
 						if (result) {
-							log.message += "\n => SUCCESS";
+							log += "\n => SUCCESS";
 						} else {
-							log.message += "\n => Achievement Failed to report";
+							log += "\n => Achievement Failed to report";
 						}
 					});
 				} catch (Exception e){
-					if (log.isActive) 
-						Debug.Log(log);
-					log.feature = Testing.Exceptions;
-					log.message += e.Message;
-					if (log.isActive) 
-						Debug.Log(log);
-					log.feature = Testing.Achievements;
+					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
+						Debug.Log(Bugger.Last);
 				}
 				#endif
-				log.message += "\n New status isCompleted: " + progress;
+				log += " - New status isCompleted: " + progress;
 				
 			}
-			if (log.isActive)
-				Debug.Log(log);
+			if (Bugger.WillLog(feature,log) )
+				Debug.Log(Bugger.Last);
 
 		}
 
 		bool CheckAchievementsWithGameCenter(UserData key) {
 			var achievementID = UniqueID [key];
 			var isComplete = false;
-			var log = Bugger.StartNewLog(Testing.Achievements);
+			var log = "";
 			if (UserAuthenticated) { //TODO: Check this works
 				try {
 					Social.LoadAchievements (achievements => {
 						if (achievements.Length > 0) {
-							log.message += "Got " + achievements.Length + " achievement instances:\n";
+							log += "Got " + achievements.Length + " achievement instances: ";
 							foreach (IAchievement achievement in achievements) {
 								if ( achievement.id == achievementID) {
 									isComplete = achievement.completed || achievement.percentCompleted == 100;
-									log.message += "Achievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed + "\n";
+									log += "\nAchievement " + achievement.id + ", progresss: " + achievement.percentCompleted + ", complete: " + achievement.completed;
 									break;
 								}
 							}
 						} else {
-							if (log.isActive) 
-								Debug.Log (log);
+							if (Bugger.WillLog(Testing.GameCenter,log) )
+								Debug.Log(Bugger.Last);
 							throw new System.ArgumentException ("No achievements returned");
 						}
 					});
-				} catch (System.ArgumentException exception) {
-					log.message += exception.Message;
-					log.feature = Testing.Exceptions;
-					if (log.isActive)
-						Debug.Log (log);
-					log.feature = Testing.Achievements;
+				} catch (System.ArgumentException e) {
+					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.GameCenter,e.Message) )
+						Debug.Log(Bugger.Last);
 				}
 			}
 			return isComplete;

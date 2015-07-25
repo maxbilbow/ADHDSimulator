@@ -50,6 +50,8 @@ using RMX;  namespace Procrastinate {
 				info += GetTime(UserData.gd_current_procrastination);
 				info += GetTime(UserData.gd_current_session);
 				info += GetTime(UserData.gd_total_time_Wasted);
+				info += "\nClockSpawnMode: " + Settings.current.ClockSpawnMode;
+				info += "\n" + DragRigidbody.current;
 
 				GUIStyle style = new GUIStyle ();
 //				style.fontSize = 50;

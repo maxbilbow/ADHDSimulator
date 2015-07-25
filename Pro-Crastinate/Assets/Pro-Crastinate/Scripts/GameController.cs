@@ -28,7 +28,7 @@ namespace Procrastinate {
 
 		protected override void StartSingletons() {
 			Settings.Initialize ();
-			Bugger.Initialize ();
+//			Bugger.Initialize ();
 			GameCenter.Initialize ();
 			GameData.Initialize ();
 			DataReader.Initialize ();
@@ -36,7 +36,7 @@ namespace Procrastinate {
 			DragRigidbody.Initialize ();
 			ClockSpawner.Initialize ();
 			PauseCanvas.Initialize ();
-			Notifications.Initialize ();
+//			Notifications.Initialize ();
 			PauseCanvas.Initialize ();
 
 		}

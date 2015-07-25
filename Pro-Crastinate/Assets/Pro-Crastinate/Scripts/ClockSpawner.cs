@@ -83,9 +83,8 @@ using RMX;  namespace Procrastinate {
 						return pos;
 					}
 				} catch (System.Exception e) {
-					var log = Bugger.StartNewLog(Testing.Exceptions,e.Message);
-					if (log.isActive)
-						Debug.Log(log);
+					if (Bugger.WillLog(Testing.Exceptions,e.Message))
+						Debug.Log(Bugger.Last);
 				} finally {
 					pos = ClockBehaviour.original.startingPoint;
 					pos.y += ClockBehaviour.original.collisionBody.radius * 2;
@@ -120,8 +119,6 @@ using RMX;  namespace Procrastinate {
 				} else
 					Settings.current.ClockSpawnMode = SpawnMode.Inflate;
 				ClockBehaviour.CheckVisibleClocks();
-			if (Bugger.WillLog (Testing.EventCenter, theEvent.ToString() + " DidEnd!"))
-				Debug.Log (Bugger.Last);
 		}
 
 	}
