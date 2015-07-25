@@ -165,7 +165,7 @@ using RMX;  namespace Procrastinate {
 	
 			if (result) {// && result != SavedData.Get (key).Bool) { 
 				Notifications.EventDidOccur (Events.GC_AchievementGained, key);
-//				SavedData.Get(key).Bool = true;
+				SavedData.Get(key).Bool = true;
 				return true;
 			} else {
 				return false; 
