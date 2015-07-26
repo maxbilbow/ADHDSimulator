@@ -17,17 +17,18 @@ namespace RMX
 
 
 
-	public interface ISingleton {
-		string name { get; }
+	public interface ISingleton: IRMXObject {
 //		ISingleton Singleton { get; set; }
 		bool Destroyed { get; }
 		GameObject gameObject { get; }
+
 	}
 
 
 
 
 	public static class Singletons {
+
 
 //		static bool _gameControllerInitialized = false;
 		public static bool GameControllerInitialized {
@@ -118,7 +119,7 @@ namespace RMX
 						var parent = Singletons.GameController.gameObject;
 						aSingleton.gameObject.transform.SetParent (parent.transform);
 					}
-	
+
 					return aSingleton as T;
 				} 
 			}
@@ -153,8 +154,8 @@ namespace RMX
 				if (_singleton == null) {
 					DontDestroyOnLoad (gameObject);
 					_singleton = this as T;// as T;
-
 					MainInitCheck();
+					Bugger.AddToWatchList(this);
 					base.Awake();
 				} 
 				else if (_singleton != this) {

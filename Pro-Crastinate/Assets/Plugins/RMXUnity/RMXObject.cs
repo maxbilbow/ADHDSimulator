@@ -9,7 +9,13 @@ namespace RMX {
 		void OnValueForKeyWillChange(string key, object value);
 		void OnValueForKeyDidChange(string key, object value);
 	}
-	public class RMXObject : MonoBehaviour, KeyValueObserver, EventListener {
+
+	
+	public interface IRMXObject : KeyValueObserver, EventListener {
+		bool isListening { get; }
+	
+	}
+	public class RMXObject : MonoBehaviour, IRMXObject {
 
 	 	Dictionary<string, object> values = new Dictionary<string, object> ();
 		List<KeyValueObserver> observers = new List<KeyValueObserver> ();
@@ -31,10 +37,24 @@ namespace RMX {
 			}
 		}
 
+		bool _isListening = false;
+
+		public bool isListening {
+			get {
+				return _isListening;
+			}
+		}
 
 		protected virtual void Awake() {
-			if (AddToGlobalListeners)
-				NotificationCenter.AddListener(this);
+			if (AddToGlobalListeners) {
+				NotificationCenter.AddListener (this);
+				_isListening = true;
+			}
+		}
+
+		protected void StopListening(){
+			NotificationCenter.RemoveListener (this);
+			_isListening = false;
 		}
 
 //		protected virtual void OnDestroy() {

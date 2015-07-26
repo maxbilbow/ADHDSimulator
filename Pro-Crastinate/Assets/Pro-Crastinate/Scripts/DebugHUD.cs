@@ -21,16 +21,19 @@ using RMX;  namespace Procrastinate {
 			get {
 				string info = "DEBUG =>";
 				foreach (KeyValuePair<UserData,string> data in GameCenter.UniqueID) {
-					var val = data.Key == UserData.sc_longest_procrastination ? GetTime (data.Key)
-					: SavedData.Get<string> (data.Key).Length == 0 ? "False" 
-						: SavedData.Get<string> (data.Key);
-					info += "\n – " + data.Key.ToString () + ": " + val;
+					if (data.Key.ToString().StartsWith("ach_")) {
+						var val = data.Key == UserData.sc_longest_procrastination ? GetTime (data.Key)
+							: SavedData.Get<string> (data.Key).Length == 0 ? "False" 
+							: SavedData.Get<string> (data.Key);
+
+						info += "\n – " + data.Key.ToString () + ": " + val;
+					}
 				}
 				info += GetTime (UserData.gd_current_procrastination);
 				info += GetTime (UserData.gd_current_session);
 				info += GetTime (UserData.gd_total_time_Wasted);
 				info += "\nClockSpawnMode: " + GameController.current.ClockSpawnMode;
-				info += "\n" + DragRigidbody.current;
+//				info += "\n" + DragRigidbody.current;
 				return info;
 			}
 

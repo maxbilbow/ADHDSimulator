@@ -85,35 +85,18 @@ namespace RMX
 
 		public static List<string> Queue = new List<string>();
 		private static List<Log> _lateLogs = new List<Log> ();
-	
-//		bool _setupComplete = false;
-//		protected override bool SetupComplete {
-//			get {
-//				return _setupComplete;
-//			}
-//		}
+	 	static List<ISingleton> singletons = new List<ISingleton>();
+		static List<IRMXObject> watchList = new List<IRMXObject> ();
 
+		public static void AddToWatchList(IRMXObject o) {
+			if (Singletons.GameController.BuildForRelease)
+				return;
+			else if (o is ISingleton)
+				singletons.Add (o as ISingleton);
+			else
+				watchList.Add (o);
+		}
 
-//		void Start() {
-//			if (!Singletons.SettingsInitialized)
-//				Debug.LogError ("Setting MUST be initialized before Bugger");
-//			_setupComplete = true;
-//
-//			if (Singletons.Settings.IsDebugging(Testing.EarlyInits))
-//				foreach (Log log in _lateLogs) {
-//					try {
-//						if (settings.IsDebugging(log.feature)) {
-//							var message = TextFormatter.Format(  ": _LATE_ " + log.message);
-//							Debug.Log(new Log(log.feature, message));
-//						}
-//					} catch (Exception e) {
-//						Debug.LogWarning(e.Message);
-//					}
-//				}
-//			_lateLogs.Clear ();
-//			_lateLogs = null;
-//
-//		}
 
 		static void LateLogs() {
 			if (Singletons.GameController.IsDebugging(RMXTests.EarlyInits))
@@ -298,18 +281,25 @@ namespace RMX
 
 
 			protected abstract string DebugData { get; }
+
+			protected bool listSingletons = true; 
+			protected bool listObjects = false; 
 			
 			// Update is called once per frame
 			void OnGUI() {
 				if (_show) {
+					var text = DebugData;
 					GUIStyle style = new GUIStyle ();
 					//				
+					foreach (ISingleton s in singletons) {
+						text += "\n" + s.name + ", isListening: " + s.isListening;
+					}
 					style.richText = true;
 					style.wordWrap = true;
 					style.alignment = TextAnchor.UpperRight;
 					style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 20;
 					//				style.border
-					GUI.Label (new Rect (0, 0, Screen.width, Screen.height), TextFormatter.Format(DebugData,Time.timeScale == 0 ? "black" : "white"), style);
+					GUI.Label (new Rect (0, 0, Screen.width, Screen.height), TextFormatter.Format(text,Time.timeScale == 0 ? "black" : "white"), style);
 					
 				}
 			}
