@@ -16,29 +16,27 @@ namespace RMX {
 	
 	public static class SavedData {
 
-		static object String(string key) {
+		static string String(string key) {
 			return PlayerPrefs.HasKey(key) ? PlayerPrefs.GetString (key) : "";
 		}
 		
-		static object Long(string key) {
+		static long Long(string key) {
 			try {
-				return PlayerPrefs.HasKey(key) ? (long) float.Parse(PlayerPrefs.GetString (key)) : (long) -1;
+				return PlayerPrefs.HasKey(key) ? (long) float.Parse(PlayerPrefs.GetString (key)) : (long) -1L;
 			} catch (System.Exception e){
-				Debug.LogError(e);
 				if (Bugger.WillLog(RMXTests.Exceptions,e.Message))
 					Debug.Log(Bugger.Last);
-				return (long) -1;
+				return (long) -1L;
 			}
 		}
 
-		static object Double(string key) {
+		static double Double(string key) {
 			try {
-				return PlayerPrefs.HasKey(key) ? (double) float.Parse(PlayerPrefs.GetString (key)) : (double) -1;
+				return PlayerPrefs.HasKey(key) ? (double) float.Parse(PlayerPrefs.GetString (key)) : (double) -1d;
 			} catch (System.Exception e){
-				Debug.LogError(e);
 				if (Bugger.WillLog(RMXTests.Exceptions,e.Message))
 					Debug.Log(Bugger.Last);
-				return (double) -1;
+				return (double) -1d;
 			}
 		}
 
@@ -48,17 +46,17 @@ namespace RMX {
 		where T : System.IEquatable<T>
 		{
 			if (typeof(T) == typeof(bool))
-				return (T) Bool (key);
+				return (T)(object) Bool (key);
 			if (typeof(T) == typeof(float))
-				return (T) Float (key);
+				return (T)(object) Float (key);
 			if (typeof(T) == typeof(int))
-				return (T)Int (key);
+				return (T)(object) Int (key);
 			if (typeof(T) == typeof(long))
-				return (T)Long (key);
+				return (T)(object) Long (key);
 			if (typeof(T) == typeof(double))
-				return (T)Double (key);
+				return (T)(object) Double (key);
 			if (typeof(T) == typeof(string))
-				return (T) String (key);
+				return (T)(object) String (key);
 			throw new System.Exception (typeof(T).Name + " was not recognised");
 		}
 
@@ -76,11 +74,11 @@ namespace RMX {
 			PlayerPrefs.SetString(key.ToString(), value ? TRUE : FALSE);
 		}
 
-		static object Int(string key) {
+		static int Int(string key) {
 			try {
 				return PlayerPrefs.HasKey(key) ? int.Parse(PlayerPrefs.GetString (key)) : (int) -1;
 			} catch (System.Exception e){
-				Debug.LogError(e);
+//				Debug.LogWarning(e.Message);
 				if (Bugger.WillLog(RMXTests.Exceptions,e.Message))
 					Debug.Log(Bugger.Last);
 				return (int) -1;
@@ -92,14 +90,14 @@ namespace RMX {
 		}
 
 
-		public static object Float(string key) {
+		public static float Float(string key) {
 			try {
-				return PlayerPrefs.HasKey(key) ? float.Parse(PlayerPrefs.GetString (key)) : (float) -1;
+				return PlayerPrefs.HasKey(key) ? float.Parse(PlayerPrefs.GetString (key)) : (float) -1f;
 			} catch (System.Exception e){
-				Debug.LogError(e);
+//				Debug.LogWarning(e.Message);
 				if (Bugger.WillLog(RMXTests.Exceptions,e.Message))
 				    Debug.Log(Bugger.Last);
-				return (float) -1;
+				return (float) -1f;
 			}
 		}
 		
