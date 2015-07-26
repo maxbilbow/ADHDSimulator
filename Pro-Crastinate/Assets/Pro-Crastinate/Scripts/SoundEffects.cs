@@ -55,10 +55,10 @@ namespace Procrastinate {
 			if (theEvent.Equals(Event.SomethingBurst))
 				Play (POP);
 
-#if !DEBUG
-			if (theEvent.IsType (Events.GC_AchievementGained)) 
+//#if !DEBUG
+			if (theEvent.Equals (RMX.Event.GC_AchievementGained)) 
 				SwitchMainTrack(true);	 
-#endif
+//#endif
 		}
 
 		void SwitchMainTrack(bool force = false) {
