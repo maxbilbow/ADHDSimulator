@@ -41,7 +41,7 @@ namespace Procrastinate {
 					try {
 						var successInGC = CheckAchievementsWithGameCenter (id.Key);
 						if (successInSD != successInGC) 
-							DidCauseEvent (Events.GC_AchievementGained, id.Key);
+							DidCauseEvent (RMX.Event.GC_AchievementGained, id.Key);
 						log += " => " + id.Key + " SD: " + successInSD + ", GC: " + successInGC + "\n";
 					
 					} catch {
@@ -58,20 +58,20 @@ namespace Procrastinate {
 //			}
 		}
 
-		public override void OnEventDidStart(IEvent theEvent, object info) {
-			if (theEvent.IsType(Events.PauseSession))
+		public override void OnEventDidStart(System.Enum theEvent, object info) {
+			if (theEvent.Equals(RMX.Event.PauseSession))
 				Authenticate ();
 		}
 
-		public override void OnEventDidEnd(IEvent theEvent, object info) {
-			if (theEvent.IsType(Events.PauseSession)) {
+		public override void OnEventDidEnd(System.Enum theEvent, object info) {
+			if (theEvent.Equals(RMX.Event.PauseSession)) {
 				UpdateGameCenterAchievements ();
 				ReportScore(SavedData.Get<long>(UserData.gd_current_procrastination), UserData.sc_longest_procrastination);
 			} 
 		}
 
-		public override void OnEvent(IEvent theEvent, object info) {
-			if (theEvent.IsType (Events.GC_AchievementGained))
+		public override void OnEvent(System.Enum theEvent, object info) {
+			if (theEvent.Equals (RMX.Event.GC_AchievementGained))
 				if (info is UserData) {
 					var key = (UserData)info;
 					SavedData.Set (key, true);
@@ -84,16 +84,16 @@ namespace Procrastinate {
 		void Authenticate() {
 			string userInfo = "";
 			if (!UserAuthenticated) {
-				WillBeginEvent(Events.GC_UserAuthentication);
+				WillBeginEvent(RMX.Event.GC_UserAuthentication);
 				Social.localUser.Authenticate (success => {
 					if (success) {
-						DidFinishEvent (Events.GC_UserAuthentication, EventStatus.Success);
+						DidFinishEvent (RMX.Event.GC_UserAuthentication, EventStatus.Success);
 						userInfo += "Authentication successful";
 						userInfo += "\nUsername: " + Social.localUser.userName + 
 							"\nUser ID: " + Social.localUser.id + 
 							"\nIsUnderage: " + Social.localUser.underage;
 					} else {
-						DidFinishEvent (Events.GC_UserAuthentication, EventStatus.Failure);
+						DidFinishEvent (RMX.Event.GC_UserAuthentication, EventStatus.Failure);
 						userInfo += "Authentication failed";
 					}
 				});
@@ -191,7 +191,7 @@ namespace Procrastinate {
 			}
 	
 			if (result) {// && result != SavedData.Get (key).Bool) { 
-				NotificationCenter.EventDidOccur (Events.GC_AchievementGained, key);
+				NotificationCenter.EventDidOccur (RMX.Event.GC_AchievementGained, key);
 				SavedData.Set(key, true);
 				return true;
 			} else {
@@ -204,7 +204,7 @@ namespace Procrastinate {
 
 		static bool UserAuthenticated {
 			get {
-				return NotificationCenter.StatusOf(Events.GC_UserAuthentication) == EventStatus.Success;
+				return NotificationCenter.StatusOf(RMX.Event.GC_UserAuthentication) == EventStatus.Success;
 			}
 		}
 

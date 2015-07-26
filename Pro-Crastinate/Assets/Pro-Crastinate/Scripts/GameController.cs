@@ -96,6 +96,12 @@ namespace Procrastinate {
 			}
 		}
 
+		void OnApplicationPause(bool pause) {
+			if (pause) {
+				PauseGame (true, null);
+			}
+		}
+
 		public static void CheckForAnomalies() {
 			ClockBehaviour.CheckVisibleClocks ();
 		}
@@ -112,13 +118,13 @@ namespace Procrastinate {
 
 		public override void PauseGame(bool pause, object args = null) {
 			if (pause) {
-				WillBeginEvent (Events.PauseSession, args);
+				WillBeginEvent (RMX.Event.PauseSession, args);
 				Time.timeScale = 0;
-				DidFinishEvent (Events.PauseSession, args);
+				DidFinishEvent (RMX.Event.PauseSession, args);
 			} else {
-				WillBeginEvent(Events.ResumeSession, args);
+				WillBeginEvent(RMX.Event.ResumeSession, args);
 				Time.timeScale = 1;
-				DidFinishEvent(Events.ResumeSession, args);
+				DidFinishEvent(RMX.Event.ResumeSession, args);
 			}
 
 		}

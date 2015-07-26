@@ -13,6 +13,10 @@ using RMX;  namespace Procrastinate {
 			return "\n – " + key.ToString () + ": <color=yellow>" + timeString + "</color>";
 		}
 
+		void Start() {
+			Show ();
+		}
+
 		protected override string DebugData {
 			get {
 				string info = "DEBUG =>";

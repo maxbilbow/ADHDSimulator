@@ -43,16 +43,16 @@ namespace Procrastinate {
 			current.tracks [name.ToLower ()].Play (delay);
 		}
 
-		public override void OnEventDidStart(IEvent theEvent, object info) {
-			if (theEvent.IsType(Events.ClockIsAboutToBurst))
+		public override void OnEventDidStart(System.Enum theEvent, object info) {
+			if (theEvent.Equals(Event.ClockIsAboutToBurst))
 				tracks ["poppy1"].Play ();
-			else if (theEvent.IsType(Events.PauseSession))
+			else if (theEvent.Equals(RMX.Event.PauseSession))
 				if (info == null || (Args) info != Args.MusicKeepsPlaying)
 					tracks["music"].Pause();
 		}
 
-		public override void OnEvent(IEvent theEvent, object info) {
-			if (theEvent.IsType(Events.SomethingBurst))
+		public override void OnEvent(System.Enum theEvent, object info) {
+			if (theEvent.Equals(Event.SomethingBurst))
 				Play (POP);
 
 #if !DEBUG
@@ -70,10 +70,10 @@ namespace Procrastinate {
 				tracks [SOMETHING].Pause ();
 			}
 		}
-		public override void OnEventDidEnd(IEvent theEvent, object info) {
-			if (theEvent.IsType (Events.ClockIsAboutToBurst))
+		public override void OnEventDidEnd(System.Enum theEvent, object info) {
+			if (theEvent.Equals (Event.ClockIsAboutToBurst))
 				tracks ["poppy2"].PlayDelayed (1);
-			else if (theEvent.IsType (Events.ResumeSession)) {
+			else if (theEvent.Equals (RMX.Event.ResumeSession)) {
 				SwitchMainTrack();
 			}
 		}
