@@ -19,13 +19,14 @@ namespace UnityEngine.SocialPlatforms {
 			} else {
 				// Otherwise trust the Unity Social API
 
-				Social.ReportProgress(achievementID, progress, success => {
-					if (!success) {
-						var message = achievementID + " Not Found";
-						if (Bugger.WillLog(RMXTests.Exceptions,message) || Bugger.WillLog(RMXTests.GameCenter,message) )
-							Debug.Log(Bugger.Last);
-					}
-				});
+				Social.ReportProgress(achievementID, progress, null );
+//				success => {
+//					if (!success) {
+//						var message = achievementID + " Not Found";
+//						if (Bugger.WillLog(RMXTests.Exceptions,message) || Bugger.WillLog(RMXTests.GameCenter,message) )
+//							Debug.Log(Bugger.Last);
+//					}
+//				});
 
 			}
 		}

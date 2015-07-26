@@ -225,7 +225,7 @@ namespace Procrastinate {
 					GKAchievementReporter.ReportAchievement(UniqueID[data], progress, true);
 					log += " => SUCCESS";
 				} catch (Exception e){
-					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
+					if (Bugger.WillLog(RMXTests.Exceptions,e.Message) || Bugger.WillLog(RMXTests.Achievements,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 				#else
