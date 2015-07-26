@@ -6,7 +6,7 @@ namespace RMX {
 
 
 
-	public static class Notifications {
+	public static class NotificationCenter {
 		static Dictionary<string,EventListener> _listeners = new Dictionary<string,EventListener> ();
 
 		static Dictionary<string,EventListener> Listeners {

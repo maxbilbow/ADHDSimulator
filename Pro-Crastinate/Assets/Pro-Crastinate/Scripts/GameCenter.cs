@@ -191,7 +191,7 @@ namespace Procrastinate {
 			}
 	
 			if (result) {// && result != SavedData.Get (key).Bool) { 
-				Notifications.EventDidOccur (Events.GC_AchievementGained, key);
+				NotificationCenter.EventDidOccur (Events.GC_AchievementGained, key);
 				SavedData.Set(key, true);
 				return true;
 			} else {
@@ -204,7 +204,7 @@ namespace Procrastinate {
 
 		static bool UserAuthenticated {
 			get {
-				return Notifications.StatusOf(Events.GC_UserAuthentication) == EventStatus.Success;
+				return NotificationCenter.StatusOf(Events.GC_UserAuthentication) == EventStatus.Success;
 			}
 		}
 

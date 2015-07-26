@@ -63,11 +63,34 @@ namespace RMX {
 			
 		}
 
+		/// <summary>
+		/// Do at beginnig of Start block
+		/// </summary>
 		protected virtual void PreStart () {}
+
+		/// <summary>
+		/// Do at end of Start block
+		/// </summary>
 		protected virtual void PostStart () {}
+
+		/// <summary>
+		/// Initialise any additional singletons here, especially if they are essential to the workings of your game
+		/// </summary>
 		protected abstract void StartSingletons ();
+
+		/// <summary>
+		/// Initialise any Destop specific settings here
+		/// </summary>
 		protected abstract void StartDesktop ();
+
+		/// <summary>
+		/// Initialise any Mobile specific settings here
+		/// </summary>
 		protected abstract void StartMobile ();
+
+		/// <summary>
+		/// Initiate any pre-load update patches here.
+		/// </summary>
 		public abstract void Patch ();
 		
 		

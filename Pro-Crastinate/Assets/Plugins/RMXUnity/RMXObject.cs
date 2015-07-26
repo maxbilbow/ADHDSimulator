@@ -34,7 +34,7 @@ namespace RMX {
 
 		protected virtual void Awake() {
 			if (AddToGlobalListeners)
-				Notifications.AddListener(this);
+				NotificationCenter.AddListener(this);
 		}
 
 //		protected virtual void OnDestroy() {
@@ -42,35 +42,35 @@ namespace RMX {
 //		}
 
 		protected void WillBeginEvent(IEvent theEvent){
-			Notifications.EventWillStart (theEvent);
+			NotificationCenter.EventWillStart (theEvent);
 		}
 
 		protected void DidUpdateEvent(IEvent theEvent) {
-			Notifications.EventWillStart (theEvent);
+			NotificationCenter.EventWillStart (theEvent);
 		}
 
 		protected void DidFinishEvent(IEvent theEvent){
-			Notifications.EventDidEnd (theEvent);
+			NotificationCenter.EventDidEnd (theEvent);
 		}
 
 		protected void DidCauseEvent(IEvent theEvent){
-			Notifications.EventDidOccur (theEvent);
+			NotificationCenter.EventDidOccur (theEvent);
 		}
 
 		protected void WillBeginEvent(IEvent theEvent, object info){
-			Notifications.EventWillStart (theEvent, info);
+			NotificationCenter.EventWillStart (theEvent, info);
 		}
 		
 		protected void DidUpdateEvent(IEvent theEvent, object info) {
-			Notifications.EventWillStart (theEvent, info);
+			NotificationCenter.EventWillStart (theEvent, info);
 		}
 		
 		protected void DidFinishEvent(IEvent theEvent, object info){
-			Notifications.EventDidEnd (theEvent, info);
+			NotificationCenter.EventDidEnd (theEvent, info);
 		}
 
 		protected void DidCauseEvent(IEvent theEvent, object info){
-			Notifications.EventDidOccur (theEvent, info);
+			NotificationCenter.EventDidOccur (theEvent, info);
 		}
 
 		protected void WillChangeValueForKey(string key){
