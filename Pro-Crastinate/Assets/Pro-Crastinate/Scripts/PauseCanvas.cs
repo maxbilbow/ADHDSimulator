@@ -145,24 +145,22 @@ namespace Procrastinate {
 //			GameController.current.PauseGame(paused);
 //		}
 
-		string _wychd = "error";
-		string _timeText = "error";
+		string _wychd;
+
 		void Update () {
 			canvas.enabled = GameController.current.isPaused;
 		}
 		//		bool newSession = true;
 		void OnGUI(){
 			if (canvas.enabled) {
-				string text = "";
-				if (!information) {
-					text = _timeText + _wychd;
-					//				myStyle.font = myFont;
-				} else {
-					text =  
-						"In total you've only managed to waste " + string.Format("{0:N2}%",GameData.current.PercentageOfDevTimeWasted) + 
+				if (_wychd == null) {// && _timeText == null) {
+					GameController.current.PauseGame (false, null);
+					Debug.LogWarning("timeText not initialized - game unpaused");
+				}
+
+				string text = !information ? _wychd : "In total you've only managed to waste " + string.Format("{0:N2}%",GameData.PercentageOfDevTimeWasted) + 
 							"\n of the time I've lost developing this game." +
 							"\n\n Try again?";
-				}
 				GUIStyle style = new GUIStyle ();
 				style.fontSize = 50;
 				style.richText = true;
@@ -184,23 +182,23 @@ namespace Procrastinate {
 				canvas.enabled = true;
 				var time = SavedData.Get<float> (
 					GameController.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
-				var activities = GameData.current.WhatYouCouldHaveDone (time);
+				var activities = GameData.WhatYouCouldHaveDone (time);
 
 				if (GameController.current.willPauseOnLoad) {
-					_timeText = "Congratulations. During your last session, you wasted ";
+					_wychd = "Congratulations. During your last session, you wasted ";
 					GameController.current.willPauseOnLoad = false;
 				} else {
-					_timeText = "Congratulations. You have wasted ";
+					_wychd = "Congratulations. You have wasted ";
 				}
 
-				_timeText += TextFormatter.TimeDescription (time);
+				_wychd += TextFormatter.TimeDescription (time);
 
 				if (GameController.current.newPersonalBest) {
-					_timeText += "\nA NEW PERSONAL BEST!";
+					_wychd += "\nA NEW PERSONAL BEST!";
 					GameController.current.newPersonalBest = false;
 				}
 
-				_wychd = "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
+				_wychd += "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
 
 			} else if (theEvent.IsType(Events.ResumeSession)) {
 				canvas.enabled = false;
