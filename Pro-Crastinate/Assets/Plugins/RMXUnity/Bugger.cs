@@ -224,7 +224,7 @@ namespace RMX
 					if (Singletons.GameController.BuildForRelease) {
 						NotificationCenter.RemoveListener(this);
 						Destroy(this);
-						DestroyImmediate(gameObject);
+						Destroy(gameObject);
 						return false;
 					} else {
 						return true;
@@ -264,7 +264,7 @@ namespace RMX
 					if (Singletons.GameController.BuildForRelease) {
 						NotificationCenter.RemoveListener(this);
 						Destroy(this);
-						DestroyImmediate(gameObject);
+						Destroy(gameObject);
 						return false;
 					} else {
 						return true;

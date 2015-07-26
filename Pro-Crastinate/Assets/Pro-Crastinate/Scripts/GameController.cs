@@ -150,7 +150,9 @@ namespace Procrastinate {
 		}
 
 		public override bool IsDebugging(System.Enum feature) {
-			if (feature.Equals(Tests.GameDataLists))
+			if (_buildForRelease)
+				return false;
+			else if (feature.Equals(Tests.GameDataLists))
 				return DebugGameDataLists;
 			else 
 				return base.IsDebugging (feature);

@@ -107,7 +107,8 @@ namespace RMX
 				if (IsInitialized) 
 					return _singleton;
 				else {
-					var aSingleton = new GameObject (tempName).AddComponent<T> ();
+					var go = new GameObject(tempName);
+					ISingleton aSingleton = go.AddComponent<T> ();
 					if (aSingleton == null || (aSingleton as ISingleton).Destroyed) {
 						return null;
 					}
@@ -118,7 +119,7 @@ namespace RMX
 						aSingleton.gameObject.transform.SetParent (parent.transform);
 					}
 	
-					return aSingleton;
+					return aSingleton as T;
 				} 
 			}
 
@@ -144,8 +145,10 @@ namespace RMX
 			/// Otherwise it checks whether the EventListener methods have been overriden. If so, the object is added to the global EventListeners.
 			/// </summary>
 			protected override void Awake() {
-				if (!WillInitialize)
+				if (!WillInitialize) {
+					_destroyed = true;
 					return;
+				}
 				var message = "__new__ <color=lightblue>" + this.GetType().Name + "</color>()";
 				if (_singleton == null) {
 					DontDestroyOnLoad (gameObject);

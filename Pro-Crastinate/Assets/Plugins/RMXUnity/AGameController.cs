@@ -127,8 +127,9 @@ namespace RMX {
 		/// <returns><c>true</c> if this instance is debugging the specified feature; otherwise, <c>false</c>.</returns>
 		/// <param name="feature">Feature.</param>
 		public virtual bool IsDebugging(System.Enum feature){
-//			var feature = aTest.ToString ();
-			if (feature.Equals(RMXTests.Misc))
+			if (_buildForRelease)
+				return false;
+			else if (feature.Equals(RMXTests.Misc))
 				return DebugMisc;
 			else if (feature.Equals(RMXTests.GameCenter))
 				return DebugGameCenter;
