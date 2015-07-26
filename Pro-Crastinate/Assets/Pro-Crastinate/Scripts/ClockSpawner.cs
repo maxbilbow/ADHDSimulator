@@ -83,7 +83,7 @@ using RMX;  namespace Procrastinate {
 						return pos;
 					}
 				} catch (System.Exception e) {
-					if (Bugger.WillLog(Testing.Exceptions,e.Message))
+					if (Bugger.WillLog(RMXTests.Exceptions,e.Message))
 						Debug.Log(Bugger.Last);
 				} finally {
 					pos = ClockBehaviour.original.startingPoint;

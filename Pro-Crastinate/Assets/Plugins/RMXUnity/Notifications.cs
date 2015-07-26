@@ -38,7 +38,7 @@ namespace RMX {
 
 		public static void AddListener(EventListener listener) {
 			Listeners[listener.GetType().Name] = listener;
-			if (Bugger.WillLog (Testing.EventCenter, listener.GetType () + " was added to Listeners ("+ Listeners.Count + ")"))
+			if (Bugger.WillLog (RMXTests.EventCenter, listener.GetType () + " was added to Listeners ("+ Listeners.Count + ")"))
 				Debug.Log (Bugger.Last);
 //			if (Bugger.WillLog(Testing.EventCenter, "Listeners: " + Listeners.Count))
 //				Debug.Log (Bugger.Last);

@@ -15,15 +15,7 @@ namespace RMX
 {
 	
 
-	public interface IGameController : ISingleton {
-		void PauseGame (bool pause, object args = null);
-		void Patch();
 
-		bool DebugHUD { get; }
-		TextAsset Database { get; }
-		bool IsDebugging(string feature);
-		float MaxDisplayTime { get;}
-	}
 
 	public interface ISingleton {
 		string name { get; }
@@ -43,7 +35,9 @@ namespace RMX
 				return _gameController != null;//_gameControllerInitialized;
 			}
 		}
-//		
+		public interface IDebugHUD
+		{
+		}
 
 		static IGameController _gameController;
 	 	public static IGameController GameController {
@@ -101,6 +95,8 @@ namespace RMX
 					} else {
 						if (typeof(T) is IGameController)
 							throw new System.Exception(typeof(T).Name + "Should never be initialized with static Getter method 'current'");
+						if (typeof(T) is IDebugHUD)
+							throw new System.Exception("DebugHUD should not be accessed through 'ASingleton.current' as a Singleton");
 						return Initialize() as T;
 					}
 				}
@@ -174,7 +170,7 @@ namespace RMX
 						Destroy(this);
 					}
 				}
-				if (Bugger.WillLog (Testing.Singletons, message))
+				if (Bugger.WillLog (RMXTests.Singletons, message))
 					Debug.Log (Bugger.Last);
 				_isInitialized = true;
 			}

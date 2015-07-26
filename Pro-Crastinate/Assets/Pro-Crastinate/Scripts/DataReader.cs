@@ -101,7 +101,7 @@ namespace Procrastinate
 					try {
 						list.Add (thing [csv_text]);
 					} catch (Exception e) {
-						if (Bugger.WillLog (Testing.Exceptions, thing + " :: " + e.ToString ()))
+						if (Bugger.WillLog (RMXTests.Exceptions, thing + " :: " + e.ToString ()))
 							Debug.Log (Bugger.Last);
 					}
 				}

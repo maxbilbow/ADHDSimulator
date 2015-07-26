@@ -22,7 +22,7 @@ namespace UnityEngine.SocialPlatforms {
 				Social.ReportProgress(achievementID, progress, success => {
 					if (!success) {
 						var message = achievementID + " Not Found";
-						if (Bugger.WillLog(Testing.Exceptions,message) || Bugger.WillLog(Testing.GameCenter,message) )
+						if (Bugger.WillLog(RMXTests.Exceptions,message) || Bugger.WillLog(RMXTests.GameCenter,message) )
 							Debug.Log(Bugger.Last);
 					}
 				});

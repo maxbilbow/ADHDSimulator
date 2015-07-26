@@ -48,7 +48,7 @@ namespace Procrastinate {
 						log += " => " + id.Key + " Should be in GC: " + successInSD + "\n";
 					}
 				}
-				if (Bugger.WillLog (Tests.Misc, log))
+				if (Bugger.WillLog (RMXTests.Misc, log))
 					Debug.Log (Bugger.Last);
 			}
 //			foreach (KeyValuePair<UserData,string> id in UniqueID) {
@@ -76,7 +76,7 @@ namespace Procrastinate {
 					var key = (UserData)info;
 					SavedData.Set (key, true);
 					ReportProgress (key);
-					if (Bugger.WillLog (Testing.EventCenter, "Achievement Gained: " + info.ToString ()))
+				if (Bugger.WillLog (RMXTests.EventCenter, "Achievement Gained: " + info.ToString ()))
 						Debug.Log (Bugger.Last);
 				}
 		}
@@ -102,7 +102,7 @@ namespace Procrastinate {
 			} else {
 				userInfo += "Authentication already completed";
 			}
-			if (Bugger.WillLog(Testing.GameCenter, userInfo))
+			if (Bugger.WillLog(RMXTests.GameCenter, userInfo))
 				Debug.Log (Bugger.Last);
 		}
 
@@ -111,7 +111,7 @@ namespace Procrastinate {
 		public void ReportScore (long score, UserData data) {
 			if (UserAuthenticated && score > 0) {
 				string leaderboardID = UniqueID [data];
-				var log = ""; var feature = Testing.GameCenter;
+				var log = ""; var feature = RMXTests.GameCenter;
 				log += "Reporting score " + score + " on leaderboard " + leaderboardID;
 				try {
 					Social.ReportScore (score, leaderboardID, success => {
@@ -119,7 +119,7 @@ namespace Procrastinate {
 					});
 				} catch (System.Exception e) {
 					log += e;
-					feature = Testing.Exceptions;
+					feature = RMXTests.Exceptions;
 				} finally {
 					if (Bugger.WillLog(feature, log))
 						Debug.Log (Bugger.Last);
@@ -147,7 +147,7 @@ namespace Procrastinate {
 //						log += " => "+ key + ": is NOT a time-based achievement\n";
 					}
 				}
-				if (Bugger.WillLog(Tests.Achievements, log))
+				if (Bugger.WillLog(RMXTests.Achievements, log))
 					Debug.Log(Bugger.Last);
 				_checkTime = Time.fixedTime + GameController.current.updateScoresEvery;
 			}
@@ -210,7 +210,7 @@ namespace Procrastinate {
 
 		public void ReportProgress(UserData data) {
 			var achieved = SavedData.Get<bool> (data);
-			var log = data.ToString() + " => Reporting Progress: " + achieved; var feature = Testing.Achievements;
+			var log = data.ToString() + " => Reporting Progress: " + achieved; var feature = RMXTests.Achievements;
 
 			float progress = achieved ? 100 : 0;
 
@@ -239,7 +239,7 @@ namespace Procrastinate {
 						}
 					});
 				} catch (Exception e){
-					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
+					if (Bugger.WillLog(RMXTests.Exceptions,e.Message) || Bugger.WillLog(RMXTests.Achievements,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 				#endif
@@ -268,13 +268,13 @@ namespace Procrastinate {
 								}
 							}
 						} else {
-							if (Bugger.WillLog(Testing.Achievements,log) )
+							if (Bugger.WillLog(RMXTests.Achievements,log) )
 								Debug.Log(Bugger.Last);
 							throw new System.ArgumentException ("No achievements returned");
 						}
 					});
 				} catch (System.ArgumentException e) {
-					if (Bugger.WillLog(Testing.Exceptions,e.Message) || Bugger.WillLog(Testing.Achievements,e.Message) )
+					if (Bugger.WillLog(RMXTests.Exceptions,e.Message) || Bugger.WillLog(RMXTests.Achievements,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 			}

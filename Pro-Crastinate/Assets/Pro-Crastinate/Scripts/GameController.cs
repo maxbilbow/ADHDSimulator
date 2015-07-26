@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using RMX; 
 
 namespace Procrastinate {
-	public class GameController : AGameController<GameController>, IGameController {
+	public class GameController : AGameController<GameController> {
 
 		public int MaxNumberOfClocks = 50; 
 		
@@ -71,13 +71,6 @@ namespace Procrastinate {
 		protected override void StartMobile() {
 			Gyro.Initialize();
 		}
-
-
-
-
-		
-		
-
 		
 		protected override void PreStart() {
 			_chance = Random.Range (10,90);
@@ -95,22 +88,7 @@ namespace Procrastinate {
 			if (Random.Range(1,10) > 5)
 				ClockSpawnMode = ClockSpawner.SpawnMode.Multiply;
 		}
-		
-		
-		public static bool ShouldDebug(string feature) {
-			if (Singletons.GameControllerInitialized) {
-				var settings = Singletons.GameController as GameController;
-				if (feature == Tests.GameDataLists)
-					return settings.DebugGameDataLists;
-				return false;
-			}
-			throw new UnityException ("Setting should be initialized by now (Testing: " + feature);
-			
-		}
-		
-		public override bool IsDebugging(string feature) {
-			return ShouldDebug(feature) || base.IsDebugging(feature);
-		}
+
 		
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
@@ -143,6 +121,13 @@ namespace Procrastinate {
 				DidFinishEvent(Events.ResumeSession, args);
 			}
 
+		}
+
+		public override bool IsDebugging(System.Enum feature) {
+			if (feature.Equals(Tests.GameDataLists))
+				return DebugGameDataLists;
+			else 
+				return base.IsDebugging (feature);
 		}
 
 		void Update() {
