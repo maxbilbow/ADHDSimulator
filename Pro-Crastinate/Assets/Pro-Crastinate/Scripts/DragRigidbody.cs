@@ -48,7 +48,7 @@ namespace Procrastinate
 
 
 			// We need to hit a rigidbody that is not kinematic
-			if (hit && hit.rigidbody.isKinematic)
+			if (hit != null && hit.rigidbody != null && hit.rigidbody.isKinematic)
 			{
 				//				print ("We need to hit a rigidbody that is not kinematic! ");
 				return;

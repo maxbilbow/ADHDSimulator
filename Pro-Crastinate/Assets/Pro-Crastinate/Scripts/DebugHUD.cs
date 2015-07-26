@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using RMX;  namespace Procrastinate {
-	public class DebugHUD :  MonoBehaviour {//Bugger.DebugHUD {
+	public class DebugHUD :  Bugger.DebugHUD {
 
 		
 		string GetTime(object key) {
@@ -17,7 +17,7 @@ using RMX;  namespace Procrastinate {
 			Show ();
 		}
 
-		protected  string DebugData {
+		protected override string DebugData {
 			get {
 				string info = "DEBUG =>";
 				foreach (UserData key in System.Enum.GetValues(typeof(UserData))) {
@@ -36,7 +36,9 @@ using RMX;  namespace Procrastinate {
 			}
 
 		}
+	}
 
+		/*
 		public GameObject showButton;
 		public GameObject hideButton;
 		
@@ -84,7 +86,7 @@ using RMX;  namespace Procrastinate {
 				
 			}
 		}
-		
+		*/
 	
-	}
+	
 }
