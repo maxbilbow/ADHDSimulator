@@ -73,27 +73,34 @@ namespace Procrastinate {
 		}
 
 		void Authenticate() {
-			string userInfo = "";
+			string log = "";
 			if (!UserAuthenticated) {
 				WillBeginEvent(RMX.Event.GC_UserAuthentication);
-				Social.localUser.Authenticate (success => {
-					if (success) {
-						DidFinishEvent (RMX.Event.GC_UserAuthentication, EventStatus.Success);
-						userInfo += "Authentication successful";
-						userInfo += "\nUsername: " + Social.localUser.userName + 
-							"\nUser ID: " + Social.localUser.id + 
-							"\nIsUnderage: " + Social.localUser.underage;
-					} else {
-						DidFinishEvent (RMX.Event.GC_UserAuthentication, EventStatus.Failure);
-						userInfo += "Authentication failed";
-					}
-				});
+				try {
+					Social.localUser.Authenticate (success => {
+						if (success) {
+							DidFinishEvent (RMX.Event.GC_UserAuthentication, EventStatus.Success);
+							UserAuthenticated = true;
+							log += "Authentication successful";
+							log += "\nUsername: " + Social.localUser.userName + 
+								"\nUser ID: " + Social.localUser.id + 
+								"\nIsUnderage: " + Social.localUser.underage;
+						} else {
+							DidFinishEvent (RMX.Event.GC_UserAuthentication, EventStatus.Failure);
+							UserAuthenticated = false;
+							log += "Authentication failed";
+						}
+					});
+				} catch (Exception e) {
+					UserAuthenticated = false;
+					log += e.Message;
+				}
 
 
 			} else {
-				userInfo += "Authentication already completed";
+				log += "Authentication already completed";
 			}
-			if (Bugger.WillLog(RMXTests.GameCenter, userInfo))
+			if (Bugger.WillLog(RMXTests.GameCenter, log))
 				Debug.Log (Bugger.Last);
 		}
 
@@ -193,14 +200,17 @@ namespace Procrastinate {
 
 
 
-		static bool UserAuthenticated {
-			get {
-				return NotificationCenter.StatusOf(RMX.Event.GC_UserAuthentication) == EventStatus.Success;
-			}
-		}
+		static bool UserAuthenticated = false;
+//		{
+//			get {
+//				return NotificationCenter.StatusOf(RMX.Event.GC_UserAuthentication) == EventStatus.Success;
+//			}
+//		}
 
 		public void ReportProgress(UserData data) {
 			var achieved = SavedData.Get<bool> (data);
+			if (!achieved)
+				return;
 			var log = data.ToString() + " => Reporting Progress: " + achieved; var feature = RMXTests.Achievements;
 
 			float progress = achieved ? 100 : 0;
@@ -273,13 +283,13 @@ namespace Procrastinate {
 		}
 
 
-		private void InitializeKeys() {
-			#if UNITY_IOS || UNITY_STANDALONE_OSX
-			foreach (KeyValuePair<UserData,string> pair in UniqueID) {
-				UniqueID[pair.Key] = "grp." + pair.Value;
-			}
-			#endif
-		}
+//		private void InitializeKeys() {
+//			#if UNITY_IOS || UNITY_STANDALONE_OSX
+//			foreach (KeyValuePair<UserData,string> pair in UniqueID) {
+//				UniqueID[pair.Key] = "grp." + pair.Value;
+//			}
+//			#endif
+//		}
 
 		#if UNITY_IOS || UNITY_STANDALONE_OSX
 		const string _grp = "grp.";
