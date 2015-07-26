@@ -37,9 +37,9 @@ namespace RMX {
 				Notifications.AddListener(this);
 		}
 
-		protected virtual void OnDestroy() {
-			Notifications.RemoveListener (this);
-		}
+//		protected virtual void OnDestroy() {
+//			Notifications.RemoveListener (this);
+//		}
 
 		protected void WillBeginEvent(IEvent theEvent){
 			Notifications.EventWillStart (theEvent);
