@@ -108,7 +108,7 @@ namespace RMX
 					return _singleton;
 				else {
 					var aSingleton = new GameObject (tempName).AddComponent<T> ();
-					if ((aSingleton as ISingleton).Destroyed) {
+					if (aSingleton == null || (aSingleton as ISingleton).Destroyed) {
 						return null;
 					}
 					aSingleton.gameObject.name = aSingleton.GetType ().Name;
@@ -133,11 +133,19 @@ namespace RMX
 					Debug.LogWarning ("GameController should be initialized before " + this.GetType().Name);
 			}
 
+			protected virtual bool WillInitialize {
+				get {
+					return true;
+				}
+
+			}
 			/// <summary>
 			/// Checks whether a singleton already exists. If so, object is destroyed.
 			/// Otherwise it checks whether the EventListener methods have been overriden. If so, the object is added to the global EventListeners.
 			/// </summary>
 			protected override void Awake() {
+				if (!WillInitialize)
+					return;
 				var message = "__new__ <color=lightblue>" + this.GetType().Name + "</color>()";
 				if (_singleton == null) {
 					DontDestroyOnLoad (gameObject);

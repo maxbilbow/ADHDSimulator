@@ -1,11 +1,62 @@
 ﻿using UnityEngine;
+using UnityEditor;
 using System.Collections;
 using System.Collections.Generic;
 using RMX; 
 
-namespace Procrastinate {
-	public class GameController : AGameController<GameController> {
 
+
+namespace Procrastinate {
+
+//	[CustomEditor(typeof(GameController))]
+//	[CanEditMultipleObjects]
+//	public class GameControllerEditor : Editor{
+//		SerializedProperty fingerSize;
+//		SerializedProperty MaxNumberOfClocks;
+//		SerializedProperty _totalDevTimeWastedInHours;
+//		
+//		void OnEnable () {
+//			// Setup the SerializedProperties.
+//			fingerSize = serializedObject.FindProperty ("damage");
+//			MaxNumberOfClocks = serializedObject.FindProperty ("armor");
+//			_totalDevTimeWastedInHours = serializedObject.FindProperty ("gun");
+//		}
+//		
+//		public override void OnInspectorGUI() {
+//			// Update the serializedProperty - always do this in the beginning of OnInspectorGUI.
+//			serializedObject.Update ();
+//			
+//			// Show the custom GUI controls.
+//			EditorGUILayout.IntSlider (fingerSize, 0, 100, new GUIContent ("Damage"));
+//			
+//			// Only show the damage progress bar if all the objects have the same damage value:
+//			if (!fingerSize.hasMultipleDifferentValues)
+//				ProgressBar (fingerSize.intValue / 100.0f, "Damage");
+//			
+//			EditorGUILayout.IntSlider (MaxNumberOfClocks, 0, 100, new GUIContent ("Armor"));
+//			
+//			// Only show the armor progress bar if all the objects have the same armor value:
+//			if (!MaxNumberOfClocks.hasMultipleDifferentValues)
+//				ProgressBar (MaxNumberOfClocks.intValue / 100.0f, "Armor");
+//			
+//			EditorGUILayout.PropertyField (_totalDevTimeWastedInHours, new GUIContent ("Gun Object"));
+//			
+//			// Apply changes to the serializedProperty - always do this in the end of OnInspectorGUI.
+//			serializedObject.ApplyModifiedProperties ();
+//		}
+//		
+//		// Custom GUILayout progress bar.
+//		void ProgressBar (float value, string label) {
+//			// Get a rect for the progress bar using the same margins as a textfield:
+//			Rect rect = GUILayoutUtility.GetRect (18, 18, "TextField");
+//			EditorGUI.ProgressBar (rect, value, label);
+//			EditorGUILayout.Space ();
+//		}
+//	}
+//
+//
+
+	public class GameController : AGameController<GameController> {
 		public int MaxNumberOfClocks = 50; 
 		
 		
@@ -130,7 +181,7 @@ namespace Procrastinate {
 		}
 
 		public override void PauseGame(bool pause, object args) {
-			if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():args)))
+			if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():"none")))
 				Debug.Log (Bugger.Last);
 			if (pause && !isPaused) {
 				WillBeginEvent (RMX.Event.PauseSession, args);

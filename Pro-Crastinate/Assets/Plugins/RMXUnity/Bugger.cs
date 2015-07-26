@@ -218,10 +218,17 @@ namespace RMX
 
 		class HUD : Singletons.ASingleton<HUD> {
 
-			void Start() {
-				if (Singletons.GameController.BuildForRelease) {
-					NotificationCenter.RemoveListener(this);
-					Destroy (gameObject);
+			protected override bool WillInitialize
+			{
+				get {
+					if (Singletons.GameController.BuildForRelease) {
+						NotificationCenter.RemoveListener(this);
+						Destroy(this);
+						DestroyImmediate(gameObject);
+						return false;
+					} else {
+						return true;
+					}
 				}
 			}
 
@@ -251,14 +258,21 @@ namespace RMX
 			public GameObject showButton;
 			public GameObject hideButton;
 			
-			
+			protected override bool WillInitialize
+			{
+				get {
+					if (Singletons.GameController.BuildForRelease) {
+						NotificationCenter.RemoveListener(this);
+						Destroy(this);
+						DestroyImmediate(gameObject);
+						return false;
+					} else {
+						return true;
+					}
+				}
+			}
 			// Use this for initialization
 			void Start () {
-				if (Singletons.GameController.BuildForRelease) {
-					NotificationCenter.RemoveListener(this);
-					Destroy(gameObject);
-					return;
-				}
 				Hide ();
 				if (!Singletons.GameController.DebugHUD) {
 					showButton.SetActive(false);
