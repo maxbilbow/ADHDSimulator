@@ -34,7 +34,7 @@ extern "C" GUISkin_t576 * GUI_get_skin_m2820 (Object_t * __this /* static, unuse
 // System.Void UnityEngine.GUI::set_changed(System.Boolean)
 extern "C" void GUI_set_changed_m2821 (Object_t * __this /* static, unused */, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::Label(UnityEngine.Rect,System.String,UnityEngine.GUIStyle)
-extern "C" void GUI_Label_m440 (Object_t * __this /* static, unused */, Rect_t148  ___position, String_t* ___text, GUIStyle_t147 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void GUI_Label_m439 (Object_t * __this /* static, unused */, Rect_t148  ___position, String_t* ___text, GUIStyle_t147 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::Label(UnityEngine.Rect,UnityEngine.GUIContent,UnityEngine.GUIStyle)
 extern "C" void GUI_Label_m2822 (Object_t * __this /* static, unused */, Rect_t148  ___position, GUIContent_t520 * ___content, GUIStyle_t147 * ___style, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUI::DoLabel(UnityEngine.Rect,UnityEngine.GUIContent,System.IntPtr)

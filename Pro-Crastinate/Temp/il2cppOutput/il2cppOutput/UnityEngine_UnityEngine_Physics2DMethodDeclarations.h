@@ -42,10 +42,10 @@ extern "C" RaycastHit2DU5BU5D_t502* Physics2D_RaycastAll_m2320 (Object_t * __thi
 // UnityEngine.RaycastHit2D[] UnityEngine.Physics2D::INTERNAL_CALL_RaycastAll(UnityEngine.Vector2&,UnityEngine.Vector2&,System.Single,System.Int32,System.Single,System.Single)
 extern "C" RaycastHit2DU5BU5D_t502* Physics2D_INTERNAL_CALL_RaycastAll_m3391 (Object_t * __this /* static, unused */, Vector2_t42 * ___origin, Vector2_t42 * ___direction, float ___distance, int32_t ___layerMask, float ___minDepth, float ___maxDepth, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Collider2D UnityEngine.Physics2D::OverlapCircle(UnityEngine.Vector2,System.Single,System.Int32)
-extern "C" Collider2D_t139 * Physics2D_OverlapCircle_m544 (Object_t * __this /* static, unused */, Vector2_t42  ___point, float ___radius, int32_t ___layerMask, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Collider2D_t139 * Physics2D_OverlapCircle_m543 (Object_t * __this /* static, unused */, Vector2_t42  ___point, float ___radius, int32_t ___layerMask, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Collider2D UnityEngine.Physics2D::INTERNAL_CALL_OverlapCircle(UnityEngine.Vector2&,System.Single,System.Int32,System.Single,System.Single)
 extern "C" Collider2D_t139 * Physics2D_INTERNAL_CALL_OverlapCircle_m3392 (Object_t * __this /* static, unused */, Vector2_t42 * ___point, float ___radius, int32_t ___layerMask, float ___minDepth, float ___maxDepth, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Collider2D[] UnityEngine.Physics2D::OverlapCircleAll(UnityEngine.Vector2,System.Single,System.Int32)
-extern "C" Collider2DU5BU5D_t176* Physics2D_OverlapCircleAll_m538 (Object_t * __this /* static, unused */, Vector2_t42  ___point, float ___radius, int32_t ___layerMask, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Collider2DU5BU5D_t176* Physics2D_OverlapCircleAll_m537 (Object_t * __this /* static, unused */, Vector2_t42  ___point, float ___radius, int32_t ___layerMask, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Collider2D[] UnityEngine.Physics2D::INTERNAL_CALL_OverlapCircleAll(UnityEngine.Vector2&,System.Single,System.Int32,System.Single,System.Single)
 extern "C" Collider2DU5BU5D_t176* Physics2D_INTERNAL_CALL_OverlapCircleAll_m3393 (Object_t * __this /* static, unused */, Vector2_t42 * ___point, float ___radius, int32_t ___layerMask, float ___minDepth, float ___maxDepth, const MethodInfo* method) IL2CPP_METHOD_ATTR;

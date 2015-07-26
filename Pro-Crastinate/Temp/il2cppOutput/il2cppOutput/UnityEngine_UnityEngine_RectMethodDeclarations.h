@@ -18,7 +18,7 @@ struct Object_t;
 #include "UnityEngine_UnityEngine_Rect.h"
 
 // System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
-extern "C" void Rect__ctor_m437 (Rect_t148 * __this, float ___left, float ___top, float ___width, float ___height, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Rect__ctor_m436 (Rect_t148 * __this, float ___left, float ___top, float ___width, float ___height, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Rect::get_x()
 extern "C" float Rect_get_x_m2376 (Rect_t148 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Rect::set_x(System.Single)

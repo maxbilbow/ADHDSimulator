@@ -13,5 +13,5 @@ struct GenericComparer_1_t1927;
 extern "C" void GenericComparer_1__ctor_m11109_gshared (GenericComparer_1_t1927 * __this, const MethodInfo* method);
 #define GenericComparer_1__ctor_m11109(__this, method) (( void (*) (GenericComparer_1_t1927 *, const MethodInfo*))GenericComparer_1__ctor_m11109_gshared)(__this, method)
 // System.Int32 System.Collections.Generic.GenericComparer`1<System.Guid>::Compare(T,T)
-extern "C" int32_t GenericComparer_1_Compare_m20211_gshared (GenericComparer_1_t1927 * __this, Guid_t852  ___x, Guid_t852  ___y, const MethodInfo* method);
-#define GenericComparer_1_Compare_m20211(__this, ___x, ___y, method) (( int32_t (*) (GenericComparer_1_t1927 *, Guid_t852 , Guid_t852 , const MethodInfo*))GenericComparer_1_Compare_m20211_gshared)(__this, ___x, ___y, method)
+extern "C" int32_t GenericComparer_1_Compare_m20199_gshared (GenericComparer_1_t1927 * __this, Guid_t852  ___x, Guid_t852  ___y, const MethodInfo* method);
+#define GenericComparer_1_Compare_m20199(__this, ___x, ___y, method) (( int32_t (*) (GenericComparer_1_t1927 *, Guid_t852 , Guid_t852 , const MethodInfo*))GenericComparer_1_Compare_m20199_gshared)(__this, ___x, ___y, method)

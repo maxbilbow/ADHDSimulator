@@ -31,7 +31,7 @@ namespace RMX
 	}
 
 	public enum Event {
-		SingletonInitialization	, ScreenBecameEmpty,PauseSession, ResumeSession, GC_AchievementGained, GC_UserAuthentication
+		SingletonInitialization	, ScreenBecameEmpty,PauseSession, ResumeSession, GC_AchievementGained, GC_UserAuthentication, NULL
 	}
 
 //	public class Events {

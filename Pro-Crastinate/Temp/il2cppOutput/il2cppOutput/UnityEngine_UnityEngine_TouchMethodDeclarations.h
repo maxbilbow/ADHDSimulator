@@ -15,7 +15,7 @@ struct Touch_t185_marshaled;
 // System.Int32 UnityEngine.Touch::get_fingerId()
 extern "C" int32_t Touch_get_fingerId_m2282 (Touch_t185 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2 UnityEngine.Touch::get_position()
-extern "C" Vector2_t42  Touch_get_position_m583 (Touch_t185 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Vector2_t42  Touch_get_position_m582 (Touch_t185 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
 extern "C" int32_t Touch_get_phase_m2283 (Touch_t185 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 void Touch_t185_marshal(const Touch_t185& unmarshaled, Touch_t185_marshaled& marshaled);

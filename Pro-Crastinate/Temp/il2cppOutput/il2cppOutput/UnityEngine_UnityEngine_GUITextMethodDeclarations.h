@@ -10,4 +10,4 @@ struct GUIText_t95;
 struct String_t;
 
 // System.Void UnityEngine.GUIText::set_text(System.String)
-extern "C" void GUIText_set_text_m660 (GUIText_t95 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void GUIText_set_text_m659 (GUIText_t95 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

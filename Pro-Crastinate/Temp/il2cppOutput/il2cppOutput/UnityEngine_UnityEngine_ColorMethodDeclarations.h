@@ -16,7 +16,7 @@ struct Object_t;
 #include "UnityEngine_UnityEngine_Vector4.h"
 
 // System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single,System.Single)
-extern "C" void Color__ctor_m698 (Color_t200 * __this, float ___r, float ___g, float ___b, float ___a, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Color__ctor_m697 (Color_t200 * __this, float ___r, float ___g, float ___b, float ___a, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Color::.ctor(System.Single,System.Single,System.Single)
 extern "C" void Color__ctor_m886 (Color_t200 * __this, float ___r, float ___g, float ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Color::ToString()
@@ -30,13 +30,13 @@ extern "C" Color_t200  Color_Lerp_m2334 (Object_t * __this /* static, unused */,
 // UnityEngine.Color UnityEngine.Color::get_red()
 extern "C" Color_t200  Color_get_red_m3030 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_green()
-extern "C" Color_t200  Color_get_green_m704 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Color_t200  Color_get_green_m703 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_white()
 extern "C" Color_t200  Color_get_white_m997 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_black()
 extern "C" Color_t200  Color_get_black_m2389 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::get_yellow()
-extern "C" Color_t200  Color_get_yellow_m697 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Color_t200  Color_get_yellow_m696 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Color UnityEngine.Color::op_Multiply(UnityEngine.Color,System.Single)
 extern "C" Color_t200  Color_op_Multiply_m2587 (Object_t * __this /* static, unused */, Color_t200  ___a, float ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector4 UnityEngine.Color::op_Implicit(UnityEngine.Color)

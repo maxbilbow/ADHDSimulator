@@ -106,7 +106,7 @@ const Il2CppTypeDefinitionMetadata Locale_t1079_DefinitionMetadata =
 	, Locale_t1079_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4832/* methodStart */
+	, 4831/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -171,9 +171,9 @@ extern TypeInfo MonoTODOAttribute_t1080_il2cpp_TypeInfo;
 #include "System_System_MonoTODOAttributeMethodDeclarations.h"
 static const EncodedMethodIndex MonoTODOAttribute_t1080_VTable[4] = 
 {
-	1293,
+	1280,
 	502,
-	1294,
+	1281,
 	504,
 };
 extern const Il2CppType _Attribute_t3090_0_0_0;
@@ -196,7 +196,7 @@ const Il2CppTypeDefinitionMetadata MonoTODOAttribute_t1080_DefinitionMetadata =
 	, MonoTODOAttribute_t1080_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3044/* fieldStart */
-	, 4834/* methodStart */
+	, 4833/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -261,9 +261,9 @@ extern TypeInfo GeneratedCodeAttribute_t1081_il2cpp_TypeInfo;
 #include "System_System_CodeDom_Compiler_GeneratedCodeAttributeMethodDeclarations.h"
 static const EncodedMethodIndex GeneratedCodeAttribute_t1081_VTable[4] = 
 {
-	1293,
+	1280,
 	502,
-	1294,
+	1281,
 	504,
 };
 static Il2CppInterfaceOffsetPair GeneratedCodeAttribute_t1081_InterfacesOffsets[] = 
@@ -284,7 +284,7 @@ const Il2CppTypeDefinitionMetadata GeneratedCodeAttribute_t1081_DefinitionMetada
 	, GeneratedCodeAttribute_t1081_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3045/* fieldStart */
-	, 4836/* methodStart */
+	, 4835/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -354,12 +354,12 @@ static const EncodedMethodIndex Stack_1_t3087_VTable[10] =
 	502,
 	503,
 	504,
-	1867,
-	1868,
-	1869,
-	1870,
-	1871,
-	1872,
+	1854,
+	1855,
+	1856,
+	1857,
+	1858,
+	1859,
 };
 extern const Il2CppType ICollection_t1236_0_0_0;
 extern const Il2CppType IEnumerable_t803_0_0_0;
@@ -379,10 +379,10 @@ static Il2CppInterfaceOffsetPair Stack_1_t3087_InterfacesOffsets[] =
 extern const Il2CppType Enumerator_t3365_0_0_0;
 extern const Il2CppRGCTXDefinition Stack_1_t3087_RGCTXData[5] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4512 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4498 }/* Method */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 4059 }/* Class */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4513 }/* Method */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4514 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4499 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4500 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
 extern Il2CppImage g_System_dll_Image;
@@ -399,9 +399,9 @@ const Il2CppTypeDefinitionMetadata Stack_1_t3087_DefinitionMetadata =
 	, Stack_1_t3087_VTable/* vtableMethods */
 	, Stack_1_t3087_RGCTXData/* rgctxDefinition */
 	, 3047/* fieldStart */
-	, 4837/* methodStart */
+	, 4836/* methodStart */
 	, -1/* eventStart */
-	, 1177/* propertyStart */
+	, 1175/* propertyStart */
 
 };
 TypeInfo Stack_1_t3087_il2cpp_TypeInfo = 
@@ -460,14 +460,14 @@ TypeInfo Stack_1_t3087_il2cpp_TypeInfo =
 extern TypeInfo Enumerator_t3088_il2cpp_TypeInfo;
 static const EncodedMethodIndex Enumerator_t3088_VTable[8] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
-	1873,
-	1874,
-	1875,
-	1876,
+	560,
+	694,
+	1860,
+	1861,
+	1862,
+	1863,
 };
 extern const Il2CppType IEnumerator_t142_0_0_0;
 extern const Il2CppType IDisposable_t153_0_0_0;
@@ -487,7 +487,7 @@ static Il2CppInterfaceOffsetPair Enumerator_t3088_InterfacesOffsets[] =
 extern const Il2CppType Enumerator_t3088_gp_0_0_0_0;
 extern const Il2CppRGCTXDefinition Enumerator_t3088_RGCTXData[3] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4515 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4501 }/* Method */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 4062 }/* Class */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
@@ -504,9 +504,9 @@ const Il2CppTypeDefinitionMetadata Enumerator_t3088_DefinitionMetadata =
 	, Enumerator_t3088_VTable/* vtableMethods */
 	, Enumerator_t3088_RGCTXData/* rgctxDefinition */
 	, 3051/* fieldStart */
-	, 4848/* methodStart */
+	, 4847/* methodStart */
 	, -1/* eventStart */
-	, 1180/* propertyStart */
+	, 1178/* propertyStart */
 
 };
 TypeInfo Enumerator_t3088_il2cpp_TypeInfo = 
@@ -573,17 +573,17 @@ static const EncodedMethodIndex HybridDictionary_t1083_VTable[15] =
 	502,
 	503,
 	504,
-	1877,
-	1878,
-	1879,
-	1880,
-	1881,
-	1882,
-	1883,
-	1884,
-	1885,
-	1886,
-	1887,
+	1864,
+	1865,
+	1866,
+	1867,
+	1868,
+	1869,
+	1870,
+	1871,
+	1872,
+	1873,
+	1874,
 };
 extern const Il2CppType IDictionary_t1169_0_0_0;
 static const Il2CppType* HybridDictionary_t1083_InterfacesTypeInfos[] = 
@@ -612,9 +612,9 @@ const Il2CppTypeDefinitionMetadata HybridDictionary_t1083_DefinitionMetadata =
 	, HybridDictionary_t1083_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3054/* fieldStart */
-	, 4853/* methodStart */
+	, 4852/* methodStart */
 	, -1/* eventStart */
-	, 1182/* propertyStart */
+	, 1180/* propertyStart */
 
 };
 TypeInfo HybridDictionary_t1083_il2cpp_TypeInfo = 
@@ -688,18 +688,18 @@ static const EncodedMethodIndex ListDictionary_t1082_VTable[16] =
 	502,
 	503,
 	504,
-	1888,
-	1889,
-	1890,
-	1891,
-	1892,
-	1893,
-	1894,
-	1895,
-	1896,
-	1897,
-	1898,
-	1899,
+	1875,
+	1876,
+	1877,
+	1878,
+	1879,
+	1880,
+	1881,
+	1882,
+	1883,
+	1884,
+	1885,
+	1886,
 };
 static const Il2CppType* ListDictionary_t1082_InterfacesTypeInfos[] = 
 {
@@ -727,9 +727,9 @@ const Il2CppTypeDefinitionMetadata ListDictionary_t1082_DefinitionMetadata =
 	, ListDictionary_t1082_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3057/* fieldStart */
-	, 4868/* methodStart */
+	, 4867/* methodStart */
 	, -1/* eventStart */
-	, 1187/* propertyStart */
+	, 1185/* propertyStart */
 
 };
 TypeInfo ListDictionary_t1082_il2cpp_TypeInfo = 
@@ -810,7 +810,7 @@ const Il2CppTypeDefinitionMetadata DictionaryNode_t1084_DefinitionMetadata =
 	, DictionaryNode_t1084_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3061/* fieldStart */
-	, 4885/* methodStart */
+	, 4884/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -879,12 +879,12 @@ static const EncodedMethodIndex DictionaryNodeEnumerator_t1085_VTable[10] =
 	502,
 	503,
 	504,
-	1900,
-	1901,
-	1902,
-	1903,
-	1904,
-	1905,
+	1887,
+	1888,
+	1889,
+	1890,
+	1891,
+	1892,
 };
 extern const Il2CppType IDictionaryEnumerator_t1234_0_0_0;
 static const Il2CppType* DictionaryNodeEnumerator_t1085_InterfacesTypeInfos[] = 
@@ -910,9 +910,9 @@ const Il2CppTypeDefinitionMetadata DictionaryNodeEnumerator_t1085_DefinitionMeta
 	, DictionaryNodeEnumerator_t1085_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3064/* fieldStart */
-	, 4886/* methodStart */
+	, 4885/* methodStart */
 	, -1/* eventStart */
-	, 1191/* propertyStart */
+	, 1189/* propertyStart */
 
 };
 TypeInfo DictionaryNodeEnumerator_t1085_il2cpp_TypeInfo = 
@@ -988,18 +988,18 @@ static const EncodedMethodIndex NameObjectCollectionBase_t1088_VTable[16] =
 	502,
 	503,
 	504,
-	1906,
-	1907,
-	1908,
-	1909,
-	1910,
-	1911,
-	1912,
-	1913,
-	1911,
-	1912,
-	1906,
-	1910,
+	1893,
+	1894,
+	1895,
+	1896,
+	1897,
+	1898,
+	1899,
+	1900,
+	1898,
+	1899,
+	1893,
+	1897,
 };
 extern const Il2CppType IDeserializationCallback_t1921_0_0_0;
 extern const Il2CppType ISerializable_t1918_0_0_0;
@@ -1031,9 +1031,9 @@ const Il2CppTypeDefinitionMetadata NameObjectCollectionBase_t1088_DefinitionMeta
 	, NameObjectCollectionBase_t1088_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3068/* fieldStart */
-	, 4895/* methodStart */
+	, 4894/* methodStart */
 	, -1/* eventStart */
-	, 1196/* propertyStart */
+	, 1194/* propertyStart */
 
 };
 TypeInfo NameObjectCollectionBase_t1088_il2cpp_TypeInfo = 
@@ -1114,7 +1114,7 @@ const Il2CppTypeDefinitionMetadata _Item_t1087_DefinitionMetadata =
 	, _Item_t1087_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3078/* fieldStart */
-	, 4912/* methodStart */
+	, 4911/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1183,9 +1183,9 @@ static const EncodedMethodIndex _KeysEnumerator_t1089_VTable[7] =
 	502,
 	503,
 	504,
-	1914,
-	1915,
-	1916,
+	1901,
+	1902,
+	1903,
 };
 static const Il2CppType* _KeysEnumerator_t1089_InterfacesTypeInfos[] = 
 {
@@ -1208,9 +1208,9 @@ const Il2CppTypeDefinitionMetadata _KeysEnumerator_t1089_DefinitionMetadata =
 	, _KeysEnumerator_t1089_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3080/* fieldStart */
-	, 4913/* methodStart */
+	, 4912/* methodStart */
 	, -1/* eventStart */
-	, 1201/* propertyStart */
+	, 1199/* propertyStart */
 
 };
 TypeInfo _KeysEnumerator_t1089_il2cpp_TypeInfo = 
@@ -1277,11 +1277,11 @@ static const EncodedMethodIndex KeysCollection_t1090_VTable[9] =
 	502,
 	503,
 	504,
-	1917,
-	1918,
-	1919,
-	1920,
-	1921,
+	1904,
+	1905,
+	1906,
+	1907,
+	1908,
 };
 static const Il2CppType* KeysCollection_t1090_InterfacesTypeInfos[] = 
 {
@@ -1306,9 +1306,9 @@ const Il2CppTypeDefinitionMetadata KeysCollection_t1090_DefinitionMetadata =
 	, KeysCollection_t1090_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3082/* fieldStart */
-	, 4917/* methodStart */
+	, 4916/* methodStart */
 	, -1/* eventStart */
-	, 1202/* propertyStart */
+	, 1200/* propertyStart */
 
 };
 TypeInfo KeysCollection_t1090_il2cpp_TypeInfo = 
@@ -1375,21 +1375,21 @@ static const EncodedMethodIndex NameValueCollection_t1093_VTable[19] =
 	502,
 	503,
 	504,
-	1906,
-	1907,
-	1908,
+	1893,
+	1894,
+	1895,
+	1896,
+	1897,
+	1898,
+	1899,
+	1900,
+	1898,
+	1899,
+	1893,
+	1897,
 	1909,
 	1910,
 	1911,
-	1912,
-	1913,
-	1911,
-	1912,
-	1906,
-	1910,
-	1922,
-	1923,
-	1924,
 };
 static Il2CppInterfaceOffsetPair NameValueCollection_t1093_InterfacesOffsets[] = 
 {
@@ -1412,7 +1412,7 @@ const Il2CppTypeDefinitionMetadata NameValueCollection_t1093_DefinitionMetadata 
 	, NameValueCollection_t1093_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3083/* fieldStart */
-	, 4923/* methodStart */
+	, 4922/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1477,11 +1477,11 @@ extern TypeInfo DefaultValueAttribute_t1094_il2cpp_TypeInfo;
 #include "System_System_ComponentModel_DefaultValueAttributeMethodDeclarations.h"
 static const EncodedMethodIndex DefaultValueAttribute_t1094_VTable[5] = 
 {
-	1925,
+	1912,
 	502,
-	1926,
+	1913,
 	504,
-	1927,
+	1914,
 };
 static Il2CppInterfaceOffsetPair DefaultValueAttribute_t1094_InterfacesOffsets[] = 
 {
@@ -1501,9 +1501,9 @@ const Il2CppTypeDefinitionMetadata DefaultValueAttribute_t1094_DefinitionMetadat
 	, DefaultValueAttribute_t1094_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3085/* fieldStart */
-	, 4930/* methodStart */
+	, 4929/* methodStart */
 	, -1/* eventStart */
-	, 1205/* propertyStart */
+	, 1203/* propertyStart */
 
 };
 TypeInfo DefaultValueAttribute_t1094_il2cpp_TypeInfo = 
@@ -1566,9 +1566,9 @@ extern TypeInfo EditorBrowsableAttribute_t1095_il2cpp_TypeInfo;
 #include "System_System_ComponentModel_EditorBrowsableAttributeMethodDeclarations.h"
 static const EncodedMethodIndex EditorBrowsableAttribute_t1095_VTable[4] = 
 {
-	1928,
+	1915,
 	502,
-	1929,
+	1916,
 	504,
 };
 static Il2CppInterfaceOffsetPair EditorBrowsableAttribute_t1095_InterfacesOffsets[] = 
@@ -1589,9 +1589,9 @@ const Il2CppTypeDefinitionMetadata EditorBrowsableAttribute_t1095_DefinitionMeta
 	, EditorBrowsableAttribute_t1095_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3086/* fieldStart */
-	, 4934/* methodStart */
+	, 4933/* methodStart */
 	, -1/* eventStart */
-	, 1206/* propertyStart */
+	, 1204/* propertyStart */
 
 };
 TypeInfo EditorBrowsableAttribute_t1095_il2cpp_TypeInfo = 
@@ -1654,8 +1654,10 @@ extern TypeInfo EditorBrowsableState_t1096_il2cpp_TypeInfo;
 #include "System_System_ComponentModel_EditorBrowsableStateMethodDeclarations.h"
 static const EncodedMethodIndex EditorBrowsableState_t1096_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -1675,8 +1677,6 @@ static const EncodedMethodIndex EditorBrowsableState_t1096_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 extern const Il2CppType IFormattable_t1898_0_0_0;
 extern const Il2CppType IConvertible_t1901_0_0_0;
@@ -1853,9 +1853,9 @@ extern TypeInfo TypeConverterAttribute_t1098_il2cpp_TypeInfo;
 #include "System_System_ComponentModel_TypeConverterAttributeMethodDeclarations.h"
 static const EncodedMethodIndex TypeConverterAttribute_t1098_VTable[4] = 
 {
-	1930,
+	1917,
 	502,
-	1931,
+	1918,
 	504,
 };
 static Il2CppInterfaceOffsetPair TypeConverterAttribute_t1098_InterfacesOffsets[] = 
@@ -1876,9 +1876,9 @@ const Il2CppTypeDefinitionMetadata TypeConverterAttribute_t1098_DefinitionMetada
 	, TypeConverterAttribute_t1098_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3091/* fieldStart */
-	, 4938/* methodStart */
+	, 4937/* methodStart */
 	, -1/* eventStart */
-	, 1207/* propertyStart */
+	, 1205/* propertyStart */
 
 };
 TypeInfo TypeConverterAttribute_t1098_il2cpp_TypeInfo = 
@@ -1941,8 +1941,10 @@ extern TypeInfo AuthenticationLevel_t1099_il2cpp_TypeInfo;
 #include "System_System_Net_Security_AuthenticationLevelMethodDeclarations.h"
 static const EncodedMethodIndex AuthenticationLevel_t1099_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -1962,8 +1964,6 @@ static const EncodedMethodIndex AuthenticationLevel_t1099_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AuthenticationLevel_t1099_InterfacesOffsets[] = 
 {
@@ -2049,8 +2049,10 @@ extern TypeInfo SslPolicyErrors_t1100_il2cpp_TypeInfo;
 #include "System_System_Net_Security_SslPolicyErrorsMethodDeclarations.h"
 static const EncodedMethodIndex SslPolicyErrors_t1100_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -2070,8 +2072,6 @@ static const EncodedMethodIndex SslPolicyErrors_t1100_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair SslPolicyErrors_t1100_InterfacesOffsets[] = 
 {
@@ -2157,8 +2157,10 @@ extern TypeInfo AddressFamily_t1101_il2cpp_TypeInfo;
 #include "System_System_Net_Sockets_AddressFamilyMethodDeclarations.h"
 static const EncodedMethodIndex AddressFamily_t1101_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -2178,8 +2180,6 @@ static const EncodedMethodIndex AddressFamily_t1101_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AddressFamily_t1101_InterfacesOffsets[] = 
 {
@@ -2269,7 +2269,7 @@ static const EncodedMethodIndex DefaultCertificatePolicy_t1102_VTable[5] =
 	502,
 	503,
 	504,
-	1932,
+	1919,
 };
 extern const Il2CppType ICertificatePolicy_t1069_0_0_0;
 static const Il2CppType* DefaultCertificatePolicy_t1102_InterfacesTypeInfos[] = 
@@ -2294,7 +2294,7 @@ const Il2CppTypeDefinitionMetadata DefaultCertificatePolicy_t1102_DefinitionMeta
 	, DefaultCertificatePolicy_t1102_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4944/* methodStart */
+	, 4943/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2363,8 +2363,8 @@ static const EncodedMethodIndex FileWebRequest_t1105_VTable[6] =
 	502,
 	503,
 	504,
-	1933,
-	1934,
+	1920,
+	1921,
 };
 static const Il2CppType* FileWebRequest_t1105_InterfacesTypeInfos[] = 
 {
@@ -2389,7 +2389,7 @@ const Il2CppTypeDefinitionMetadata FileWebRequest_t1105_DefinitionMetadata =
 	, FileWebRequest_t1105_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3134/* fieldStart */
-	, 4946/* methodStart */
+	, 4945/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2458,7 +2458,7 @@ static const EncodedMethodIndex FileWebRequestCreator_t1106_VTable[5] =
 	502,
 	503,
 	504,
-	1935,
+	1922,
 };
 extern const Il2CppType IWebRequestCreate_t3089_0_0_0;
 static const Il2CppType* FileWebRequestCreator_t1106_InterfacesTypeInfos[] = 
@@ -2483,7 +2483,7 @@ const Il2CppTypeDefinitionMetadata FileWebRequestCreator_t1106_DefinitionMetadat
 	, FileWebRequestCreator_t1106_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4950/* methodStart */
+	, 4949/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2552,7 +2552,7 @@ static const EncodedMethodIndex FtpRequestCreator_t1107_VTable[5] =
 	502,
 	503,
 	504,
-	1936,
+	1923,
 };
 static const Il2CppType* FtpRequestCreator_t1107_InterfacesTypeInfos[] = 
 {
@@ -2576,7 +2576,7 @@ const Il2CppTypeDefinitionMetadata FtpRequestCreator_t1107_DefinitionMetadata =
 	, FtpRequestCreator_t1107_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4952/* methodStart */
+	, 4951/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2645,8 +2645,8 @@ static const EncodedMethodIndex FtpWebRequest_t1108_VTable[6] =
 	502,
 	503,
 	504,
-	1937,
-	1938,
+	1924,
+	1925,
 };
 static Il2CppInterfaceOffsetPair FtpWebRequest_t1108_InterfacesOffsets[] = 
 {
@@ -2666,7 +2666,7 @@ const Il2CppTypeDefinitionMetadata FtpWebRequest_t1108_DefinitionMetadata =
 	, FtpWebRequest_t1108_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3143/* fieldStart */
-	, 4954/* methodStart */
+	, 4953/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2750,9 +2750,9 @@ const Il2CppTypeDefinitionMetadata GlobalProxySelection_t1109_DefinitionMetadata
 	, GlobalProxySelection_t1109_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4957/* methodStart */
+	, 4956/* methodStart */
 	, -1/* eventStart */
-	, 1208/* propertyStart */
+	, 1206/* propertyStart */
 
 };
 TypeInfo GlobalProxySelection_t1109_il2cpp_TypeInfo = 
@@ -2819,7 +2819,7 @@ static const EncodedMethodIndex HttpRequestCreator_t1110_VTable[5] =
 	502,
 	503,
 	504,
-	1939,
+	1926,
 };
 static const Il2CppType* HttpRequestCreator_t1110_InterfacesTypeInfos[] = 
 {
@@ -2843,7 +2843,7 @@ const Il2CppTypeDefinitionMetadata HttpRequestCreator_t1110_DefinitionMetadata =
 	, HttpRequestCreator_t1110_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4958/* methodStart */
+	, 4957/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2927,7 +2927,7 @@ const Il2CppTypeDefinitionMetadata HttpVersion_t1112_DefinitionMetadata =
 	, HttpVersion_t1112_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3154/* fieldStart */
-	, 4960/* methodStart */
+	, 4959/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2996,8 +2996,8 @@ static const EncodedMethodIndex HttpWebRequest_t982_VTable[6] =
 	502,
 	503,
 	504,
-	1940,
-	1941,
+	1927,
+	1928,
 };
 static const Il2CppType* HttpWebRequest_t982_InterfacesTypeInfos[] = 
 {
@@ -3021,9 +3021,9 @@ const Il2CppTypeDefinitionMetadata HttpWebRequest_t982_DefinitionMetadata =
 	, HttpWebRequest_t982_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3156/* fieldStart */
-	, 4961/* methodStart */
+	, 4960/* methodStart */
 	, -1/* eventStart */
-	, 1209/* propertyStart */
+	, 1207/* propertyStart */
 
 };
 TypeInfo HttpWebRequest_t982_il2cpp_TypeInfo = 
@@ -3093,7 +3093,7 @@ const Il2CppTypeDefinitionMetadata ICertificatePolicy_t1069_DefinitionMetadata =
 	, NULL/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4969/* methodStart */
+	, 4968/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3231,10 +3231,10 @@ extern TypeInfo IPAddress_t1114_il2cpp_TypeInfo;
 #include "System_System_Net_IPAddressMethodDeclarations.h"
 static const EncodedMethodIndex IPAddress_t1114_VTable[4] = 
 {
-	1942,
+	1929,
 	502,
-	1943,
-	1944,
+	1930,
+	1931,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType IPAddress_t1114_0_0_0;
@@ -3250,9 +3250,9 @@ const Il2CppTypeDefinitionMetadata IPAddress_t1114_DefinitionMetadata =
 	, IPAddress_t1114_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3180/* fieldStart */
-	, 4970/* methodStart */
+	, 4969/* methodStart */
 	, -1/* eventStart */
-	, 1211/* propertyStart */
+	, 1209/* propertyStart */
 
 };
 TypeInfo IPAddress_t1114_il2cpp_TypeInfo = 
@@ -3315,10 +3315,10 @@ extern TypeInfo IPv6Address_t1115_il2cpp_TypeInfo;
 #include "System_System_Net_IPv6AddressMethodDeclarations.h"
 static const EncodedMethodIndex IPv6Address_t1115_VTable[4] = 
 {
-	1945,
+	1932,
 	502,
-	1946,
-	1947,
+	1933,
+	1934,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType IPv6Address_t1115_0_0_0;
@@ -3334,9 +3334,9 @@ const Il2CppTypeDefinitionMetadata IPv6Address_t1115_DefinitionMetadata =
 	, IPv6Address_t1115_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3191/* fieldStart */
-	, 4989/* methodStart */
+	, 4988/* methodStart */
 	, -1/* eventStart */
-	, 1214/* propertyStart */
+	, 1212/* propertyStart */
 
 };
 TypeInfo IPv6Address_t1115_il2cpp_TypeInfo = 
@@ -3407,7 +3407,7 @@ const Il2CppTypeDefinitionMetadata IWebProxy_t1104_DefinitionMetadata =
 	, NULL/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 5010/* methodStart */
+	, 5009/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3544,8 +3544,10 @@ extern TypeInfo SecurityProtocolType_t1116_il2cpp_TypeInfo;
 #include "System_System_Net_SecurityProtocolTypeMethodDeclarations.h"
 static const EncodedMethodIndex SecurityProtocolType_t1116_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -3565,8 +3567,6 @@ static const EncodedMethodIndex SecurityProtocolType_t1116_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair SecurityProtocolType_t1116_InterfacesOffsets[] = 
 {
@@ -3671,9 +3671,9 @@ const Il2CppTypeDefinitionMetadata ServicePoint_t1064_DefinitionMetadata =
 	, ServicePoint_t1064_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3199/* fieldStart */
-	, 5012/* methodStart */
+	, 5011/* methodStart */
 	, -1/* eventStart */
-	, 1216/* propertyStart */
+	, 1214/* propertyStart */
 
 };
 TypeInfo ServicePoint_t1064_il2cpp_TypeInfo = 
@@ -3760,9 +3760,9 @@ const Il2CppTypeDefinitionMetadata ServicePointManager_t1053_DefinitionMetadata 
 	, ServicePointManager_t1053_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3210/* fieldStart */
-	, 5023/* methodStart */
+	, 5022/* methodStart */
 	, -1/* eventStart */
-	, 1225/* propertyStart */
+	, 1223/* propertyStart */
 
 };
 TypeInfo ServicePointManager_t1053_il2cpp_TypeInfo = 
@@ -3825,9 +3825,9 @@ extern TypeInfo SPKey_t1117_il2cpp_TypeInfo;
 #include "System_System_Net_ServicePointManager_SPKeyMethodDeclarations.h"
 static const EncodedMethodIndex SPKey_t1117_VTable[4] = 
 {
-	1948,
+	1935,
 	502,
-	1949,
+	1936,
 	504,
 };
 extern Il2CppImage g_System_dll_Image;
@@ -3843,7 +3843,7 @@ const Il2CppTypeDefinitionMetadata SPKey_t1117_DefinitionMetadata =
 	, SPKey_t1117_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3220/* fieldStart */
-	, 5030/* methodStart */
+	, 5029/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3911,22 +3911,22 @@ static const EncodedMethodIndex WebHeaderCollection_t1103_VTable[19] =
 	501,
 	502,
 	503,
-	1950,
-	1951,
-	1907,
-	1908,
-	1909,
-	1952,
-	1953,
-	1954,
-	1955,
-	1953,
-	1956,
-	1951,
-	1952,
-	1957,
-	1958,
-	1959,
+	1937,
+	1938,
+	1894,
+	1895,
+	1896,
+	1939,
+	1940,
+	1941,
+	1942,
+	1940,
+	1943,
+	1938,
+	1939,
+	1944,
+	1945,
+	1946,
 };
 static const Il2CppType* WebHeaderCollection_t1103_InterfacesTypeInfos[] = 
 {
@@ -3953,9 +3953,9 @@ const Il2CppTypeDefinitionMetadata WebHeaderCollection_t1103_DefinitionMetadata 
 	, WebHeaderCollection_t1103_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3222/* fieldStart */
-	, 5033/* methodStart */
+	, 5032/* methodStart */
 	, -1/* eventStart */
-	, 1229/* propertyStart */
+	, 1227/* propertyStart */
 
 };
 TypeInfo WebHeaderCollection_t1103_il2cpp_TypeInfo = 
@@ -4022,10 +4022,10 @@ static const EncodedMethodIndex WebProxy_t1121_VTable[8] =
 	502,
 	503,
 	504,
-	1960,
-	1961,
-	1962,
-	1963,
+	1947,
+	1948,
+	1949,
+	1950,
 };
 static const Il2CppType* WebProxy_t1121_InterfacesTypeInfos[] = 
 {
@@ -4051,9 +4051,9 @@ const Il2CppTypeDefinitionMetadata WebProxy_t1121_DefinitionMetadata =
 	, WebProxy_t1121_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3227/* fieldStart */
-	, 5051/* methodStart */
+	, 5050/* methodStart */
 	, -1/* eventStart */
-	, 1231/* propertyStart */
+	, 1229/* propertyStart */
 
 };
 TypeInfo WebProxy_t1121_il2cpp_TypeInfo = 
@@ -4120,8 +4120,8 @@ static const EncodedMethodIndex WebRequest_t1068_VTable[6] =
 	502,
 	503,
 	504,
-	1937,
-	1938,
+	1924,
+	1925,
 };
 static const Il2CppType* WebRequest_t1068_InterfacesTypeInfos[] = 
 {
@@ -4145,9 +4145,9 @@ const Il2CppTypeDefinitionMetadata WebRequest_t1068_DefinitionMetadata =
 	, WebRequest_t1068_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3232/* fieldStart */
-	, 5060/* methodStart */
+	, 5059/* methodStart */
 	, -1/* eventStart */
-	, 1232/* propertyStart */
+	, 1230/* propertyStart */
 
 };
 TypeInfo WebRequest_t1068_il2cpp_TypeInfo = 
@@ -4210,8 +4210,10 @@ extern TypeInfo OpenFlags_t1123_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_OpenFlaMethodDeclarations.h"
 static const EncodedMethodIndex OpenFlags_t1123_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4231,8 +4233,6 @@ static const EncodedMethodIndex OpenFlags_t1123_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair OpenFlags_t1123_InterfacesOffsets[] = 
 {
@@ -4337,9 +4337,9 @@ const Il2CppTypeDefinitionMetadata PublicKey_t1126_DefinitionMetadata =
 	, PublicKey_t1126_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3243/* fieldStart */
-	, 5070/* methodStart */
+	, 5069/* methodStart */
 	, -1/* eventStart */
-	, 1233/* propertyStart */
+	, 1231/* propertyStart */
 
 };
 TypeInfo PublicKey_t1126_il2cpp_TypeInfo = 
@@ -4402,8 +4402,10 @@ extern TypeInfo StoreLocation_t1127_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_StoreLoMethodDeclarations.h"
 static const EncodedMethodIndex StoreLocation_t1127_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4423,8 +4425,6 @@ static const EncodedMethodIndex StoreLocation_t1127_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair StoreLocation_t1127_InterfacesOffsets[] = 
 {
@@ -4510,8 +4510,10 @@ extern TypeInfo StoreName_t1128_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_StoreNaMethodDeclarations.h"
 static const EncodedMethodIndex StoreName_t1128_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4531,8 +4533,6 @@ static const EncodedMethodIndex StoreName_t1128_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair StoreName_t1128_InterfacesOffsets[] = 
 {
@@ -4622,8 +4622,8 @@ static const EncodedMethodIndex X500DistinguishedName_t1129_VTable[6] =
 	502,
 	503,
 	504,
-	1964,
-	1965,
+	1951,
+	1952,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X500DistinguishedName_t1129_0_0_0;
@@ -4640,7 +4640,7 @@ const Il2CppTypeDefinitionMetadata X500DistinguishedName_t1129_DefinitionMetadat
 	, X500DistinguishedName_t1129_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3260/* fieldStart */
-	, 5078/* methodStart */
+	, 5077/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4705,8 +4705,10 @@ extern TypeInfo X500DistinguishedNameFlags_t1130_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X500Dis_0MethodDeclarations.h"
 static const EncodedMethodIndex X500DistinguishedNameFlags_t1130_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4726,8 +4728,6 @@ static const EncodedMethodIndex X500DistinguishedNameFlags_t1130_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X500DistinguishedNameFlags_t1130_InterfacesOffsets[] = 
 {
@@ -4817,8 +4817,8 @@ static const EncodedMethodIndex X509BasicConstraintsExtension_t1131_VTable[6] =
 	502,
 	503,
 	504,
-	1966,
-	1967,
+	1953,
+	1954,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X509BasicConstraintsExtension_t1131_0_0_0;
@@ -4835,9 +4835,9 @@ const Il2CppTypeDefinitionMetadata X509BasicConstraintsExtension_t1131_Definitio
 	, X509BasicConstraintsExtension_t1131_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3272/* fieldStart */
-	, 5084/* methodStart */
+	, 5083/* methodStart */
 	, -1/* eventStart */
-	, 1237/* propertyStart */
+	, 1235/* propertyStart */
 
 };
 TypeInfo X509BasicConstraintsExtension_t1131_il2cpp_TypeInfo = 
@@ -4900,24 +4900,24 @@ extern TypeInfo X509Certificate2_t1066_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509Cer_0MethodDeclarations.h"
 static const EncodedMethodIndex X509Certificate2_t1066_VTable[18] = 
 {
-	1968,
+	1955,
 	502,
+	1956,
+	1957,
+	1958,
+	1959,
+	1960,
+	1961,
+	1962,
+	1963,
+	1964,
+	1965,
+	1966,
+	1967,
+	1968,
 	1969,
 	1970,
 	1971,
-	1972,
-	1973,
-	1974,
-	1975,
-	1976,
-	1977,
-	1978,
-	1979,
-	1980,
-	1981,
-	1982,
-	1983,
-	1984,
 };
 static Il2CppInterfaceOffsetPair X509Certificate2_t1066_InterfacesOffsets[] = 
 {
@@ -4939,9 +4939,9 @@ const Il2CppTypeDefinitionMetadata X509Certificate2_t1066_DefinitionMetadata =
 	, X509Certificate2_t1066_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3278/* fieldStart */
-	, 5094/* methodStart */
+	, 5093/* methodStart */
 	, -1/* eventStart */
-	, 1240/* propertyStart */
+	, 1238/* propertyStart */
 
 };
 TypeInfo X509Certificate2_t1066_il2cpp_TypeInfo = 
@@ -5006,9 +5006,22 @@ static const EncodedMethodIndex X509Certificate2Collection_t1134_VTable[29] =
 {
 	501,
 	502,
-	1985,
+	1972,
 	504,
-	1986,
+	1973,
+	1645,
+	1646,
+	1647,
+	1648,
+	1649,
+	1650,
+	1651,
+	1652,
+	1653,
+	1654,
+	1655,
+	1656,
+	1657,
 	1658,
 	1659,
 	1660,
@@ -5020,19 +5033,6 @@ static const EncodedMethodIndex X509Certificate2Collection_t1134_VTable[29] =
 	1666,
 	1667,
 	1668,
-	1669,
-	1670,
-	1671,
-	1672,
-	1673,
-	1674,
-	1675,
-	1676,
-	1677,
-	1678,
-	1679,
-	1680,
-	1681,
 };
 extern const Il2CppType IList_t1194_0_0_0;
 static Il2CppInterfaceOffsetPair X509Certificate2Collection_t1134_InterfacesOffsets[] = 
@@ -5056,9 +5056,9 @@ const Il2CppTypeDefinitionMetadata X509Certificate2Collection_t1134_DefinitionMe
 	, X509Certificate2Collection_t1134_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 5118/* methodStart */
+	, 5117/* methodStart */
 	, -1/* eventStart */
-	, 1252/* propertyStart */
+	, 1250/* propertyStart */
 
 };
 TypeInfo X509Certificate2Collection_t1134_il2cpp_TypeInfo = 
@@ -5125,9 +5125,9 @@ static const EncodedMethodIndex X509Certificate2Enumerator_t1135_VTable[7] =
 	502,
 	503,
 	504,
-	1987,
-	1988,
-	1989,
+	1974,
+	1975,
+	1976,
 };
 static const Il2CppType* X509Certificate2Enumerator_t1135_InterfacesTypeInfos[] = 
 {
@@ -5151,9 +5151,9 @@ const Il2CppTypeDefinitionMetadata X509Certificate2Enumerator_t1135_DefinitionMe
 	, X509Certificate2Enumerator_t1135_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3291/* fieldStart */
-	, 5126/* methodStart */
+	, 5125/* methodStart */
 	, -1/* eventStart */
-	, 1253/* propertyStart */
+	, 1251/* propertyStart */
 
 };
 TypeInfo X509Certificate2Enumerator_t1135_il2cpp_TypeInfo = 
@@ -5223,9 +5223,22 @@ static const EncodedMethodIndex X509CertificateCollection_t1006_VTable[29] =
 {
 	501,
 	502,
-	1985,
+	1972,
 	504,
-	1986,
+	1973,
+	1645,
+	1646,
+	1647,
+	1648,
+	1649,
+	1650,
+	1651,
+	1652,
+	1653,
+	1654,
+	1655,
+	1656,
+	1657,
 	1658,
 	1659,
 	1660,
@@ -5237,19 +5250,6 @@ static const EncodedMethodIndex X509CertificateCollection_t1006_VTable[29] =
 	1666,
 	1667,
 	1668,
-	1669,
-	1670,
-	1671,
-	1672,
-	1673,
-	1674,
-	1675,
-	1676,
-	1677,
-	1678,
-	1679,
-	1680,
-	1681,
 };
 static Il2CppInterfaceOffsetPair X509CertificateCollection_t1006_InterfacesOffsets[] = 
 {
@@ -5271,9 +5271,9 @@ const Il2CppTypeDefinitionMetadata X509CertificateCollection_t1006_DefinitionMet
 	, X509CertificateCollection_t1006_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 5131/* methodStart */
+	, 5130/* methodStart */
 	, -1/* eventStart */
-	, 1255/* propertyStart */
+	, 1253/* propertyStart */
 
 };
 TypeInfo X509CertificateCollection_t1006_il2cpp_TypeInfo = 
@@ -5340,9 +5340,9 @@ static const EncodedMethodIndex X509CertificateEnumerator_t1072_VTable[7] =
 	502,
 	503,
 	504,
-	1990,
-	1991,
-	1992,
+	1977,
+	1978,
+	1979,
 };
 static const Il2CppType* X509CertificateEnumerator_t1072_InterfacesTypeInfos[] = 
 {
@@ -5365,9 +5365,9 @@ const Il2CppTypeDefinitionMetadata X509CertificateEnumerator_t1072_DefinitionMet
 	, X509CertificateEnumerator_t1072_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3292/* fieldStart */
-	, 5137/* methodStart */
+	, 5136/* methodStart */
 	, -1/* eventStart */
-	, 1256/* propertyStart */
+	, 1254/* propertyStart */
 
 };
 TypeInfo X509CertificateEnumerator_t1072_il2cpp_TypeInfo = 
@@ -5449,9 +5449,9 @@ const Il2CppTypeDefinitionMetadata X509Chain_t1067_DefinitionMetadata =
 	, X509Chain_t1067_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3293/* fieldStart */
-	, 5142/* methodStart */
+	, 5141/* methodStart */
 	, -1/* eventStart */
-	, 1258/* propertyStart */
+	, 1256/* propertyStart */
 
 };
 TypeInfo X509Chain_t1067_il2cpp_TypeInfo = 
@@ -5533,9 +5533,9 @@ const Il2CppTypeDefinitionMetadata X509ChainElement_t1140_DefinitionMetadata =
 	, X509ChainElement_t1140_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3308/* fieldStart */
-	, 5172/* methodStart */
+	, 5171/* methodStart */
 	, -1/* eventStart */
-	, 1262/* propertyStart */
+	, 1260/* propertyStart */
 
 };
 TypeInfo X509ChainElement_t1140_il2cpp_TypeInfo = 
@@ -5602,11 +5602,11 @@ static const EncodedMethodIndex X509ChainElementCollection_t1136_VTable[9] =
 	502,
 	503,
 	504,
-	1993,
-	1994,
-	1995,
-	1996,
-	1997,
+	1980,
+	1981,
+	1982,
+	1983,
+	1984,
 };
 static const Il2CppType* X509ChainElementCollection_t1136_InterfacesTypeInfos[] = 
 {
@@ -5632,9 +5632,9 @@ const Il2CppTypeDefinitionMetadata X509ChainElementCollection_t1136_DefinitionMe
 	, X509ChainElementCollection_t1136_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3312/* fieldStart */
-	, 5180/* methodStart */
+	, 5179/* methodStart */
 	, -1/* eventStart */
-	, 1265/* propertyStart */
+	, 1263/* propertyStart */
 
 };
 TypeInfo X509ChainElementCollection_t1136_il2cpp_TypeInfo = 
@@ -5701,8 +5701,8 @@ static const EncodedMethodIndex X509ChainElementEnumerator_t1142_VTable[6] =
 	502,
 	503,
 	504,
-	1998,
-	1999,
+	1985,
+	1986,
 };
 static const Il2CppType* X509ChainElementEnumerator_t1142_InterfacesTypeInfos[] = 
 {
@@ -5726,9 +5726,9 @@ const Il2CppTypeDefinitionMetadata X509ChainElementEnumerator_t1142_DefinitionMe
 	, X509ChainElementEnumerator_t1142_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3313/* fieldStart */
-	, 5191/* methodStart */
+	, 5190/* methodStart */
 	, -1/* eventStart */
-	, 1269/* propertyStart */
+	, 1267/* propertyStart */
 
 };
 TypeInfo X509ChainElementEnumerator_t1142_il2cpp_TypeInfo = 
@@ -5810,9 +5810,9 @@ const Il2CppTypeDefinitionMetadata X509ChainPolicy_t1137_DefinitionMetadata =
 	, X509ChainPolicy_t1137_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3314/* fieldStart */
-	, 5195/* methodStart */
+	, 5194/* methodStart */
 	, -1/* eventStart */
-	, 1271/* propertyStart */
+	, 1269/* propertyStart */
 
 };
 TypeInfo X509ChainPolicy_t1137_il2cpp_TypeInfo = 
@@ -5875,10 +5875,10 @@ extern TypeInfo X509ChainStatus_t1139_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509Cha_5MethodDeclarations.h"
 static const EncodedMethodIndex X509ChainStatus_t1139_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X509ChainStatus_t1139_0_0_0;
@@ -5893,9 +5893,9 @@ const Il2CppTypeDefinitionMetadata X509ChainStatus_t1139_DefinitionMetadata =
 	, X509ChainStatus_t1139_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3322/* fieldStart */
-	, 5202/* methodStart */
+	, 5201/* methodStart */
 	, -1/* eventStart */
-	, 1276/* propertyStart */
+	, 1274/* propertyStart */
 
 };
 TypeInfo X509ChainStatus_t1139_il2cpp_TypeInfo = 
@@ -5958,8 +5958,10 @@ extern TypeInfo X509ChainStatusFlags_t1145_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509Cha_1MethodDeclarations.h"
 static const EncodedMethodIndex X509ChainStatusFlags_t1145_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -5979,8 +5981,6 @@ static const EncodedMethodIndex X509ChainStatusFlags_t1145_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509ChainStatusFlags_t1145_InterfacesOffsets[] = 
 {
@@ -6070,8 +6070,8 @@ static const EncodedMethodIndex X509EnhancedKeyUsageExtension_t1146_VTable[6] =
 	502,
 	503,
 	504,
-	2000,
-	2001,
+	1987,
+	1988,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X509EnhancedKeyUsageExtension_t1146_0_0_0;
@@ -6087,7 +6087,7 @@ const Il2CppTypeDefinitionMetadata X509EnhancedKeyUsageExtension_t1146_Definitio
 	, X509EnhancedKeyUsageExtension_t1146_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3348/* fieldStart */
-	, 5207/* methodStart */
+	, 5206/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -6156,8 +6156,8 @@ static const EncodedMethodIndex X509Extension_t1132_VTable[6] =
 	502,
 	503,
 	504,
-	2002,
-	1965,
+	1989,
+	1952,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X509Extension_t1132_1_0_0;
@@ -6172,9 +6172,9 @@ const Il2CppTypeDefinitionMetadata X509Extension_t1132_DefinitionMetadata =
 	, X509Extension_t1132_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3351/* fieldStart */
-	, 5211/* methodStart */
+	, 5210/* methodStart */
 	, -1/* eventStart */
-	, 1278/* propertyStart */
+	, 1276/* propertyStart */
 
 };
 TypeInfo X509Extension_t1132_il2cpp_TypeInfo = 
@@ -6241,11 +6241,11 @@ static const EncodedMethodIndex X509ExtensionCollection_t1133_VTable[9] =
 	502,
 	503,
 	504,
-	2003,
-	2004,
-	2005,
-	2006,
-	2007,
+	1990,
+	1991,
+	1992,
+	1993,
+	1994,
 };
 static const Il2CppType* X509ExtensionCollection_t1133_InterfacesTypeInfos[] = 
 {
@@ -6271,9 +6271,9 @@ const Il2CppTypeDefinitionMetadata X509ExtensionCollection_t1133_DefinitionMetad
 	, X509ExtensionCollection_t1133_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3352/* fieldStart */
-	, 5217/* methodStart */
+	, 5216/* methodStart */
 	, -1/* eventStart */
-	, 1279/* propertyStart */
+	, 1277/* propertyStart */
 
 };
 TypeInfo X509ExtensionCollection_t1133_il2cpp_TypeInfo = 
@@ -6340,8 +6340,8 @@ static const EncodedMethodIndex X509ExtensionEnumerator_t1147_VTable[6] =
 	502,
 	503,
 	504,
-	2008,
-	2009,
+	1995,
+	1996,
 };
 static const Il2CppType* X509ExtensionEnumerator_t1147_InterfacesTypeInfos[] = 
 {
@@ -6365,9 +6365,9 @@ const Il2CppTypeDefinitionMetadata X509ExtensionEnumerator_t1147_DefinitionMetad
 	, X509ExtensionEnumerator_t1147_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3353/* fieldStart */
-	, 5225/* methodStart */
+	, 5224/* methodStart */
 	, -1/* eventStart */
-	, 1283/* propertyStart */
+	, 1281/* propertyStart */
 
 };
 TypeInfo X509ExtensionEnumerator_t1147_il2cpp_TypeInfo = 
@@ -6430,8 +6430,10 @@ extern TypeInfo X509FindType_t1148_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509FinMethodDeclarations.h"
 static const EncodedMethodIndex X509FindType_t1148_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6451,8 +6453,6 @@ static const EncodedMethodIndex X509FindType_t1148_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509FindType_t1148_InterfacesOffsets[] = 
 {
@@ -6542,8 +6542,8 @@ static const EncodedMethodIndex X509KeyUsageExtension_t1149_VTable[6] =
 	502,
 	503,
 	504,
-	2010,
-	2011,
+	1997,
+	1998,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X509KeyUsageExtension_t1149_0_0_0;
@@ -6559,9 +6559,9 @@ const Il2CppTypeDefinitionMetadata X509KeyUsageExtension_t1149_DefinitionMetadat
 	, X509KeyUsageExtension_t1149_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3370/* fieldStart */
-	, 5229/* methodStart */
+	, 5228/* methodStart */
 	, -1/* eventStart */
-	, 1285/* propertyStart */
+	, 1283/* propertyStart */
 
 };
 TypeInfo X509KeyUsageExtension_t1149_il2cpp_TypeInfo = 
@@ -6624,8 +6624,10 @@ extern TypeInfo X509KeyUsageFlags_t1150_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509Key_0MethodDeclarations.h"
 static const EncodedMethodIndex X509KeyUsageFlags_t1150_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6645,8 +6647,6 @@ static const EncodedMethodIndex X509KeyUsageFlags_t1150_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509KeyUsageFlags_t1150_InterfacesOffsets[] = 
 {
@@ -6732,8 +6732,10 @@ extern TypeInfo X509NameType_t1151_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509NamMethodDeclarations.h"
 static const EncodedMethodIndex X509NameType_t1151_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6753,8 +6755,6 @@ static const EncodedMethodIndex X509NameType_t1151_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509NameType_t1151_InterfacesOffsets[] = 
 {
@@ -6840,8 +6840,10 @@ extern TypeInfo X509RevocationFlag_t1152_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509RevMethodDeclarations.h"
 static const EncodedMethodIndex X509RevocationFlag_t1152_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6861,8 +6863,6 @@ static const EncodedMethodIndex X509RevocationFlag_t1152_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509RevocationFlag_t1152_InterfacesOffsets[] = 
 {
@@ -6948,8 +6948,10 @@ extern TypeInfo X509RevocationMode_t1153_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509Rev_0MethodDeclarations.h"
 static const EncodedMethodIndex X509RevocationMode_t1153_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6969,8 +6971,6 @@ static const EncodedMethodIndex X509RevocationMode_t1153_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509RevocationMode_t1153_InterfacesOffsets[] = 
 {
@@ -7075,9 +7075,9 @@ const Il2CppTypeDefinitionMetadata X509Store_t1141_DefinitionMetadata =
 	, X509Store_t1141_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3401/* fieldStart */
-	, 5238/* methodStart */
+	, 5237/* methodStart */
 	, -1/* eventStart */
-	, 1286/* propertyStart */
+	, 1284/* propertyStart */
 
 };
 TypeInfo X509Store_t1141_il2cpp_TypeInfo = 
@@ -7144,8 +7144,8 @@ static const EncodedMethodIndex X509SubjectKeyIdentifierExtension_t1154_VTable[6
 	502,
 	503,
 	504,
-	2012,
-	2013,
+	1999,
+	2000,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType X509SubjectKeyIdentifierExtension_t1154_0_0_0;
@@ -7161,9 +7161,9 @@ const Il2CppTypeDefinitionMetadata X509SubjectKeyIdentifierExtension_t1154_Defin
 	, X509SubjectKeyIdentifierExtension_t1154_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3407/* fieldStart */
-	, 5244/* methodStart */
+	, 5243/* methodStart */
 	, -1/* eventStart */
-	, 1289/* propertyStart */
+	, 1287/* propertyStart */
 
 };
 TypeInfo X509SubjectKeyIdentifierExtension_t1154_il2cpp_TypeInfo = 
@@ -7226,8 +7226,10 @@ extern TypeInfo X509SubjectKeyIdentifierHashAlgorithm_t1155_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509Sub_0MethodDeclarations.h"
 static const EncodedMethodIndex X509SubjectKeyIdentifierHashAlgorithm_t1155_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -7247,8 +7249,6 @@ static const EncodedMethodIndex X509SubjectKeyIdentifierHashAlgorithm_t1155_VTab
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509SubjectKeyIdentifierHashAlgorithm_t1155_InterfacesOffsets[] = 
 {
@@ -7334,8 +7334,10 @@ extern TypeInfo X509VerificationFlags_t1156_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_X509Certificates_X509VerMethodDeclarations.h"
 static const EncodedMethodIndex X509VerificationFlags_t1156_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -7355,8 +7357,6 @@ static const EncodedMethodIndex X509VerificationFlags_t1156_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509VerificationFlags_t1156_InterfacesOffsets[] = 
 {
@@ -7442,8 +7442,10 @@ extern TypeInfo AsnDecodeStatus_t1157_il2cpp_TypeInfo;
 #include "System_System_Security_Cryptography_AsnDecodeStatusMethodDeclarations.h"
 static const EncodedMethodIndex AsnDecodeStatus_t1157_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -7463,8 +7465,6 @@ static const EncodedMethodIndex AsnDecodeStatus_t1157_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AsnDecodeStatus_t1157_InterfacesOffsets[] = 
 {
@@ -7554,8 +7554,8 @@ static const EncodedMethodIndex AsnEncodedData_t1124_VTable[6] =
 	502,
 	503,
 	504,
-	1964,
-	1965,
+	1951,
+	1952,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType AsnEncodedData_t1124_1_0_0;
@@ -7570,9 +7570,9 @@ const Il2CppTypeDefinitionMetadata AsnEncodedData_t1124_DefinitionMetadata =
 	, AsnEncodedData_t1124_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3438/* fieldStart */
-	, 5258/* methodStart */
+	, 5257/* methodStart */
 	, -1/* eventStart */
-	, 1290/* propertyStart */
+	, 1288/* propertyStart */
 
 };
 TypeInfo AsnEncodedData_t1124_il2cpp_TypeInfo = 
@@ -7654,9 +7654,9 @@ const Il2CppTypeDefinitionMetadata Oid_t1125_DefinitionMetadata =
 	, Oid_t1125_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3441/* fieldStart */
-	, 5274/* methodStart */
+	, 5273/* methodStart */
 	, -1/* eventStart */
-	, 1292/* propertyStart */
+	, 1290/* propertyStart */
 
 };
 TypeInfo Oid_t1125_il2cpp_TypeInfo = 
@@ -7723,11 +7723,11 @@ static const EncodedMethodIndex OidCollection_t1143_VTable[9] =
 	502,
 	503,
 	504,
-	2014,
-	2015,
-	2016,
-	2017,
-	2018,
+	2001,
+	2002,
+	2003,
+	2004,
+	2005,
 };
 static const Il2CppType* OidCollection_t1143_InterfacesTypeInfos[] = 
 {
@@ -7753,9 +7753,9 @@ const Il2CppTypeDefinitionMetadata OidCollection_t1143_DefinitionMetadata =
 	, OidCollection_t1143_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3444/* fieldStart */
-	, 5281/* methodStart */
+	, 5280/* methodStart */
 	, -1/* eventStart */
-	, 1294/* propertyStart */
+	, 1292/* propertyStart */
 
 };
 TypeInfo OidCollection_t1143_il2cpp_TypeInfo = 
@@ -7822,8 +7822,8 @@ static const EncodedMethodIndex OidEnumerator_t1158_VTable[6] =
 	502,
 	503,
 	504,
-	2019,
-	2020,
+	2006,
+	2007,
 };
 static const Il2CppType* OidEnumerator_t1158_InterfacesTypeInfos[] = 
 {
@@ -7847,9 +7847,9 @@ const Il2CppTypeDefinitionMetadata OidEnumerator_t1158_DefinitionMetadata =
 	, OidEnumerator_t1158_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3446/* fieldStart */
-	, 5289/* methodStart */
+	, 5288/* methodStart */
 	, -1/* eventStart */
-	, 1298/* propertyStart */
+	, 1296/* propertyStart */
 
 };
 TypeInfo OidEnumerator_t1158_il2cpp_TypeInfo = 
@@ -7921,10 +7921,10 @@ static const EncodedMethodIndex BaseMachine_t1160_VTable[8] =
 	502,
 	503,
 	504,
-	2021,
-	2022,
-	2022,
-	2021,
+	2008,
+	2009,
+	2009,
+	2008,
 };
 extern const Il2CppType IMachine_t1165_0_0_0;
 static const Il2CppType* BaseMachine_t1160_InterfacesTypeInfos[] = 
@@ -7949,7 +7949,7 @@ const Il2CppTypeDefinitionMetadata BaseMachine_t1160_DefinitionMetadata =
 	, BaseMachine_t1160_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3448/* fieldStart */
-	, 5292/* methodStart */
+	, 5291/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -8014,19 +8014,19 @@ extern TypeInfo MatchAppendEvaluator_t1159_il2cpp_TypeInfo;
 #include "System_System_Text_RegularExpressions_BaseMachine_MatchAppenMethodDeclarations.h"
 static const EncodedMethodIndex MatchAppendEvaluator_t1159_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	2023,
-	2024,
-	2025,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	2010,
+	2011,
+	2012,
 };
 extern const Il2CppType ICloneable_t3094_0_0_0;
 static Il2CppInterfaceOffsetPair MatchAppendEvaluator_t1159_InterfacesOffsets[] = 
@@ -8048,7 +8048,7 @@ const Il2CppTypeDefinitionMetadata MatchAppendEvaluator_t1159_DefinitionMetadata
 	, MatchAppendEvaluator_t1159_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 5297/* methodStart */
+	, 5296/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -8116,7 +8116,7 @@ static const EncodedMethodIndex Capture_t1161_VTable[4] =
 	501,
 	502,
 	503,
-	2026,
+	2013,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType Capture_t1161_0_0_0;
@@ -8132,9 +8132,9 @@ const Il2CppTypeDefinitionMetadata Capture_t1161_DefinitionMetadata =
 	, Capture_t1161_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3449/* fieldStart */
-	, 5301/* methodStart */
+	, 5300/* methodStart */
 	, -1/* eventStart */
-	, 1299/* propertyStart */
+	, 1297/* propertyStart */
 
 };
 TypeInfo Capture_t1161_il2cpp_TypeInfo = 
@@ -8201,11 +8201,11 @@ static const EncodedMethodIndex CaptureCollection_t1163_VTable[9] =
 	502,
 	503,
 	504,
-	2027,
-	2028,
-	2029,
-	2030,
-	2031,
+	2014,
+	2015,
+	2016,
+	2017,
+	2018,
 };
 static const Il2CppType* CaptureCollection_t1163_InterfacesTypeInfos[] = 
 {
@@ -8231,9 +8231,9 @@ const Il2CppTypeDefinitionMetadata CaptureCollection_t1163_DefinitionMetadata =
 	, CaptureCollection_t1163_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3452/* fieldStart */
-	, 5308/* methodStart */
+	, 5307/* methodStart */
 	, -1/* eventStart */
-	, 1303/* propertyStart */
+	, 1301/* propertyStart */
 
 };
 TypeInfo CaptureCollection_t1163_il2cpp_TypeInfo = 
@@ -8299,7 +8299,7 @@ static const EncodedMethodIndex Group_t1077_VTable[4] =
 	501,
 	502,
 	503,
-	2026,
+	2013,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType Group_t1077_0_0_0;
@@ -8315,9 +8315,9 @@ const Il2CppTypeDefinitionMetadata Group_t1077_DefinitionMetadata =
 	, Group_t1077_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3453/* fieldStart */
-	, 5315/* methodStart */
+	, 5314/* methodStart */
 	, -1/* eventStart */
-	, 1306/* propertyStart */
+	, 1304/* propertyStart */
 
 };
 TypeInfo Group_t1077_il2cpp_TypeInfo = 
@@ -8384,11 +8384,11 @@ static const EncodedMethodIndex GroupCollection_t1076_VTable[9] =
 	502,
 	503,
 	504,
-	2032,
-	2033,
-	2034,
-	2035,
-	2036,
+	2019,
+	2020,
+	2021,
+	2022,
+	2023,
 };
 static const Il2CppType* GroupCollection_t1076_InterfacesTypeInfos[] = 
 {
@@ -8414,9 +8414,9 @@ const Il2CppTypeDefinitionMetadata GroupCollection_t1076_DefinitionMetadata =
 	, GroupCollection_t1076_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3456/* fieldStart */
-	, 5321/* methodStart */
+	, 5320/* methodStart */
 	, -1/* eventStart */
-	, 1308/* propertyStart */
+	, 1306/* propertyStart */
 
 };
 TypeInfo GroupCollection_t1076_il2cpp_TypeInfo = 
@@ -8482,8 +8482,8 @@ static const EncodedMethodIndex Match_t1075_VTable[5] =
 	501,
 	502,
 	503,
-	2026,
-	2037,
+	2013,
+	2024,
 };
 extern Il2CppImage g_System_dll_Image;
 extern const Il2CppType Match_t1075_0_0_0;
@@ -8499,9 +8499,9 @@ const Il2CppTypeDefinitionMetadata Match_t1075_DefinitionMetadata =
 	, Match_t1075_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3458/* fieldStart */
-	, 5329/* methodStart */
+	, 5328/* methodStart */
 	, -1/* eventStart */
-	, 1312/* propertyStart */
+	, 1310/* propertyStart */
 
 };
 TypeInfo Match_t1075_il2cpp_TypeInfo = 
@@ -8573,12 +8573,12 @@ static const EncodedMethodIndex MatchCollection_t1074_VTable[10] =
 	502,
 	503,
 	504,
-	2038,
-	2039,
-	2040,
-	2041,
-	2042,
-	2043,
+	2025,
+	2026,
+	2027,
+	2028,
+	2029,
+	2030,
 };
 static const Il2CppType* MatchCollection_t1074_InterfacesTypeInfos[] = 
 {
@@ -8604,9 +8604,9 @@ const Il2CppTypeDefinitionMetadata MatchCollection_t1074_DefinitionMetadata =
 	, MatchCollection_t1074_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3463/* fieldStart */
-	, 5337/* methodStart */
+	, 5336/* methodStart */
 	, -1/* eventStart */
-	, 1315/* propertyStart */
+	, 1313/* propertyStart */
 
 };
 TypeInfo MatchCollection_t1074_il2cpp_TypeInfo = 
@@ -8673,8 +8673,8 @@ static const EncodedMethodIndex Enumerator_t1166_VTable[6] =
 	502,
 	503,
 	504,
-	2044,
-	2045,
+	2031,
+	2032,
 };
 static const Il2CppType* Enumerator_t1166_InterfacesTypeInfos[] = 
 {
@@ -8697,9 +8697,9 @@ const Il2CppTypeDefinitionMetadata Enumerator_t1166_DefinitionMetadata =
 	, Enumerator_t1166_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3465/* fieldStart */
-	, 5346/* methodStart */
+	, 5345/* methodStart */
 	, -1/* eventStart */
-	, 1320/* propertyStart */
+	, 1318/* propertyStart */
 
 };
 TypeInfo Enumerator_t1166_il2cpp_TypeInfo = 
@@ -8765,8 +8765,8 @@ static const EncodedMethodIndex Regex_t866_VTable[5] =
 	501,
 	502,
 	503,
-	2046,
-	2047,
+	2033,
+	2034,
 };
 static const Il2CppType* Regex_t866_InterfacesTypeInfos[] = 
 {
@@ -8790,9 +8790,9 @@ const Il2CppTypeDefinitionMetadata Regex_t866_DefinitionMetadata =
 	, Regex_t866_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3467/* fieldStart */
-	, 5349/* methodStart */
+	, 5348/* methodStart */
 	, -1/* eventStart */
-	, 1321/* propertyStart */
+	, 1319/* propertyStart */
 
 };
 TypeInfo Regex_t866_il2cpp_TypeInfo = 
@@ -8855,8 +8855,10 @@ extern TypeInfo RegexOptions_t1171_il2cpp_TypeInfo;
 #include "System_System_Text_RegularExpressions_RegexOptionsMethodDeclarations.h"
 static const EncodedMethodIndex RegexOptions_t1171_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8876,8 +8878,6 @@ static const EncodedMethodIndex RegexOptions_t1171_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair RegexOptions_t1171_InterfacesOffsets[] = 
 {
@@ -8963,8 +8963,10 @@ extern TypeInfo OpCode_t1172_il2cpp_TypeInfo;
 #include "System_System_Text_RegularExpressions_OpCodeMethodDeclarations.h"
 static const EncodedMethodIndex OpCode_t1172_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8984,8 +8986,6 @@ static const EncodedMethodIndex OpCode_t1172_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair OpCode_t1172_InterfacesOffsets[] = 
 {
@@ -9074,8 +9074,10 @@ extern TypeInfo OpFlags_t1173_il2cpp_TypeInfo;
 #include "System_System_Text_RegularExpressions_OpFlagsMethodDeclarations.h"
 static const EncodedMethodIndex OpFlags_t1173_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -9095,8 +9097,6 @@ static const EncodedMethodIndex OpFlags_t1173_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair OpFlags_t1173_InterfacesOffsets[] = 
 {
@@ -9182,8 +9182,10 @@ extern TypeInfo Position_t1174_il2cpp_TypeInfo;
 #include "System_System_Text_RegularExpressions_PositionMethodDeclarations.h"
 static const EncodedMethodIndex Position_t1174_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -9203,8 +9205,6 @@ static const EncodedMethodIndex Position_t1174_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair Position_t1174_InterfacesOffsets[] = 
 {
@@ -9297,7 +9297,7 @@ const Il2CppTypeDefinitionMetadata IMachine_t1165_DefinitionMetadata =
 	, NULL/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 5379/* methodStart */
+	, 5378/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -9370,9 +9370,9 @@ const Il2CppTypeDefinitionMetadata IMachineFactory_t1168_DefinitionMetadata =
 	, NULL/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 5381/* methodStart */
+	, 5380/* methodStart */
 	, -1/* eventStart */
-	, 1326/* propertyStart */
+	, 1324/* propertyStart */
 
 };
 TypeInfo IMachineFactory_t1168_il2cpp_TypeInfo = 
@@ -9459,7 +9459,7 @@ const Il2CppTypeDefinitionMetadata FactoryCache_t1167_DefinitionMetadata =
 	, FactoryCache_t1167_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3534/* fieldStart */
-	, 5389/* methodStart */
+	, 5388/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 

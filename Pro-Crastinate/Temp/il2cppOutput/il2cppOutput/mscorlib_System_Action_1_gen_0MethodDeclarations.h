@@ -20,10 +20,10 @@ struct AsyncCallback_t382;
 // System.Void System.Action`1<UnityEngine.SocialPlatforms.IAchievement[]>::.ctor(System.Object,System.IntPtr)
 // System.Action`1<System.Object>
 #include "mscorlib_System_Action_1_gen_5MethodDeclarations.h"
-#define Action_1__ctor_m973(__this, ___object, ___method, method) (( void (*) (Action_1_t275 *, Object_t *, IntPtr_t, const MethodInfo*))Action_1__ctor_m13230_gshared)(__this, ___object, ___method, method)
+#define Action_1__ctor_m973(__this, ___object, ___method, method) (( void (*) (Action_1_t275 *, Object_t *, IntPtr_t, const MethodInfo*))Action_1__ctor_m13222_gshared)(__this, ___object, ___method, method)
 // System.Void System.Action`1<UnityEngine.SocialPlatforms.IAchievement[]>::Invoke(T)
-#define Action_1_Invoke_m3983(__this, ___obj, method) (( void (*) (Action_1_t275 *, IAchievementU5BU5D_t258*, const MethodInfo*))Action_1_Invoke_m13231_gshared)(__this, ___obj, method)
+#define Action_1_Invoke_m3983(__this, ___obj, method) (( void (*) (Action_1_t275 *, IAchievementU5BU5D_t258*, const MethodInfo*))Action_1_Invoke_m13223_gshared)(__this, ___obj, method)
 // System.IAsyncResult System.Action`1<UnityEngine.SocialPlatforms.IAchievement[]>::BeginInvoke(T,System.AsyncCallback,System.Object)
-#define Action_1_BeginInvoke_m13232(__this, ___obj, ___callback, ___object, method) (( Object_t * (*) (Action_1_t275 *, IAchievementU5BU5D_t258*, AsyncCallback_t382 *, Object_t *, const MethodInfo*))Action_1_BeginInvoke_m13233_gshared)(__this, ___obj, ___callback, ___object, method)
+#define Action_1_BeginInvoke_m13224(__this, ___obj, ___callback, ___object, method) (( Object_t * (*) (Action_1_t275 *, IAchievementU5BU5D_t258*, AsyncCallback_t382 *, Object_t *, const MethodInfo*))Action_1_BeginInvoke_m13225_gshared)(__this, ___obj, ___callback, ___object, method)
 // System.Void System.Action`1<UnityEngine.SocialPlatforms.IAchievement[]>::EndInvoke(System.IAsyncResult)
-#define Action_1_EndInvoke_m13234(__this, ___result, method) (( void (*) (Action_1_t275 *, Object_t *, const MethodInfo*))Action_1_EndInvoke_m13235_gshared)(__this, ___result, method)
+#define Action_1_EndInvoke_m13226(__this, ___result, method) (( void (*) (Action_1_t275 *, Object_t *, const MethodInfo*))Action_1_EndInvoke_m13227_gshared)(__this, ___result, method)

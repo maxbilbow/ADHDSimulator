@@ -13,30 +13,30 @@ static const EncodedMethodIndex TlsServerCertificate_t1018_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
+	1822,
+	1823,
+	1824,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1835,
-	1836,
-	1837,
-	1820,
 };
 extern const Il2CppType IDisposable_t153_0_0_0;
 static Il2CppInterfaceOffsetPair TlsServerCertificate_t1018_InterfacesOffsets[] = 
@@ -58,7 +58,7 @@ const Il2CppTypeDefinitionMetadata TlsServerCertificate_t1018_DefinitionMetadata
 	, TlsServerCertificate_t1018_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3019/* fieldStart */
-	, 4781/* methodStart */
+	, 4780/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -127,30 +127,30 @@ static const EncodedMethodIndex TlsServerCertificateRequest_t1019_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
+	1825,
+	1826,
+	1827,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1838,
-	1839,
-	1840,
-	1820,
 };
 static Il2CppInterfaceOffsetPair TlsServerCertificateRequest_t1019_InterfacesOffsets[] = 
 {
@@ -170,7 +170,7 @@ const Il2CppTypeDefinitionMetadata TlsServerCertificateRequest_t1019_DefinitionM
 	, TlsServerCertificateRequest_t1019_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3020/* fieldStart */
-	, 4790/* methodStart */
+	, 4789/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -239,30 +239,30 @@ static const EncodedMethodIndex TlsServerFinished_t1020_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
+	1828,
+	1829,
+	1830,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1841,
-	1842,
-	1843,
-	1820,
 };
 static Il2CppInterfaceOffsetPair TlsServerFinished_t1020_InterfacesOffsets[] = 
 {
@@ -282,7 +282,7 @@ const Il2CppTypeDefinitionMetadata TlsServerFinished_t1020_DefinitionMetadata =
 	, TlsServerFinished_t1020_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3022/* fieldStart */
-	, 4794/* methodStart */
+	, 4793/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -351,30 +351,30 @@ static const EncodedMethodIndex TlsServerHello_t1021_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
+	1831,
+	1832,
+	1833,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1844,
-	1845,
-	1846,
-	1820,
 };
 static Il2CppInterfaceOffsetPair TlsServerHello_t1021_InterfacesOffsets[] = 
 {
@@ -394,7 +394,7 @@ const Il2CppTypeDefinitionMetadata TlsServerHello_t1021_DefinitionMetadata =
 	, TlsServerHello_t1021_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3023/* fieldStart */
-	, 4799/* methodStart */
+	, 4798/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -463,30 +463,30 @@ static const EncodedMethodIndex TlsServerHelloDone_t1022_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
+	1834,
+	1835,
 	1806,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1847,
-	1848,
-	1819,
-	1820,
 };
 static Il2CppInterfaceOffsetPair TlsServerHelloDone_t1022_InterfacesOffsets[] = 
 {
@@ -506,7 +506,7 @@ const Il2CppTypeDefinitionMetadata TlsServerHelloDone_t1022_DefinitionMetadata =
 	, TlsServerHelloDone_t1022_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4804/* methodStart */
+	, 4803/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -575,30 +575,30 @@ static const EncodedMethodIndex TlsServerKeyExchange_t1023_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
+	1836,
+	1837,
+	1838,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1849,
-	1850,
-	1851,
-	1820,
 };
 static Il2CppInterfaceOffsetPair TlsServerKeyExchange_t1023_InterfacesOffsets[] = 
 {
@@ -618,7 +618,7 @@ const Il2CppTypeDefinitionMetadata TlsServerKeyExchange_t1023_DefinitionMetadata
 	, TlsServerKeyExchange_t1023_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3027/* fieldStart */
-	, 4807/* methodStart */
+	, 4806/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -683,19 +683,19 @@ extern TypeInfo PrimalityTest_t1024_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Math_Prime_PrimalityTestMethodDeclarations.h"
 static const EncodedMethodIndex PrimalityTest_t1024_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1852,
-	1853,
-	1854,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1839,
+	1840,
+	1841,
 };
 extern const Il2CppType ICloneable_t3094_0_0_0;
 extern const Il2CppType ISerializable_t1918_0_0_0;
@@ -719,7 +719,7 @@ const Il2CppTypeDefinitionMetadata PrimalityTest_t1024_DefinitionMetadata =
 	, PrimalityTest_t1024_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4812/* methodStart */
+	, 4811/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -784,19 +784,19 @@ extern TypeInfo CertificateValidationCallback_t999_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_CertificateValidatiMethodDeclarations.h"
 static const EncodedMethodIndex CertificateValidationCallback_t999_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1855,
-	1856,
-	1857,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1842,
+	1843,
+	1844,
 };
 static Il2CppInterfaceOffsetPair CertificateValidationCallback_t999_InterfacesOffsets[] = 
 {
@@ -817,7 +817,7 @@ const Il2CppTypeDefinitionMetadata CertificateValidationCallback_t999_Definition
 	, CertificateValidationCallback_t999_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4816/* methodStart */
+	, 4815/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -882,19 +882,19 @@ extern TypeInfo CertificateValidationCallback2_t1000_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_CertificateValidati_0MethodDeclarations.h"
 static const EncodedMethodIndex CertificateValidationCallback2_t1000_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1858,
-	1859,
-	1860,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1845,
+	1846,
+	1847,
 };
 static Il2CppInterfaceOffsetPair CertificateValidationCallback2_t1000_InterfacesOffsets[] = 
 {
@@ -915,7 +915,7 @@ const Il2CppTypeDefinitionMetadata CertificateValidationCallback2_t1000_Definiti
 	, CertificateValidationCallback2_t1000_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4820/* methodStart */
+	, 4819/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -980,19 +980,19 @@ extern TypeInfo CertificateSelectionCallback_t983_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_CertificateSelectioMethodDeclarations.h"
 static const EncodedMethodIndex CertificateSelectionCallback_t983_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1861,
-	1862,
-	1863,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1848,
+	1849,
+	1850,
 };
 static Il2CppInterfaceOffsetPair CertificateSelectionCallback_t983_InterfacesOffsets[] = 
 {
@@ -1013,7 +1013,7 @@ const Il2CppTypeDefinitionMetadata CertificateSelectionCallback_t983_DefinitionM
 	, CertificateSelectionCallback_t983_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4824/* methodStart */
+	, 4823/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1078,19 +1078,19 @@ extern TypeInfo PrivateKeySelectionCallback_t984_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_PrivateKeySelectionMethodDeclarations.h"
 static const EncodedMethodIndex PrivateKeySelectionCallback_t984_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1864,
-	1865,
-	1866,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1851,
+	1852,
+	1853,
 };
 static Il2CppInterfaceOffsetPair PrivateKeySelectionCallback_t984_InterfacesOffsets[] = 
 {
@@ -1111,7 +1111,7 @@ const Il2CppTypeDefinitionMetadata PrivateKeySelectionCallback_t984_DefinitionMe
 	, PrivateKeySelectionCallback_t984_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4828/* methodStart */
+	, 4827/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1282,10 +1282,10 @@ extern TypeInfo U24ArrayTypeU243132_t1027_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTypMethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU243132_t1027_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU243132_t1027_1_0_0;
@@ -1365,10 +1365,10 @@ extern TypeInfo U24ArrayTypeU24256_t1028_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_0MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU24256_t1028_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU24256_t1028_1_0_0;
@@ -1447,10 +1447,10 @@ extern TypeInfo U24ArrayTypeU2420_t1029_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_1MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2420_t1029_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU2420_t1029_1_0_0;
@@ -1529,10 +1529,10 @@ extern TypeInfo U24ArrayTypeU2432_t1030_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_2MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2432_t1030_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU2432_t1030_1_0_0;
@@ -1611,10 +1611,10 @@ extern TypeInfo U24ArrayTypeU2448_t1031_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_3MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2448_t1031_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU2448_t1031_1_0_0;
@@ -1693,10 +1693,10 @@ extern TypeInfo U24ArrayTypeU2464_t1032_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_4MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2464_t1032_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU2464_t1032_1_0_0;
@@ -1775,10 +1775,10 @@ extern TypeInfo U24ArrayTypeU2412_t1033_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_5MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2412_t1033_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU2412_t1033_1_0_0;
@@ -1857,10 +1857,10 @@ extern TypeInfo U24ArrayTypeU2416_t1034_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_6MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2416_t1034_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU2416_t1034_1_0_0;
@@ -1939,10 +1939,10 @@ extern TypeInfo U24ArrayTypeU244_t1035_il2cpp_TypeInfo;
 #include "Mono_Security_U3CPrivateImplementationDetailsU3E_U24ArrayTyp_7MethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU244_t1035_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType U24ArrayTypeU244_t1035_1_0_0;

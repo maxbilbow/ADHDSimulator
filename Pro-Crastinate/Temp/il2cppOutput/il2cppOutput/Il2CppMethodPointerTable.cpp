@@ -6,510 +6,510 @@ extern "C" void GKAchievementReporter_ReportAchievement_m1 ();
 extern "C" void GKAchievementReporter__ReportAchievement_m2 ();
 extern "C" void Singletons_get_GameControllerInitialized_m3 ();
 extern "C" void Singletons_get_GameController_m4 ();
-extern "C" void Singletons_get_Settings_m5 ();
-extern "C" void Log__ctor_m6 ();
-extern "C" void Log_get_isEmpty_m7 ();
-extern "C" void Log_get_isActive_m8 ();
-extern "C" void Log_get_color_m9 ();
-extern "C" void Log_ToString_m10 ();
-extern "C" void HUD__ctor_m11 ();
-extern "C" void HUD_Start_m12 ();
-extern "C" void HUD_Update_m13 ();
-extern "C" void HUD_OnGUI_m14 ();
-extern "C" void DebugHUD__ctor_m15 ();
-extern "C" void DebugHUD_Start_m16 ();
-extern "C" void DebugHUD_Show_m17 ();
-extern "C" void DebugHUD_Hide_m18 ();
-extern "C" void DebugHUD_OnGUI_m19 ();
-extern "C" void U3CAddToQueueU3Ec__AnonStorey9__ctor_m20 ();
-extern "C" void U3CAddToQueueU3Ec__AnonStorey9_U3CU3Em__0_m21 ();
-extern "C" void Bugger__cctor_m22 ();
-extern "C" void Bugger_LateLogs_m23 ();
-extern "C" void Bugger_get_Last_m24 ();
-extern "C" void Bugger_AddLateLog_m25 ();
-extern "C" void Bugger_Stack_m26 ();
-extern "C" void Bugger_WillLog_m27 ();
-extern "C" void Bugger_get_timesUp_m28 ();
-extern "C" void Bugger_get_timeRemaining_m29 ();
-extern "C" void Bugger_AddToQueue_m30 ();
-extern "C" void Bugger_Initialize_m31 ();
-extern "C" void CsvReader__cctor_m32 ();
-extern "C" void CsvReader_ToString_m33 ();
-extern "C" void CsvReader_Parse_m34 ();
+extern "C" void Log__ctor_m5 ();
+extern "C" void Log_get_isEmpty_m6 ();
+extern "C" void Log_get_isActive_m7 ();
+extern "C" void Log_get_color_m8 ();
+extern "C" void Log_ToString_m9 ();
+extern "C" void HUD__ctor_m10 ();
+extern "C" void HUD_Start_m11 ();
+extern "C" void HUD_Update_m12 ();
+extern "C" void HUD_OnGUI_m13 ();
+extern "C" void DebugHUD__ctor_m14 ();
+extern "C" void DebugHUD_Start_m15 ();
+extern "C" void DebugHUD_Show_m16 ();
+extern "C" void DebugHUD_Hide_m17 ();
+extern "C" void DebugHUD_OnGUI_m18 ();
+extern "C" void U3CAddToQueueU3Ec__AnonStorey9__ctor_m19 ();
+extern "C" void U3CAddToQueueU3Ec__AnonStorey9_U3CU3Em__0_m20 ();
+extern "C" void Bugger__cctor_m21 ();
+extern "C" void Bugger_LateLogs_m22 ();
+extern "C" void Bugger_get_Last_m23 ();
+extern "C" void Bugger_AddLateLog_m24 ();
+extern "C" void Bugger_Stack_m25 ();
+extern "C" void Bugger_WillLog_m26 ();
+extern "C" void Bugger_get_timesUp_m27 ();
+extern "C" void Bugger_get_timeRemaining_m28 ();
+extern "C" void Bugger_AddToQueue_m29 ();
+extern "C" void Bugger_Initialize_m30 ();
+extern "C" void CsvReader__cctor_m31 ();
+extern "C" void CsvReader_ToString_m32 ();
+extern "C" void CsvReader_Parse_m33 ();
+extern "C" void CsvReader_Read_m34 ();
 extern "C" void CsvReader_Read_m35 ();
-extern "C" void CsvReader_Read_m36 ();
-extern "C" void CsvReader_ReadLine_m37 ();
-extern "C" void CsvReader_Read_m38 ();
-extern "C" void CsvReader_ParseLine_m39 ();
-extern "C" void CsvReader_U3CToStringU3Em__1_m40 ();
-extern "C" void CsvRecord__ctor_m41 ();
-extern "C" void CsvRecord_ToString_m42 ();
-extern "C" void CsvRecord_U3CToStringU3Em__2_m43 ();
-extern "C" void GameControllerExample__ctor_m44 ();
-extern "C" void GameControllerExample_PreStart_m45 ();
-extern "C" void GameControllerExample_PostStart_m46 ();
-extern "C" void GameControllerExample_StartSingletons_m47 ();
-extern "C" void GameControllerExample_StartDesktop_m48 ();
-extern "C" void GameControllerExample_StartMobile_m49 ();
-extern "C" void GameControllerExample_Patch_m50 ();
-extern "C" void GameControllerExample_IsDebugging_m51 ();
-extern "C" void GameControllerExample_PauseGame_m52 ();
-extern "C" void NotificationCenter__cctor_m53 ();
-extern "C" void NotificationCenter_HasListener_m54 ();
-extern "C" void NotificationCenter_Reset_m55 ();
-extern "C" void NotificationCenter_AddListener_m56 ();
-extern "C" void NotificationCenter_RemoveListener_m57 ();
-extern "C" void NotificationCenter_StatusOf_m58 ();
-extern "C" void NotificationCenter_IsIdle_m59 ();
-extern "C" void NotificationCenter_IsActive_m60 ();
+extern "C" void CsvReader_ReadLine_m36 ();
+extern "C" void CsvReader_Read_m37 ();
+extern "C" void CsvReader_ParseLine_m38 ();
+extern "C" void CsvReader_U3CToStringU3Em__1_m39 ();
+extern "C" void CsvRecord__ctor_m40 ();
+extern "C" void CsvRecord_ToString_m41 ();
+extern "C" void CsvRecord_U3CToStringU3Em__2_m42 ();
+extern "C" void GameControllerExample__ctor_m43 ();
+extern "C" void GameControllerExample_PreStart_m44 ();
+extern "C" void GameControllerExample_PostStart_m45 ();
+extern "C" void GameControllerExample_StartSingletons_m46 ();
+extern "C" void GameControllerExample_StartDesktop_m47 ();
+extern "C" void GameControllerExample_StartMobile_m48 ();
+extern "C" void GameControllerExample_Patch_m49 ();
+extern "C" void GameControllerExample_IsDebugging_m50 ();
+extern "C" void GameControllerExample_PauseGame_m51 ();
+extern "C" void NotificationCenter__cctor_m52 ();
+extern "C" void NotificationCenter_HasListener_m53 ();
+extern "C" void NotificationCenter_Reset_m54 ();
+extern "C" void NotificationCenter_AddListener_m55 ();
+extern "C" void NotificationCenter_RemoveListener_m56 ();
+extern "C" void NotificationCenter_StatusOf_m57 ();
+extern "C" void NotificationCenter_IsIdle_m58 ();
+extern "C" void NotificationCenter_IsActive_m59 ();
+extern "C" void NotificationCenter_EventDidOccur_m60 ();
 extern "C" void NotificationCenter_EventDidOccur_m61 ();
-extern "C" void NotificationCenter_EventDidOccur_m62 ();
-extern "C" void NotificationCenter_WasCompleted_m63 ();
+extern "C" void NotificationCenter_WasCompleted_m62 ();
+extern "C" void NotificationCenter_EventWillStart_m63 ();
 extern "C" void NotificationCenter_EventWillStart_m64 ();
-extern "C" void NotificationCenter_EventWillStart_m65 ();
+extern "C" void NotificationCenter_EventDidEnd_m65 ();
 extern "C" void NotificationCenter_EventDidEnd_m66 ();
-extern "C" void NotificationCenter_EventDidEnd_m67 ();
-extern "C" void NotificationCenter_NotifyListeners_m68 ();
-extern "C" void RMXObject__ctor_m69 ();
-extern "C" void RMXObject__cctor_m70 ();
-extern "C" void RMXObject_get_AddToGlobalListeners_m71 ();
-extern "C" void RMXObject_Awake_m72 ();
-extern "C" void RMXObject_WillBeginEvent_m73 ();
-extern "C" void RMXObject_DidUpdateEvent_m74 ();
-extern "C" void RMXObject_DidFinishEvent_m75 ();
-extern "C" void RMXObject_DidCauseEvent_m76 ();
-extern "C" void RMXObject_WillBeginEvent_m77 ();
-extern "C" void RMXObject_DidUpdateEvent_m78 ();
-extern "C" void RMXObject_DidFinishEvent_m79 ();
-extern "C" void RMXObject_DidCauseEvent_m80 ();
-extern "C" void RMXObject_WillChangeValueForKey_m81 ();
-extern "C" void RMXObject_DidChangeValueForKey_m82 ();
-extern "C" void RMXObject_setValue_m83 ();
-extern "C" void RMXObject_getValue_m84 ();
-extern "C" void RMXObject_AddObserver_m85 ();
-extern "C" void RMXObject_RemoveObserver_m86 ();
-extern "C" void RMXObject_OnValueForKeyWillChange_m87 ();
-extern "C" void RMXObject_OnValueForKeyDidChange_m88 ();
-extern "C" void RMXObject_OnEvent_m89 ();
-extern "C" void RMXObject_OnEventDidStart_m90 ();
-extern "C" void RMXObject_OnEventDidEnd_m91 ();
-extern "C" void RMXObject_get_OneIn10_m92 ();
-extern "C" void RMXObject_RMX_EventListener_SendMessage_m93 ();
-extern "C" void RMXObject_RMX_EventListener_get_name_m94 ();
-extern "C" void SavedData_String_m95 ();
-extern "C" void SavedData_Long_m96 ();
-extern "C" void SavedData_Double_m97 ();
-extern "C" void SavedData_Bool_m98 ();
-extern "C" void SavedData_Set_m99 ();
-extern "C" void SavedData_Int_m100 ();
-extern "C" void SavedData_Set_m101 ();
-extern "C" void SavedData_Float_m102 ();
-extern "C" void SavedData_Set_m103 ();
-extern "C" void TextFormatter__cctor_m104 ();
-extern "C" void TextFormatter_debug_m105 ();
-extern "C" void TextFormatter_codify_m106 ();
+extern "C" void NotificationCenter_NotifyListeners_m67 ();
+extern "C" void RMXObject__ctor_m68 ();
+extern "C" void RMXObject__cctor_m69 ();
+extern "C" void RMXObject_get_AddToGlobalListeners_m70 ();
+extern "C" void RMXObject_Awake_m71 ();
+extern "C" void RMXObject_WillBeginEvent_m72 ();
+extern "C" void RMXObject_DidUpdateEvent_m73 ();
+extern "C" void RMXObject_DidFinishEvent_m74 ();
+extern "C" void RMXObject_DidCauseEvent_m75 ();
+extern "C" void RMXObject_WillBeginEvent_m76 ();
+extern "C" void RMXObject_DidUpdateEvent_m77 ();
+extern "C" void RMXObject_DidFinishEvent_m78 ();
+extern "C" void RMXObject_DidCauseEvent_m79 ();
+extern "C" void RMXObject_WillChangeValueForKey_m80 ();
+extern "C" void RMXObject_DidChangeValueForKey_m81 ();
+extern "C" void RMXObject_setValue_m82 ();
+extern "C" void RMXObject_getValue_m83 ();
+extern "C" void RMXObject_AddObserver_m84 ();
+extern "C" void RMXObject_RemoveObserver_m85 ();
+extern "C" void RMXObject_OnValueForKeyWillChange_m86 ();
+extern "C" void RMXObject_OnValueForKeyDidChange_m87 ();
+extern "C" void RMXObject_OnEvent_m88 ();
+extern "C" void RMXObject_OnEventDidStart_m89 ();
+extern "C" void RMXObject_OnEventDidEnd_m90 ();
+extern "C" void RMXObject_get_OneIn10_m91 ();
+extern "C" void RMXObject_RMX_EventListener_SendMessage_m92 ();
+extern "C" void RMXObject_RMX_EventListener_get_name_m93 ();
+extern "C" void SavedData_String_m94 ();
+extern "C" void SavedData_Long_m95 ();
+extern "C" void SavedData_Double_m96 ();
+extern "C" void SavedData_Bool_m97 ();
+extern "C" void SavedData_Set_m98 ();
+extern "C" void SavedData_Int_m99 ();
+extern "C" void SavedData_Set_m100 ();
+extern "C" void SavedData_Float_m101 ();
+extern "C" void SavedData_Set_m102 ();
+extern "C" void TextFormatter__cctor_m103 ();
+extern "C" void TextFormatter_debug_m104 ();
+extern "C" void TextFormatter_codify_m105 ();
+extern "C" void TextFormatter_Format_m106 ();
 extern "C" void TextFormatter_Format_m107 ();
 extern "C" void TextFormatter_Format_m108 ();
-extern "C" void TextFormatter_Format_m109 ();
-extern "C" void TextFormatter_TimeDescription_m110 ();
-extern "C" void Camera2DFollow__ctor_m111 ();
-extern "C" void Camera2DFollow_Start_m112 ();
-extern "C" void Camera2DFollow_Update_m113 ();
-extern "C" void CameraFollow__ctor_m114 ();
-extern "C" void CameraFollow_Awake_m115 ();
-extern "C" void CameraFollow_CheckXMargin_m116 ();
-extern "C" void CameraFollow_CheckYMargin_m117 ();
-extern "C" void CameraFollow_Update_m118 ();
-extern "C" void CameraFollow_TrackPlayer_m119 ();
-extern "C" void Platformer2DUserControl__ctor_m120 ();
-extern "C" void Platformer2DUserControl_Awake_m121 ();
-extern "C" void Platformer2DUserControl_Update_m122 ();
-extern "C" void Platformer2DUserControl_FixedUpdate_m123 ();
-extern "C" void PlatformerCharacter2D__ctor_m124 ();
-extern "C" void PlatformerCharacter2D_Awake_m125 ();
-extern "C" void PlatformerCharacter2D_FixedUpdate_m126 ();
-extern "C" void PlatformerCharacter2D_Move_m127 ();
-extern "C" void PlatformerCharacter2D_Flip_m128 ();
-extern "C" void Restarter__ctor_m129 ();
-extern "C" void Restarter_OnTriggerEnter2D_m130 ();
-extern "C" void AxisTouchButton__ctor_m131 ();
-extern "C" void AxisTouchButton_OnEnable_m132 ();
-extern "C" void AxisTouchButton_FindPairedButton_m133 ();
-extern "C" void AxisTouchButton_OnDisable_m134 ();
-extern "C" void AxisTouchButton_OnPointerDown_m135 ();
-extern "C" void AxisTouchButton_OnPointerUp_m136 ();
-extern "C" void ButtonHandler__ctor_m137 ();
-extern "C" void ButtonHandler_OnEnable_m138 ();
-extern "C" void ButtonHandler_SetDownState_m139 ();
-extern "C" void ButtonHandler_SetUpState_m140 ();
-extern "C" void ButtonHandler_SetAxisPositiveState_m141 ();
-extern "C" void ButtonHandler_SetAxisNeutralState_m142 ();
-extern "C" void ButtonHandler_SetAxisNegativeState_m143 ();
-extern "C" void ButtonHandler_Update_m144 ();
+extern "C" void TextFormatter_TimeDescription_m109 ();
+extern "C" void Camera2DFollow__ctor_m110 ();
+extern "C" void Camera2DFollow_Start_m111 ();
+extern "C" void Camera2DFollow_Update_m112 ();
+extern "C" void CameraFollow__ctor_m113 ();
+extern "C" void CameraFollow_Awake_m114 ();
+extern "C" void CameraFollow_CheckXMargin_m115 ();
+extern "C" void CameraFollow_CheckYMargin_m116 ();
+extern "C" void CameraFollow_Update_m117 ();
+extern "C" void CameraFollow_TrackPlayer_m118 ();
+extern "C" void Platformer2DUserControl__ctor_m119 ();
+extern "C" void Platformer2DUserControl_Awake_m120 ();
+extern "C" void Platformer2DUserControl_Update_m121 ();
+extern "C" void Platformer2DUserControl_FixedUpdate_m122 ();
+extern "C" void PlatformerCharacter2D__ctor_m123 ();
+extern "C" void PlatformerCharacter2D_Awake_m124 ();
+extern "C" void PlatformerCharacter2D_FixedUpdate_m125 ();
+extern "C" void PlatformerCharacter2D_Move_m126 ();
+extern "C" void PlatformerCharacter2D_Flip_m127 ();
+extern "C" void Restarter__ctor_m128 ();
+extern "C" void Restarter_OnTriggerEnter2D_m129 ();
+extern "C" void AxisTouchButton__ctor_m130 ();
+extern "C" void AxisTouchButton_OnEnable_m131 ();
+extern "C" void AxisTouchButton_FindPairedButton_m132 ();
+extern "C" void AxisTouchButton_OnDisable_m133 ();
+extern "C" void AxisTouchButton_OnPointerDown_m134 ();
+extern "C" void AxisTouchButton_OnPointerUp_m135 ();
+extern "C" void ButtonHandler__ctor_m136 ();
+extern "C" void ButtonHandler_OnEnable_m137 ();
+extern "C" void ButtonHandler_SetDownState_m138 ();
+extern "C" void ButtonHandler_SetUpState_m139 ();
+extern "C" void ButtonHandler_SetAxisPositiveState_m140 ();
+extern "C" void ButtonHandler_SetAxisNeutralState_m141 ();
+extern "C" void ButtonHandler_SetAxisNegativeState_m142 ();
+extern "C" void ButtonHandler_Update_m143 ();
+extern "C" void VirtualAxis__ctor_m144 ();
 extern "C" void VirtualAxis__ctor_m145 ();
-extern "C" void VirtualAxis__ctor_m146 ();
-extern "C" void VirtualAxis_get_name_m147 ();
-extern "C" void VirtualAxis_set_name_m148 ();
-extern "C" void VirtualAxis_get_matchWithInputManager_m149 ();
-extern "C" void VirtualAxis_set_matchWithInputManager_m150 ();
-extern "C" void VirtualAxis_Remove_m151 ();
-extern "C" void VirtualAxis_Update_m152 ();
-extern "C" void VirtualAxis_get_GetValue_m153 ();
-extern "C" void VirtualAxis_get_GetValueRaw_m154 ();
+extern "C" void VirtualAxis_get_name_m146 ();
+extern "C" void VirtualAxis_set_name_m147 ();
+extern "C" void VirtualAxis_get_matchWithInputManager_m148 ();
+extern "C" void VirtualAxis_set_matchWithInputManager_m149 ();
+extern "C" void VirtualAxis_Remove_m150 ();
+extern "C" void VirtualAxis_Update_m151 ();
+extern "C" void VirtualAxis_get_GetValue_m152 ();
+extern "C" void VirtualAxis_get_GetValueRaw_m153 ();
+extern "C" void VirtualButton__ctor_m154 ();
 extern "C" void VirtualButton__ctor_m155 ();
-extern "C" void VirtualButton__ctor_m156 ();
-extern "C" void VirtualButton_get_name_m157 ();
-extern "C" void VirtualButton_set_name_m158 ();
-extern "C" void VirtualButton_get_matchWithInputManager_m159 ();
-extern "C" void VirtualButton_set_matchWithInputManager_m160 ();
-extern "C" void VirtualButton_Pressed_m161 ();
-extern "C" void VirtualButton_Released_m162 ();
-extern "C" void VirtualButton_Remove_m163 ();
-extern "C" void VirtualButton_get_GetButton_m164 ();
-extern "C" void VirtualButton_get_GetButtonDown_m165 ();
-extern "C" void VirtualButton_get_GetButtonUp_m166 ();
-extern "C" void CrossPlatformInputManager__cctor_m167 ();
-extern "C" void CrossPlatformInputManager_SwitchActiveInputMethod_m168 ();
-extern "C" void CrossPlatformInputManager_AxisExists_m169 ();
-extern "C" void CrossPlatformInputManager_ButtonExists_m170 ();
-extern "C" void CrossPlatformInputManager_RegisterVirtualAxis_m171 ();
-extern "C" void CrossPlatformInputManager_RegisterVirtualButton_m172 ();
-extern "C" void CrossPlatformInputManager_UnRegisterVirtualAxis_m173 ();
-extern "C" void CrossPlatformInputManager_UnRegisterVirtualButton_m174 ();
-extern "C" void CrossPlatformInputManager_VirtualAxisReference_m175 ();
-extern "C" void CrossPlatformInputManager_GetAxis_m176 ();
-extern "C" void CrossPlatformInputManager_GetAxisRaw_m177 ();
-extern "C" void CrossPlatformInputManager_GetAxis_m178 ();
-extern "C" void CrossPlatformInputManager_GetButton_m179 ();
-extern "C" void CrossPlatformInputManager_GetButtonDown_m180 ();
-extern "C" void CrossPlatformInputManager_GetButtonUp_m181 ();
-extern "C" void CrossPlatformInputManager_SetButtonDown_m182 ();
-extern "C" void CrossPlatformInputManager_SetButtonUp_m183 ();
-extern "C" void CrossPlatformInputManager_SetAxisPositive_m184 ();
-extern "C" void CrossPlatformInputManager_SetAxisNegative_m185 ();
-extern "C" void CrossPlatformInputManager_SetAxisZero_m186 ();
-extern "C" void CrossPlatformInputManager_SetAxis_m187 ();
-extern "C" void CrossPlatformInputManager_get_mousePosition_m188 ();
-extern "C" void CrossPlatformInputManager_SetVirtualMousePositionX_m189 ();
-extern "C" void CrossPlatformInputManager_SetVirtualMousePositionY_m190 ();
-extern "C" void CrossPlatformInputManager_SetVirtualMousePositionZ_m191 ();
-extern "C" void InputAxisScrollbar__ctor_m192 ();
-extern "C" void InputAxisScrollbar_Update_m193 ();
-extern "C" void InputAxisScrollbar_HandleInput_m194 ();
-extern "C" void Joystick__ctor_m195 ();
-extern "C" void Joystick_OnEnable_m196 ();
-extern "C" void Joystick_Start_m197 ();
-extern "C" void Joystick_UpdateVirtualAxes_m198 ();
-extern "C" void Joystick_CreateVirtualAxes_m199 ();
-extern "C" void Joystick_OnDrag_m200 ();
-extern "C" void Joystick_OnPointerUp_m201 ();
-extern "C" void Joystick_OnPointerDown_m202 ();
-extern "C" void Joystick_OnDisable_m203 ();
-extern "C" void MobileControlRig__ctor_m204 ();
-extern "C" void MobileControlRig_OnEnable_m205 ();
-extern "C" void MobileControlRig_Start_m206 ();
-extern "C" void MobileControlRig_CheckEnableControlRig_m207 ();
-extern "C" void MobileControlRig_EnableControlRig_m208 ();
-extern "C" void MobileInput__ctor_m209 ();
-extern "C" void MobileInput_AddButton_m210 ();
-extern "C" void MobileInput_AddAxes_m211 ();
-extern "C" void MobileInput_GetAxis_m212 ();
-extern "C" void MobileInput_SetButtonDown_m213 ();
-extern "C" void MobileInput_SetButtonUp_m214 ();
-extern "C" void MobileInput_SetAxisPositive_m215 ();
-extern "C" void MobileInput_SetAxisNegative_m216 ();
-extern "C" void MobileInput_SetAxisZero_m217 ();
-extern "C" void MobileInput_SetAxis_m218 ();
-extern "C" void MobileInput_GetButtonDown_m219 ();
-extern "C" void MobileInput_GetButtonUp_m220 ();
-extern "C" void MobileInput_GetButton_m221 ();
-extern "C" void MobileInput_MousePosition_m222 ();
-extern "C" void StandaloneInput__ctor_m223 ();
-extern "C" void StandaloneInput_GetAxis_m224 ();
-extern "C" void StandaloneInput_GetButton_m225 ();
-extern "C" void StandaloneInput_GetButtonDown_m226 ();
-extern "C" void StandaloneInput_GetButtonUp_m227 ();
-extern "C" void StandaloneInput_SetButtonDown_m228 ();
-extern "C" void StandaloneInput_SetButtonUp_m229 ();
-extern "C" void StandaloneInput_SetAxisPositive_m230 ();
-extern "C" void StandaloneInput_SetAxisNegative_m231 ();
-extern "C" void StandaloneInput_SetAxisZero_m232 ();
-extern "C" void StandaloneInput_SetAxis_m233 ();
-extern "C" void StandaloneInput_MousePosition_m234 ();
-extern "C" void AxisMapping__ctor_m235 ();
-extern "C" void TiltInput__ctor_m236 ();
-extern "C" void TiltInput_OnEnable_m237 ();
-extern "C" void TiltInput_Update_m238 ();
-extern "C" void TiltInput_OnDisable_m239 ();
-extern "C" void TouchPad__ctor_m240 ();
-extern "C" void TouchPad_OnEnable_m241 ();
-extern "C" void TouchPad_Start_m242 ();
-extern "C" void TouchPad_CreateVirtualAxes_m243 ();
-extern "C" void TouchPad_UpdateVirtualAxes_m244 ();
-extern "C" void TouchPad_OnPointerDown_m245 ();
-extern "C" void TouchPad_Update_m246 ();
-extern "C" void TouchPad_OnPointerUp_m247 ();
-extern "C" void TouchPad_OnDisable_m248 ();
-extern "C" void VirtualInput__ctor_m249 ();
-extern "C" void VirtualInput_get_virtualMousePosition_m250 ();
-extern "C" void VirtualInput_set_virtualMousePosition_m251 ();
-extern "C" void VirtualInput_AxisExists_m252 ();
-extern "C" void VirtualInput_ButtonExists_m253 ();
-extern "C" void VirtualInput_RegisterVirtualAxis_m254 ();
-extern "C" void VirtualInput_RegisterVirtualButton_m255 ();
-extern "C" void VirtualInput_UnRegisterVirtualAxis_m256 ();
-extern "C" void VirtualInput_UnRegisterVirtualButton_m257 ();
-extern "C" void VirtualInput_VirtualAxisReference_m258 ();
-extern "C" void VirtualInput_SetVirtualMousePositionX_m259 ();
-extern "C" void VirtualInput_SetVirtualMousePositionY_m260 ();
-extern "C" void VirtualInput_SetVirtualMousePositionZ_m261 ();
-extern "C" void ActivateTrigger__ctor_m262 ();
-extern "C" void ActivateTrigger_DoActivateTrigger_m263 ();
-extern "C" void ActivateTrigger_OnTriggerEnter_m264 ();
-extern "C" void ReplacementDefinition__ctor_m265 ();
-extern "C" void ReplacementList__ctor_m266 ();
-extern "C" void AutoMobileShaderSwitch__ctor_m267 ();
-extern "C" void AutoMobileShaderSwitch_OnEnable_m268 ();
-extern "C" void Vector3andSpace__ctor_m269 ();
-extern "C" void AutoMoveAndRotate__ctor_m270 ();
-extern "C" void AutoMoveAndRotate_Start_m271 ();
-extern "C" void AutoMoveAndRotate_Update_m272 ();
-extern "C" void CameraRefocus__ctor_m273 ();
-extern "C" void CameraRefocus_ChangeCamera_m274 ();
-extern "C" void CameraRefocus_ChangeParent_m275 ();
-extern "C" void CameraRefocus_GetFocusPoint_m276 ();
-extern "C" void CameraRefocus_SetFocusPoint_m277 ();
-extern "C" void CurveControlledBob__ctor_m278 ();
-extern "C" void CurveControlledBob_Setup_m279 ();
-extern "C" void CurveControlledBob_DoHeadBob_m280 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0__ctor_m281 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m282 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m283 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_MoveNext_m284 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_Dispose_m285 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_Reset_m286 ();
-extern "C" void DragRigidbody__ctor_m287 ();
-extern "C" void DragRigidbody_Update_m288 ();
-extern "C" void DragRigidbody_DragObject_m289 ();
-extern "C" void DragRigidbody_FindCamera_m290 ();
-extern "C" void DynamicShadowSettings__ctor_m291 ();
-extern "C" void DynamicShadowSettings_Start_m292 ();
-extern "C" void DynamicShadowSettings_Update_m293 ();
-extern "C" void U3CFOVKickUpU3Ec__Iterator1__ctor_m294 ();
-extern "C" void U3CFOVKickUpU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m295 ();
-extern "C" void U3CFOVKickUpU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m296 ();
-extern "C" void U3CFOVKickUpU3Ec__Iterator1_MoveNext_m297 ();
-extern "C" void U3CFOVKickUpU3Ec__Iterator1_Dispose_m298 ();
-extern "C" void U3CFOVKickUpU3Ec__Iterator1_Reset_m299 ();
-extern "C" void U3CFOVKickDownU3Ec__Iterator2__ctor_m300 ();
-extern "C" void U3CFOVKickDownU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m301 ();
-extern "C" void U3CFOVKickDownU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m302 ();
-extern "C" void U3CFOVKickDownU3Ec__Iterator2_MoveNext_m303 ();
-extern "C" void U3CFOVKickDownU3Ec__Iterator2_Dispose_m304 ();
-extern "C" void U3CFOVKickDownU3Ec__Iterator2_Reset_m305 ();
-extern "C" void FOVKick__ctor_m306 ();
-extern "C" void FOVKick_Setup_m307 ();
-extern "C" void FOVKick_CheckStatus_m308 ();
-extern "C" void FOVKick_ChangeCamera_m309 ();
-extern "C" void FOVKick_FOVKickUp_m310 ();
-extern "C" void FOVKick_FOVKickDown_m311 ();
-extern "C" void FPSCounter__ctor_m312 ();
-extern "C" void FPSCounter_Start_m313 ();
-extern "C" void FPSCounter_Update_m314 ();
-extern "C" void FollowTarget__ctor_m315 ();
-extern "C" void FollowTarget_LateUpdate_m316 ();
-extern "C" void ForcedReset__ctor_m317 ();
-extern "C" void ForcedReset_Update_m318 ();
-extern "C" void U3CDoBobCycleU3Ec__Iterator3__ctor_m319 ();
-extern "C" void U3CDoBobCycleU3Ec__Iterator3_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m320 ();
-extern "C" void U3CDoBobCycleU3Ec__Iterator3_System_Collections_IEnumerator_get_Current_m321 ();
-extern "C" void U3CDoBobCycleU3Ec__Iterator3_MoveNext_m322 ();
-extern "C" void U3CDoBobCycleU3Ec__Iterator3_Dispose_m323 ();
-extern "C" void U3CDoBobCycleU3Ec__Iterator3_Reset_m324 ();
-extern "C" void LerpControlledBob__ctor_m325 ();
-extern "C" void LerpControlledBob_Offset_m326 ();
-extern "C" void LerpControlledBob_DoBobCycle_m327 ();
-extern "C" void U3CResetCoroutineU3Ec__Iterator4__ctor_m328 ();
-extern "C" void U3CResetCoroutineU3Ec__Iterator4_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m329 ();
-extern "C" void U3CResetCoroutineU3Ec__Iterator4_System_Collections_IEnumerator_get_Current_m330 ();
-extern "C" void U3CResetCoroutineU3Ec__Iterator4_MoveNext_m331 ();
-extern "C" void U3CResetCoroutineU3Ec__Iterator4_Dispose_m332 ();
-extern "C" void U3CResetCoroutineU3Ec__Iterator4_Reset_m333 ();
-extern "C" void ObjectResetter__ctor_m334 ();
-extern "C" void ObjectResetter_Start_m335 ();
-extern "C" void ObjectResetter_DelayedReset_m336 ();
-extern "C" void ObjectResetter_ResetCoroutine_m337 ();
-extern "C" void U3CStartU3Ec__Iterator5__ctor_m338 ();
-extern "C" void U3CStartU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m339 ();
-extern "C" void U3CStartU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m340 ();
-extern "C" void U3CStartU3Ec__Iterator5_MoveNext_m341 ();
-extern "C" void U3CStartU3Ec__Iterator5_Dispose_m342 ();
-extern "C" void U3CStartU3Ec__Iterator5_Reset_m343 ();
-extern "C" void ParticleSystemDestroyer__ctor_m344 ();
-extern "C" void ParticleSystemDestroyer_Start_m345 ();
-extern "C" void ParticleSystemDestroyer_Stop_m346 ();
-extern "C" void PlatformSpecificContent__ctor_m347 ();
-extern "C" void PlatformSpecificContent_OnEnable_m348 ();
-extern "C" void PlatformSpecificContent_CheckEnableContent_m349 ();
-extern "C" void PlatformSpecificContent_EnableContent_m350 ();
-extern "C" void SimpleActivatorMenu__ctor_m351 ();
-extern "C" void SimpleActivatorMenu_OnEnable_m352 ();
-extern "C" void SimpleActivatorMenu_NextCamera_m353 ();
-extern "C" void SimpleMouseRotator__ctor_m354 ();
-extern "C" void SimpleMouseRotator_Start_m355 ();
-extern "C" void SimpleMouseRotator_Update_m356 ();
-extern "C" void SmoothFollow__ctor_m357 ();
-extern "C" void SmoothFollow_Start_m358 ();
-extern "C" void SmoothFollow_LateUpdate_m359 ();
-extern "C" void Entry__ctor_m360 ();
-extern "C" void Entries__ctor_m361 ();
-extern "C" void U3CActivateU3Ec__Iterator6__ctor_m362 ();
-extern "C" void U3CActivateU3Ec__Iterator6_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m363 ();
-extern "C" void U3CActivateU3Ec__Iterator6_System_Collections_IEnumerator_get_Current_m364 ();
-extern "C" void U3CActivateU3Ec__Iterator6_MoveNext_m365 ();
-extern "C" void U3CActivateU3Ec__Iterator6_Dispose_m366 ();
-extern "C" void U3CActivateU3Ec__Iterator6_Reset_m367 ();
-extern "C" void U3CDeactivateU3Ec__Iterator7__ctor_m368 ();
-extern "C" void U3CDeactivateU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m369 ();
-extern "C" void U3CDeactivateU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m370 ();
-extern "C" void U3CDeactivateU3Ec__Iterator7_MoveNext_m371 ();
-extern "C" void U3CDeactivateU3Ec__Iterator7_Dispose_m372 ();
-extern "C" void U3CDeactivateU3Ec__Iterator7_Reset_m373 ();
-extern "C" void U3CReloadLevelU3Ec__Iterator8__ctor_m374 ();
-extern "C" void U3CReloadLevelU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m375 ();
-extern "C" void U3CReloadLevelU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m376 ();
-extern "C" void U3CReloadLevelU3Ec__Iterator8_MoveNext_m377 ();
-extern "C" void U3CReloadLevelU3Ec__Iterator8_Dispose_m378 ();
-extern "C" void U3CReloadLevelU3Ec__Iterator8_Reset_m379 ();
-extern "C" void TimedObjectActivator__ctor_m380 ();
-extern "C" void TimedObjectActivator_Awake_m381 ();
-extern "C" void TimedObjectActivator_Activate_m382 ();
-extern "C" void TimedObjectActivator_Deactivate_m383 ();
-extern "C" void TimedObjectActivator_ReloadLevel_m384 ();
-extern "C" void TimedObjectDestructor__ctor_m385 ();
-extern "C" void TimedObjectDestructor_Awake_m386 ();
-extern "C" void TimedObjectDestructor_DestroyNow_m387 ();
-extern "C" void WaypointList__ctor_m388 ();
-extern "C" void RoutePoint__ctor_m389 ();
-extern "C" void WaypointCircuit__ctor_m390 ();
-extern "C" void WaypointCircuit_get_Length_m391 ();
-extern "C" void WaypointCircuit_set_Length_m392 ();
-extern "C" void WaypointCircuit_get_Waypoints_m393 ();
-extern "C" void WaypointCircuit_Awake_m394 ();
-extern "C" void WaypointCircuit_GetRoutePoint_m395 ();
-extern "C" void WaypointCircuit_GetRoutePosition_m396 ();
-extern "C" void WaypointCircuit_CatmullRom_m397 ();
-extern "C" void WaypointCircuit_CachePositionsAndDistances_m398 ();
-extern "C" void WaypointCircuit_OnDrawGizmos_m399 ();
-extern "C" void WaypointCircuit_OnDrawGizmosSelected_m400 ();
-extern "C" void WaypointCircuit_DrawGizmos_m401 ();
-extern "C" void WaypointProgressTracker__ctor_m402 ();
-extern "C" void WaypointProgressTracker_get_targetPoint_m403 ();
-extern "C" void WaypointProgressTracker_set_targetPoint_m404 ();
-extern "C" void WaypointProgressTracker_get_speedPoint_m405 ();
-extern "C" void WaypointProgressTracker_set_speedPoint_m406 ();
-extern "C" void WaypointProgressTracker_get_progressPoint_m407 ();
-extern "C" void WaypointProgressTracker_set_progressPoint_m408 ();
-extern "C" void WaypointProgressTracker_Start_m409 ();
-extern "C" void WaypointProgressTracker_Reset_m410 ();
-extern "C" void WaypointProgressTracker_Update_m411 ();
-extern "C" void WaypointProgressTracker_OnDrawGizmos_m412 ();
-extern "C" void BodyBecomesActive__ctor_m706 ();
-extern "C" void BodyBecomesActive_OnApplicationFocus_m707 ();
-extern "C" void BodyBecomesActive_Activate_m708 ();
-extern "C" void BodyBecomesActive_Deactivate_m709 ();
-extern "C" void BodyBecomesActive_get_isBonusActive_m710 ();
-extern "C" void ClockBehaviour__ctor_m711 ();
-extern "C" void ClockBehaviour_get_didPop_m712 ();
-extern "C" void ClockBehaviour_get_spriteRenderer_m713 ();
-extern "C" void ClockBehaviour_IsVisible_m714 ();
-extern "C" void ClockBehaviour_get_VisibleClockCount_m715 ();
-extern "C" void ClockBehaviour_get_body_m716 ();
-extern "C" void ClockBehaviour_get_collisionBody_m717 ();
-extern "C" void ClockBehaviour_New_m718 ();
-extern "C" void ClockBehaviour_CheckVisibleClocks_m719 ();
-extern "C" void ClockBehaviour_Start_m720 ();
-extern "C" void ClockBehaviour_OnDestroy_m721 ();
-extern "C" void ClockBehaviour_Update_m722 ();
-extern "C" void ClockBehaviour_get_willBeOnScreen_m723 ();
-extern "C" void ClockBehaviour_OnBecameInvisible_m724 ();
-extern "C" void ClockBehaviour_OnBecameVisible_m725 ();
-extern "C" void ClockBehaviour_GetScreenSizeInWorld_m726 ();
-extern "C" void ClockBehaviour_ResetWithVelocity_m727 ();
-extern "C" void ClockBehaviour_ResetWithPosition_m728 ();
-extern "C" void ClockBehaviour_Reset_m729 ();
-extern "C" void ClockSpawner__ctor_m730 ();
-extern "C" void ClockSpawner_get_spawnMode_m731 ();
-extern "C" void ClockSpawner_get_ShouldKillClocks_m732 ();
-extern "C" void ClockSpawner_Update_m733 ();
-extern "C" void ClockSpawner_get_SpawnPoint_m734 ();
-extern "C" void ClockSpawner_Spawn_m735 ();
-extern "C" void ClockSpawner_OnEventDidEnd_m736 ();
-extern "C" void Wychd__ctor_m737 ();
-extern "C" void U3CGetActivitiesU3Ec__AnonStorey2__ctor_m738 ();
-extern "C" void U3CGetActivitiesU3Ec__AnonStorey2_U3CU3Em__0_m739 ();
-extern "C" void DataReader_get_Database_m740 ();
-extern "C" void DataReader_TimeHMSToFloat_m741 ();
-extern "C" void DataReader_IsWithinTime_m742 ();
-extern "C" void DataReader_GetActivities_m743 ();
-extern "C" void DataReader_GetActivityList_m744 ();
-extern "C" void DebugHUD__ctor_m745 ();
-extern "C" void DebugHUD_GetTime_m746 ();
-extern "C" void DebugHUD_Start_m747 ();
-extern "C" void DebugHUD_get_DebugData_m748 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0__ctor_m749 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m750 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m751 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_MoveNext_m752 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_Dispose_m753 ();
-extern "C" void U3CDragObjectU3Ec__Iterator0_Reset_m754 ();
-extern "C" void U3CMoveFingerU3Ec__Iterator1__ctor_m755 ();
-extern "C" void U3CMoveFingerU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m756 ();
-extern "C" void U3CMoveFingerU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m757 ();
-extern "C" void U3CMoveFingerU3Ec__Iterator1_MoveNext_m758 ();
-extern "C" void U3CMoveFingerU3Ec__Iterator1_Dispose_m759 ();
-extern "C" void U3CMoveFingerU3Ec__Iterator1_Reset_m760 ();
-extern "C" void DragRigidbody__ctor_m761 ();
-extern "C" void DragRigidbody_get_fingerWidth_m762 ();
-extern "C" void DragRigidbody_Update_m763 ();
-extern "C" void DragRigidbody_AttachBody_m764 ();
-extern "C" void DragRigidbody_ToString_m765 ();
-extern "C" void DragRigidbody_DragObject_m766 ();
-extern "C" void DragRigidbody_MoveFinger_m767 ();
-extern "C" void DragRigidbody_OnEventDidEnd_m768 ();
-extern "C" void U3CAuthenticateU3Ec__AnonStorey3__ctor_m769 ();
-extern "C" void U3CAuthenticateU3Ec__AnonStorey3_U3CU3Em__1_m770 ();
-extern "C" void U3CReportScoreU3Ec__AnonStorey4__ctor_m771 ();
-extern "C" void U3CReportScoreU3Ec__AnonStorey4_U3CU3Em__2_m772 ();
-extern "C" void U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5__ctor_m773 ();
-extern "C" void U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_U3CU3Em__3_m774 ();
-extern "C" void GameCenter__ctor_m775 ();
-extern "C" void GameCenter__cctor_m776 ();
-extern "C" void GameCenter_Start_m777 ();
-extern "C" void GameCenter_UpdateGameCenterAchievements_m778 ();
-extern "C" void GameCenter_OnEventDidStart_m779 ();
-extern "C" void GameCenter_OnEventDidEnd_m780 ();
-extern "C" void GameCenter_OnEvent_m781 ();
-extern "C" void GameCenter_Authenticate_m782 ();
-extern "C" void GameCenter_ReportScore_m783 ();
-extern "C" void GameCenter_Update_m784 ();
-extern "C" void GameCenter_HasPlayerAlreadyAchieved_m785 ();
-extern "C" void GameCenter_HasMetTimeCriteria_m786 ();
-extern "C" void GameCenter_get_UserAuthenticated_m787 ();
-extern "C" void GameCenter_ReportProgress_m788 ();
-extern "C" void GameCenter_CheckAchievementsWithGameCenter_m789 ();
-extern "C" void GameCenter_InitializeKeys_m790 ();
-extern "C" void GameCenter_OnApplicationQuit_m791 ();
-extern "C" void GameController__ctor_m792 ();
-extern "C" void GameController_get_TotalDevTimeWasted_m793 ();
-extern "C" void GameController_get_Chance_m794 ();
-extern "C" void GameController_ChanceGiven_m795 ();
-extern "C" void GameController_get_velocity_m796 ();
-extern "C" void GameController_get_isFirstPlay_m797 ();
-extern "C" void GameController_StartSingletons_m798 ();
-extern "C" void GameController_StartDesktop_m799 ();
-extern "C" void GameController_StartMobile_m800 ();
-extern "C" void GameController_PreStart_m801 ();
+extern "C" void VirtualButton_get_name_m156 ();
+extern "C" void VirtualButton_set_name_m157 ();
+extern "C" void VirtualButton_get_matchWithInputManager_m158 ();
+extern "C" void VirtualButton_set_matchWithInputManager_m159 ();
+extern "C" void VirtualButton_Pressed_m160 ();
+extern "C" void VirtualButton_Released_m161 ();
+extern "C" void VirtualButton_Remove_m162 ();
+extern "C" void VirtualButton_get_GetButton_m163 ();
+extern "C" void VirtualButton_get_GetButtonDown_m164 ();
+extern "C" void VirtualButton_get_GetButtonUp_m165 ();
+extern "C" void CrossPlatformInputManager__cctor_m166 ();
+extern "C" void CrossPlatformInputManager_SwitchActiveInputMethod_m167 ();
+extern "C" void CrossPlatformInputManager_AxisExists_m168 ();
+extern "C" void CrossPlatformInputManager_ButtonExists_m169 ();
+extern "C" void CrossPlatformInputManager_RegisterVirtualAxis_m170 ();
+extern "C" void CrossPlatformInputManager_RegisterVirtualButton_m171 ();
+extern "C" void CrossPlatformInputManager_UnRegisterVirtualAxis_m172 ();
+extern "C" void CrossPlatformInputManager_UnRegisterVirtualButton_m173 ();
+extern "C" void CrossPlatformInputManager_VirtualAxisReference_m174 ();
+extern "C" void CrossPlatformInputManager_GetAxis_m175 ();
+extern "C" void CrossPlatformInputManager_GetAxisRaw_m176 ();
+extern "C" void CrossPlatformInputManager_GetAxis_m177 ();
+extern "C" void CrossPlatformInputManager_GetButton_m178 ();
+extern "C" void CrossPlatformInputManager_GetButtonDown_m179 ();
+extern "C" void CrossPlatformInputManager_GetButtonUp_m180 ();
+extern "C" void CrossPlatformInputManager_SetButtonDown_m181 ();
+extern "C" void CrossPlatformInputManager_SetButtonUp_m182 ();
+extern "C" void CrossPlatformInputManager_SetAxisPositive_m183 ();
+extern "C" void CrossPlatformInputManager_SetAxisNegative_m184 ();
+extern "C" void CrossPlatformInputManager_SetAxisZero_m185 ();
+extern "C" void CrossPlatformInputManager_SetAxis_m186 ();
+extern "C" void CrossPlatformInputManager_get_mousePosition_m187 ();
+extern "C" void CrossPlatformInputManager_SetVirtualMousePositionX_m188 ();
+extern "C" void CrossPlatformInputManager_SetVirtualMousePositionY_m189 ();
+extern "C" void CrossPlatformInputManager_SetVirtualMousePositionZ_m190 ();
+extern "C" void InputAxisScrollbar__ctor_m191 ();
+extern "C" void InputAxisScrollbar_Update_m192 ();
+extern "C" void InputAxisScrollbar_HandleInput_m193 ();
+extern "C" void Joystick__ctor_m194 ();
+extern "C" void Joystick_OnEnable_m195 ();
+extern "C" void Joystick_Start_m196 ();
+extern "C" void Joystick_UpdateVirtualAxes_m197 ();
+extern "C" void Joystick_CreateVirtualAxes_m198 ();
+extern "C" void Joystick_OnDrag_m199 ();
+extern "C" void Joystick_OnPointerUp_m200 ();
+extern "C" void Joystick_OnPointerDown_m201 ();
+extern "C" void Joystick_OnDisable_m202 ();
+extern "C" void MobileControlRig__ctor_m203 ();
+extern "C" void MobileControlRig_OnEnable_m204 ();
+extern "C" void MobileControlRig_Start_m205 ();
+extern "C" void MobileControlRig_CheckEnableControlRig_m206 ();
+extern "C" void MobileControlRig_EnableControlRig_m207 ();
+extern "C" void MobileInput__ctor_m208 ();
+extern "C" void MobileInput_AddButton_m209 ();
+extern "C" void MobileInput_AddAxes_m210 ();
+extern "C" void MobileInput_GetAxis_m211 ();
+extern "C" void MobileInput_SetButtonDown_m212 ();
+extern "C" void MobileInput_SetButtonUp_m213 ();
+extern "C" void MobileInput_SetAxisPositive_m214 ();
+extern "C" void MobileInput_SetAxisNegative_m215 ();
+extern "C" void MobileInput_SetAxisZero_m216 ();
+extern "C" void MobileInput_SetAxis_m217 ();
+extern "C" void MobileInput_GetButtonDown_m218 ();
+extern "C" void MobileInput_GetButtonUp_m219 ();
+extern "C" void MobileInput_GetButton_m220 ();
+extern "C" void MobileInput_MousePosition_m221 ();
+extern "C" void StandaloneInput__ctor_m222 ();
+extern "C" void StandaloneInput_GetAxis_m223 ();
+extern "C" void StandaloneInput_GetButton_m224 ();
+extern "C" void StandaloneInput_GetButtonDown_m225 ();
+extern "C" void StandaloneInput_GetButtonUp_m226 ();
+extern "C" void StandaloneInput_SetButtonDown_m227 ();
+extern "C" void StandaloneInput_SetButtonUp_m228 ();
+extern "C" void StandaloneInput_SetAxisPositive_m229 ();
+extern "C" void StandaloneInput_SetAxisNegative_m230 ();
+extern "C" void StandaloneInput_SetAxisZero_m231 ();
+extern "C" void StandaloneInput_SetAxis_m232 ();
+extern "C" void StandaloneInput_MousePosition_m233 ();
+extern "C" void AxisMapping__ctor_m234 ();
+extern "C" void TiltInput__ctor_m235 ();
+extern "C" void TiltInput_OnEnable_m236 ();
+extern "C" void TiltInput_Update_m237 ();
+extern "C" void TiltInput_OnDisable_m238 ();
+extern "C" void TouchPad__ctor_m239 ();
+extern "C" void TouchPad_OnEnable_m240 ();
+extern "C" void TouchPad_Start_m241 ();
+extern "C" void TouchPad_CreateVirtualAxes_m242 ();
+extern "C" void TouchPad_UpdateVirtualAxes_m243 ();
+extern "C" void TouchPad_OnPointerDown_m244 ();
+extern "C" void TouchPad_Update_m245 ();
+extern "C" void TouchPad_OnPointerUp_m246 ();
+extern "C" void TouchPad_OnDisable_m247 ();
+extern "C" void VirtualInput__ctor_m248 ();
+extern "C" void VirtualInput_get_virtualMousePosition_m249 ();
+extern "C" void VirtualInput_set_virtualMousePosition_m250 ();
+extern "C" void VirtualInput_AxisExists_m251 ();
+extern "C" void VirtualInput_ButtonExists_m252 ();
+extern "C" void VirtualInput_RegisterVirtualAxis_m253 ();
+extern "C" void VirtualInput_RegisterVirtualButton_m254 ();
+extern "C" void VirtualInput_UnRegisterVirtualAxis_m255 ();
+extern "C" void VirtualInput_UnRegisterVirtualButton_m256 ();
+extern "C" void VirtualInput_VirtualAxisReference_m257 ();
+extern "C" void VirtualInput_SetVirtualMousePositionX_m258 ();
+extern "C" void VirtualInput_SetVirtualMousePositionY_m259 ();
+extern "C" void VirtualInput_SetVirtualMousePositionZ_m260 ();
+extern "C" void ActivateTrigger__ctor_m261 ();
+extern "C" void ActivateTrigger_DoActivateTrigger_m262 ();
+extern "C" void ActivateTrigger_OnTriggerEnter_m263 ();
+extern "C" void ReplacementDefinition__ctor_m264 ();
+extern "C" void ReplacementList__ctor_m265 ();
+extern "C" void AutoMobileShaderSwitch__ctor_m266 ();
+extern "C" void AutoMobileShaderSwitch_OnEnable_m267 ();
+extern "C" void Vector3andSpace__ctor_m268 ();
+extern "C" void AutoMoveAndRotate__ctor_m269 ();
+extern "C" void AutoMoveAndRotate_Start_m270 ();
+extern "C" void AutoMoveAndRotate_Update_m271 ();
+extern "C" void CameraRefocus__ctor_m272 ();
+extern "C" void CameraRefocus_ChangeCamera_m273 ();
+extern "C" void CameraRefocus_ChangeParent_m274 ();
+extern "C" void CameraRefocus_GetFocusPoint_m275 ();
+extern "C" void CameraRefocus_SetFocusPoint_m276 ();
+extern "C" void CurveControlledBob__ctor_m277 ();
+extern "C" void CurveControlledBob_Setup_m278 ();
+extern "C" void CurveControlledBob_DoHeadBob_m279 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0__ctor_m280 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m281 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m282 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_MoveNext_m283 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_Dispose_m284 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_Reset_m285 ();
+extern "C" void DragRigidbody__ctor_m286 ();
+extern "C" void DragRigidbody_Update_m287 ();
+extern "C" void DragRigidbody_DragObject_m288 ();
+extern "C" void DragRigidbody_FindCamera_m289 ();
+extern "C" void DynamicShadowSettings__ctor_m290 ();
+extern "C" void DynamicShadowSettings_Start_m291 ();
+extern "C" void DynamicShadowSettings_Update_m292 ();
+extern "C" void U3CFOVKickUpU3Ec__Iterator1__ctor_m293 ();
+extern "C" void U3CFOVKickUpU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m294 ();
+extern "C" void U3CFOVKickUpU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m295 ();
+extern "C" void U3CFOVKickUpU3Ec__Iterator1_MoveNext_m296 ();
+extern "C" void U3CFOVKickUpU3Ec__Iterator1_Dispose_m297 ();
+extern "C" void U3CFOVKickUpU3Ec__Iterator1_Reset_m298 ();
+extern "C" void U3CFOVKickDownU3Ec__Iterator2__ctor_m299 ();
+extern "C" void U3CFOVKickDownU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m300 ();
+extern "C" void U3CFOVKickDownU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m301 ();
+extern "C" void U3CFOVKickDownU3Ec__Iterator2_MoveNext_m302 ();
+extern "C" void U3CFOVKickDownU3Ec__Iterator2_Dispose_m303 ();
+extern "C" void U3CFOVKickDownU3Ec__Iterator2_Reset_m304 ();
+extern "C" void FOVKick__ctor_m305 ();
+extern "C" void FOVKick_Setup_m306 ();
+extern "C" void FOVKick_CheckStatus_m307 ();
+extern "C" void FOVKick_ChangeCamera_m308 ();
+extern "C" void FOVKick_FOVKickUp_m309 ();
+extern "C" void FOVKick_FOVKickDown_m310 ();
+extern "C" void FPSCounter__ctor_m311 ();
+extern "C" void FPSCounter_Start_m312 ();
+extern "C" void FPSCounter_Update_m313 ();
+extern "C" void FollowTarget__ctor_m314 ();
+extern "C" void FollowTarget_LateUpdate_m315 ();
+extern "C" void ForcedReset__ctor_m316 ();
+extern "C" void ForcedReset_Update_m317 ();
+extern "C" void U3CDoBobCycleU3Ec__Iterator3__ctor_m318 ();
+extern "C" void U3CDoBobCycleU3Ec__Iterator3_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m319 ();
+extern "C" void U3CDoBobCycleU3Ec__Iterator3_System_Collections_IEnumerator_get_Current_m320 ();
+extern "C" void U3CDoBobCycleU3Ec__Iterator3_MoveNext_m321 ();
+extern "C" void U3CDoBobCycleU3Ec__Iterator3_Dispose_m322 ();
+extern "C" void U3CDoBobCycleU3Ec__Iterator3_Reset_m323 ();
+extern "C" void LerpControlledBob__ctor_m324 ();
+extern "C" void LerpControlledBob_Offset_m325 ();
+extern "C" void LerpControlledBob_DoBobCycle_m326 ();
+extern "C" void U3CResetCoroutineU3Ec__Iterator4__ctor_m327 ();
+extern "C" void U3CResetCoroutineU3Ec__Iterator4_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m328 ();
+extern "C" void U3CResetCoroutineU3Ec__Iterator4_System_Collections_IEnumerator_get_Current_m329 ();
+extern "C" void U3CResetCoroutineU3Ec__Iterator4_MoveNext_m330 ();
+extern "C" void U3CResetCoroutineU3Ec__Iterator4_Dispose_m331 ();
+extern "C" void U3CResetCoroutineU3Ec__Iterator4_Reset_m332 ();
+extern "C" void ObjectResetter__ctor_m333 ();
+extern "C" void ObjectResetter_Start_m334 ();
+extern "C" void ObjectResetter_DelayedReset_m335 ();
+extern "C" void ObjectResetter_ResetCoroutine_m336 ();
+extern "C" void U3CStartU3Ec__Iterator5__ctor_m337 ();
+extern "C" void U3CStartU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m338 ();
+extern "C" void U3CStartU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m339 ();
+extern "C" void U3CStartU3Ec__Iterator5_MoveNext_m340 ();
+extern "C" void U3CStartU3Ec__Iterator5_Dispose_m341 ();
+extern "C" void U3CStartU3Ec__Iterator5_Reset_m342 ();
+extern "C" void ParticleSystemDestroyer__ctor_m343 ();
+extern "C" void ParticleSystemDestroyer_Start_m344 ();
+extern "C" void ParticleSystemDestroyer_Stop_m345 ();
+extern "C" void PlatformSpecificContent__ctor_m346 ();
+extern "C" void PlatformSpecificContent_OnEnable_m347 ();
+extern "C" void PlatformSpecificContent_CheckEnableContent_m348 ();
+extern "C" void PlatformSpecificContent_EnableContent_m349 ();
+extern "C" void SimpleActivatorMenu__ctor_m350 ();
+extern "C" void SimpleActivatorMenu_OnEnable_m351 ();
+extern "C" void SimpleActivatorMenu_NextCamera_m352 ();
+extern "C" void SimpleMouseRotator__ctor_m353 ();
+extern "C" void SimpleMouseRotator_Start_m354 ();
+extern "C" void SimpleMouseRotator_Update_m355 ();
+extern "C" void SmoothFollow__ctor_m356 ();
+extern "C" void SmoothFollow_Start_m357 ();
+extern "C" void SmoothFollow_LateUpdate_m358 ();
+extern "C" void Entry__ctor_m359 ();
+extern "C" void Entries__ctor_m360 ();
+extern "C" void U3CActivateU3Ec__Iterator6__ctor_m361 ();
+extern "C" void U3CActivateU3Ec__Iterator6_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m362 ();
+extern "C" void U3CActivateU3Ec__Iterator6_System_Collections_IEnumerator_get_Current_m363 ();
+extern "C" void U3CActivateU3Ec__Iterator6_MoveNext_m364 ();
+extern "C" void U3CActivateU3Ec__Iterator6_Dispose_m365 ();
+extern "C" void U3CActivateU3Ec__Iterator6_Reset_m366 ();
+extern "C" void U3CDeactivateU3Ec__Iterator7__ctor_m367 ();
+extern "C" void U3CDeactivateU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m368 ();
+extern "C" void U3CDeactivateU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m369 ();
+extern "C" void U3CDeactivateU3Ec__Iterator7_MoveNext_m370 ();
+extern "C" void U3CDeactivateU3Ec__Iterator7_Dispose_m371 ();
+extern "C" void U3CDeactivateU3Ec__Iterator7_Reset_m372 ();
+extern "C" void U3CReloadLevelU3Ec__Iterator8__ctor_m373 ();
+extern "C" void U3CReloadLevelU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m374 ();
+extern "C" void U3CReloadLevelU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m375 ();
+extern "C" void U3CReloadLevelU3Ec__Iterator8_MoveNext_m376 ();
+extern "C" void U3CReloadLevelU3Ec__Iterator8_Dispose_m377 ();
+extern "C" void U3CReloadLevelU3Ec__Iterator8_Reset_m378 ();
+extern "C" void TimedObjectActivator__ctor_m379 ();
+extern "C" void TimedObjectActivator_Awake_m380 ();
+extern "C" void TimedObjectActivator_Activate_m381 ();
+extern "C" void TimedObjectActivator_Deactivate_m382 ();
+extern "C" void TimedObjectActivator_ReloadLevel_m383 ();
+extern "C" void TimedObjectDestructor__ctor_m384 ();
+extern "C" void TimedObjectDestructor_Awake_m385 ();
+extern "C" void TimedObjectDestructor_DestroyNow_m386 ();
+extern "C" void WaypointList__ctor_m387 ();
+extern "C" void RoutePoint__ctor_m388 ();
+extern "C" void WaypointCircuit__ctor_m389 ();
+extern "C" void WaypointCircuit_get_Length_m390 ();
+extern "C" void WaypointCircuit_set_Length_m391 ();
+extern "C" void WaypointCircuit_get_Waypoints_m392 ();
+extern "C" void WaypointCircuit_Awake_m393 ();
+extern "C" void WaypointCircuit_GetRoutePoint_m394 ();
+extern "C" void WaypointCircuit_GetRoutePosition_m395 ();
+extern "C" void WaypointCircuit_CatmullRom_m396 ();
+extern "C" void WaypointCircuit_CachePositionsAndDistances_m397 ();
+extern "C" void WaypointCircuit_OnDrawGizmos_m398 ();
+extern "C" void WaypointCircuit_OnDrawGizmosSelected_m399 ();
+extern "C" void WaypointCircuit_DrawGizmos_m400 ();
+extern "C" void WaypointProgressTracker__ctor_m401 ();
+extern "C" void WaypointProgressTracker_get_targetPoint_m402 ();
+extern "C" void WaypointProgressTracker_set_targetPoint_m403 ();
+extern "C" void WaypointProgressTracker_get_speedPoint_m404 ();
+extern "C" void WaypointProgressTracker_set_speedPoint_m405 ();
+extern "C" void WaypointProgressTracker_get_progressPoint_m406 ();
+extern "C" void WaypointProgressTracker_set_progressPoint_m407 ();
+extern "C" void WaypointProgressTracker_Start_m408 ();
+extern "C" void WaypointProgressTracker_Reset_m409 ();
+extern "C" void WaypointProgressTracker_Update_m410 ();
+extern "C" void WaypointProgressTracker_OnDrawGizmos_m411 ();
+extern "C" void BodyBecomesActive__ctor_m705 ();
+extern "C" void BodyBecomesActive_OnApplicationFocus_m706 ();
+extern "C" void BodyBecomesActive_Activate_m707 ();
+extern "C" void BodyBecomesActive_Deactivate_m708 ();
+extern "C" void BodyBecomesActive_get_isBonusActive_m709 ();
+extern "C" void ClockBehaviour__ctor_m710 ();
+extern "C" void ClockBehaviour_get_didPop_m711 ();
+extern "C" void ClockBehaviour_get_spriteRenderer_m712 ();
+extern "C" void ClockBehaviour_IsVisible_m713 ();
+extern "C" void ClockBehaviour_get_VisibleClockCount_m714 ();
+extern "C" void ClockBehaviour_get_body_m715 ();
+extern "C" void ClockBehaviour_get_collisionBody_m716 ();
+extern "C" void ClockBehaviour_New_m717 ();
+extern "C" void ClockBehaviour_CheckVisibleClocks_m718 ();
+extern "C" void ClockBehaviour_Start_m719 ();
+extern "C" void ClockBehaviour_OnDestroy_m720 ();
+extern "C" void ClockBehaviour_Update_m721 ();
+extern "C" void ClockBehaviour_get_willBeOnScreen_m722 ();
+extern "C" void ClockBehaviour_OnBecameInvisible_m723 ();
+extern "C" void ClockBehaviour_OnBecameVisible_m724 ();
+extern "C" void ClockBehaviour_GetScreenSizeInWorld_m725 ();
+extern "C" void ClockBehaviour_ResetWithVelocity_m726 ();
+extern "C" void ClockBehaviour_ResetWithPosition_m727 ();
+extern "C" void ClockBehaviour_Reset_m728 ();
+extern "C" void ClockSpawner__ctor_m729 ();
+extern "C" void ClockSpawner_get_spawnMode_m730 ();
+extern "C" void ClockSpawner_get_ShouldKillClocks_m731 ();
+extern "C" void ClockSpawner_Update_m732 ();
+extern "C" void ClockSpawner_get_SpawnPoint_m733 ();
+extern "C" void ClockSpawner_Spawn_m734 ();
+extern "C" void ClockSpawner_OnEventDidEnd_m735 ();
+extern "C" void Wychd__ctor_m736 ();
+extern "C" void U3CGetActivitiesU3Ec__AnonStorey2__ctor_m737 ();
+extern "C" void U3CGetActivitiesU3Ec__AnonStorey2_U3CU3Em__0_m738 ();
+extern "C" void DataReader_get_Database_m739 ();
+extern "C" void DataReader_TimeHMSToFloat_m740 ();
+extern "C" void DataReader_IsWithinTime_m741 ();
+extern "C" void DataReader_GetActivities_m742 ();
+extern "C" void DataReader_GetActivityList_m743 ();
+extern "C" void DebugHUD__ctor_m744 ();
+extern "C" void DebugHUD_GetTime_m745 ();
+extern "C" void DebugHUD_Start_m746 ();
+extern "C" void DebugHUD_get_DebugData_m747 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0__ctor_m748 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m749 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m750 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_MoveNext_m751 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_Dispose_m752 ();
+extern "C" void U3CDragObjectU3Ec__Iterator0_Reset_m753 ();
+extern "C" void U3CMoveFingerU3Ec__Iterator1__ctor_m754 ();
+extern "C" void U3CMoveFingerU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m755 ();
+extern "C" void U3CMoveFingerU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m756 ();
+extern "C" void U3CMoveFingerU3Ec__Iterator1_MoveNext_m757 ();
+extern "C" void U3CMoveFingerU3Ec__Iterator1_Dispose_m758 ();
+extern "C" void U3CMoveFingerU3Ec__Iterator1_Reset_m759 ();
+extern "C" void DragRigidbody__ctor_m760 ();
+extern "C" void DragRigidbody_get_fingerWidth_m761 ();
+extern "C" void DragRigidbody_Update_m762 ();
+extern "C" void DragRigidbody_AttachBody_m763 ();
+extern "C" void DragRigidbody_ToString_m764 ();
+extern "C" void DragRigidbody_DragObject_m765 ();
+extern "C" void DragRigidbody_MoveFinger_m766 ();
+extern "C" void DragRigidbody_OnEventDidEnd_m767 ();
+extern "C" void U3CAuthenticateU3Ec__AnonStorey3__ctor_m768 ();
+extern "C" void U3CAuthenticateU3Ec__AnonStorey3_U3CU3Em__1_m769 ();
+extern "C" void U3CReportScoreU3Ec__AnonStorey4__ctor_m770 ();
+extern "C" void U3CReportScoreU3Ec__AnonStorey4_U3CU3Em__2_m771 ();
+extern "C" void U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5__ctor_m772 ();
+extern "C" void U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_U3CU3Em__3_m773 ();
+extern "C" void GameCenter__ctor_m774 ();
+extern "C" void GameCenter__cctor_m775 ();
+extern "C" void GameCenter_Start_m776 ();
+extern "C" void GameCenter_UpdateGameCenterAchievements_m777 ();
+extern "C" void GameCenter_OnEventDidStart_m778 ();
+extern "C" void GameCenter_OnEventDidEnd_m779 ();
+extern "C" void GameCenter_OnEvent_m780 ();
+extern "C" void GameCenter_Authenticate_m781 ();
+extern "C" void GameCenter_ReportScore_m782 ();
+extern "C" void GameCenter_Update_m783 ();
+extern "C" void GameCenter_HasPlayerAlreadyAchieved_m784 ();
+extern "C" void GameCenter_HasMetTimeCriteria_m785 ();
+extern "C" void GameCenter_get_UserAuthenticated_m786 ();
+extern "C" void GameCenter_ReportProgress_m787 ();
+extern "C" void GameCenter_CheckAchievementsWithGameCenter_m788 ();
+extern "C" void GameCenter_InitializeKeys_m789 ();
+extern "C" void GameCenter_OnApplicationQuit_m790 ();
+extern "C" void GameController__ctor_m791 ();
+extern "C" void GameController_get_TotalDevTimeWasted_m792 ();
+extern "C" void GameController_get_Chance_m793 ();
+extern "C" void GameController_ChanceGiven_m794 ();
+extern "C" void GameController_get_velocity_m795 ();
+extern "C" void GameController_get_isFirstPlay_m796 ();
+extern "C" void GameController_StartSingletons_m797 ();
+extern "C" void GameController_StartDesktop_m798 ();
+extern "C" void GameController_StartMobile_m799 ();
+extern "C" void GameController_PreStart_m800 ();
+extern "C" void GameController_PostStart_m801 ();
 extern "C" void GameController_OnApplicationFocus_m802 ();
 extern "C" void GameController_OnApplicationPause_m803 ();
 extern "C" void GameController_CheckForAnomalies_m804 ();
@@ -717,9 +717,9 @@ extern "C" void PointerEventData_get_pointerPressRaycast_m1194 ();
 extern "C" void PointerEventData_set_pointerPressRaycast_m1195 ();
 extern "C" void PointerEventData_get_eligibleForClick_m1196 ();
 extern "C" void PointerEventData_set_eligibleForClick_m1197 ();
-extern "C" void PointerEventData_get_pointerId_m579 ();
+extern "C" void PointerEventData_get_pointerId_m578 ();
 extern "C" void PointerEventData_set_pointerId_m1198 ();
-extern "C" void PointerEventData_get_position_m559 ();
+extern "C" void PointerEventData_get_position_m558 ();
 extern "C" void PointerEventData_set_position_m1199 ();
 extern "C" void PointerEventData_get_delta_m1200 ();
 extern "C" void PointerEventData_set_delta_m1201 ();
@@ -1781,12 +1781,12 @@ extern "C" void LayerMask_set_value_m2685 ();
 extern "C" void LayerMask_LayerToName_m2686 ();
 extern "C" void LayerMask_NameToLayer_m2687 ();
 extern "C" void LayerMask_GetMask_m2688 ();
-extern "C" void LayerMask_op_Implicit_m537 ();
+extern "C" void LayerMask_op_Implicit_m536 ();
 extern "C" void LayerMask_op_Implicit_m2327 ();
 extern "C" void SystemInfo_get_deviceUniqueIdentifier_m2689 ();
-extern "C" void WaitForSeconds__ctor_m665 ();
-extern "C" void WaitForFixedUpdate__ctor_m662 ();
-extern "C" void WaitForEndOfFrame__ctor_m658 ();
+extern "C" void WaitForSeconds__ctor_m664 ();
+extern "C" void WaitForFixedUpdate__ctor_m661 ();
+extern "C" void WaitForEndOfFrame__ctor_m657 ();
 extern "C" void Coroutine__ctor_m2690 ();
 extern "C" void Coroutine_ReleaseCoroutine_m2691 ();
 extern "C" void Coroutine_Finalize_m2692 ();
@@ -1867,7 +1867,7 @@ extern "C" void GcLeaderboard_Internal_LoadScores_m2765 ();
 extern "C" void GcLeaderboard_Internal_LoadScoresWithUsers_m2766 ();
 extern "C" void GcLeaderboard_Loading_m2767 ();
 extern "C" void GcLeaderboard_Dispose_m2768 ();
-extern "C" void QualitySettings_set_shadowDistance_m653 ();
+extern "C" void QualitySettings_set_shadowDistance_m652 ();
 extern "C" void BoneWeight_get_weight0_m2769 ();
 extern "C" void BoneWeight_set_weight0_m2770 ();
 extern "C" void BoneWeight_get_weight1_m2771 ();
@@ -1888,9 +1888,9 @@ extern "C" void BoneWeight_GetHashCode_m2785 ();
 extern "C" void BoneWeight_Equals_m2786 ();
 extern "C" void BoneWeight_op_Equality_m2787 ();
 extern "C" void BoneWeight_op_Inequality_m2788 ();
-extern "C" void Renderer_get_materials_m603 ();
-extern "C" void Renderer_set_materials_m605 ();
-extern "C" void Renderer_get_sharedMaterials_m601 ();
+extern "C" void Renderer_get_materials_m602 ();
+extern "C" void Renderer_set_materials_m604 ();
+extern "C" void Renderer_get_sharedMaterials_m600 ();
 extern "C" void Renderer_get_sortingLayerID_m2324 ();
 extern "C" void Renderer_get_sortingOrder_m2325 ();
 extern "C" void GeometryUtility_CalculateFrustumPlanes_m888 ();
@@ -1899,8 +1899,8 @@ extern "C" void GeometryUtility_Internal_ExtractPlanes_m2790 ();
 extern "C" void GeometryUtility_INTERNAL_CALL_Internal_ExtractPlanes_m2791 ();
 extern "C" void GeometryUtility_TestPlanesAABB_m890 ();
 extern "C" void GeometryUtility_INTERNAL_CALL_TestPlanesAABB_m2792 ();
-extern "C" void Screen_get_width_m435 ();
-extern "C" void Screen_get_height_m436 ();
+extern "C" void Screen_get_width_m434 ();
+extern "C" void Screen_get_height_m435 ();
 extern "C" void Screen_get_dpi_m2628 ();
 extern "C" void Texture__ctor_m2793 ();
 extern "C" void Texture_Internal_GetWidth_m2794 ();
@@ -1933,7 +1933,7 @@ extern "C" void GUI_set_nextScrollStepTime_m2818 ();
 extern "C" void GUI_set_skin_m2819 ();
 extern "C" void GUI_get_skin_m2820 ();
 extern "C" void GUI_set_changed_m2821 ();
-extern "C" void GUI_Label_m440 ();
+extern "C" void GUI_Label_m439 ();
 extern "C" void GUI_Label_m2822 ();
 extern "C" void GUI_DoLabel_m2823 ();
 extern "C" void GUI_INTERNAL_CALL_DoLabel_m2824 ();
@@ -2073,19 +2073,19 @@ extern "C" void RectOffset_Finalize_m2954 ();
 extern "C" void RectOffset_Init_m2955 ();
 extern "C" void RectOffset_Cleanup_m2956 ();
 extern "C" void RectOffset_get_left_m2644 ();
-extern "C" void RectOffset_set_left_m434 ();
+extern "C" void RectOffset_set_left_m433 ();
 extern "C" void RectOffset_get_right_m2957 ();
-extern "C" void RectOffset_set_right_m433 ();
+extern "C" void RectOffset_set_right_m432 ();
 extern "C" void RectOffset_get_top_m2645 ();
-extern "C" void RectOffset_set_top_m432 ();
+extern "C" void RectOffset_set_top_m431 ();
 extern "C" void RectOffset_get_bottom_m2958 ();
-extern "C" void RectOffset_set_bottom_m431 ();
+extern "C" void RectOffset_set_bottom_m430 ();
 extern "C" void RectOffset_get_horizontal_m2638 ();
 extern "C" void RectOffset_get_vertical_m2640 ();
 extern "C" void RectOffset_Remove_m2959 ();
 extern "C" void RectOffset_INTERNAL_CALL_Remove_m2960 ();
 extern "C" void RectOffset_ToString_m2961 ();
-extern "C" void GUIStyle__ctor_m426 ();
+extern "C" void GUIStyle__ctor_m425 ();
 extern "C" void GUIStyle__cctor_m2962 ();
 extern "C" void GUIStyle_Finalize_m2963 ();
 extern "C" void GUIStyle_Init_m2964 ();
@@ -2095,10 +2095,10 @@ extern "C" void GUIStyle_set_name_m2967 ();
 extern "C" void GUIStyle_get_normal_m2968 ();
 extern "C" void GUIStyle_GetStyleStatePtr_m2969 ();
 extern "C" void GUIStyle_get_margin_m2970 ();
-extern "C" void GUIStyle_get_padding_m430 ();
+extern "C" void GUIStyle_get_padding_m429 ();
 extern "C" void GUIStyle_GetRectOffsetPtr_m2971 ();
-extern "C" void GUIStyle_set_alignment_m429 ();
-extern "C" void GUIStyle_set_wordWrap_m428 ();
+extern "C" void GUIStyle_set_alignment_m428 ();
+extern "C" void GUIStyle_set_wordWrap_m427 ();
 extern "C" void GUIStyle_get_fixedWidth_m2972 ();
 extern "C" void GUIStyle_get_fixedHeight_m2973 ();
 extern "C" void GUIStyle_get_stretchWidth_m2974 ();
@@ -2107,7 +2107,7 @@ extern "C" void GUIStyle_get_stretchHeight_m2976 ();
 extern "C" void GUIStyle_set_stretchHeight_m2977 ();
 extern "C" void GUIStyle_Internal_GetLineHeight_m2978 ();
 extern "C" void GUIStyle_set_fontSize_m1046 ();
-extern "C" void GUIStyle_set_richText_m427 ();
+extern "C" void GUIStyle_set_richText_m426 ();
 extern "C" void GUIStyle_get_lineHeight_m2979 ();
 extern "C" void GUIStyle_SetDefaultFont_m2980 ();
 extern "C" void GUIStyle_get_none_m2981 ();
@@ -2155,18 +2155,18 @@ extern "C" void Event_get_isMouse_m3006 ();
 extern "C" void Event_GetHashCode_m3007 ();
 extern "C" void Event_Equals_m3008 ();
 extern "C" void Event_ToString_m3009 ();
-extern "C" void Gizmos_DrawLine_m700 ();
+extern "C" void Gizmos_DrawLine_m699 ();
 extern "C" void Gizmos_INTERNAL_CALL_DrawLine_m3010 ();
-extern "C" void Gizmos_DrawWireSphere_m705 ();
+extern "C" void Gizmos_DrawWireSphere_m704 ();
 extern "C" void Gizmos_INTERNAL_CALL_DrawWireSphere_m3011 ();
-extern "C" void Gizmos_set_color_m699 ();
+extern "C" void Gizmos_set_color_m698 ();
 extern "C" void Gizmos_INTERNAL_set_color_m3012 ();
-extern "C" void Vector2__ctor_m546 ();
+extern "C" void Vector2__ctor_m545 ();
 extern "C" void Vector2_get_Item_m2443 ();
 extern "C" void Vector2_set_Item_m2452 ();
 extern "C" void Vector2_Scale_m2528 ();
 extern "C" void Vector2_Normalize_m3013 ();
-extern "C" void Vector2_get_normalized_m584 ();
+extern "C" void Vector2_get_normalized_m583 ();
 extern "C" void Vector2_ToString_m3014 ();
 extern "C" void Vector2_GetHashCode_m3015 ();
 extern "C" void Vector2_Equals_m3016 ();
@@ -2183,57 +2183,57 @@ extern "C" void Vector2_op_Multiply_m916 ();
 extern "C" void Vector2_op_Division_m2494 ();
 extern "C" void Vector2_op_Equality_m2674 ();
 extern "C" void Vector2_op_Inequality_m2520 ();
-extern "C" void Vector2_op_Implicit_m536 ();
-extern "C" void Vector2_op_Implicit_m580 ();
-extern "C" void Vector3__ctor_m529 ();
-extern "C" void Vector3__ctor_m680 ();
-extern "C" void Vector3_Lerp_m695 ();
-extern "C" void Vector3_MoveTowards_m520 ();
-extern "C" void Vector3_SmoothDamp_m523 ();
+extern "C" void Vector2_op_Implicit_m535 ();
+extern "C" void Vector2_op_Implicit_m579 ();
+extern "C" void Vector3__ctor_m528 ();
+extern "C" void Vector3__ctor_m679 ();
+extern "C" void Vector3_Lerp_m694 ();
+extern "C" void Vector3_MoveTowards_m519 ();
+extern "C" void Vector3_SmoothDamp_m522 ();
 extern "C" void Vector3_SmoothDamp_m3018 ();
 extern "C" void Vector3_get_Item_m2565 ();
 extern "C" void Vector3_set_Item_m2566 ();
 extern "C" void Vector3_GetHashCode_m3019 ();
 extern "C" void Vector3_Equals_m3020 ();
 extern "C" void Vector3_Normalize_m3021 ();
-extern "C" void Vector3_get_normalized_m578 ();
+extern "C" void Vector3_get_normalized_m577 ();
 extern "C" void Vector3_ToString_m3022 ();
 extern "C" void Vector3_ToString_m3023 ();
-extern "C" void Vector3_Dot_m702 ();
+extern "C" void Vector3_Dot_m701 ();
 extern "C" void Vector3_Distance_m2322 ();
 extern "C" void Vector3_ClampMagnitude_m3024 ();
 extern "C" void Vector3_Magnitude_m3025 ();
-extern "C" void Vector3_get_magnitude_m696 ();
+extern "C" void Vector3_get_magnitude_m695 ();
 extern "C" void Vector3_SqrMagnitude_m3026 ();
 extern "C" void Vector3_get_sqrMagnitude_m2590 ();
 extern "C" void Vector3_Min_m2573 ();
 extern "C" void Vector3_Max_m2574 ();
-extern "C" void Vector3_get_zero_m518 ();
-extern "C" void Vector3_get_forward_m522 ();
+extern "C" void Vector3_get_zero_m517 ();
+extern "C" void Vector3_get_forward_m521 ();
 extern "C" void Vector3_get_back_m3027 ();
-extern "C" void Vector3_get_up_m648 ();
+extern "C" void Vector3_get_up_m647 ();
 extern "C" void Vector3_get_down_m2592 ();
 extern "C" void Vector3_get_left_m2591 ();
-extern "C" void Vector3_get_right_m514 ();
-extern "C" void Vector3_op_Addition_m521 ();
-extern "C" void Vector3_op_Subtraction_m512 ();
-extern "C" void Vector3_op_UnaryNegation_m649 ();
-extern "C" void Vector3_op_Multiply_m517 ();
-extern "C" void Vector3_op_Multiply_m515 ();
-extern "C" void Vector3_op_Division_m558 ();
+extern "C" void Vector3_get_right_m513 ();
+extern "C" void Vector3_op_Addition_m520 ();
+extern "C" void Vector3_op_Subtraction_m511 ();
+extern "C" void Vector3_op_UnaryNegation_m648 ();
+extern "C" void Vector3_op_Multiply_m516 ();
+extern "C" void Vector3_op_Multiply_m514 ();
+extern "C" void Vector3_op_Division_m557 ();
 extern "C" void Vector3_op_Equality_m909 ();
-extern "C" void Vector3_op_Inequality_m575 ();
-extern "C" void Color__ctor_m698 ();
+extern "C" void Vector3_op_Inequality_m574 ();
+extern "C" void Color__ctor_m697 ();
 extern "C" void Color__ctor_m886 ();
 extern "C" void Color_ToString_m3028 ();
 extern "C" void Color_GetHashCode_m3029 ();
 extern "C" void Color_Equals_m2385 ();
 extern "C" void Color_Lerp_m2334 ();
 extern "C" void Color_get_red_m3030 ();
-extern "C" void Color_get_green_m704 ();
+extern "C" void Color_get_green_m703 ();
 extern "C" void Color_get_white_m997 ();
 extern "C" void Color_get_black_m2389 ();
-extern "C" void Color_get_yellow_m697 ();
+extern "C" void Color_get_yellow_m696 ();
 extern "C" void Color_op_Multiply_m2587 ();
 extern "C" void Color_op_Implicit_m3031 ();
 extern "C" void Color32__ctor_m2348 ();
@@ -2242,23 +2242,23 @@ extern "C" void Color32_op_Implicit_m2379 ();
 extern "C" void Color32_op_Implicit_m2349 ();
 extern "C" void Quaternion__ctor_m3033 ();
 extern "C" void Quaternion_Dot_m3034 ();
-extern "C" void Quaternion_LookRotation_m701 ();
+extern "C" void Quaternion_LookRotation_m700 ();
 extern "C" void Quaternion_INTERNAL_CALL_LookRotation_m3035 ();
 extern "C" void Quaternion_Inverse_m2588 ();
 extern "C" void Quaternion_INTERNAL_CALL_Inverse_m3036 ();
 extern "C" void Quaternion_ToString_m3037 ();
 extern "C" void Quaternion_get_eulerAngles_m3038 ();
-extern "C" void Quaternion_Euler_m683 ();
+extern "C" void Quaternion_Euler_m682 ();
 extern "C" void Quaternion_Internal_ToEulerRad_m3039 ();
 extern "C" void Quaternion_INTERNAL_CALL_Internal_ToEulerRad_m3040 ();
 extern "C" void Quaternion_Internal_FromEulerRad_m3041 ();
 extern "C" void Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m3042 ();
 extern "C" void Quaternion_GetHashCode_m3043 ();
 extern "C" void Quaternion_Equals_m3044 ();
-extern "C" void Quaternion_op_Multiply_m684 ();
-extern "C" void Quaternion_op_Multiply_m687 ();
+extern "C" void Quaternion_op_Multiply_m683 ();
+extern "C" void Quaternion_op_Multiply_m686 ();
 extern "C" void Quaternion_op_Inequality_m2519 ();
-extern "C" void Rect__ctor_m437 ();
+extern "C" void Rect__ctor_m436 ();
 extern "C" void Rect_get_x_m2376 ();
 extern "C" void Rect_set_x_m2431 ();
 extern "C" void Rect_get_y_m2377 ();
@@ -2364,10 +2364,10 @@ extern "C" void Vector4_get_zero_m2423 ();
 extern "C" void Vector4_op_Subtraction_m3114 ();
 extern "C" void Vector4_op_Division_m2437 ();
 extern "C" void Vector4_op_Equality_m3115 ();
-extern "C" void Ray__ctor_m650 ();
-extern "C" void Ray_get_origin_m634 ();
-extern "C" void Ray_get_direction_m635 ();
-extern "C" void Ray_GetPoint_m626 ();
+extern "C" void Ray__ctor_m649 ();
+extern "C" void Ray_get_origin_m633 ();
+extern "C" void Ray_get_direction_m634 ();
+extern "C" void Ray_GetPoint_m625 ();
 extern "C" void Ray_ToString_m3116 ();
 extern "C" void Plane__ctor_m2488 ();
 extern "C" void Plane_get_normal_m3117 ();
@@ -2382,7 +2382,7 @@ extern "C" void Mathf_Sqrt_m3124 ();
 extern "C" void Mathf_Abs_m3125 ();
 extern "C" void Mathf_Min_m2627 ();
 extern "C" void Mathf_Min_m2504 ();
-extern "C" void Mathf_Max_m675 ();
+extern "C" void Mathf_Max_m674 ();
 extern "C" void Mathf_Max_m2502 ();
 extern "C" void Mathf_Pow_m3126 ();
 extern "C" void Mathf_Log_m2626 ();
@@ -2391,18 +2391,18 @@ extern "C" void Mathf_Round_m3128 ();
 extern "C" void Mathf_CeilToInt_m2637 ();
 extern "C" void Mathf_FloorToInt_m2639 ();
 extern "C" void Mathf_RoundToInt_m2426 ();
-extern "C" void Mathf_Sign_m516 ();
-extern "C" void Mathf_Clamp_m528 ();
-extern "C" void Mathf_Clamp_m560 ();
+extern "C" void Mathf_Sign_m515 ();
+extern "C" void Mathf_Clamp_m527 ();
+extern "C" void Mathf_Clamp_m559 ();
 extern "C" void Mathf_Clamp01_m2417 ();
-extern "C" void Mathf_Lerp_m527 ();
-extern "C" void Mathf_LerpAngle_m686 ();
-extern "C" void Mathf_MoveTowards_m555 ();
+extern "C" void Mathf_Lerp_m526 ();
+extern "C" void Mathf_LerpAngle_m685 ();
+extern "C" void Mathf_MoveTowards_m554 ();
 extern "C" void Mathf_Approximately_m2311 ();
-extern "C" void Mathf_SmoothDamp_m652 ();
+extern "C" void Mathf_SmoothDamp_m651 ();
 extern "C" void Mathf_SmoothDamp_m2562 ();
-extern "C" void Mathf_Repeat_m694 ();
-extern "C" void Mathf_InverseLerp_m576 ();
+extern "C" void Mathf_Repeat_m693 ();
+extern "C" void Mathf_InverseLerp_m575 ();
 extern "C" void DrivenRectTransformTracker_Add_m2552 ();
 extern "C" void DrivenRectTransformTracker_Clear_m2550 ();
 extern "C" void ReapplyDrivenProperties__ctor_m2655 ();
@@ -2442,14 +2442,14 @@ extern "C" void RectTransform_GetParentSize_m3146 ();
 extern "C" void ResourceRequest__ctor_m3147 ();
 extern "C" void ResourceRequest_get_asset_m3148 ();
 extern "C" void Resources_Load_m3149 ();
-extern "C" void TextAsset_get_text_m468 ();
+extern "C" void TextAsset_get_text_m467 ();
 extern "C" void TextAsset_ToString_m3150 ();
 extern "C" void SerializePrivateVariables__ctor_m3151 ();
 extern "C" void SerializeField__ctor_m3152 ();
 extern "C" void Shader_PropertyToID_m3153 ();
 extern "C" void Material__ctor_m2600 ();
-extern "C" void Material_get_shader_m602 ();
-extern "C" void Material_set_shader_m604 ();
+extern "C" void Material_get_shader_m601 ();
+extern "C" void Material_set_shader_m603 ();
 extern "C" void Material_get_mainTexture_m2606 ();
 extern "C" void Material_GetTexture_m3154 ();
 extern "C" void Material_GetTexture_m3155 ();
@@ -2535,27 +2535,27 @@ extern "C" void LogCallback__ctor_m3219 ();
 extern "C" void LogCallback_Invoke_m3220 ();
 extern "C" void LogCallback_BeginInvoke_m3221 ();
 extern "C" void LogCallback_EndInvoke_m3222 ();
-extern "C" void Application_get_loadedLevel_m689 ();
-extern "C" void Application_get_loadedLevelName_m552 ();
-extern "C" void Application_LoadLevel_m690 ();
-extern "C" void Application_LoadLevel_m553 ();
-extern "C" void Application_LoadLevelAsync_m661 ();
+extern "C" void Application_get_loadedLevel_m688 ();
+extern "C" void Application_get_loadedLevelName_m551 ();
+extern "C" void Application_LoadLevel_m689 ();
+extern "C" void Application_LoadLevel_m552 ();
+extern "C" void Application_LoadLevelAsync_m660 ();
 extern "C" void Application_LoadLevelAsync_m3223 ();
-extern "C" void Application_get_isPlaying_m703 ();
+extern "C" void Application_get_isPlaying_m702 ();
 extern "C" void Application_get_isEditor_m2544 ();
-extern "C" void Application_get_platform_m415 ();
+extern "C" void Application_get_platform_m414 ();
 extern "C" void Application_get_cloudProjectId_m3224 ();
 extern "C" void Application_CallLogCallback_m3225 ();
 extern "C" void Behaviour__ctor_m3226 ();
 extern "C" void Behaviour_get_enabled_m1045 ();
-extern "C" void Behaviour_set_enabled_m593 ();
+extern "C" void Behaviour_set_enabled_m592 ();
 extern "C" void Behaviour_get_isActiveAndEnabled_m2267 ();
 extern "C" void CameraCallback__ctor_m3227 ();
 extern "C" void CameraCallback_Invoke_m3228 ();
 extern "C" void CameraCallback_BeginInvoke_m3229 ();
 extern "C" void CameraCallback_EndInvoke_m3230 ();
-extern "C" void Camera_get_fieldOfView_m656 ();
-extern "C" void Camera_set_fieldOfView_m657 ();
+extern "C" void Camera_get_fieldOfView_m655 ();
+extern "C" void Camera_set_fieldOfView_m656 ();
 extern "C" void Camera_get_nearClipPlane_m2319 ();
 extern "C" void Camera_get_farClipPlane_m2318 ();
 extern "C" void Camera_get_depth_m2233 ();
@@ -2573,9 +2573,9 @@ extern "C" void Camera_ScreenToWorldPoint_m911 ();
 extern "C" void Camera_INTERNAL_CALL_ScreenToWorldPoint_m3240 ();
 extern "C" void Camera_ScreenToViewportPoint_m2399 ();
 extern "C" void Camera_INTERNAL_CALL_ScreenToViewportPoint_m3241 ();
-extern "C" void Camera_ScreenPointToRay_m625 ();
+extern "C" void Camera_ScreenPointToRay_m624 ();
 extern "C" void Camera_INTERNAL_CALL_ScreenPointToRay_m3242 ();
-extern "C" void Camera_get_main_m646 ();
+extern "C" void Camera_get_main_m645 ();
 extern "C" void Camera_get_current_m923 ();
 extern "C" void Camera_get_allCamerasCount_m3243 ();
 extern "C" void Camera_GetAllCameras_m3244 ();
@@ -2588,12 +2588,12 @@ extern "C" void Camera_RaycastTry2D_m3250 ();
 extern "C" void Camera_INTERNAL_CALL_RaycastTry2D_m3251 ();
 extern "C" void Debug_Internal_Log_m3252 ();
 extern "C" void Debug_Internal_LogException_m3253 ();
-extern "C" void Debug_Log_m416 ();
-extern "C" void Debug_LogError_m503 ();
+extern "C" void Debug_Log_m415 ();
+extern "C" void Debug_LogError_m502 ();
 extern "C" void Debug_LogError_m2451 ();
 extern "C" void Debug_LogException_m3254 ();
 extern "C" void Debug_LogException_m2347 ();
-extern "C" void Debug_LogWarning_m447 ();
+extern "C" void Debug_LogWarning_m446 ();
 extern "C" void Debug_LogWarning_m2599 ();
 extern "C" void DisplaysUpdatedDelegate__ctor_m3255 ();
 extern "C" void DisplaysUpdatedDelegate_Invoke_m3256 ();
@@ -2627,42 +2627,42 @@ extern "C" void Display_ActivateDisplayImpl_m3283 ();
 extern "C" void Display_SetParamsImpl_m3284 ();
 extern "C" void Display_MultiDisplayLicenseImpl_m3285 ();
 extern "C" void Display_RelativeMouseAtImpl_m3286 ();
-extern "C" void MonoBehaviour__ctor_m492 ();
-extern "C" void MonoBehaviour_Invoke_m692 ();
-extern "C" void MonoBehaviour_StartCoroutine_m672 ();
+extern "C" void MonoBehaviour__ctor_m491 ();
+extern "C" void MonoBehaviour_Invoke_m691 ();
+extern "C" void MonoBehaviour_StartCoroutine_m671 ();
 extern "C" void MonoBehaviour_StartCoroutine_Auto_m3287 ();
-extern "C" void MonoBehaviour_StartCoroutine_m645 ();
+extern "C" void MonoBehaviour_StartCoroutine_m644 ();
 extern "C" void MonoBehaviour_StopCoroutine_m3288 ();
 extern "C" void MonoBehaviour_StopCoroutine_m2547 ();
 extern "C" void MonoBehaviour_StopCoroutineViaEnumerator_Auto_m3289 ();
 extern "C" void MonoBehaviour_StopCoroutine_Auto_m3290 ();
 extern "C" void MonoBehaviour_print_m876 ();
 extern "C" void Touch_get_fingerId_m2282 ();
-extern "C" void Touch_get_position_m583 ();
+extern "C" void Touch_get_position_m582 ();
 extern "C" void Touch_get_phase_m2283 ();
 extern "C" void Input__cctor_m3291 ();
 extern "C" void Input_GetKeyInt_m3292 ();
 extern "C" void Input_GetKeyDownInt_m3293 ();
-extern "C" void Input_GetAxis_m569 ();
-extern "C" void Input_GetAxisRaw_m568 ();
-extern "C" void Input_GetButton_m570 ();
-extern "C" void Input_GetButtonDown_m571 ();
-extern "C" void Input_GetButtonUp_m572 ();
-extern "C" void Input_GetKey_m532 ();
+extern "C" void Input_GetAxis_m568 ();
+extern "C" void Input_GetAxisRaw_m567 ();
+extern "C" void Input_GetButton_m569 ();
+extern "C" void Input_GetButtonDown_m570 ();
+extern "C" void Input_GetButtonUp_m571 ();
+extern "C" void Input_GetKey_m531 ();
 extern "C" void Input_GetKeyDown_m985 ();
-extern "C" void Input_GetMouseButton_m627 ();
-extern "C" void Input_GetMouseButtonDown_m633 ();
+extern "C" void Input_GetMouseButton_m626 ();
+extern "C" void Input_GetMouseButtonDown_m632 ();
 extern "C" void Input_GetMouseButtonUp_m2284 ();
-extern "C" void Input_get_mousePosition_m573 ();
+extern "C" void Input_get_mousePosition_m572 ();
 extern "C" void Input_INTERNAL_get_mousePosition_m3294 ();
 extern "C" void Input_get_mouseScrollDelta_m2285 ();
 extern "C" void Input_INTERNAL_get_mouseScrollDelta_m3295 ();
 extern "C" void Input_get_mousePresent_m2310 ();
-extern "C" void Input_get_acceleration_m574 ();
+extern "C" void Input_get_acceleration_m573 ();
 extern "C" void Input_INTERNAL_get_acceleration_m3296 ();
-extern "C" void Input_get_touches_m582 ();
+extern "C" void Input_get_touches_m581 ();
 extern "C" void Input_GetTouch_m961 ();
-extern "C" void Input_get_touchCount_m581 ();
+extern "C" void Input_get_touchCount_m580 ();
 extern "C" void Input_get_touchSupported_m2315 ();
 extern "C" void Input_set_imeCompositionMode_m2542 ();
 extern "C" void Input_get_compositionString_m2475 ();
@@ -2672,17 +2672,17 @@ extern "C" void Object__ctor_m3298 ();
 extern "C" void Object_Internal_CloneSingle_m3299 ();
 extern "C" void Object_Internal_InstantiateSingle_m3300 ();
 extern "C" void Object_INTERNAL_CALL_Internal_InstantiateSingle_m3301 ();
-extern "C" void Object_Destroy_m691 ();
-extern "C" void Object_Destroy_m423 ();
+extern "C" void Object_Destroy_m690 ();
+extern "C" void Object_Destroy_m422 ();
 extern "C" void Object_DestroyImmediate_m3302 ();
 extern "C" void Object_DestroyImmediate_m2543 ();
-extern "C" void Object_FindObjectsOfType_m554 ();
-extern "C" void Object_get_name_m499 ();
+extern "C" void Object_FindObjectsOfType_m553 ();
+extern "C" void Object_get_name_m498 ();
 extern "C" void Object_set_name_m2601 ();
 extern "C" void Object_DontDestroyOnLoad_m908 ();
 extern "C" void Object_set_hideFlags_m2513 ();
 extern "C" void Object_DestroyObject_m3303 ();
-extern "C" void Object_DestroyObject_m592 ();
+extern "C" void Object_DestroyObject_m591 ();
 extern "C" void Object_ToString_m3304 ();
 extern "C" void Object_Equals_m3305 ();
 extern "C" void Object_GetHashCode_m3306 ();
@@ -2690,88 +2690,88 @@ extern "C" void Object_CompareBaseObjects_m3307 ();
 extern "C" void Object_IsNativeObjectAlive_m3308 ();
 extern "C" void Object_GetInstanceID_m3309 ();
 extern "C" void Object_GetCachedPtr_m3310 ();
-extern "C" void Object_Instantiate_m591 ();
+extern "C" void Object_Instantiate_m590 ();
 extern "C" void Object_CheckNullArgument_m3311 ();
 extern "C" void Object_FindObjectOfType_m3312 ();
-extern "C" void Object_op_Implicit_m545 ();
-extern "C" void Object_op_Equality_m467 ();
-extern "C" void Object_op_Inequality_m539 ();
+extern "C" void Object_op_Implicit_m544 ();
+extern "C" void Object_op_Equality_m466 ();
+extern "C" void Object_op_Inequality_m538 ();
 extern "C" void Component__ctor_m3313 ();
-extern "C" void Component_get_transform_m511 ();
-extern "C" void Component_get_gameObject_m422 ();
+extern "C" void Component_get_transform_m510 ();
+extern "C" void Component_get_gameObject_m421 ();
 extern "C" void Component_GetComponent_m2652 ();
 extern "C" void Component_GetComponentFastPath_m3314 ();
 extern "C" void Component_GetComponentInChildren_m3315 ();
 extern "C" void Component_GetComponentsForListInternal_m3316 ();
 extern "C" void Component_GetComponents_m2366 ();
-extern "C" void Component_get_tag_m551 ();
+extern "C" void Component_get_tag_m550 ();
 extern "C" void Component_SendMessage_m3317 ();
-extern "C" void Component_SendMessage_m669 ();
-extern "C" void Component_SendMessage_m498 ();
+extern "C" void Component_SendMessage_m668 ();
+extern "C" void Component_SendMessage_m497 ();
 extern "C" void Component_BroadcastMessage_m3318 ();
-extern "C" void Component_BroadcastMessage_m679 ();
-extern "C" void Light_get_shadowStrength_m647 ();
-extern "C" void Light_set_shadowStrength_m655 ();
-extern "C" void Light_set_shadowBias_m654 ();
-extern "C" void GameObject__ctor_m567 ();
+extern "C" void Component_BroadcastMessage_m678 ();
+extern "C" void Light_get_shadowStrength_m646 ();
+extern "C" void Light_set_shadowStrength_m654 ();
+extern "C" void Light_set_shadowBias_m653 ();
+extern "C" void GameObject__ctor_m566 ();
 extern "C" void GameObject__ctor_m895 ();
 extern "C" void GameObject_GetComponent_m3319 ();
 extern "C" void GameObject_GetComponentFastPath_m3320 ();
 extern "C" void GameObject_GetComponentInChildren_m3321 ();
 extern "C" void GameObject_GetComponentsInternal_m3322 ();
-extern "C" void GameObject_get_transform_m526 ();
+extern "C" void GameObject_get_transform_m525 ();
 extern "C" void GameObject_get_layer_m2516 ();
 extern "C" void GameObject_set_layer_m2517 ();
-extern "C" void GameObject_SetActive_m442 ();
+extern "C" void GameObject_SetActive_m441 ();
 extern "C" void GameObject_get_activeSelf_m940 ();
 extern "C" void GameObject_get_activeInHierarchy_m2268 ();
 extern "C" void GameObject_get_tag_m3323 ();
-extern "C" void GameObject_FindGameObjectWithTag_m525 ();
+extern "C" void GameObject_FindGameObjectWithTag_m524 ();
 extern "C" void GameObject_SendMessage_m3324 ();
 extern "C" void GameObject_BroadcastMessage_m3325 ();
-extern "C" void GameObject_BroadcastMessage_m589 ();
+extern "C" void GameObject_BroadcastMessage_m588 ();
 extern "C" void GameObject_Internal_AddComponentWithType_m3326 ();
 extern "C" void GameObject_AddComponent_m3327 ();
 extern "C" void GameObject_Internal_CreateGameObject_m3328 ();
 extern "C" void Enumerator__ctor_m3329 ();
 extern "C" void Enumerator_get_Current_m3330 ();
 extern "C" void Enumerator_MoveNext_m3331 ();
-extern "C" void Transform_get_position_m510 ();
-extern "C" void Transform_set_position_m524 ();
+extern "C" void Transform_get_position_m509 ();
+extern "C" void Transform_set_position_m523 ();
 extern "C" void Transform_INTERNAL_get_position_m3332 ();
 extern "C" void Transform_INTERNAL_set_position_m3333 ();
-extern "C" void Transform_get_localPosition_m615 ();
+extern "C" void Transform_get_localPosition_m614 ();
 extern "C" void Transform_set_localPosition_m2524 ();
 extern "C" void Transform_INTERNAL_get_localPosition_m3334 ();
 extern "C" void Transform_INTERNAL_set_localPosition_m3335 ();
-extern "C" void Transform_get_eulerAngles_m685 ();
-extern "C" void Transform_get_forward_m609 ();
-extern "C" void Transform_get_rotation_m590 ();
-extern "C" void Transform_set_rotation_m666 ();
+extern "C" void Transform_get_eulerAngles_m684 ();
+extern "C" void Transform_get_forward_m608 ();
+extern "C" void Transform_get_rotation_m589 ();
+extern "C" void Transform_set_rotation_m665 ();
 extern "C" void Transform_INTERNAL_get_rotation_m3336 ();
 extern "C" void Transform_INTERNAL_set_rotation_m3337 ();
-extern "C" void Transform_get_localRotation_m681 ();
-extern "C" void Transform_set_localRotation_m682 ();
+extern "C" void Transform_get_localRotation_m680 ();
+extern "C" void Transform_set_localRotation_m681 ();
 extern "C" void Transform_INTERNAL_get_localRotation_m3338 ();
 extern "C" void Transform_INTERNAL_set_localRotation_m3339 ();
-extern "C" void Transform_get_localScale_m549 ();
-extern "C" void Transform_set_localScale_m550 ();
+extern "C" void Transform_get_localScale_m548 ();
+extern "C" void Transform_set_localScale_m549 ();
 extern "C" void Transform_INTERNAL_get_localScale_m3340 ();
 extern "C" void Transform_INTERNAL_set_localScale_m3341 ();
 extern "C" void Transform_get_parent_m2265 ();
-extern "C" void Transform_set_parent_m513 ();
+extern "C" void Transform_set_parent_m512 ();
 extern "C" void Transform_get_parentInternal_m3342 ();
 extern "C" void Transform_set_parentInternal_m3343 ();
 extern "C" void Transform_SetParent_m2514 ();
 extern "C" void Transform_SetParent_m3344 ();
 extern "C" void Transform_get_worldToLocalMatrix_m2570 ();
 extern "C" void Transform_INTERNAL_get_worldToLocalMatrix_m3345 ();
-extern "C" void Transform_Translate_m607 ();
-extern "C" void Transform_Rotate_m608 ();
-extern "C" void Transform_LookAt_m688 ();
+extern "C" void Transform_Translate_m606 ();
+extern "C" void Transform_Rotate_m607 ();
+extern "C" void Transform_LookAt_m687 ();
 extern "C" void Transform_LookAt_m3346 ();
 extern "C" void Transform_LookAt_m3347 ();
-extern "C" void Transform_LookAt_m612 ();
+extern "C" void Transform_LookAt_m611 ();
 extern "C" void Transform_INTERNAL_CALL_LookAt_m3348 ();
 extern "C" void Transform_TransformDirection_m3349 ();
 extern "C" void Transform_INTERNAL_CALL_TransformDirection_m3350 ();
@@ -2780,22 +2780,22 @@ extern "C" void Transform_INTERNAL_CALL_TransformPoint_m3351 ();
 extern "C" void Transform_InverseTransformPoint_m2487 ();
 extern "C" void Transform_INTERNAL_CALL_InverseTransformPoint_m3352 ();
 extern "C" void Transform_get_childCount_m2653 ();
-extern "C" void Transform_DetachChildren_m693 ();
+extern "C" void Transform_DetachChildren_m692 ();
 extern "C" void Transform_SetAsFirstSibling_m2515 ();
-extern "C" void Transform_Find_m535 ();
+extern "C" void Transform_Find_m534 ();
 extern "C" void Transform_GetEnumerator_m3353 ();
 extern "C" void Transform_GetChild_m2651 ();
-extern "C" void Time_get_time_m676 ();
-extern "C" void Time_get_deltaTime_m519 ();
-extern "C" void Time_get_fixedTime_m424 ();
+extern "C" void Time_get_time_m675 ();
+extern "C" void Time_get_deltaTime_m518 ();
+extern "C" void Time_get_fixedTime_m423 ();
 extern "C" void Time_get_unscaledTime_m2312 ();
 extern "C" void Time_get_unscaledDeltaTime_m2338 ();
-extern "C" void Time_get_timeScale_m438 ();
+extern "C" void Time_get_timeScale_m437 ();
 extern "C" void Time_set_timeScale_m983 ();
-extern "C" void Time_get_frameCount_m556 ();
-extern "C" void Time_get_realtimeSinceStartup_m606 ();
-extern "C" void Random_Range_m677 ();
-extern "C" void Random_Range_m497 ();
+extern "C" void Time_get_frameCount_m555 ();
+extern "C" void Time_get_realtimeSinceStartup_m605 ();
+extern "C" void Random_Range_m676 ();
+extern "C" void Random_Range_m496 ();
 extern "C" void Random_RandomRangeInt_m3354 ();
 extern "C" void YieldInstruction__ctor_m3355 ();
 extern "C" void PlayerPrefsException__ctor_m3356 ();
@@ -2804,14 +2804,14 @@ extern "C" void PlayerPrefs_GetInt_m3358 ();
 extern "C" void PlayerPrefs_GetInt_m1059 ();
 extern "C" void PlayerPrefs_GetFloat_m3359 ();
 extern "C" void PlayerPrefs_GetFloat_m1058 ();
-extern "C" void PlayerPrefs_SetString_m504 ();
+extern "C" void PlayerPrefs_SetString_m503 ();
 extern "C" void PlayerPrefs_GetString_m3360 ();
-extern "C" void PlayerPrefs_GetString_m501 ();
-extern "C" void PlayerPrefs_HasKey_m500 ();
+extern "C" void PlayerPrefs_GetString_m500 ();
+extern "C" void PlayerPrefs_HasKey_m499 ();
 extern "C" void PlayerPrefs_DeleteKey_m1062 ();
 extern "C" void PlayerPrefs_Save_m987 ();
-extern "C" void ParticleSystem_set_enableEmission_m678 ();
-extern "C" void ParticleSystem_get_startLifetime_m674 ();
+extern "C" void ParticleSystem_set_enableEmission_m677 ();
+extern "C" void ParticleSystem_get_startLifetime_m673 ();
 extern "C" void Particle_get_position_m3361 ();
 extern "C" void Particle_set_position_m3362 ();
 extern "C" void Particle_get_velocity_m3363 ();
@@ -2830,36 +2830,36 @@ extern "C" void Particle_get_color_m3375 ();
 extern "C" void Particle_set_color_m3376 ();
 extern "C" void Physics_Internal_Raycast_m3377 ();
 extern "C" void Physics_INTERNAL_CALL_Internal_Raycast_m3378 ();
-extern "C" void Physics_Raycast_m610 ();
-extern "C" void Physics_Raycast_m636 ();
-extern "C" void Physics_Raycast_m651 ();
+extern "C" void Physics_Raycast_m609 ();
+extern "C" void Physics_Raycast_m635 ();
+extern "C" void Physics_Raycast_m650 ();
 extern "C" void Physics_Raycast_m2400 ();
 extern "C" void Physics_RaycastAll_m2329 ();
 extern "C" void Physics_RaycastAll_m3379 ();
 extern "C" void Physics_INTERNAL_CALL_RaycastAll_m3380 ();
-extern "C" void Rigidbody_set_velocity_m667 ();
+extern "C" void Rigidbody_set_velocity_m666 ();
 extern "C" void Rigidbody_INTERNAL_set_velocity_m3381 ();
-extern "C" void Rigidbody_set_angularVelocity_m668 ();
+extern "C" void Rigidbody_set_angularVelocity_m667 ();
 extern "C" void Rigidbody_INTERNAL_set_angularVelocity_m3382 ();
-extern "C" void Rigidbody_get_drag_m621 ();
-extern "C" void Rigidbody_set_drag_m623 ();
-extern "C" void Rigidbody_get_angularDrag_m622 ();
-extern "C" void Rigidbody_set_angularDrag_m624 ();
-extern "C" void Rigidbody_get_isKinematic_m638 ();
-extern "C" void Rigidbody_set_isKinematic_m639 ();
-extern "C" void Joint_get_connectedBody_m620 ();
-extern "C" void Joint_set_connectedBody_m628 ();
-extern "C" void Joint_set_anchor_m640 ();
+extern "C" void Rigidbody_get_drag_m620 ();
+extern "C" void Rigidbody_set_drag_m622 ();
+extern "C" void Rigidbody_get_angularDrag_m621 ();
+extern "C" void Rigidbody_set_angularDrag_m623 ();
+extern "C" void Rigidbody_get_isKinematic_m637 ();
+extern "C" void Rigidbody_set_isKinematic_m638 ();
+extern "C" void Joint_get_connectedBody_m619 ();
+extern "C" void Joint_set_connectedBody_m627 ();
+extern "C" void Joint_set_anchor_m639 ();
 extern "C" void Joint_INTERNAL_set_anchor_m3383 ();
-extern "C" void SpringJoint_set_spring_m641 ();
-extern "C" void SpringJoint_set_damper_m642 ();
-extern "C" void SpringJoint_set_maxDistance_m643 ();
+extern "C" void SpringJoint_set_spring_m640 ();
+extern "C" void SpringJoint_set_damper_m641 ();
+extern "C" void SpringJoint_set_maxDistance_m642 ();
 extern "C" void Collider_get_attachedRigidbody_m3384 ();
-extern "C" void RaycastHit_get_point_m611 ();
+extern "C" void RaycastHit_get_point_m610 ();
 extern "C" void RaycastHit_get_normal_m2332 ();
-extern "C" void RaycastHit_get_distance_m644 ();
+extern "C" void RaycastHit_get_distance_m643 ();
 extern "C" void RaycastHit_get_collider_m2331 ();
-extern "C" void RaycastHit_get_rigidbody_m637 ();
+extern "C" void RaycastHit_get_rigidbody_m636 ();
 extern "C" void Physics2D__cctor_m3385 ();
 extern "C" void Physics2D_get_gravity_m917 ();
 extern "C" void Physics2D_set_gravity_m1009 ();
@@ -2872,9 +2872,9 @@ extern "C" void Physics2D_Raycast_m943 ();
 extern "C" void Physics2D_Raycast_m3390 ();
 extern "C" void Physics2D_RaycastAll_m2320 ();
 extern "C" void Physics2D_INTERNAL_CALL_RaycastAll_m3391 ();
-extern "C" void Physics2D_OverlapCircle_m544 ();
+extern "C" void Physics2D_OverlapCircle_m543 ();
 extern "C" void Physics2D_INTERNAL_CALL_OverlapCircle_m3392 ();
-extern "C" void Physics2D_OverlapCircleAll_m538 ();
+extern "C" void Physics2D_OverlapCircleAll_m537 ();
 extern "C" void Physics2D_INTERNAL_CALL_OverlapCircleAll_m3393 ();
 extern "C" void RaycastHit2D_get_point_m950 ();
 extern "C" void RaycastHit2D_get_normal_m2323 ();
@@ -2887,8 +2887,8 @@ extern "C" void RaycastHit2D_op_Implicit_m944 ();
 extern "C" void Rigidbody2D_get_position_m957 ();
 extern "C" void Rigidbody2D_INTERNAL_get_position_m3394 ();
 extern "C" void Rigidbody2D_get_rotation_m956 ();
-extern "C" void Rigidbody2D_get_velocity_m541 ();
-extern "C" void Rigidbody2D_set_velocity_m547 ();
+extern "C" void Rigidbody2D_get_velocity_m540 ();
+extern "C" void Rigidbody2D_set_velocity_m546 ();
 extern "C" void Rigidbody2D_INTERNAL_get_velocity_m3395 ();
 extern "C" void Rigidbody2D_INTERNAL_set_velocity_m3396 ();
 extern "C" void Rigidbody2D_get_mass_m898 ();
@@ -2899,7 +2899,7 @@ extern "C" void Rigidbody2D_get_angularDrag_m900 ();
 extern "C" void Rigidbody2D_set_angularDrag_m901 ();
 extern "C" void Rigidbody2D_get_isKinematic_m877 ();
 extern "C" void Rigidbody2D_set_isKinematic_m874 ();
-extern "C" void Rigidbody2D_AddForce_m548 ();
+extern "C" void Rigidbody2D_AddForce_m547 ();
 extern "C" void Rigidbody2D_INTERNAL_CALL_AddForce_m3397 ();
 extern "C" void Collider2D_get_attachedRigidbody_m3398 ();
 extern "C" void Collider2D_get_bounds_m889 ();
@@ -2968,21 +2968,21 @@ extern "C" void AnimationEvent_get_animationState_m3441 ();
 extern "C" void AnimationEvent_get_animatorStateInfo_m3442 ();
 extern "C" void AnimationEvent_get_animatorClipInfo_m3443 ();
 extern "C" void AnimationEvent_GetHash_m3444 ();
-extern "C" void Keyframe__ctor_m613 ();
-extern "C" void Keyframe_get_time_m618 ();
-extern "C" void AnimationCurve__ctor_m614 ();
+extern "C" void Keyframe__ctor_m612 ();
+extern "C" void Keyframe_get_time_m617 ();
+extern "C" void AnimationCurve__ctor_m613 ();
 extern "C" void AnimationCurve__ctor_m3445 ();
 extern "C" void AnimationCurve_Cleanup_m3446 ();
 extern "C" void AnimationCurve_Finalize_m3447 ();
-extern "C" void AnimationCurve_Evaluate_m619 ();
-extern "C" void AnimationCurve_get_Item_m617 ();
-extern "C" void AnimationCurve_get_length_m616 ();
+extern "C" void AnimationCurve_Evaluate_m618 ();
+extern "C" void AnimationCurve_get_Item_m616 ();
+extern "C" void AnimationCurve_get_length_m615 ();
 extern "C" void AnimationCurve_GetKey_Internal_m3448 ();
 extern "C" void AnimationCurve_Init_m3449 ();
 extern "C" void Enumerator__ctor_m3450 ();
 extern "C" void Enumerator_get_Current_m3451 ();
 extern "C" void Enumerator_MoveNext_m3452 ();
-extern "C" void Animation_Play_m594 ();
+extern "C" void Animation_Play_m593 ();
 extern "C" void Animation_Play_m3453 ();
 extern "C" void Animation_PlayDefaultAnimation_m3454 ();
 extern "C" void Animation_GetEnumerator_m3455 ();
@@ -3006,9 +3006,9 @@ extern "C" void AnimatorTransitionInfo_get_normalizedTime_m3472 ();
 extern "C" void AnimatorTransitionInfo_get_anyState_m3473 ();
 extern "C" void AnimatorTransitionInfo_get_entry_m3474 ();
 extern "C" void AnimatorTransitionInfo_get_exit_m3475 ();
-extern "C" void Animator_SetFloat_m542 ();
-extern "C" void Animator_GetBool_m543 ();
-extern "C" void Animator_SetBool_m540 ();
+extern "C" void Animator_SetFloat_m541 ();
+extern "C" void Animator_GetBool_m542 ();
+extern "C" void Animator_SetBool_m539 ();
 extern "C" void Animator_SetTrigger_m2595 ();
 extern "C" void Animator_ResetTrigger_m2594 ();
 extern "C" void Animator_get_runtimeAnimatorController_m2593 ();
@@ -3022,7 +3022,7 @@ extern "C" void HumanBone_get_boneName_m3482 ();
 extern "C" void HumanBone_set_boneName_m3483 ();
 extern "C" void HumanBone_get_humanName_m3484 ();
 extern "C" void HumanBone_set_humanName_m3485 ();
-extern "C" void GUIText_set_text_m660 ();
+extern "C" void GUIText_set_text_m659 ();
 extern "C" void CharacterInfo_get_advance_m3486 ();
 extern "C" void CharacterInfo_get_glyphWidth_m3487 ();
 extern "C" void CharacterInfo_get_glyphHeight_m3488 ();
@@ -3461,9 +3461,9 @@ extern "C" void HitInfo_op_Implicit_m3868 ();
 extern "C" void SendMouseEvents__cctor_m3869 ();
 extern "C" void SendMouseEvents_DoSendMouseEvents_m3870 ();
 extern "C" void SendMouseEvents_SendEvents_m3871 ();
-extern "C" void Social_get_Active_m414 ();
+extern "C" void Social_get_Active_m413 ();
 extern "C" void Social_get_localUser_m962 ();
-extern "C" void Social_ReportProgress_m417 ();
+extern "C" void Social_ReportProgress_m416 ();
 extern "C" void Social_LoadAchievements_m974 ();
 extern "C" void Social_ReportScore_m971 ();
 extern "C" void ActivePlatform_get_Instance_m3872 ();
@@ -5406,12 +5406,12 @@ extern "C" void MatchEvaluator__ctor_m6075 ();
 extern "C" void MatchEvaluator_Invoke_m6076 ();
 extern "C" void MatchEvaluator_BeginInvoke_m6077 ();
 extern "C" void MatchEvaluator_EndInvoke_m6078 ();
-extern "C" void Object__ctor_m413 ();
+extern "C" void Object__ctor_m412 ();
 extern "C" void Object_Equals_m6162 ();
 extern "C" void Object_Equals_m6159 ();
 extern "C" void Object_Finalize_m3979 ();
 extern "C" void Object_GetHashCode_m6163 ();
-extern "C" void Object_GetType_m486 ();
+extern "C" void Object_GetType_m485 ();
 extern "C" void Object_MemberwiseClone_m6164 ();
 extern "C" void Object_ToString_m4036 ();
 extern "C" void Object_ReferenceEquals_m4005 ();
@@ -5465,11 +5465,11 @@ extern "C" void Int32_FindOther_m6206 ();
 extern "C" void Int32_ValidDigit_m6207 ();
 extern "C" void Int32_GetFormatException_m6208 ();
 extern "C" void Int32_Parse_m6209 ();
-extern "C" void Int32_Parse_m505 ();
+extern "C" void Int32_Parse_m504 ();
 extern "C" void Int32_Parse_m6210 ();
 extern "C" void Int32_TryParse_m6211 ();
 extern "C" void Int32_TryParse_m6104 ();
-extern "C" void Int32_ToString_m506 ();
+extern "C" void Int32_ToString_m505 ();
 extern "C" void Int32_ToString_m4077 ();
 extern "C" void Int32_ToString_m6135 ();
 extern "C" void Int32_ToString_m5142 ();
@@ -5750,21 +5750,21 @@ extern "C" void String_System_Collections_IEnumerable_GetEnumerator_m6460 ();
 extern "C" void String_Equals_m6461 ();
 extern "C" void String_Equals_m6462 ();
 extern "C" void String_Equals_m5107 ();
-extern "C" void String_get_Chars_m471 ();
+extern "C" void String_get_Chars_m470 ();
 extern "C" void String_CopyTo_m6463 ();
 extern "C" void String_ToCharArray_m4066 ();
 extern "C" void String_ToCharArray_m6464 ();
-extern "C" void String_Split_m469 ();
+extern "C" void String_Split_m468 ();
 extern "C" void String_Split_m6465 ();
 extern "C" void String_Split_m6466 ();
 extern "C" void String_Split_m6467 ();
-extern "C" void String_Split_m464 ();
+extern "C" void String_Split_m463 ();
 extern "C" void String_Substring_m2509 ();
 extern "C" void String_Substring_m2485 ();
 extern "C" void String_SubstringUnchecked_m6468 ();
-extern "C" void String_Trim_m466 ();
+extern "C" void String_Trim_m465 ();
 extern "C" void String_Trim_m4014 ();
-extern "C" void String_TrimStart_m508 ();
+extern "C" void String_TrimStart_m507 ();
 extern "C" void String_TrimEnd_m6119 ();
 extern "C" void String_FindNotWhiteSpace_m6469 ();
 extern "C" void String_FindNotInTable_m6470 ();
@@ -5804,11 +5804,11 @@ extern "C" void String_LastIndexOfUnchecked_m6486 ();
 extern "C" void String_LastIndexOf_m4112 ();
 extern "C" void String_LastIndexOf_m6487 ();
 extern "C" void String_Contains_m2531 ();
-extern "C" void String_IsNullOrEmpty_m465 ();
+extern "C" void String_IsNullOrEmpty_m464 ();
 extern "C" void String_PadRight_m6488 ();
 extern "C" void String_StartsWith_m969 ();
 extern "C" void String_Replace_m4111 ();
-extern "C" void String_Replace_m479 ();
+extern "C" void String_Replace_m478 ();
 extern "C" void String_ReplaceUnchecked_m6489 ();
 extern "C" void String_ReplaceFallback_m6490 ();
 extern "C" void String_Remove_m2505 ();
@@ -5820,25 +5820,25 @@ extern "C" void String_ToUpper_m6492 ();
 extern "C" void String_ToUpperInvariant_m6493 ();
 extern "C" void String_ToString_m4020 ();
 extern "C" void String_ToString_m6494 ();
-extern "C" void String_Format_m480 ();
+extern "C" void String_Format_m479 ();
 extern "C" void String_Format_m6495 ();
-extern "C" void String_Format_m452 ();
+extern "C" void String_Format_m451 ();
 extern "C" void String_Format_m2619 ();
 extern "C" void String_Format_m5152 ();
 extern "C" void String_FormatHelper_m6496 ();
-extern "C" void String_Concat_m599 ();
-extern "C" void String_Concat_m425 ();
-extern "C" void String_Concat_m420 ();
-extern "C" void String_Concat_m439 ();
-extern "C" void String_Concat_m992 ();
+extern "C" void String_Concat_m598 ();
+extern "C" void String_Concat_m424 ();
 extern "C" void String_Concat_m419 ();
-extern "C" void String_Concat_m509 ();
+extern "C" void String_Concat_m438 ();
+extern "C" void String_Concat_m992 ();
+extern "C" void String_Concat_m418 ();
+extern "C" void String_Concat_m508 ();
 extern "C" void String_ConcatInternal_m6497 ();
 extern "C" void String_Insert_m2507 ();
-extern "C" void String_Join_m462 ();
+extern "C" void String_Join_m461 ();
 extern "C" void String_Join_m6498 ();
 extern "C" void String_JoinUnchecked_m6499 ();
-extern "C" void String_get_Length_m472 ();
+extern "C" void String_get_Length_m471 ();
 extern "C" void String_ParseFormatSpecifier_m6500 ();
 extern "C" void String_ParseDecimal_m6501 ();
 extern "C" void String_InternalSetChar_m6502 ();
@@ -5864,7 +5864,7 @@ extern "C" void String_CharCopy_m6517 ();
 extern "C" void String_CharCopyReverse_m6518 ();
 extern "C" void String_InternalSplit_m6519 ();
 extern "C" void String_InternalAllocateStr_m6520 ();
-extern "C" void String_op_Equality_m418 ();
+extern "C" void String_op_Equality_m417 ();
 extern "C" void String_op_Inequality_m1061 ();
 extern "C" void Single_System_IConvertible_ToBoolean_m6521 ();
 extern "C" void Single_System_IConvertible_ToByte_m6522 ();
@@ -5890,9 +5890,9 @@ extern "C" void Single_IsInfinity_m6538 ();
 extern "C" void Single_IsNaN_m6539 ();
 extern "C" void Single_IsNegativeInfinity_m6540 ();
 extern "C" void Single_IsPositiveInfinity_m6541 ();
-extern "C" void Single_Parse_m502 ();
+extern "C" void Single_Parse_m501 ();
 extern "C" void Single_Parse_m6542 ();
-extern "C" void Single_ToString_m507 ();
+extern "C" void Single_ToString_m506 ();
 extern "C" void Single_ToString_m4080 ();
 extern "C" void Single_ToString_m4008 ();
 extern "C" void Single_ToString_m6543 ();
@@ -6303,7 +6303,7 @@ extern "C" void Type_GetType_m6923 ();
 extern "C" void Type_GetType_m4126 ();
 extern "C" void Type_GetTypeCodeInternal_m6924 ();
 extern "C" void Type_GetTypeCode_m6925 ();
-extern "C" void Type_GetTypeFromHandle_m493 ();
+extern "C" void Type_GetTypeFromHandle_m492 ();
 extern "C" void Type_GetTypeHandle_m6926 ();
 extern "C" void Type_type_is_subtype_of_m6927 ();
 extern "C" void Type_type_is_assignable_from_m6928 ();
@@ -6343,7 +6343,7 @@ extern "C" void Type_GetPseudoCustomAttributes_m6961 ();
 extern "C" void MemberInfo__ctor_m6962 ();
 extern "C" void MemberInfo_get_Module_m6963 ();
 extern "C" void Exception__ctor_m5074 ();
-extern "C" void Exception__ctor_m450 ();
+extern "C" void Exception__ctor_m449 ();
 extern "C" void Exception__ctor_m4115 ();
 extern "C" void Exception__ctor_m4114 ();
 extern "C" void Exception_get_InnerException_m6964 ();
@@ -7218,7 +7218,7 @@ extern "C" void StackFrame_GetNativeOffset_m7804 ();
 extern "C" void StackFrame_GetInternalMethodName_m7805 ();
 extern "C" void StackFrame_ToString_m7806 ();
 extern "C" void StackTrace__ctor_m7807 ();
-extern "C" void StackTrace__ctor_m451 ();
+extern "C" void StackTrace__ctor_m450 ();
 extern "C" void StackTrace__ctor_m4108 ();
 extern "C" void StackTrace__ctor_m7808 ();
 extern "C" void StackTrace__ctor_m7809 ();
@@ -9498,7 +9498,7 @@ extern "C" void Encoding_GetBytes_m9994 ();
 extern "C" void Encoding_GetChars_m9995 ();
 extern "C" void Encoding_GetDecoder_m9996 ();
 extern "C" void Encoding_InvokeI18N_m9997 ();
-extern "C" void Encoding_GetEncoding_m460 ();
+extern "C" void Encoding_GetEncoding_m459 ();
 extern "C" void Encoding_GetEncoding_m4015 ();
 extern "C" void Encoding_GetHashCode_m9998 ();
 extern "C" void Encoding_GetPreamble_m9999 ();
@@ -9538,7 +9538,7 @@ extern "C" void Latin1Encoding_get_WebName_m10028 ();
 extern "C" void StringBuilder__ctor_m10029 ();
 extern "C" void StringBuilder__ctor_m10030 ();
 extern "C" void StringBuilder__ctor_m2237 ();
-extern "C" void StringBuilder__ctor_m470 ();
+extern "C" void StringBuilder__ctor_m469 ();
 extern "C" void StringBuilder__ctor_m2290 ();
 extern "C" void StringBuilder__ctor_m6096 ();
 extern "C" void StringBuilder__ctor_m10031 ();
@@ -9546,10 +9546,10 @@ extern "C" void StringBuilder_System_Runtime_Serialization_ISerializable_GetObje
 extern "C" void StringBuilder_get_Capacity_m10033 ();
 extern "C" void StringBuilder_set_Capacity_m10034 ();
 extern "C" void StringBuilder_get_Length_m5141 ();
-extern "C" void StringBuilder_set_Length_m474 ();
+extern "C" void StringBuilder_set_Length_m473 ();
 extern "C" void StringBuilder_get_Chars_m10035 ();
 extern "C" void StringBuilder_set_Chars_m10036 ();
-extern "C" void StringBuilder_ToString_m475 ();
+extern "C" void StringBuilder_ToString_m474 ();
 extern "C" void StringBuilder_ToString_m10037 ();
 extern "C" void StringBuilder_Remove_m10038 ();
 extern "C" void StringBuilder_Replace_m10039 ();
@@ -9558,7 +9558,7 @@ extern "C" void StringBuilder_Append_m4070 ();
 extern "C" void StringBuilder_Append_m6121 ();
 extern "C" void StringBuilder_Append_m6106 ();
 extern "C" void StringBuilder_Append_m6097 ();
-extern "C" void StringBuilder_Append_m476 ();
+extern "C" void StringBuilder_Append_m475 ();
 extern "C" void StringBuilder_Append_m10041 ();
 extern "C" void StringBuilder_Append_m10042 ();
 extern "C" void StringBuilder_Append_m6137 ();
@@ -9813,7 +9813,7 @@ extern "C" void ArgumentException_get_ParamName_m10275 ();
 extern "C" void ArgumentException_get_Message_m10276 ();
 extern "C" void ArgumentException_GetObjectData_m10277 ();
 extern "C" void ArgumentNullException__ctor_m10278 ();
-extern "C" void ArgumentNullException__ctor_m557 ();
+extern "C" void ArgumentNullException__ctor_m556 ();
 extern "C" void ArgumentNullException__ctor_m6084 ();
 extern "C" void ArgumentNullException__ctor_m10279 ();
 extern "C" void ArgumentOutOfRangeException__ctor_m6136 ();
@@ -10387,14 +10387,14 @@ extern "C" void MulticastNotSupportedException__ctor_m10798 ();
 extern "C" void MulticastNotSupportedException__ctor_m10799 ();
 extern "C" void MulticastNotSupportedException__ctor_m10800 ();
 extern "C" void NonSerializedAttribute__ctor_m10801 ();
-extern "C" void NotImplementedException__ctor_m483 ();
+extern "C" void NotImplementedException__ctor_m482 ();
 extern "C" void NotImplementedException__ctor_m4192 ();
 extern "C" void NotImplementedException__ctor_m10802 ();
-extern "C" void NotSupportedException__ctor_m629 ();
+extern "C" void NotSupportedException__ctor_m628 ();
 extern "C" void NotSupportedException__ctor_m5077 ();
 extern "C" void NotSupportedException__ctor_m10803 ();
 extern "C" void NullReferenceException__ctor_m10804 ();
-extern "C" void NullReferenceException__ctor_m449 ();
+extern "C" void NullReferenceException__ctor_m448 ();
 extern "C" void NullReferenceException__ctor_m10805 ();
 extern "C" void CustomInfo__ctor_m10806 ();
 extern "C" void CustomInfo_GetActiveSection_m10807 ();
@@ -10699,510 +10699,510 @@ extern const methodPointerType g_MethodPointers[10691] =
 	GKAchievementReporter__ReportAchievement_m2,
 	Singletons_get_GameControllerInitialized_m3,
 	Singletons_get_GameController_m4,
-	Singletons_get_Settings_m5,
-	Log__ctor_m6,
-	Log_get_isEmpty_m7,
-	Log_get_isActive_m8,
-	Log_get_color_m9,
-	Log_ToString_m10,
-	HUD__ctor_m11,
-	HUD_Start_m12,
-	HUD_Update_m13,
-	HUD_OnGUI_m14,
-	DebugHUD__ctor_m15,
-	DebugHUD_Start_m16,
-	DebugHUD_Show_m17,
-	DebugHUD_Hide_m18,
-	DebugHUD_OnGUI_m19,
-	U3CAddToQueueU3Ec__AnonStorey9__ctor_m20,
-	U3CAddToQueueU3Ec__AnonStorey9_U3CU3Em__0_m21,
-	Bugger__cctor_m22,
-	Bugger_LateLogs_m23,
-	Bugger_get_Last_m24,
-	Bugger_AddLateLog_m25,
-	Bugger_Stack_m26,
-	Bugger_WillLog_m27,
-	Bugger_get_timesUp_m28,
-	Bugger_get_timeRemaining_m29,
-	Bugger_AddToQueue_m30,
-	Bugger_Initialize_m31,
-	CsvReader__cctor_m32,
-	CsvReader_ToString_m33,
-	CsvReader_Parse_m34,
+	Log__ctor_m5,
+	Log_get_isEmpty_m6,
+	Log_get_isActive_m7,
+	Log_get_color_m8,
+	Log_ToString_m9,
+	HUD__ctor_m10,
+	HUD_Start_m11,
+	HUD_Update_m12,
+	HUD_OnGUI_m13,
+	DebugHUD__ctor_m14,
+	DebugHUD_Start_m15,
+	DebugHUD_Show_m16,
+	DebugHUD_Hide_m17,
+	DebugHUD_OnGUI_m18,
+	U3CAddToQueueU3Ec__AnonStorey9__ctor_m19,
+	U3CAddToQueueU3Ec__AnonStorey9_U3CU3Em__0_m20,
+	Bugger__cctor_m21,
+	Bugger_LateLogs_m22,
+	Bugger_get_Last_m23,
+	Bugger_AddLateLog_m24,
+	Bugger_Stack_m25,
+	Bugger_WillLog_m26,
+	Bugger_get_timesUp_m27,
+	Bugger_get_timeRemaining_m28,
+	Bugger_AddToQueue_m29,
+	Bugger_Initialize_m30,
+	CsvReader__cctor_m31,
+	CsvReader_ToString_m32,
+	CsvReader_Parse_m33,
+	CsvReader_Read_m34,
 	CsvReader_Read_m35,
-	CsvReader_Read_m36,
-	CsvReader_ReadLine_m37,
-	CsvReader_Read_m38,
-	CsvReader_ParseLine_m39,
-	CsvReader_U3CToStringU3Em__1_m40,
-	CsvRecord__ctor_m41,
-	CsvRecord_ToString_m42,
-	CsvRecord_U3CToStringU3Em__2_m43,
-	GameControllerExample__ctor_m44,
-	GameControllerExample_PreStart_m45,
-	GameControllerExample_PostStart_m46,
-	GameControllerExample_StartSingletons_m47,
-	GameControllerExample_StartDesktop_m48,
-	GameControllerExample_StartMobile_m49,
-	GameControllerExample_Patch_m50,
-	GameControllerExample_IsDebugging_m51,
-	GameControllerExample_PauseGame_m52,
-	NotificationCenter__cctor_m53,
-	NotificationCenter_HasListener_m54,
-	NotificationCenter_Reset_m55,
-	NotificationCenter_AddListener_m56,
-	NotificationCenter_RemoveListener_m57,
-	NotificationCenter_StatusOf_m58,
-	NotificationCenter_IsIdle_m59,
-	NotificationCenter_IsActive_m60,
+	CsvReader_ReadLine_m36,
+	CsvReader_Read_m37,
+	CsvReader_ParseLine_m38,
+	CsvReader_U3CToStringU3Em__1_m39,
+	CsvRecord__ctor_m40,
+	CsvRecord_ToString_m41,
+	CsvRecord_U3CToStringU3Em__2_m42,
+	GameControllerExample__ctor_m43,
+	GameControllerExample_PreStart_m44,
+	GameControllerExample_PostStart_m45,
+	GameControllerExample_StartSingletons_m46,
+	GameControllerExample_StartDesktop_m47,
+	GameControllerExample_StartMobile_m48,
+	GameControllerExample_Patch_m49,
+	GameControllerExample_IsDebugging_m50,
+	GameControllerExample_PauseGame_m51,
+	NotificationCenter__cctor_m52,
+	NotificationCenter_HasListener_m53,
+	NotificationCenter_Reset_m54,
+	NotificationCenter_AddListener_m55,
+	NotificationCenter_RemoveListener_m56,
+	NotificationCenter_StatusOf_m57,
+	NotificationCenter_IsIdle_m58,
+	NotificationCenter_IsActive_m59,
+	NotificationCenter_EventDidOccur_m60,
 	NotificationCenter_EventDidOccur_m61,
-	NotificationCenter_EventDidOccur_m62,
-	NotificationCenter_WasCompleted_m63,
+	NotificationCenter_WasCompleted_m62,
+	NotificationCenter_EventWillStart_m63,
 	NotificationCenter_EventWillStart_m64,
-	NotificationCenter_EventWillStart_m65,
+	NotificationCenter_EventDidEnd_m65,
 	NotificationCenter_EventDidEnd_m66,
-	NotificationCenter_EventDidEnd_m67,
-	NotificationCenter_NotifyListeners_m68,
-	RMXObject__ctor_m69,
-	RMXObject__cctor_m70,
-	RMXObject_get_AddToGlobalListeners_m71,
-	RMXObject_Awake_m72,
-	RMXObject_WillBeginEvent_m73,
-	RMXObject_DidUpdateEvent_m74,
-	RMXObject_DidFinishEvent_m75,
-	RMXObject_DidCauseEvent_m76,
-	RMXObject_WillBeginEvent_m77,
-	RMXObject_DidUpdateEvent_m78,
-	RMXObject_DidFinishEvent_m79,
-	RMXObject_DidCauseEvent_m80,
-	RMXObject_WillChangeValueForKey_m81,
-	RMXObject_DidChangeValueForKey_m82,
-	RMXObject_setValue_m83,
-	RMXObject_getValue_m84,
-	RMXObject_AddObserver_m85,
-	RMXObject_RemoveObserver_m86,
-	RMXObject_OnValueForKeyWillChange_m87,
-	RMXObject_OnValueForKeyDidChange_m88,
-	RMXObject_OnEvent_m89,
-	RMXObject_OnEventDidStart_m90,
-	RMXObject_OnEventDidEnd_m91,
-	RMXObject_get_OneIn10_m92,
-	RMXObject_RMX_EventListener_SendMessage_m93,
-	RMXObject_RMX_EventListener_get_name_m94,
-	SavedData_String_m95,
-	SavedData_Long_m96,
-	SavedData_Double_m97,
-	SavedData_Bool_m98,
-	SavedData_Set_m99,
-	SavedData_Int_m100,
-	SavedData_Set_m101,
-	SavedData_Float_m102,
-	SavedData_Set_m103,
-	TextFormatter__cctor_m104,
-	TextFormatter_debug_m105,
-	TextFormatter_codify_m106,
+	NotificationCenter_NotifyListeners_m67,
+	RMXObject__ctor_m68,
+	RMXObject__cctor_m69,
+	RMXObject_get_AddToGlobalListeners_m70,
+	RMXObject_Awake_m71,
+	RMXObject_WillBeginEvent_m72,
+	RMXObject_DidUpdateEvent_m73,
+	RMXObject_DidFinishEvent_m74,
+	RMXObject_DidCauseEvent_m75,
+	RMXObject_WillBeginEvent_m76,
+	RMXObject_DidUpdateEvent_m77,
+	RMXObject_DidFinishEvent_m78,
+	RMXObject_DidCauseEvent_m79,
+	RMXObject_WillChangeValueForKey_m80,
+	RMXObject_DidChangeValueForKey_m81,
+	RMXObject_setValue_m82,
+	RMXObject_getValue_m83,
+	RMXObject_AddObserver_m84,
+	RMXObject_RemoveObserver_m85,
+	RMXObject_OnValueForKeyWillChange_m86,
+	RMXObject_OnValueForKeyDidChange_m87,
+	RMXObject_OnEvent_m88,
+	RMXObject_OnEventDidStart_m89,
+	RMXObject_OnEventDidEnd_m90,
+	RMXObject_get_OneIn10_m91,
+	RMXObject_RMX_EventListener_SendMessage_m92,
+	RMXObject_RMX_EventListener_get_name_m93,
+	SavedData_String_m94,
+	SavedData_Long_m95,
+	SavedData_Double_m96,
+	SavedData_Bool_m97,
+	SavedData_Set_m98,
+	SavedData_Int_m99,
+	SavedData_Set_m100,
+	SavedData_Float_m101,
+	SavedData_Set_m102,
+	TextFormatter__cctor_m103,
+	TextFormatter_debug_m104,
+	TextFormatter_codify_m105,
+	TextFormatter_Format_m106,
 	TextFormatter_Format_m107,
 	TextFormatter_Format_m108,
-	TextFormatter_Format_m109,
-	TextFormatter_TimeDescription_m110,
-	Camera2DFollow__ctor_m111,
-	Camera2DFollow_Start_m112,
-	Camera2DFollow_Update_m113,
-	CameraFollow__ctor_m114,
-	CameraFollow_Awake_m115,
-	CameraFollow_CheckXMargin_m116,
-	CameraFollow_CheckYMargin_m117,
-	CameraFollow_Update_m118,
-	CameraFollow_TrackPlayer_m119,
-	Platformer2DUserControl__ctor_m120,
-	Platformer2DUserControl_Awake_m121,
-	Platformer2DUserControl_Update_m122,
-	Platformer2DUserControl_FixedUpdate_m123,
-	PlatformerCharacter2D__ctor_m124,
-	PlatformerCharacter2D_Awake_m125,
-	PlatformerCharacter2D_FixedUpdate_m126,
-	PlatformerCharacter2D_Move_m127,
-	PlatformerCharacter2D_Flip_m128,
-	Restarter__ctor_m129,
-	Restarter_OnTriggerEnter2D_m130,
-	AxisTouchButton__ctor_m131,
-	AxisTouchButton_OnEnable_m132,
-	AxisTouchButton_FindPairedButton_m133,
-	AxisTouchButton_OnDisable_m134,
-	AxisTouchButton_OnPointerDown_m135,
-	AxisTouchButton_OnPointerUp_m136,
-	ButtonHandler__ctor_m137,
-	ButtonHandler_OnEnable_m138,
-	ButtonHandler_SetDownState_m139,
-	ButtonHandler_SetUpState_m140,
-	ButtonHandler_SetAxisPositiveState_m141,
-	ButtonHandler_SetAxisNeutralState_m142,
-	ButtonHandler_SetAxisNegativeState_m143,
-	ButtonHandler_Update_m144,
+	TextFormatter_TimeDescription_m109,
+	Camera2DFollow__ctor_m110,
+	Camera2DFollow_Start_m111,
+	Camera2DFollow_Update_m112,
+	CameraFollow__ctor_m113,
+	CameraFollow_Awake_m114,
+	CameraFollow_CheckXMargin_m115,
+	CameraFollow_CheckYMargin_m116,
+	CameraFollow_Update_m117,
+	CameraFollow_TrackPlayer_m118,
+	Platformer2DUserControl__ctor_m119,
+	Platformer2DUserControl_Awake_m120,
+	Platformer2DUserControl_Update_m121,
+	Platformer2DUserControl_FixedUpdate_m122,
+	PlatformerCharacter2D__ctor_m123,
+	PlatformerCharacter2D_Awake_m124,
+	PlatformerCharacter2D_FixedUpdate_m125,
+	PlatformerCharacter2D_Move_m126,
+	PlatformerCharacter2D_Flip_m127,
+	Restarter__ctor_m128,
+	Restarter_OnTriggerEnter2D_m129,
+	AxisTouchButton__ctor_m130,
+	AxisTouchButton_OnEnable_m131,
+	AxisTouchButton_FindPairedButton_m132,
+	AxisTouchButton_OnDisable_m133,
+	AxisTouchButton_OnPointerDown_m134,
+	AxisTouchButton_OnPointerUp_m135,
+	ButtonHandler__ctor_m136,
+	ButtonHandler_OnEnable_m137,
+	ButtonHandler_SetDownState_m138,
+	ButtonHandler_SetUpState_m139,
+	ButtonHandler_SetAxisPositiveState_m140,
+	ButtonHandler_SetAxisNeutralState_m141,
+	ButtonHandler_SetAxisNegativeState_m142,
+	ButtonHandler_Update_m143,
+	VirtualAxis__ctor_m144,
 	VirtualAxis__ctor_m145,
-	VirtualAxis__ctor_m146,
-	VirtualAxis_get_name_m147,
-	VirtualAxis_set_name_m148,
-	VirtualAxis_get_matchWithInputManager_m149,
-	VirtualAxis_set_matchWithInputManager_m150,
-	VirtualAxis_Remove_m151,
-	VirtualAxis_Update_m152,
-	VirtualAxis_get_GetValue_m153,
-	VirtualAxis_get_GetValueRaw_m154,
+	VirtualAxis_get_name_m146,
+	VirtualAxis_set_name_m147,
+	VirtualAxis_get_matchWithInputManager_m148,
+	VirtualAxis_set_matchWithInputManager_m149,
+	VirtualAxis_Remove_m150,
+	VirtualAxis_Update_m151,
+	VirtualAxis_get_GetValue_m152,
+	VirtualAxis_get_GetValueRaw_m153,
+	VirtualButton__ctor_m154,
 	VirtualButton__ctor_m155,
-	VirtualButton__ctor_m156,
-	VirtualButton_get_name_m157,
-	VirtualButton_set_name_m158,
-	VirtualButton_get_matchWithInputManager_m159,
-	VirtualButton_set_matchWithInputManager_m160,
-	VirtualButton_Pressed_m161,
-	VirtualButton_Released_m162,
-	VirtualButton_Remove_m163,
-	VirtualButton_get_GetButton_m164,
-	VirtualButton_get_GetButtonDown_m165,
-	VirtualButton_get_GetButtonUp_m166,
-	CrossPlatformInputManager__cctor_m167,
-	CrossPlatformInputManager_SwitchActiveInputMethod_m168,
-	CrossPlatformInputManager_AxisExists_m169,
-	CrossPlatformInputManager_ButtonExists_m170,
-	CrossPlatformInputManager_RegisterVirtualAxis_m171,
-	CrossPlatformInputManager_RegisterVirtualButton_m172,
-	CrossPlatformInputManager_UnRegisterVirtualAxis_m173,
-	CrossPlatformInputManager_UnRegisterVirtualButton_m174,
-	CrossPlatformInputManager_VirtualAxisReference_m175,
-	CrossPlatformInputManager_GetAxis_m176,
-	CrossPlatformInputManager_GetAxisRaw_m177,
-	CrossPlatformInputManager_GetAxis_m178,
-	CrossPlatformInputManager_GetButton_m179,
-	CrossPlatformInputManager_GetButtonDown_m180,
-	CrossPlatformInputManager_GetButtonUp_m181,
-	CrossPlatformInputManager_SetButtonDown_m182,
-	CrossPlatformInputManager_SetButtonUp_m183,
-	CrossPlatformInputManager_SetAxisPositive_m184,
-	CrossPlatformInputManager_SetAxisNegative_m185,
-	CrossPlatformInputManager_SetAxisZero_m186,
-	CrossPlatformInputManager_SetAxis_m187,
-	CrossPlatformInputManager_get_mousePosition_m188,
-	CrossPlatformInputManager_SetVirtualMousePositionX_m189,
-	CrossPlatformInputManager_SetVirtualMousePositionY_m190,
-	CrossPlatformInputManager_SetVirtualMousePositionZ_m191,
-	InputAxisScrollbar__ctor_m192,
-	InputAxisScrollbar_Update_m193,
-	InputAxisScrollbar_HandleInput_m194,
-	Joystick__ctor_m195,
-	Joystick_OnEnable_m196,
-	Joystick_Start_m197,
-	Joystick_UpdateVirtualAxes_m198,
-	Joystick_CreateVirtualAxes_m199,
-	Joystick_OnDrag_m200,
-	Joystick_OnPointerUp_m201,
-	Joystick_OnPointerDown_m202,
-	Joystick_OnDisable_m203,
-	MobileControlRig__ctor_m204,
-	MobileControlRig_OnEnable_m205,
-	MobileControlRig_Start_m206,
-	MobileControlRig_CheckEnableControlRig_m207,
-	MobileControlRig_EnableControlRig_m208,
-	MobileInput__ctor_m209,
-	MobileInput_AddButton_m210,
-	MobileInput_AddAxes_m211,
-	MobileInput_GetAxis_m212,
-	MobileInput_SetButtonDown_m213,
-	MobileInput_SetButtonUp_m214,
-	MobileInput_SetAxisPositive_m215,
-	MobileInput_SetAxisNegative_m216,
-	MobileInput_SetAxisZero_m217,
-	MobileInput_SetAxis_m218,
-	MobileInput_GetButtonDown_m219,
-	MobileInput_GetButtonUp_m220,
-	MobileInput_GetButton_m221,
-	MobileInput_MousePosition_m222,
-	StandaloneInput__ctor_m223,
-	StandaloneInput_GetAxis_m224,
-	StandaloneInput_GetButton_m225,
-	StandaloneInput_GetButtonDown_m226,
-	StandaloneInput_GetButtonUp_m227,
-	StandaloneInput_SetButtonDown_m228,
-	StandaloneInput_SetButtonUp_m229,
-	StandaloneInput_SetAxisPositive_m230,
-	StandaloneInput_SetAxisNegative_m231,
-	StandaloneInput_SetAxisZero_m232,
-	StandaloneInput_SetAxis_m233,
-	StandaloneInput_MousePosition_m234,
-	AxisMapping__ctor_m235,
-	TiltInput__ctor_m236,
-	TiltInput_OnEnable_m237,
-	TiltInput_Update_m238,
-	TiltInput_OnDisable_m239,
-	TouchPad__ctor_m240,
-	TouchPad_OnEnable_m241,
-	TouchPad_Start_m242,
-	TouchPad_CreateVirtualAxes_m243,
-	TouchPad_UpdateVirtualAxes_m244,
-	TouchPad_OnPointerDown_m245,
-	TouchPad_Update_m246,
-	TouchPad_OnPointerUp_m247,
-	TouchPad_OnDisable_m248,
-	VirtualInput__ctor_m249,
-	VirtualInput_get_virtualMousePosition_m250,
-	VirtualInput_set_virtualMousePosition_m251,
-	VirtualInput_AxisExists_m252,
-	VirtualInput_ButtonExists_m253,
-	VirtualInput_RegisterVirtualAxis_m254,
-	VirtualInput_RegisterVirtualButton_m255,
-	VirtualInput_UnRegisterVirtualAxis_m256,
-	VirtualInput_UnRegisterVirtualButton_m257,
-	VirtualInput_VirtualAxisReference_m258,
-	VirtualInput_SetVirtualMousePositionX_m259,
-	VirtualInput_SetVirtualMousePositionY_m260,
-	VirtualInput_SetVirtualMousePositionZ_m261,
-	ActivateTrigger__ctor_m262,
-	ActivateTrigger_DoActivateTrigger_m263,
-	ActivateTrigger_OnTriggerEnter_m264,
-	ReplacementDefinition__ctor_m265,
-	ReplacementList__ctor_m266,
-	AutoMobileShaderSwitch__ctor_m267,
-	AutoMobileShaderSwitch_OnEnable_m268,
-	Vector3andSpace__ctor_m269,
-	AutoMoveAndRotate__ctor_m270,
-	AutoMoveAndRotate_Start_m271,
-	AutoMoveAndRotate_Update_m272,
-	CameraRefocus__ctor_m273,
-	CameraRefocus_ChangeCamera_m274,
-	CameraRefocus_ChangeParent_m275,
-	CameraRefocus_GetFocusPoint_m276,
-	CameraRefocus_SetFocusPoint_m277,
-	CurveControlledBob__ctor_m278,
-	CurveControlledBob_Setup_m279,
-	CurveControlledBob_DoHeadBob_m280,
-	U3CDragObjectU3Ec__Iterator0__ctor_m281,
-	U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m282,
-	U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m283,
-	U3CDragObjectU3Ec__Iterator0_MoveNext_m284,
-	U3CDragObjectU3Ec__Iterator0_Dispose_m285,
-	U3CDragObjectU3Ec__Iterator0_Reset_m286,
-	DragRigidbody__ctor_m287,
-	DragRigidbody_Update_m288,
-	DragRigidbody_DragObject_m289,
-	DragRigidbody_FindCamera_m290,
-	DynamicShadowSettings__ctor_m291,
-	DynamicShadowSettings_Start_m292,
-	DynamicShadowSettings_Update_m293,
-	U3CFOVKickUpU3Ec__Iterator1__ctor_m294,
-	U3CFOVKickUpU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m295,
-	U3CFOVKickUpU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m296,
-	U3CFOVKickUpU3Ec__Iterator1_MoveNext_m297,
-	U3CFOVKickUpU3Ec__Iterator1_Dispose_m298,
-	U3CFOVKickUpU3Ec__Iterator1_Reset_m299,
-	U3CFOVKickDownU3Ec__Iterator2__ctor_m300,
-	U3CFOVKickDownU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m301,
-	U3CFOVKickDownU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m302,
-	U3CFOVKickDownU3Ec__Iterator2_MoveNext_m303,
-	U3CFOVKickDownU3Ec__Iterator2_Dispose_m304,
-	U3CFOVKickDownU3Ec__Iterator2_Reset_m305,
-	FOVKick__ctor_m306,
-	FOVKick_Setup_m307,
-	FOVKick_CheckStatus_m308,
-	FOVKick_ChangeCamera_m309,
-	FOVKick_FOVKickUp_m310,
-	FOVKick_FOVKickDown_m311,
-	FPSCounter__ctor_m312,
-	FPSCounter_Start_m313,
-	FPSCounter_Update_m314,
-	FollowTarget__ctor_m315,
-	FollowTarget_LateUpdate_m316,
-	ForcedReset__ctor_m317,
-	ForcedReset_Update_m318,
-	U3CDoBobCycleU3Ec__Iterator3__ctor_m319,
-	U3CDoBobCycleU3Ec__Iterator3_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m320,
-	U3CDoBobCycleU3Ec__Iterator3_System_Collections_IEnumerator_get_Current_m321,
-	U3CDoBobCycleU3Ec__Iterator3_MoveNext_m322,
-	U3CDoBobCycleU3Ec__Iterator3_Dispose_m323,
-	U3CDoBobCycleU3Ec__Iterator3_Reset_m324,
-	LerpControlledBob__ctor_m325,
-	LerpControlledBob_Offset_m326,
-	LerpControlledBob_DoBobCycle_m327,
-	U3CResetCoroutineU3Ec__Iterator4__ctor_m328,
-	U3CResetCoroutineU3Ec__Iterator4_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m329,
-	U3CResetCoroutineU3Ec__Iterator4_System_Collections_IEnumerator_get_Current_m330,
-	U3CResetCoroutineU3Ec__Iterator4_MoveNext_m331,
-	U3CResetCoroutineU3Ec__Iterator4_Dispose_m332,
-	U3CResetCoroutineU3Ec__Iterator4_Reset_m333,
-	ObjectResetter__ctor_m334,
-	ObjectResetter_Start_m335,
-	ObjectResetter_DelayedReset_m336,
-	ObjectResetter_ResetCoroutine_m337,
-	U3CStartU3Ec__Iterator5__ctor_m338,
-	U3CStartU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m339,
-	U3CStartU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m340,
-	U3CStartU3Ec__Iterator5_MoveNext_m341,
-	U3CStartU3Ec__Iterator5_Dispose_m342,
-	U3CStartU3Ec__Iterator5_Reset_m343,
-	ParticleSystemDestroyer__ctor_m344,
-	ParticleSystemDestroyer_Start_m345,
-	ParticleSystemDestroyer_Stop_m346,
-	PlatformSpecificContent__ctor_m347,
-	PlatformSpecificContent_OnEnable_m348,
-	PlatformSpecificContent_CheckEnableContent_m349,
-	PlatformSpecificContent_EnableContent_m350,
-	SimpleActivatorMenu__ctor_m351,
-	SimpleActivatorMenu_OnEnable_m352,
-	SimpleActivatorMenu_NextCamera_m353,
-	SimpleMouseRotator__ctor_m354,
-	SimpleMouseRotator_Start_m355,
-	SimpleMouseRotator_Update_m356,
-	SmoothFollow__ctor_m357,
-	SmoothFollow_Start_m358,
-	SmoothFollow_LateUpdate_m359,
-	Entry__ctor_m360,
-	Entries__ctor_m361,
-	U3CActivateU3Ec__Iterator6__ctor_m362,
-	U3CActivateU3Ec__Iterator6_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m363,
-	U3CActivateU3Ec__Iterator6_System_Collections_IEnumerator_get_Current_m364,
-	U3CActivateU3Ec__Iterator6_MoveNext_m365,
-	U3CActivateU3Ec__Iterator6_Dispose_m366,
-	U3CActivateU3Ec__Iterator6_Reset_m367,
-	U3CDeactivateU3Ec__Iterator7__ctor_m368,
-	U3CDeactivateU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m369,
-	U3CDeactivateU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m370,
-	U3CDeactivateU3Ec__Iterator7_MoveNext_m371,
-	U3CDeactivateU3Ec__Iterator7_Dispose_m372,
-	U3CDeactivateU3Ec__Iterator7_Reset_m373,
-	U3CReloadLevelU3Ec__Iterator8__ctor_m374,
-	U3CReloadLevelU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m375,
-	U3CReloadLevelU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m376,
-	U3CReloadLevelU3Ec__Iterator8_MoveNext_m377,
-	U3CReloadLevelU3Ec__Iterator8_Dispose_m378,
-	U3CReloadLevelU3Ec__Iterator8_Reset_m379,
-	TimedObjectActivator__ctor_m380,
-	TimedObjectActivator_Awake_m381,
-	TimedObjectActivator_Activate_m382,
-	TimedObjectActivator_Deactivate_m383,
-	TimedObjectActivator_ReloadLevel_m384,
-	TimedObjectDestructor__ctor_m385,
-	TimedObjectDestructor_Awake_m386,
-	TimedObjectDestructor_DestroyNow_m387,
-	WaypointList__ctor_m388,
-	RoutePoint__ctor_m389,
-	WaypointCircuit__ctor_m390,
-	WaypointCircuit_get_Length_m391,
-	WaypointCircuit_set_Length_m392,
-	WaypointCircuit_get_Waypoints_m393,
-	WaypointCircuit_Awake_m394,
-	WaypointCircuit_GetRoutePoint_m395,
-	WaypointCircuit_GetRoutePosition_m396,
-	WaypointCircuit_CatmullRom_m397,
-	WaypointCircuit_CachePositionsAndDistances_m398,
-	WaypointCircuit_OnDrawGizmos_m399,
-	WaypointCircuit_OnDrawGizmosSelected_m400,
-	WaypointCircuit_DrawGizmos_m401,
-	WaypointProgressTracker__ctor_m402,
-	WaypointProgressTracker_get_targetPoint_m403,
-	WaypointProgressTracker_set_targetPoint_m404,
-	WaypointProgressTracker_get_speedPoint_m405,
-	WaypointProgressTracker_set_speedPoint_m406,
-	WaypointProgressTracker_get_progressPoint_m407,
-	WaypointProgressTracker_set_progressPoint_m408,
-	WaypointProgressTracker_Start_m409,
-	WaypointProgressTracker_Reset_m410,
-	WaypointProgressTracker_Update_m411,
-	WaypointProgressTracker_OnDrawGizmos_m412,
-	BodyBecomesActive__ctor_m706,
-	BodyBecomesActive_OnApplicationFocus_m707,
-	BodyBecomesActive_Activate_m708,
-	BodyBecomesActive_Deactivate_m709,
-	BodyBecomesActive_get_isBonusActive_m710,
-	ClockBehaviour__ctor_m711,
-	ClockBehaviour_get_didPop_m712,
-	ClockBehaviour_get_spriteRenderer_m713,
-	ClockBehaviour_IsVisible_m714,
-	ClockBehaviour_get_VisibleClockCount_m715,
-	ClockBehaviour_get_body_m716,
-	ClockBehaviour_get_collisionBody_m717,
-	ClockBehaviour_New_m718,
-	ClockBehaviour_CheckVisibleClocks_m719,
-	ClockBehaviour_Start_m720,
-	ClockBehaviour_OnDestroy_m721,
-	ClockBehaviour_Update_m722,
-	ClockBehaviour_get_willBeOnScreen_m723,
-	ClockBehaviour_OnBecameInvisible_m724,
-	ClockBehaviour_OnBecameVisible_m725,
-	ClockBehaviour_GetScreenSizeInWorld_m726,
-	ClockBehaviour_ResetWithVelocity_m727,
-	ClockBehaviour_ResetWithPosition_m728,
-	ClockBehaviour_Reset_m729,
-	ClockSpawner__ctor_m730,
-	ClockSpawner_get_spawnMode_m731,
-	ClockSpawner_get_ShouldKillClocks_m732,
-	ClockSpawner_Update_m733,
-	ClockSpawner_get_SpawnPoint_m734,
-	ClockSpawner_Spawn_m735,
-	ClockSpawner_OnEventDidEnd_m736,
-	Wychd__ctor_m737,
-	U3CGetActivitiesU3Ec__AnonStorey2__ctor_m738,
-	U3CGetActivitiesU3Ec__AnonStorey2_U3CU3Em__0_m739,
-	DataReader_get_Database_m740,
-	DataReader_TimeHMSToFloat_m741,
-	DataReader_IsWithinTime_m742,
-	DataReader_GetActivities_m743,
-	DataReader_GetActivityList_m744,
-	DebugHUD__ctor_m745,
-	DebugHUD_GetTime_m746,
-	DebugHUD_Start_m747,
-	DebugHUD_get_DebugData_m748,
-	U3CDragObjectU3Ec__Iterator0__ctor_m749,
-	U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m750,
-	U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m751,
-	U3CDragObjectU3Ec__Iterator0_MoveNext_m752,
-	U3CDragObjectU3Ec__Iterator0_Dispose_m753,
-	U3CDragObjectU3Ec__Iterator0_Reset_m754,
-	U3CMoveFingerU3Ec__Iterator1__ctor_m755,
-	U3CMoveFingerU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m756,
-	U3CMoveFingerU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m757,
-	U3CMoveFingerU3Ec__Iterator1_MoveNext_m758,
-	U3CMoveFingerU3Ec__Iterator1_Dispose_m759,
-	U3CMoveFingerU3Ec__Iterator1_Reset_m760,
-	DragRigidbody__ctor_m761,
-	DragRigidbody_get_fingerWidth_m762,
-	DragRigidbody_Update_m763,
-	DragRigidbody_AttachBody_m764,
-	DragRigidbody_ToString_m765,
-	DragRigidbody_DragObject_m766,
-	DragRigidbody_MoveFinger_m767,
-	DragRigidbody_OnEventDidEnd_m768,
-	U3CAuthenticateU3Ec__AnonStorey3__ctor_m769,
-	U3CAuthenticateU3Ec__AnonStorey3_U3CU3Em__1_m770,
-	U3CReportScoreU3Ec__AnonStorey4__ctor_m771,
-	U3CReportScoreU3Ec__AnonStorey4_U3CU3Em__2_m772,
-	U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5__ctor_m773,
-	U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_U3CU3Em__3_m774,
-	GameCenter__ctor_m775,
-	GameCenter__cctor_m776,
-	GameCenter_Start_m777,
-	GameCenter_UpdateGameCenterAchievements_m778,
-	GameCenter_OnEventDidStart_m779,
-	GameCenter_OnEventDidEnd_m780,
-	GameCenter_OnEvent_m781,
-	GameCenter_Authenticate_m782,
-	GameCenter_ReportScore_m783,
-	GameCenter_Update_m784,
-	GameCenter_HasPlayerAlreadyAchieved_m785,
-	GameCenter_HasMetTimeCriteria_m786,
-	GameCenter_get_UserAuthenticated_m787,
-	GameCenter_ReportProgress_m788,
-	GameCenter_CheckAchievementsWithGameCenter_m789,
-	GameCenter_InitializeKeys_m790,
-	GameCenter_OnApplicationQuit_m791,
-	GameController__ctor_m792,
-	GameController_get_TotalDevTimeWasted_m793,
-	GameController_get_Chance_m794,
-	GameController_ChanceGiven_m795,
-	GameController_get_velocity_m796,
-	GameController_get_isFirstPlay_m797,
-	GameController_StartSingletons_m798,
-	GameController_StartDesktop_m799,
-	GameController_StartMobile_m800,
-	GameController_PreStart_m801,
+	VirtualButton_get_name_m156,
+	VirtualButton_set_name_m157,
+	VirtualButton_get_matchWithInputManager_m158,
+	VirtualButton_set_matchWithInputManager_m159,
+	VirtualButton_Pressed_m160,
+	VirtualButton_Released_m161,
+	VirtualButton_Remove_m162,
+	VirtualButton_get_GetButton_m163,
+	VirtualButton_get_GetButtonDown_m164,
+	VirtualButton_get_GetButtonUp_m165,
+	CrossPlatformInputManager__cctor_m166,
+	CrossPlatformInputManager_SwitchActiveInputMethod_m167,
+	CrossPlatformInputManager_AxisExists_m168,
+	CrossPlatformInputManager_ButtonExists_m169,
+	CrossPlatformInputManager_RegisterVirtualAxis_m170,
+	CrossPlatformInputManager_RegisterVirtualButton_m171,
+	CrossPlatformInputManager_UnRegisterVirtualAxis_m172,
+	CrossPlatformInputManager_UnRegisterVirtualButton_m173,
+	CrossPlatformInputManager_VirtualAxisReference_m174,
+	CrossPlatformInputManager_GetAxis_m175,
+	CrossPlatformInputManager_GetAxisRaw_m176,
+	CrossPlatformInputManager_GetAxis_m177,
+	CrossPlatformInputManager_GetButton_m178,
+	CrossPlatformInputManager_GetButtonDown_m179,
+	CrossPlatformInputManager_GetButtonUp_m180,
+	CrossPlatformInputManager_SetButtonDown_m181,
+	CrossPlatformInputManager_SetButtonUp_m182,
+	CrossPlatformInputManager_SetAxisPositive_m183,
+	CrossPlatformInputManager_SetAxisNegative_m184,
+	CrossPlatformInputManager_SetAxisZero_m185,
+	CrossPlatformInputManager_SetAxis_m186,
+	CrossPlatformInputManager_get_mousePosition_m187,
+	CrossPlatformInputManager_SetVirtualMousePositionX_m188,
+	CrossPlatformInputManager_SetVirtualMousePositionY_m189,
+	CrossPlatformInputManager_SetVirtualMousePositionZ_m190,
+	InputAxisScrollbar__ctor_m191,
+	InputAxisScrollbar_Update_m192,
+	InputAxisScrollbar_HandleInput_m193,
+	Joystick__ctor_m194,
+	Joystick_OnEnable_m195,
+	Joystick_Start_m196,
+	Joystick_UpdateVirtualAxes_m197,
+	Joystick_CreateVirtualAxes_m198,
+	Joystick_OnDrag_m199,
+	Joystick_OnPointerUp_m200,
+	Joystick_OnPointerDown_m201,
+	Joystick_OnDisable_m202,
+	MobileControlRig__ctor_m203,
+	MobileControlRig_OnEnable_m204,
+	MobileControlRig_Start_m205,
+	MobileControlRig_CheckEnableControlRig_m206,
+	MobileControlRig_EnableControlRig_m207,
+	MobileInput__ctor_m208,
+	MobileInput_AddButton_m209,
+	MobileInput_AddAxes_m210,
+	MobileInput_GetAxis_m211,
+	MobileInput_SetButtonDown_m212,
+	MobileInput_SetButtonUp_m213,
+	MobileInput_SetAxisPositive_m214,
+	MobileInput_SetAxisNegative_m215,
+	MobileInput_SetAxisZero_m216,
+	MobileInput_SetAxis_m217,
+	MobileInput_GetButtonDown_m218,
+	MobileInput_GetButtonUp_m219,
+	MobileInput_GetButton_m220,
+	MobileInput_MousePosition_m221,
+	StandaloneInput__ctor_m222,
+	StandaloneInput_GetAxis_m223,
+	StandaloneInput_GetButton_m224,
+	StandaloneInput_GetButtonDown_m225,
+	StandaloneInput_GetButtonUp_m226,
+	StandaloneInput_SetButtonDown_m227,
+	StandaloneInput_SetButtonUp_m228,
+	StandaloneInput_SetAxisPositive_m229,
+	StandaloneInput_SetAxisNegative_m230,
+	StandaloneInput_SetAxisZero_m231,
+	StandaloneInput_SetAxis_m232,
+	StandaloneInput_MousePosition_m233,
+	AxisMapping__ctor_m234,
+	TiltInput__ctor_m235,
+	TiltInput_OnEnable_m236,
+	TiltInput_Update_m237,
+	TiltInput_OnDisable_m238,
+	TouchPad__ctor_m239,
+	TouchPad_OnEnable_m240,
+	TouchPad_Start_m241,
+	TouchPad_CreateVirtualAxes_m242,
+	TouchPad_UpdateVirtualAxes_m243,
+	TouchPad_OnPointerDown_m244,
+	TouchPad_Update_m245,
+	TouchPad_OnPointerUp_m246,
+	TouchPad_OnDisable_m247,
+	VirtualInput__ctor_m248,
+	VirtualInput_get_virtualMousePosition_m249,
+	VirtualInput_set_virtualMousePosition_m250,
+	VirtualInput_AxisExists_m251,
+	VirtualInput_ButtonExists_m252,
+	VirtualInput_RegisterVirtualAxis_m253,
+	VirtualInput_RegisterVirtualButton_m254,
+	VirtualInput_UnRegisterVirtualAxis_m255,
+	VirtualInput_UnRegisterVirtualButton_m256,
+	VirtualInput_VirtualAxisReference_m257,
+	VirtualInput_SetVirtualMousePositionX_m258,
+	VirtualInput_SetVirtualMousePositionY_m259,
+	VirtualInput_SetVirtualMousePositionZ_m260,
+	ActivateTrigger__ctor_m261,
+	ActivateTrigger_DoActivateTrigger_m262,
+	ActivateTrigger_OnTriggerEnter_m263,
+	ReplacementDefinition__ctor_m264,
+	ReplacementList__ctor_m265,
+	AutoMobileShaderSwitch__ctor_m266,
+	AutoMobileShaderSwitch_OnEnable_m267,
+	Vector3andSpace__ctor_m268,
+	AutoMoveAndRotate__ctor_m269,
+	AutoMoveAndRotate_Start_m270,
+	AutoMoveAndRotate_Update_m271,
+	CameraRefocus__ctor_m272,
+	CameraRefocus_ChangeCamera_m273,
+	CameraRefocus_ChangeParent_m274,
+	CameraRefocus_GetFocusPoint_m275,
+	CameraRefocus_SetFocusPoint_m276,
+	CurveControlledBob__ctor_m277,
+	CurveControlledBob_Setup_m278,
+	CurveControlledBob_DoHeadBob_m279,
+	U3CDragObjectU3Ec__Iterator0__ctor_m280,
+	U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m281,
+	U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m282,
+	U3CDragObjectU3Ec__Iterator0_MoveNext_m283,
+	U3CDragObjectU3Ec__Iterator0_Dispose_m284,
+	U3CDragObjectU3Ec__Iterator0_Reset_m285,
+	DragRigidbody__ctor_m286,
+	DragRigidbody_Update_m287,
+	DragRigidbody_DragObject_m288,
+	DragRigidbody_FindCamera_m289,
+	DynamicShadowSettings__ctor_m290,
+	DynamicShadowSettings_Start_m291,
+	DynamicShadowSettings_Update_m292,
+	U3CFOVKickUpU3Ec__Iterator1__ctor_m293,
+	U3CFOVKickUpU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m294,
+	U3CFOVKickUpU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m295,
+	U3CFOVKickUpU3Ec__Iterator1_MoveNext_m296,
+	U3CFOVKickUpU3Ec__Iterator1_Dispose_m297,
+	U3CFOVKickUpU3Ec__Iterator1_Reset_m298,
+	U3CFOVKickDownU3Ec__Iterator2__ctor_m299,
+	U3CFOVKickDownU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m300,
+	U3CFOVKickDownU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m301,
+	U3CFOVKickDownU3Ec__Iterator2_MoveNext_m302,
+	U3CFOVKickDownU3Ec__Iterator2_Dispose_m303,
+	U3CFOVKickDownU3Ec__Iterator2_Reset_m304,
+	FOVKick__ctor_m305,
+	FOVKick_Setup_m306,
+	FOVKick_CheckStatus_m307,
+	FOVKick_ChangeCamera_m308,
+	FOVKick_FOVKickUp_m309,
+	FOVKick_FOVKickDown_m310,
+	FPSCounter__ctor_m311,
+	FPSCounter_Start_m312,
+	FPSCounter_Update_m313,
+	FollowTarget__ctor_m314,
+	FollowTarget_LateUpdate_m315,
+	ForcedReset__ctor_m316,
+	ForcedReset_Update_m317,
+	U3CDoBobCycleU3Ec__Iterator3__ctor_m318,
+	U3CDoBobCycleU3Ec__Iterator3_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m319,
+	U3CDoBobCycleU3Ec__Iterator3_System_Collections_IEnumerator_get_Current_m320,
+	U3CDoBobCycleU3Ec__Iterator3_MoveNext_m321,
+	U3CDoBobCycleU3Ec__Iterator3_Dispose_m322,
+	U3CDoBobCycleU3Ec__Iterator3_Reset_m323,
+	LerpControlledBob__ctor_m324,
+	LerpControlledBob_Offset_m325,
+	LerpControlledBob_DoBobCycle_m326,
+	U3CResetCoroutineU3Ec__Iterator4__ctor_m327,
+	U3CResetCoroutineU3Ec__Iterator4_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m328,
+	U3CResetCoroutineU3Ec__Iterator4_System_Collections_IEnumerator_get_Current_m329,
+	U3CResetCoroutineU3Ec__Iterator4_MoveNext_m330,
+	U3CResetCoroutineU3Ec__Iterator4_Dispose_m331,
+	U3CResetCoroutineU3Ec__Iterator4_Reset_m332,
+	ObjectResetter__ctor_m333,
+	ObjectResetter_Start_m334,
+	ObjectResetter_DelayedReset_m335,
+	ObjectResetter_ResetCoroutine_m336,
+	U3CStartU3Ec__Iterator5__ctor_m337,
+	U3CStartU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m338,
+	U3CStartU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m339,
+	U3CStartU3Ec__Iterator5_MoveNext_m340,
+	U3CStartU3Ec__Iterator5_Dispose_m341,
+	U3CStartU3Ec__Iterator5_Reset_m342,
+	ParticleSystemDestroyer__ctor_m343,
+	ParticleSystemDestroyer_Start_m344,
+	ParticleSystemDestroyer_Stop_m345,
+	PlatformSpecificContent__ctor_m346,
+	PlatformSpecificContent_OnEnable_m347,
+	PlatformSpecificContent_CheckEnableContent_m348,
+	PlatformSpecificContent_EnableContent_m349,
+	SimpleActivatorMenu__ctor_m350,
+	SimpleActivatorMenu_OnEnable_m351,
+	SimpleActivatorMenu_NextCamera_m352,
+	SimpleMouseRotator__ctor_m353,
+	SimpleMouseRotator_Start_m354,
+	SimpleMouseRotator_Update_m355,
+	SmoothFollow__ctor_m356,
+	SmoothFollow_Start_m357,
+	SmoothFollow_LateUpdate_m358,
+	Entry__ctor_m359,
+	Entries__ctor_m360,
+	U3CActivateU3Ec__Iterator6__ctor_m361,
+	U3CActivateU3Ec__Iterator6_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m362,
+	U3CActivateU3Ec__Iterator6_System_Collections_IEnumerator_get_Current_m363,
+	U3CActivateU3Ec__Iterator6_MoveNext_m364,
+	U3CActivateU3Ec__Iterator6_Dispose_m365,
+	U3CActivateU3Ec__Iterator6_Reset_m366,
+	U3CDeactivateU3Ec__Iterator7__ctor_m367,
+	U3CDeactivateU3Ec__Iterator7_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m368,
+	U3CDeactivateU3Ec__Iterator7_System_Collections_IEnumerator_get_Current_m369,
+	U3CDeactivateU3Ec__Iterator7_MoveNext_m370,
+	U3CDeactivateU3Ec__Iterator7_Dispose_m371,
+	U3CDeactivateU3Ec__Iterator7_Reset_m372,
+	U3CReloadLevelU3Ec__Iterator8__ctor_m373,
+	U3CReloadLevelU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m374,
+	U3CReloadLevelU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m375,
+	U3CReloadLevelU3Ec__Iterator8_MoveNext_m376,
+	U3CReloadLevelU3Ec__Iterator8_Dispose_m377,
+	U3CReloadLevelU3Ec__Iterator8_Reset_m378,
+	TimedObjectActivator__ctor_m379,
+	TimedObjectActivator_Awake_m380,
+	TimedObjectActivator_Activate_m381,
+	TimedObjectActivator_Deactivate_m382,
+	TimedObjectActivator_ReloadLevel_m383,
+	TimedObjectDestructor__ctor_m384,
+	TimedObjectDestructor_Awake_m385,
+	TimedObjectDestructor_DestroyNow_m386,
+	WaypointList__ctor_m387,
+	RoutePoint__ctor_m388,
+	WaypointCircuit__ctor_m389,
+	WaypointCircuit_get_Length_m390,
+	WaypointCircuit_set_Length_m391,
+	WaypointCircuit_get_Waypoints_m392,
+	WaypointCircuit_Awake_m393,
+	WaypointCircuit_GetRoutePoint_m394,
+	WaypointCircuit_GetRoutePosition_m395,
+	WaypointCircuit_CatmullRom_m396,
+	WaypointCircuit_CachePositionsAndDistances_m397,
+	WaypointCircuit_OnDrawGizmos_m398,
+	WaypointCircuit_OnDrawGizmosSelected_m399,
+	WaypointCircuit_DrawGizmos_m400,
+	WaypointProgressTracker__ctor_m401,
+	WaypointProgressTracker_get_targetPoint_m402,
+	WaypointProgressTracker_set_targetPoint_m403,
+	WaypointProgressTracker_get_speedPoint_m404,
+	WaypointProgressTracker_set_speedPoint_m405,
+	WaypointProgressTracker_get_progressPoint_m406,
+	WaypointProgressTracker_set_progressPoint_m407,
+	WaypointProgressTracker_Start_m408,
+	WaypointProgressTracker_Reset_m409,
+	WaypointProgressTracker_Update_m410,
+	WaypointProgressTracker_OnDrawGizmos_m411,
+	BodyBecomesActive__ctor_m705,
+	BodyBecomesActive_OnApplicationFocus_m706,
+	BodyBecomesActive_Activate_m707,
+	BodyBecomesActive_Deactivate_m708,
+	BodyBecomesActive_get_isBonusActive_m709,
+	ClockBehaviour__ctor_m710,
+	ClockBehaviour_get_didPop_m711,
+	ClockBehaviour_get_spriteRenderer_m712,
+	ClockBehaviour_IsVisible_m713,
+	ClockBehaviour_get_VisibleClockCount_m714,
+	ClockBehaviour_get_body_m715,
+	ClockBehaviour_get_collisionBody_m716,
+	ClockBehaviour_New_m717,
+	ClockBehaviour_CheckVisibleClocks_m718,
+	ClockBehaviour_Start_m719,
+	ClockBehaviour_OnDestroy_m720,
+	ClockBehaviour_Update_m721,
+	ClockBehaviour_get_willBeOnScreen_m722,
+	ClockBehaviour_OnBecameInvisible_m723,
+	ClockBehaviour_OnBecameVisible_m724,
+	ClockBehaviour_GetScreenSizeInWorld_m725,
+	ClockBehaviour_ResetWithVelocity_m726,
+	ClockBehaviour_ResetWithPosition_m727,
+	ClockBehaviour_Reset_m728,
+	ClockSpawner__ctor_m729,
+	ClockSpawner_get_spawnMode_m730,
+	ClockSpawner_get_ShouldKillClocks_m731,
+	ClockSpawner_Update_m732,
+	ClockSpawner_get_SpawnPoint_m733,
+	ClockSpawner_Spawn_m734,
+	ClockSpawner_OnEventDidEnd_m735,
+	Wychd__ctor_m736,
+	U3CGetActivitiesU3Ec__AnonStorey2__ctor_m737,
+	U3CGetActivitiesU3Ec__AnonStorey2_U3CU3Em__0_m738,
+	DataReader_get_Database_m739,
+	DataReader_TimeHMSToFloat_m740,
+	DataReader_IsWithinTime_m741,
+	DataReader_GetActivities_m742,
+	DataReader_GetActivityList_m743,
+	DebugHUD__ctor_m744,
+	DebugHUD_GetTime_m745,
+	DebugHUD_Start_m746,
+	DebugHUD_get_DebugData_m747,
+	U3CDragObjectU3Ec__Iterator0__ctor_m748,
+	U3CDragObjectU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m749,
+	U3CDragObjectU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m750,
+	U3CDragObjectU3Ec__Iterator0_MoveNext_m751,
+	U3CDragObjectU3Ec__Iterator0_Dispose_m752,
+	U3CDragObjectU3Ec__Iterator0_Reset_m753,
+	U3CMoveFingerU3Ec__Iterator1__ctor_m754,
+	U3CMoveFingerU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m755,
+	U3CMoveFingerU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m756,
+	U3CMoveFingerU3Ec__Iterator1_MoveNext_m757,
+	U3CMoveFingerU3Ec__Iterator1_Dispose_m758,
+	U3CMoveFingerU3Ec__Iterator1_Reset_m759,
+	DragRigidbody__ctor_m760,
+	DragRigidbody_get_fingerWidth_m761,
+	DragRigidbody_Update_m762,
+	DragRigidbody_AttachBody_m763,
+	DragRigidbody_ToString_m764,
+	DragRigidbody_DragObject_m765,
+	DragRigidbody_MoveFinger_m766,
+	DragRigidbody_OnEventDidEnd_m767,
+	U3CAuthenticateU3Ec__AnonStorey3__ctor_m768,
+	U3CAuthenticateU3Ec__AnonStorey3_U3CU3Em__1_m769,
+	U3CReportScoreU3Ec__AnonStorey4__ctor_m770,
+	U3CReportScoreU3Ec__AnonStorey4_U3CU3Em__2_m771,
+	U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5__ctor_m772,
+	U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_U3CU3Em__3_m773,
+	GameCenter__ctor_m774,
+	GameCenter__cctor_m775,
+	GameCenter_Start_m776,
+	GameCenter_UpdateGameCenterAchievements_m777,
+	GameCenter_OnEventDidStart_m778,
+	GameCenter_OnEventDidEnd_m779,
+	GameCenter_OnEvent_m780,
+	GameCenter_Authenticate_m781,
+	GameCenter_ReportScore_m782,
+	GameCenter_Update_m783,
+	GameCenter_HasPlayerAlreadyAchieved_m784,
+	GameCenter_HasMetTimeCriteria_m785,
+	GameCenter_get_UserAuthenticated_m786,
+	GameCenter_ReportProgress_m787,
+	GameCenter_CheckAchievementsWithGameCenter_m788,
+	GameCenter_InitializeKeys_m789,
+	GameCenter_OnApplicationQuit_m790,
+	GameController__ctor_m791,
+	GameController_get_TotalDevTimeWasted_m792,
+	GameController_get_Chance_m793,
+	GameController_ChanceGiven_m794,
+	GameController_get_velocity_m795,
+	GameController_get_isFirstPlay_m796,
+	GameController_StartSingletons_m797,
+	GameController_StartDesktop_m798,
+	GameController_StartMobile_m799,
+	GameController_PreStart_m800,
+	GameController_PostStart_m801,
 	GameController_OnApplicationFocus_m802,
 	GameController_OnApplicationPause_m803,
 	GameController_CheckForAnomalies_m804,
@@ -11410,9 +11410,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	PointerEventData_set_pointerPressRaycast_m1195,
 	PointerEventData_get_eligibleForClick_m1196,
 	PointerEventData_set_eligibleForClick_m1197,
-	PointerEventData_get_pointerId_m579,
+	PointerEventData_get_pointerId_m578,
 	PointerEventData_set_pointerId_m1198,
-	PointerEventData_get_position_m559,
+	PointerEventData_get_position_m558,
 	PointerEventData_set_position_m1199,
 	PointerEventData_get_delta_m1200,
 	PointerEventData_set_delta_m1201,
@@ -12474,12 +12474,12 @@ extern const methodPointerType g_MethodPointers[10691] =
 	LayerMask_LayerToName_m2686,
 	LayerMask_NameToLayer_m2687,
 	LayerMask_GetMask_m2688,
-	LayerMask_op_Implicit_m537,
+	LayerMask_op_Implicit_m536,
 	LayerMask_op_Implicit_m2327,
 	SystemInfo_get_deviceUniqueIdentifier_m2689,
-	WaitForSeconds__ctor_m665,
-	WaitForFixedUpdate__ctor_m662,
-	WaitForEndOfFrame__ctor_m658,
+	WaitForSeconds__ctor_m664,
+	WaitForFixedUpdate__ctor_m661,
+	WaitForEndOfFrame__ctor_m657,
 	Coroutine__ctor_m2690,
 	Coroutine_ReleaseCoroutine_m2691,
 	Coroutine_Finalize_m2692,
@@ -12560,7 +12560,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	GcLeaderboard_Internal_LoadScoresWithUsers_m2766,
 	GcLeaderboard_Loading_m2767,
 	GcLeaderboard_Dispose_m2768,
-	QualitySettings_set_shadowDistance_m653,
+	QualitySettings_set_shadowDistance_m652,
 	BoneWeight_get_weight0_m2769,
 	BoneWeight_set_weight0_m2770,
 	BoneWeight_get_weight1_m2771,
@@ -12581,9 +12581,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	BoneWeight_Equals_m2786,
 	BoneWeight_op_Equality_m2787,
 	BoneWeight_op_Inequality_m2788,
-	Renderer_get_materials_m603,
-	Renderer_set_materials_m605,
-	Renderer_get_sharedMaterials_m601,
+	Renderer_get_materials_m602,
+	Renderer_set_materials_m604,
+	Renderer_get_sharedMaterials_m600,
 	Renderer_get_sortingLayerID_m2324,
 	Renderer_get_sortingOrder_m2325,
 	GeometryUtility_CalculateFrustumPlanes_m888,
@@ -12592,8 +12592,8 @@ extern const methodPointerType g_MethodPointers[10691] =
 	GeometryUtility_INTERNAL_CALL_Internal_ExtractPlanes_m2791,
 	GeometryUtility_TestPlanesAABB_m890,
 	GeometryUtility_INTERNAL_CALL_TestPlanesAABB_m2792,
-	Screen_get_width_m435,
-	Screen_get_height_m436,
+	Screen_get_width_m434,
+	Screen_get_height_m435,
 	Screen_get_dpi_m2628,
 	Texture__ctor_m2793,
 	Texture_Internal_GetWidth_m2794,
@@ -12626,7 +12626,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	GUI_set_skin_m2819,
 	GUI_get_skin_m2820,
 	GUI_set_changed_m2821,
-	GUI_Label_m440,
+	GUI_Label_m439,
 	GUI_Label_m2822,
 	GUI_DoLabel_m2823,
 	GUI_INTERNAL_CALL_DoLabel_m2824,
@@ -12766,19 +12766,19 @@ extern const methodPointerType g_MethodPointers[10691] =
 	RectOffset_Init_m2955,
 	RectOffset_Cleanup_m2956,
 	RectOffset_get_left_m2644,
-	RectOffset_set_left_m434,
+	RectOffset_set_left_m433,
 	RectOffset_get_right_m2957,
-	RectOffset_set_right_m433,
+	RectOffset_set_right_m432,
 	RectOffset_get_top_m2645,
-	RectOffset_set_top_m432,
+	RectOffset_set_top_m431,
 	RectOffset_get_bottom_m2958,
-	RectOffset_set_bottom_m431,
+	RectOffset_set_bottom_m430,
 	RectOffset_get_horizontal_m2638,
 	RectOffset_get_vertical_m2640,
 	RectOffset_Remove_m2959,
 	RectOffset_INTERNAL_CALL_Remove_m2960,
 	RectOffset_ToString_m2961,
-	GUIStyle__ctor_m426,
+	GUIStyle__ctor_m425,
 	GUIStyle__cctor_m2962,
 	GUIStyle_Finalize_m2963,
 	GUIStyle_Init_m2964,
@@ -12788,10 +12788,10 @@ extern const methodPointerType g_MethodPointers[10691] =
 	GUIStyle_get_normal_m2968,
 	GUIStyle_GetStyleStatePtr_m2969,
 	GUIStyle_get_margin_m2970,
-	GUIStyle_get_padding_m430,
+	GUIStyle_get_padding_m429,
 	GUIStyle_GetRectOffsetPtr_m2971,
-	GUIStyle_set_alignment_m429,
-	GUIStyle_set_wordWrap_m428,
+	GUIStyle_set_alignment_m428,
+	GUIStyle_set_wordWrap_m427,
 	GUIStyle_get_fixedWidth_m2972,
 	GUIStyle_get_fixedHeight_m2973,
 	GUIStyle_get_stretchWidth_m2974,
@@ -12800,7 +12800,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	GUIStyle_set_stretchHeight_m2977,
 	GUIStyle_Internal_GetLineHeight_m2978,
 	GUIStyle_set_fontSize_m1046,
-	GUIStyle_set_richText_m427,
+	GUIStyle_set_richText_m426,
 	GUIStyle_get_lineHeight_m2979,
 	GUIStyle_SetDefaultFont_m2980,
 	GUIStyle_get_none_m2981,
@@ -12848,18 +12848,18 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Event_GetHashCode_m3007,
 	Event_Equals_m3008,
 	Event_ToString_m3009,
-	Gizmos_DrawLine_m700,
+	Gizmos_DrawLine_m699,
 	Gizmos_INTERNAL_CALL_DrawLine_m3010,
-	Gizmos_DrawWireSphere_m705,
+	Gizmos_DrawWireSphere_m704,
 	Gizmos_INTERNAL_CALL_DrawWireSphere_m3011,
-	Gizmos_set_color_m699,
+	Gizmos_set_color_m698,
 	Gizmos_INTERNAL_set_color_m3012,
-	Vector2__ctor_m546,
+	Vector2__ctor_m545,
 	Vector2_get_Item_m2443,
 	Vector2_set_Item_m2452,
 	Vector2_Scale_m2528,
 	Vector2_Normalize_m3013,
-	Vector2_get_normalized_m584,
+	Vector2_get_normalized_m583,
 	Vector2_ToString_m3014,
 	Vector2_GetHashCode_m3015,
 	Vector2_Equals_m3016,
@@ -12876,57 +12876,57 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Vector2_op_Division_m2494,
 	Vector2_op_Equality_m2674,
 	Vector2_op_Inequality_m2520,
-	Vector2_op_Implicit_m536,
-	Vector2_op_Implicit_m580,
-	Vector3__ctor_m529,
-	Vector3__ctor_m680,
-	Vector3_Lerp_m695,
-	Vector3_MoveTowards_m520,
-	Vector3_SmoothDamp_m523,
+	Vector2_op_Implicit_m535,
+	Vector2_op_Implicit_m579,
+	Vector3__ctor_m528,
+	Vector3__ctor_m679,
+	Vector3_Lerp_m694,
+	Vector3_MoveTowards_m519,
+	Vector3_SmoothDamp_m522,
 	Vector3_SmoothDamp_m3018,
 	Vector3_get_Item_m2565,
 	Vector3_set_Item_m2566,
 	Vector3_GetHashCode_m3019,
 	Vector3_Equals_m3020,
 	Vector3_Normalize_m3021,
-	Vector3_get_normalized_m578,
+	Vector3_get_normalized_m577,
 	Vector3_ToString_m3022,
 	Vector3_ToString_m3023,
-	Vector3_Dot_m702,
+	Vector3_Dot_m701,
 	Vector3_Distance_m2322,
 	Vector3_ClampMagnitude_m3024,
 	Vector3_Magnitude_m3025,
-	Vector3_get_magnitude_m696,
+	Vector3_get_magnitude_m695,
 	Vector3_SqrMagnitude_m3026,
 	Vector3_get_sqrMagnitude_m2590,
 	Vector3_Min_m2573,
 	Vector3_Max_m2574,
-	Vector3_get_zero_m518,
-	Vector3_get_forward_m522,
+	Vector3_get_zero_m517,
+	Vector3_get_forward_m521,
 	Vector3_get_back_m3027,
-	Vector3_get_up_m648,
+	Vector3_get_up_m647,
 	Vector3_get_down_m2592,
 	Vector3_get_left_m2591,
-	Vector3_get_right_m514,
-	Vector3_op_Addition_m521,
-	Vector3_op_Subtraction_m512,
-	Vector3_op_UnaryNegation_m649,
-	Vector3_op_Multiply_m517,
-	Vector3_op_Multiply_m515,
-	Vector3_op_Division_m558,
+	Vector3_get_right_m513,
+	Vector3_op_Addition_m520,
+	Vector3_op_Subtraction_m511,
+	Vector3_op_UnaryNegation_m648,
+	Vector3_op_Multiply_m516,
+	Vector3_op_Multiply_m514,
+	Vector3_op_Division_m557,
 	Vector3_op_Equality_m909,
-	Vector3_op_Inequality_m575,
-	Color__ctor_m698,
+	Vector3_op_Inequality_m574,
+	Color__ctor_m697,
 	Color__ctor_m886,
 	Color_ToString_m3028,
 	Color_GetHashCode_m3029,
 	Color_Equals_m2385,
 	Color_Lerp_m2334,
 	Color_get_red_m3030,
-	Color_get_green_m704,
+	Color_get_green_m703,
 	Color_get_white_m997,
 	Color_get_black_m2389,
-	Color_get_yellow_m697,
+	Color_get_yellow_m696,
 	Color_op_Multiply_m2587,
 	Color_op_Implicit_m3031,
 	Color32__ctor_m2348,
@@ -12935,23 +12935,23 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Color32_op_Implicit_m2349,
 	Quaternion__ctor_m3033,
 	Quaternion_Dot_m3034,
-	Quaternion_LookRotation_m701,
+	Quaternion_LookRotation_m700,
 	Quaternion_INTERNAL_CALL_LookRotation_m3035,
 	Quaternion_Inverse_m2588,
 	Quaternion_INTERNAL_CALL_Inverse_m3036,
 	Quaternion_ToString_m3037,
 	Quaternion_get_eulerAngles_m3038,
-	Quaternion_Euler_m683,
+	Quaternion_Euler_m682,
 	Quaternion_Internal_ToEulerRad_m3039,
 	Quaternion_INTERNAL_CALL_Internal_ToEulerRad_m3040,
 	Quaternion_Internal_FromEulerRad_m3041,
 	Quaternion_INTERNAL_CALL_Internal_FromEulerRad_m3042,
 	Quaternion_GetHashCode_m3043,
 	Quaternion_Equals_m3044,
-	Quaternion_op_Multiply_m684,
-	Quaternion_op_Multiply_m687,
+	Quaternion_op_Multiply_m683,
+	Quaternion_op_Multiply_m686,
 	Quaternion_op_Inequality_m2519,
-	Rect__ctor_m437,
+	Rect__ctor_m436,
 	Rect_get_x_m2376,
 	Rect_set_x_m2431,
 	Rect_get_y_m2377,
@@ -13057,10 +13057,10 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Vector4_op_Subtraction_m3114,
 	Vector4_op_Division_m2437,
 	Vector4_op_Equality_m3115,
-	Ray__ctor_m650,
-	Ray_get_origin_m634,
-	Ray_get_direction_m635,
-	Ray_GetPoint_m626,
+	Ray__ctor_m649,
+	Ray_get_origin_m633,
+	Ray_get_direction_m634,
+	Ray_GetPoint_m625,
 	Ray_ToString_m3116,
 	Plane__ctor_m2488,
 	Plane_get_normal_m3117,
@@ -13075,7 +13075,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Mathf_Abs_m3125,
 	Mathf_Min_m2627,
 	Mathf_Min_m2504,
-	Mathf_Max_m675,
+	Mathf_Max_m674,
 	Mathf_Max_m2502,
 	Mathf_Pow_m3126,
 	Mathf_Log_m2626,
@@ -13084,18 +13084,18 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Mathf_CeilToInt_m2637,
 	Mathf_FloorToInt_m2639,
 	Mathf_RoundToInt_m2426,
-	Mathf_Sign_m516,
-	Mathf_Clamp_m528,
-	Mathf_Clamp_m560,
+	Mathf_Sign_m515,
+	Mathf_Clamp_m527,
+	Mathf_Clamp_m559,
 	Mathf_Clamp01_m2417,
-	Mathf_Lerp_m527,
-	Mathf_LerpAngle_m686,
-	Mathf_MoveTowards_m555,
+	Mathf_Lerp_m526,
+	Mathf_LerpAngle_m685,
+	Mathf_MoveTowards_m554,
 	Mathf_Approximately_m2311,
-	Mathf_SmoothDamp_m652,
+	Mathf_SmoothDamp_m651,
 	Mathf_SmoothDamp_m2562,
-	Mathf_Repeat_m694,
-	Mathf_InverseLerp_m576,
+	Mathf_Repeat_m693,
+	Mathf_InverseLerp_m575,
 	DrivenRectTransformTracker_Add_m2552,
 	DrivenRectTransformTracker_Clear_m2550,
 	ReapplyDrivenProperties__ctor_m2655,
@@ -13135,14 +13135,14 @@ extern const methodPointerType g_MethodPointers[10691] =
 	ResourceRequest__ctor_m3147,
 	ResourceRequest_get_asset_m3148,
 	Resources_Load_m3149,
-	TextAsset_get_text_m468,
+	TextAsset_get_text_m467,
 	TextAsset_ToString_m3150,
 	SerializePrivateVariables__ctor_m3151,
 	SerializeField__ctor_m3152,
 	Shader_PropertyToID_m3153,
 	Material__ctor_m2600,
-	Material_get_shader_m602,
-	Material_set_shader_m604,
+	Material_get_shader_m601,
+	Material_set_shader_m603,
 	Material_get_mainTexture_m2606,
 	Material_GetTexture_m3154,
 	Material_GetTexture_m3155,
@@ -13228,27 +13228,27 @@ extern const methodPointerType g_MethodPointers[10691] =
 	LogCallback_Invoke_m3220,
 	LogCallback_BeginInvoke_m3221,
 	LogCallback_EndInvoke_m3222,
-	Application_get_loadedLevel_m689,
-	Application_get_loadedLevelName_m552,
-	Application_LoadLevel_m690,
-	Application_LoadLevel_m553,
-	Application_LoadLevelAsync_m661,
+	Application_get_loadedLevel_m688,
+	Application_get_loadedLevelName_m551,
+	Application_LoadLevel_m689,
+	Application_LoadLevel_m552,
+	Application_LoadLevelAsync_m660,
 	Application_LoadLevelAsync_m3223,
-	Application_get_isPlaying_m703,
+	Application_get_isPlaying_m702,
 	Application_get_isEditor_m2544,
-	Application_get_platform_m415,
+	Application_get_platform_m414,
 	Application_get_cloudProjectId_m3224,
 	Application_CallLogCallback_m3225,
 	Behaviour__ctor_m3226,
 	Behaviour_get_enabled_m1045,
-	Behaviour_set_enabled_m593,
+	Behaviour_set_enabled_m592,
 	Behaviour_get_isActiveAndEnabled_m2267,
 	CameraCallback__ctor_m3227,
 	CameraCallback_Invoke_m3228,
 	CameraCallback_BeginInvoke_m3229,
 	CameraCallback_EndInvoke_m3230,
-	Camera_get_fieldOfView_m656,
-	Camera_set_fieldOfView_m657,
+	Camera_get_fieldOfView_m655,
+	Camera_set_fieldOfView_m656,
 	Camera_get_nearClipPlane_m2319,
 	Camera_get_farClipPlane_m2318,
 	Camera_get_depth_m2233,
@@ -13266,9 +13266,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Camera_INTERNAL_CALL_ScreenToWorldPoint_m3240,
 	Camera_ScreenToViewportPoint_m2399,
 	Camera_INTERNAL_CALL_ScreenToViewportPoint_m3241,
-	Camera_ScreenPointToRay_m625,
+	Camera_ScreenPointToRay_m624,
 	Camera_INTERNAL_CALL_ScreenPointToRay_m3242,
-	Camera_get_main_m646,
+	Camera_get_main_m645,
 	Camera_get_current_m923,
 	Camera_get_allCamerasCount_m3243,
 	Camera_GetAllCameras_m3244,
@@ -13281,12 +13281,12 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Camera_INTERNAL_CALL_RaycastTry2D_m3251,
 	Debug_Internal_Log_m3252,
 	Debug_Internal_LogException_m3253,
-	Debug_Log_m416,
-	Debug_LogError_m503,
+	Debug_Log_m415,
+	Debug_LogError_m502,
 	Debug_LogError_m2451,
 	Debug_LogException_m3254,
 	Debug_LogException_m2347,
-	Debug_LogWarning_m447,
+	Debug_LogWarning_m446,
 	Debug_LogWarning_m2599,
 	DisplaysUpdatedDelegate__ctor_m3255,
 	DisplaysUpdatedDelegate_Invoke_m3256,
@@ -13320,42 +13320,42 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Display_SetParamsImpl_m3284,
 	Display_MultiDisplayLicenseImpl_m3285,
 	Display_RelativeMouseAtImpl_m3286,
-	MonoBehaviour__ctor_m492,
-	MonoBehaviour_Invoke_m692,
-	MonoBehaviour_StartCoroutine_m672,
+	MonoBehaviour__ctor_m491,
+	MonoBehaviour_Invoke_m691,
+	MonoBehaviour_StartCoroutine_m671,
 	MonoBehaviour_StartCoroutine_Auto_m3287,
-	MonoBehaviour_StartCoroutine_m645,
+	MonoBehaviour_StartCoroutine_m644,
 	MonoBehaviour_StopCoroutine_m3288,
 	MonoBehaviour_StopCoroutine_m2547,
 	MonoBehaviour_StopCoroutineViaEnumerator_Auto_m3289,
 	MonoBehaviour_StopCoroutine_Auto_m3290,
 	MonoBehaviour_print_m876,
 	Touch_get_fingerId_m2282,
-	Touch_get_position_m583,
+	Touch_get_position_m582,
 	Touch_get_phase_m2283,
 	Input__cctor_m3291,
 	Input_GetKeyInt_m3292,
 	Input_GetKeyDownInt_m3293,
-	Input_GetAxis_m569,
-	Input_GetAxisRaw_m568,
-	Input_GetButton_m570,
-	Input_GetButtonDown_m571,
-	Input_GetButtonUp_m572,
-	Input_GetKey_m532,
+	Input_GetAxis_m568,
+	Input_GetAxisRaw_m567,
+	Input_GetButton_m569,
+	Input_GetButtonDown_m570,
+	Input_GetButtonUp_m571,
+	Input_GetKey_m531,
 	Input_GetKeyDown_m985,
-	Input_GetMouseButton_m627,
-	Input_GetMouseButtonDown_m633,
+	Input_GetMouseButton_m626,
+	Input_GetMouseButtonDown_m632,
 	Input_GetMouseButtonUp_m2284,
-	Input_get_mousePosition_m573,
+	Input_get_mousePosition_m572,
 	Input_INTERNAL_get_mousePosition_m3294,
 	Input_get_mouseScrollDelta_m2285,
 	Input_INTERNAL_get_mouseScrollDelta_m3295,
 	Input_get_mousePresent_m2310,
-	Input_get_acceleration_m574,
+	Input_get_acceleration_m573,
 	Input_INTERNAL_get_acceleration_m3296,
-	Input_get_touches_m582,
+	Input_get_touches_m581,
 	Input_GetTouch_m961,
-	Input_get_touchCount_m581,
+	Input_get_touchCount_m580,
 	Input_get_touchSupported_m2315,
 	Input_set_imeCompositionMode_m2542,
 	Input_get_compositionString_m2475,
@@ -13365,17 +13365,17 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Object_Internal_CloneSingle_m3299,
 	Object_Internal_InstantiateSingle_m3300,
 	Object_INTERNAL_CALL_Internal_InstantiateSingle_m3301,
-	Object_Destroy_m691,
-	Object_Destroy_m423,
+	Object_Destroy_m690,
+	Object_Destroy_m422,
 	Object_DestroyImmediate_m3302,
 	Object_DestroyImmediate_m2543,
-	Object_FindObjectsOfType_m554,
-	Object_get_name_m499,
+	Object_FindObjectsOfType_m553,
+	Object_get_name_m498,
 	Object_set_name_m2601,
 	Object_DontDestroyOnLoad_m908,
 	Object_set_hideFlags_m2513,
 	Object_DestroyObject_m3303,
-	Object_DestroyObject_m592,
+	Object_DestroyObject_m591,
 	Object_ToString_m3304,
 	Object_Equals_m3305,
 	Object_GetHashCode_m3306,
@@ -13383,88 +13383,88 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Object_IsNativeObjectAlive_m3308,
 	Object_GetInstanceID_m3309,
 	Object_GetCachedPtr_m3310,
-	Object_Instantiate_m591,
+	Object_Instantiate_m590,
 	Object_CheckNullArgument_m3311,
 	Object_FindObjectOfType_m3312,
-	Object_op_Implicit_m545,
-	Object_op_Equality_m467,
-	Object_op_Inequality_m539,
+	Object_op_Implicit_m544,
+	Object_op_Equality_m466,
+	Object_op_Inequality_m538,
 	Component__ctor_m3313,
-	Component_get_transform_m511,
-	Component_get_gameObject_m422,
+	Component_get_transform_m510,
+	Component_get_gameObject_m421,
 	Component_GetComponent_m2652,
 	Component_GetComponentFastPath_m3314,
 	Component_GetComponentInChildren_m3315,
 	Component_GetComponentsForListInternal_m3316,
 	Component_GetComponents_m2366,
-	Component_get_tag_m551,
+	Component_get_tag_m550,
 	Component_SendMessage_m3317,
-	Component_SendMessage_m669,
-	Component_SendMessage_m498,
+	Component_SendMessage_m668,
+	Component_SendMessage_m497,
 	Component_BroadcastMessage_m3318,
-	Component_BroadcastMessage_m679,
-	Light_get_shadowStrength_m647,
-	Light_set_shadowStrength_m655,
-	Light_set_shadowBias_m654,
-	GameObject__ctor_m567,
+	Component_BroadcastMessage_m678,
+	Light_get_shadowStrength_m646,
+	Light_set_shadowStrength_m654,
+	Light_set_shadowBias_m653,
+	GameObject__ctor_m566,
 	GameObject__ctor_m895,
 	GameObject_GetComponent_m3319,
 	GameObject_GetComponentFastPath_m3320,
 	GameObject_GetComponentInChildren_m3321,
 	GameObject_GetComponentsInternal_m3322,
-	GameObject_get_transform_m526,
+	GameObject_get_transform_m525,
 	GameObject_get_layer_m2516,
 	GameObject_set_layer_m2517,
-	GameObject_SetActive_m442,
+	GameObject_SetActive_m441,
 	GameObject_get_activeSelf_m940,
 	GameObject_get_activeInHierarchy_m2268,
 	GameObject_get_tag_m3323,
-	GameObject_FindGameObjectWithTag_m525,
+	GameObject_FindGameObjectWithTag_m524,
 	GameObject_SendMessage_m3324,
 	GameObject_BroadcastMessage_m3325,
-	GameObject_BroadcastMessage_m589,
+	GameObject_BroadcastMessage_m588,
 	GameObject_Internal_AddComponentWithType_m3326,
 	GameObject_AddComponent_m3327,
 	GameObject_Internal_CreateGameObject_m3328,
 	Enumerator__ctor_m3329,
 	Enumerator_get_Current_m3330,
 	Enumerator_MoveNext_m3331,
-	Transform_get_position_m510,
-	Transform_set_position_m524,
+	Transform_get_position_m509,
+	Transform_set_position_m523,
 	Transform_INTERNAL_get_position_m3332,
 	Transform_INTERNAL_set_position_m3333,
-	Transform_get_localPosition_m615,
+	Transform_get_localPosition_m614,
 	Transform_set_localPosition_m2524,
 	Transform_INTERNAL_get_localPosition_m3334,
 	Transform_INTERNAL_set_localPosition_m3335,
-	Transform_get_eulerAngles_m685,
-	Transform_get_forward_m609,
-	Transform_get_rotation_m590,
-	Transform_set_rotation_m666,
+	Transform_get_eulerAngles_m684,
+	Transform_get_forward_m608,
+	Transform_get_rotation_m589,
+	Transform_set_rotation_m665,
 	Transform_INTERNAL_get_rotation_m3336,
 	Transform_INTERNAL_set_rotation_m3337,
-	Transform_get_localRotation_m681,
-	Transform_set_localRotation_m682,
+	Transform_get_localRotation_m680,
+	Transform_set_localRotation_m681,
 	Transform_INTERNAL_get_localRotation_m3338,
 	Transform_INTERNAL_set_localRotation_m3339,
-	Transform_get_localScale_m549,
-	Transform_set_localScale_m550,
+	Transform_get_localScale_m548,
+	Transform_set_localScale_m549,
 	Transform_INTERNAL_get_localScale_m3340,
 	Transform_INTERNAL_set_localScale_m3341,
 	Transform_get_parent_m2265,
-	Transform_set_parent_m513,
+	Transform_set_parent_m512,
 	Transform_get_parentInternal_m3342,
 	Transform_set_parentInternal_m3343,
 	Transform_SetParent_m2514,
 	Transform_SetParent_m3344,
 	Transform_get_worldToLocalMatrix_m2570,
 	Transform_INTERNAL_get_worldToLocalMatrix_m3345,
-	Transform_Translate_m607,
-	Transform_Rotate_m608,
-	Transform_LookAt_m688,
+	Transform_Translate_m606,
+	Transform_Rotate_m607,
+	Transform_LookAt_m687,
 	Transform_LookAt_m3346,
 	Transform_LookAt_m3347,
-	Transform_LookAt_m612,
+	Transform_LookAt_m611,
 	Transform_INTERNAL_CALL_LookAt_m3348,
 	Transform_TransformDirection_m3349,
 	Transform_INTERNAL_CALL_TransformDirection_m3350,
@@ -13473,22 +13473,22 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Transform_InverseTransformPoint_m2487,
 	Transform_INTERNAL_CALL_InverseTransformPoint_m3352,
 	Transform_get_childCount_m2653,
-	Transform_DetachChildren_m693,
+	Transform_DetachChildren_m692,
 	Transform_SetAsFirstSibling_m2515,
-	Transform_Find_m535,
+	Transform_Find_m534,
 	Transform_GetEnumerator_m3353,
 	Transform_GetChild_m2651,
-	Time_get_time_m676,
-	Time_get_deltaTime_m519,
-	Time_get_fixedTime_m424,
+	Time_get_time_m675,
+	Time_get_deltaTime_m518,
+	Time_get_fixedTime_m423,
 	Time_get_unscaledTime_m2312,
 	Time_get_unscaledDeltaTime_m2338,
-	Time_get_timeScale_m438,
+	Time_get_timeScale_m437,
 	Time_set_timeScale_m983,
-	Time_get_frameCount_m556,
-	Time_get_realtimeSinceStartup_m606,
-	Random_Range_m677,
-	Random_Range_m497,
+	Time_get_frameCount_m555,
+	Time_get_realtimeSinceStartup_m605,
+	Random_Range_m676,
+	Random_Range_m496,
 	Random_RandomRangeInt_m3354,
 	YieldInstruction__ctor_m3355,
 	PlayerPrefsException__ctor_m3356,
@@ -13497,14 +13497,14 @@ extern const methodPointerType g_MethodPointers[10691] =
 	PlayerPrefs_GetInt_m1059,
 	PlayerPrefs_GetFloat_m3359,
 	PlayerPrefs_GetFloat_m1058,
-	PlayerPrefs_SetString_m504,
+	PlayerPrefs_SetString_m503,
 	PlayerPrefs_GetString_m3360,
-	PlayerPrefs_GetString_m501,
-	PlayerPrefs_HasKey_m500,
+	PlayerPrefs_GetString_m500,
+	PlayerPrefs_HasKey_m499,
 	PlayerPrefs_DeleteKey_m1062,
 	PlayerPrefs_Save_m987,
-	ParticleSystem_set_enableEmission_m678,
-	ParticleSystem_get_startLifetime_m674,
+	ParticleSystem_set_enableEmission_m677,
+	ParticleSystem_get_startLifetime_m673,
 	Particle_get_position_m3361,
 	Particle_set_position_m3362,
 	Particle_get_velocity_m3363,
@@ -13523,36 +13523,36 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Particle_set_color_m3376,
 	Physics_Internal_Raycast_m3377,
 	Physics_INTERNAL_CALL_Internal_Raycast_m3378,
-	Physics_Raycast_m610,
-	Physics_Raycast_m636,
-	Physics_Raycast_m651,
+	Physics_Raycast_m609,
+	Physics_Raycast_m635,
+	Physics_Raycast_m650,
 	Physics_Raycast_m2400,
 	Physics_RaycastAll_m2329,
 	Physics_RaycastAll_m3379,
 	Physics_INTERNAL_CALL_RaycastAll_m3380,
-	Rigidbody_set_velocity_m667,
+	Rigidbody_set_velocity_m666,
 	Rigidbody_INTERNAL_set_velocity_m3381,
-	Rigidbody_set_angularVelocity_m668,
+	Rigidbody_set_angularVelocity_m667,
 	Rigidbody_INTERNAL_set_angularVelocity_m3382,
-	Rigidbody_get_drag_m621,
-	Rigidbody_set_drag_m623,
-	Rigidbody_get_angularDrag_m622,
-	Rigidbody_set_angularDrag_m624,
-	Rigidbody_get_isKinematic_m638,
-	Rigidbody_set_isKinematic_m639,
-	Joint_get_connectedBody_m620,
-	Joint_set_connectedBody_m628,
-	Joint_set_anchor_m640,
+	Rigidbody_get_drag_m620,
+	Rigidbody_set_drag_m622,
+	Rigidbody_get_angularDrag_m621,
+	Rigidbody_set_angularDrag_m623,
+	Rigidbody_get_isKinematic_m637,
+	Rigidbody_set_isKinematic_m638,
+	Joint_get_connectedBody_m619,
+	Joint_set_connectedBody_m627,
+	Joint_set_anchor_m639,
 	Joint_INTERNAL_set_anchor_m3383,
-	SpringJoint_set_spring_m641,
-	SpringJoint_set_damper_m642,
-	SpringJoint_set_maxDistance_m643,
+	SpringJoint_set_spring_m640,
+	SpringJoint_set_damper_m641,
+	SpringJoint_set_maxDistance_m642,
 	Collider_get_attachedRigidbody_m3384,
-	RaycastHit_get_point_m611,
+	RaycastHit_get_point_m610,
 	RaycastHit_get_normal_m2332,
-	RaycastHit_get_distance_m644,
+	RaycastHit_get_distance_m643,
 	RaycastHit_get_collider_m2331,
-	RaycastHit_get_rigidbody_m637,
+	RaycastHit_get_rigidbody_m636,
 	Physics2D__cctor_m3385,
 	Physics2D_get_gravity_m917,
 	Physics2D_set_gravity_m1009,
@@ -13565,9 +13565,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Physics2D_Raycast_m3390,
 	Physics2D_RaycastAll_m2320,
 	Physics2D_INTERNAL_CALL_RaycastAll_m3391,
-	Physics2D_OverlapCircle_m544,
+	Physics2D_OverlapCircle_m543,
 	Physics2D_INTERNAL_CALL_OverlapCircle_m3392,
-	Physics2D_OverlapCircleAll_m538,
+	Physics2D_OverlapCircleAll_m537,
 	Physics2D_INTERNAL_CALL_OverlapCircleAll_m3393,
 	RaycastHit2D_get_point_m950,
 	RaycastHit2D_get_normal_m2323,
@@ -13580,8 +13580,8 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Rigidbody2D_get_position_m957,
 	Rigidbody2D_INTERNAL_get_position_m3394,
 	Rigidbody2D_get_rotation_m956,
-	Rigidbody2D_get_velocity_m541,
-	Rigidbody2D_set_velocity_m547,
+	Rigidbody2D_get_velocity_m540,
+	Rigidbody2D_set_velocity_m546,
 	Rigidbody2D_INTERNAL_get_velocity_m3395,
 	Rigidbody2D_INTERNAL_set_velocity_m3396,
 	Rigidbody2D_get_mass_m898,
@@ -13592,7 +13592,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Rigidbody2D_set_angularDrag_m901,
 	Rigidbody2D_get_isKinematic_m877,
 	Rigidbody2D_set_isKinematic_m874,
-	Rigidbody2D_AddForce_m548,
+	Rigidbody2D_AddForce_m547,
 	Rigidbody2D_INTERNAL_CALL_AddForce_m3397,
 	Collider2D_get_attachedRigidbody_m3398,
 	Collider2D_get_bounds_m889,
@@ -13661,21 +13661,21 @@ extern const methodPointerType g_MethodPointers[10691] =
 	AnimationEvent_get_animatorStateInfo_m3442,
 	AnimationEvent_get_animatorClipInfo_m3443,
 	AnimationEvent_GetHash_m3444,
-	Keyframe__ctor_m613,
-	Keyframe_get_time_m618,
-	AnimationCurve__ctor_m614,
+	Keyframe__ctor_m612,
+	Keyframe_get_time_m617,
+	AnimationCurve__ctor_m613,
 	AnimationCurve__ctor_m3445,
 	AnimationCurve_Cleanup_m3446,
 	AnimationCurve_Finalize_m3447,
-	AnimationCurve_Evaluate_m619,
-	AnimationCurve_get_Item_m617,
-	AnimationCurve_get_length_m616,
+	AnimationCurve_Evaluate_m618,
+	AnimationCurve_get_Item_m616,
+	AnimationCurve_get_length_m615,
 	AnimationCurve_GetKey_Internal_m3448,
 	AnimationCurve_Init_m3449,
 	Enumerator__ctor_m3450,
 	Enumerator_get_Current_m3451,
 	Enumerator_MoveNext_m3452,
-	Animation_Play_m594,
+	Animation_Play_m593,
 	Animation_Play_m3453,
 	Animation_PlayDefaultAnimation_m3454,
 	Animation_GetEnumerator_m3455,
@@ -13699,9 +13699,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	AnimatorTransitionInfo_get_anyState_m3473,
 	AnimatorTransitionInfo_get_entry_m3474,
 	AnimatorTransitionInfo_get_exit_m3475,
-	Animator_SetFloat_m542,
-	Animator_GetBool_m543,
-	Animator_SetBool_m540,
+	Animator_SetFloat_m541,
+	Animator_GetBool_m542,
+	Animator_SetBool_m539,
 	Animator_SetTrigger_m2595,
 	Animator_ResetTrigger_m2594,
 	Animator_get_runtimeAnimatorController_m2593,
@@ -13715,7 +13715,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	HumanBone_set_boneName_m3483,
 	HumanBone_get_humanName_m3484,
 	HumanBone_set_humanName_m3485,
-	GUIText_set_text_m660,
+	GUIText_set_text_m659,
 	CharacterInfo_get_advance_m3486,
 	CharacterInfo_get_glyphWidth_m3487,
 	CharacterInfo_get_glyphHeight_m3488,
@@ -14154,9 +14154,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	SendMouseEvents__cctor_m3869,
 	SendMouseEvents_DoSendMouseEvents_m3870,
 	SendMouseEvents_SendEvents_m3871,
-	Social_get_Active_m414,
+	Social_get_Active_m413,
 	Social_get_localUser_m962,
-	Social_ReportProgress_m417,
+	Social_ReportProgress_m416,
 	Social_LoadAchievements_m974,
 	Social_ReportScore_m971,
 	ActivePlatform_get_Instance_m3872,
@@ -16099,12 +16099,12 @@ extern const methodPointerType g_MethodPointers[10691] =
 	MatchEvaluator_Invoke_m6076,
 	MatchEvaluator_BeginInvoke_m6077,
 	MatchEvaluator_EndInvoke_m6078,
-	Object__ctor_m413,
+	Object__ctor_m412,
 	Object_Equals_m6162,
 	Object_Equals_m6159,
 	Object_Finalize_m3979,
 	Object_GetHashCode_m6163,
-	Object_GetType_m486,
+	Object_GetType_m485,
 	Object_MemberwiseClone_m6164,
 	Object_ToString_m4036,
 	Object_ReferenceEquals_m4005,
@@ -16158,11 +16158,11 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Int32_ValidDigit_m6207,
 	Int32_GetFormatException_m6208,
 	Int32_Parse_m6209,
-	Int32_Parse_m505,
+	Int32_Parse_m504,
 	Int32_Parse_m6210,
 	Int32_TryParse_m6211,
 	Int32_TryParse_m6104,
-	Int32_ToString_m506,
+	Int32_ToString_m505,
 	Int32_ToString_m4077,
 	Int32_ToString_m6135,
 	Int32_ToString_m5142,
@@ -16443,21 +16443,21 @@ extern const methodPointerType g_MethodPointers[10691] =
 	String_Equals_m6461,
 	String_Equals_m6462,
 	String_Equals_m5107,
-	String_get_Chars_m471,
+	String_get_Chars_m470,
 	String_CopyTo_m6463,
 	String_ToCharArray_m4066,
 	String_ToCharArray_m6464,
-	String_Split_m469,
+	String_Split_m468,
 	String_Split_m6465,
 	String_Split_m6466,
 	String_Split_m6467,
-	String_Split_m464,
+	String_Split_m463,
 	String_Substring_m2509,
 	String_Substring_m2485,
 	String_SubstringUnchecked_m6468,
-	String_Trim_m466,
+	String_Trim_m465,
 	String_Trim_m4014,
-	String_TrimStart_m508,
+	String_TrimStart_m507,
 	String_TrimEnd_m6119,
 	String_FindNotWhiteSpace_m6469,
 	String_FindNotInTable_m6470,
@@ -16497,11 +16497,11 @@ extern const methodPointerType g_MethodPointers[10691] =
 	String_LastIndexOf_m4112,
 	String_LastIndexOf_m6487,
 	String_Contains_m2531,
-	String_IsNullOrEmpty_m465,
+	String_IsNullOrEmpty_m464,
 	String_PadRight_m6488,
 	String_StartsWith_m969,
 	String_Replace_m4111,
-	String_Replace_m479,
+	String_Replace_m478,
 	String_ReplaceUnchecked_m6489,
 	String_ReplaceFallback_m6490,
 	String_Remove_m2505,
@@ -16513,25 +16513,25 @@ extern const methodPointerType g_MethodPointers[10691] =
 	String_ToUpperInvariant_m6493,
 	String_ToString_m4020,
 	String_ToString_m6494,
-	String_Format_m480,
+	String_Format_m479,
 	String_Format_m6495,
-	String_Format_m452,
+	String_Format_m451,
 	String_Format_m2619,
 	String_Format_m5152,
 	String_FormatHelper_m6496,
-	String_Concat_m599,
-	String_Concat_m425,
-	String_Concat_m420,
-	String_Concat_m439,
-	String_Concat_m992,
+	String_Concat_m598,
+	String_Concat_m424,
 	String_Concat_m419,
-	String_Concat_m509,
+	String_Concat_m438,
+	String_Concat_m992,
+	String_Concat_m418,
+	String_Concat_m508,
 	String_ConcatInternal_m6497,
 	String_Insert_m2507,
-	String_Join_m462,
+	String_Join_m461,
 	String_Join_m6498,
 	String_JoinUnchecked_m6499,
-	String_get_Length_m472,
+	String_get_Length_m471,
 	String_ParseFormatSpecifier_m6500,
 	String_ParseDecimal_m6501,
 	String_InternalSetChar_m6502,
@@ -16557,7 +16557,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	String_CharCopyReverse_m6518,
 	String_InternalSplit_m6519,
 	String_InternalAllocateStr_m6520,
-	String_op_Equality_m418,
+	String_op_Equality_m417,
 	String_op_Inequality_m1061,
 	Single_System_IConvertible_ToBoolean_m6521,
 	Single_System_IConvertible_ToByte_m6522,
@@ -16583,9 +16583,9 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Single_IsNaN_m6539,
 	Single_IsNegativeInfinity_m6540,
 	Single_IsPositiveInfinity_m6541,
-	Single_Parse_m502,
+	Single_Parse_m501,
 	Single_Parse_m6542,
-	Single_ToString_m507,
+	Single_ToString_m506,
 	Single_ToString_m4080,
 	Single_ToString_m4008,
 	Single_ToString_m6543,
@@ -16996,7 +16996,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Type_GetType_m4126,
 	Type_GetTypeCodeInternal_m6924,
 	Type_GetTypeCode_m6925,
-	Type_GetTypeFromHandle_m493,
+	Type_GetTypeFromHandle_m492,
 	Type_GetTypeHandle_m6926,
 	Type_type_is_subtype_of_m6927,
 	Type_type_is_assignable_from_m6928,
@@ -17036,7 +17036,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	MemberInfo__ctor_m6962,
 	MemberInfo_get_Module_m6963,
 	Exception__ctor_m5074,
-	Exception__ctor_m450,
+	Exception__ctor_m449,
 	Exception__ctor_m4115,
 	Exception__ctor_m4114,
 	Exception_get_InnerException_m6964,
@@ -17911,7 +17911,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	StackFrame_GetInternalMethodName_m7805,
 	StackFrame_ToString_m7806,
 	StackTrace__ctor_m7807,
-	StackTrace__ctor_m451,
+	StackTrace__ctor_m450,
 	StackTrace__ctor_m4108,
 	StackTrace__ctor_m7808,
 	StackTrace__ctor_m7809,
@@ -20191,7 +20191,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	Encoding_GetChars_m9995,
 	Encoding_GetDecoder_m9996,
 	Encoding_InvokeI18N_m9997,
-	Encoding_GetEncoding_m460,
+	Encoding_GetEncoding_m459,
 	Encoding_GetEncoding_m4015,
 	Encoding_GetHashCode_m9998,
 	Encoding_GetPreamble_m9999,
@@ -20231,7 +20231,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	StringBuilder__ctor_m10029,
 	StringBuilder__ctor_m10030,
 	StringBuilder__ctor_m2237,
-	StringBuilder__ctor_m470,
+	StringBuilder__ctor_m469,
 	StringBuilder__ctor_m2290,
 	StringBuilder__ctor_m6096,
 	StringBuilder__ctor_m10031,
@@ -20239,10 +20239,10 @@ extern const methodPointerType g_MethodPointers[10691] =
 	StringBuilder_get_Capacity_m10033,
 	StringBuilder_set_Capacity_m10034,
 	StringBuilder_get_Length_m5141,
-	StringBuilder_set_Length_m474,
+	StringBuilder_set_Length_m473,
 	StringBuilder_get_Chars_m10035,
 	StringBuilder_set_Chars_m10036,
-	StringBuilder_ToString_m475,
+	StringBuilder_ToString_m474,
 	StringBuilder_ToString_m10037,
 	StringBuilder_Remove_m10038,
 	StringBuilder_Replace_m10039,
@@ -20251,7 +20251,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	StringBuilder_Append_m6121,
 	StringBuilder_Append_m6106,
 	StringBuilder_Append_m6097,
-	StringBuilder_Append_m476,
+	StringBuilder_Append_m475,
 	StringBuilder_Append_m10041,
 	StringBuilder_Append_m10042,
 	StringBuilder_Append_m6137,
@@ -20506,7 +20506,7 @@ extern const methodPointerType g_MethodPointers[10691] =
 	ArgumentException_get_Message_m10276,
 	ArgumentException_GetObjectData_m10277,
 	ArgumentNullException__ctor_m10278,
-	ArgumentNullException__ctor_m557,
+	ArgumentNullException__ctor_m556,
 	ArgumentNullException__ctor_m6084,
 	ArgumentNullException__ctor_m10279,
 	ArgumentOutOfRangeException__ctor_m6136,
@@ -21080,14 +21080,14 @@ extern const methodPointerType g_MethodPointers[10691] =
 	MulticastNotSupportedException__ctor_m10799,
 	MulticastNotSupportedException__ctor_m10800,
 	NonSerializedAttribute__ctor_m10801,
-	NotImplementedException__ctor_m483,
+	NotImplementedException__ctor_m482,
 	NotImplementedException__ctor_m4192,
 	NotImplementedException__ctor_m10802,
-	NotSupportedException__ctor_m629,
+	NotSupportedException__ctor_m628,
 	NotSupportedException__ctor_m5077,
 	NotSupportedException__ctor_m10803,
 	NullReferenceException__ctor_m10804,
-	NullReferenceException__ctor_m449,
+	NullReferenceException__ctor_m448,
 	NullReferenceException__ctor_m10805,
 	CustomInfo__ctor_m10806,
 	CustomInfo_GetActiveSection_m10807,

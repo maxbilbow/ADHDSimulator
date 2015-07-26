@@ -13,8 +13,8 @@ struct GenericEqualityComparer_1_t1930;
 extern "C" void GenericEqualityComparer_1__ctor_m11112_gshared (GenericEqualityComparer_1_t1930 * __this, const MethodInfo* method);
 #define GenericEqualityComparer_1__ctor_m11112(__this, method) (( void (*) (GenericEqualityComparer_1_t1930 *, const MethodInfo*))GenericEqualityComparer_1__ctor_m11112_gshared)(__this, method)
 // System.Int32 System.Collections.Generic.GenericEqualityComparer`1<System.TimeSpan>::GetHashCode(T)
-extern "C" int32_t GenericEqualityComparer_1_GetHashCode_m20235_gshared (GenericEqualityComparer_1_t1930 * __this, TimeSpan_t1144  ___obj, const MethodInfo* method);
-#define GenericEqualityComparer_1_GetHashCode_m20235(__this, ___obj, method) (( int32_t (*) (GenericEqualityComparer_1_t1930 *, TimeSpan_t1144 , const MethodInfo*))GenericEqualityComparer_1_GetHashCode_m20235_gshared)(__this, ___obj, method)
+extern "C" int32_t GenericEqualityComparer_1_GetHashCode_m20223_gshared (GenericEqualityComparer_1_t1930 * __this, TimeSpan_t1144  ___obj, const MethodInfo* method);
+#define GenericEqualityComparer_1_GetHashCode_m20223(__this, ___obj, method) (( int32_t (*) (GenericEqualityComparer_1_t1930 *, TimeSpan_t1144 , const MethodInfo*))GenericEqualityComparer_1_GetHashCode_m20223_gshared)(__this, ___obj, method)
 // System.Boolean System.Collections.Generic.GenericEqualityComparer`1<System.TimeSpan>::Equals(T,T)
-extern "C" bool GenericEqualityComparer_1_Equals_m20236_gshared (GenericEqualityComparer_1_t1930 * __this, TimeSpan_t1144  ___x, TimeSpan_t1144  ___y, const MethodInfo* method);
-#define GenericEqualityComparer_1_Equals_m20236(__this, ___x, ___y, method) (( bool (*) (GenericEqualityComparer_1_t1930 *, TimeSpan_t1144 , TimeSpan_t1144 , const MethodInfo*))GenericEqualityComparer_1_Equals_m20236_gshared)(__this, ___x, ___y, method)
+extern "C" bool GenericEqualityComparer_1_Equals_m20224_gshared (GenericEqualityComparer_1_t1930 * __this, TimeSpan_t1144  ___x, TimeSpan_t1144  ___y, const MethodInfo* method);
+#define GenericEqualityComparer_1_Equals_m20224(__this, ___x, ___y, method) (( bool (*) (GenericEqualityComparer_1_t1930 *, TimeSpan_t1144 , TimeSpan_t1144 , const MethodInfo*))GenericEqualityComparer_1_Equals_m20224_gshared)(__this, ___x, ___y, method)

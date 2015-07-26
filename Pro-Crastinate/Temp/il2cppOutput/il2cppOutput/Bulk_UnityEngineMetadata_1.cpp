@@ -29,9 +29,9 @@ const Il2CppTypeDefinitionMetadata Behaviour_t187_DefinitionMetadata =
 	, Behaviour_t187_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2716/* methodStart */
+	, 2715/* methodStart */
 	, -1/* eventStart */
-	, 626/* propertyStart */
+	, 624/* propertyStart */
 
 };
 TypeInfo Behaviour_t187_il2cpp_TypeInfo = 
@@ -118,9 +118,9 @@ const Il2CppTypeDefinitionMetadata Camera_t82_DefinitionMetadata =
 	, Camera_t82_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1925/* fieldStart */
-	, 2720/* methodStart */
+	, 2719/* methodStart */
 	, -1/* eventStart */
-	, 628/* propertyStart */
+	, 626/* propertyStart */
 
 };
 TypeInfo Camera_t82_il2cpp_TypeInfo = 
@@ -183,19 +183,19 @@ extern TypeInfo CameraCallback_t623_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Camera_CameraCallbackMethodDeclarations.h"
 static const EncodedMethodIndex CameraCallback_t623_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1302,
-	1303,
-	1304,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1289,
+	1290,
+	1291,
 };
 extern const Il2CppType ICloneable_t3094_0_0_0;
 extern const Il2CppType ISerializable_t1918_0_0_0;
@@ -218,7 +218,7 @@ const Il2CppTypeDefinitionMetadata CameraCallback_t623_DefinitionMetadata =
 	, CameraCallback_t623_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2752/* methodStart */
+	, 2751/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -303,7 +303,7 @@ const Il2CppTypeDefinitionMetadata Debug_t624_DefinitionMetadata =
 	, Debug_t624_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2756/* methodStart */
+	, 2755/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -392,9 +392,9 @@ const Il2CppTypeDefinitionMetadata Display_t627_DefinitionMetadata =
 	, Display_t627_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1928/* fieldStart */
-	, 2765/* methodStart */
+	, 2764/* methodStart */
 	, 1/* eventStart */
-	, 642/* propertyStart */
+	, 640/* propertyStart */
 
 };
 TypeInfo Display_t627_il2cpp_TypeInfo = 
@@ -457,19 +457,19 @@ extern TypeInfo DisplaysUpdatedDelegate_t625_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Display_DisplaysUpdatedDelegateMethodDeclarations.h"
 static const EncodedMethodIndex DisplaysUpdatedDelegate_t625_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1305,
-	1306,
-	1307,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1292,
+	1293,
+	1294,
 };
 static Il2CppInterfaceOffsetPair DisplaysUpdatedDelegate_t625_InterfacesOffsets[] = 
 {
@@ -489,7 +489,7 @@ const Il2CppTypeDefinitionMetadata DisplaysUpdatedDelegate_t625_DefinitionMetada
 	, DisplaysUpdatedDelegate_t625_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2793/* methodStart */
+	, 2792/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -573,7 +573,7 @@ const Il2CppTypeDefinitionMetadata MonoBehaviour_t33_DefinitionMetadata =
 	, MonoBehaviour_t33_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2797/* methodStart */
+	, 2796/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -638,8 +638,10 @@ extern TypeInfo TouchPhase_t628_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_TouchPhaseMethodDeclarations.h"
 static const EncodedMethodIndex TouchPhase_t628_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -659,8 +661,6 @@ static const EncodedMethodIndex TouchPhase_t628_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 extern const Il2CppType IFormattable_t1898_0_0_0;
 extern const Il2CppType IConvertible_t1901_0_0_0;
@@ -753,8 +753,10 @@ extern TypeInfo IMECompositionMode_t629_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_IMECompositionModeMethodDeclarations.h"
 static const EncodedMethodIndex IMECompositionMode_t629_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -774,8 +776,6 @@ static const EncodedMethodIndex IMECompositionMode_t629_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair IMECompositionMode_t629_InterfacesOffsets[] = 
 {
@@ -861,10 +861,10 @@ extern TypeInfo Touch_t185_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_TouchMethodDeclarations.h"
 static const EncodedMethodIndex Touch_t185_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType Touch_t185_0_0_0;
@@ -880,9 +880,9 @@ const Il2CppTypeDefinitionMetadata Touch_t185_DefinitionMetadata =
 	, Touch_t185_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1942/* fieldStart */
-	, 2807/* methodStart */
+	, 2806/* methodStart */
 	, -1/* eventStart */
-	, 649/* propertyStart */
+	, 647/* propertyStart */
 
 };
 TypeInfo Touch_t185_il2cpp_TypeInfo = 
@@ -964,9 +964,9 @@ const Il2CppTypeDefinitionMetadata Input_t175_DefinitionMetadata =
 	, Input_t175_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2810/* methodStart */
+	, 2809/* methodStart */
 	, -1/* eventStart */
-	, 652/* propertyStart */
+	, 650/* propertyStart */
 
 };
 TypeInfo Input_t175_il2cpp_TypeInfo = 
@@ -1029,8 +1029,10 @@ extern TypeInfo HideFlags_t630_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_HideFlagsMethodDeclarations.h"
 static const EncodedMethodIndex HideFlags_t630_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -1050,8 +1052,6 @@ static const EncodedMethodIndex HideFlags_t630_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair HideFlags_t630_InterfacesOffsets[] = 
 {
@@ -1135,21 +1135,21 @@ TypeInfo HideFlags_t630_il2cpp_TypeInfo =
 extern TypeInfo Object_t73_il2cpp_TypeInfo;
 // UnityEngine.Object
 #include "UnityEngine_UnityEngine_ObjectMethodDeclarations.h"
-extern const Il2CppType Object_Instantiate_m21310_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition Object_Instantiate_m21310_RGCTXData[2] = 
+extern const Il2CppType Object_Instantiate_m21297_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition Object_Instantiate_m21297_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_CLASS, 3651 }/* Class */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType Object_FindObjectsOfType_m21311_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition Object_FindObjectsOfType_m21311_RGCTXData[3] = 
+extern const Il2CppType Object_FindObjectsOfType_m21298_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition Object_FindObjectsOfType_m21298_RGCTXData[3] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3653 }/* Type */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4454 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4440 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType Object_FindObjectOfType_m21312_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition Object_FindObjectOfType_m21312_RGCTXData[3] = 
+extern const Il2CppType Object_FindObjectOfType_m21299_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition Object_FindObjectOfType_m21299_RGCTXData[3] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3654 }/* Type */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 3654 }/* Class */,
@@ -1176,9 +1176,9 @@ const Il2CppTypeDefinitionMetadata Object_t73_DefinitionMetadata =
 	, Object_t73_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1959/* fieldStart */
-	, 2838/* methodStart */
+	, 2837/* methodStart */
 	, -1/* eventStart */
-	, 662/* propertyStart */
+	, 660/* propertyStart */
 
 };
 TypeInfo Object_t73_il2cpp_TypeInfo = 
@@ -1239,41 +1239,41 @@ TypeInfo Object_t73_il2cpp_TypeInfo =
 extern TypeInfo Component_t174_il2cpp_TypeInfo;
 // UnityEngine.Component
 #include "UnityEngine_UnityEngine_ComponentMethodDeclarations.h"
-extern const Il2CppType Component_GetComponent_m21313_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition Component_GetComponent_m21313_RGCTXData[2] = 
+extern const Il2CppType Component_GetComponent_m21300_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition Component_GetComponent_m21300_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3655 }/* Type */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType Component_GetComponentInChildren_m21314_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition Component_GetComponentInChildren_m21314_RGCTXData[3] = 
+extern const Il2CppType Component_GetComponentInChildren_m21301_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition Component_GetComponentInChildren_m21301_RGCTXData[3] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3656 }/* Type */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 3656 }/* Class */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21315_RGCTXData[2] = 
+extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21302_RGCTXData[2] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4455 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4441 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21316_RGCTXData[2] = 
+extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21303_RGCTXData[2] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4456 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4442 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21317_RGCTXData[2] = 
+extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21304_RGCTXData[2] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4457 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4443 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21318_RGCTXData[2] = 
+extern const Il2CppRGCTXDefinition Component_GetComponentsInChildren_m21305_RGCTXData[2] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4458 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4444 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType Component_GetComponents_m21319_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition Component_GetComponents_m21319_RGCTXData[2] = 
+extern const Il2CppType Component_GetComponents_m21306_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition Component_GetComponents_m21306_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3666 }/* Type */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
@@ -1298,9 +1298,9 @@ const Il2CppTypeDefinitionMetadata Component_t174_DefinitionMetadata =
 	, Component_t174_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2869/* methodStart */
+	, 2868/* methodStart */
 	, -1/* eventStart */
-	, 664/* propertyStart */
+	, 662/* propertyStart */
 
 };
 TypeInfo Component_t174_il2cpp_TypeInfo = 
@@ -1382,9 +1382,9 @@ const Il2CppTypeDefinitionMetadata Light_t90_DefinitionMetadata =
 	, Light_t90_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2890/* methodStart */
+	, 2889/* methodStart */
 	, -1/* eventStart */
-	, 667/* propertyStart */
+	, 665/* propertyStart */
 
 };
 TypeInfo Light_t90_il2cpp_TypeInfo = 
@@ -1445,40 +1445,40 @@ TypeInfo Light_t90_il2cpp_TypeInfo =
 extern TypeInfo GameObject_t9_il2cpp_TypeInfo;
 // UnityEngine.GameObject
 #include "UnityEngine_UnityEngine_GameObjectMethodDeclarations.h"
-extern const Il2CppType GameObject_GetComponent_m21320_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition GameObject_GetComponent_m21320_RGCTXData[2] = 
+extern const Il2CppType GameObject_GetComponent_m21307_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition GameObject_GetComponent_m21307_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3667 }/* Type */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType GameObject_GetComponents_m21321_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition GameObject_GetComponents_m21321_RGCTXData[2] = 
+extern const Il2CppType GameObject_GetComponents_m21308_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition GameObject_GetComponents_m21308_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3669 }/* Type */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType GameObject_GetComponentsInChildren_m21322_gp_0_0_0_0;
+extern const Il2CppType GameObject_GetComponentsInChildren_m21309_gp_0_0_0_0;
 extern const Il2CppType TU5BU5D_t3302_0_0_0;
-extern const Il2CppRGCTXDefinition GameObject_GetComponentsInChildren_m21322_RGCTXData[3] = 
+extern const Il2CppRGCTXDefinition GameObject_GetComponentsInChildren_m21309_RGCTXData[3] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3671 }/* Type */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 3670 }/* Class */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType GameObject_GetComponentsInChildren_m21323_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition GameObject_GetComponentsInChildren_m21323_RGCTXData[2] = 
+extern const Il2CppType GameObject_GetComponentsInChildren_m21310_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition GameObject_GetComponentsInChildren_m21310_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3673 }/* Type */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType GameObject_GetComponentsInParent_m21324_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition GameObject_GetComponentsInParent_m21324_RGCTXData[2] = 
+extern const Il2CppType GameObject_GetComponentsInParent_m21311_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition GameObject_GetComponentsInParent_m21311_RGCTXData[2] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3675 }/* Type */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
-extern const Il2CppType GameObject_AddComponent_m21325_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition GameObject_AddComponent_m21325_RGCTXData[3] = 
+extern const Il2CppType GameObject_AddComponent_m21312_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition GameObject_AddComponent_m21312_RGCTXData[3] = 
 {
 	{ IL2CPP_RGCTX_DATA_TYPE, 3676 }/* Type */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 3676 }/* Class */,
@@ -1505,9 +1505,9 @@ const Il2CppTypeDefinitionMetadata GameObject_t9_DefinitionMetadata =
 	, GameObject_t9_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2893/* methodStart */
+	, 2892/* methodStart */
 	, -1/* eventStart */
-	, 669/* propertyStart */
+	, 667/* propertyStart */
 
 };
 TypeInfo GameObject_t9_il2cpp_TypeInfo = 
@@ -1579,7 +1579,7 @@ static const EncodedMethodIndex Transform_t38_VTable[5] =
 	502,
 	506,
 	507,
-	1288,
+	1275,
 };
 extern const Il2CppType IEnumerable_t803_0_0_0;
 static const Il2CppType* Transform_t38_InterfacesTypeInfos[] = 
@@ -1604,9 +1604,9 @@ const Il2CppTypeDefinitionMetadata Transform_t38_DefinitionMetadata =
 	, Transform_t38_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2919/* methodStart */
+	, 2918/* methodStart */
 	, -1/* eventStart */
-	, 674/* propertyStart */
+	, 672/* propertyStart */
 
 };
 TypeInfo Transform_t38_il2cpp_TypeInfo = 
@@ -1673,8 +1673,8 @@ static const EncodedMethodIndex Enumerator_t631_VTable[6] =
 	502,
 	503,
 	504,
-	1308,
-	1309,
+	1295,
+	1296,
 };
 extern const Il2CppType IEnumerator_t142_0_0_0;
 static const Il2CppType* Enumerator_t631_InterfacesTypeInfos[] = 
@@ -1698,9 +1698,9 @@ const Il2CppTypeDefinitionMetadata Enumerator_t631_DefinitionMetadata =
 	, Enumerator_t631_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1961/* fieldStart */
-	, 2968/* methodStart */
+	, 2967/* methodStart */
 	, -1/* eventStart */
-	, 685/* propertyStart */
+	, 683/* propertyStart */
 
 };
 TypeInfo Enumerator_t631_il2cpp_TypeInfo = 
@@ -1782,9 +1782,9 @@ const Il2CppTypeDefinitionMetadata Time_t632_DefinitionMetadata =
 	, Time_t632_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2971/* methodStart */
+	, 2970/* methodStart */
 	, -1/* eventStart */
-	, 686/* propertyStart */
+	, 684/* propertyStart */
 
 };
 TypeInfo Time_t632_il2cpp_TypeInfo = 
@@ -1866,7 +1866,7 @@ const Il2CppTypeDefinitionMetadata Random_t633_DefinitionMetadata =
 	, Random_t633_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2980/* methodStart */
+	, 2979/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1950,7 +1950,7 @@ const Il2CppTypeDefinitionMetadata YieldInstruction_t551_DefinitionMetadata =
 	, YieldInstruction_t551_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2983/* methodStart */
+	, 2982/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2018,14 +2018,14 @@ static const EncodedMethodIndex PlayerPrefsException_t634_VTable[11] =
 	501,
 	502,
 	503,
-	1242,
-	1243,
-	1244,
-	1245,
-	1246,
-	1247,
-	1243,
-	1248,
+	1229,
+	1230,
+	1231,
+	1232,
+	1233,
+	1234,
+	1230,
+	1235,
 };
 extern const Il2CppType _Exception_t3104_0_0_0;
 static Il2CppInterfaceOffsetPair PlayerPrefsException_t634_InterfacesOffsets[] = 
@@ -2048,7 +2048,7 @@ const Il2CppTypeDefinitionMetadata PlayerPrefsException_t634_DefinitionMetadata 
 	, PlayerPrefsException_t634_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2984/* methodStart */
+	, 2983/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2132,7 +2132,7 @@ const Il2CppTypeDefinitionMetadata PlayerPrefs_t635_DefinitionMetadata =
 	, PlayerPrefs_t635_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2985/* methodStart */
+	, 2984/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2216,9 +2216,9 @@ const Il2CppTypeDefinitionMetadata ParticleSystem_t108_DefinitionMetadata =
 	, ParticleSystem_t108_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 2996/* methodStart */
+	, 2995/* methodStart */
 	, -1/* eventStart */
-	, 694/* propertyStart */
+	, 692/* propertyStart */
 
 };
 TypeInfo ParticleSystem_t108_il2cpp_TypeInfo = 
@@ -2281,10 +2281,10 @@ extern TypeInfo Particle_t636_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_ParticleMethodDeclarations.h"
 static const EncodedMethodIndex Particle_t636_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType Particle_t636_0_0_0;
@@ -2299,9 +2299,9 @@ const Il2CppTypeDefinitionMetadata Particle_t636_DefinitionMetadata =
 	, Particle_t636_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1963/* fieldStart */
-	, 2998/* methodStart */
+	, 2997/* methodStart */
 	, -1/* eventStart */
-	, 696/* propertyStart */
+	, 694/* propertyStart */
 
 };
 TypeInfo Particle_t636_il2cpp_TypeInfo = 
@@ -2383,7 +2383,7 @@ const Il2CppTypeDefinitionMetadata Physics_t637_DefinitionMetadata =
 	, Physics_t637_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3014/* methodStart */
+	, 3013/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2467,9 +2467,9 @@ const Il2CppTypeDefinitionMetadata Rigidbody_t105_DefinitionMetadata =
 	, Rigidbody_t105_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3023/* methodStart */
+	, 3022/* methodStart */
 	, -1/* eventStart */
-	, 704/* propertyStart */
+	, 702/* propertyStart */
 
 };
 TypeInfo Rigidbody_t105_il2cpp_TypeInfo = 
@@ -2551,9 +2551,9 @@ const Il2CppTypeDefinitionMetadata Joint_t638_DefinitionMetadata =
 	, Joint_t638_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3033/* methodStart */
+	, 3032/* methodStart */
 	, -1/* eventStart */
-	, 709/* propertyStart */
+	, 707/* propertyStart */
 
 };
 TypeInfo Joint_t638_il2cpp_TypeInfo = 
@@ -2635,9 +2635,9 @@ const Il2CppTypeDefinitionMetadata SpringJoint_t89_DefinitionMetadata =
 	, SpringJoint_t89_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3037/* methodStart */
+	, 3036/* methodStart */
 	, -1/* eventStart */
-	, 711/* propertyStart */
+	, 709/* propertyStart */
 
 };
 TypeInfo SpringJoint_t89_il2cpp_TypeInfo = 
@@ -2719,9 +2719,9 @@ const Il2CppTypeDefinitionMetadata Collider_t141_DefinitionMetadata =
 	, Collider_t141_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3040/* methodStart */
+	, 3039/* methodStart */
 	, -1/* eventStart */
-	, 714/* propertyStart */
+	, 712/* propertyStart */
 
 };
 TypeInfo Collider_t141_il2cpp_TypeInfo = 
@@ -2784,10 +2784,10 @@ extern TypeInfo RaycastHit_t193_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_RaycastHitMethodDeclarations.h"
 static const EncodedMethodIndex RaycastHit_t193_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType RaycastHit_t193_0_0_0;
@@ -2802,9 +2802,9 @@ const Il2CppTypeDefinitionMetadata RaycastHit_t193_DefinitionMetadata =
 	, RaycastHit_t193_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1971/* fieldStart */
-	, 3041/* methodStart */
+	, 3040/* methodStart */
 	, -1/* eventStart */
-	, 715/* propertyStart */
+	, 713/* propertyStart */
 
 };
 TypeInfo RaycastHit_t193_il2cpp_TypeInfo = 
@@ -2886,9 +2886,9 @@ const Il2CppTypeDefinitionMetadata Physics2D_t177_DefinitionMetadata =
 	, Physics2D_t177_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1977/* fieldStart */
-	, 3046/* methodStart */
+	, 3045/* methodStart */
 	, -1/* eventStart */
-	, 720/* propertyStart */
+	, 718/* propertyStart */
 
 };
 TypeInfo Physics2D_t177_il2cpp_TypeInfo = 
@@ -2951,10 +2951,10 @@ extern TypeInfo RaycastHit2D_t269_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_RaycastHit2DMethodDeclarations.h"
 static const EncodedMethodIndex RaycastHit2D_t269_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType RaycastHit2D_t269_0_0_0;
@@ -2969,9 +2969,9 @@ const Il2CppTypeDefinitionMetadata RaycastHit2D_t269_DefinitionMetadata =
 	, RaycastHit2D_t269_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1978/* fieldStart */
-	, 3062/* methodStart */
+	, 3061/* methodStart */
 	, -1/* eventStart */
-	, 721/* propertyStart */
+	, 719/* propertyStart */
 
 };
 TypeInfo RaycastHit2D_t269_il2cpp_TypeInfo = 
@@ -3034,8 +3034,10 @@ extern TypeInfo ForceMode2D_t640_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_ForceMode2DMethodDeclarations.h"
 static const EncodedMethodIndex ForceMode2D_t640_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -3055,8 +3057,6 @@ static const EncodedMethodIndex ForceMode2D_t640_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair ForceMode2D_t640_InterfacesOffsets[] = 
 {
@@ -3161,9 +3161,9 @@ const Il2CppTypeDefinitionMetadata Rigidbody2D_t46_DefinitionMetadata =
 	, Rigidbody2D_t46_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3070/* methodStart */
+	, 3069/* methodStart */
 	, -1/* eventStart */
-	, 728/* propertyStart */
+	, 726/* propertyStart */
 
 };
 TypeInfo Rigidbody2D_t46_il2cpp_TypeInfo = 
@@ -3245,9 +3245,9 @@ const Il2CppTypeDefinitionMetadata Collider2D_t139_DefinitionMetadata =
 	, Collider2D_t139_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3087/* methodStart */
+	, 3086/* methodStart */
 	, -1/* eventStart */
-	, 735/* propertyStart */
+	, 733/* propertyStart */
 
 };
 TypeInfo Collider2D_t139_il2cpp_TypeInfo = 
@@ -3329,9 +3329,9 @@ const Il2CppTypeDefinitionMetadata CircleCollider2D_t256_DefinitionMetadata =
 	, CircleCollider2D_t256_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3092/* methodStart */
+	, 3091/* methodStart */
 	, -1/* eventStart */
-	, 738/* propertyStart */
+	, 736/* propertyStart */
 
 };
 TypeInfo CircleCollider2D_t256_il2cpp_TypeInfo = 
@@ -3413,9 +3413,9 @@ const Il2CppTypeDefinitionMetadata Joint2D_t641_DefinitionMetadata =
 	, Joint2D_t641_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3094/* methodStart */
+	, 3093/* methodStart */
 	, -1/* eventStart */
-	, 739/* propertyStart */
+	, 737/* propertyStart */
 
 };
 TypeInfo Joint2D_t641_il2cpp_TypeInfo = 
@@ -3497,9 +3497,9 @@ const Il2CppTypeDefinitionMetadata AnchoredJoint2D_t642_DefinitionMetadata =
 	, AnchoredJoint2D_t642_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3096/* methodStart */
+	, 3095/* methodStart */
 	, -1/* eventStart */
-	, 740/* propertyStart */
+	, 738/* propertyStart */
 
 };
 TypeInfo AnchoredJoint2D_t642_il2cpp_TypeInfo = 
@@ -3581,9 +3581,9 @@ const Il2CppTypeDefinitionMetadata SpringJoint2D_t216_DefinitionMetadata =
 	, SpringJoint2D_t216_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3100/* methodStart */
+	, 3099/* methodStart */
 	, -1/* eventStart */
-	, 742/* propertyStart */
+	, 740/* propertyStart */
 
 };
 TypeInfo SpringJoint2D_t216_il2cpp_TypeInfo = 
@@ -3665,9 +3665,9 @@ const Il2CppTypeDefinitionMetadata PhysicsMaterial2D_t270_DefinitionMetadata =
 	, PhysicsMaterial2D_t270_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3103/* methodStart */
+	, 3102/* methodStart */
 	, -1/* eventStart */
-	, 745/* propertyStart */
+	, 743/* propertyStart */
 
 };
 TypeInfo PhysicsMaterial2D_t270_il2cpp_TypeInfo = 
@@ -3754,7 +3754,7 @@ const Il2CppTypeDefinitionMetadata AudioSettings_t644_DefinitionMetadata =
 	, AudioSettings_t644_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1987/* fieldStart */
-	, 3106/* methodStart */
+	, 3105/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3819,19 +3819,19 @@ extern TypeInfo AudioConfigurationChangeHandler_t643_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AudioSettings_AudioConfigurationChanMethodDeclarations.h"
 static const EncodedMethodIndex AudioConfigurationChangeHandler_t643_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1310,
-	1311,
-	1312,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1297,
+	1298,
+	1299,
 };
 static Il2CppInterfaceOffsetPair AudioConfigurationChangeHandler_t643_InterfacesOffsets[] = 
 {
@@ -3851,7 +3851,7 @@ const Il2CppTypeDefinitionMetadata AudioConfigurationChangeHandler_t643_Definiti
 	, AudioConfigurationChangeHandler_t643_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3107/* methodStart */
+	, 3106/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3942,7 +3942,7 @@ const Il2CppTypeDefinitionMetadata AudioClip_t245_DefinitionMetadata =
 	, AudioClip_t245_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1988/* fieldStart */
-	, 3111/* methodStart */
+	, 3110/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4007,19 +4007,19 @@ extern TypeInfo PCMReaderCallback_t645_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AudioClip_PCMReaderCallbackMethodDeclarations.h"
 static const EncodedMethodIndex PCMReaderCallback_t645_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1313,
-	1314,
-	1315,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1300,
+	1301,
+	1302,
 };
 static Il2CppInterfaceOffsetPair PCMReaderCallback_t645_InterfacesOffsets[] = 
 {
@@ -4039,7 +4039,7 @@ const Il2CppTypeDefinitionMetadata PCMReaderCallback_t645_DefinitionMetadata =
 	, PCMReaderCallback_t645_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3113/* methodStart */
+	, 3112/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4104,19 +4104,19 @@ extern TypeInfo PCMSetPositionCallback_t646_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AudioClip_PCMSetPositionCallbackMethodDeclarations.h"
 static const EncodedMethodIndex PCMSetPositionCallback_t646_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1316,
-	1317,
-	1318,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1303,
+	1304,
+	1305,
 };
 static Il2CppInterfaceOffsetPair PCMSetPositionCallback_t646_InterfacesOffsets[] = 
 {
@@ -4136,7 +4136,7 @@ const Il2CppTypeDefinitionMetadata PCMSetPositionCallback_t646_DefinitionMetadat
 	, PCMSetPositionCallback_t646_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3117/* methodStart */
+	, 3116/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4220,9 +4220,9 @@ const Il2CppTypeDefinitionMetadata AudioSource_t285_DefinitionMetadata =
 	, AudioSource_t285_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3121/* methodStart */
+	, 3120/* methodStart */
 	, -1/* eventStart */
-	, 746/* propertyStart */
+	, 744/* propertyStart */
 
 };
 TypeInfo AudioSource_t285_il2cpp_TypeInfo = 
@@ -4285,10 +4285,10 @@ extern TypeInfo WebCamDevice_t647_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_WebCamDeviceMethodDeclarations.h"
 static const EncodedMethodIndex WebCamDevice_t647_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType WebCamDevice_t647_0_0_0;
@@ -4303,9 +4303,9 @@ const Il2CppTypeDefinitionMetadata WebCamDevice_t647_DefinitionMetadata =
 	, WebCamDevice_t647_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1990/* fieldStart */
-	, 3129/* methodStart */
+	, 3128/* methodStart */
 	, -1/* eventStart */
-	, 747/* propertyStart */
+	, 745/* propertyStart */
 
 };
 TypeInfo WebCamDevice_t647_il2cpp_TypeInfo = 
@@ -4368,8 +4368,10 @@ extern TypeInfo AnimationEventSource_t648_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AnimationEventSourceMethodDeclarations.h"
 static const EncodedMethodIndex AnimationEventSource_t648_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4389,8 +4391,6 @@ static const EncodedMethodIndex AnimationEventSource_t648_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AnimationEventSource_t648_InterfacesOffsets[] = 
 {
@@ -4495,9 +4495,9 @@ const Il2CppTypeDefinitionMetadata AnimationEvent_t650_DefinitionMetadata =
 	, AnimationEvent_t650_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 1996/* fieldStart */
-	, 3131/* methodStart */
+	, 3130/* methodStart */
 	, -1/* eventStart */
-	, 749/* propertyStart */
+	, 747/* propertyStart */
 
 };
 TypeInfo AnimationEvent_t650_il2cpp_TypeInfo = 
@@ -4560,10 +4560,10 @@ extern TypeInfo Keyframe_t195_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_KeyframeMethodDeclarations.h"
 static const EncodedMethodIndex Keyframe_t195_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType Keyframe_t195_0_0_0;
@@ -4578,9 +4578,9 @@ const Il2CppTypeDefinitionMetadata Keyframe_t195_DefinitionMetadata =
 	, Keyframe_t195_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2007/* fieldStart */
-	, 3154/* methodStart */
+	, 3153/* methodStart */
 	, -1/* eventStart */
-	, 762/* propertyStart */
+	, 760/* propertyStart */
 
 };
 TypeInfo Keyframe_t195_il2cpp_TypeInfo = 
@@ -4644,7 +4644,7 @@ extern TypeInfo AnimationCurve_t84_il2cpp_TypeInfo;
 static const EncodedMethodIndex AnimationCurve_t84_VTable[4] = 
 {
 	501,
-	1319,
+	1306,
 	503,
 	504,
 };
@@ -4662,9 +4662,9 @@ const Il2CppTypeDefinitionMetadata AnimationCurve_t84_DefinitionMetadata =
 	, AnimationCurve_t84_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2011/* fieldStart */
-	, 3156/* methodStart */
+	, 3155/* methodStart */
 	, -1/* eventStart */
-	, 763/* propertyStart */
+	, 761/* propertyStart */
 
 };
 TypeInfo AnimationCurve_t84_il2cpp_TypeInfo = 
@@ -4727,8 +4727,10 @@ extern TypeInfo PlayMode_t653_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_PlayModeMethodDeclarations.h"
 static const EncodedMethodIndex PlayMode_t653_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4748,8 +4750,6 @@ static const EncodedMethodIndex PlayMode_t653_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair PlayMode_t653_InterfacesOffsets[] = 
 {
@@ -4844,7 +4844,7 @@ static const EncodedMethodIndex Animation_t186_VTable[5] =
 	502,
 	506,
 	507,
-	1320,
+	1307,
 };
 static const Il2CppType* Animation_t186_InterfacesTypeInfos[] = 
 {
@@ -4868,7 +4868,7 @@ const Il2CppTypeDefinitionMetadata Animation_t186_DefinitionMetadata =
 	, Animation_t186_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3165/* methodStart */
+	, 3164/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4937,8 +4937,8 @@ static const EncodedMethodIndex Enumerator_t654_VTable[6] =
 	502,
 	503,
 	504,
-	1321,
-	1322,
+	1308,
+	1309,
 };
 static const Il2CppType* Enumerator_t654_InterfacesTypeInfos[] = 
 {
@@ -4961,9 +4961,9 @@ const Il2CppTypeDefinitionMetadata Enumerator_t654_DefinitionMetadata =
 	, Enumerator_t654_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2015/* fieldStart */
-	, 3171/* methodStart */
+	, 3170/* methodStart */
 	, -1/* eventStart */
-	, 765/* propertyStart */
+	, 763/* propertyStart */
 
 };
 TypeInfo Enumerator_t654_il2cpp_TypeInfo = 
@@ -5026,9 +5026,9 @@ extern TypeInfo AnimationState_t649_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AnimationStateMethodDeclarations.h"
 static const EncodedMethodIndex AnimationState_t649_VTable[4] = 
 {
-	1323,
+	1310,
 	502,
-	1324,
+	1311,
 	504,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
@@ -5111,10 +5111,10 @@ extern TypeInfo AnimatorClipInfo_t652_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AnimatorClipInfoMethodDeclarations.h"
 static const EncodedMethodIndex AnimatorClipInfo_t652_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType AnimatorClipInfo_t652_0_0_0;
@@ -5194,10 +5194,10 @@ extern TypeInfo AnimatorStateInfo_t651_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AnimatorStateInfoMethodDeclarations.h"
 static const EncodedMethodIndex AnimatorStateInfo_t651_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType AnimatorStateInfo_t651_0_0_0;
@@ -5212,9 +5212,9 @@ const Il2CppTypeDefinitionMetadata AnimatorStateInfo_t651_DefinitionMetadata =
 	, AnimatorStateInfo_t651_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2019/* fieldStart */
-	, 3174/* methodStart */
+	, 3173/* methodStart */
 	, -1/* eventStart */
-	, 766/* propertyStart */
+	, 764/* propertyStart */
 
 };
 TypeInfo AnimatorStateInfo_t651_il2cpp_TypeInfo = 
@@ -5277,10 +5277,10 @@ extern TypeInfo AnimatorTransitionInfo_t656_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_AnimatorTransitionInfoMethodDeclarations.h"
 static const EncodedMethodIndex AnimatorTransitionInfo_t656_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType AnimatorTransitionInfo_t656_0_0_0;
@@ -5295,9 +5295,9 @@ const Il2CppTypeDefinitionMetadata AnimatorTransitionInfo_t656_DefinitionMetadat
 	, AnimatorTransitionInfo_t656_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2026/* fieldStart */
-	, 3183/* methodStart */
+	, 3182/* methodStart */
 	, -1/* eventStart */
-	, 773/* propertyStart */
+	, 771/* propertyStart */
 
 };
 TypeInfo AnimatorTransitionInfo_t656_il2cpp_TypeInfo = 
@@ -5379,9 +5379,9 @@ const Il2CppTypeDefinitionMetadata Animator_t45_DefinitionMetadata =
 	, Animator_t45_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3192/* methodStart */
+	, 3191/* methodStart */
 	, -1/* eventStart */
-	, 780/* propertyStart */
+	, 778/* propertyStart */
 
 };
 TypeInfo Animator_t45_il2cpp_TypeInfo = 
@@ -5444,10 +5444,10 @@ extern TypeInfo SkeletonBone_t657_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_SkeletonBoneMethodDeclarations.h"
 static const EncodedMethodIndex SkeletonBone_t657_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType SkeletonBone_t657_0_0_0;
@@ -5527,10 +5527,10 @@ extern TypeInfo HumanLimit_t658_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_HumanLimitMethodDeclarations.h"
 static const EncodedMethodIndex HumanLimit_t658_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType HumanLimit_t658_0_0_0;
@@ -5610,10 +5610,10 @@ extern TypeInfo HumanBone_t659_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_HumanBoneMethodDeclarations.h"
 static const EncodedMethodIndex HumanBone_t659_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType HumanBone_t659_0_0_0;
@@ -5628,9 +5628,9 @@ const Il2CppTypeDefinitionMetadata HumanBone_t659_DefinitionMetadata =
 	, HumanBone_t659_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2042/* fieldStart */
-	, 3204/* methodStart */
+	, 3203/* methodStart */
 	, -1/* eventStart */
-	, 781/* propertyStart */
+	, 779/* propertyStart */
 
 };
 TypeInfo HumanBone_t659_il2cpp_TypeInfo = 
@@ -5777,8 +5777,10 @@ extern TypeInfo TextAnchor_t534_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_TextAnchorMethodDeclarations.h"
 static const EncodedMethodIndex TextAnchor_t534_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -5798,8 +5800,6 @@ static const EncodedMethodIndex TextAnchor_t534_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair TextAnchor_t534_InterfacesOffsets[] = 
 {
@@ -5885,8 +5885,10 @@ extern TypeInfo HorizontalWrapMode_t660_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_HorizontalWrapModeMethodDeclarations.h"
 static const EncodedMethodIndex HorizontalWrapMode_t660_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -5906,8 +5908,6 @@ static const EncodedMethodIndex HorizontalWrapMode_t660_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair HorizontalWrapMode_t660_InterfacesOffsets[] = 
 {
@@ -5993,8 +5993,10 @@ extern TypeInfo VerticalWrapMode_t661_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_VerticalWrapModeMethodDeclarations.h"
 static const EncodedMethodIndex VerticalWrapMode_t661_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6014,8 +6016,6 @@ static const EncodedMethodIndex VerticalWrapMode_t661_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair VerticalWrapMode_t661_InterfacesOffsets[] = 
 {
@@ -6121,9 +6121,9 @@ const Il2CppTypeDefinitionMetadata GUIText_t95_DefinitionMetadata =
 	, GUIText_t95_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3208/* methodStart */
+	, 3207/* methodStart */
 	, -1/* eventStart */
-	, 783/* propertyStart */
+	, 781/* propertyStart */
 
 };
 TypeInfo GUIText_t95_il2cpp_TypeInfo = 
@@ -6186,10 +6186,10 @@ extern TypeInfo CharacterInfo_t662_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_CharacterInfoMethodDeclarations.h"
 static const EncodedMethodIndex CharacterInfo_t662_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType CharacterInfo_t662_0_0_0;
@@ -6204,9 +6204,9 @@ const Il2CppTypeDefinitionMetadata CharacterInfo_t662_DefinitionMetadata =
 	, CharacterInfo_t662_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2061/* fieldStart */
-	, 3209/* methodStart */
+	, 3208/* methodStart */
 	, -1/* eventStart */
-	, 784/* propertyStart */
+	, 782/* propertyStart */
 
 };
 TypeInfo CharacterInfo_t662_il2cpp_TypeInfo = 
@@ -6293,9 +6293,9 @@ const Il2CppTypeDefinitionMetadata Font_t277_DefinitionMetadata =
 	, Font_t277_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2069/* fieldStart */
-	, 3225/* methodStart */
+	, 3224/* methodStart */
 	, 2/* eventStart */
-	, 800/* propertyStart */
+	, 798/* propertyStart */
 
 };
 TypeInfo Font_t277_il2cpp_TypeInfo = 
@@ -6358,19 +6358,19 @@ extern TypeInfo FontTextureRebuildCallback_t663_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Font_FontTextureRebuildCallbackMethodDeclarations.h"
 static const EncodedMethodIndex FontTextureRebuildCallback_t663_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1325,
-	1326,
-	1327,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1312,
+	1313,
+	1314,
 };
 static Il2CppInterfaceOffsetPair FontTextureRebuildCallback_t663_InterfacesOffsets[] = 
 {
@@ -6390,7 +6390,7 @@ const Il2CppTypeDefinitionMetadata FontTextureRebuildCallback_t663_DefinitionMet
 	, FontTextureRebuildCallback_t663_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3232/* methodStart */
+	, 3231/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -6455,10 +6455,10 @@ extern TypeInfo UICharInfo_t524_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_UICharInfoMethodDeclarations.h"
 static const EncodedMethodIndex UICharInfo_t524_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType UICharInfo_t524_0_0_0;
@@ -6538,10 +6538,10 @@ extern TypeInfo UILineInfo_t522_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_UILineInfoMethodDeclarations.h"
 static const EncodedMethodIndex UILineInfo_t522_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType UILineInfo_t522_0_0_0;
@@ -6622,10 +6622,10 @@ extern TypeInfo TextGenerator_t391_il2cpp_TypeInfo;
 static const EncodedMethodIndex TextGenerator_t391_VTable[5] = 
 {
 	501,
-	1328,
+	1315,
 	503,
 	504,
-	1329,
+	1316,
 };
 extern const Il2CppType IDisposable_t153_0_0_0;
 static const Il2CppType* TextGenerator_t391_InterfacesTypeInfos[] = 
@@ -6650,9 +6650,9 @@ const Il2CppTypeDefinitionMetadata TextGenerator_t391_DefinitionMetadata =
 	, TextGenerator_t391_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2075/* fieldStart */
-	, 3236/* methodStart */
+	, 3235/* methodStart */
 	, -1/* eventStart */
-	, 803/* propertyStart */
+	, 801/* propertyStart */
 
 };
 TypeInfo TextGenerator_t391_il2cpp_TypeInfo = 
@@ -6715,8 +6715,10 @@ extern TypeInfo RenderMode_t666_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_RenderModeMethodDeclarations.h"
 static const EncodedMethodIndex RenderMode_t666_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6736,8 +6738,6 @@ static const EncodedMethodIndex RenderMode_t666_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair RenderMode_t666_InterfacesOffsets[] = 
 {
@@ -6847,9 +6847,9 @@ const Il2CppTypeDefinitionMetadata Canvas_t237_DefinitionMetadata =
 	, Canvas_t237_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2090/* fieldStart */
-	, 3270/* methodStart */
+	, 3269/* methodStart */
 	, 3/* eventStart */
-	, 812/* propertyStart */
+	, 810/* propertyStart */
 
 };
 TypeInfo Canvas_t237_il2cpp_TypeInfo = 
@@ -6912,19 +6912,19 @@ extern TypeInfo WillRenderCanvases_t504_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Canvas_WillRenderCanvasesMethodDeclarations.h"
 static const EncodedMethodIndex WillRenderCanvases_t504_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1330,
-	1331,
-	1332,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1317,
+	1318,
+	1319,
 };
 static Il2CppInterfaceOffsetPair WillRenderCanvases_t504_InterfacesOffsets[] = 
 {
@@ -6944,7 +6944,7 @@ const Il2CppTypeDefinitionMetadata WillRenderCanvases_t504_DefinitionMetadata =
 	, WillRenderCanvases_t504_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3289/* methodStart */
+	, 3288/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7017,7 +7017,7 @@ const Il2CppTypeDefinitionMetadata ICanvasRaycastFilter_t511_DefinitionMetadata 
 	, NULL/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3293/* methodStart */
+	, 3292/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7086,7 +7086,7 @@ static const EncodedMethodIndex CanvasGroup_t510_VTable[5] =
 	502,
 	506,
 	507,
-	1333,
+	1320,
 };
 static const Il2CppType* CanvasGroup_t510_InterfacesTypeInfos[] = 
 {
@@ -7110,9 +7110,9 @@ const Il2CppTypeDefinitionMetadata CanvasGroup_t510_DefinitionMetadata =
 	, CanvasGroup_t510_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3294/* methodStart */
+	, 3293/* methodStart */
 	, -1/* eventStart */
-	, 821/* propertyStart */
+	, 819/* propertyStart */
 
 };
 TypeInfo CanvasGroup_t510_il2cpp_TypeInfo = 
@@ -7175,10 +7175,10 @@ extern TypeInfo UIVertex_t390_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_UIVertexMethodDeclarations.h"
 static const EncodedMethodIndex UIVertex_t390_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType UIVertex_t390_0_0_0;
@@ -7193,7 +7193,7 @@ const Il2CppTypeDefinitionMetadata UIVertex_t390_DefinitionMetadata =
 	, UIVertex_t390_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2091/* fieldStart */
-	, 3298/* methodStart */
+	, 3297/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7277,9 +7277,9 @@ const Il2CppTypeDefinitionMetadata CanvasRenderer_t281_DefinitionMetadata =
 	, CanvasRenderer_t281_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3299/* methodStart */
+	, 3298/* methodStart */
 	, -1/* eventStart */
-	, 824/* propertyStart */
+	, 822/* propertyStart */
 
 };
 TypeInfo CanvasRenderer_t281_il2cpp_TypeInfo = 
@@ -7361,7 +7361,7 @@ const Il2CppTypeDefinitionMetadata RectTransformUtility_t512_DefinitionMetadata 
 	, RectTransformUtility_t512_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2100/* fieldStart */
-	, 3310/* methodStart */
+	, 3309/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7429,7 +7429,7 @@ static const EncodedMethodIndex Request_t667_VTable[4] =
 	501,
 	502,
 	503,
-	1334,
+	1321,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType Request_t667_0_0_0;
@@ -7445,9 +7445,9 @@ const Il2CppTypeDefinitionMetadata Request_t667_DefinitionMetadata =
 	, Request_t667_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2101/* fieldStart */
-	, 3323/* methodStart */
+	, 3322/* methodStart */
 	, -1/* eventStart */
-	, 826/* propertyStart */
+	, 824/* propertyStart */
 
 };
 TypeInfo Request_t667_il2cpp_TypeInfo = 
@@ -7509,14 +7509,14 @@ extern TypeInfo ResponseBase_t668_il2cpp_TypeInfo;
 // UnityEngine.Networking.Match.ResponseBase
 #include "UnityEngine_UnityEngine_Networking_Match_ResponseBaseMethodDeclarations.h"
 extern const Il2CppType List_1_t3306_0_0_0;
-extern const Il2CppType ResponseBase_ParseJSONList_m21328_gp_0_0_0_0;
-extern const Il2CppRGCTXDefinition ResponseBase_ParseJSONList_m21328_RGCTXData[6] = 
+extern const Il2CppType ResponseBase_ParseJSONList_m21315_gp_0_0_0_0;
+extern const Il2CppRGCTXDefinition ResponseBase_ParseJSONList_m21315_RGCTXData[6] = 
 {
 	{ IL2CPP_RGCTX_DATA_CLASS, 3729 }/* Class */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4459 }/* Method */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4460 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4445 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4446 }/* Method */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 3730 }/* Class */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4461 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4447 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
 static const EncodedMethodIndex ResponseBase_t668_VTable[5] = 
@@ -7541,7 +7541,7 @@ const Il2CppTypeDefinitionMetadata ResponseBase_t668_DefinitionMetadata =
 	, ResponseBase_t668_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3328/* methodStart */
+	, 3327/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7682,8 +7682,8 @@ static const EncodedMethodIndex Response_t669_VTable[5] =
 	501,
 	502,
 	503,
-	1335,
-	1336,
+	1322,
+	1323,
 };
 static const Il2CppType* Response_t669_InterfacesTypeInfos[] = 
 {
@@ -7707,9 +7707,9 @@ const Il2CppTypeDefinitionMetadata Response_t669_DefinitionMetadata =
 	, Response_t669_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2105/* fieldStart */
-	, 3336/* methodStart */
+	, 3335/* methodStart */
 	, -1/* eventStart */
-	, 829/* propertyStart */
+	, 827/* propertyStart */
 
 };
 TypeInfo Response_t669_il2cpp_TypeInfo = 
@@ -7775,8 +7775,8 @@ static const EncodedMethodIndex BasicResponse_t670_VTable[5] =
 	501,
 	502,
 	503,
-	1335,
-	1336,
+	1322,
+	1323,
 };
 static Il2CppInterfaceOffsetPair BasicResponse_t670_InterfacesOffsets[] = 
 {
@@ -7796,7 +7796,7 @@ const Il2CppTypeDefinitionMetadata BasicResponse_t670_DefinitionMetadata =
 	, BasicResponse_t670_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3343/* methodStart */
+	, 3342/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7864,7 +7864,7 @@ static const EncodedMethodIndex CreateMatchRequest_t672_VTable[4] =
 	501,
 	502,
 	503,
-	1337,
+	1324,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType CreateMatchRequest_t672_0_0_0;
@@ -7880,9 +7880,9 @@ const Il2CppTypeDefinitionMetadata CreateMatchRequest_t672_DefinitionMetadata =
 	, CreateMatchRequest_t672_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2107/* fieldStart */
-	, 3344/* methodStart */
+	, 3343/* methodStart */
 	, -1/* eventStart */
-	, 831/* propertyStart */
+	, 829/* propertyStart */
 
 };
 TypeInfo CreateMatchRequest_t672_il2cpp_TypeInfo = 
@@ -7948,8 +7948,8 @@ static const EncodedMethodIndex CreateMatchResponse_t673_VTable[5] =
 	501,
 	502,
 	503,
-	1338,
-	1339,
+	1325,
+	1326,
 };
 static Il2CppInterfaceOffsetPair CreateMatchResponse_t673_InterfacesOffsets[] = 
 {
@@ -7969,9 +7969,9 @@ const Il2CppTypeDefinitionMetadata CreateMatchResponse_t673_DefinitionMetadata =
 	, CreateMatchResponse_t673_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2112/* fieldStart */
-	, 3355/* methodStart */
+	, 3354/* methodStart */
 	, -1/* eventStart */
-	, 836/* propertyStart */
+	, 834/* propertyStart */
 
 };
 TypeInfo CreateMatchResponse_t673_il2cpp_TypeInfo = 
@@ -8037,7 +8037,7 @@ static const EncodedMethodIndex JoinMatchRequest_t674_VTable[4] =
 	501,
 	502,
 	503,
-	1340,
+	1327,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType JoinMatchRequest_t674_0_0_0;
@@ -8053,9 +8053,9 @@ const Il2CppTypeDefinitionMetadata JoinMatchRequest_t674_DefinitionMetadata =
 	, JoinMatchRequest_t674_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2118/* fieldStart */
-	, 3370/* methodStart */
+	, 3369/* methodStart */
 	, -1/* eventStart */
-	, 842/* propertyStart */
+	, 840/* propertyStart */
 
 };
 TypeInfo JoinMatchRequest_t674_il2cpp_TypeInfo = 
@@ -8121,8 +8121,8 @@ static const EncodedMethodIndex JoinMatchResponse_t675_VTable[5] =
 	501,
 	502,
 	503,
-	1341,
-	1342,
+	1328,
+	1329,
 };
 static Il2CppInterfaceOffsetPair JoinMatchResponse_t675_InterfacesOffsets[] = 
 {
@@ -8142,9 +8142,9 @@ const Il2CppTypeDefinitionMetadata JoinMatchResponse_t675_DefinitionMetadata =
 	, JoinMatchResponse_t675_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2120/* fieldStart */
-	, 3376/* methodStart */
+	, 3375/* methodStart */
 	, -1/* eventStart */
-	, 844/* propertyStart */
+	, 842/* propertyStart */
 
 };
 TypeInfo JoinMatchResponse_t675_il2cpp_TypeInfo = 
@@ -8210,7 +8210,7 @@ static const EncodedMethodIndex DestroyMatchRequest_t676_VTable[4] =
 	501,
 	502,
 	503,
-	1343,
+	1330,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType DestroyMatchRequest_t676_0_0_0;
@@ -8226,9 +8226,9 @@ const Il2CppTypeDefinitionMetadata DestroyMatchRequest_t676_DefinitionMetadata =
 	, DestroyMatchRequest_t676_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2126/* fieldStart */
-	, 3391/* methodStart */
+	, 3390/* methodStart */
 	, -1/* eventStart */
-	, 850/* propertyStart */
+	, 848/* propertyStart */
 
 };
 TypeInfo DestroyMatchRequest_t676_il2cpp_TypeInfo = 
@@ -8294,7 +8294,7 @@ static const EncodedMethodIndex DropConnectionRequest_t677_VTable[4] =
 	501,
 	502,
 	503,
-	1344,
+	1331,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType DropConnectionRequest_t677_0_0_0;
@@ -8310,9 +8310,9 @@ const Il2CppTypeDefinitionMetadata DropConnectionRequest_t677_DefinitionMetadata
 	, DropConnectionRequest_t677_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2127/* fieldStart */
-	, 3395/* methodStart */
+	, 3394/* methodStart */
 	, -1/* eventStart */
-	, 851/* propertyStart */
+	, 849/* propertyStart */
 
 };
 TypeInfo DropConnectionRequest_t677_il2cpp_TypeInfo = 
@@ -8378,7 +8378,7 @@ static const EncodedMethodIndex ListMatchRequest_t678_VTable[4] =
 	501,
 	502,
 	503,
-	1345,
+	1332,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType ListMatchRequest_t678_0_0_0;
@@ -8394,9 +8394,9 @@ const Il2CppTypeDefinitionMetadata ListMatchRequest_t678_DefinitionMetadata =
 	, ListMatchRequest_t678_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2129/* fieldStart */
-	, 3401/* methodStart */
+	, 3400/* methodStart */
 	, -1/* eventStart */
-	, 853/* propertyStart */
+	, 851/* propertyStart */
 
 };
 TypeInfo ListMatchRequest_t678_il2cpp_TypeInfo = 
@@ -8462,8 +8462,8 @@ static const EncodedMethodIndex MatchDirectConnectInfo_t679_VTable[5] =
 	501,
 	502,
 	503,
-	1346,
-	1347,
+	1333,
+	1334,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType MatchDirectConnectInfo_t679_0_0_0;
@@ -8479,9 +8479,9 @@ const Il2CppTypeDefinitionMetadata MatchDirectConnectInfo_t679_DefinitionMetadat
 	, MatchDirectConnectInfo_t679_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2135/* fieldStart */
-	, 3412/* methodStart */
+	, 3411/* methodStart */
 	, -1/* eventStart */
-	, 859/* propertyStart */
+	, 857/* propertyStart */
 
 };
 TypeInfo MatchDirectConnectInfo_t679_il2cpp_TypeInfo = 
@@ -8547,8 +8547,8 @@ static const EncodedMethodIndex MatchDesc_t681_VTable[5] =
 	501,
 	502,
 	503,
-	1348,
-	1349,
+	1335,
+	1336,
 };
 extern Il2CppImage g_UnityEngine_dll_Image;
 extern const Il2CppType MatchDesc_t681_0_0_0;
@@ -8564,9 +8564,9 @@ const Il2CppTypeDefinitionMetadata MatchDesc_t681_DefinitionMetadata =
 	, MatchDesc_t681_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2138/* fieldStart */
-	, 3421/* methodStart */
+	, 3420/* methodStart */
 	, -1/* eventStart */
-	, 862/* propertyStart */
+	, 860/* propertyStart */
 
 };
 TypeInfo MatchDesc_t681_il2cpp_TypeInfo = 
@@ -8632,8 +8632,8 @@ static const EncodedMethodIndex ListMatchResponse_t683_VTable[5] =
 	501,
 	502,
 	503,
-	1350,
-	1351,
+	1337,
+	1338,
 };
 static Il2CppInterfaceOffsetPair ListMatchResponse_t683_InterfacesOffsets[] = 
 {
@@ -8653,9 +8653,9 @@ const Il2CppTypeDefinitionMetadata ListMatchResponse_t683_DefinitionMetadata =
 	, ListMatchResponse_t683_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2147/* fieldStart */
-	, 3439/* methodStart */
+	, 3438/* methodStart */
 	, -1/* eventStart */
-	, 871/* propertyStart */
+	, 869/* propertyStart */
 
 };
 TypeInfo ListMatchResponse_t683_il2cpp_TypeInfo = 
@@ -8718,8 +8718,10 @@ extern TypeInfo AppID_t684_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Networking_Types_AppIDMethodDeclarations.h"
 static const EncodedMethodIndex AppID_t684_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8739,8 +8741,6 @@ static const EncodedMethodIndex AppID_t684_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AppID_t684_InterfacesOffsets[] = 
 {
@@ -8829,8 +8829,10 @@ extern TypeInfo SourceID_t685_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Networking_Types_SourceIDMethodDeclarations.h"
 static const EncodedMethodIndex SourceID_t685_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8850,8 +8852,6 @@ static const EncodedMethodIndex SourceID_t685_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair SourceID_t685_InterfacesOffsets[] = 
 {
@@ -8937,8 +8937,10 @@ extern TypeInfo NetworkID_t686_il2cpp_TypeInfo;
 #include "UnityEngine_UnityEngine_Networking_Types_NetworkIDMethodDeclarations.h"
 static const EncodedMethodIndex NetworkID_t686_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8958,8 +8960,6 @@ static const EncodedMethodIndex NetworkID_t686_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair NetworkID_t686_InterfacesOffsets[] = 
 {

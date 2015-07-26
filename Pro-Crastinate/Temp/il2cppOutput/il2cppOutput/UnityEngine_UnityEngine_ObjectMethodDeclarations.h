@@ -33,17 +33,17 @@ extern "C" Object_t73 * Object_Internal_InstantiateSingle_m3300 (Object_t * __th
 // UnityEngine.Object UnityEngine.Object::INTERNAL_CALL_Internal_InstantiateSingle(UnityEngine.Object,UnityEngine.Vector3&,UnityEngine.Quaternion&)
 extern "C" Object_t73 * Object_INTERNAL_CALL_Internal_InstantiateSingle_m3301 (Object_t * __this /* static, unused */, Object_t73 * ___data, Vector3_t40 * ___pos, Quaternion_t106 * ___rot, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object,System.Single)
-extern "C" void Object_Destroy_m691 (Object_t * __this /* static, unused */, Object_t73 * ___obj, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Object_Destroy_m690 (Object_t * __this /* static, unused */, Object_t73 * ___obj, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
-extern "C" void Object_Destroy_m423 (Object_t * __this /* static, unused */, Object_t73 * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Object_Destroy_m422 (Object_t * __this /* static, unused */, Object_t73 * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object,System.Boolean)
 extern "C" void Object_DestroyImmediate_m3302 (Object_t * __this /* static, unused */, Object_t73 * ___obj, bool ___allowDestroyingAssets, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object)
 extern "C" void Object_DestroyImmediate_m2543 (Object_t * __this /* static, unused */, Object_t73 * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
-extern "C" ObjectU5BU5D_t179* Object_FindObjectsOfType_m554 (Object_t * __this /* static, unused */, Type_t * ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" ObjectU5BU5D_t179* Object_FindObjectsOfType_m553 (Object_t * __this /* static, unused */, Type_t * ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Object::get_name()
-extern "C" String_t* Object_get_name_m499 (Object_t73 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* Object_get_name_m498 (Object_t73 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::set_name(System.String)
 extern "C" void Object_set_name_m2601 (Object_t73 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::DontDestroyOnLoad(UnityEngine.Object)
@@ -53,7 +53,7 @@ extern "C" void Object_set_hideFlags_m2513 (Object_t73 * __this, int32_t ___valu
 // System.Void UnityEngine.Object::DestroyObject(UnityEngine.Object,System.Single)
 extern "C" void Object_DestroyObject_m3303 (Object_t * __this /* static, unused */, Object_t73 * ___obj, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::DestroyObject(UnityEngine.Object)
-extern "C" void Object_DestroyObject_m592 (Object_t * __this /* static, unused */, Object_t73 * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Object_DestroyObject_m591 (Object_t * __this /* static, unused */, Object_t73 * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Object::ToString()
 extern "C" String_t* Object_ToString_m3304 (Object_t73 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Object::Equals(System.Object)
@@ -69,17 +69,17 @@ extern "C" int32_t Object_GetInstanceID_m3309 (Object_t73 * __this, const Method
 // System.IntPtr UnityEngine.Object::GetCachedPtr()
 extern "C" IntPtr_t Object_GetCachedPtr_m3310 (Object_t73 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
-extern "C" Object_t73 * Object_Instantiate_m591 (Object_t * __this /* static, unused */, Object_t73 * ___original, Vector3_t40  ___position, Quaternion_t106  ___rotation, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Object_t73 * Object_Instantiate_m590 (Object_t * __this /* static, unused */, Object_t73 * ___original, Vector3_t40  ___position, Quaternion_t106  ___rotation, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Object::CheckNullArgument(System.Object,System.String)
 extern "C" void Object_CheckNullArgument_m3311 (Object_t * __this /* static, unused */, Object_t * ___arg, String_t* ___message, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Object UnityEngine.Object::FindObjectOfType(System.Type)
 extern "C" Object_t73 * Object_FindObjectOfType_m3312 (Object_t * __this /* static, unused */, Type_t * ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
-extern "C" bool Object_op_Implicit_m545 (Object_t * __this /* static, unused */, Object_t73 * ___exists, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool Object_op_Implicit_m544 (Object_t * __this /* static, unused */, Object_t73 * ___exists, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
-extern "C" bool Object_op_Equality_m467 (Object_t * __this /* static, unused */, Object_t73 * ___x, Object_t73 * ___y, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool Object_op_Equality_m466 (Object_t * __this /* static, unused */, Object_t73 * ___x, Object_t73 * ___y, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
-extern "C" bool Object_op_Inequality_m539 (Object_t * __this /* static, unused */, Object_t73 * ___x, Object_t73 * ___y, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool Object_op_Inequality_m538 (Object_t * __this /* static, unused */, Object_t73 * ___x, Object_t73 * ___y, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 void Object_t73_marshal(const Object_t73& unmarshaled, Object_t73_marshaled& marshaled);
 void Object_t73_marshal_back(const Object_t73_marshaled& marshaled, Object_t73& unmarshaled);
 void Object_t73_marshal_cleanup(Object_t73_marshaled& marshaled);

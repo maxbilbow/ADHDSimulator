@@ -90,7 +90,7 @@ extern "C" bool String_Equals_m6462 (String_t* __this, Object_t * ___obj, const 
 // System.Boolean System.String::Equals(System.String)
 extern "C" bool String_Equals_m5107 (String_t* __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Char System.String::get_Chars(System.Int32)
-extern "C" uint16_t String_get_Chars_m471 (String_t* __this, int32_t ___index, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" uint16_t String_get_Chars_m470 (String_t* __this, int32_t ___index, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.String::CopyTo(System.Int32,System.Char[],System.Int32,System.Int32)
 extern "C" void String_CopyTo_m6463 (String_t* __this, int32_t ___sourceIndex, CharU5BU5D_t163* ___destination, int32_t ___destinationIndex, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Char[] System.String::ToCharArray()
@@ -98,7 +98,7 @@ extern "C" CharU5BU5D_t163* String_ToCharArray_m4066 (String_t* __this, const Me
 // System.Char[] System.String::ToCharArray(System.Int32,System.Int32)
 extern "C" CharU5BU5D_t163* String_ToCharArray_m6464 (String_t* __this, int32_t ___startIndex, int32_t ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String[] System.String::Split(System.Char[])
-extern "C" StringU5BU5D_t31* String_Split_m469 (String_t* __this, CharU5BU5D_t163* ___separator, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" StringU5BU5D_t31* String_Split_m468 (String_t* __this, CharU5BU5D_t163* ___separator, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String[] System.String::Split(System.Char[],System.Int32)
 extern "C" StringU5BU5D_t31* String_Split_m6465 (String_t* __this, CharU5BU5D_t163* ___separator, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String[] System.String::Split(System.Char[],System.Int32,System.StringSplitOptions)
@@ -106,7 +106,7 @@ extern "C" StringU5BU5D_t31* String_Split_m6466 (String_t* __this, CharU5BU5D_t1
 // System.String[] System.String::Split(System.String[],System.Int32,System.StringSplitOptions)
 extern "C" StringU5BU5D_t31* String_Split_m6467 (String_t* __this, StringU5BU5D_t31* ___separator, int32_t ___count, int32_t ___options, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String[] System.String::Split(System.String[],System.StringSplitOptions)
-extern "C" StringU5BU5D_t31* String_Split_m464 (String_t* __this, StringU5BU5D_t31* ___separator, int32_t ___options, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" StringU5BU5D_t31* String_Split_m463 (String_t* __this, StringU5BU5D_t31* ___separator, int32_t ___options, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Substring(System.Int32)
 extern "C" String_t* String_Substring_m2509 (String_t* __this, int32_t ___startIndex, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Substring(System.Int32,System.Int32)
@@ -114,11 +114,11 @@ extern "C" String_t* String_Substring_m2485 (String_t* __this, int32_t ___startI
 // System.String System.String::SubstringUnchecked(System.Int32,System.Int32)
 extern "C" String_t* String_SubstringUnchecked_m6468 (String_t* __this, int32_t ___startIndex, int32_t ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Trim()
-extern "C" String_t* String_Trim_m466 (String_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Trim_m465 (String_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Trim(System.Char[])
 extern "C" String_t* String_Trim_m4014 (String_t* __this, CharU5BU5D_t163* ___trimChars, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::TrimStart(System.Char[])
-extern "C" String_t* String_TrimStart_m508 (String_t* __this, CharU5BU5D_t163* ___trimChars, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_TrimStart_m507 (String_t* __this, CharU5BU5D_t163* ___trimChars, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::TrimEnd(System.Char[])
 extern "C" String_t* String_TrimEnd_m6119 (String_t* __this, CharU5BU5D_t163* ___trimChars, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.String::FindNotWhiteSpace(System.Int32,System.Int32,System.Int32)
@@ -198,7 +198,7 @@ extern "C" int32_t String_LastIndexOf_m6487 (String_t* __this, String_t* ___valu
 // System.Boolean System.String::Contains(System.String)
 extern "C" bool String_Contains_m2531 (String_t* __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::IsNullOrEmpty(System.String)
-extern "C" bool String_IsNullOrEmpty_m465 (Object_t * __this /* static, unused */, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool String_IsNullOrEmpty_m464 (Object_t * __this /* static, unused */, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::PadRight(System.Int32,System.Char)
 extern "C" String_t* String_PadRight_m6488 (String_t* __this, int32_t ___totalWidth, uint16_t ___paddingChar, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::StartsWith(System.String)
@@ -206,7 +206,7 @@ extern "C" bool String_StartsWith_m969 (String_t* __this, String_t* ___value, co
 // System.String System.String::Replace(System.Char,System.Char)
 extern "C" String_t* String_Replace_m4111 (String_t* __this, uint16_t ___oldChar, uint16_t ___newChar, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Replace(System.String,System.String)
-extern "C" String_t* String_Replace_m479 (String_t* __this, String_t* ___oldValue, String_t* ___newValue, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Replace_m478 (String_t* __this, String_t* ___oldValue, String_t* ___newValue, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::ReplaceUnchecked(System.String,System.String)
 extern "C" String_t* String_ReplaceUnchecked_m6489 (String_t* __this, String_t* ___oldValue, String_t* ___newValue, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::ReplaceFallback(System.String,System.String,System.Int32)
@@ -230,11 +230,11 @@ extern "C" String_t* String_ToString_m4020 (String_t* __this, const MethodInfo* 
 // System.String System.String::ToString(System.IFormatProvider)
 extern "C" String_t* String_ToString_m6494 (String_t* __this, Object_t * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.String,System.Object)
-extern "C" String_t* String_Format_m480 (Object_t * __this /* static, unused */, String_t* ___format, Object_t * ___arg0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Format_m479 (Object_t * __this /* static, unused */, String_t* ___format, Object_t * ___arg0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.String,System.Object,System.Object)
 extern "C" String_t* String_Format_m6495 (Object_t * __this /* static, unused */, String_t* ___format, Object_t * ___arg0, Object_t * ___arg1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.String,System.Object,System.Object,System.Object)
-extern "C" String_t* String_Format_m452 (Object_t * __this /* static, unused */, String_t* ___format, Object_t * ___arg0, Object_t * ___arg1, Object_t * ___arg2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Format_m451 (Object_t * __this /* static, unused */, String_t* ___format, Object_t * ___arg0, Object_t * ___arg1, Object_t * ___arg2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.String,System.Object[])
 extern "C" String_t* String_Format_m2619 (Object_t * __this /* static, unused */, String_t* ___format, ObjectU5BU5D_t146* ___args, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Format(System.IFormatProvider,System.String,System.Object[])
@@ -242,31 +242,31 @@ extern "C" String_t* String_Format_m5152 (Object_t * __this /* static, unused */
 // System.Text.StringBuilder System.String::FormatHelper(System.Text.StringBuilder,System.IFormatProvider,System.String,System.Object[])
 extern "C" StringBuilder_t164 * String_FormatHelper_m6496 (Object_t * __this /* static, unused */, StringBuilder_t164 * ___result, Object_t * ___provider, String_t* ___format, ObjectU5BU5D_t146* ___args, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.Object,System.Object)
-extern "C" String_t* String_Concat_m599 (Object_t * __this /* static, unused */, Object_t * ___arg0, Object_t * ___arg1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Concat_m598 (Object_t * __this /* static, unused */, Object_t * ___arg0, Object_t * ___arg1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.Object,System.Object,System.Object)
-extern "C" String_t* String_Concat_m425 (Object_t * __this /* static, unused */, Object_t * ___arg0, Object_t * ___arg1, Object_t * ___arg2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Concat_m424 (Object_t * __this /* static, unused */, Object_t * ___arg0, Object_t * ___arg1, Object_t * ___arg2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.String,System.String)
-extern "C" String_t* String_Concat_m420 (Object_t * __this /* static, unused */, String_t* ___str0, String_t* ___str1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Concat_m419 (Object_t * __this /* static, unused */, String_t* ___str0, String_t* ___str1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.String,System.String,System.String)
-extern "C" String_t* String_Concat_m439 (Object_t * __this /* static, unused */, String_t* ___str0, String_t* ___str1, String_t* ___str2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Concat_m438 (Object_t * __this /* static, unused */, String_t* ___str0, String_t* ___str1, String_t* ___str2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.String,System.String,System.String,System.String)
 extern "C" String_t* String_Concat_m992 (Object_t * __this /* static, unused */, String_t* ___str0, String_t* ___str1, String_t* ___str2, String_t* ___str3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.Object[])
-extern "C" String_t* String_Concat_m419 (Object_t * __this /* static, unused */, ObjectU5BU5D_t146* ___args, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Concat_m418 (Object_t * __this /* static, unused */, ObjectU5BU5D_t146* ___args, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Concat(System.String[])
-extern "C" String_t* String_Concat_m509 (Object_t * __this /* static, unused */, StringU5BU5D_t31* ___values, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Concat_m508 (Object_t * __this /* static, unused */, StringU5BU5D_t31* ___values, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::ConcatInternal(System.String[],System.Int32)
 extern "C" String_t* String_ConcatInternal_m6497 (Object_t * __this /* static, unused */, StringU5BU5D_t31* ___values, int32_t ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Insert(System.Int32,System.String)
 extern "C" String_t* String_Insert_m2507 (String_t* __this, int32_t ___startIndex, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Join(System.String,System.String[])
-extern "C" String_t* String_Join_m462 (Object_t * __this /* static, unused */, String_t* ___separator, StringU5BU5D_t31* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* String_Join_m461 (Object_t * __this /* static, unused */, String_t* ___separator, StringU5BU5D_t31* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::Join(System.String,System.String[],System.Int32,System.Int32)
 extern "C" String_t* String_Join_m6498 (Object_t * __this /* static, unused */, String_t* ___separator, StringU5BU5D_t31* ___value, int32_t ___startIndex, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.String::JoinUnchecked(System.String,System.String[],System.Int32,System.Int32)
 extern "C" String_t* String_JoinUnchecked_m6499 (Object_t * __this /* static, unused */, String_t* ___separator, StringU5BU5D_t31* ___value, int32_t ___startIndex, int32_t ___count, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.String::get_Length()
-extern "C" int32_t String_get_Length_m472 (String_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" int32_t String_get_Length_m471 (String_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.String::ParseFormatSpecifier(System.String,System.Int32&,System.Int32&,System.Int32&,System.Boolean&,System.String&)
 extern "C" void String_ParseFormatSpecifier_m6500 (Object_t * __this /* static, unused */, String_t* ___str, int32_t* ___ptr, int32_t* ___n, int32_t* ___width, bool* ___left_align, String_t** ___format, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.String::ParseDecimal(System.String,System.Int32&)
@@ -318,6 +318,6 @@ extern "C" StringU5BU5D_t31* String_InternalSplit_m6519 (String_t* __this, CharU
 // System.String System.String::InternalAllocateStr(System.Int32)
 extern "C" String_t* String_InternalAllocateStr_m6520 (Object_t * __this /* static, unused */, int32_t ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::op_Equality(System.String,System.String)
-extern "C" bool String_op_Equality_m418 (Object_t * __this /* static, unused */, String_t* ___a, String_t* ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool String_op_Equality_m417 (Object_t * __this /* static, unused */, String_t* ___a, String_t* ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.String::op_Inequality(System.String,System.String)
 extern "C" bool String_op_Inequality_m1061 (Object_t * __this /* static, unused */, String_t* ___a, String_t* ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;

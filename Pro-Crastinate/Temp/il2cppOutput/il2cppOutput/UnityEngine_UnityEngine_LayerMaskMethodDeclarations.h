@@ -24,6 +24,6 @@ extern "C" int32_t LayerMask_NameToLayer_m2687 (Object_t * __this /* static, unu
 // System.Int32 UnityEngine.LayerMask::GetMask(System.String[])
 extern "C" int32_t LayerMask_GetMask_m2688 (Object_t * __this /* static, unused */, StringU5BU5D_t31* ___layerNames, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.LayerMask::op_Implicit(UnityEngine.LayerMask)
-extern "C" int32_t LayerMask_op_Implicit_m537 (Object_t * __this /* static, unused */, LayerMask_t47  ___mask, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" int32_t LayerMask_op_Implicit_m536 (Object_t * __this /* static, unused */, LayerMask_t47  ___mask, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.LayerMask UnityEngine.LayerMask::op_Implicit(System.Int32)
 extern "C" LayerMask_t47  LayerMask_op_Implicit_m2327 (Object_t * __this /* static, unused */, int32_t ___intVal, const MethodInfo* method) IL2CPP_METHOD_ATTR;

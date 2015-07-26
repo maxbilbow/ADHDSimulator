@@ -16,14 +16,14 @@ struct AsyncCallback_t382;
 #include "mscorlib_System_IntPtr.h"
 
 // System.Void System.Reflection.MonoProperty/Getter`2<System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
-extern "C" void Getter_2__ctor_m20026_gshared (Getter_2_t2603 * __this, Object_t * ___object, IntPtr_t ___method, const MethodInfo* method);
-#define Getter_2__ctor_m20026(__this, ___object, ___method, method) (( void (*) (Getter_2_t2603 *, Object_t *, IntPtr_t, const MethodInfo*))Getter_2__ctor_m20026_gshared)(__this, ___object, ___method, method)
+extern "C" void Getter_2__ctor_m20014_gshared (Getter_2_t2603 * __this, Object_t * ___object, IntPtr_t ___method, const MethodInfo* method);
+#define Getter_2__ctor_m20014(__this, ___object, ___method, method) (( void (*) (Getter_2_t2603 *, Object_t *, IntPtr_t, const MethodInfo*))Getter_2__ctor_m20014_gshared)(__this, ___object, ___method, method)
 // R System.Reflection.MonoProperty/Getter`2<System.Object,System.Object>::Invoke(T)
-extern "C" Object_t * Getter_2_Invoke_m20027_gshared (Getter_2_t2603 * __this, Object_t * ____this, const MethodInfo* method);
-#define Getter_2_Invoke_m20027(__this, ____this, method) (( Object_t * (*) (Getter_2_t2603 *, Object_t *, const MethodInfo*))Getter_2_Invoke_m20027_gshared)(__this, ____this, method)
+extern "C" Object_t * Getter_2_Invoke_m20015_gshared (Getter_2_t2603 * __this, Object_t * ____this, const MethodInfo* method);
+#define Getter_2_Invoke_m20015(__this, ____this, method) (( Object_t * (*) (Getter_2_t2603 *, Object_t *, const MethodInfo*))Getter_2_Invoke_m20015_gshared)(__this, ____this, method)
 // System.IAsyncResult System.Reflection.MonoProperty/Getter`2<System.Object,System.Object>::BeginInvoke(T,System.AsyncCallback,System.Object)
-extern "C" Object_t * Getter_2_BeginInvoke_m20028_gshared (Getter_2_t2603 * __this, Object_t * ____this, AsyncCallback_t382 * ___callback, Object_t * ___object, const MethodInfo* method);
-#define Getter_2_BeginInvoke_m20028(__this, ____this, ___callback, ___object, method) (( Object_t * (*) (Getter_2_t2603 *, Object_t *, AsyncCallback_t382 *, Object_t *, const MethodInfo*))Getter_2_BeginInvoke_m20028_gshared)(__this, ____this, ___callback, ___object, method)
+extern "C" Object_t * Getter_2_BeginInvoke_m20016_gshared (Getter_2_t2603 * __this, Object_t * ____this, AsyncCallback_t382 * ___callback, Object_t * ___object, const MethodInfo* method);
+#define Getter_2_BeginInvoke_m20016(__this, ____this, ___callback, ___object, method) (( Object_t * (*) (Getter_2_t2603 *, Object_t *, AsyncCallback_t382 *, Object_t *, const MethodInfo*))Getter_2_BeginInvoke_m20016_gshared)(__this, ____this, ___callback, ___object, method)
 // R System.Reflection.MonoProperty/Getter`2<System.Object,System.Object>::EndInvoke(System.IAsyncResult)
-extern "C" Object_t * Getter_2_EndInvoke_m20029_gshared (Getter_2_t2603 * __this, Object_t * ___result, const MethodInfo* method);
-#define Getter_2_EndInvoke_m20029(__this, ___result, method) (( Object_t * (*) (Getter_2_t2603 *, Object_t *, const MethodInfo*))Getter_2_EndInvoke_m20029_gshared)(__this, ___result, method)
+extern "C" Object_t * Getter_2_EndInvoke_m20017_gshared (Getter_2_t2603 * __this, Object_t * ___result, const MethodInfo* method);
+#define Getter_2_EndInvoke_m20017(__this, ___result, method) (( Object_t * (*) (Getter_2_t2603 *, Object_t *, const MethodInfo*))Getter_2_EndInvoke_m20017_gshared)(__this, ___result, method)

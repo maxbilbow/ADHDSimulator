@@ -20,13 +20,13 @@ extern "C" float PlayerPrefs_GetFloat_m3359 (Object_t * __this /* static, unused
 // System.Single UnityEngine.PlayerPrefs::GetFloat(System.String)
 extern "C" float PlayerPrefs_GetFloat_m1058 (Object_t * __this /* static, unused */, String_t* ___key, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.PlayerPrefs::SetString(System.String,System.String)
-extern "C" void PlayerPrefs_SetString_m504 (Object_t * __this /* static, unused */, String_t* ___key, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void PlayerPrefs_SetString_m503 (Object_t * __this /* static, unused */, String_t* ___key, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
 extern "C" String_t* PlayerPrefs_GetString_m3360 (Object_t * __this /* static, unused */, String_t* ___key, String_t* ___defaultValue, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.PlayerPrefs::GetString(System.String)
-extern "C" String_t* PlayerPrefs_GetString_m501 (Object_t * __this /* static, unused */, String_t* ___key, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* PlayerPrefs_GetString_m500 (Object_t * __this /* static, unused */, String_t* ___key, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
-extern "C" bool PlayerPrefs_HasKey_m500 (Object_t * __this /* static, unused */, String_t* ___key, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool PlayerPrefs_HasKey_m499 (Object_t * __this /* static, unused */, String_t* ___key, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.PlayerPrefs::DeleteKey(System.String)
 extern "C" void PlayerPrefs_DeleteKey_m1062 (Object_t * __this /* static, unused */, String_t* ___key, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.PlayerPrefs::Save()

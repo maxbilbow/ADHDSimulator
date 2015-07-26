@@ -18,14 +18,14 @@ struct AsyncCallback_t382;
 #include "mscorlib_System_Collections_Generic_KeyValuePair_2_gen_7.h"
 
 // System.Void System.Collections.Generic.Dictionary`2/Transform`1<System.Object,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::.ctor(System.Object,System.IntPtr)
-extern "C" void Transform_1__ctor_m18711_gshared (Transform_1_t2452 * __this, Object_t * ___object, IntPtr_t ___method, const MethodInfo* method);
-#define Transform_1__ctor_m18711(__this, ___object, ___method, method) (( void (*) (Transform_1_t2452 *, Object_t *, IntPtr_t, const MethodInfo*))Transform_1__ctor_m18711_gshared)(__this, ___object, ___method, method)
+extern "C" void Transform_1__ctor_m18699_gshared (Transform_1_t2452 * __this, Object_t * ___object, IntPtr_t ___method, const MethodInfo* method);
+#define Transform_1__ctor_m18699(__this, ___object, ___method, method) (( void (*) (Transform_1_t2452 *, Object_t *, IntPtr_t, const MethodInfo*))Transform_1__ctor_m18699_gshared)(__this, ___object, ___method, method)
 // TRet System.Collections.Generic.Dictionary`2/Transform`1<System.Object,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::Invoke(TKey,TValue)
-extern "C" KeyValuePair_2_t2006  Transform_1_Invoke_m18712_gshared (Transform_1_t2452 * __this, Object_t * ___key, KeyValuePair_2_t2006  ___value, const MethodInfo* method);
-#define Transform_1_Invoke_m18712(__this, ___key, ___value, method) (( KeyValuePair_2_t2006  (*) (Transform_1_t2452 *, Object_t *, KeyValuePair_2_t2006 , const MethodInfo*))Transform_1_Invoke_m18712_gshared)(__this, ___key, ___value, method)
+extern "C" KeyValuePair_2_t2006  Transform_1_Invoke_m18700_gshared (Transform_1_t2452 * __this, Object_t * ___key, KeyValuePair_2_t2006  ___value, const MethodInfo* method);
+#define Transform_1_Invoke_m18700(__this, ___key, ___value, method) (( KeyValuePair_2_t2006  (*) (Transform_1_t2452 *, Object_t *, KeyValuePair_2_t2006 , const MethodInfo*))Transform_1_Invoke_m18700_gshared)(__this, ___key, ___value, method)
 // System.IAsyncResult System.Collections.Generic.Dictionary`2/Transform`1<System.Object,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::BeginInvoke(TKey,TValue,System.AsyncCallback,System.Object)
-extern "C" Object_t * Transform_1_BeginInvoke_m18713_gshared (Transform_1_t2452 * __this, Object_t * ___key, KeyValuePair_2_t2006  ___value, AsyncCallback_t382 * ___callback, Object_t * ___object, const MethodInfo* method);
-#define Transform_1_BeginInvoke_m18713(__this, ___key, ___value, ___callback, ___object, method) (( Object_t * (*) (Transform_1_t2452 *, Object_t *, KeyValuePair_2_t2006 , AsyncCallback_t382 *, Object_t *, const MethodInfo*))Transform_1_BeginInvoke_m18713_gshared)(__this, ___key, ___value, ___callback, ___object, method)
+extern "C" Object_t * Transform_1_BeginInvoke_m18701_gshared (Transform_1_t2452 * __this, Object_t * ___key, KeyValuePair_2_t2006  ___value, AsyncCallback_t382 * ___callback, Object_t * ___object, const MethodInfo* method);
+#define Transform_1_BeginInvoke_m18701(__this, ___key, ___value, ___callback, ___object, method) (( Object_t * (*) (Transform_1_t2452 *, Object_t *, KeyValuePair_2_t2006 , AsyncCallback_t382 *, Object_t *, const MethodInfo*))Transform_1_BeginInvoke_m18701_gshared)(__this, ___key, ___value, ___callback, ___object, method)
 // TRet System.Collections.Generic.Dictionary`2/Transform`1<System.Object,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>,System.Collections.Generic.KeyValuePair`2<System.Object,System.Object>>::EndInvoke(System.IAsyncResult)
-extern "C" KeyValuePair_2_t2006  Transform_1_EndInvoke_m18714_gshared (Transform_1_t2452 * __this, Object_t * ___result, const MethodInfo* method);
-#define Transform_1_EndInvoke_m18714(__this, ___result, method) (( KeyValuePair_2_t2006  (*) (Transform_1_t2452 *, Object_t *, const MethodInfo*))Transform_1_EndInvoke_m18714_gshared)(__this, ___result, method)
+extern "C" KeyValuePair_2_t2006  Transform_1_EndInvoke_m18702_gshared (Transform_1_t2452 * __this, Object_t * ___result, const MethodInfo* method);
+#define Transform_1_EndInvoke_m18702(__this, ___result, method) (( KeyValuePair_2_t2006  (*) (Transform_1_t2452 *, Object_t *, const MethodInfo*))Transform_1_EndInvoke_m18702_gshared)(__this, ___result, method)

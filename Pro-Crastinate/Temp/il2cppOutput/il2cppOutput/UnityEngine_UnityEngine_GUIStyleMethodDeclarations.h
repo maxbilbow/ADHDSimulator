@@ -26,7 +26,7 @@ struct GUIContent_t520;
 #include "UnityEngine_UnityEngine_Rect.h"
 
 // System.Void UnityEngine.GUIStyle::.ctor()
-extern "C" void GUIStyle__ctor_m426 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void GUIStyle__ctor_m425 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUIStyle::.cctor()
 extern "C" void GUIStyle__cctor_m2962 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUIStyle::Finalize()
@@ -46,13 +46,13 @@ extern "C" IntPtr_t GUIStyle_GetStyleStatePtr_m2969 (GUIStyle_t147 * __this, int
 // UnityEngine.RectOffset UnityEngine.GUIStyle::get_margin()
 extern "C" RectOffset_t150 * GUIStyle_get_margin_m2970 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.RectOffset UnityEngine.GUIStyle::get_padding()
-extern "C" RectOffset_t150 * GUIStyle_get_padding_m430 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" RectOffset_t150 * GUIStyle_get_padding_m429 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.IntPtr UnityEngine.GUIStyle::GetRectOffsetPtr(System.Int32)
 extern "C" IntPtr_t GUIStyle_GetRectOffsetPtr_m2971 (GUIStyle_t147 * __this, int32_t ___idx, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUIStyle::set_alignment(UnityEngine.TextAnchor)
-extern "C" void GUIStyle_set_alignment_m429 (GUIStyle_t147 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void GUIStyle_set_alignment_m428 (GUIStyle_t147 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUIStyle::set_wordWrap(System.Boolean)
-extern "C" void GUIStyle_set_wordWrap_m428 (GUIStyle_t147 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void GUIStyle_set_wordWrap_m427 (GUIStyle_t147 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.GUIStyle::get_fixedWidth()
 extern "C" float GUIStyle_get_fixedWidth_m2972 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.GUIStyle::get_fixedHeight()
@@ -70,7 +70,7 @@ extern "C" float GUIStyle_Internal_GetLineHeight_m2978 (Object_t * __this /* sta
 // System.Void UnityEngine.GUIStyle::set_fontSize(System.Int32)
 extern "C" void GUIStyle_set_fontSize_m1046 (GUIStyle_t147 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUIStyle::set_richText(System.Boolean)
-extern "C" void GUIStyle_set_richText_m427 (GUIStyle_t147 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void GUIStyle_set_richText_m426 (GUIStyle_t147 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.GUIStyle::get_lineHeight()
 extern "C" float GUIStyle_get_lineHeight_m2979 (GUIStyle_t147 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.GUIStyle::SetDefaultFont(UnityEngine.Font)

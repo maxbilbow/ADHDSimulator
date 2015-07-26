@@ -116,10 +116,10 @@ namespace RMX
 //		}
 
 		static void LateLogs() {
-			if (Singletons.Settings.IsDebugging(RMXTests.EarlyInits))
+			if (Singletons.GameController.IsDebugging(RMXTests.EarlyInits))
 			foreach (Log log in _lateLogs) {
 				try {
-					if (Singletons.Settings.IsDebugging(log.feature)) {
+					if (Singletons.GameController.IsDebugging(log.feature)) {
 						var message = TextFormatter.Format(  ": _LATE_ " + log.message);
 						Debug.Log(new Log(log.feature, message));
 					}
@@ -172,8 +172,8 @@ namespace RMX
 
 		public static bool WillLog(System.Enum feature, string message) {
 			message = Stack (message);
-			if (Singletons.Settings != null) {
-				if (Singletons.Settings.IsDebugging (feature)) {
+			if (Singletons.GameControllerInitialized) {
+				if (Singletons.GameController.IsDebugging (feature)) {
 					_log = new Log (feature, message);
 					return true;
 				} else {
@@ -189,13 +189,13 @@ namespace RMX
 
 		private static bool timesUp {
 			get{ 
-				return Singletons.Settings != null && Singletons.Settings.DebugHUD && Queue.Count > 0 && Time.fixedTime - _startedAt > Singletons.Settings.MaxDisplayTime;
+				return Singletons.GameControllerInitialized && Singletons.GameController.DebugHUD && Queue.Count > 0 && Time.fixedTime - _startedAt > Singletons.GameController.MaxDisplayTime;
 			}
 		}
 
 		private static int timeRemaining {
 			get {
-				return Singletons.Settings != null ? (int) (Singletons.Settings.MaxDisplayTime - (Time.fixedTime - _startedAt)) : 1;
+				return Singletons.GameControllerInitialized ? (int) (Singletons.GameController.MaxDisplayTime - (Time.fixedTime - _startedAt)) : 1;
 			}
 		}
 
@@ -233,7 +233,7 @@ namespace RMX
 			}
 
 			void OnGUI () {
-				if (Singletons.Settings != null && Singletons.Settings.DebugHUD && Queue.Count > 0) {
+				if (Singletons.GameController != null && Singletons.GameController.DebugHUD && Queue.Count > 0) {
 					var text = timeRemaining + " – " + Queue[0];
 					GUIStyle style = new GUIStyle ();
 	//				style.fontSize = 50;

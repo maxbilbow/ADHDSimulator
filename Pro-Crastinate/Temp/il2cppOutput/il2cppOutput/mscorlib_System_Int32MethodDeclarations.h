@@ -92,7 +92,7 @@ extern "C" Exception_t143 * Int32_GetFormatException_m6208 (Object_t * __this /*
 // System.Boolean System.Int32::Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Boolean,System.Int32&,System.Exception&)
 extern "C" bool Int32_Parse_m6209 (Object_t * __this /* static, unused */, String_t* ___s, int32_t ___style, Object_t * ___fp, bool ___tryParse, int32_t* ___result, Exception_t143 ** ___exc, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Int32::Parse(System.String)
-extern "C" int32_t Int32_Parse_m505 (Object_t * __this /* static, unused */, String_t* ___s, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" int32_t Int32_Parse_m504 (Object_t * __this /* static, unused */, String_t* ___s, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Int32::Parse(System.String,System.Globalization.NumberStyles,System.IFormatProvider)
 extern "C" int32_t Int32_Parse_m6210 (Object_t * __this /* static, unused */, String_t* ___s, int32_t ___style, Object_t * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Int32::TryParse(System.String,System.Int32&)
@@ -100,7 +100,7 @@ extern "C" bool Int32_TryParse_m6211 (Object_t * __this /* static, unused */, St
 // System.Boolean System.Int32::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.Int32&)
 extern "C" bool Int32_TryParse_m6104 (Object_t * __this /* static, unused */, String_t* ___s, int32_t ___style, Object_t * ___provider, int32_t* ___result, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Int32::ToString()
-extern "C" String_t* Int32_ToString_m506 (int32_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* Int32_ToString_m505 (int32_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Int32::ToString(System.IFormatProvider)
 extern "C" String_t* Int32_ToString_m4077 (int32_t* __this, Object_t * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Int32::ToString(System.String)

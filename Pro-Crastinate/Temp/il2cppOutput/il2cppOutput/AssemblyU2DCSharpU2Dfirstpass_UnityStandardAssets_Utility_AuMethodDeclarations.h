@@ -8,4 +8,4 @@
 struct ReplacementDefinition_t76;
 
 // System.Void UnityStandardAssets.Utility.AutoMobileShaderSwitch/ReplacementDefinition::.ctor()
-extern "C" void ReplacementDefinition__ctor_m265 (ReplacementDefinition_t76 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void ReplacementDefinition__ctor_m264 (ReplacementDefinition_t76 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

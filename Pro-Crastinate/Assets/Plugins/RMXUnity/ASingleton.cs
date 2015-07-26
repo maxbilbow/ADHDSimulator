@@ -46,12 +46,6 @@ namespace RMX
 			}
 		}
 
-		public static IGameController Settings {
-			get {
-				return _gameController;
-			}
-		}
-
 
 		public abstract class ASingleton<T> : RMXObject, ISingleton, EventListener
 		where T : RMXObject, EventListener, ISingleton 
@@ -81,13 +75,7 @@ namespace RMX
 					return _gameController;
 				}
 			}
-	
-			protected virtual IGameController settings {
-				get {
-					return _gameController;
-				}
-			}
-	
+  	
 			public static T current {
 				get {
 					if (IsInitialized) {

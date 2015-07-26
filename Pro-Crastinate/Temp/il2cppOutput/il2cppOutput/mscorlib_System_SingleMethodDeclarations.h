@@ -70,11 +70,11 @@ extern "C" bool Single_IsNegativeInfinity_m6540 (Object_t * __this /* static, un
 // System.Boolean System.Single::IsPositiveInfinity(System.Single)
 extern "C" bool Single_IsPositiveInfinity_m6541 (Object_t * __this /* static, unused */, float ___f, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single System.Single::Parse(System.String)
-extern "C" float Single_Parse_m502 (Object_t * __this /* static, unused */, String_t* ___s, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Single_Parse_m501 (Object_t * __this /* static, unused */, String_t* ___s, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single System.Single::Parse(System.String,System.IFormatProvider)
 extern "C" float Single_Parse_m6542 (Object_t * __this /* static, unused */, String_t* ___s, Object_t * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Single::ToString()
-extern "C" String_t* Single_ToString_m507 (float* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* Single_ToString_m506 (float* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Single::ToString(System.IFormatProvider)
 extern "C" String_t* Single_ToString_m4080 (float* __this, Object_t * ___provider, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Single::ToString(System.String)

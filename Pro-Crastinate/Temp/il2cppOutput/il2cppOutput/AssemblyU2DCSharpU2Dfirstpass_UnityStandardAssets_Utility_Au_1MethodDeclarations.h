@@ -8,6 +8,6 @@
 struct AutoMobileShaderSwitch_t79;
 
 // System.Void UnityStandardAssets.Utility.AutoMobileShaderSwitch::.ctor()
-extern "C" void AutoMobileShaderSwitch__ctor_m267 (AutoMobileShaderSwitch_t79 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void AutoMobileShaderSwitch__ctor_m266 (AutoMobileShaderSwitch_t79 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityStandardAssets.Utility.AutoMobileShaderSwitch::OnEnable()
-extern "C" void AutoMobileShaderSwitch_OnEnable_m268 (AutoMobileShaderSwitch_t79 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void AutoMobileShaderSwitch_OnEnable_m267 (AutoMobileShaderSwitch_t79 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

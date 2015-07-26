@@ -106,11 +106,14 @@ namespace Procrastinate {
 
 			infoButton = GetComponentInChildren<Button> ();
 			infoButton.onClick.AddListener (toggleInfo);
+//			if (GameController.current.willPauseOnLoad) {
+//				BuildWychd();
+//			}
 
-			if (GameController.current.willPauseOnLoad) {
-//				PauseCanvas.current.Pause(true);
-				gameController.PauseGame (GameController.current.willPauseOnLoad, SoundEffects.Args.MusicKeepsPlaying);
-			}
+			if (SavedData.Get<float>(UserData.gd_current_session) > 0) {
+				GameController.current.PauseGame (true, Event.FirstPause);
+			}	
+
 //			_canvasReady = true;
 		}
 
@@ -134,18 +137,17 @@ namespace Procrastinate {
 //		}
 
 		void Update () {
-			canvas.enabled = GameController.current.isPaused;
+			if (canvas != null)
+				canvas.enabled = GameController.current.isPaused;
 		}
 		//		bool newSession = true;
 		void OnGUI(){
 			if (canvas.enabled) {
 				if (_wychd == null) {// && _timeText == null) {
-					if (GameController.current.willPauseOnLoad)
-						BuildWychd();
-					else {
-						GameController.current.PauseGame (false, null);
+						BuildWychd(Event.FirstPause);
+//						GameController.current.PauseGame (false, null);
 						Debug.LogWarning("timeText not initialized - game unpaused");
-					}
+
 				}
 
 				string text = !information ? _wychd : "In total you've only managed to waste " + string.Format("{0:N2}%",GameData.PercentageOfDevTimeWasted) + 
@@ -165,16 +167,16 @@ namespace Procrastinate {
 			}
 		}
 		
-		void BuildWychd () {
-			var time = SavedData.Get<float> (
-				GameController.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
+		void BuildWychd (Event args = Event.NULL) {
+			float time = 0; 
 			var activities = GameData.WhatYouCouldHaveDone (time);
 			
-			if (GameController.current.willPauseOnLoad) {
+			if (args.Equals(Event.FirstPause)) {
 				_wychd = "Congratulations. During your last session, you wasted ";
-				GameController.current.willPauseOnLoad = false;
+				time = SavedData.Get<float> (UserData.gd_current_session);
 			} else {
 				_wychd = "Congratulations. You have wasted ";
+				time = SavedData.Get<float> (UserData.gd_current_procrastination);
 			}
 			
 			_wychd += TextFormatter.TimeDescription (time);
@@ -190,7 +192,7 @@ namespace Procrastinate {
 		public override void OnEventDidStart(System.Enum theEvent, object info) {
 			if (theEvent.Equals (RMX.Event.PauseSession)) {
 				canvas.enabled = true;
-				BuildWychd();
+				BuildWychd(info is Event ? (Event) info : Event.NULL);
 
 			} else if (theEvent.Equals(RMX.Event.ResumeSession)) {
 				canvas.enabled = false;

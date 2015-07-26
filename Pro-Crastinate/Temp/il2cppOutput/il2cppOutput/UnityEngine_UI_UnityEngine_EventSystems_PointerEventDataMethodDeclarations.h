@@ -54,11 +54,11 @@ extern "C" bool PointerEventData_get_eligibleForClick_m1196 (PointerEventData_t1
 // System.Void UnityEngine.EventSystems.PointerEventData::set_eligibleForClick(System.Boolean)
 extern "C" void PointerEventData_set_eligibleForClick_m1197 (PointerEventData_t140 * __this, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.EventSystems.PointerEventData::get_pointerId()
-extern "C" int32_t PointerEventData_get_pointerId_m579 (PointerEventData_t140 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" int32_t PointerEventData_get_pointerId_m578 (PointerEventData_t140 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.EventSystems.PointerEventData::set_pointerId(System.Int32)
 extern "C" void PointerEventData_set_pointerId_m1198 (PointerEventData_t140 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2 UnityEngine.EventSystems.PointerEventData::get_position()
-extern "C" Vector2_t42  PointerEventData_get_position_m559 (PointerEventData_t140 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Vector2_t42  PointerEventData_get_position_m558 (PointerEventData_t140 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.EventSystems.PointerEventData::set_position(UnityEngine.Vector2)
 extern "C" void PointerEventData_set_position_m1199 (PointerEventData_t140 * __this, Vector2_t42  ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2 UnityEngine.EventSystems.PointerEventData::get_delta()

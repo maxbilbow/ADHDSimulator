@@ -17,7 +17,7 @@ namespace Procrastinate
 
 		static TextAsset Database {
 			get {
-				return Singletons.Settings.Database;
+				return Singletons.GameController.Database;
 			}
 		}
 

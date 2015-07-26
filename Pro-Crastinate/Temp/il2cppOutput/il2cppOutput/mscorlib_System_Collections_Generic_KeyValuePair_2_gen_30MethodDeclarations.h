@@ -14,20 +14,20 @@ struct String_t;
 #include "UnityEngine_UnityEngine_TextEditor_TextEditOp.h"
 
 // System.Void System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.TextEditor/TextEditOp>::.ctor(TKey,TValue)
-extern "C" void KeyValuePair_2__ctor_m19047_gshared (KeyValuePair_2_t2482 * __this, Object_t * ___key, int32_t ___value, const MethodInfo* method);
-#define KeyValuePair_2__ctor_m19047(__this, ___key, ___value, method) (( void (*) (KeyValuePair_2_t2482 *, Object_t *, int32_t, const MethodInfo*))KeyValuePair_2__ctor_m19047_gshared)(__this, ___key, ___value, method)
+extern "C" void KeyValuePair_2__ctor_m19035_gshared (KeyValuePair_2_t2482 * __this, Object_t * ___key, int32_t ___value, const MethodInfo* method);
+#define KeyValuePair_2__ctor_m19035(__this, ___key, ___value, method) (( void (*) (KeyValuePair_2_t2482 *, Object_t *, int32_t, const MethodInfo*))KeyValuePair_2__ctor_m19035_gshared)(__this, ___key, ___value, method)
 // TKey System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.TextEditor/TextEditOp>::get_Key()
-extern "C" Object_t * KeyValuePair_2_get_Key_m19048_gshared (KeyValuePair_2_t2482 * __this, const MethodInfo* method);
-#define KeyValuePair_2_get_Key_m19048(__this, method) (( Object_t * (*) (KeyValuePair_2_t2482 *, const MethodInfo*))KeyValuePair_2_get_Key_m19048_gshared)(__this, method)
+extern "C" Object_t * KeyValuePair_2_get_Key_m19036_gshared (KeyValuePair_2_t2482 * __this, const MethodInfo* method);
+#define KeyValuePair_2_get_Key_m19036(__this, method) (( Object_t * (*) (KeyValuePair_2_t2482 *, const MethodInfo*))KeyValuePair_2_get_Key_m19036_gshared)(__this, method)
 // System.Void System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.TextEditor/TextEditOp>::set_Key(TKey)
-extern "C" void KeyValuePair_2_set_Key_m19049_gshared (KeyValuePair_2_t2482 * __this, Object_t * ___value, const MethodInfo* method);
-#define KeyValuePair_2_set_Key_m19049(__this, ___value, method) (( void (*) (KeyValuePair_2_t2482 *, Object_t *, const MethodInfo*))KeyValuePair_2_set_Key_m19049_gshared)(__this, ___value, method)
+extern "C" void KeyValuePair_2_set_Key_m19037_gshared (KeyValuePair_2_t2482 * __this, Object_t * ___value, const MethodInfo* method);
+#define KeyValuePair_2_set_Key_m19037(__this, ___value, method) (( void (*) (KeyValuePair_2_t2482 *, Object_t *, const MethodInfo*))KeyValuePair_2_set_Key_m19037_gshared)(__this, ___value, method)
 // TValue System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.TextEditor/TextEditOp>::get_Value()
-extern "C" int32_t KeyValuePair_2_get_Value_m19050_gshared (KeyValuePair_2_t2482 * __this, const MethodInfo* method);
-#define KeyValuePair_2_get_Value_m19050(__this, method) (( int32_t (*) (KeyValuePair_2_t2482 *, const MethodInfo*))KeyValuePair_2_get_Value_m19050_gshared)(__this, method)
+extern "C" int32_t KeyValuePair_2_get_Value_m19038_gshared (KeyValuePair_2_t2482 * __this, const MethodInfo* method);
+#define KeyValuePair_2_get_Value_m19038(__this, method) (( int32_t (*) (KeyValuePair_2_t2482 *, const MethodInfo*))KeyValuePair_2_get_Value_m19038_gshared)(__this, method)
 // System.Void System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.TextEditor/TextEditOp>::set_Value(TValue)
-extern "C" void KeyValuePair_2_set_Value_m19051_gshared (KeyValuePair_2_t2482 * __this, int32_t ___value, const MethodInfo* method);
-#define KeyValuePair_2_set_Value_m19051(__this, ___value, method) (( void (*) (KeyValuePair_2_t2482 *, int32_t, const MethodInfo*))KeyValuePair_2_set_Value_m19051_gshared)(__this, ___value, method)
+extern "C" void KeyValuePair_2_set_Value_m19039_gshared (KeyValuePair_2_t2482 * __this, int32_t ___value, const MethodInfo* method);
+#define KeyValuePair_2_set_Value_m19039(__this, ___value, method) (( void (*) (KeyValuePair_2_t2482 *, int32_t, const MethodInfo*))KeyValuePair_2_set_Value_m19039_gshared)(__this, ___value, method)
 // System.String System.Collections.Generic.KeyValuePair`2<System.Object,UnityEngine.TextEditor/TextEditOp>::ToString()
-extern "C" String_t* KeyValuePair_2_ToString_m19052_gshared (KeyValuePair_2_t2482 * __this, const MethodInfo* method);
-#define KeyValuePair_2_ToString_m19052(__this, method) (( String_t* (*) (KeyValuePair_2_t2482 *, const MethodInfo*))KeyValuePair_2_ToString_m19052_gshared)(__this, method)
+extern "C" String_t* KeyValuePair_2_ToString_m19040_gshared (KeyValuePair_2_t2482 * __this, const MethodInfo* method);
+#define KeyValuePair_2_ToString_m19040(__this, method) (( String_t* (*) (KeyValuePair_2_t2482 *, const MethodInfo*))KeyValuePair_2_ToString_m19040_gshared)(__this, method)

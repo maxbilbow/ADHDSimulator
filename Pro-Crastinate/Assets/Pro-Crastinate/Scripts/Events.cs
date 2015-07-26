@@ -10,7 +10,7 @@ namespace Procrastinate {
 //		public static Event SomethingBurst			 = new Event("SomethingBurst");
 //	}
 	public enum Event {
-		SpawnMultipleClocks	,SpawnInflatableClock , ClockIsAboutToBurst	,SomethingBurst
+		SpawnMultipleClocks	,SpawnInflatableClock , ClockIsAboutToBurst	,SomethingBurst, FirstPause, NULL
 	}
 
 }

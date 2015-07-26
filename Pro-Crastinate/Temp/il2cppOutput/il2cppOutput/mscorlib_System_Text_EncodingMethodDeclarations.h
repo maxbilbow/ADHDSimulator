@@ -62,7 +62,7 @@ extern "C" Decoder_t1403 * Encoding_GetDecoder_m9996 (Encoding_t17 * __this, con
 // System.Object System.Text.Encoding::InvokeI18N(System.String,System.Object[])
 extern "C" Object_t * Encoding_InvokeI18N_m9997 (Object_t * __this /* static, unused */, String_t* ___name, ObjectU5BU5D_t146* ___args, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.Encoding System.Text.Encoding::GetEncoding(System.Int32)
-extern "C" Encoding_t17 * Encoding_GetEncoding_m460 (Object_t * __this /* static, unused */, int32_t ___codepage, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Encoding_t17 * Encoding_GetEncoding_m459 (Object_t * __this /* static, unused */, int32_t ___codepage, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.Encoding System.Text.Encoding::GetEncoding(System.String)
 extern "C" Encoding_t17 * Encoding_GetEncoding_m4015 (Object_t * __this /* static, unused */, String_t* ___name, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 System.Text.Encoding::GetHashCode()

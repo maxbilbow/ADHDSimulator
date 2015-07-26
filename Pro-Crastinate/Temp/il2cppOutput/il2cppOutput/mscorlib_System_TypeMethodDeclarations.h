@@ -130,7 +130,7 @@ extern "C" int32_t Type_GetTypeCodeInternal_m6924 (Object_t * __this /* static, 
 // System.TypeCode System.Type::GetTypeCode(System.Type)
 extern "C" int32_t Type_GetTypeCode_m6925 (Object_t * __this /* static, unused */, Type_t * ___type, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
-extern "C" Type_t * Type_GetTypeFromHandle_m493 (Object_t * __this /* static, unused */, RuntimeTypeHandle_t1258  ___handle, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Type_t * Type_GetTypeFromHandle_m492 (Object_t * __this /* static, unused */, RuntimeTypeHandle_t1258  ___handle, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.RuntimeTypeHandle System.Type::GetTypeHandle(System.Object)
 extern "C" RuntimeTypeHandle_t1258  Type_GetTypeHandle_m6926 (Object_t * __this /* static, unused */, Object_t * ___o, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Type::type_is_subtype_of(System.Type,System.Type,System.Boolean)

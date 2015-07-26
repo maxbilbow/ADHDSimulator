@@ -20,10 +20,10 @@ struct AsyncCallback_t382;
 // System.Void System.Comparison`1<UnityEngine.UI.ICanvasElement>::.ctor(System.Object,System.IntPtr)
 // System.Comparison`1<System.Object>
 #include "mscorlib_System_Comparison_1_gen_3MethodDeclarations.h"
-#define Comparison_1__ctor_m2343(__this, ___object, ___method, method) (( void (*) (Comparison_1_t347 *, Object_t *, IntPtr_t, const MethodInfo*))Comparison_1__ctor_m11358_gshared)(__this, ___object, ___method, method)
+#define Comparison_1__ctor_m2343(__this, ___object, ___method, method) (( void (*) (Comparison_1_t347 *, Object_t *, IntPtr_t, const MethodInfo*))Comparison_1__ctor_m11357_gshared)(__this, ___object, ___method, method)
 // System.Int32 System.Comparison`1<UnityEngine.UI.ICanvasElement>::Invoke(T,T)
-#define Comparison_1_Invoke_m14876(__this, ___x, ___y, method) (( int32_t (*) (Comparison_1_t347 *, Object_t *, Object_t *, const MethodInfo*))Comparison_1_Invoke_m11359_gshared)(__this, ___x, ___y, method)
+#define Comparison_1_Invoke_m14864(__this, ___x, ___y, method) (( int32_t (*) (Comparison_1_t347 *, Object_t *, Object_t *, const MethodInfo*))Comparison_1_Invoke_m11358_gshared)(__this, ___x, ___y, method)
 // System.IAsyncResult System.Comparison`1<UnityEngine.UI.ICanvasElement>::BeginInvoke(T,T,System.AsyncCallback,System.Object)
-#define Comparison_1_BeginInvoke_m14877(__this, ___x, ___y, ___callback, ___object, method) (( Object_t * (*) (Comparison_1_t347 *, Object_t *, Object_t *, AsyncCallback_t382 *, Object_t *, const MethodInfo*))Comparison_1_BeginInvoke_m11360_gshared)(__this, ___x, ___y, ___callback, ___object, method)
+#define Comparison_1_BeginInvoke_m14865(__this, ___x, ___y, ___callback, ___object, method) (( Object_t * (*) (Comparison_1_t347 *, Object_t *, Object_t *, AsyncCallback_t382 *, Object_t *, const MethodInfo*))Comparison_1_BeginInvoke_m11359_gshared)(__this, ___x, ___y, ___callback, ___object, method)
 // System.Int32 System.Comparison`1<UnityEngine.UI.ICanvasElement>::EndInvoke(System.IAsyncResult)
-#define Comparison_1_EndInvoke_m14878(__this, ___result, method) (( int32_t (*) (Comparison_1_t347 *, Object_t *, const MethodInfo*))Comparison_1_EndInvoke_m11361_gshared)(__this, ___result, method)
+#define Comparison_1_EndInvoke_m14866(__this, ___result, method) (( int32_t (*) (Comparison_1_t347 *, Object_t *, const MethodInfo*))Comparison_1_EndInvoke_m11360_gshared)(__this, ___result, method)

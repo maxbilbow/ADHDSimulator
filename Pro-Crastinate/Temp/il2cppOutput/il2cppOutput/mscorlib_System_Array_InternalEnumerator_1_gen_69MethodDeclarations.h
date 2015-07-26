@@ -14,17 +14,17 @@ struct Array_t;
 #include "Mono_Security_Mono_Security_Protocol_Tls_Handshake_ClientCer.h"
 
 // System.Void System.Array/InternalEnumerator`1<Mono.Security.Protocol.Tls.Handshake.ClientCertificateType>::.ctor(System.Array)
-extern "C" void InternalEnumerator_1__ctor_m19446_gshared (InternalEnumerator_1_t2527 * __this, Array_t * ___array, const MethodInfo* method);
-#define InternalEnumerator_1__ctor_m19446(__this, ___array, method) (( void (*) (InternalEnumerator_1_t2527 *, Array_t *, const MethodInfo*))InternalEnumerator_1__ctor_m19446_gshared)(__this, ___array, method)
+extern "C" void InternalEnumerator_1__ctor_m19434_gshared (InternalEnumerator_1_t2527 * __this, Array_t * ___array, const MethodInfo* method);
+#define InternalEnumerator_1__ctor_m19434(__this, ___array, method) (( void (*) (InternalEnumerator_1_t2527 *, Array_t *, const MethodInfo*))InternalEnumerator_1__ctor_m19434_gshared)(__this, ___array, method)
 // System.Object System.Array/InternalEnumerator`1<Mono.Security.Protocol.Tls.Handshake.ClientCertificateType>::System.Collections.IEnumerator.get_Current()
-extern "C" Object_t * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m19447_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
-#define InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m19447(__this, method) (( Object_t * (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m19447_gshared)(__this, method)
+extern "C" Object_t * InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m19435_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
+#define InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m19435(__this, method) (( Object_t * (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_System_Collections_IEnumerator_get_Current_m19435_gshared)(__this, method)
 // System.Void System.Array/InternalEnumerator`1<Mono.Security.Protocol.Tls.Handshake.ClientCertificateType>::Dispose()
-extern "C" void InternalEnumerator_1_Dispose_m19448_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
-#define InternalEnumerator_1_Dispose_m19448(__this, method) (( void (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_Dispose_m19448_gshared)(__this, method)
+extern "C" void InternalEnumerator_1_Dispose_m19436_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
+#define InternalEnumerator_1_Dispose_m19436(__this, method) (( void (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_Dispose_m19436_gshared)(__this, method)
 // System.Boolean System.Array/InternalEnumerator`1<Mono.Security.Protocol.Tls.Handshake.ClientCertificateType>::MoveNext()
-extern "C" bool InternalEnumerator_1_MoveNext_m19449_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
-#define InternalEnumerator_1_MoveNext_m19449(__this, method) (( bool (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_MoveNext_m19449_gshared)(__this, method)
+extern "C" bool InternalEnumerator_1_MoveNext_m19437_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
+#define InternalEnumerator_1_MoveNext_m19437(__this, method) (( bool (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_MoveNext_m19437_gshared)(__this, method)
 // T System.Array/InternalEnumerator`1<Mono.Security.Protocol.Tls.Handshake.ClientCertificateType>::get_Current()
-extern "C" int32_t InternalEnumerator_1_get_Current_m19450_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
-#define InternalEnumerator_1_get_Current_m19450(__this, method) (( int32_t (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_get_Current_m19450_gshared)(__this, method)
+extern "C" int32_t InternalEnumerator_1_get_Current_m19438_gshared (InternalEnumerator_1_t2527 * __this, const MethodInfo* method);
+#define InternalEnumerator_1_get_Current_m19438(__this, method) (( int32_t (*) (InternalEnumerator_1_t2527 *, const MethodInfo*))InternalEnumerator_1_get_Current_m19438_gshared)(__this, method)

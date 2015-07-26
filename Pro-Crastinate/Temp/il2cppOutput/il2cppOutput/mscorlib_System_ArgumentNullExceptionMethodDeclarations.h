@@ -16,7 +16,7 @@ struct SerializationInfo_t809;
 // System.Void System.ArgumentNullException::.ctor()
 extern "C" void ArgumentNullException__ctor_m10278 (ArgumentNullException_t180 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.ArgumentNullException::.ctor(System.String)
-extern "C" void ArgumentNullException__ctor_m557 (ArgumentNullException_t180 * __this, String_t* ___paramName, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void ArgumentNullException__ctor_m556 (ArgumentNullException_t180 * __this, String_t* ___paramName, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.ArgumentNullException::.ctor(System.String,System.String)
 extern "C" void ArgumentNullException__ctor_m6084 (ArgumentNullException_t180 * __this, String_t* ___paramName, String_t* ___message, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.ArgumentNullException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)

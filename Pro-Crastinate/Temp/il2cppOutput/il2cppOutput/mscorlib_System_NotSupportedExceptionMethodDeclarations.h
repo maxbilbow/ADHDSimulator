@@ -14,7 +14,7 @@ struct SerializationInfo_t809;
 #include "mscorlib_System_Runtime_Serialization_StreamingContext.h"
 
 // System.Void System.NotSupportedException::.ctor()
-extern "C" void NotSupportedException__ctor_m629 (NotSupportedException_t196 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void NotSupportedException__ctor_m628 (NotSupportedException_t196 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.NotSupportedException::.ctor(System.String)
 extern "C" void NotSupportedException__ctor_m5077 (NotSupportedException_t196 * __this, String_t* ___message, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.NotSupportedException::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)

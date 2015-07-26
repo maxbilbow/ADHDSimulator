@@ -24,7 +24,7 @@ extern "C" float Mathf_Min_m2627 (Object_t * __this /* static, unused */, float 
 // System.Int32 UnityEngine.Mathf::Min(System.Int32,System.Int32)
 extern "C" int32_t Mathf_Min_m2504 (Object_t * __this /* static, unused */, int32_t ___a, int32_t ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Max(System.Single,System.Single)
-extern "C" float Mathf_Max_m675 (Object_t * __this /* static, unused */, float ___a, float ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_Max_m674 (Object_t * __this /* static, unused */, float ___a, float ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Mathf::Max(System.Int32,System.Int32)
 extern "C" int32_t Mathf_Max_m2502 (Object_t * __this /* static, unused */, int32_t ___a, int32_t ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Pow(System.Single,System.Single)
@@ -42,26 +42,26 @@ extern "C" int32_t Mathf_FloorToInt_m2639 (Object_t * __this /* static, unused *
 // System.Int32 UnityEngine.Mathf::RoundToInt(System.Single)
 extern "C" int32_t Mathf_RoundToInt_m2426 (Object_t * __this /* static, unused */, float ___f, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Sign(System.Single)
-extern "C" float Mathf_Sign_m516 (Object_t * __this /* static, unused */, float ___f, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_Sign_m515 (Object_t * __this /* static, unused */, float ___f, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
-extern "C" float Mathf_Clamp_m528 (Object_t * __this /* static, unused */, float ___value, float ___min, float ___max, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_Clamp_m527 (Object_t * __this /* static, unused */, float ___value, float ___min, float ___max, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Mathf::Clamp(System.Int32,System.Int32,System.Int32)
-extern "C" int32_t Mathf_Clamp_m560 (Object_t * __this /* static, unused */, int32_t ___value, int32_t ___min, int32_t ___max, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" int32_t Mathf_Clamp_m559 (Object_t * __this /* static, unused */, int32_t ___value, int32_t ___min, int32_t ___max, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp01(System.Single)
 extern "C" float Mathf_Clamp01_m2417 (Object_t * __this /* static, unused */, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
-extern "C" float Mathf_Lerp_m527 (Object_t * __this /* static, unused */, float ___from, float ___to, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_Lerp_m526 (Object_t * __this /* static, unused */, float ___from, float ___to, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::LerpAngle(System.Single,System.Single,System.Single)
-extern "C" float Mathf_LerpAngle_m686 (Object_t * __this /* static, unused */, float ___a, float ___b, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_LerpAngle_m685 (Object_t * __this /* static, unused */, float ___a, float ___b, float ___t, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::MoveTowards(System.Single,System.Single,System.Single)
-extern "C" float Mathf_MoveTowards_m555 (Object_t * __this /* static, unused */, float ___current, float ___target, float ___maxDelta, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_MoveTowards_m554 (Object_t * __this /* static, unused */, float ___current, float ___target, float ___maxDelta, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Mathf::Approximately(System.Single,System.Single)
 extern "C" bool Mathf_Approximately_m2311 (Object_t * __this /* static, unused */, float ___a, float ___b, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::SmoothDamp(System.Single,System.Single,System.Single&,System.Single)
-extern "C" float Mathf_SmoothDamp_m652 (Object_t * __this /* static, unused */, float ___current, float ___target, float* ___currentVelocity, float ___smoothTime, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_SmoothDamp_m651 (Object_t * __this /* static, unused */, float ___current, float ___target, float* ___currentVelocity, float ___smoothTime, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::SmoothDamp(System.Single,System.Single,System.Single&,System.Single,System.Single,System.Single)
 extern "C" float Mathf_SmoothDamp_m2562 (Object_t * __this /* static, unused */, float ___current, float ___target, float* ___currentVelocity, float ___smoothTime, float ___maxSpeed, float ___deltaTime, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Repeat(System.Single,System.Single)
-extern "C" float Mathf_Repeat_m694 (Object_t * __this /* static, unused */, float ___t, float ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_Repeat_m693 (Object_t * __this /* static, unused */, float ___t, float ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::InverseLerp(System.Single,System.Single,System.Single)
-extern "C" float Mathf_InverseLerp_m576 (Object_t * __this /* static, unused */, float ___from, float ___to, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Mathf_InverseLerp_m575 (Object_t * __this /* static, unused */, float ___from, float ___to, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;

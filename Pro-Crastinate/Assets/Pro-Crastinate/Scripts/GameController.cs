@@ -12,7 +12,7 @@ namespace Procrastinate {
 		
 		public float FingerSize = 0.3f;
 		public ClockSpawner.SpawnMode ClockSpawnMode;// = ClockSpawner.SpawnMode.Inflate;
-		public bool willPauseOnLoad = false;
+		 bool willPauseOnLoad = false;
 		public bool newPersonalBest = false;
 
 		public float updateScoresEvery = 1f;
@@ -89,19 +89,32 @@ namespace Procrastinate {
 				ClockSpawnMode = ClockSpawner.SpawnMode.Multiply;
 		}
 
+		protected override void PostStart ()
+		{
+
+		}
 		
 		void OnApplicationFocus(bool focusStatus) {
 			if (!focusStatus) {
-				PauseGame (true, null);
+				PauseGame(true);
 			}
 		}
 
 		void OnApplicationPause(bool pause) {
 			if (pause) {
-				PauseGame (true, null);
+				PauseGame(true);
 			}
 		}
 
+
+		public void PauseGame(bool Pause) {
+			if (willPauseOnLoad) {
+				PauseGame (true, Event.FirstPause);
+				willPauseOnLoad = false;
+			} else {
+				PauseGame(true, null);
+			}
+		}
 		public static void CheckForAnomalies() {
 			ClockBehaviour.CheckVisibleClocks ();
 		}
@@ -116,15 +129,20 @@ namespace Procrastinate {
 			}
 		}
 
-		public override void PauseGame(bool pause, object args = null) {
-			if (pause) {
+		public override void PauseGame(bool pause, object args) {
+			if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():args)))
+				Debug.Log (Bugger.Last);
+			if (pause && !isPaused) {
 				WillBeginEvent (RMX.Event.PauseSession, args);
 				Time.timeScale = 0;
 				DidFinishEvent (RMX.Event.PauseSession, args);
-			} else {
-				WillBeginEvent(RMX.Event.ResumeSession, args);
+			} else if (!pause && isPaused) {
+				WillBeginEvent (RMX.Event.ResumeSession, args);
 				Time.timeScale = 1;
-				DidFinishEvent(RMX.Event.ResumeSession, args);
+				willPauseOnLoad = false;
+				DidFinishEvent (RMX.Event.ResumeSession, args);
+			} else if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():args))) {
+					Debug.LogWarning ("Superflouous PauseGame(" + pause + ") call");
 			}
 
 		}
@@ -134,6 +152,7 @@ namespace Procrastinate {
 				return DebugGameDataLists;
 			else 
 				return base.IsDebugging (feature);
+		
 		}
 
 		void Update() {

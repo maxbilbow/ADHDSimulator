@@ -8,4 +8,4 @@
 struct Vector3andSpace_t80;
 
 // System.Void UnityStandardAssets.Utility.AutoMoveAndRotate/Vector3andSpace::.ctor()
-extern "C" void Vector3andSpace__ctor_m269 (Vector3andSpace_t80 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Vector3andSpace__ctor_m268 (Vector3andSpace_t80 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

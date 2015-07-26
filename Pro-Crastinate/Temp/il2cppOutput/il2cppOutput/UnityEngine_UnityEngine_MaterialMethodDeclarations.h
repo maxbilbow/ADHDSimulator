@@ -16,9 +16,9 @@ struct String_t;
 // System.Void UnityEngine.Material::.ctor(UnityEngine.Material)
 extern "C" void Material__ctor_m2600 (Material_t190 * __this, Material_t190 * ___source, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Shader UnityEngine.Material::get_shader()
-extern "C" Shader_t75 * Material_get_shader_m602 (Material_t190 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Shader_t75 * Material_get_shader_m601 (Material_t190 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Material::set_shader(UnityEngine.Shader)
-extern "C" void Material_set_shader_m604 (Material_t190 * __this, Shader_t75 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Material_set_shader_m603 (Material_t190 * __this, Shader_t75 * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Texture UnityEngine.Material::get_mainTexture()
 extern "C" Texture_t398 * Material_get_mainTexture_m2606 (Material_t190 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Texture UnityEngine.Material::GetTexture(System.String)

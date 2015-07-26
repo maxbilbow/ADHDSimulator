@@ -8,4 +8,4 @@
 struct Entry_t119;
 
 // System.Void UnityStandardAssets.Utility.TimedObjectActivator/Entry::.ctor()
-extern "C" void Entry__ctor_m360 (Entry_t119 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Entry__ctor_m359 (Entry_t119 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

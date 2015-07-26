@@ -13,5 +13,3 @@ struct IGameController_t2;
 extern "C" bool Singletons_get_GameControllerInitialized_m3 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // RMX.IGameController RMX.Singletons::get_GameController()
 extern "C" Object_t * Singletons_get_GameController_m4 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// RMX.IGameController RMX.Singletons::get_Settings()
-extern "C" Object_t * Singletons_get_Settings_m5 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;

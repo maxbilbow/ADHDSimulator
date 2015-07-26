@@ -47,7 +47,7 @@ namespace Procrastinate {
 			if (theEvent.Equals(Event.ClockIsAboutToBurst))
 				tracks ["poppy1"].Play ();
 			else if (theEvent.Equals(RMX.Event.PauseSession))
-				if (info == null || (Args) info != Args.MusicKeepsPlaying)
+				if (info == null || (!info.Equals( Args.MusicKeepsPlaying) && !info.Equals(Event.FirstPause)))
 					tracks["music"].Pause();
 		}
 

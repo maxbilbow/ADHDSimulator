@@ -8,8 +8,8 @@
 struct SimpleMouseRotator_t116;
 
 // System.Void UnityStandardAssets.Utility.SimpleMouseRotator::.ctor()
-extern "C" void SimpleMouseRotator__ctor_m354 (SimpleMouseRotator_t116 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void SimpleMouseRotator__ctor_m353 (SimpleMouseRotator_t116 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityStandardAssets.Utility.SimpleMouseRotator::Start()
-extern "C" void SimpleMouseRotator_Start_m355 (SimpleMouseRotator_t116 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void SimpleMouseRotator_Start_m354 (SimpleMouseRotator_t116 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityStandardAssets.Utility.SimpleMouseRotator::Update()
-extern "C" void SimpleMouseRotator_Update_m356 (SimpleMouseRotator_t116 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void SimpleMouseRotator_Update_m355 (SimpleMouseRotator_t116 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;

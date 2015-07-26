@@ -30,19 +30,19 @@ extern "C" void RectOffset_Cleanup_m2956 (RectOffset_t150 * __this, const Method
 // System.Int32 UnityEngine.RectOffset::get_left()
 extern "C" int32_t RectOffset_get_left_m2644 (RectOffset_t150 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.RectOffset::set_left(System.Int32)
-extern "C" void RectOffset_set_left_m434 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void RectOffset_set_left_m433 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.RectOffset::get_right()
 extern "C" int32_t RectOffset_get_right_m2957 (RectOffset_t150 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.RectOffset::set_right(System.Int32)
-extern "C" void RectOffset_set_right_m433 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void RectOffset_set_right_m432 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.RectOffset::get_top()
 extern "C" int32_t RectOffset_get_top_m2645 (RectOffset_t150 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.RectOffset::set_top(System.Int32)
-extern "C" void RectOffset_set_top_m432 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void RectOffset_set_top_m431 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.RectOffset::get_bottom()
 extern "C" int32_t RectOffset_get_bottom_m2958 (RectOffset_t150 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.RectOffset::set_bottom(System.Int32)
-extern "C" void RectOffset_set_bottom_m431 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void RectOffset_set_bottom_m430 (RectOffset_t150 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.RectOffset::get_horizontal()
 extern "C" int32_t RectOffset_get_horizontal_m2638 (RectOffset_t150 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.RectOffset::get_vertical()

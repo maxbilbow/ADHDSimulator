@@ -14,7 +14,7 @@ struct AnimationState_t649;
 #include "UnityEngine_UnityEngine_PlayMode.h"
 
 // System.Boolean UnityEngine.Animation::Play()
-extern "C" bool Animation_Play_m594 (Animation_t186 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool Animation_Play_m593 (Animation_t186 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Animation::Play(UnityEngine.PlayMode)
 extern "C" bool Animation_Play_m3453 (Animation_t186 * __this, int32_t ___mode, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Animation::PlayDefaultAnimation(UnityEngine.PlayMode)

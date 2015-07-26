@@ -18,7 +18,7 @@ struct String_t;
 // System.Void System.Diagnostics.StackTrace::.ctor()
 extern "C" void StackTrace__ctor_m7807 (StackTrace_t156 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Diagnostics.StackTrace::.ctor(System.Int32)
-extern "C" void StackTrace__ctor_m451 (StackTrace_t156 * __this, int32_t ___skipFrames, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void StackTrace__ctor_m450 (StackTrace_t156 * __this, int32_t ___skipFrames, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Diagnostics.StackTrace::.ctor(System.Int32,System.Boolean)
 extern "C" void StackTrace__ctor_m4108 (StackTrace_t156 * __this, int32_t ___skipFrames, bool ___fNeedFileInfo, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Diagnostics.StackTrace::.ctor(System.Exception,System.Boolean)

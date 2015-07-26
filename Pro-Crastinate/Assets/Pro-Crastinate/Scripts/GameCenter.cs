@@ -18,17 +18,11 @@ namespace Procrastinate {
 		void Start() {
 			GameCenterPlatform.ShowDefaultAchievementCompletionBanner (true);
 			Authenticate ();
-//			TimeBasedAchievementsShouldUpdate ();
-
-
-		
-
-		
 			UpdateGameCenterAchievements ();
-			GameController.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
-			if (GameController.current.willPauseOnLoad) {
-				GameController.current.PauseGame(true, null);
-			}
+//			GameController.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
+//			if (GameController.current.willPauseOnLoad) {
+//				GameController.current.PauseGame(true, null);
+//			}
 
 		}
 
@@ -48,14 +42,11 @@ namespace Procrastinate {
 						log += " => " + id.Key + " Should be in GC: " + successInSD + "\n";
 					}
 				}
-				if (Bugger.WillLog (RMXTests.Misc, log))
-					Debug.Log (Bugger.Last);
+
 			}
-//			foreach (KeyValuePair<UserData,string> id in UniqueID) {
-//				if (!CheckAchievementsWithGameCenter (id.Key) && SavedData.Get<bool> (id.Key)) 
-//					ReportProgress (id.Key);
-//
-//			}
+			if (Bugger.WillLog (RMXTests.Misc, log))
+				Debug.Log (Bugger.Last);
+
 		}
 
 		public override void OnEventDidStart(System.Enum theEvent, object info) {

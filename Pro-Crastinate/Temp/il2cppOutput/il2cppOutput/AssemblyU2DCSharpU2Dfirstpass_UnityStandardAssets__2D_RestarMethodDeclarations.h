@@ -10,6 +10,6 @@ struct Restarter_t48;
 struct Collider2D_t139;
 
 // System.Void UnityStandardAssets._2D.Restarter::.ctor()
-extern "C" void Restarter__ctor_m129 (Restarter_t48 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Restarter__ctor_m128 (Restarter_t48 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityStandardAssets._2D.Restarter::OnTriggerEnter2D(UnityEngine.Collider2D)
-extern "C" void Restarter_OnTriggerEnter2D_m130 (Restarter_t48 * __this, Collider2D_t139 * ___other, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Restarter_OnTriggerEnter2D_m129 (Restarter_t48 * __this, Collider2D_t139 * ___other, const MethodInfo* method) IL2CPP_METHOD_ATTR;

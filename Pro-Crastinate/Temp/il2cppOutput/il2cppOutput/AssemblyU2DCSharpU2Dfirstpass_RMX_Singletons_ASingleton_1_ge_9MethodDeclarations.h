@@ -30,27 +30,24 @@ extern "C" bool ASingleton_1_get_IsInitialized_m11128_gshared (Object_t * __this
 // RMX.IGameController RMX.Singletons/ASingleton`1<System.Object>::get_gameController()
 extern "C" Object_t * ASingleton_1_get_gameController_m11129_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
 #define ASingleton_1_get_gameController_m11129(__this, method) (( Object_t * (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_get_gameController_m11129_gshared)(__this, method)
-// RMX.IGameController RMX.Singletons/ASingleton`1<System.Object>::get_settings()
-extern "C" Object_t * ASingleton_1_get_settings_m11130_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
-#define ASingleton_1_get_settings_m11130(__this, method) (( Object_t * (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_get_settings_m11130_gshared)(__this, method)
 // T RMX.Singletons/ASingleton`1<System.Object>::get_current()
-extern "C" Object_t * ASingleton_1_get_current_m11131_gshared (Object_t * __this /* static, unused */, const MethodInfo* method);
-#define ASingleton_1_get_current_m11131(__this /* static, unused */, method) (( Object_t * (*) (Object_t * /* static, unused */, const MethodInfo*))ASingleton_1_get_current_m11131_gshared)(__this /* static, unused */, method)
+extern "C" Object_t * ASingleton_1_get_current_m11130_gshared (Object_t * __this /* static, unused */, const MethodInfo* method);
+#define ASingleton_1_get_current_m11130(__this /* static, unused */, method) (( Object_t * (*) (Object_t * /* static, unused */, const MethodInfo*))ASingleton_1_get_current_m11130_gshared)(__this /* static, unused */, method)
 // System.Boolean RMX.Singletons/ASingleton`1<System.Object>::get_Destroyed()
-extern "C" bool ASingleton_1_get_Destroyed_m11132_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
-#define ASingleton_1_get_Destroyed_m11132(__this, method) (( bool (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_get_Destroyed_m11132_gshared)(__this, method)
+extern "C" bool ASingleton_1_get_Destroyed_m11131_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
+#define ASingleton_1_get_Destroyed_m11131(__this, method) (( bool (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_get_Destroyed_m11131_gshared)(__this, method)
 // T RMX.Singletons/ASingleton`1<System.Object>::Initialize()
-extern "C" Object_t * ASingleton_1_Initialize_m11133_gshared (Object_t * __this /* static, unused */, const MethodInfo* method);
-#define ASingleton_1_Initialize_m11133(__this /* static, unused */, method) (( Object_t * (*) (Object_t * /* static, unused */, const MethodInfo*))ASingleton_1_Initialize_m11133_gshared)(__this /* static, unused */, method)
+extern "C" Object_t * ASingleton_1_Initialize_m11132_gshared (Object_t * __this /* static, unused */, const MethodInfo* method);
+#define ASingleton_1_Initialize_m11132(__this /* static, unused */, method) (( Object_t * (*) (Object_t * /* static, unused */, const MethodInfo*))ASingleton_1_Initialize_m11132_gshared)(__this /* static, unused */, method)
 // System.Void RMX.Singletons/ASingleton`1<System.Object>::MainInitCheck()
-extern "C" void ASingleton_1_MainInitCheck_m11134_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
-#define ASingleton_1_MainInitCheck_m11134(__this, method) (( void (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_MainInitCheck_m11134_gshared)(__this, method)
+extern "C" void ASingleton_1_MainInitCheck_m11133_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
+#define ASingleton_1_MainInitCheck_m11133(__this, method) (( void (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_MainInitCheck_m11133_gshared)(__this, method)
 // System.Void RMX.Singletons/ASingleton`1<System.Object>::Awake()
-extern "C" void ASingleton_1_Awake_m11135_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
-#define ASingleton_1_Awake_m11135(__this, method) (( void (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_Awake_m11135_gshared)(__this, method)
+extern "C" void ASingleton_1_Awake_m11134_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
+#define ASingleton_1_Awake_m11134(__this, method) (( void (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_Awake_m11134_gshared)(__this, method)
 // System.String RMX.Singletons/ASingleton`1<System.Object>::RMX.ISingleton.get_name()
-extern "C" String_t* ASingleton_1_RMX_ISingleton_get_name_m11136_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
-#define ASingleton_1_RMX_ISingleton_get_name_m11136(__this, method) (( String_t* (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_RMX_ISingleton_get_name_m11136_gshared)(__this, method)
+extern "C" String_t* ASingleton_1_RMX_ISingleton_get_name_m11135_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
+#define ASingleton_1_RMX_ISingleton_get_name_m11135(__this, method) (( String_t* (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_RMX_ISingleton_get_name_m11135_gshared)(__this, method)
 // UnityEngine.GameObject RMX.Singletons/ASingleton`1<System.Object>::RMX.ISingleton.get_gameObject()
-extern "C" GameObject_t9 * ASingleton_1_RMX_ISingleton_get_gameObject_m11137_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
-#define ASingleton_1_RMX_ISingleton_get_gameObject_m11137(__this, method) (( GameObject_t9 * (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_RMX_ISingleton_get_gameObject_m11137_gshared)(__this, method)
+extern "C" GameObject_t9 * ASingleton_1_RMX_ISingleton_get_gameObject_m11136_gshared (ASingleton_1_t1932 * __this, const MethodInfo* method);
+#define ASingleton_1_RMX_ISingleton_get_gameObject_m11136(__this, method) (( GameObject_t9 * (*) (ASingleton_1_t1932 *, const MethodInfo*))ASingleton_1_RMX_ISingleton_get_gameObject_m11136_gshared)(__this, method)

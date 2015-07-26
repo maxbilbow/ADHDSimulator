@@ -1,4 +1,4 @@
-//Generated on : 26/07/2015 14:06:44
+//Generated on : 26/07/2015 14:41:42
 void RegisterAllStrippedInternalCalls()
 {
 	//Start Registrations for type : UnityEngine.AnchoredJoint2D

@@ -12,7 +12,7 @@ struct Type_t;
 struct String_t;
 
 // System.Void System.Object::.ctor()
-extern "C" void Object__ctor_m413 (Object_t * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Object__ctor_m412 (Object_t * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Object::Equals(System.Object)
 extern "C" bool Object_Equals_m6162 (Object_t * __this, Object_t * ___obj, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean System.Object::Equals(System.Object,System.Object)
@@ -22,7 +22,7 @@ extern "C" void Object_Finalize_m3979 (Object_t * __this, const MethodInfo* meth
 // System.Int32 System.Object::GetHashCode()
 extern "C" int32_t Object_GetHashCode_m6163 (Object_t * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Type System.Object::GetType()
-extern "C" Type_t * Object_GetType_m486 (Object_t * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Type_t * Object_GetType_m485 (Object_t * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Object System.Object::MemberwiseClone()
 extern "C" Object_t * Object_MemberwiseClone_m6164 (Object_t * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Object::ToString()

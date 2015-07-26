@@ -106,7 +106,7 @@ const Il2CppTypeDefinitionMetadata Locale_t898_DefinitionMetadata =
 	, Locale_t898_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3948/* methodStart */
+	, 3947/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -180,10 +180,10 @@ static const Il2CppType* BigInteger_t900_il2cpp_TypeInfo__nestedTypes[3] =
 };
 static const EncodedMethodIndex BigInteger_t900_VTable[4] = 
 {
-	1591,
+	1578,
 	502,
-	1592,
-	1593,
+	1579,
+	1580,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType BigInteger_t900_0_0_0;
@@ -199,9 +199,9 @@ const Il2CppTypeDefinitionMetadata BigInteger_t900_DefinitionMetadata =
 	, BigInteger_t900_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2561/* fieldStart */
-	, 3949/* methodStart */
+	, 3948/* methodStart */
 	, -1/* eventStart */
-	, 949/* propertyStart */
+	, 947/* propertyStart */
 
 };
 TypeInfo BigInteger_t900_il2cpp_TypeInfo = 
@@ -264,8 +264,10 @@ extern TypeInfo Sign_t899_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Math_BigInteger_SignMethodDeclarations.h"
 static const EncodedMethodIndex Sign_t899_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -285,8 +287,6 @@ static const EncodedMethodIndex Sign_t899_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 extern const Il2CppType IFormattable_t1898_0_0_0;
 extern const Il2CppType IConvertible_t1901_0_0_0;
@@ -396,7 +396,7 @@ const Il2CppTypeDefinitionMetadata ModulusRing_t901_DefinitionMetadata =
 	, ModulusRing_t901_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2569/* fieldStart */
-	, 3993/* methodStart */
+	, 3992/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -479,7 +479,7 @@ const Il2CppTypeDefinitionMetadata Kernel_t902_DefinitionMetadata =
 	, Kernel_t902_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 3999/* methodStart */
+	, 3998/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -544,8 +544,10 @@ extern TypeInfo ConfidenceFactor_t903_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Math_Prime_ConfidenceFactorMethodDeclarations.h"
 static const EncodedMethodIndex ConfidenceFactor_t903_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -565,8 +567,6 @@ static const EncodedMethodIndex ConfidenceFactor_t903_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair ConfidenceFactor_t903_InterfacesOffsets[] = 
 {
@@ -671,7 +671,7 @@ const Il2CppTypeDefinitionMetadata PrimalityTests_t904_DefinitionMetadata =
 	, PrimalityTests_t904_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4014/* methodStart */
+	, 4013/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -740,9 +740,9 @@ static const EncodedMethodIndex PrimeGeneratorBase_t905_VTable[8] =
 	502,
 	503,
 	504,
-	1594,
-	1595,
-	1596,
+	1581,
+	1582,
+	1583,
 	0,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
@@ -759,9 +759,9 @@ const Il2CppTypeDefinitionMetadata PrimeGeneratorBase_t905_DefinitionMetadata =
 	, PrimeGeneratorBase_t905_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4016/* methodStart */
+	, 4015/* methodStart */
 	, -1/* eventStart */
-	, 950/* propertyStart */
+	, 948/* propertyStart */
 
 };
 TypeInfo PrimeGeneratorBase_t905_il2cpp_TypeInfo = 
@@ -828,13 +828,13 @@ static const EncodedMethodIndex SequentialSearchPrimeGeneratorBase_t906_VTable[1
 	502,
 	503,
 	504,
-	1594,
-	1595,
-	1596,
-	1597,
-	1598,
-	1599,
-	1600,
+	1581,
+	1582,
+	1583,
+	1584,
+	1585,
+	1586,
+	1587,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType SequentialSearchPrimeGeneratorBase_t906_0_0_0;
@@ -850,7 +850,7 @@ const Il2CppTypeDefinitionMetadata SequentialSearchPrimeGeneratorBase_t906_Defin
 	, SequentialSearchPrimeGeneratorBase_t906_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4021/* methodStart */
+	, 4020/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -918,8 +918,8 @@ static const EncodedMethodIndex ASN1_t908_VTable[5] =
 	501,
 	502,
 	503,
-	1601,
-	1602,
+	1588,
+	1589,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType ASN1_t908_0_0_0;
@@ -935,9 +935,9 @@ const Il2CppTypeDefinitionMetadata ASN1_t908_DefinitionMetadata =
 	, ASN1_t908_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2578/* fieldStart */
-	, 4026/* methodStart */
+	, 4025/* methodStart */
 	, -1/* eventStart */
-	, 953/* propertyStart */
+	, 951/* propertyStart */
 
 };
 TypeInfo ASN1_t908_il2cpp_TypeInfo = 
@@ -1019,7 +1019,7 @@ const Il2CppTypeDefinitionMetadata ASN1Convert_t909_DefinitionMetadata =
 	, ASN1Convert_t909_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4043/* methodStart */
+	, 4042/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1103,7 +1103,7 @@ const Il2CppTypeDefinitionMetadata BitConverterLE_t910_DefinitionMetadata =
 	, BitConverterLE_t910_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4048/* methodStart */
+	, 4047/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1277,9 +1277,9 @@ const Il2CppTypeDefinitionMetadata ContentInfo_t911_DefinitionMetadata =
 	, ContentInfo_t911_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2581/* fieldStart */
-	, 4050/* methodStart */
+	, 4049/* methodStart */
 	, -1/* eventStart */
-	, 958/* propertyStart */
+	, 956/* propertyStart */
 
 };
 TypeInfo ContentInfo_t911_il2cpp_TypeInfo = 
@@ -1360,9 +1360,9 @@ const Il2CppTypeDefinitionMetadata EncryptedData_t912_DefinitionMetadata =
 	, EncryptedData_t912_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2583/* fieldStart */
-	, 4057/* methodStart */
+	, 4056/* methodStart */
 	, -1/* eventStart */
-	, 960/* propertyStart */
+	, 958/* propertyStart */
 
 };
 TypeInfo EncryptedData_t912_il2cpp_TypeInfo = 
@@ -1426,34 +1426,34 @@ extern TypeInfo ARC4Managed_t914_il2cpp_TypeInfo;
 static const EncodedMethodIndex ARC4Managed_t914_VTable[29] = 
 {
 	501,
-	1603,
+	1590,
 	503,
 	504,
+	1543,
+	1591,
+	1545,
+	1546,
+	1547,
+	1592,
+	1593,
+	1594,
+	1595,
+	1552,
+	1553,
+	1554,
+	1555,
 	1556,
-	1604,
+	1557,
 	1558,
 	1559,
+	1596,
 	1560,
-	1605,
-	1606,
-	1607,
-	1608,
-	1565,
-	1566,
-	1567,
-	1568,
-	1569,
-	1570,
-	1571,
-	1572,
-	1609,
-	1573,
-	1610,
-	1611,
-	1612,
-	1613,
-	1614,
-	1615,
+	1597,
+	1598,
+	1599,
+	1600,
+	1601,
+	1602,
 };
 extern const Il2CppType IDisposable_t153_0_0_0;
 extern const Il2CppType ICryptoTransform_t890_0_0_0;
@@ -1482,9 +1482,9 @@ const Il2CppTypeDefinitionMetadata ARC4Managed_t914_DefinitionMetadata =
 	, ARC4Managed_t914_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2587/* fieldStart */
-	, 4061/* methodStart */
+	, 4060/* methodStart */
 	, -1/* eventStart */
-	, 962/* propertyStart */
+	, 960/* propertyStart */
 
 };
 TypeInfo ARC4Managed_t914_il2cpp_TypeInfo = 
@@ -1566,7 +1566,7 @@ const Il2CppTypeDefinitionMetadata CryptoConvert_t916_DefinitionMetadata =
 	, CryptoConvert_t916_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4076/* methodStart */
+	, 4075/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1650,9 +1650,9 @@ const Il2CppTypeDefinitionMetadata KeyBuilder_t917_DefinitionMetadata =
 	, KeyBuilder_t917_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2592/* fieldStart */
-	, 4077/* methodStart */
+	, 4076/* methodStart */
 	, -1/* eventStart */
-	, 964/* propertyStart */
+	, 962/* propertyStart */
 
 };
 TypeInfo KeyBuilder_t917_il2cpp_TypeInfo = 
@@ -1719,17 +1719,17 @@ static const EncodedMethodIndex MD2_t918_VTable[15] =
 	502,
 	503,
 	504,
-	1616,
-	1617,
-	1618,
-	1619,
-	1617,
-	1620,
+	1603,
+	1604,
+	1605,
+	1606,
+	1604,
+	1607,
 	0,
 	0,
-	1621,
+	1608,
 	0,
-	1622,
+	1609,
 };
 static Il2CppInterfaceOffsetPair MD2_t918_InterfacesOffsets[] = 
 {
@@ -1751,7 +1751,7 @@ const Il2CppTypeDefinitionMetadata MD2_t918_DefinitionMetadata =
 	, MD2_t918_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4079/* methodStart */
+	, 4078/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1820,17 +1820,17 @@ static const EncodedMethodIndex MD2Managed_t920_VTable[15] =
 	502,
 	503,
 	504,
-	1616,
-	1617,
-	1618,
-	1619,
-	1617,
-	1620,
-	1623,
-	1624,
-	1621,
-	1625,
-	1622,
+	1603,
+	1604,
+	1605,
+	1606,
+	1604,
+	1607,
+	1610,
+	1611,
+	1608,
+	1612,
+	1609,
 };
 static Il2CppInterfaceOffsetPair MD2Managed_t920_InterfacesOffsets[] = 
 {
@@ -1851,7 +1851,7 @@ const Il2CppTypeDefinitionMetadata MD2Managed_t920_DefinitionMetadata =
 	, MD2Managed_t920_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2593/* fieldStart */
-	, 4082/* methodStart */
+	, 4081/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1935,7 +1935,7 @@ const Il2CppTypeDefinitionMetadata PKCS1_t921_DefinitionMetadata =
 	, PKCS1_t921_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2599/* fieldStart */
-	, 4089/* methodStart */
+	, 4088/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2109,9 +2109,9 @@ const Il2CppTypeDefinitionMetadata PrivateKeyInfo_t922_DefinitionMetadata =
 	, PrivateKeyInfo_t922_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2603/* fieldStart */
-	, 4099/* methodStart */
+	, 4098/* methodStart */
 	, -1/* eventStart */
-	, 965/* propertyStart */
+	, 963/* propertyStart */
 
 };
 TypeInfo PrivateKeyInfo_t922_il2cpp_TypeInfo = 
@@ -2192,9 +2192,9 @@ const Il2CppTypeDefinitionMetadata EncryptedPrivateKeyInfo_t923_DefinitionMetada
 	, EncryptedPrivateKeyInfo_t923_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2607/* fieldStart */
-	, 4107/* methodStart */
+	, 4106/* methodStart */
 	, -1/* eventStart */
-	, 966/* propertyStart */
+	, 964/* propertyStart */
 
 };
 TypeInfo EncryptedPrivateKeyInfo_t923_il2cpp_TypeInfo = 
@@ -2258,28 +2258,28 @@ extern TypeInfo RC4_t915_il2cpp_TypeInfo;
 static const EncodedMethodIndex RC4_t915_VTable[26] = 
 {
 	501,
-	1555,
+	1542,
 	503,
 	504,
+	1543,
+	1544,
+	1545,
+	1546,
+	1547,
+	1592,
+	1593,
+	1550,
+	1551,
+	1552,
+	1553,
+	1554,
+	1555,
 	1556,
 	1557,
 	1558,
 	1559,
-	1560,
-	1605,
-	1606,
-	1563,
-	1564,
-	1565,
-	1566,
-	1567,
-	1568,
-	1569,
-	1570,
-	1571,
-	1572,
 	0,
-	1573,
+	1560,
 	0,
 	0,
 	0,
@@ -2302,9 +2302,9 @@ const Il2CppTypeDefinitionMetadata RC4_t915_DefinitionMetadata =
 	, RC4_t915_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2611/* fieldStart */
-	, 4114/* methodStart */
+	, 4113/* methodStart */
 	, -1/* eventStart */
-	, 970/* propertyStart */
+	, 968/* propertyStart */
 
 };
 TypeInfo RC4_t915_il2cpp_TypeInfo = 
@@ -2373,19 +2373,19 @@ static const Il2CppType* RSAManaged_t927_il2cpp_TypeInfo__nestedTypes[1] =
 static const EncodedMethodIndex RSAManaged_t927_VTable[14] = 
 {
 	501,
-	1626,
+	1613,
 	503,
 	504,
-	1627,
-	1628,
-	1629,
-	1630,
-	1631,
-	1632,
-	1633,
-	1634,
-	1635,
-	1636,
+	1614,
+	1615,
+	1616,
+	1617,
+	1618,
+	1619,
+	1620,
+	1621,
+	1622,
+	1623,
 };
 static Il2CppInterfaceOffsetPair RSAManaged_t927_InterfacesOffsets[] = 
 {
@@ -2406,9 +2406,9 @@ const Il2CppTypeDefinitionMetadata RSAManaged_t927_DefinitionMetadata =
 	, RSAManaged_t927_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2613/* fieldStart */
-	, 4118/* methodStart */
+	, 4117/* methodStart */
 	, -1/* eventStart */
-	, 971/* propertyStart */
+	, 969/* propertyStart */
 
 };
 TypeInfo RSAManaged_t927_il2cpp_TypeInfo = 
@@ -2471,19 +2471,19 @@ extern TypeInfo KeyGeneratedEventHandler_t926_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Cryptography_RSAManaged_KeyGenerMethodDeclarations.h"
 static const EncodedMethodIndex KeyGeneratedEventHandler_t926_VTable[13] = 
 {
-	836,
+	823,
 	502,
-	837,
+	824,
 	504,
-	838,
-	839,
-	838,
-	840,
-	841,
-	842,
-	1637,
-	1638,
-	1639,
+	825,
+	826,
+	825,
+	827,
+	828,
+	829,
+	1624,
+	1625,
+	1626,
 };
 extern const Il2CppType ICloneable_t3094_0_0_0;
 extern const Il2CppType ISerializable_t1918_0_0_0;
@@ -2506,7 +2506,7 @@ const Il2CppTypeDefinitionMetadata KeyGeneratedEventHandler_t926_DefinitionMetad
 	, KeyGeneratedEventHandler_t926_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4131/* methodStart */
+	, 4130/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2590,9 +2590,9 @@ const Il2CppTypeDefinitionMetadata SafeBag_t929_DefinitionMetadata =
 	, SafeBag_t929_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2626/* fieldStart */
-	, 4135/* methodStart */
+	, 4134/* methodStart */
 	, -1/* eventStart */
-	, 973/* propertyStart */
+	, 971/* propertyStart */
 
 };
 TypeInfo SafeBag_t929_il2cpp_TypeInfo = 
@@ -2661,7 +2661,7 @@ static const Il2CppType* PKCS12_t932_il2cpp_TypeInfo__nestedTypes[1] =
 static const EncodedMethodIndex PKCS12_t932_VTable[4] = 
 {
 	501,
-	1640,
+	1627,
 	503,
 	504,
 };
@@ -2687,9 +2687,9 @@ const Il2CppTypeDefinitionMetadata PKCS12_t932_DefinitionMetadata =
 	, PKCS12_t932_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2628/* fieldStart */
-	, 4138/* methodStart */
+	, 4137/* methodStart */
 	, -1/* eventStart */
-	, 975/* propertyStart */
+	, 973/* propertyStart */
 
 };
 TypeInfo PKCS12_t932_il2cpp_TypeInfo = 
@@ -2770,9 +2770,9 @@ const Il2CppTypeDefinitionMetadata DeriveBytes_t930_DefinitionMetadata =
 	, DeriveBytes_t930_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2643/* fieldStart */
-	, 4156/* methodStart */
+	, 4155/* methodStart */
 	, -1/* eventStart */
-	, 979/* propertyStart */
+	, 977/* propertyStart */
 
 };
 TypeInfo DeriveBytes_t930_il2cpp_TypeInfo = 
@@ -2854,7 +2854,7 @@ const Il2CppTypeDefinitionMetadata X501_t933_DefinitionMetadata =
 	, X501_t933_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2650/* fieldStart */
-	, 4167/* methodStart */
+	, 4166/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2923,22 +2923,22 @@ static const EncodedMethodIndex X509Certificate_t936_VTable[20] =
 	502,
 	503,
 	504,
+	1628,
+	1629,
+	1630,
+	1631,
+	1632,
+	1633,
+	1634,
+	1635,
+	1636,
+	1637,
+	1638,
+	1639,
+	1640,
 	1641,
 	1642,
-	1643,
-	1644,
-	1645,
-	1646,
-	1647,
-	1648,
-	1649,
-	1650,
-	1651,
-	1652,
-	1653,
-	1654,
-	1655,
-	1641,
+	1628,
 };
 static const Il2CppType* X509Certificate_t936_InterfacesTypeInfos[] = 
 {
@@ -2962,9 +2962,9 @@ const Il2CppTypeDefinitionMetadata X509Certificate_t936_DefinitionMetadata =
 	, X509Certificate_t936_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2665/* fieldStart */
-	, 4171/* methodStart */
+	, 4170/* methodStart */
 	, -1/* eventStart */
-	, 983/* propertyStart */
+	, 981/* propertyStart */
 
 };
 TypeInfo X509Certificate_t936_il2cpp_TypeInfo = 
@@ -3034,8 +3034,21 @@ static const EncodedMethodIndex X509CertificateCollection_t931_VTable[29] =
 {
 	501,
 	502,
-	1656,
+	1643,
 	504,
+	1644,
+	1645,
+	1646,
+	1647,
+	1648,
+	1649,
+	1650,
+	1651,
+	1652,
+	1653,
+	1654,
+	1655,
+	1656,
 	1657,
 	1658,
 	1659,
@@ -3048,19 +3061,6 @@ static const EncodedMethodIndex X509CertificateCollection_t931_VTable[29] =
 	1666,
 	1667,
 	1668,
-	1669,
-	1670,
-	1671,
-	1672,
-	1673,
-	1674,
-	1675,
-	1676,
-	1677,
-	1678,
-	1679,
-	1680,
-	1681,
 };
 extern const Il2CppType IEnumerable_t803_0_0_0;
 static const Il2CppType* X509CertificateCollection_t931_InterfacesTypeInfos[] = 
@@ -3090,9 +3090,9 @@ const Il2CppTypeDefinitionMetadata X509CertificateCollection_t931_DefinitionMeta
 	, X509CertificateCollection_t931_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4204/* methodStart */
+	, 4203/* methodStart */
 	, -1/* eventStart */
-	, 1001/* propertyStart */
+	, 999/* propertyStart */
 
 };
 TypeInfo X509CertificateCollection_t931_il2cpp_TypeInfo = 
@@ -3159,9 +3159,9 @@ static const EncodedMethodIndex X509CertificateEnumerator_t937_VTable[7] =
 	502,
 	503,
 	504,
-	1682,
-	1683,
-	1684,
+	1669,
+	1670,
+	1671,
 };
 extern const Il2CppType IEnumerator_t142_0_0_0;
 static const Il2CppType* X509CertificateEnumerator_t937_InterfacesTypeInfos[] = 
@@ -3185,9 +3185,9 @@ const Il2CppTypeDefinitionMetadata X509CertificateEnumerator_t937_DefinitionMeta
 	, X509CertificateEnumerator_t937_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2691/* fieldStart */
-	, 4216/* methodStart */
+	, 4215/* methodStart */
 	, -1/* eventStart */
-	, 1002/* propertyStart */
+	, 1000/* propertyStart */
 
 };
 TypeInfo X509CertificateEnumerator_t937_il2cpp_TypeInfo = 
@@ -3269,9 +3269,9 @@ const Il2CppTypeDefinitionMetadata X509Chain_t939_DefinitionMetadata =
 	, X509Chain_t939_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2692/* fieldStart */
-	, 4221/* methodStart */
+	, 4220/* methodStart */
 	, -1/* eventStart */
-	, 1004/* propertyStart */
+	, 1002/* propertyStart */
 
 };
 TypeInfo X509Chain_t939_il2cpp_TypeInfo = 
@@ -3334,8 +3334,10 @@ extern TypeInfo X509ChainStatusFlags_t940_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_X509ChainStatusFlagsMethodDeclarations.h"
 static const EncodedMethodIndex X509ChainStatusFlags_t940_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -3355,8 +3357,6 @@ static const EncodedMethodIndex X509ChainStatusFlags_t940_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair X509ChainStatusFlags_t940_InterfacesOffsets[] = 
 {
@@ -3466,9 +3466,9 @@ const Il2CppTypeDefinitionMetadata X509Crl_t942_DefinitionMetadata =
 	, X509Crl_t942_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2705/* fieldStart */
-	, 4231/* methodStart */
+	, 4230/* methodStart */
 	, -1/* eventStart */
-	, 1006/* propertyStart */
+	, 1004/* propertyStart */
 
 };
 TypeInfo X509Crl_t942_il2cpp_TypeInfo = 
@@ -3549,9 +3549,9 @@ const Il2CppTypeDefinitionMetadata X509CrlEntry_t941_DefinitionMetadata =
 	, X509CrlEntry_t941_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2716/* fieldStart */
-	, 4244/* methodStart */
+	, 4243/* methodStart */
 	, -1/* eventStart */
-	, 1010/* propertyStart */
+	, 1008/* propertyStart */
 
 };
 TypeInfo X509CrlEntry_t941_il2cpp_TypeInfo = 
@@ -3614,12 +3614,12 @@ extern TypeInfo X509Extension_t943_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_X509ExtensionMethodDeclarations.h"
 static const EncodedMethodIndex X509Extension_t943_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1687,
-	1688,
-	1689,
+	1673,
+	1674,
+	1675,
+	1676,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType X509Extension_t943_0_0_0;
@@ -3635,9 +3635,9 @@ const Il2CppTypeDefinitionMetadata X509Extension_t943_DefinitionMetadata =
 	, X509Extension_t943_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2719/* fieldStart */
-	, 4248/* methodStart */
+	, 4247/* methodStart */
 	, -1/* eventStart */
-	, 1013/* propertyStart */
+	, 1011/* propertyStart */
 
 };
 TypeInfo X509Extension_t943_il2cpp_TypeInfo = 
@@ -3704,7 +3704,20 @@ static const EncodedMethodIndex X509ExtensionCollection_t935_VTable[29] =
 	502,
 	503,
 	504,
-	1690,
+	1677,
+	1645,
+	1646,
+	1647,
+	1648,
+	1649,
+	1650,
+	1651,
+	1652,
+	1653,
+	1654,
+	1655,
+	1656,
+	1657,
 	1658,
 	1659,
 	1660,
@@ -3716,19 +3729,6 @@ static const EncodedMethodIndex X509ExtensionCollection_t935_VTable[29] =
 	1666,
 	1667,
 	1668,
-	1669,
-	1670,
-	1671,
-	1672,
-	1673,
-	1674,
-	1675,
-	1676,
-	1677,
-	1678,
-	1679,
-	1680,
-	1681,
 };
 static const Il2CppType* X509ExtensionCollection_t935_InterfacesTypeInfos[] = 
 {
@@ -3754,9 +3754,9 @@ const Il2CppTypeDefinitionMetadata X509ExtensionCollection_t935_DefinitionMetada
 	, X509ExtensionCollection_t935_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2722/* fieldStart */
-	, 4259/* methodStart */
+	, 4258/* methodStart */
 	, -1/* eventStart */
-	, 1016/* propertyStart */
+	, 1014/* propertyStart */
 
 };
 TypeInfo X509ExtensionCollection_t935_il2cpp_TypeInfo = 
@@ -3838,9 +3838,9 @@ const Il2CppTypeDefinitionMetadata X509Store_t944_DefinitionMetadata =
 	, X509Store_t944_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2723/* fieldStart */
-	, 4264/* methodStart */
+	, 4263/* methodStart */
 	, -1/* eventStart */
-	, 1017/* propertyStart */
+	, 1015/* propertyStart */
 
 };
 TypeInfo X509Store_t944_il2cpp_TypeInfo = 
@@ -3922,9 +3922,9 @@ const Il2CppTypeDefinitionMetadata X509StoreManager_t946_DefinitionMetadata =
 	, X509StoreManager_t946_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2727/* fieldStart */
-	, 4273/* methodStart */
+	, 4272/* methodStart */
 	, -1/* eventStart */
-	, 1019/* propertyStart */
+	, 1017/* propertyStart */
 
 };
 TypeInfo X509StoreManager_t946_il2cpp_TypeInfo = 
@@ -4006,9 +4006,9 @@ const Il2CppTypeDefinitionMetadata X509Stores_t945_DefinitionMetadata =
 	, X509Stores_t945_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2729/* fieldStart */
-	, 4276/* methodStart */
+	, 4275/* methodStart */
 	, -1/* eventStart */
-	, 1022/* propertyStart */
+	, 1020/* propertyStart */
 
 };
 TypeInfo X509Stores_t945_il2cpp_TypeInfo = 
@@ -4071,12 +4071,12 @@ extern TypeInfo AuthorityKeyIdentifierExtension_t947_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_AuthorityKeyIdenMethodDeclarations.h"
 static const EncodedMethodIndex AuthorityKeyIdentifierExtension_t947_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1691,
-	1692,
-	1689,
+	1673,
+	1678,
+	1679,
+	1676,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType AuthorityKeyIdentifierExtension_t947_0_0_0;
@@ -4092,9 +4092,9 @@ const Il2CppTypeDefinitionMetadata AuthorityKeyIdentifierExtension_t947_Definiti
 	, AuthorityKeyIdentifierExtension_t947_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2731/* fieldStart */
-	, 4279/* methodStart */
+	, 4278/* methodStart */
 	, -1/* eventStart */
-	, 1023/* propertyStart */
+	, 1021/* propertyStart */
 
 };
 TypeInfo AuthorityKeyIdentifierExtension_t947_il2cpp_TypeInfo = 
@@ -4157,12 +4157,12 @@ extern TypeInfo BasicConstraintsExtension_t948_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_BasicConstraintsMethodDeclarations.h"
 static const EncodedMethodIndex BasicConstraintsExtension_t948_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1693,
-	1694,
-	1695,
+	1673,
+	1680,
+	1681,
+	1682,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType BasicConstraintsExtension_t948_0_0_0;
@@ -4178,9 +4178,9 @@ const Il2CppTypeDefinitionMetadata BasicConstraintsExtension_t948_DefinitionMeta
 	, BasicConstraintsExtension_t948_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2732/* fieldStart */
-	, 4283/* methodStart */
+	, 4282/* methodStart */
 	, -1/* eventStart */
-	, 1024/* propertyStart */
+	, 1022/* propertyStart */
 
 };
 TypeInfo BasicConstraintsExtension_t948_il2cpp_TypeInfo = 
@@ -4243,12 +4243,12 @@ extern TypeInfo ExtendedKeyUsageExtension_t949_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_ExtendedKeyUsageMethodDeclarations.h"
 static const EncodedMethodIndex ExtendedKeyUsageExtension_t949_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1696,
-	1697,
-	1698,
+	1673,
+	1683,
+	1684,
+	1685,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType ExtendedKeyUsageExtension_t949_0_0_0;
@@ -4264,9 +4264,9 @@ const Il2CppTypeDefinitionMetadata ExtendedKeyUsageExtension_t949_DefinitionMeta
 	, ExtendedKeyUsageExtension_t949_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2734/* fieldStart */
-	, 4288/* methodStart */
+	, 4287/* methodStart */
 	, -1/* eventStart */
-	, 1025/* propertyStart */
+	, 1023/* propertyStart */
 
 };
 TypeInfo ExtendedKeyUsageExtension_t949_il2cpp_TypeInfo = 
@@ -4332,7 +4332,7 @@ static const EncodedMethodIndex GeneralNames_t950_VTable[4] =
 	501,
 	502,
 	503,
-	1699,
+	1686,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType GeneralNames_t950_0_0_0;
@@ -4348,9 +4348,9 @@ const Il2CppTypeDefinitionMetadata GeneralNames_t950_DefinitionMetadata =
 	, GeneralNames_t950_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2736/* fieldStart */
-	, 4293/* methodStart */
+	, 4292/* methodStart */
 	, -1/* eventStart */
-	, 1026/* propertyStart */
+	, 1024/* propertyStart */
 
 };
 TypeInfo GeneralNames_t950_il2cpp_TypeInfo = 
@@ -4413,8 +4413,10 @@ extern TypeInfo KeyUsages_t951_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_KeyUsagesMethodDeclarations.h"
 static const EncodedMethodIndex KeyUsages_t951_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4434,8 +4436,6 @@ static const EncodedMethodIndex KeyUsages_t951_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair KeyUsages_t951_InterfacesOffsets[] = 
 {
@@ -4521,12 +4521,12 @@ extern TypeInfo KeyUsageExtension_t952_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_KeyUsageExtensioMethodDeclarations.h"
 static const EncodedMethodIndex KeyUsageExtension_t952_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1700,
-	1701,
-	1702,
+	1673,
+	1687,
+	1688,
+	1689,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType KeyUsageExtension_t952_0_0_0;
@@ -4542,7 +4542,7 @@ const Il2CppTypeDefinitionMetadata KeyUsageExtension_t952_DefinitionMetadata =
 	, KeyUsageExtension_t952_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2752/* fieldStart */
-	, 4297/* methodStart */
+	, 4296/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4612,12 +4612,12 @@ static const Il2CppType* NetscapeCertTypeExtension_t954_il2cpp_TypeInfo__nestedT
 };
 static const EncodedMethodIndex NetscapeCertTypeExtension_t954_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1703,
-	1704,
-	1689,
+	1673,
+	1690,
+	1691,
+	1676,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType NetscapeCertTypeExtension_t954_0_0_0;
@@ -4633,7 +4633,7 @@ const Il2CppTypeDefinitionMetadata NetscapeCertTypeExtension_t954_DefinitionMeta
 	, NetscapeCertTypeExtension_t954_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2753/* fieldStart */
-	, 4302/* methodStart */
+	, 4301/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -4698,8 +4698,10 @@ extern TypeInfo CertTypes_t953_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_NetscapeCertTypeMethodDeclarations.h"
 static const EncodedMethodIndex CertTypes_t953_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -4719,8 +4721,6 @@ static const EncodedMethodIndex CertTypes_t953_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair CertTypes_t953_InterfacesOffsets[] = 
 {
@@ -4805,12 +4805,12 @@ extern TypeInfo SubjectAltNameExtension_t955_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_X509_Extensions_SubjectAltNameExMethodDeclarations.h"
 static const EncodedMethodIndex SubjectAltNameExtension_t955_VTable[6] = 
 {
-	1685,
+	1672,
 	502,
-	1686,
-	1705,
-	1706,
-	1689,
+	1673,
+	1692,
+	1693,
+	1676,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType SubjectAltNameExtension_t955_0_0_0;
@@ -4826,9 +4826,9 @@ const Il2CppTypeDefinitionMetadata SubjectAltNameExtension_t955_DefinitionMetada
 	, SubjectAltNameExtension_t955_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2762/* fieldStart */
-	, 4306/* methodStart */
+	, 4305/* methodStart */
 	, -1/* eventStart */
-	, 1028/* propertyStart */
+	, 1026/* propertyStart */
 
 };
 TypeInfo SubjectAltNameExtension_t955_il2cpp_TypeInfo = 
@@ -4892,22 +4892,22 @@ extern TypeInfo HMAC_t956_il2cpp_TypeInfo;
 static const EncodedMethodIndex HMAC_t956_VTable[17] = 
 {
 	501,
-	1707,
+	1694,
 	503,
 	504,
-	1616,
-	1617,
-	1618,
-	1619,
-	1617,
-	1620,
-	1708,
-	1709,
-	1621,
-	1710,
-	1711,
-	1712,
-	1713,
+	1603,
+	1604,
+	1605,
+	1606,
+	1604,
+	1607,
+	1695,
+	1696,
+	1608,
+	1697,
+	1698,
+	1699,
+	1700,
 };
 static Il2CppInterfaceOffsetPair HMAC_t956_InterfacesOffsets[] = 
 {
@@ -4929,9 +4929,9 @@ const Il2CppTypeDefinitionMetadata HMAC_t956_DefinitionMetadata =
 	, HMAC_t956_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2763/* fieldStart */
-	, 4311/* methodStart */
+	, 4310/* methodStart */
 	, -1/* eventStart */
-	, 1030/* propertyStart */
+	, 1028/* propertyStart */
 
 };
 TypeInfo HMAC_t956_il2cpp_TypeInfo = 
@@ -4998,17 +4998,17 @@ static const EncodedMethodIndex MD5SHA1_t958_VTable[15] =
 	502,
 	503,
 	504,
-	1616,
-	1617,
-	1618,
-	1619,
-	1617,
-	1620,
-	1714,
-	1715,
-	1621,
-	1716,
-	1622,
+	1603,
+	1604,
+	1605,
+	1606,
+	1604,
+	1607,
+	1701,
+	1702,
+	1608,
+	1703,
+	1609,
 };
 static Il2CppInterfaceOffsetPair MD5SHA1_t958_InterfacesOffsets[] = 
 {
@@ -5029,7 +5029,7 @@ const Il2CppTypeDefinitionMetadata MD5SHA1_t958_DefinitionMetadata =
 	, MD5SHA1_t958_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2767/* fieldStart */
-	, 4318/* methodStart */
+	, 4317/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -5094,8 +5094,10 @@ extern TypeInfo AlertLevel_t959_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_AlertLevelMethodDeclarations.h"
 static const EncodedMethodIndex AlertLevel_t959_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -5115,8 +5117,6 @@ static const EncodedMethodIndex AlertLevel_t959_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AlertLevel_t959_InterfacesOffsets[] = 
 {
@@ -5205,8 +5205,10 @@ extern TypeInfo AlertDescription_t960_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_AlertDescriptionMethodDeclarations.h"
 static const EncodedMethodIndex AlertDescription_t960_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -5226,8 +5228,6 @@ static const EncodedMethodIndex AlertDescription_t960_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair AlertDescription_t960_InterfacesOffsets[] = 
 {
@@ -5332,9 +5332,9 @@ const Il2CppTypeDefinitionMetadata Alert_t961_DefinitionMetadata =
 	, Alert_t961_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2798/* fieldStart */
-	, 4324/* methodStart */
+	, 4323/* methodStart */
 	, -1/* eventStart */
-	, 1031/* propertyStart */
+	, 1029/* propertyStart */
 
 };
 TypeInfo Alert_t961_il2cpp_TypeInfo = 
@@ -5397,8 +5397,10 @@ extern TypeInfo CipherAlgorithmType_t962_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_CipherAlgorithmTypeMethodDeclarations.h"
 static const EncodedMethodIndex CipherAlgorithmType_t962_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -5418,8 +5420,6 @@ static const EncodedMethodIndex CipherAlgorithmType_t962_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair CipherAlgorithmType_t962_InterfacesOffsets[] = 
 {
@@ -5528,9 +5528,9 @@ const Il2CppTypeDefinitionMetadata CipherSuite_t964_DefinitionMetadata =
 	, CipherSuite_t964_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2808/* fieldStart */
-	, 4332/* methodStart */
+	, 4331/* methodStart */
 	, -1/* eventStart */
-	, 1035/* propertyStart */
+	, 1033/* propertyStart */
 
 };
 TypeInfo CipherSuite_t964_il2cpp_TypeInfo = 
@@ -5597,22 +5597,22 @@ static const EncodedMethodIndex CipherSuiteCollection_t965_VTable[20] =
 	502,
 	503,
 	504,
+	1704,
+	1705,
+	1706,
+	1707,
+	1708,
+	1709,
+	1710,
+	1711,
+	1712,
+	1713,
+	1714,
+	1715,
+	1716,
 	1717,
 	1718,
 	1719,
-	1720,
-	1721,
-	1722,
-	1723,
-	1724,
-	1725,
-	1726,
-	1727,
-	1728,
-	1729,
-	1730,
-	1731,
-	1732,
 };
 static const Il2CppType* CipherSuiteCollection_t965_InterfacesTypeInfos[] = 
 {
@@ -5640,9 +5640,9 @@ const Il2CppTypeDefinitionMetadata CipherSuiteCollection_t965_DefinitionMetadata
 	, CipherSuiteCollection_t965_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2829/* fieldStart */
-	, 4368/* methodStart */
+	, 4367/* methodStart */
 	, -1/* eventStart */
-	, 1054/* propertyStart */
+	, 1052/* propertyStart */
 
 };
 TypeInfo CipherSuiteCollection_t965_il2cpp_TypeInfo = 
@@ -5724,7 +5724,7 @@ const Il2CppTypeDefinitionMetadata CipherSuiteFactory_t966_DefinitionMetadata =
 	, CipherSuiteFactory_t966_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4395/* methodStart */
+	, 4394/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -5793,8 +5793,8 @@ static const EncodedMethodIndex ClientContext_t968_VTable[6] =
 	502,
 	503,
 	504,
-	1733,
-	1734,
+	1720,
+	1721,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType ClientContext_t968_0_0_0;
@@ -5811,9 +5811,9 @@ const Il2CppTypeDefinitionMetadata ClientContext_t968_DefinitionMetadata =
 	, ClientContext_t968_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2831/* fieldStart */
-	, 4398/* methodStart */
+	, 4397/* methodStart */
 	, -1/* eventStart */
-	, 1063/* propertyStart */
+	, 1061/* propertyStart */
 
 };
 TypeInfo ClientContext_t968_il2cpp_TypeInfo = 
@@ -5880,10 +5880,10 @@ static const EncodedMethodIndex ClientRecordProtocol_t969_VTable[8] =
 	502,
 	503,
 	504,
-	1735,
-	1736,
-	1737,
-	1738,
+	1722,
+	1723,
+	1724,
+	1725,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType ClientRecordProtocol_t969_0_0_0;
@@ -5900,7 +5900,7 @@ const Il2CppTypeDefinitionMetadata ClientRecordProtocol_t969_DefinitionMetadata 
 	, ClientRecordProtocol_t969_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4403/* methodStart */
+	, 4402/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -5966,10 +5966,10 @@ extern TypeInfo ClientSessionInfo_t971_il2cpp_TypeInfo;
 static const EncodedMethodIndex ClientSessionInfo_t971_VTable[5] = 
 {
 	501,
-	1739,
+	1726,
 	503,
 	504,
-	1740,
+	1727,
 };
 static const Il2CppType* ClientSessionInfo_t971_InterfacesTypeInfos[] = 
 {
@@ -5993,9 +5993,9 @@ const Il2CppTypeDefinitionMetadata ClientSessionInfo_t971_DefinitionMetadata =
 	, ClientSessionInfo_t971_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2833/* fieldStart */
-	, 4408/* methodStart */
+	, 4407/* methodStart */
 	, -1/* eventStart */
-	, 1065/* propertyStart */
+	, 1063/* propertyStart */
 
 };
 TypeInfo ClientSessionInfo_t971_il2cpp_TypeInfo = 
@@ -6077,7 +6077,7 @@ const Il2CppTypeDefinitionMetadata ClientSessionCache_t973_DefinitionMetadata =
 	, ClientSessionCache_t973_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2839/* fieldStart */
-	, 4420/* methodStart */
+	, 4419/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -6142,8 +6142,10 @@ extern TypeInfo ContentType_t974_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_ContentTypeMethodDeclarations.h"
 static const EncodedMethodIndex ContentType_t974_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6163,8 +6165,6 @@ static const EncodedMethodIndex ContentType_t974_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair ContentType_t974_InterfacesOffsets[] = 
 {
@@ -6254,8 +6254,8 @@ static const EncodedMethodIndex Context_t963_VTable[6] =
 	502,
 	503,
 	504,
-	1741,
-	1734,
+	1728,
+	1721,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType Context_t963_1_0_0;
@@ -6270,9 +6270,9 @@ const Il2CppTypeDefinitionMetadata Context_t963_DefinitionMetadata =
 	, Context_t963_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2846/* fieldStart */
-	, 4426/* methodStart */
+	, 4425/* methodStart */
 	, -1/* eventStart */
-	, 1068/* propertyStart */
+	, 1066/* propertyStart */
 
 };
 TypeInfo Context_t963_il2cpp_TypeInfo = 
@@ -6335,8 +6335,10 @@ extern TypeInfo ExchangeAlgorithmType_t979_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_ExchangeAlgorithmTyMethodDeclarations.h"
 static const EncodedMethodIndex ExchangeAlgorithmType_t979_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6356,8 +6358,6 @@ static const EncodedMethodIndex ExchangeAlgorithmType_t979_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair ExchangeAlgorithmType_t979_InterfacesOffsets[] = 
 {
@@ -6443,8 +6443,10 @@ extern TypeInfo HandshakeState_t980_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_HandshakeStateMethodDeclarations.h"
 static const EncodedMethodIndex HandshakeState_t980_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6464,8 +6466,6 @@ static const EncodedMethodIndex HandshakeState_t980_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair HandshakeState_t980_InterfacesOffsets[] = 
 {
@@ -6551,8 +6551,10 @@ extern TypeInfo HashAlgorithmType_t981_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_HashAlgorithmTypeMethodDeclarations.h"
 static const EncodedMethodIndex HashAlgorithmType_t981_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -6572,8 +6574,6 @@ static const EncodedMethodIndex HashAlgorithmType_t981_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair HashAlgorithmType_t981_InterfacesOffsets[] = 
 {
@@ -6660,9 +6660,22 @@ extern TypeInfo HttpsClientStream_t985_il2cpp_TypeInfo;
 static const EncodedMethodIndex HttpsClientStream_t985_VTable[33] = 
 {
 	501,
-	1742,
+	1729,
 	503,
 	504,
+	1730,
+	1731,
+	1732,
+	1733,
+	1734,
+	1735,
+	1736,
+	1737,
+	1738,
+	1739,
+	1740,
+	1741,
+	1742,
 	1743,
 	1744,
 	1745,
@@ -6679,19 +6692,6 @@ static const EncodedMethodIndex HttpsClientStream_t985_VTable[33] =
 	1756,
 	1757,
 	1758,
-	1759,
-	1760,
-	1761,
-	1762,
-	1763,
-	1764,
-	1765,
-	1766,
-	1767,
-	1768,
-	1769,
-	1770,
-	1771,
 };
 static Il2CppInterfaceOffsetPair HttpsClientStream_t985_InterfacesOffsets[] = 
 {
@@ -6712,9 +6712,9 @@ const Il2CppTypeDefinitionMetadata HttpsClientStream_t985_DefinitionMetadata =
 	, HttpsClientStream_t985_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2890/* fieldStart */
-	, 4488/* methodStart */
+	, 4487/* methodStart */
 	, -1/* eventStart */
-	, 1099/* propertyStart */
+	, 1097/* propertyStart */
 
 };
 TypeInfo HttpsClientStream_t985_il2cpp_TypeInfo = 
@@ -6788,10 +6788,10 @@ static const EncodedMethodIndex RecordProtocol_t970_VTable[8] =
 	502,
 	503,
 	504,
-	1735,
+	1722,
 	0,
-	1737,
-	1772,
+	1724,
+	1759,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType RecordProtocol_t970_1_0_0;
@@ -6806,9 +6806,9 @@ const Il2CppTypeDefinitionMetadata RecordProtocol_t970_DefinitionMetadata =
 	, RecordProtocol_t970_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2894/* fieldStart */
-	, 4493/* methodStart */
+	, 4492/* methodStart */
 	, -1/* eventStart */
-	, 1100/* propertyStart */
+	, 1098/* propertyStart */
 
 };
 TypeInfo RecordProtocol_t970_il2cpp_TypeInfo = 
@@ -6875,9 +6875,9 @@ static const EncodedMethodIndex ReceiveRecordAsyncResult_t988_VTable[7] =
 	502,
 	503,
 	504,
-	1773,
-	1774,
-	1775,
+	1760,
+	1761,
+	1762,
 };
 extern const Il2CppType IAsyncResult_t381_0_0_0;
 static const Il2CppType* ReceiveRecordAsyncResult_t988_InterfacesTypeInfos[] = 
@@ -6901,9 +6901,9 @@ const Il2CppTypeDefinitionMetadata ReceiveRecordAsyncResult_t988_DefinitionMetad
 	, ReceiveRecordAsyncResult_t988_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2897/* fieldStart */
-	, 4524/* methodStart */
+	, 4523/* methodStart */
 	, -1/* eventStart */
-	, 1101/* propertyStart */
+	, 1099/* propertyStart */
 
 };
 TypeInfo ReceiveRecordAsyncResult_t988_il2cpp_TypeInfo = 
@@ -6970,9 +6970,9 @@ static const EncodedMethodIndex SendRecordAsyncResult_t990_VTable[7] =
 	502,
 	503,
 	504,
-	1776,
-	1777,
-	1778,
+	1763,
+	1764,
+	1765,
 };
 static const Il2CppType* SendRecordAsyncResult_t990_InterfacesTypeInfos[] = 
 {
@@ -6995,9 +6995,9 @@ const Il2CppTypeDefinitionMetadata SendRecordAsyncResult_t990_DefinitionMetadata
 	, SendRecordAsyncResult_t990_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2906/* fieldStart */
-	, 4536/* methodStart */
+	, 4535/* methodStart */
 	, -1/* eventStart */
-	, 1109/* propertyStart */
+	, 1107/* propertyStart */
 
 };
 TypeInfo SendRecordAsyncResult_t990_il2cpp_TypeInfo = 
@@ -7064,9 +7064,9 @@ static const EncodedMethodIndex RSASslSignatureDeformatter_t991_VTable[7] =
 	502,
 	503,
 	504,
-	1779,
-	1780,
-	1781,
+	1766,
+	1767,
+	1768,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType RSASslSignatureDeformatter_t991_0_0_0;
@@ -7083,7 +7083,7 @@ const Il2CppTypeDefinitionMetadata RSASslSignatureDeformatter_t991_DefinitionMet
 	, RSASslSignatureDeformatter_t991_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2913/* fieldStart */
-	, 4545/* methodStart */
+	, 4544/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7152,9 +7152,9 @@ static const EncodedMethodIndex RSASslSignatureFormatter_t993_VTable[7] =
 	502,
 	503,
 	504,
-	1782,
-	1783,
-	1784,
+	1769,
+	1770,
+	1771,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType RSASslSignatureFormatter_t993_0_0_0;
@@ -7171,7 +7171,7 @@ const Il2CppTypeDefinitionMetadata RSASslSignatureFormatter_t993_DefinitionMetad
 	, RSASslSignatureFormatter_t993_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2916/* fieldStart */
-	, 4549/* methodStart */
+	, 4548/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7236,8 +7236,10 @@ extern TypeInfo SecurityCompressionType_t995_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_SecurityCompressionMethodDeclarations.h"
 static const EncodedMethodIndex SecurityCompressionType_t995_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -7257,8 +7259,6 @@ static const EncodedMethodIndex SecurityCompressionType_t995_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair SecurityCompressionType_t995_InterfacesOffsets[] = 
 {
@@ -7363,9 +7363,9 @@ const Il2CppTypeDefinitionMetadata SecurityParameters_t977_DefinitionMetadata =
 	, SecurityParameters_t977_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2922/* fieldStart */
-	, 4553/* methodStart */
+	, 4552/* methodStart */
 	, -1/* eventStart */
-	, 1115/* propertyStart */
+	, 1113/* propertyStart */
 
 };
 TypeInfo SecurityParameters_t977_il2cpp_TypeInfo = 
@@ -7428,8 +7428,10 @@ extern TypeInfo SecurityProtocolType_t996_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_SecurityProtocolTypMethodDeclarations.h"
 static const EncodedMethodIndex SecurityProtocolType_t996_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -7449,8 +7451,6 @@ static const EncodedMethodIndex SecurityProtocolType_t996_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair SecurityProtocolType_t996_InterfacesOffsets[] = 
 {
@@ -7540,8 +7540,8 @@ static const EncodedMethodIndex ServerContext_t997_VTable[6] =
 	502,
 	503,
 	504,
-	1741,
-	1734,
+	1728,
+	1721,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType ServerContext_t997_0_0_0;
@@ -7641,9 +7641,9 @@ const Il2CppTypeDefinitionMetadata ValidationResult_t998_DefinitionMetadata =
 	, ValidationResult_t998_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2930/* fieldStart */
-	, 4561/* methodStart */
+	, 4560/* methodStart */
 	, -1/* eventStart */
-	, 1118/* propertyStart */
+	, 1116/* propertyStart */
 
 };
 TypeInfo ValidationResult_t998_il2cpp_TypeInfo = 
@@ -7707,9 +7707,22 @@ extern TypeInfo SslClientStream_t967_il2cpp_TypeInfo;
 static const EncodedMethodIndex SslClientStream_t967_VTable[33] = 
 {
 	501,
-	1742,
+	1729,
 	503,
 	504,
+	1730,
+	1731,
+	1732,
+	1733,
+	1734,
+	1735,
+	1736,
+	1737,
+	1738,
+	1739,
+	1740,
+	1741,
+	1742,
 	1743,
 	1744,
 	1745,
@@ -7724,21 +7737,8 @@ static const EncodedMethodIndex SslClientStream_t967_VTable[33] =
 	1754,
 	1755,
 	1756,
-	1757,
+	1772,
 	1758,
-	1759,
-	1760,
-	1761,
-	1762,
-	1763,
-	1764,
-	1765,
-	1766,
-	1767,
-	1768,
-	1769,
-	1785,
-	1771,
 };
 static Il2CppInterfaceOffsetPair SslClientStream_t967_InterfacesOffsets[] = 
 {
@@ -7758,9 +7758,9 @@ const Il2CppTypeDefinitionMetadata SslClientStream_t967_DefinitionMetadata =
 	, SslClientStream_t967_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2932/* fieldStart */
-	, 4563/* methodStart */
+	, 4562/* methodStart */
 	, 4/* eventStart */
-	, 1120/* propertyStart */
+	, 1118/* propertyStart */
 
 };
 TypeInfo SslClientStream_t967_il2cpp_TypeInfo = 
@@ -7827,10 +7827,10 @@ static const EncodedMethodIndex SslCipherSuite_t1002_VTable[8] =
 	502,
 	503,
 	504,
-	1786,
-	1787,
-	1788,
-	1789,
+	1773,
+	1774,
+	1775,
+	1776,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType SslCipherSuite_t1002_0_0_0;
@@ -7846,7 +7846,7 @@ const Il2CppTypeDefinitionMetadata SslCipherSuite_t1002_DefinitionMetadata =
 	, SslCipherSuite_t1002_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2936/* fieldStart */
-	, 4599/* methodStart */
+	, 4598/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -7915,17 +7915,17 @@ static const EncodedMethodIndex SslHandshakeHash_t1003_VTable[15] =
 	502,
 	503,
 	504,
-	1616,
-	1617,
-	1618,
-	1619,
-	1617,
-	1620,
-	1790,
-	1791,
-	1621,
-	1792,
-	1622,
+	1603,
+	1604,
+	1605,
+	1606,
+	1604,
+	1607,
+	1777,
+	1778,
+	1608,
+	1779,
+	1609,
 };
 static Il2CppInterfaceOffsetPair SslHandshakeHash_t1003_InterfacesOffsets[] = 
 {
@@ -7946,7 +7946,7 @@ const Il2CppTypeDefinitionMetadata SslHandshakeHash_t1003_DefinitionMetadata =
 	, SslHandshakeHash_t1003_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2939/* fieldStart */
-	, 4605/* methodStart */
+	, 4604/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -8017,9 +8017,22 @@ static const Il2CppType* SslStreamBase_t1001_il2cpp_TypeInfo__nestedTypes[1] =
 static const EncodedMethodIndex SslStreamBase_t1001_VTable[31] = 
 {
 	501,
-	1793,
+	1780,
 	503,
 	504,
+	1730,
+	1731,
+	1732,
+	1733,
+	1734,
+	1735,
+	1736,
+	1781,
+	1738,
+	1739,
+	1740,
+	1741,
+	1742,
 	1743,
 	1744,
 	1745,
@@ -8027,19 +8040,6 @@ static const EncodedMethodIndex SslStreamBase_t1001_VTable[31] =
 	1747,
 	1748,
 	1749,
-	1794,
-	1751,
-	1752,
-	1753,
-	1754,
-	1755,
-	1756,
-	1757,
-	1758,
-	1759,
-	1760,
-	1761,
-	1762,
 	0,
 	0,
 	0,
@@ -8070,9 +8070,9 @@ const Il2CppTypeDefinitionMetadata SslStreamBase_t1001_DefinitionMetadata =
 	, SslStreamBase_t1001_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2947/* fieldStart */
-	, 4611/* methodStart */
+	, 4610/* methodStart */
 	, -1/* eventStart */
-	, 1127/* propertyStart */
+	, 1125/* propertyStart */
 
 };
 TypeInfo SslStreamBase_t1001_il2cpp_TypeInfo = 
@@ -8139,9 +8139,9 @@ static const EncodedMethodIndex InternalAsyncResult_t1004_VTable[7] =
 	502,
 	503,
 	504,
-	1795,
-	1796,
-	1797,
+	1782,
+	1783,
+	1784,
 };
 static const Il2CppType* InternalAsyncResult_t1004_InterfacesTypeInfos[] = 
 {
@@ -8164,9 +8164,9 @@ const Il2CppTypeDefinitionMetadata InternalAsyncResult_t1004_DefinitionMetadata 
 	, InternalAsyncResult_t1004_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2962/* fieldStart */
-	, 4666/* methodStart */
+	, 4665/* methodStart */
 	, -1/* eventStart */
-	, 1144/* propertyStart */
+	, 1142/* propertyStart */
 
 };
 TypeInfo InternalAsyncResult_t1004_il2cpp_TypeInfo = 
@@ -8233,10 +8233,10 @@ static const EncodedMethodIndex TlsCipherSuite_t1005_VTable[8] =
 	502,
 	503,
 	504,
-	1798,
-	1799,
-	1800,
-	1801,
+	1785,
+	1786,
+	1787,
+	1788,
 };
 extern Il2CppImage g_Mono_Security_dll_Image;
 extern const Il2CppType TlsCipherSuite_t1005_0_0_0;
@@ -8252,7 +8252,7 @@ const Il2CppTypeDefinitionMetadata TlsCipherSuite_t1005_DefinitionMetadata =
 	, TlsCipherSuite_t1005_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2974/* fieldStart */
-	, 4682/* methodStart */
+	, 4681/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -8336,9 +8336,9 @@ const Il2CppTypeDefinitionMetadata TlsClientSettings_t976_DefinitionMetadata =
 	, TlsClientSettings_t976_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2976/* fieldStart */
-	, 4687/* methodStart */
+	, 4686/* methodStart */
 	, -1/* eventStart */
-	, 1155/* propertyStart */
+	, 1153/* propertyStart */
 
 };
 TypeInfo TlsClientSettings_t976_il2cpp_TypeInfo = 
@@ -8404,14 +8404,14 @@ static const EncodedMethodIndex TlsException_t1008_VTable[11] =
 	501,
 	502,
 	503,
-	1242,
-	1243,
-	1244,
-	1245,
-	1246,
-	1247,
-	1243,
-	1248,
+	1229,
+	1230,
+	1231,
+	1232,
+	1233,
+	1234,
+	1230,
+	1235,
 };
 extern const Il2CppType _Exception_t3104_0_0_0;
 static Il2CppInterfaceOffsetPair TlsException_t1008_InterfacesOffsets[] = 
@@ -8434,9 +8434,9 @@ const Il2CppTypeDefinitionMetadata TlsException_t1008_DefinitionMetadata =
 	, TlsException_t1008_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2980/* fieldStart */
-	, 4695/* methodStart */
+	, 4694/* methodStart */
 	, -1/* eventStart */
-	, 1158/* propertyStart */
+	, 1156/* propertyStart */
 
 };
 TypeInfo TlsException_t1008_il2cpp_TypeInfo = 
@@ -8518,9 +8518,9 @@ const Il2CppTypeDefinitionMetadata TlsServerSettings_t975_DefinitionMetadata =
 	, TlsServerSettings_t975_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2981/* fieldStart */
-	, 4702/* methodStart */
+	, 4701/* methodStart */
 	, -1/* eventStart */
-	, 1159/* propertyStart */
+	, 1157/* propertyStart */
 
 };
 TypeInfo TlsServerSettings_t975_il2cpp_TypeInfo = 
@@ -8587,26 +8587,26 @@ static const EncodedMethodIndex TlsStream_t978_VTable[24] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
-	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
 };
 static Il2CppInterfaceOffsetPair TlsStream_t978_InterfacesOffsets[] = 
 {
@@ -8626,9 +8626,9 @@ const Il2CppTypeDefinitionMetadata TlsStream_t978_DefinitionMetadata =
 	, TlsStream_t978_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2989/* fieldStart */
-	, 4716/* methodStart */
+	, 4715/* methodStart */
 	, -1/* eventStart */
-	, 1167/* propertyStart */
+	, 1165/* propertyStart */
 
 };
 TypeInfo TlsStream_t978_il2cpp_TypeInfo = 
@@ -8691,8 +8691,10 @@ extern TypeInfo ClientCertificateType_t1011_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_Handshake_ClientCerMethodDeclarations.h"
 static const EncodedMethodIndex ClientCertificateType_t1011_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8712,8 +8714,6 @@ static const EncodedMethodIndex ClientCertificateType_t1011_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair ClientCertificateType_t1011_InterfacesOffsets[] = 
 {
@@ -8803,30 +8803,30 @@ static const EncodedMethodIndex HandshakeMessage_t989_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
+	0,
+	0,
 	1806,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	0,
-	0,
-	1819,
-	1820,
 };
 static Il2CppInterfaceOffsetPair HandshakeMessage_t989_InterfacesOffsets[] = 
 {
@@ -8846,9 +8846,9 @@ const Il2CppTypeDefinitionMetadata HandshakeMessage_t989_DefinitionMetadata =
 	, HandshakeMessage_t989_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 2999/* fieldStart */
-	, 4742/* methodStart */
+	, 4741/* methodStart */
 	, -1/* eventStart */
-	, 1173/* propertyStart */
+	, 1171/* propertyStart */
 
 };
 TypeInfo HandshakeMessage_t989_il2cpp_TypeInfo = 
@@ -8911,8 +8911,10 @@ extern TypeInfo HandshakeType_t1012_il2cpp_TypeInfo;
 #include "Mono_Security_Mono_Security_Protocol_Tls_Handshake_HandshakeMethodDeclarations.h"
 static const EncodedMethodIndex HandshakeType_t1012_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -8932,8 +8934,6 @@ static const EncodedMethodIndex HandshakeType_t1012_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair HandshakeType_t1012_InterfacesOffsets[] = 
 {
@@ -9023,30 +9023,30 @@ static const EncodedMethodIndex TlsClientCertificate_t1013_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
-	1807,
 	1808,
 	1809,
 	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1821,
-	1822,
-	1823,
-	1820,
+	1807,
 };
 static Il2CppInterfaceOffsetPair TlsClientCertificate_t1013_InterfacesOffsets[] = 
 {
@@ -9066,9 +9066,9 @@ const Il2CppTypeDefinitionMetadata TlsClientCertificate_t1013_DefinitionMetadata
 	, TlsClientCertificate_t1013_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3015/* fieldStart */
-	, 4754/* methodStart */
+	, 4753/* methodStart */
 	, -1/* eventStart */
-	, 1176/* propertyStart */
+	, 1174/* propertyStart */
 
 };
 TypeInfo TlsClientCertificate_t1013_il2cpp_TypeInfo = 
@@ -9135,30 +9135,30 @@ static const EncodedMethodIndex TlsClientCertificateVerify_t1014_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
-	1807,
-	1808,
-	1809,
-	1810,
 	1811,
-	1754,
 	1812,
 	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1824,
-	1825,
-	1826,
-	1820,
+	1807,
 };
 static Il2CppInterfaceOffsetPair TlsClientCertificateVerify_t1014_InterfacesOffsets[] = 
 {
@@ -9178,7 +9178,7 @@ const Il2CppTypeDefinitionMetadata TlsClientCertificateVerify_t1014_DefinitionMe
 	, TlsClientCertificateVerify_t1014_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4762/* methodStart */
+	, 4761/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -9247,30 +9247,30 @@ static const EncodedMethodIndex TlsClientFinished_t1015_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
-	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
 	1814,
-	1758,
 	1815,
 	1816,
-	1817,
-	1818,
-	1827,
-	1828,
-	1829,
-	1820,
+	1807,
 };
 static Il2CppInterfaceOffsetPair TlsClientFinished_t1015_InterfacesOffsets[] = 
 {
@@ -9290,7 +9290,7 @@ const Il2CppTypeDefinitionMetadata TlsClientFinished_t1015_DefinitionMetadata =
 	, TlsClientFinished_t1015_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3017/* fieldStart */
-	, 4768/* methodStart */
+	, 4767/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -9359,30 +9359,30 @@ static const EncodedMethodIndex TlsClientHello_t1016_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
-	1806,
-	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
 	1817,
 	1818,
-	1830,
-	1831,
-	1832,
-	1820,
+	1819,
+	1807,
 };
 static Il2CppInterfaceOffsetPair TlsClientHello_t1016_InterfacesOffsets[] = 
 {
@@ -9402,7 +9402,7 @@ const Il2CppTypeDefinitionMetadata TlsClientHello_t1016_DefinitionMetadata =
 	, TlsClientHello_t1016_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 3018/* fieldStart */
-	, 4773/* methodStart */
+	, 4772/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -9471,30 +9471,30 @@ static const EncodedMethodIndex TlsClientKeyExchange_t1017_VTable[28] =
 	502,
 	503,
 	504,
-	1743,
+	1730,
+	1789,
+	1790,
+	1791,
+	1792,
+	1793,
+	1794,
+	1795,
+	1796,
+	1797,
+	1798,
+	1741,
+	1799,
+	1800,
+	1801,
+	1745,
 	1802,
 	1803,
 	1804,
 	1805,
+	1820,
+	1821,
 	1806,
 	1807,
-	1808,
-	1809,
-	1810,
-	1811,
-	1754,
-	1812,
-	1813,
-	1814,
-	1758,
-	1815,
-	1816,
-	1817,
-	1818,
-	1833,
-	1834,
-	1819,
-	1820,
 };
 static Il2CppInterfaceOffsetPair TlsClientKeyExchange_t1017_InterfacesOffsets[] = 
 {
@@ -9514,7 +9514,7 @@ const Il2CppTypeDefinitionMetadata TlsClientKeyExchange_t1017_DefinitionMetadata
 	, TlsClientKeyExchange_t1017_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 4777/* methodStart */
+	, 4776/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 

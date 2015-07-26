@@ -86,23 +86,23 @@ static const EncodedMethodIndex ABonus_2_t3058_VTable[9] =
 	502,
 	506,
 	507,
-	700,
-	701,
-	702,
-	703,
-	704,
+	695,
+	696,
+	697,
+	698,
+	699,
 };
 extern const Il2CppType ABonus_2_t3058_gp_0_0_0_0;
 extern const Il2CppType ABonus_2_t3058_gp_1_0_0_0;
 extern const Il2CppRGCTXDefinition ABonus_2_t3058_RGCTXData[8] = 
 {
-	{ IL2CPP_RGCTX_DATA_METHOD, 4345 }/* Method */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4346 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4340 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4341 }/* Method */,
 	{ IL2CPP_RGCTX_DATA_CLASS, 3209 }/* Class */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4347 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4342 }/* Method */,
 	{ IL2CPP_RGCTX_DATA_TYPE, 3214 }/* Type */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4348 }/* Method */,
-	{ IL2CPP_RGCTX_DATA_METHOD, 4349 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4343 }/* Method */,
+	{ IL2CPP_RGCTX_DATA_METHOD, 4344 }/* Method */,
 	{IL2CPP_RGCTX_DATA_INVALID, NULL},
 };
 extern Il2CppImage g_AssemblyU2DCSharp_dll_Image;
@@ -120,9 +120,9 @@ const Il2CppTypeDefinitionMetadata ABonus_2_t3058_DefinitionMetadata =
 	, ABonus_2_t3058_VTable/* vtableMethods */
 	, ABonus_2_t3058_RGCTXData/* rgctxDefinition */
 	, 405/* fieldStart */
-	, 476/* methodStart */
+	, 474/* methodStart */
 	, -1/* eventStart */
-	, 66/* propertyStart */
+	, 64/* propertyStart */
 
 };
 TypeInfo ABonus_2_t3058_il2cpp_TypeInfo = 
@@ -189,11 +189,11 @@ static const EncodedMethodIndex BodyBecomesActive_t202_VTable[9] =
 	502,
 	506,
 	507,
-	2147484353,
-	706,
-	707,
-	708,
-	709,
+	2147484348,
+	701,
+	702,
+	703,
+	704,
 };
 extern Il2CppImage g_AssemblyU2DCSharp_dll_Image;
 extern const Il2CppType BodyBecomesActive_t202_0_0_0;
@@ -210,9 +210,9 @@ const Il2CppTypeDefinitionMetadata BodyBecomesActive_t202_DefinitionMetadata =
 	, BodyBecomesActive_t202_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 484/* methodStart */
+	, 482/* methodStart */
 	, -1/* eventStart */
-	, 67/* propertyStart */
+	, 65/* propertyStart */
 
 };
 TypeInfo BodyBecomesActive_t202_il2cpp_TypeInfo = 
@@ -286,7 +286,7 @@ static const EncodedMethodIndex ClockBehaviour_t204_VTable[20] =
 	512,
 	513,
 	514,
-	624,
+	619,
 	516,
 	513,
 	514,
@@ -318,9 +318,9 @@ const Il2CppTypeDefinitionMetadata ClockBehaviour_t204_DefinitionMetadata =
 	, ClockBehaviour_t204_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 413/* fieldStart */
-	, 489/* methodStart */
+	, 487/* methodStart */
 	, -1/* eventStart */
-	, 68/* propertyStart */
+	, 66/* propertyStart */
 
 };
 TypeInfo ClockBehaviour_t204_il2cpp_TypeInfo = 
@@ -386,7 +386,7 @@ static const Il2CppType* ClockSpawner_t207_il2cpp_TypeInfo__nestedTypes[1] =
 {
 	&SpawnMode_t205_0_0_0,
 };
-static const EncodedMethodIndex ClockSpawner_t207_VTable[28] = 
+static const EncodedMethodIndex ClockSpawner_t207_VTable[27] = 
 {
 	505,
 	502,
@@ -394,28 +394,27 @@ static const EncodedMethodIndex ClockSpawner_t207_VTable[28] =
 	507,
 	508,
 	509,
-	710,
+	705,
 	511,
 	512,
 	513,
 	514,
-	2147484359,
+	2147484354,
 	516,
 	513,
 	514,
 	508,
 	509,
-	710,
+	705,
 	511,
 	512,
-	2147484360,
-	2147484361,
-	2147484362,
-	2147484363,
-	2147484364,
-	2147484365,
-	2147484360,
-	2147484362,
+	2147484355,
+	2147484356,
+	2147484357,
+	2147484358,
+	2147484359,
+	2147484355,
+	2147484357,
 };
 static const Il2CppType* ClockSpawner_t207_InterfacesTypeInfos[] = 
 {
@@ -443,9 +442,9 @@ const Il2CppTypeDefinitionMetadata ClockSpawner_t207_DefinitionMetadata =
 	, ClockSpawner_t207_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 427/* fieldStart */
-	, 508/* methodStart */
+	, 506/* methodStart */
 	, -1/* eventStart */
-	, 74/* propertyStart */
+	, 72/* propertyStart */
 
 };
 TypeInfo ClockSpawner_t207_il2cpp_TypeInfo = 
@@ -495,7 +494,7 @@ TypeInfo ClockSpawner_t207_il2cpp_TypeInfo =
 	, 4/* field_count */
 	, 0/* event_count */
 	, 1/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 1/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -508,8 +507,10 @@ extern TypeInfo SpawnMode_t205_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_Procrastinate_ClockSpawner_SpawnModeMethodDeclarations.h"
 static const EncodedMethodIndex SpawnMode_t205_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -529,8 +530,6 @@ static const EncodedMethodIndex SpawnMode_t205_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 extern const Il2CppType IFormattable_t1898_0_0_0;
 extern const Il2CppType IConvertible_t1901_0_0_0;
@@ -626,6 +625,10 @@ static const EncodedMethodIndex Wychd_t209_VTable[33] =
 	502,
 	503,
 	504,
+	2147484223,
+	2147484224,
+	2147484225,
+	2147484226,
 	2147484227,
 	2147484228,
 	2147484229,
@@ -638,23 +641,19 @@ static const EncodedMethodIndex Wychd_t209_VTable[33] =
 	2147484236,
 	2147484237,
 	2147484238,
+	2147484224,
 	2147484239,
 	2147484240,
+	2147484233,
 	2147484241,
 	2147484242,
-	2147484228,
 	2147484243,
 	2147484244,
-	2147484237,
 	2147484245,
 	2147484246,
+	2147484238,
 	2147484247,
 	2147484248,
-	2147484249,
-	2147484250,
-	2147484242,
-	2147484251,
-	2147484252,
 };
 extern const Il2CppType IEnumerable_t803_0_0_0;
 extern const Il2CppType ICollection_t1236_0_0_0;
@@ -686,7 +685,7 @@ const Il2CppTypeDefinitionMetadata Wychd_t209_DefinitionMetadata =
 	, Wychd_t209_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 515/* methodStart */
+	, 513/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -776,9 +775,9 @@ const Il2CppTypeDefinitionMetadata DataReader_t211_DefinitionMetadata =
 	, DataReader_t211_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 434/* fieldStart */
-	, 516/* methodStart */
+	, 514/* methodStart */
 	, -1/* eventStart */
-	, 77/* propertyStart */
+	, 75/* propertyStart */
 
 };
 TypeInfo DataReader_t211_il2cpp_TypeInfo = 
@@ -859,7 +858,7 @@ const Il2CppTypeDefinitionMetadata U3CGetActivitiesU3Ec__AnonStorey2_t210_Defini
 	, U3CGetActivitiesU3Ec__AnonStorey2_t210_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 438/* fieldStart */
-	, 521/* methodStart */
+	, 519/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -922,7 +921,7 @@ TypeInfo U3CGetActivitiesU3Ec__AnonStorey2_t210_il2cpp_TypeInfo =
 extern TypeInfo DebugHUD_t212_il2cpp_TypeInfo;
 // Procrastinate.DebugHUD
 #include "AssemblyU2DCSharp_Procrastinate_DebugHUDMethodDeclarations.h"
-static const EncodedMethodIndex DebugHUD_t212_VTable[29] = 
+static const EncodedMethodIndex DebugHUD_t212_VTable[28] = 
 {
 	505,
 	502,
@@ -935,7 +934,7 @@ static const EncodedMethodIndex DebugHUD_t212_VTable[29] =
 	512,
 	513,
 	514,
-	2147484219,
+	2147484216,
 	516,
 	513,
 	514,
@@ -944,20 +943,19 @@ static const EncodedMethodIndex DebugHUD_t212_VTable[29] =
 	510,
 	511,
 	512,
+	2147484217,
+	2147484218,
+	2147484219,
 	2147484220,
 	2147484221,
-	2147484222,
-	2147484223,
-	2147484224,
-	2147484225,
-	2147484220,
-	2147484222,
-	718,
+	2147484217,
+	2147484219,
+	712,
 };
 extern const Il2CppType IDebugHUD_t3051_0_0_0;
 static Il2CppInterfaceOffsetPair DebugHUD_t212_InterfacesOffsets[] = 
 {
-	{ &IDebugHUD_t3051_0_0_0, 28},
+	{ &IDebugHUD_t3051_0_0_0, 27},
 	{ &ISingleton_t3052_0_0_0, 20},
 	{ &EventListener_t137_0_0_0, 4},
 	{ &KeyValueObserver_t138_0_0_0, 9},
@@ -977,9 +975,9 @@ const Il2CppTypeDefinitionMetadata DebugHUD_t212_DefinitionMetadata =
 	, DebugHUD_t212_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 523/* methodStart */
+	, 521/* methodStart */
 	, -1/* eventStart */
-	, 78/* propertyStart */
+	, 76/* propertyStart */
 
 };
 TypeInfo DebugHUD_t212_il2cpp_TypeInfo = 
@@ -1029,7 +1027,7 @@ TypeInfo DebugHUD_t212_il2cpp_TypeInfo =
 	, 0/* field_count */
 	, 0/* event_count */
 	, 0/* nested_type_count */
-	, 29/* vtable_count */
+	, 28/* vtable_count */
 	, 0/* interfaces_count */
 	, 4/* interface_offsets_count */
 
@@ -1047,36 +1045,35 @@ static const Il2CppType* DragRigidbody_t213_il2cpp_TypeInfo__nestedTypes[2] =
 	&U3CDragObjectU3Ec__Iterator0_t214_0_0_0,
 	&U3CMoveFingerU3Ec__Iterator1_t215_0_0_0,
 };
-static const EncodedMethodIndex DragRigidbody_t213_VTable[28] = 
+static const EncodedMethodIndex DragRigidbody_t213_VTable[27] = 
 {
 	505,
 	502,
 	506,
-	719,
+	713,
 	508,
 	509,
-	720,
+	714,
 	511,
 	512,
 	513,
 	514,
-	2147484369,
+	2147484363,
 	516,
 	513,
 	514,
 	508,
 	509,
-	720,
+	714,
 	511,
 	512,
-	2147484370,
-	2147484371,
-	2147484372,
-	2147484373,
-	2147484374,
-	2147484375,
-	2147484370,
-	2147484372,
+	2147484364,
+	2147484365,
+	2147484366,
+	2147484367,
+	2147484368,
+	2147484364,
+	2147484366,
 };
 static Il2CppInterfaceOffsetPair DragRigidbody_t213_InterfacesOffsets[] = 
 {
@@ -1099,9 +1096,9 @@ const Il2CppTypeDefinitionMetadata DragRigidbody_t213_DefinitionMetadata =
 	, DragRigidbody_t213_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 439/* fieldStart */
-	, 527/* methodStart */
+	, 525/* methodStart */
 	, -1/* eventStart */
-	, 79/* propertyStart */
+	, 77/* propertyStart */
 
 };
 TypeInfo DragRigidbody_t213_il2cpp_TypeInfo = 
@@ -1151,7 +1148,7 @@ TypeInfo DragRigidbody_t213_il2cpp_TypeInfo =
 	, 9/* field_count */
 	, 0/* event_count */
 	, 2/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 0/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -1168,11 +1165,11 @@ static const EncodedMethodIndex U3CDragObjectU3Ec__Iterator0_t214_VTable[9] =
 	502,
 	503,
 	504,
-	728,
-	729,
-	730,
-	731,
-	732,
+	721,
+	722,
+	723,
+	724,
+	725,
 };
 extern const Il2CppType IDisposable_t153_0_0_0;
 extern const Il2CppType IEnumerator_1_t1962_0_0_0;
@@ -1202,9 +1199,9 @@ const Il2CppTypeDefinitionMetadata U3CDragObjectU3Ec__Iterator0_t214_DefinitionM
 	, U3CDragObjectU3Ec__Iterator0_t214_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 448/* fieldStart */
-	, 535/* methodStart */
+	, 533/* methodStart */
 	, -1/* eventStart */
-	, 80/* propertyStart */
+	, 78/* propertyStart */
 
 };
 TypeInfo U3CDragObjectU3Ec__Iterator0_t214_il2cpp_TypeInfo = 
@@ -1271,11 +1268,11 @@ static const EncodedMethodIndex U3CMoveFingerU3Ec__Iterator1_t215_VTable[9] =
 	502,
 	503,
 	504,
-	733,
-	734,
-	735,
-	736,
-	737,
+	726,
+	727,
+	728,
+	729,
+	730,
 };
 static const Il2CppType* U3CMoveFingerU3Ec__Iterator1_t215_InterfacesTypeInfos[] = 
 {
@@ -1302,9 +1299,9 @@ const Il2CppTypeDefinitionMetadata U3CMoveFingerU3Ec__Iterator1_t215_DefinitionM
 	, U3CMoveFingerU3Ec__Iterator1_t215_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 457/* fieldStart */
-	, 541/* methodStart */
+	, 539/* methodStart */
 	, -1/* eventStart */
-	, 82/* propertyStart */
+	, 80/* propertyStart */
 
 };
 TypeInfo U3CMoveFingerU3Ec__Iterator1_t215_il2cpp_TypeInfo = 
@@ -1367,8 +1364,10 @@ extern TypeInfo Event_t218_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_Procrastinate_EventMethodDeclarations.h"
 static const EncodedMethodIndex Event_t218_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -1388,8 +1387,6 @@ static const EncodedMethodIndex Event_t218_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair Event_t218_InterfacesOffsets[] = 
 {
@@ -1482,36 +1479,35 @@ static const Il2CppType* GameCenter_t219_il2cpp_TypeInfo__nestedTypes[3] =
 	&U3CReportScoreU3Ec__AnonStorey4_t221_0_0_0,
 	&U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_t222_0_0_0,
 };
-static const EncodedMethodIndex GameCenter_t219_VTable[28] = 
+static const EncodedMethodIndex GameCenter_t219_VTable[27] = 
 {
 	505,
 	502,
 	506,
 	507,
-	738,
-	739,
-	740,
+	731,
+	732,
+	733,
 	511,
 	512,
 	513,
 	514,
-	2147484389,
+	2147484382,
 	516,
 	513,
 	514,
-	738,
-	739,
-	740,
+	731,
+	732,
+	733,
 	511,
 	512,
-	2147484390,
-	2147484391,
-	2147484392,
-	2147484393,
-	2147484394,
-	2147484395,
-	2147484390,
-	2147484392,
+	2147484383,
+	2147484384,
+	2147484385,
+	2147484386,
+	2147484387,
+	2147484383,
+	2147484385,
 };
 static Il2CppInterfaceOffsetPair GameCenter_t219_InterfacesOffsets[] = 
 {
@@ -1534,9 +1530,9 @@ const Il2CppTypeDefinitionMetadata GameCenter_t219_DefinitionMetadata =
 	, GameCenter_t219_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 469/* fieldStart */
-	, 547/* methodStart */
+	, 545/* methodStart */
 	, -1/* eventStart */
-	, 84/* propertyStart */
+	, 82/* propertyStart */
 
 };
 TypeInfo GameCenter_t219_il2cpp_TypeInfo = 
@@ -1586,7 +1582,7 @@ TypeInfo GameCenter_t219_il2cpp_TypeInfo =
 	, 5/* field_count */
 	, 0/* event_count */
 	, 3/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 0/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -1617,7 +1613,7 @@ const Il2CppTypeDefinitionMetadata U3CAuthenticateU3Ec__AnonStorey3_t220_Definit
 	, U3CAuthenticateU3Ec__AnonStorey3_t220_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 474/* fieldStart */
-	, 564/* methodStart */
+	, 562/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1700,7 +1696,7 @@ const Il2CppTypeDefinitionMetadata U3CReportScoreU3Ec__AnonStorey4_t221_Definiti
 	, U3CReportScoreU3Ec__AnonStorey4_t221_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 476/* fieldStart */
-	, 566/* methodStart */
+	, 564/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1783,7 +1779,7 @@ const Il2CppTypeDefinitionMetadata U3CCheckAchievementsWithGameCenterU3Ec__AnonS
 	, U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_t222_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 477/* fieldStart */
-	, 568/* methodStart */
+	, 566/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -1846,7 +1842,7 @@ TypeInfo U3CCheckAchievementsWithGameCenterU3Ec__AnonStorey5_t222_il2cpp_TypeInf
 extern TypeInfo GameController_t225_il2cpp_TypeInfo;
 // Procrastinate.GameController
 #include "AssemblyU2DCSharp_Procrastinate_GameControllerMethodDeclarations.h"
-static const EncodedMethodIndex GameController_t225_VTable[43] = 
+static const EncodedMethodIndex GameController_t225_VTable[42] = 
 {
 	505,
 	502,
@@ -1859,7 +1855,7 @@ static const EncodedMethodIndex GameController_t225_VTable[43] =
 	512,
 	513,
 	514,
-	2147484396,
+	2147484388,
 	516,
 	513,
 	514,
@@ -1868,34 +1864,33 @@ static const EncodedMethodIndex GameController_t225_VTable[43] =
 	510,
 	511,
 	512,
+	2147484389,
+	2147484390,
+	2147484391,
+	2147484392,
+	2147484393,
+	2147484389,
+	2147484391,
+	746,
+	747,
+	2147484396,
 	2147484397,
-	2147484398,
+	750,
 	2147484399,
 	2147484400,
-	2147484401,
-	2147484402,
-	2147484397,
-	2147484399,
+	753,
+	754,
 	755,
 	756,
-	2147484405,
-	2147484406,
-	759,
-	2147484408,
-	2147484409,
-	762,
-	2147484411,
-	764,
-	765,
-	766,
-	756,
-	755,
-	759,
+	757,
+	747,
+	746,
+	750,
 };
 extern const Il2CppType IGameController_t2_0_0_0;
 static Il2CppInterfaceOffsetPair GameController_t225_InterfacesOffsets[] = 
 {
-	{ &IGameController_t2_0_0_0, 28},
+	{ &IGameController_t2_0_0_0, 27},
 	{ &ISingleton_t3052_0_0_0, 20},
 	{ &EventListener_t137_0_0_0, 4},
 	{ &KeyValueObserver_t138_0_0_0, 9},
@@ -1915,9 +1910,9 @@ const Il2CppTypeDefinitionMetadata GameController_t225_DefinitionMetadata =
 	, GameController_t225_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 480/* fieldStart */
-	, 570/* methodStart */
+	, 568/* methodStart */
 	, -1/* eventStart */
-	, 85/* propertyStart */
+	, 83/* propertyStart */
 
 };
 TypeInfo GameController_t225_il2cpp_TypeInfo = 
@@ -1962,12 +1957,12 @@ TypeInfo GameController_t225_il2cpp_TypeInfo =
 	, false/* has_finalize */
 	, false/* has_cctor */
 	, false/* is_blittable */
-	, 18/* method_count */
+	, 19/* method_count */
 	, 5/* property_count */
 	, 8/* field_count */
 	, 0/* event_count */
 	, 0/* nested_type_count */
-	, 43/* vtable_count */
+	, 42/* vtable_count */
 	, 0/* interfaces_count */
 	, 4/* interface_offsets_count */
 
@@ -1978,36 +1973,35 @@ TypeInfo GameController_t225_il2cpp_TypeInfo =
 extern TypeInfo GameData_t227_il2cpp_TypeInfo;
 // Procrastinate.GameData
 #include "AssemblyU2DCSharp_Procrastinate_GameDataMethodDeclarations.h"
-static const EncodedMethodIndex GameData_t227_VTable[28] = 
+static const EncodedMethodIndex GameData_t227_VTable[27] = 
 {
 	505,
 	502,
 	506,
 	507,
 	508,
-	767,
+	758,
 	510,
 	511,
 	512,
 	513,
 	514,
-	2147484416,
+	2147484407,
 	516,
 	513,
 	514,
 	508,
-	767,
+	758,
 	510,
 	511,
 	512,
-	2147484417,
-	2147484418,
-	2147484419,
-	2147484420,
-	2147484421,
-	2147484422,
-	2147484417,
-	2147484419,
+	2147484408,
+	2147484409,
+	2147484410,
+	2147484411,
+	2147484412,
+	2147484408,
+	2147484410,
 };
 static Il2CppInterfaceOffsetPair GameData_t227_InterfacesOffsets[] = 
 {
@@ -2030,9 +2024,9 @@ const Il2CppTypeDefinitionMetadata GameData_t227_DefinitionMetadata =
 	, GameData_t227_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 588/* methodStart */
+	, 587/* methodStart */
 	, -1/* eventStart */
-	, 90/* propertyStart */
+	, 88/* propertyStart */
 
 };
 TypeInfo GameData_t227_il2cpp_TypeInfo = 
@@ -2082,7 +2076,7 @@ TypeInfo GameData_t227_il2cpp_TypeInfo =
 	, 0/* field_count */
 	, 0/* event_count */
 	, 0/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 0/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -2114,7 +2108,7 @@ const Il2CppTypeDefinitionMetadata GoAwayText_t230_DefinitionMetadata =
 	, GoAwayText_t230_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 488/* fieldStart */
-	, 606/* methodStart */
+	, 605/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2177,7 +2171,7 @@ TypeInfo GoAwayText_t230_il2cpp_TypeInfo =
 extern TypeInfo Gyro_t231_il2cpp_TypeInfo;
 // RMX.Gyro
 #include "AssemblyU2DCSharp_RMX_GyroMethodDeclarations.h"
-static const EncodedMethodIndex Gyro_t231_VTable[28] = 
+static const EncodedMethodIndex Gyro_t231_VTable[27] = 
 {
 	505,
 	502,
@@ -2190,7 +2184,7 @@ static const EncodedMethodIndex Gyro_t231_VTable[28] =
 	512,
 	513,
 	514,
-	2147484423,
+	2147484413,
 	516,
 	513,
 	514,
@@ -2199,14 +2193,13 @@ static const EncodedMethodIndex Gyro_t231_VTable[28] =
 	510,
 	511,
 	512,
-	2147484424,
-	2147484425,
-	2147484426,
-	2147484427,
-	2147484428,
-	2147484429,
-	2147484424,
-	2147484426,
+	2147484414,
+	2147484415,
+	2147484416,
+	2147484417,
+	2147484418,
+	2147484414,
+	2147484416,
 };
 static Il2CppInterfaceOffsetPair Gyro_t231_InterfacesOffsets[] = 
 {
@@ -2229,7 +2222,7 @@ const Il2CppTypeDefinitionMetadata Gyro_t231_DefinitionMetadata =
 	, Gyro_t231_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 611/* methodStart */
+	, 610/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2281,7 +2274,7 @@ TypeInfo Gyro_t231_il2cpp_TypeInfo =
 	, 0/* field_count */
 	, 0/* event_count */
 	, 0/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 0/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -2299,36 +2292,35 @@ static const Il2CppType* PauseCanvas_t241_il2cpp_TypeInfo__nestedTypes[2] =
 	&Trigger_t233_0_0_0,
 	&Callback_t235_0_0_0,
 };
-static const EncodedMethodIndex PauseCanvas_t241_VTable[28] = 
+static const EncodedMethodIndex PauseCanvas_t241_VTable[27] = 
 {
 	505,
 	502,
 	506,
 	507,
 	508,
-	782,
+	771,
 	510,
 	511,
 	512,
 	513,
 	514,
-	2147484431,
+	2147484420,
 	516,
 	513,
 	514,
 	508,
-	782,
+	771,
 	510,
 	511,
 	512,
-	2147484432,
-	2147484433,
-	2147484434,
-	2147484435,
-	2147484436,
-	2147484437,
-	2147484432,
-	2147484434,
+	2147484421,
+	2147484422,
+	2147484423,
+	2147484424,
+	2147484425,
+	2147484421,
+	2147484423,
 };
 static Il2CppInterfaceOffsetPair PauseCanvas_t241_InterfacesOffsets[] = 
 {
@@ -2351,7 +2343,7 @@ const Il2CppTypeDefinitionMetadata PauseCanvas_t241_DefinitionMetadata =
 	, PauseCanvas_t241_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 493/* fieldStart */
-	, 613/* methodStart */
+	, 612/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2403,7 +2395,7 @@ TypeInfo PauseCanvas_t241_il2cpp_TypeInfo =
 	, 18/* field_count */
 	, 0/* event_count */
 	, 2/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 0/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -2435,7 +2427,7 @@ const Il2CppTypeDefinitionMetadata Trigger_t233_DefinitionMetadata =
 	, Trigger_t233_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 622/* methodStart */
+	, 621/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2503,11 +2495,11 @@ static const EncodedMethodIndex Callback_t235_VTable[8] =
 	501,
 	502,
 	503,
-	790,
-	791,
-	792,
-	2147484441,
-	2147484442,
+	778,
+	779,
+	780,
+	2147484429,
+	2147484430,
 };
 extern const Il2CppType ISerializationCallbackReceiver_t3065_0_0_0;
 static Il2CppInterfaceOffsetPair Callback_t235_InterfacesOffsets[] = 
@@ -2528,7 +2520,7 @@ const Il2CppTypeDefinitionMetadata Callback_t235_DefinitionMetadata =
 	, Callback_t235_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 623/* methodStart */
+	, 622/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2596,36 +2588,35 @@ static const Il2CppType* SoundEffects_t246_il2cpp_TypeInfo__nestedTypes[1] =
 {
 	&Args_t243_0_0_0,
 };
-static const EncodedMethodIndex SoundEffects_t246_VTable[28] = 
+static const EncodedMethodIndex SoundEffects_t246_VTable[27] = 
 {
 	505,
 	502,
 	506,
 	507,
-	795,
-	796,
-	797,
+	783,
+	784,
+	785,
 	511,
 	512,
 	513,
 	514,
-	2147484446,
+	2147484434,
 	516,
 	513,
 	514,
-	795,
-	796,
-	797,
+	783,
+	784,
+	785,
 	511,
 	512,
-	2147484447,
-	2147484448,
-	2147484449,
-	2147484450,
-	2147484451,
-	2147484452,
-	2147484447,
-	2147484449,
+	2147484435,
+	2147484436,
+	2147484437,
+	2147484438,
+	2147484439,
+	2147484435,
+	2147484437,
 };
 static Il2CppInterfaceOffsetPair SoundEffects_t246_InterfacesOffsets[] = 
 {
@@ -2648,7 +2639,7 @@ const Il2CppTypeDefinitionMetadata SoundEffects_t246_DefinitionMetadata =
 	, SoundEffects_t246_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 511/* fieldStart */
-	, 624/* methodStart */
+	, 623/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -2700,7 +2691,7 @@ TypeInfo SoundEffects_t246_il2cpp_TypeInfo =
 	, 5/* field_count */
 	, 0/* event_count */
 	, 1/* nested_type_count */
-	, 28/* vtable_count */
+	, 27/* vtable_count */
 	, 0/* interfaces_count */
 	, 3/* interface_offsets_count */
 
@@ -2713,8 +2704,10 @@ extern TypeInfo Args_t243_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_Procrastinate_SoundEffects_ArgsMethodDeclarations.h"
 static const EncodedMethodIndex Args_t243_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -2734,8 +2727,6 @@ static const EncodedMethodIndex Args_t243_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair Args_t243_InterfacesOffsets[] = 
 {
@@ -2820,8 +2811,10 @@ extern TypeInfo Tests_t248_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_Procrastinate_TestsMethodDeclarations.h"
 static const EncodedMethodIndex Tests_t248_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -2841,8 +2834,6 @@ static const EncodedMethodIndex Tests_t248_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair Tests_t248_InterfacesOffsets[] = 
 {
@@ -2947,7 +2938,7 @@ const Il2CppTypeDefinitionMetadata Timer_t249_DefinitionMetadata =
 	, Timer_t249_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, -1/* fieldStart */
-	, 633/* methodStart */
+	, 632/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3012,8 +3003,10 @@ extern TypeInfo UserData_t250_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_Procrastinate_UserDataMethodDeclarations.h"
 static const EncodedMethodIndex UserData_t250_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -3033,8 +3026,6 @@ static const EncodedMethodIndex UserData_t250_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair UserData_t250_InterfacesOffsets[] = 
 {
@@ -3144,9 +3135,9 @@ const Il2CppTypeDefinitionMetadata Version_t252_DefinitionMetadata =
 	, Version_t252_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 536/* fieldStart */
-	, 634/* methodStart */
+	, 633/* methodStart */
 	, -1/* eventStart */
-	, 96/* propertyStart */
+	, 94/* propertyStart */
 
 };
 TypeInfo Version_t252_il2cpp_TypeInfo = 
@@ -3209,8 +3200,10 @@ extern TypeInfo Type_t251_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_Procrastinate_Version_TypeMethodDeclarations.h"
 static const EncodedMethodIndex Type_t251_VTable[23] = 
 {
-	539,
+	537,
 	502,
+	538,
+	539,
 	540,
 	541,
 	542,
@@ -3230,8 +3223,6 @@ static const EncodedMethodIndex Type_t251_VTable[23] =
 	556,
 	557,
 	558,
-	559,
-	560,
 };
 static Il2CppInterfaceOffsetPair Type_t251_InterfacesOffsets[] = 
 {
@@ -3340,7 +3331,7 @@ const Il2CppTypeDefinitionMetadata U3CPrivateImplementationDetailsU3E_t254_Defin
 	, U3CPrivateImplementationDetailsU3E_t254_VTable/* vtableMethods */
 	, NULL/* rgctxDefinition */
 	, 543/* fieldStart */
-	, 648/* methodStart */
+	, 647/* methodStart */
 	, -1/* eventStart */
 	, -1/* propertyStart */
 
@@ -3405,10 +3396,10 @@ extern TypeInfo U24ArrayTypeU2436_t253_il2cpp_TypeInfo;
 #include "AssemblyU2DCSharp_U3CPrivateImplementationDetailsU3E_U24ArraMethodDeclarations.h"
 static const EncodedMethodIndex U24ArrayTypeU2436_t253_VTable[4] = 
 {
-	561,
+	559,
 	502,
-	562,
-	699,
+	560,
+	694,
 };
 extern Il2CppImage g_AssemblyU2DCSharp_dll_Image;
 extern const Il2CppType U24ArrayTypeU2436_t253_1_0_0;

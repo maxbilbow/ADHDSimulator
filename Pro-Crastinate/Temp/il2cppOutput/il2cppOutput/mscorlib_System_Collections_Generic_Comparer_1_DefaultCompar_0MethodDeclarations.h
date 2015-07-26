@@ -10,8 +10,8 @@ struct DefaultComparer_t1960;
 #include "AssemblyU2DCSharpU2Dfirstpass_RMX_Bugger_Log.h"
 
 // System.Void System.Collections.Generic.Comparer`1/DefaultComparer<RMX.Bugger/Log>::.ctor()
-extern "C" void DefaultComparer__ctor_m11547_gshared (DefaultComparer_t1960 * __this, const MethodInfo* method);
-#define DefaultComparer__ctor_m11547(__this, method) (( void (*) (DefaultComparer_t1960 *, const MethodInfo*))DefaultComparer__ctor_m11547_gshared)(__this, method)
+extern "C" void DefaultComparer__ctor_m11546_gshared (DefaultComparer_t1960 * __this, const MethodInfo* method);
+#define DefaultComparer__ctor_m11546(__this, method) (( void (*) (DefaultComparer_t1960 *, const MethodInfo*))DefaultComparer__ctor_m11546_gshared)(__this, method)
 // System.Int32 System.Collections.Generic.Comparer`1/DefaultComparer<RMX.Bugger/Log>::Compare(T,T)
-extern "C" int32_t DefaultComparer_Compare_m11548_gshared (DefaultComparer_t1960 * __this, Log_t6  ___x, Log_t6  ___y, const MethodInfo* method);
-#define DefaultComparer_Compare_m11548(__this, ___x, ___y, method) (( int32_t (*) (DefaultComparer_t1960 *, Log_t6 , Log_t6 , const MethodInfo*))DefaultComparer_Compare_m11548_gshared)(__this, ___x, ___y, method)
+extern "C" int32_t DefaultComparer_Compare_m11547_gshared (DefaultComparer_t1960 * __this, Log_t6  ___x, Log_t6  ___y, const MethodInfo* method);
+#define DefaultComparer_Compare_m11547(__this, ___x, ___y, method) (( int32_t (*) (DefaultComparer_t1960 *, Log_t6 , Log_t6 , const MethodInfo*))DefaultComparer_Compare_m11547_gshared)(__this, ___x, ___y, method)

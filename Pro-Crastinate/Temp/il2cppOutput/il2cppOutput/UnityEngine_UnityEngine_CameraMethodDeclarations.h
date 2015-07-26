@@ -24,9 +24,9 @@ struct GameObject_t9;
 #include "UnityEngine_UnityEngine_Ray.h"
 
 // System.Single UnityEngine.Camera::get_fieldOfView()
-extern "C" float Camera_get_fieldOfView_m656 (Camera_t82 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" float Camera_get_fieldOfView_m655 (Camera_t82 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Camera::set_fieldOfView(System.Single)
-extern "C" void Camera_set_fieldOfView_m657 (Camera_t82 * __this, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Camera_set_fieldOfView_m656 (Camera_t82 * __this, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Camera::get_nearClipPlane()
 extern "C" float Camera_get_nearClipPlane_m2319 (Camera_t82 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Camera::get_farClipPlane()
@@ -62,11 +62,11 @@ extern "C" Vector3_t40  Camera_ScreenToViewportPoint_m2399 (Camera_t82 * __this,
 // UnityEngine.Vector3 UnityEngine.Camera::INTERNAL_CALL_ScreenToViewportPoint(UnityEngine.Camera,UnityEngine.Vector3&)
 extern "C" Vector3_t40  Camera_INTERNAL_CALL_ScreenToViewportPoint_m3241 (Object_t * __this /* static, unused */, Camera_t82 * ___self, Vector3_t40 * ___position, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Ray UnityEngine.Camera::ScreenPointToRay(UnityEngine.Vector3)
-extern "C" Ray_t88  Camera_ScreenPointToRay_m625 (Camera_t82 * __this, Vector3_t40  ___position, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Ray_t88  Camera_ScreenPointToRay_m624 (Camera_t82 * __this, Vector3_t40  ___position, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Ray UnityEngine.Camera::INTERNAL_CALL_ScreenPointToRay(UnityEngine.Camera,UnityEngine.Vector3&)
 extern "C" Ray_t88  Camera_INTERNAL_CALL_ScreenPointToRay_m3242 (Object_t * __this /* static, unused */, Camera_t82 * ___self, Vector3_t40 * ___position, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Camera UnityEngine.Camera::get_main()
-extern "C" Camera_t82 * Camera_get_main_m646 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" Camera_t82 * Camera_get_main_m645 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Camera UnityEngine.Camera::get_current()
 extern "C" Camera_t82 * Camera_get_current_m923 (Object_t * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Camera::get_allCamerasCount()

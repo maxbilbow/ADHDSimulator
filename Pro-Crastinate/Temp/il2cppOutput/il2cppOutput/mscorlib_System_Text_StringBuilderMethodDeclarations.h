@@ -28,7 +28,7 @@ extern "C" void StringBuilder__ctor_m10030 (StringBuilder_t164 * __this, String_
 // System.Void System.Text.StringBuilder::.ctor()
 extern "C" void StringBuilder__ctor_m2237 (StringBuilder_t164 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.StringBuilder::.ctor(System.Int32)
-extern "C" void StringBuilder__ctor_m470 (StringBuilder_t164 * __this, int32_t ___capacity, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void StringBuilder__ctor_m469 (StringBuilder_t164 * __this, int32_t ___capacity, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.StringBuilder::.ctor(System.String)
 extern "C" void StringBuilder__ctor_m2290 (StringBuilder_t164 * __this, String_t* ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.StringBuilder::.ctor(System.String,System.Int32)
@@ -44,13 +44,13 @@ extern "C" void StringBuilder_set_Capacity_m10034 (StringBuilder_t164 * __this, 
 // System.Int32 System.Text.StringBuilder::get_Length()
 extern "C" int32_t StringBuilder_get_Length_m5141 (StringBuilder_t164 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.StringBuilder::set_Length(System.Int32)
-extern "C" void StringBuilder_set_Length_m474 (StringBuilder_t164 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void StringBuilder_set_Length_m473 (StringBuilder_t164 * __this, int32_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Char System.Text.StringBuilder::get_Chars(System.Int32)
 extern "C" uint16_t StringBuilder_get_Chars_m10035 (StringBuilder_t164 * __this, int32_t ___index, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Text.StringBuilder::set_Chars(System.Int32,System.Char)
 extern "C" void StringBuilder_set_Chars_m10036 (StringBuilder_t164 * __this, int32_t ___index, uint16_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.StringBuilder::ToString()
-extern "C" String_t* StringBuilder_ToString_m475 (StringBuilder_t164 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" String_t* StringBuilder_ToString_m474 (StringBuilder_t164 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String System.Text.StringBuilder::ToString(System.Int32,System.Int32)
 extern "C" String_t* StringBuilder_ToString_m10037 (StringBuilder_t164 * __this, int32_t ___startIndex, int32_t ___length, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.StringBuilder System.Text.StringBuilder::Remove(System.Int32,System.Int32)
@@ -68,7 +68,7 @@ extern "C" StringBuilder_t164 * StringBuilder_Append_m6106 (StringBuilder_t164 *
 // System.Text.StringBuilder System.Text.StringBuilder::Append(System.Object)
 extern "C" StringBuilder_t164 * StringBuilder_Append_m6097 (StringBuilder_t164 * __this, Object_t * ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.StringBuilder System.Text.StringBuilder::Append(System.Char)
-extern "C" StringBuilder_t164 * StringBuilder_Append_m476 (StringBuilder_t164 * __this, uint16_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" StringBuilder_t164 * StringBuilder_Append_m475 (StringBuilder_t164 * __this, uint16_t ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.StringBuilder System.Text.StringBuilder::Append(System.Char,System.Int32)
 extern "C" StringBuilder_t164 * StringBuilder_Append_m10041 (StringBuilder_t164 * __this, uint16_t ___value, int32_t ___repeatCount, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Text.StringBuilder System.Text.StringBuilder::Append(System.Char[],System.Int32,System.Int32)

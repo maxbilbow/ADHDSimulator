@@ -22,7 +22,7 @@ struct Type_t;
 // System.Void System.Exception::.ctor()
 extern "C" void Exception__ctor_m5074 (Exception_t143 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Exception::.ctor(System.String)
-extern "C" void Exception__ctor_m450 (Exception_t143 * __this, String_t* ___message, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Exception__ctor_m449 (Exception_t143 * __this, String_t* ___message, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Exception::.ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
 extern "C" void Exception__ctor_m4115 (Exception_t143 * __this, SerializationInfo_t809 * ___info, StreamingContext_t810  ___context, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Exception::.ctor(System.String,System.Exception)

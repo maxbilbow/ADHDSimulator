@@ -12,11 +12,11 @@ struct RuntimeAnimatorController_t530;
 struct String_t;
 
 // System.Void UnityEngine.Animator::SetFloat(System.String,System.Single)
-extern "C" void Animator_SetFloat_m542 (Animator_t45 * __this, String_t* ___name, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Animator_SetFloat_m541 (Animator_t45 * __this, String_t* ___name, float ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Animator::GetBool(System.String)
-extern "C" bool Animator_GetBool_m543 (Animator_t45 * __this, String_t* ___name, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" bool Animator_GetBool_m542 (Animator_t45 * __this, String_t* ___name, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::SetBool(System.String,System.Boolean)
-extern "C" void Animator_SetBool_m540 (Animator_t45 * __this, String_t* ___name, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+extern "C" void Animator_SetBool_m539 (Animator_t45 * __this, String_t* ___name, bool ___value, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::SetTrigger(System.String)
 extern "C" void Animator_SetTrigger_m2595 (Animator_t45 * __this, String_t* ___name, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Animator::ResetTrigger(System.String)
