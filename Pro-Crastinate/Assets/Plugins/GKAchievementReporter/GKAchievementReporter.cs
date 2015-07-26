@@ -1,5 +1,5 @@
 ﻿using System.Runtime.InteropServices;
-using RMX;
+
 namespace UnityEngine.SocialPlatforms {
 
 	/// <summary>
@@ -12,33 +12,15 @@ namespace UnityEngine.SocialPlatforms {
 		/// </summary>
 		public static void ReportAchievement(string achievementID, float progress, bool showsCompletionBanner) {
 
-			if (Social.Active is GameCenter.GameCenterPlatform && Application.platform == RuntimePlatform.IPhonePlayer 
-			    || Application.platform == RuntimePlatform.OSXPlayer 
-			    || Application.platform == RuntimePlatform.OSXWebPlayer) {
-				try {
-					// Use native iOS code if running GameCenter on an iOS device
-					_ReportAchievement(achievementID, progress, showsCompletionBanner);
-				} catch (System.Exception e) {
-					if (Bugger.WillLog(RMXTests.GameCenter,e.Message) )
-						Debug.Log(Bugger.Last);
-				}
+			if (Social.Active is GameCenter.GameCenterPlatform && Application.platform == RuntimePlatform.IPhonePlayer) {
+
+				// Use native iOS code if running GameCenter on an iOS device
+				_ReportAchievement(achievementID, progress, showsCompletionBanner);
 
 			} else {
-				// Otherwise trust the Unity Social API
-				try { 
-					Social.ReportProgress(achievementID, progress, null );
-				} catch (System.Exception e) {
-					if (Bugger.WillLog(RMXTests.GameCenter,e.Message) )
-						Debug.Log(Bugger.Last);
-				}
-//				success => {
-//					if (!success) {
-//						var message = achievementID + " Not Found";
-//						if (Bugger.WillLog(RMXTests.Exceptions,message) || Bugger.WillLog(RMXTests.GameCenter,message) )
-//							Debug.Log(Bugger.Last);
-//					}
-//				});
 
+				// Otherwise trust the Unity Social API
+				Social.ReportProgress(achievementID, progress, null);
 			}
 		}
 
