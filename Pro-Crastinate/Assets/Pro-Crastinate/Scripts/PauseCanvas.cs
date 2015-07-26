@@ -110,7 +110,7 @@ namespace Procrastinate {
 //				BuildWychd();
 //			}
 
-			if (SavedData.Get<float>(UserData.gd_current_session) > 0) {
+			if (SavedData.Get<bool>(UserData.gd_has_played_before) && SavedData.Get<float>(UserData.gd_current_session) > 0){
 				GameController.current.PauseGame (true, Event.FirstPause);
 			}	
 
