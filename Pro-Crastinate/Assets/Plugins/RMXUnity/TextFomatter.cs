@@ -36,7 +36,7 @@ namespace RMX
 			log = log.Replace (" success", "<color=green> SUCCESS</color>");
 			log = log.Replace (" success", "<color=green> SUCCESS</color>");
 			log = log.Replace (" True", "<color=green> TRUE</color>");
-			log = log.Replace (" False", "<color=red> FALSE</color>");
+			log = log.Replace (" False", "<color=red>  FALSE</color>");
 			return log;
 		}
 
