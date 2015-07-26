@@ -118,34 +118,20 @@ namespace Procrastinate {
 			current.information = !current.information;
 		}
 
-		bool information = false;
-		// Update is called once per frame
-	
+		bool information = false;	
 
 		public void ShowInfo() {
 			information = !information;
 		}
 
-//		public bool Paused {
-//			get {
-//				return paused;
-//			}
-//		}
-
-//		bool _canvasReady = false;
-//		bool paused {
-//			get {
-//				return _canvasReady? canvas.enabled : false;
-//			} set {
-//				canvas.enabled = value;
-//			}
-//		}
-
-//		public void OnApplicationPause(bool paused) {
-//			GameController.current.PauseGame(paused);
-//		}
 
 		string _wychd;
+
+//		void OnApplicationFocus(bool focusStatus) {
+//			if (!focusStatus) {
+//				PauseGame (true, null);
+//			}
+//		}
 
 		void Update () {
 			canvas.enabled = GameController.current.isPaused;
@@ -154,8 +140,12 @@ namespace Procrastinate {
 		void OnGUI(){
 			if (canvas.enabled) {
 				if (_wychd == null) {// && _timeText == null) {
-					GameController.current.PauseGame (false, null);
-					Debug.LogWarning("timeText not initialized - game unpaused");
+					if (GameController.current.willPauseOnLoad)
+						BuildWychd();
+					else {
+						GameController.current.PauseGame (false, null);
+						Debug.LogWarning("timeText not initialized - game unpaused");
+					}
 				}
 
 				string text = !information ? _wychd : "In total you've only managed to waste " + string.Format("{0:N2}%",GameData.PercentageOfDevTimeWasted) + 
@@ -175,30 +165,32 @@ namespace Procrastinate {
 			}
 		}
 		
-
+		void BuildWychd () {
+			var time = SavedData.Get<float> (
+				GameController.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
+			var activities = GameData.WhatYouCouldHaveDone (time);
+			
+			if (GameController.current.willPauseOnLoad) {
+				_wychd = "Congratulations. During your last session, you wasted ";
+				GameController.current.willPauseOnLoad = false;
+			} else {
+				_wychd = "Congratulations. You have wasted ";
+			}
+			
+			_wychd += TextFormatter.TimeDescription (time);
+			
+			if (GameController.current.newPersonalBest) {
+				_wychd += "\nA NEW PERSONAL BEST!";
+				GameController.current.newPersonalBest = false;
+			}
+			
+			_wychd += "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
+		}
 
 		public override void OnEventDidStart(IEvent theEvent, object info) {
 			if (theEvent.IsType (Events.PauseSession)) {
 				canvas.enabled = true;
-				var time = SavedData.Get<float> (
-					GameController.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
-				var activities = GameData.WhatYouCouldHaveDone (time);
-
-				if (GameController.current.willPauseOnLoad) {
-					_wychd = "Congratulations. During your last session, you wasted ";
-					GameController.current.willPauseOnLoad = false;
-				} else {
-					_wychd = "Congratulations. You have wasted ";
-				}
-
-				_wychd += TextFormatter.TimeDescription (time);
-
-				if (GameController.current.newPersonalBest) {
-					_wychd += "\nA NEW PERSONAL BEST!";
-					GameController.current.newPersonalBest = false;
-				}
-
-				_wychd += "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
+				BuildWychd();
 
 			} else if (theEvent.IsType(Events.ResumeSession)) {
 				canvas.enabled = false;
