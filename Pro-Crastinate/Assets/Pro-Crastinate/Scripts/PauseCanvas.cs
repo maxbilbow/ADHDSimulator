@@ -4,8 +4,9 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
+using RMX; 
 
-using RMX;  namespace Procrastinate {
+namespace Procrastinate {
 	public class PauseCanvas : Singletons.ASingleton<PauseCanvas>  {
 
 		Canvas canvas;
@@ -178,9 +179,10 @@ using RMX;  namespace Procrastinate {
 		
 
 
-		public override void OnEventDidEnd(IEvent theEvent, object info) {
+		public override void OnEventDidStart(IEvent theEvent, object info) {
 			if (theEvent.IsType (Events.PauseSession)) {
-				var time = SavedData.Get<float>(
+				canvas.enabled = true;
+				var time = SavedData.Get<float> (
 					GameController.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
 				var activities = GameData.current.WhatYouCouldHaveDone (time);
 
@@ -191,7 +193,7 @@ using RMX;  namespace Procrastinate {
 					_timeText = "Congratulations. You have wasted ";
 				}
 
-				_timeText += TextFormatter.TimeDescription(time);
+				_timeText += TextFormatter.TimeDescription (time);
 
 				if (GameController.current.newPersonalBest) {
 					_timeText += "\nA NEW PERSONAL BEST!";
@@ -200,8 +202,8 @@ using RMX;  namespace Procrastinate {
 
 				_wychd = "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
 
-
-
+			} else if (theEvent.IsType(Events.ResumeSession)) {
+				canvas.enabled = false;
 			}
 		}
 	

@@ -1,6 +1,6 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/RMXUnity/Event.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Plugins/GKAchievementReporter/GKAchievementReporter.cs">
     <Files>
       <File FileName="Assets/Plugins/RMXUnity/AGameController.cs" Line="94" Column="33" />
       <File FileName="Assets/Pro-Crastinate/Scripts/Settings.cs" Line="1" Column="1" />
@@ -12,10 +12,11 @@
       <File FileName="Assets/Plugins/RMXUnity/TextFomatter.cs" Line="1" Column="1" />
       <File FileName="Assets/Pro-Crastinate/Scripts/DebugHUD.cs" Line="1" Column="1" />
       <File FileName="Assets/Plugins/RMXUnity/ASingleton.cs" Line="121" Column="4" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/Notifications.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/RMXObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="194" Column="23" />
+      <File FileName="Assets/Plugins/RMXUnity/Notifications.cs" Line="9" Column="40" />
+      <File FileName="Assets/Plugins/RMXUnity/RMXObject.cs" Line="73" Column="22" />
       <File FileName="Assets/Pro-Crastinate/Scripts/ClockBehaviour.cs" Line="150" Column="24" />
+      <File FileName="Assets/Plugins/GKAchievementReporter/GKAchievementReporter.cs" Line="30" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
