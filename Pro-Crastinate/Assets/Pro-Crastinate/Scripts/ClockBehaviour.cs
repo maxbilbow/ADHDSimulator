@@ -146,7 +146,8 @@ namespace Procrastinate {
 
 		}
 
-		void OnDestroy(){
+		protected override void OnDestroy(){
+			base.OnDestroy ();
 			if (ClockSpawner.IsInitialized)
 				ClockSpawner.current.clocks.Remove (this);
 		}

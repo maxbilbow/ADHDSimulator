@@ -25,8 +25,8 @@ namespace Procrastinate {
 
 		
 			UpdateGameCenterAchievements ();
-			Settings.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
-			if (Settings.current.willPauseOnLoad) {
+			GameController.current.willPauseOnLoad = SavedData.Get<float>(UserData.gd_current_session) > 0;
+			if (GameController.current.willPauseOnLoad) {
 				GameController.current.PauseGame(true, null);
 			}
 
@@ -149,7 +149,7 @@ namespace Procrastinate {
 				}
 				if (Bugger.WillLog(Tests.Achievements, log))
 					Debug.Log(Bugger.Last);
-				_checkTime = Time.fixedTime + Settings.current.updateScoresEvery;
+				_checkTime = Time.fixedTime + GameController.current.updateScoresEvery;
 			}
 		}
 
@@ -178,13 +178,13 @@ namespace Procrastinate {
 				result = totalTime > (10 * MINUTES);
 				break;
 			case UserData.ach_semi_pro:
-				result = totalTime > (Settings.current.TotalDevTimeWasted / 4);
+				result = totalTime > (GameController.current.TotalDevTimeWasted / 4);
 				break;
 			case UserData.ach_apathetic:
-				result = totalTime > (Settings.current.TotalDevTimeWasted / 2);
+				result = totalTime > (GameController.current.TotalDevTimeWasted / 2);
 				break;
 			case UserData.ach_pro_crastinator:
-				result = totalTime > Settings.current.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;	
+				result = totalTime > GameController.current.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;	
 				break;
 			default:
 				throw new Exception(key + " Has not ben accounded for in HasMetTimeCriteria(UserData key)");
@@ -202,45 +202,6 @@ namespace Procrastinate {
 
 
 
-		/*
-		public static bool HasPlayerAchieved(UserData key, bool result) {
-			var totalTime = SavedData.Get(UserData.TotalTime).Double;
-			switch (key) {
-			case UserData.AmeteurCrastinator:
-				result = SavedData.Get(key).Bool ? true : totalTime > 20;
-				break;
-			case UserData.TimeWaster:
-				result = SavedData.Get(key).Bool ? true : totalTime > (10 * 60);
-				break;
-			case UserData.SemiPro:
-				result = SavedData.Get(key).Bool ? true : totalTime > (Settings.current.TotalDevTimeWasted / 4);
-				break;
-			case UserData.Apathetic:
-				result = SavedData.Get(key).Bool ? true : totalTime > (Settings.current.TotalDevTimeWasted / 2);
-				break;
-			case UserData.Pro:
-				result = SavedData.Get(key).Bool ? true : totalTime > Settings.current.TotalDevTimeWasted ;//gameData.PercentageOfDevTimeWasted;	
-				break;
-			case UserData.MakingTime:
-			case UserData.BigTime:
-			case UserData.OverTime:
-				break;
-			}
-			if (result && !SavedData.Get (key).Bool) { 
-				SavedData.Get (key).Bool = true;
-				Notifications.EventDidOccur (Event.GC_AchievementGained, key);
-				try {
-					current.ReportProgress(key, true);
-				} catch (Exception e){
-					Debug.LogWarning(e.Message);
-				}
-				return true;
-			} else {
-				return result; 
-			}
-
-		}
-		*/
 		static bool UserAuthenticated {
 			get {
 				return Notifications.StatusOf(Events.GC_UserAuthentication) == EventStatus.Success;

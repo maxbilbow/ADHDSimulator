@@ -106,9 +106,9 @@ using RMX;  namespace Procrastinate {
 			infoButton = GetComponentInChildren<Button> ();
 			infoButton.onClick.AddListener (toggleInfo);
 
-			if (Settings.current.willPauseOnLoad) {
+			if (GameController.current.willPauseOnLoad) {
 //				PauseCanvas.current.Pause(true);
-				gameController.PauseGame (Settings.current.willPauseOnLoad, SoundEffects.Args.MusicKeepsPlaying);
+				gameController.PauseGame (GameController.current.willPauseOnLoad, SoundEffects.Args.MusicKeepsPlaying);
 			}
 //			_canvasReady = true;
 		}
@@ -181,21 +181,21 @@ using RMX;  namespace Procrastinate {
 		public override void OnEventDidEnd(IEvent theEvent, object info) {
 			if (theEvent.IsType (Events.PauseSession)) {
 				var time = SavedData.Get<float>(
-					Settings.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
+					GameController.current.willPauseOnLoad ? UserData.gd_current_session : UserData.gd_current_procrastination);
 				var activities = GameData.current.WhatYouCouldHaveDone (time);
 
-				if (Settings.current.willPauseOnLoad) {
+				if (GameController.current.willPauseOnLoad) {
 					_timeText = "Congratulations. During your last session, you wasted ";
-						Settings.current.willPauseOnLoad = false;
+					GameController.current.willPauseOnLoad = false;
 				} else {
 					_timeText = "Congratulations. You have wasted ";
 				}
 
-				_timeText += Timer.GetTimeDescription(time);
+				_timeText += TextFormatter.TimeDescription(time);
 
-				if (Settings.current.newPersonalBest) {
+				if (GameController.current.newPersonalBest) {
 					_timeText += "\nA NEW PERSONAL BEST!";
-					Settings.current.newPersonalBest = false;
+					GameController.current.newPersonalBest = false;
 				}
 
 				_wychd = "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];

@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace RMX {
 
@@ -12,6 +13,33 @@ namespace RMX {
 
 	 	Dictionary<string, object> values = new Dictionary<string, object> ();
 		List<KeyValueObserver> observers = new List<KeyValueObserver> ();
+
+
+		/// <summary>
+		/// Gets a value indicating whether this <see cref="RMX.ASingleton`1"/> add to global listeners.
+		/// </summary>
+		/// <value><c>true</c> if add to global listeners; otherwise, <c>false</c>.</value>
+		private bool AddToGlobalListeners { 
+			get {
+				System.Type classType = this.GetType();
+				foreach (string vMethod in ListenerMethods) {
+					MethodInfo method = classType.GetMethod (vMethod);
+					if (method.DeclaringType != typeof(RMXObject)) 
+						return true;
+				}
+				return false;
+			}
+		}
+
+
+		protected virtual void Awake() {
+			if (AddToGlobalListeners)
+				Notifications.AddListener(this);
+		}
+
+		protected virtual void OnDestroy() {
+			Notifications.RemoveListener (this);
+		}
 
 		protected void WillBeginEvent(IEvent theEvent){
 			Notifications.EventWillStart (theEvent);

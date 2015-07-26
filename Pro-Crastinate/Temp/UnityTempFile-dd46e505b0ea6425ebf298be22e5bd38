@@ -18,6 +18,7 @@
 -define:ENABLE_AUDIO
 -define:ENABLE_CACHING
 -define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
 -define:ENABLE_FRAME_DEBUGGER
 -define:ENABLE_GENERICS
 -define:ENABLE_HOME_SCREEN
@@ -34,7 +35,6 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_UNET
 -define:ENABLE_UNITYEVENTS
--define:ENABLE_VR
 -define:ENABLE_WEBCAM
 -define:ENABLE_WWW
 -define:ENABLE_CLOUD_SERVICES
@@ -48,18 +48,17 @@
 -define:INCLUDE_IL2CPP
 -define:INCLUDE_DIRECTX12
 -define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
 -define:ENABLE_LOCALIZATION
--define:UNITY_IPHONE
--define:ENABLE_RUNTIME_GI
+-define:UNITY_WEBPLAYER
 -define:ENABLE_SUBSTANCE
--define:ENABLE_GAMECENTER
--define:ENABLE_NETWORK
--define:UNITY_IPHONE_API
--define:UNITY_IOS
+-define:WEBPLUG
 -define:ENABLE_TEXTUREID_MAP
--define:PLAYERCONNECTION_LISTENS_FIXED_PORT
--define:DEBUGGER_LISTENS_FIXED_PORT
--define:ENABLE_IL2CPP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_MONO
 -define:ENABLE_PROFILER
 -define:DEBUG
 -define:TRACE
@@ -68,7 +67,6 @@
 -define:UNITY_EDITOR_64
 -define:UNITY_EDITOR_OSX
 -define:CROSS_PLATFORM_INPUT
--define:MOBILE_INPUT
 'Assets/Pro-Crastinate/Scripts/ABonus.cs'
 'Assets/Pro-Crastinate/Scripts/BodyBecomesActive.cs'
 'Assets/Pro-Crastinate/Scripts/ClockBehaviour.cs'
@@ -89,5 +87,3 @@
 'Assets/Pro-Crastinate/Scripts/Testing.cs'
 'Assets/Pro-Crastinate/Scripts/Timer.cs'
 'Assets/Pro-Crastinate/Scripts/Version.cs'
--r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
--r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

@@ -13,7 +13,7 @@ using RMX;  namespace Procrastinate {
 		// Use this for initialization
 		void Start () {
 			Hide ();
-			if (!Settings.current.PrintToScreen) {
+			if (!GameController.current.DebugHUD) {
 				showButton.SetActive(false);
 			}
 		}
@@ -37,7 +37,7 @@ using RMX;  namespace Procrastinate {
 
 		string GetTime(object key) {
 			var time = SavedData.Get<float> (key);
-			var timeString = time > 0 ? Timer.GetTimeDescription (time) : time.ToString ();
+			var timeString = time > 0 ? TextFormatter.TimeDescription (time) : time.ToString ();
 			return "\n – " + key.ToString () + ": <color=yellow>" + timeString + "</color>";
 		}
 		// Update is called once per frame
@@ -53,7 +53,7 @@ using RMX;  namespace Procrastinate {
 				info += GetTime(UserData.gd_current_procrastination);
 				info += GetTime(UserData.gd_current_session);
 				info += GetTime(UserData.gd_total_time_Wasted);
-				info += "\nClockSpawnMode: " + Settings.current.ClockSpawnMode;
+				info += "\nClockSpawnMode: " + GameController.current.ClockSpawnMode;
 				info += "\n" + DragRigidbody.current;
 
 				GUIStyle style = new GUIStyle ();

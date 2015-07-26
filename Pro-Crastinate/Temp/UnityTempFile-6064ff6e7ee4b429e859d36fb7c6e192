@@ -67,6 +67,7 @@
 -define:UNITY_EDITOR_OSX
 -define:CROSS_PLATFORM_INPUT
 'Assets/Plugins/GKAchievementReporter/GKAchievementReporter.cs'
+'Assets/Plugins/RMXUnity/ASettings.cs'
 'Assets/Plugins/RMXUnity/ASingleton.cs'
 'Assets/Plugins/RMXUnity/Bugger.cs'
 'Assets/Plugins/RMXUnity/CsvReader.cs'

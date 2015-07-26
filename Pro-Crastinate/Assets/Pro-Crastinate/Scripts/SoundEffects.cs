@@ -54,9 +54,11 @@ namespace Procrastinate {
 		public override void OnEvent(IEvent theEvent, object info) {
 			if (theEvent.IsType(Events.SomethingBurst))
 				Play (POP);
-			if (theEvent.IsType (Events.GC_AchievementGained)) {
-				SwitchMainTrack(true);	       
-			}
+
+#if !DEBUG
+			if (theEvent.IsType (Events.GC_AchievementGained)) 
+				SwitchMainTrack(true);	 
+#endif
 		}
 
 		void SwitchMainTrack(bool force = false) {

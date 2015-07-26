@@ -19,7 +19,7 @@ namespace Procrastinate
 
 		float fingerWidth { 
 			get {
-				return Settings.current.FingerSize;
+				return GameController.current.FingerSize;
 			}
 		}
 
