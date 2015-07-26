@@ -29,6 +29,8 @@ namespace Procrastinate
 
         private void Update()
         {
+			if (GameController.current.isPaused)
+				return;
             // Make sure the user pressed the mouse down
             if (!Input.GetMouseButtonDown(0))
             {
@@ -48,7 +50,7 @@ namespace Procrastinate
 
 
 			// We need to hit a rigidbody that is not kinematic
-			if (hit != null && hit.rigidbody != null && hit.rigidbody.isKinematic)
+			if (hit && hit.rigidbody.isKinematic)
 			{
 				//				print ("We need to hit a rigidbody that is not kinematic! ");
 				return;
