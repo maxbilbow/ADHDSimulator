@@ -53,7 +53,7 @@ namespace Procrastinate {
 				Play (POP);
 
 //#if !DEBUG
-			if (theEvent.Equals (RMX.Event.GC_AchievementGained) && !GameController.current.isPaused  && !GameData.FirstLoad) 
+			if (theEvent.Equals (RMX.Event.GC_AchievementGained) && !GameController.current.isPaused  && !GameController.current.FirstLoad) 
 				SwitchMainTrack(true);	 
 //#endif
 		}

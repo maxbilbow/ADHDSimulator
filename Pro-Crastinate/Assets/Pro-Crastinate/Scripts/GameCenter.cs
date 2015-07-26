@@ -164,6 +164,7 @@ namespace Procrastinate {
 		/// <returns><c>true</c> iff the criteria is met for the first time otherwise, <c>false</c>.</returns>
 		/// <param name="key">Key.</param>
 		public static bool HasMetTimeCriteria(UserData key) {
+
 			var totalTime = SavedData.Get<float>(UserData.gd_total_time_Wasted);
 			if (SavedData.Get<bool> (key))
 				return false;
@@ -275,7 +276,7 @@ namespace Procrastinate {
 						}
 					});
 				} catch (System.ArgumentException e) {
-					if (Bugger.WillLog(RMXTests.Exceptions,e.Message) || Bugger.WillLog(RMXTests.Achievements,e.Message) )
+					if (Bugger.WillLog(RMXTests.Achievements,e.Message) )//|| Bugger.WillLog(RMXTests.Exceptions,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 			}

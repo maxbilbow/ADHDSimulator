@@ -110,7 +110,7 @@ namespace Procrastinate {
 //				BuildWychd();
 //			}
 
-			if (SavedData.Get<bool>(UserData.gd_has_played_before) && SavedData.Get<float>(UserData.gd_current_session) > 0){
+			if (GameData.lastSessionTime > 0){
 				GameController.current.PauseGame (true, Event.FirstPause);
 			}	
 
@@ -173,10 +173,10 @@ namespace Procrastinate {
 			
 			if (args.Equals(Event.FirstPause)) {
 				_wychd = "Congratulations. During your last session, you wasted ";
-				time = SavedData.Get<float> (UserData.gd_current_session);
+				time = GameData.lastProcrastination;
 			} else {
 				_wychd = "Congratulations. You have wasted ";
-				time = SavedData.Get<float> (UserData.gd_current_procrastination);
+				time = GameData.lastSessionTime;
 			}
 			
 			_wychd += TextFormatter.TimeDescription (time);

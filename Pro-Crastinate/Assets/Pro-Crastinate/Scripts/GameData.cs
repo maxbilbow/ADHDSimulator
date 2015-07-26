@@ -13,12 +13,8 @@ namespace Procrastinate {
 	
 
 
-		public static bool FirstLoad {
-			get {
-				return SavedData.Get<float>(UserData.gd_current_session) != Time.fixedTime;
-			}
-		}
-		public static float totalTime {
+
+		static float totalTime {
 			get {
 				return SavedData.Get<float>(UserData.gd_total_time_Wasted);
 			} set {
@@ -27,22 +23,37 @@ namespace Procrastinate {
 		}
 		
 		
-		public static float currentProcrastination {
+		static float currentProcrastination {
 			get {
 				return SavedData.Get<float>(UserData.gd_current_procrastination);
 			} set {
 				SavedData.Set(UserData.gd_current_procrastination, value);
 			}
 		}
-		
-		public static float currentSessionTime {
+
+		public static float lastProcrastination {
+			get {
+				return SavedData.Get<float>(UserData.gd_last_procrastination);
+			} set {
+				SavedData.Set(UserData.gd_last_procrastination, value);
+			}
+		}
+		 static float currentSessionTime {
 			get {
 				return SavedData.Get<float>(UserData.gd_current_session);
 			} set {
 				SavedData.Set(UserData.gd_current_session, value);
 			}
 		}
-		
+
+		public static float lastSessionTime {
+			get {
+				return SavedData.Get<float>(UserData.gd_last_session);
+			} set {
+				SavedData.Set(UserData.gd_last_session, value);
+			}
+		}
+
 		public static float longestProcrastination {
 			get {
 				return SavedData.Get<float>(UserData.sc_longest_procrastination);
@@ -54,11 +65,11 @@ namespace Procrastinate {
 
 
 		void Update() {
-			UpdateScoresAndReset (false);
+			UpdateScoresAndReset (false, false);
 		}
 
 		void OnApplicationQuit(){
-			UpdateScoresAndReset (false);
+			UpdateScoresAndReset (true, true);
 			PlayerPrefs.Save ();
 		}
 
@@ -76,7 +87,7 @@ namespace Procrastinate {
 
 
 
-		void UpdateScoresAndReset(bool reset) {
+		void UpdateScoresAndReset(bool reset, bool final) {
 			totalTime += Time.deltaTime;
 			currentProcrastination += Time.deltaTime;
 			currentSessionTime = Time.fixedTime;
@@ -85,15 +96,19 @@ namespace Procrastinate {
 				longestProcrastination = currentProcrastination;
 			}
 			if (reset) {
+				lastProcrastination = currentProcrastination;
 				currentProcrastination = 0;
+			}
+			if (final) {
+				lastSessionTime = currentSessionTime;
 			}
 		}
 	
 		public override void OnEventDidStart(System.Enum theEvent, object info) {
 		 	if (theEvent.Equals (RMX.Event.ResumeSession))
-				UpdateScoresAndReset (true);
+				UpdateScoresAndReset (true, false);
 			else if (theEvent.Equals (RMX.Event.PauseSession))
-				UpdateScoresAndReset (false);
+				UpdateScoresAndReset (true, false);
 		}
 
 	

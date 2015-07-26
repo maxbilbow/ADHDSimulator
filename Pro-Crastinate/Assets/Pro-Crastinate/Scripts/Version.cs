@@ -6,7 +6,7 @@ namespace Procrastinate {
 
 	public enum UserData {
 		// Saved Game Data
-		gd_current_session, gd_current_procrastination, gd_total_time_Wasted,
+		gd_current_session, gd_current_procrastination, gd_total_time_Wasted, gd_last_session, gd_last_procrastination,
 		// Saved & Top Scores
 		sc_longest_procrastination,
 		// Top Scores
