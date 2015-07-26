@@ -12,12 +12,14 @@ namespace UnityEngine.SocialPlatforms {
 		/// </summary>
 		public static void ReportAchievement(string achievementID, float progress, bool showsCompletionBanner) {
 
-			if (Social.Active is GameCenter.GameCenterPlatform && Application.platform == RuntimePlatform.IPhonePlayer) {
+			if (Social.Active is GameCenter.GameCenterPlatform && Application.platform == RuntimePlatform.IPhonePlayer 
+			    || Application.platform == RuntimePlatform.OSXPlayer 
+			    || Application.platform == RuntimePlatform.OSXWebPlayer) {
 				try {
 					// Use native iOS code if running GameCenter on an iOS device
 					_ReportAchievement(achievementID, progress, showsCompletionBanner);
 				} catch (System.Exception e) {
-					if (Bugger.WillLog(RMXTests.Exceptions,e.Message) || Bugger.WillLog(RMXTests.GameCenter,e.Message) )
+					if (Bugger.WillLog(RMXTests.GameCenter,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 
@@ -26,7 +28,7 @@ namespace UnityEngine.SocialPlatforms {
 				try { 
 					Social.ReportProgress(achievementID, progress, null );
 				} catch (System.Exception e) {
-					if (Bugger.WillLog(RMXTests.Exceptions,e.Message) || Bugger.WillLog(RMXTests.GameCenter,e.Message) )
+					if (Bugger.WillLog(RMXTests.GameCenter,e.Message) )
 						Debug.Log(Bugger.Last);
 				}
 //				success => {

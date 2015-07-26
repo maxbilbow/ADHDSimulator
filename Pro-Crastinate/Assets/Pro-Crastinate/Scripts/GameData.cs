@@ -13,7 +13,11 @@ namespace Procrastinate {
 	
 
 
-
+		public static bool FirstLoad {
+			get {
+				return SavedData.Get<float>(UserData.gd_current_session) != Time.fixedTime;
+			}
+		}
 		public static float totalTime {
 			get {
 				return SavedData.Get<float>(UserData.gd_total_time_Wasted);
