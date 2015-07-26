@@ -204,7 +204,7 @@ namespace RMX
 			protected override bool WillInitialize
 			{
 				get {
-					if (Singletons.GameController.BuildForRelease) {
+					if (Singletons.GameController.BuildForRelease || !Singletons.GameController.DebugHUD) {
 						NotificationCenter.RemoveListener(this);
 						Destroy(this);
 						Destroy(gameObject);
@@ -244,7 +244,7 @@ namespace RMX
 			protected override bool WillInitialize
 			{
 				get {
-					if (Singletons.GameController.BuildForRelease) {
+					if (Singletons.GameController.BuildForRelease || !Singletons.GameController.DebugHUD) {
 						NotificationCenter.RemoveListener(this);
 						Destroy(this);
 						Destroy(gameObject);

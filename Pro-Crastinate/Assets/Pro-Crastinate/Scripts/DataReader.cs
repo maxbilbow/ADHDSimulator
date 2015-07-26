@@ -22,7 +22,7 @@ namespace Procrastinate
 		}
 
 
-		public static float TimeHMSToFloat(string time, char parser) {
+		 static float TimeHMSToFloat(string time, char parser) {
 			string[] hms = {"","",""};
 			int i = 0;
 			foreach (char c in time) {
@@ -36,9 +36,10 @@ namespace Procrastinate
 			float seconds = 0;
 			try {
 				seconds  = float.Parse (hms [2]);
-				seconds += float.Parse(hms [1]) * 60;
-				seconds += float.Parse(hms [0]) * 60 * 60;
+				seconds += float.Parse (hms [1]) * 60;
+				seconds += float.Parse (hms [0]) * 60 * 60;
 			} catch (Exception e) {
+//				Debug.LogWarning(time + " " + e.Message);
 				throw e;
 			}
 			return seconds;
@@ -67,48 +68,70 @@ namespace Procrastinate
 		
 		private static List<List<string>> GetActivities(float inTime) {
 //			Debug.Log (GameController.control.database.name);
+			var log = string.Format("Getting activities for time: {0:N2} Min", (inTime / 60));
 			try {
 				var reader = CsvReader.Read (Database);
 		
 			
 				var list = reader.FindAll(match => {
 					try {
-						if (match.Count > csv_approved && match[csv_approved] == "true") {
-							return IsWithinTime(match[csv_time], inTime);
+//						Debug.LogWarning(inTime.ToString());
+						if (match[csv_approved].ToUpper() == "TRUE") {
+							Debug.Log(match);
+							var result = IsWithinTime(match[csv_time], inTime);
+							if (result)
+								log += "\n         Accepted: " + match[csv_time] + " " + result;
+							else
+								log += "\n NOT WITHING TIME: " + match[csv_time];
+							return result;
 						} else {
+							log += "\n       NOT A TIME: " + match[csv_time];
 							return false;
 						}
 
 					} catch (Exception e) {
-						Debug.Log(e.Message);// + ": " + match[csv_time]);
+						log += "\n FAIL: " + e.Message;
 						return false;
 					}
 				});
+				log += " Success!";
+				if (Bugger.WillLog (RMXTests.Database, log ))
+					Debug.Log (Bugger.Last);// + ": " + match[csv_time]);
 				return list;
 			} catch  (Exception e) {
+				log += "\n FAIL: " + e.Message;
+				if (Bugger.WillLog (RMXTests.Database, log ) || Bugger.WillLog (RMXTests.Exceptions, log))
+					Debug.Log (Bugger.Last);// + ": " + match[csv_time]);
 				throw e;
 			}
-			
+
 		}
 
 
 		public static Wychd GetActivityList(float forTime) {
+			var log = string.Format("Getting activities for time: {0:N2} Min", (forTime / 60));
 			Wychd list = new Wychd ();
 			List<List<string>> activities;
 			try {
 				activities = GetActivities(forTime);
 				foreach (List<string> thing in activities) {
 					try {
+						log += "\n Added: " + thing[csv_text];
 						list.Add (thing [csv_text]);
 					} catch (Exception e) {
-						if (Bugger.WillLog (RMXTests.Exceptions, thing + " :: " + e.ToString ()))
-							Debug.Log (Bugger.Last);
+						log += "\n FAIL: " + e.Message;
 					}
 				}
+				if (Bugger.WillLog (RMXTests.Database, log ))
+					Debug.Log (Bugger.Last);// + ": " + match[csv_time]);
 				return list;
 			}catch (Exception e) {
+				log += "\n FAIL: " + e.Message;
+				if (Bugger.WillLog (RMXTests.Database, log ) || Bugger.WillLog (RMXTests.Exceptions, log))
+					Debug.Log (Bugger.Last);// + ": " + match[csv_time]);
 				throw e;
 			} 
+
 		}
 
 	}

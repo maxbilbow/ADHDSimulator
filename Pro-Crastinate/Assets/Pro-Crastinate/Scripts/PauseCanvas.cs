@@ -169,8 +169,6 @@ namespace Procrastinate {
 		
 		void BuildWychd (Event args = Event.NULL) {
 			float time = 0; 
-			var activities = GameData.WhatYouCouldHaveDone (time);
-			
 			if (args.Equals(Event.FirstPause)) {
 				_wychd = "Congratulations. During your last session, you wasted ";
 				time = GameData.lastProcrastination;
@@ -178,7 +176,7 @@ namespace Procrastinate {
 				_wychd = "Congratulations. You have wasted ";
 				time = GameData.lastSessionTime;
 			}
-			
+			var activities = GameData.WhatYouCouldHaveDone (time);
 			_wychd += TextFormatter.TimeDescription (time);
 			
 			if (GameController.current.newPersonalBest) {

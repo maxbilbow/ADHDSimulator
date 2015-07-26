@@ -153,29 +153,29 @@ namespace Procrastinate {
 		}
 
 		public static Wychd WhatYouCouldHaveDone(float time) {
-			var log = "";
+			var log = "Database... ";
 			Wychd result = null;
 			try {
 				result = DataReader.GetActivityList (time);
-				log += "List accessed with time: " + time + ", and " + result.Count + " sentences.";
+				log += "\nList accessed with time: " + time + ", and " + result.Count + " sentences.";
 				if (result.Count > 0) {
 					log += "\n - Adding from database...";
 				} else {
-					log += "\n - Found none in Database...";
-					result = DefaultList(time);
+					throw new UnityException("\nFAIL: Database was Empty!");
 				}
 			} catch (System.Exception e) {
-				log += "Database not accessible: " + e.Message + "\n reverting to default\n";
+				log += "\n" + e.Message + "\n reverting to default";
 				result = DefaultList(time);
 			} finally {
-				if (GameController.ShouldDebug (Tests.GameDataLists)) {
+				if (GameController.ShouldDebug (Tests.GameDataLists) || GameController.ShouldDebug (RMXTests.Database)) {
 					foreach (string s in result) {
 						log += "\n => " + s;
 					}
-					if (Bugger.WillLog (Tests.GameDataLists, log))
-						Debug.Log (Bugger.Last);
+
 				}
 			}
+			if (Bugger.WillLog (Tests.GameDataLists, log) || Bugger.WillLog (RMXTests.Database, log))
+				Debug.Log (Bugger.Last);
 			return result;
 		}
 
