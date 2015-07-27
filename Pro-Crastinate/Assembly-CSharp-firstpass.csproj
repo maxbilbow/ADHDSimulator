@@ -47,6 +47,17 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Plugins\GKAchievementReporter\GKAchievementReporter.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\AGameController.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\ASingleton.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\Bugger.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\CsvReader.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\DebugLog.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\Event.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\Examples\GameControllerExample.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\Notifications.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\RMXObject.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\SavedData.cs" />
+     <Compile Include="Assets\Plugins\RMXUnity\TextFomatter.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Camera2DFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />

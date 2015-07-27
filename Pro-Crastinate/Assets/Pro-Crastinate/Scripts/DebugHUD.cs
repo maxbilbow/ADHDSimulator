@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 using RMX;  namespace Procrastinate {
-	public class DebugHUD :  Bugger.DebugHUD {
+	public class DebugHUD : Bugger.DebugHUD {
 
 		
 		string GetTime(object key) {
@@ -36,57 +36,6 @@ using RMX;  namespace Procrastinate {
 			}
 
 		}
+
 	}
-
-		/*
-		public GameObject showButton;
-		public GameObject hideButton;
-		
-
-
-		
-		bool _show = false;
-		public void Show() {
-			_show = true;
-			showButton.SetActive (false);
-			hideButton.SetActive (true);
-			//			debugPanel.transform.position = new Vector3 (-slideX, 0, 0);
-			//			info.text = "Width: " + Camera.main.pixelWidth.ToString();
-		}
-		
-		public void Hide() {
-			_show = false;
-			showButton.SetActive (true);
-			hideButton.SetActive (false);
-			//			debugPanel.transform.position = new Vector3 (slideX, 0, 0);
-			//			info.text = "Width: " + Camera.main.pixelWidth.ToString();
-		}
-		
-		
-
-		
-		protected bool listSingletons = true; 
-		protected bool listObjects = false; 
-		
-		// Update is called once per frame
-		void OnGUI() {
-			if (_show) {
-				var text = DebugData;
-				GUIStyle style = new GUIStyle ();
-				//				
-//				foreach (ISingleton s in singletons) {
-//					text += "\n" + s.name + ", isListening: " + s.isListening;
-//				}
-				style.richText = true;
-				style.wordWrap = true;
-				style.alignment = TextAnchor.UpperRight;
-				style.padding.left = style.padding.right = style.padding.top = style.padding.bottom = 20;
-				//				style.border
-				GUI.Label (new Rect (0, 0, Screen.width, Screen.height), TextFormatter.Format(text,Time.timeScale == 0 ? "black" : "white"), style);
-				
-			}
-		}
-		*/
-	
-	
 }

@@ -77,6 +77,7 @@ namespace Procrastinate
 					try {
 //						Debug.LogWarning(inTime.ToString());
 						if (match[csv_approved].ToUpper() == "TRUE") {
+							Debug.Log(match);
 							var result = IsWithinTime(match[csv_time], inTime);
 							if (result)
 								log += "\n         Accepted: " + match[csv_time] + " " + result;

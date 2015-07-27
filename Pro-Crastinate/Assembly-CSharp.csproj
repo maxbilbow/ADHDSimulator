@@ -46,17 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\AGameController.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\ASingleton.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\Bugger.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\CsvReader.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\DebugLog.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\Event.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\Examples\GameControllerExample.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\Notifications.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\RMXObject.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\SavedData.cs" />
-     <Compile Include="Assets\Pro-Crastinate\RMXUnity\TextFomatter.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\ABonus.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\BodyBecomesActive.cs" />
      <Compile Include="Assets\Pro-Crastinate\Scripts\ClockBehaviour.cs" />
