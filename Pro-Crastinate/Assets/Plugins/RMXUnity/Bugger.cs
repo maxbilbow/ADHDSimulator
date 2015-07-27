@@ -135,22 +135,20 @@ namespace RMX
 
 		}
 
-//		static Log StartNewLog(string feature) {
-//			return StartNewLog (feature, "");
-//		}
-//
-//	 	static Log StartNewLog(string feature, string message) {
-//			if (IsInitialized) {
-//				return new Log (feature, message);
-//			} else
-//				throw new Exception ("Bugger must be initialized before StartNewLog(string feature, string message). Log is: \n" + feature + ": " + message);
-//
-//		}
+
 	
 		private static string Stack(string message, int skip = 2) {
-			var sf = new System.Diagnostics.StackTrace(skip).GetFrame(0);
-			var file = sf.GetFileName(); var member = sf.GetMethod().Name; var line = sf.GetFileLineNumber();
-			return message + string.Format("\n<color=red> => {0}_{1}, line: {2} </color>", file, member, line);
+#if DEBUG || true
+			try {
+				var sf = new System.Diagnostics.StackTrace(skip).GetFrame(0);
+				var file = sf.GetFileName(); var member = sf.GetMethod().Name; var line = sf.GetFileLineNumber();
+				return message + string.Format("\n<color=red> => {0}_{1}, line: {2} </color>", file, member, line);
+			} catch (Exception e){
+				return "STACK FAIL! " + e.Message + "\n" + message;
+			}
+#else
+			return message;
+#endif
 		}
 
 		public static bool WillLog(System.Enum feature, string message) {

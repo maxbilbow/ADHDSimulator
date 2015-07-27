@@ -1,26 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/DebugHUD.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/GameController.cs">
     <Files>
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="54" Column="1" />
-      <File FileName="Assets/Standard Assets/Utility/DragRigidbody.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/SavedData.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/GameData.cs" Line="36" Column="31" />
-      <File FileName="Assets/Plugins/GKAchievementReporter/GKAchievementReporter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/Bugger.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/Event.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Events.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/TextFomatter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Plugins/RMXUnity/DebugLog.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/DebugHUD.cs" Line="33" Column="74" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/ABonus.cs" Line="45" Column="3" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/BodyBecomesActive.cs" Line="16" Column="2" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="138" Column="3" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/ClockBehaviour.cs" Line="111" Column="48" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/ClockSpawner.cs" Line="60" Column="9" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/Version.cs" Line="9" Column="93" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="95" Column="27" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="42" Column="50" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/GameCenter.cs" Line="149" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
