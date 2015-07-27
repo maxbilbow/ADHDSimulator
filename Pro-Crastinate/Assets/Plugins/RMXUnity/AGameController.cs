@@ -23,6 +23,7 @@ namespace RMX {
 			}
 		}
 		public bool _debugHUD;
+		public bool safeMode;
 		public float _maxDisplayTime = 5f;
 		public bool DebugMisc;
 		public bool DebugEarlyInits;
@@ -64,20 +65,21 @@ namespace RMX {
 
 		protected void Start() {
 			PreStart ();
-			if (DebugHUD) {
-				Bugger.Initialize();
+			if (!safeMode) {
+				if (DebugHUD) {
+					Bugger.Initialize ();
+				}
+				Physics2D.gravity = defaultGravity;
+				WillBeginEvent (Event.SingletonInitialization);
+				StartSingletons ();
+				#if MOBILE_INPUT
+				StartMobile ();
+				#else
+				StartDesktop();
+				#endif
+				DidFinishEvent (Event.SingletonInitialization);
 			}
-			Physics2D.gravity = defaultGravity;
-			WillBeginEvent (Event.SingletonInitialization);
-			StartSingletons ();
-			#if MOBILE_INPUT
-			StartMobile();
-			#else
-			StartDesktop();
-			#endif
-			DidFinishEvent (Event.SingletonInitialization);
 			PostStart ();
-			
 		}
 
 		/// <summary>
@@ -92,16 +94,19 @@ namespace RMX {
 
 		/// <summary>
 		/// Initialise any additional singletons here, especially if they are essential to the workings of your game
+		/// NOT called automatically in Safe Mode
 		/// </summary>
 		protected abstract void StartSingletons ();
 
 		/// <summary>
 		/// Initialise any Destop specific settings here
+		/// NOT called automatically in Safe Mode
 		/// </summary>
 		protected abstract void StartDesktop ();
 
 		/// <summary>
 		/// Initialise any Mobile specific settings here
+		/// NOT called automatically in Safe Mode
 		/// </summary>
 		protected abstract void StartMobile ();
 

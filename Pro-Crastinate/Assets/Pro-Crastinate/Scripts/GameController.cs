@@ -93,7 +93,8 @@ namespace Procrastinate {
 
 		protected override void PostStart ()
 		{
-
+			if (safeMode)
+				StartMobile ();
 		}
 		
 		void OnApplicationFocus(bool focusStatus) {

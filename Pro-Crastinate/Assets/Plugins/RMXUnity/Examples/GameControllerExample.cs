@@ -39,6 +39,7 @@ namespace RMX.Examples {
 		
 		/// <summary>
 		/// Initialise any additional singletons here, especially if they are essential to the workings of your game
+		/// NOT called automatically in Safe Mode
 		/// </summary>
 		protected override void StartSingletons () {
 
@@ -46,6 +47,7 @@ namespace RMX.Examples {
 		
 		/// <summary>
 		/// Initialise any Destop specific settings here
+		/// NOT called automatically in Safe Mode
 		/// </summary>
 		protected override void StartDesktop () {
 
@@ -53,6 +55,7 @@ namespace RMX.Examples {
 		
 		/// <summary>
 		/// Initialise any Mobile specific settings here
+		/// NOT called automatically in Safe Mode
 		/// </summary>
 		protected override void StartMobile () {
 
