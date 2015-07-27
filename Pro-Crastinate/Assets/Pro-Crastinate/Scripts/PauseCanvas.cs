@@ -141,7 +141,7 @@ namespace Procrastinate {
 
 
 		void OnGUI(){
-			if (canvas.enabled) {
+			if (canvas != null && canvas.enabled) {
 				if (_wychd == null) {// && _timeText == null) {
 						BuildWychd(Event.FirstPause);
 //						GameController.current.PauseGame (false, null);
@@ -170,10 +170,10 @@ namespace Procrastinate {
 			float time = 0; 
 			if (args.Equals(Event.FirstPause)) {
 				_wychd = "Congratulations. During your last session, you wasted ";
-				time = GameData.lastProcrastination;
+				time = GameData.lastSessionTime;
 			} else {
 				_wychd = "Congratulations. You have wasted ";
-				time = GameData.lastSessionTime;
+				time = GameData.lastProcrastination;
 			}
 			var activities = GameData.WhatYouCouldHaveDone (time);
 			_wychd += TextFormatter.TimeDescription (time);

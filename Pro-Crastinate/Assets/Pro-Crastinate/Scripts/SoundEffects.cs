@@ -48,8 +48,8 @@ namespace Procrastinate {
 				tracks ["poppy1"].Play ();
 			else if (theEvent.Equals(Event.SomethingBurst))
 				Play (POP);
-			else if (theEvent.Equals (RMX.Event.GC_AchievementGained) && !GameController.current.isPaused  && !GameController.current.FirstLoad && info is UserData) 
-				SwitchMainTrack(!SavedData.Get<bool>((UserData)info));
+			else if (theEvent.Equals (RMX.Event.GC_AchievementGained) && !GameController.current.isPaused  && !GameController.current.FirstLoad && info is UserData && !SavedData.Get<bool>((UserData)info)) 
+				SwitchMainTrack(true);
 		}
 
 		void SwitchMainTrack(bool force = false) {
