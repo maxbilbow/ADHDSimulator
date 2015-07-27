@@ -12,7 +12,7 @@ using UnityEngine;
 namespace RMX
 {
 	public interface EventListener {
-		void OnEvent(System.Enum theEvent, object args);
+//		void OnEvent(System.Enum theEvent, object args);
 		void OnEventDidStart(System.Enum theEvent, object args);
 		void OnEventDidEnd(System.Enum theEvent, object args);
 		void SendMessage(string message, SendMessageOptions sendMessageOptions);

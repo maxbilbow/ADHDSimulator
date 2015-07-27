@@ -26,7 +26,8 @@ using RMX;  namespace Procrastinate {
 				component.isKinematic = true;
 				base.Deactivate();
 			} catch {
-				print ("Warning: component could not be deactivated.");
+				if (Bugger.WillLog(RMXTests.Misc, "Warning: component could not be deactivated."))
+					Debug.LogWarning(Bugger.Last);
 			}
 		}
 

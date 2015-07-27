@@ -62,10 +62,10 @@ namespace RMX {
 			EventDidOccur (e, null);
 		}
 
-		public static void EventDidOccur(System.Enum theEvent, object o) {
+		 static void EventDidOccur(System.Enum theEvent, object o) {
 			Events [theEvent] = o is EventStatus ? (EventStatus) o : EventStatus.Completed;
 			foreach (EventListener listener in Listeners) {
-				listener.OnEvent(theEvent,o);
+				listener.OnEventDidEnd(theEvent,o);
 			}
 		}
 
@@ -80,13 +80,17 @@ namespace RMX {
 
 		public static void EventWillStart(System.Enum theEvent, object o) {
 			if (!IsActive (theEvent)) {
-				Events [theEvent] = o is EventStatus ? (EventStatus) o : EventStatus.Active;
+				Events [theEvent] = o is EventStatus ? (EventStatus)o : EventStatus.Active;
 				foreach (EventListener listener in Listeners) {
 					listener.OnEventDidStart (theEvent, o);
 				}
+			} else {
+				Debug.LogWarning (theEvent.ToString() + " tried to re-start but never finished the first time!");
 			}
 		}
 		public static void EventDidEnd(System.Enum theEvent) {
+			if (!Events.ContainsKey(theEvent) || Events [theEvent] != EventStatus.Active)
+				Debug.LogWarning (theEvent.ToString() + " was ended but never started!");
 			EventDidEnd (theEvent, null);
 		}
 		public static void EventDidEnd(System.Enum theEvent, object o) {

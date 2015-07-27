@@ -50,6 +50,7 @@ namespace RMX {
 				NotificationCenter.AddListener (this);
 				_isListening = true;
 			}
+			Bugger.AddToWatchList(this);
 		}
 
 		protected void StopListening(){
@@ -57,40 +58,46 @@ namespace RMX {
 			_isListening = false;
 		}
 
-//		protected virtual void OnDestroy() {
-//			Notifications.RemoveListener (this);
+		protected virtual void OnDestroy() {
+			NotificationCenter.RemoveListener (this);
+			_isListening = false;
+			Bugger.RemoveFromWatchList (this);
+		}
+
+//		protected void WillBeginEvent(System.Enum theEvent){
+//			NotificationCenter.EventWillStart (theEvent);
+//		}
+//
+//		protected void DidUpdateEvent(System.Enum theEvent) {
+//			NotificationCenter.EventWillStart (theEvent);
+//		}
+//
+//		protected void DidFinishEvent(System.Enum theEvent){
+//			NotificationCenter.EventDidEnd (theEvent);
 //		}
 
-		protected void WillBeginEvent(System.Enum theEvent){
-			NotificationCenter.EventWillStart (theEvent);
-		}
 
-		protected void DidUpdateEvent(System.Enum theEvent) {
-			NotificationCenter.EventWillStart (theEvent);
-		}
 
-		protected void DidFinishEvent(System.Enum theEvent){
-			NotificationCenter.EventDidEnd (theEvent);
-		}
-
-		protected void DidCauseEvent(System.Enum theEvent){
-			NotificationCenter.EventDidOccur (theEvent);
-		}
-
-		protected void WillBeginEvent(System.Enum theEvent, object info){
+		protected void WillBeginEvent(System.Enum theEvent, object info = null){
 			NotificationCenter.EventWillStart (theEvent, info);
 		}
 		
-		protected void DidUpdateEvent(System.Enum theEvent, object info) {
-			NotificationCenter.EventWillStart (theEvent, info);
-		}
-		
-		protected void DidFinishEvent(System.Enum theEvent, object info){
+//		protected void DidUpdateEvent(System.Enum theEvent, object info = null) {
+//			NotificationCenter.EventWillStart (theEvent, info);
+//		}
+//		
+		protected void DidFinishEvent(System.Enum theEvent, object info = null){
 			NotificationCenter.EventDidEnd (theEvent, info);
 		}
 
-		protected void DidCauseEvent(System.Enum theEvent, object info){
-			NotificationCenter.EventDidOccur (theEvent, info);
+		/// <summary>
+		/// Depricated
+		/// </summary>
+		/// <param name="theEvent">The event.</param>
+		/// <param name="info">Info.</param>
+		protected void DidCauseEvent(System.Enum theEvent, object info = null){
+			NotificationCenter.EventWillStart (theEvent, info);
+			NotificationCenter.EventDidEnd (theEvent, info);
 		}
 
 		protected void WillChangeValueForKey(string key){
@@ -132,12 +139,12 @@ namespace RMX {
 		public virtual void OnValueForKeyDidChange (string key, object value) {}
 
 		protected static string[] ListenerMethods = {
-			"OnEvent",
+//			"OnEvent",
 			"OnEventDidStart",
 			"OnEventDidEnd"
 		};
 
-		public virtual void OnEvent(System.Enum theEvent, object args) {}
+//		public virtual void OnEvent(System.Enum theEvent, object args) {}
 		
 		public virtual void OnEventDidStart(System.Enum theEvent, object args){}
 		

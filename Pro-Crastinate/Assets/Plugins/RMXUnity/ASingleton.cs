@@ -172,7 +172,6 @@ namespace RMX
 						DontDestroyOnLoad (gameObject);
 						_singleton = this as T;// as T;
 						MainInitCheck ();
-						Bugger.AddToWatchList (this);
 						_isInitialized = true;
 						base.Awake ();
 					} else if (_singleton != this) {

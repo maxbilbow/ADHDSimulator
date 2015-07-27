@@ -46,16 +46,10 @@ namespace Procrastinate {
 		public override void OnEventDidStart(System.Enum theEvent, object info) {
 			if (theEvent.Equals (Event.ClockIsAboutToBurst))
 				tracks ["poppy1"].Play ();
-		}
-
-		public override void OnEvent(System.Enum theEvent, object info) {
-			if (theEvent.Equals(Event.SomethingBurst))
+			else if (theEvent.Equals(Event.SomethingBurst))
 				Play (POP);
-
-//#if !DEBUG
-			if (theEvent.Equals (RMX.Event.GC_AchievementGained) && !GameController.current.isPaused  && !GameController.current.FirstLoad) 
-				SwitchMainTrack(true);	 
-//#endif
+			else if (theEvent.Equals (RMX.Event.GC_AchievementGained) && !GameController.current.isPaused  && !GameController.current.FirstLoad && info is UserData) 
+				SwitchMainTrack(!SavedData.Get<bool>((UserData)info));
 		}
 
 		void SwitchMainTrack(bool force = false) {
@@ -67,19 +61,21 @@ namespace Procrastinate {
 				tracks [SOMETHING].Pause ();
 			}
 		}
+
 		public override void OnEventDidEnd(System.Enum theEvent, object info) {
 			if (theEvent.Equals (Event.ClockIsAboutToBurst))
 				tracks ["poppy2"].Play();
-			else if (theEvent.Equals (RMX.Event.ResumeSession)) {
+			else if (theEvent.Equals (RMX.Event.ResumeSession))
 				SwitchMainTrack();
-			} else if (theEvent.Equals (RMX.Event.PauseSession)) {
+			else if (theEvent.Equals (RMX.Event.PauseSession)) 
 				if (info == null || (!info.Equals (Args.MusicKeepsPlaying) && !info.Equals (Event.FirstPause))) {
 					foreach (KeyValuePair<string,AudioSource> pair in tracks) {
 						if (pair.Value.isPlaying)
 							pair.Value.Pause ();
 					}
 				}
-			}
+				 
+
 		}
 
 

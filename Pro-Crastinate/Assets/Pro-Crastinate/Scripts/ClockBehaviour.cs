@@ -27,7 +27,7 @@ namespace Procrastinate {
 				if (inflationSpeed < 0.0004) { 
 					DidCauseEvent(Event.SomethingBurst);
 					DidFinishEvent(Event.ClockIsAboutToBurst);
-					DidCauseEvent(RMX.Event.GC_AchievementGained,UserData.ach_big_time);
+					GameCenter.ReportProgress(UserData.ach_big_time, true);
 					Destroy (this.gameObject);
 					return true;
 				} else if (inflationSpeed < 0.005) {
@@ -147,8 +147,8 @@ namespace Procrastinate {
 
 		}
 
-		protected  void OnDestroy(){
-//			base.OnDestroy ();
+		protected override void OnDestroy(){
+			base.OnDestroy ();
 			if (ClockSpawner.IsInitialized)
 				ClockSpawner.clocks.Remove (this);
 		}

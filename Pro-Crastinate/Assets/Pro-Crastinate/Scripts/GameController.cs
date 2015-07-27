@@ -151,7 +151,7 @@ namespace Procrastinate {
 			} else if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():args))) {
 					Debug.LogWarning ("Superflouous PauseGame(" + pause + ") call");
 			}
-			_firstLoad = false;
+//			_firstLoad = false;
 		}
 
 		public override bool IsDebugging(System.Enum feature) {
@@ -174,6 +174,9 @@ namespace Procrastinate {
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
 				PauseGame(!isPaused, null);
+			}
+			if (_firstLoad && !isPaused) {
+				_firstLoad = false;
 			}
 		}
 

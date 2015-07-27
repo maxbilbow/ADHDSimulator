@@ -34,8 +34,11 @@ namespace Procrastinate {
 					var successInSD = SavedData.Get<bool> (id.Key);
 					try {
 						var successInGC = CheckAchievementsWithGameCenter (id.Key);
-						if (successInSD != successInGC) 
-							DidCauseEvent (RMX.Event.GC_AchievementGained, id.Key);
+						if (successInSD != successInGC)  {
+//							WillBeginEvent(RMX.Event.GC_AchievementGained, id.Key);
+							ReportProgress (id.Key, true);
+//							DidFinishEvent(RMX.Event.GC_AchievementGained, id.Key);
+						}
 						log += " => " + id.Key + " SD: " + successInSD + ", GC: " + successInGC + "\n";
 					
 					} catch {
@@ -61,16 +64,16 @@ namespace Procrastinate {
 			} 
 		}
 
-		public override void OnEvent(System.Enum theEvent, object info) {
-			if (theEvent.Equals (RMX.Event.GC_AchievementGained))
-				if (info is UserData) {
-					var key = (UserData)info;
-					SavedData.Set (key, true);
-					ReportProgress (key);
-				if (Bugger.WillLog (RMXTests.EventCenter, "Achievement Gained: " + info.ToString ()))
-						Debug.Log (Bugger.Last);
-				}
-		}
+//		public override void OnEvent(System.Enum theEvent, object info) {
+//			if (theEvent.Equals (RMX.Event.GC_AchievementGained))
+//				if (info is UserData) {
+//					var key = (UserData)info;
+//					SavedData.Set (key, true);
+//					ReportProgress (key);
+//				if (Bugger.WillLog (RMXTests.EventCenter, "Achievement Gained: " + info.ToString ()))
+//						Debug.Log (Bugger.Last);
+//				}
+//		}
 
 		void Authenticate() {
 			string log = "";
@@ -190,8 +193,7 @@ namespace Procrastinate {
 			}
 	
 			if (result) {// && result != SavedData.Get (key).Bool) { 
-				NotificationCenter.EventDidOccur (RMX.Event.GC_AchievementGained, key);
-				SavedData.Set(key, true);
+				ReportProgress(key,true);
 				return true;
 			} else {
 				return false; 
@@ -208,10 +210,13 @@ namespace Procrastinate {
 //			}
 //		}
 
-		public void ReportProgress(UserData data) {
-			var achieved = SavedData.Get<bool> (data);
+		public static void ReportProgress(UserData data, bool yes = false) {
+			var achieved = yes || SavedData.Get<bool> (data);
 			if (!achieved)
 				return;
+
+			NotificationCenter.EventWillStart (RMX.Event.GC_AchievementGained, data);
+			SavedData.Set (data, true);
 			var log = data.ToString() + " => Reporting Progress: " + achieved; var feature = RMXTests.Achievements;
 
 			float progress = achieved ? 100 : 0;
@@ -250,7 +255,7 @@ namespace Procrastinate {
 			}
 			if (Bugger.WillLog(feature,log) )
 				Debug.Log(Bugger.Last);
-
+			NotificationCenter.EventDidEnd (RMX.Event.GC_AchievementGained, data);
 		}
 
 		bool CheckAchievementsWithGameCenter(UserData key) {
