@@ -186,7 +186,7 @@ namespace Procrastinate {
 			_wychd += "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
 		}
 
-		public override void OnEventDidStart(System.Enum theEvent, object info) {
+		public override void OnEventDidEnd(System.Enum theEvent, object info) {
 			if (theEvent.Equals (RMX.Event.PauseSession)) {
 				canvas.enabled = true;
 				BuildWychd(info is Event ? (Event) info : Event.NULL);

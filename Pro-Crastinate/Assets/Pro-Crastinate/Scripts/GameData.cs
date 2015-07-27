@@ -95,7 +95,7 @@ namespace Procrastinate {
 			}
 			if (reset) {
 				lastProcrastination = currentProcrastination;
-				currentProcrastination = 0;
+
 			}
 			if (final) {
 				lastSessionTime = currentSessionTime;
@@ -103,9 +103,10 @@ namespace Procrastinate {
 		}
 	
 		public override void OnEventDidStart(System.Enum theEvent, object info) {
-		 	if (theEvent.Equals (RMX.Event.ResumeSession))
-				UpdateScoresAndReset (true, false);
-			else if (theEvent.Equals (RMX.Event.PauseSession))
+		 	if (theEvent.Equals (RMX.Event.ResumeSession)) {
+				UpdateScoresAndReset (false, false);
+				currentProcrastination = 0;
+			} else if (theEvent.Equals (RMX.Event.PauseSession))
 				UpdateScoresAndReset (true, false);
 		}
 
