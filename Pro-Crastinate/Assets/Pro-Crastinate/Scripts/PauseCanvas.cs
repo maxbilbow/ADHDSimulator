@@ -132,7 +132,7 @@ namespace Procrastinate {
 		}
 
 
-		string _wychd;
+
 
 		void Update () {
 			if (canvas != null)
@@ -142,14 +142,10 @@ namespace Procrastinate {
 
 		void OnGUI(){
 			if (canvas != null && canvas.enabled) {
-				if (_wychd == null) {// && _timeText == null) {
-						BuildWychd(Event.FirstPause);
-//						GameController.current.PauseGame (false, null);
-						Debug.LogWarning("timeText not initialized - game unpaused");
 
-				}
 
-				string text = !information ? _wychd : "In total you've only managed to waste " + string.Format("{0:N2}%",GameData.PercentageOfDevTimeWasted) + 
+
+				string text = !information ? GameData.wychd : "In total you've only managed to waste " + string.Format("{0:N2}%",GameData.PercentageOfDevTimeWasted) + 
 							"\n of the time I've lost developing this game." +
 							"\n\n Try again?";
 				GUIStyle style = new GUIStyle ();
@@ -166,30 +162,12 @@ namespace Procrastinate {
 			}
 		}
 		
-		void BuildWychd (Event args = Event.NULL) {
-			float time = 0; 
-			if (args.Equals(Event.FirstPause)) {
-				_wychd = "Congratulations. During your last session, you wasted ";
-				time = GameData.lastSessionTime;
-			} else {
-				_wychd = "Congratulations. You have wasted ";
-				time = GameData.lastProcrastination;
-			}
-			var activities = GameData.WhatYouCouldHaveDone (time);
-			_wychd += TextFormatter.TimeDescription (time);
-			
-			if (GameController.current.newPersonalBest) {
-				_wychd += "\nA NEW PERSONAL BEST!";
-				GameController.current.newPersonalBest = false;
-			}
-			
-			_wychd += "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
-		}
+
 
 		public override void OnEventDidEnd(System.Enum theEvent, object info) {
 			if (theEvent.Equals (RMX.Event.PauseSession)) {
 				canvas.enabled = true;
-				BuildWychd(info is Event ? (Event) info : Event.NULL);
+//				BuildWychd(info is Event ? (Event) info : Event.NULL);
 
 			} else if (theEvent.Equals(RMX.Event.ResumeSession)) {
 				canvas.enabled = false;

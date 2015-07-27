@@ -98,25 +98,20 @@ namespace Procrastinate {
 	
 		public override void OnEventDidStart(System.Enum theEvent, object info) {
 		 	if (theEvent.Equals (RMX.Event.ResumeSession)) {
-				lastProcrastination = currentProcrastination;
-				currentProcrastination = 0;
+
 			} else if (theEvent.Equals (RMX.Event.PauseSession))
+				lastProcrastination = currentProcrastination;
 				UpdateScores ();
 		}
-
-	
-		public static void TestData ()
-		{
-			float[] testTimes = { 10f, 20f, 30f, 45f, 60f, 120f, 3000f, 6000f, 80000f };
-			foreach (float time in testTimes) {
-				Debug.Log("\n\n--------- Testing: " + time + "---------");
-				var list = DataReader.GetActivityList (time);
-				foreach (string thing in list) {
-					Debug.Log (thing);
-				}
+		public override void OnEventDidEnd(System.Enum theEvent, object info) {
+			if (theEvent.Equals (RMX.Event.PauseSession)) {
+				BuildWychd(info is Event ? (Event) info : Event.NULL);
+				
+			} else if (theEvent.Equals(RMX.Event.ResumeSession)) {
+				currentProcrastination = 0;
 			}
-			
 		}
+
 
 		private static Wychd DefaultList(float time) {
 			Wychd result = new Wychd ();
@@ -170,6 +165,34 @@ namespace Procrastinate {
 			if (Bugger.WillLog (Tests.GameDataLists, log) || Bugger.WillLog (RMXTests.Database, log))
 				Debug.Log (Bugger.Last);
 			return result;
+		}
+
+	 	string _wychd;
+		public static string wychd {
+			get{
+				if (_current._wychd == null) 
+					_current.BuildWychd(GameController.current.isPaused ? Event.FirstPause : Event.NULL);
+				return _current._wychd;
+			}
+		}
+		public void BuildWychd (Event args = Event.NULL) {
+			float time = 0; 
+			if (args.Equals(Event.FirstPause)) {
+				_wychd = "Congratulations. During your last session, you wasted ";
+				time = GameData.lastSessionTime;
+			} else {
+				_wychd = "Congratulations. You have wasted ";
+				time = GameData.lastProcrastination;
+			}
+			var activities = WhatYouCouldHaveDone (time);
+			_wychd += TextFormatter.TimeDescription (time);
+			
+			if (GameController.current.newPersonalBest) {
+				_wychd += "\nA NEW PERSONAL BEST!";
+				GameController.current.newPersonalBest = false;
+			}
+			
+			_wychd += "\n\nDuring that time you could have " + activities [Random.Range (0, activities.Count)];
 		}
 
 
