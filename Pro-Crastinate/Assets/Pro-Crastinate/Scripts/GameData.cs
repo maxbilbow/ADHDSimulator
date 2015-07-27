@@ -63,11 +63,12 @@ namespace Procrastinate {
 
 
 		void Update() {
-			UpdateScoresAndReset (false, false);
+			UpdateScores ();
 		}
 
 		void OnApplicationQuit(){
-			UpdateScoresAndReset (true, true);
+			UpdateScores ();
+			lastSessionTime = currentSessionTime;
 			PlayerPrefs.Save ();
 		}
 
@@ -85,7 +86,7 @@ namespace Procrastinate {
 
 
 
-		void UpdateScoresAndReset(bool reset, bool final) {
+		void UpdateScores() {
 			totalTime += Time.deltaTime;
 			currentProcrastination += Time.deltaTime;
 			currentSessionTime = Time.fixedTime;
@@ -93,21 +94,14 @@ namespace Procrastinate {
 			if (GameController.current.newPersonalBest) {
 				longestProcrastination = currentProcrastination;
 			}
-			if (reset) {
-				lastProcrastination = currentProcrastination;
-
-			}
-			if (final) {
-				lastSessionTime = currentSessionTime;
-			}
 		}
 	
 		public override void OnEventDidStart(System.Enum theEvent, object info) {
 		 	if (theEvent.Equals (RMX.Event.ResumeSession)) {
-				UpdateScoresAndReset (false, false);
+				lastProcrastination = currentProcrastination;
 				currentProcrastination = 0;
 			} else if (theEvent.Equals (RMX.Event.PauseSession))
-				UpdateScoresAndReset (true, false);
+				UpdateScores ();
 		}
 
 	
@@ -128,8 +122,8 @@ namespace Procrastinate {
 			Wychd result = new Wychd ();
 			float timeInMinutes = time / 60;
 			if (timeInMinutes < 0.5) {
-				result.Add("approved this app for distribution through the app store!");
-				result.Add("done very little else. And I'm glad you did not");
+				result.Add("approved this app for distribution!");
+				result.Add("done very little else.");
 			} else if (timeInMinutes < 1) {
 				result.Add("trolled someone on Twitter");
 			} else if (timeInMinutes < 1.5) {
