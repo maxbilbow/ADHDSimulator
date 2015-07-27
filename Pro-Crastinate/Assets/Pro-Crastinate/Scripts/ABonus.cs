@@ -2,7 +2,7 @@
 using System.Collections;
 using RMX;  
 namespace Procrastinate {
-	public abstract class ABonus<TComponent,T> : MonoBehaviour
+	public abstract class ABonus<TComponent,T> : RMXObject
 	where T : System.IEquatable<T>
 	where TComponent : Object {
 
@@ -41,12 +41,6 @@ namespace Procrastinate {
 			}
 			Deactivate ();
 
-		}
-
-		protected virtual void OnApplicationFocus(bool focus) {
-			if (!focus && deactivateOnPause) {
-				Deactivate();
-			}
 		}
 
 

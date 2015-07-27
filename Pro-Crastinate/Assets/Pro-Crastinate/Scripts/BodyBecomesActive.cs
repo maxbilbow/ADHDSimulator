@@ -8,14 +8,13 @@ using RMX;  namespace Procrastinate {
 	public class BodyBecomesActive : ABonus<Rigidbody2D,float> {
 
 
-
+		public override void OnEventDidStart (System.Enum theEvent, object args)
+		{
+			if (deactivateOnPause && theEvent.Equals (RMX.Event.PauseSession))
+				Deactivate ();
+		}
 	
 
-		protected override void OnApplicationFocus(bool focus) {
-			if (key.ToString() == UserData.gd_current_procrastination.ToString()) {
-				base.OnApplicationFocus(focus);
-			}
-		}
 
 		public override void Activate() {
 			base.Activate ();

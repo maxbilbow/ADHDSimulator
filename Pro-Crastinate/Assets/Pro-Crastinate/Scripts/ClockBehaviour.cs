@@ -108,7 +108,7 @@ namespace Procrastinate {
 
 
 			var clock = clone.AddComponent<ClockBehaviour> ();
-			clock.MaxTimeOffScreen = Random.Range (0, 10);
+			clock.MaxTimeOffScreen = Random.Range (0, 30);
 //			clock.life
 			clock.startingPoint = ClockSpawner.SpawnPoint;
 

@@ -128,7 +128,7 @@ namespace Procrastinate {
 
 		public bool isPaused {
 			get {
-				return Time.timeScale == 0;
+				return Time.timeScale != 1;
 			}
 		}
 		bool _firstLoad = true;
@@ -172,6 +172,7 @@ namespace Procrastinate {
 				return _current;
 			}
 		}
+
 		void Update() {
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
