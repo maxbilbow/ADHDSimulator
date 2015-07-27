@@ -138,7 +138,6 @@ namespace RMX
 
 	
 		private static string Stack(string message, int skip = 2) {
-#if DEBUG || true
 			try {
 				var sf = new System.Diagnostics.StackTrace(skip).GetFrame(0);
 				var file = sf.GetFileName(); var member = sf.GetMethod().Name; var line = sf.GetFileLineNumber();
@@ -146,9 +145,6 @@ namespace RMX
 			} catch (Exception e){
 				return "STACK FAIL! " + e.Message + "\n" + message;
 			}
-#else
-			return message;
-#endif
 		}
 
 		public static bool WillLog(System.Enum feature, string message) {
