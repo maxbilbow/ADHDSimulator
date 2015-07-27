@@ -29,6 +29,8 @@ namespace Procrastinate
 
         private void Update()
         {
+			if (GameController.current.isPaused)
+				return;
             // Make sure the user pressed the mouse down
             if (!Input.GetMouseButtonDown(0))
             {
