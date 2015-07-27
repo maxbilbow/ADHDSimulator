@@ -115,7 +115,7 @@ namespace RMX {
 	
 		public static bool ShouldDebug(System.Enum feature) {
 			if (Singletons.GameControllerInitialized) {
-				return current.IsDebugging(feature);
+				return _current.IsDebugging(feature);
 			}
 			throw new UnityException ("Setting should be initialized by now (Testing: " + feature);
 			

@@ -5,9 +5,9 @@ using Procrastinate;
 using RMX;  namespace Procrastinate {
 	public class ClockSpawner : RMX.Singletons.ASingleton<ClockSpawner>, EventListener {
 
-		public List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
 
 
+		public static List<ClockBehaviour> clocks = new List<ClockBehaviour> ();
 
 		public enum SpawnMode {
 			Multiply, Inflate
@@ -73,7 +73,7 @@ using RMX;  namespace Procrastinate {
 	
 
 
-		public Vector3 SpawnPoint {
+		public static Vector3 SpawnPoint {
 			get {
 				Vector3 pos;
 				try {
@@ -93,7 +93,7 @@ using RMX;  namespace Procrastinate {
 			}
 		}
 
-		int forTouch = 0;
+		static int forTouch = 0;
 		bool Spawn() {
 			if (firstLoad) {
 				firstLoad = false;

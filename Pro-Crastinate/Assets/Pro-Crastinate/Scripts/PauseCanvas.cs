@@ -117,8 +117,8 @@ namespace Procrastinate {
 //			_canvasReady = true;
 		}
 
-		static void toggleInfo() {
-			current.information = !current.information;
+		void toggleInfo() {
+			information = !information;
 		}
 
 		bool information = false;	

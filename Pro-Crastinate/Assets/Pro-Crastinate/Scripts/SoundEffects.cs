@@ -34,13 +34,13 @@ namespace Procrastinate {
 		}
 
 		void Play(string name) {
-			var track = current.tracks [name.ToLower ()];
+			var track = tracks [name.ToLower ()];
 			if (!track.isPlaying) 
 				track.Play ();
 		}
 
 		void Play(string name, ulong delay) {
-			current.tracks [name.ToLower ()].Play (delay);
+			tracks [name.ToLower ()].Play (delay);
 		}
 
 		public override void OnEventDidStart(System.Enum theEvent, object info) {

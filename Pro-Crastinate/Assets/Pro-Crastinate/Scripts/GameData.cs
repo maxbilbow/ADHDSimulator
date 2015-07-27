@@ -12,8 +12,6 @@ namespace Procrastinate {
 		/// <value><c>true</c> if new session; otherwise, <c>false</c>.</value>
 	
 
-
-
 		static float totalTime {
 			get {
 				return SavedData.Get<float>(UserData.gd_total_time_Wasted);

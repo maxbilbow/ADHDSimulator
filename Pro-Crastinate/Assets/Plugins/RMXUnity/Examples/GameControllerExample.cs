@@ -8,7 +8,17 @@ namespace RMX.Examples {
 	}
 	public class GameControllerExample : AGameController<GameControllerExample> {
 
-
+		/// <summary>
+		/// Gets the current singleton as a public static variable but delegating from _current (protected)
+		/// _current initializes the singlton if not already initialized 
+		/// so this should not be called before Start(), especially if the script is attached to a GameObject in the editor.
+		/// </summary>
+		/// <value>The current GameControllerExample singleton.</value>
+		public static GameControllerExample Current {
+			get {
+				return _current;
+			}
+		}
 
 		public bool DebugCustomTest;
 		/// <summary>

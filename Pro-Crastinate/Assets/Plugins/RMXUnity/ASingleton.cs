@@ -77,7 +77,13 @@ namespace RMX
 				}
 			}
   	
-			public static T current {
+			/// <summary>
+			/// Gets the current singleton as a protected static variable that may be delegated in a subclass.
+			/// _current initializes the singlton if not already initialized 
+			/// so this should not be called before Start(), especially if the script is attached to a GameObject in the editor.
+			/// </summary>
+			/// <value>The current GameControllerExample singleton.</value>
+			protected static T _current {
 				get {
 					if (IsInitialized) {
 						return _singleton as T;
@@ -90,6 +96,7 @@ namespace RMX
 					}
 				}
 			}
+
 
 			const string tempName = "324329hrNhfeuwh9";
 			private bool _destroyed = false;
@@ -135,44 +142,57 @@ namespace RMX
 					Debug.LogWarning ("GameController should be initialized before " + this.GetType().Name);
 			}
 
-			protected virtual bool WillInitialize {
-				get {
-					return true;
-				}
+			protected enum Init {
+				Continue, DestroyScript, DestroyCompletely
+			}
 
+			protected virtual Init WillInitialize {
+				get {
+					return Init.Continue;
+				}
 			}
 			/// <summary>
 			/// Checks whether a singleton already exists. If so, object is destroyed.
 			/// Otherwise it checks whether the EventListener methods have been overriden. If so, the object is added to the global EventListeners.
 			/// </summary>
 			protected override void Awake() {
-				if (!WillInitialize) {
+				var message = "__new__ <color=lightblue>" + this.GetType().Name + "</color>()";
+				switch (WillInitialize) {
+				case Init.DestroyCompletely:
+					Destroy (this);
+					Destroy (gameObject);
 					_destroyed = true;
 					return;
-				}
-				var message = "__new__ <color=lightblue>" + this.GetType().Name + "</color>()";
-				if (_singleton == null) {
-					DontDestroyOnLoad (gameObject);
-					_singleton = this as T;// as T;
-					MainInitCheck();
-					Bugger.AddToWatchList(this);
-					base.Awake();
-				} 
-				else if (_singleton != this) {
-					if (gameObject.name == tempName) {// gameObject.name == this.GetType().Name &&
-						message += " -- <color=red> DELETING REDUNDANT " + this.GetType().Name + "</color>()";
-						_destroyed = true;
-						Destroy (gameObject);
-						Destroy (this);
-					} else {
-						message += " -- <color=orange> DELETING REDUNDANT ASingleton: </color> " + this.GetType().Name + "</color>()";
-						_destroyed = true;
-						Destroy(this);
+				case Init.DestroyScript:
+					Destroy (this);
+					_destroyed = true;
+					return;
+				case Init.Continue:
+					if (_singleton == null) {
+						DontDestroyOnLoad (gameObject);
+						_singleton = this as T;// as T;
+						MainInitCheck ();
+						Bugger.AddToWatchList (this);
+						_isInitialized = true;
+						base.Awake ();
+					} else if (_singleton != this) {
+						if (gameObject.name == tempName) {// gameObject.name == this.GetType().Name &&
+							message += " -- <color=red> DELETING REDUNDANT " + this.GetType ().Name + "</color>()";
+							_destroyed = true;
+							Destroy (gameObject);
+							Destroy (this);
+						} else {
+							message += " -- <color=orange> DELETING REDUNDANT ASingleton: </color> " + this.GetType ().Name + "</color>()";
+							_destroyed = true;
+							Destroy (this);
+						}
 					}
+
+					break;
 				}
 				if (Bugger.WillLog (RMXTests.Singletons, message))
 					Debug.Log (Bugger.Last);
-				_isInitialized = true;
+
 			}
 
 		}

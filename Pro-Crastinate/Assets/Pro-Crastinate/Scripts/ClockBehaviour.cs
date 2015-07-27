@@ -19,6 +19,7 @@ namespace Procrastinate {
 		public Vector3 lastScale = Vector3.zero;
 		public float inflationSpeed = 0.1f;
 
+
 		public bool didPop {
 			get {
 				inflationSpeed *= 0.975f;
@@ -59,7 +60,7 @@ namespace Procrastinate {
 		public static int VisibleClockCount {
 			get {
 				int count = 0;
-				foreach (ClockBehaviour clock in ClockSpawner.current.clocks) {
+				foreach (ClockBehaviour clock in ClockSpawner.clocks) {
 					if (clock.isOnScreen) {
 						count++;
 					}
@@ -109,7 +110,7 @@ namespace Procrastinate {
 			var clock = clone.AddComponent<ClockBehaviour> ();
 			clock.MaxTimeOffScreen = Random.Range (0, 10);
 //			clock.life
-			clock.startingPoint = ClockSpawner.current.SpawnPoint;
+			clock.startingPoint = ClockSpawner.SpawnPoint;
 
 
 			clock.Reset ();
@@ -117,7 +118,7 @@ namespace Procrastinate {
 		}
 
 		public static List<ClockBehaviour> CheckVisibleClocks() {
-			return ClockSpawner.current.clocks.FindAll (IsVisible);
+			return ClockSpawner.clocks.FindAll (IsVisible);
 		}
 	
 //		public delegate void dfff;// = UpdateVisibleClockCount;
@@ -129,7 +130,7 @@ namespace Procrastinate {
 				isOriginal = true;
 			} 
 			
-			ClockSpawner.current.clocks.Add (this);
+			ClockSpawner.clocks.Add (this);
 
 			if (MaxTimeOffScreen < 2) {
 				MaxTimeOffScreen = 2;
@@ -137,7 +138,7 @@ namespace Procrastinate {
 
 			if (original != this) {
 				lifeSpan = Random.Range (0, MaxTimeOffScreen);
-				startingPoint = ClockSpawner.current.SpawnPoint;
+				startingPoint = ClockSpawner.SpawnPoint;
 			} 
 
 			if (startingPoint == Vector3.zero && transform.position != Vector3.zero) {
@@ -149,7 +150,7 @@ namespace Procrastinate {
 		protected  void OnDestroy(){
 //			base.OnDestroy ();
 			if (ClockSpawner.IsInitialized)
-				ClockSpawner.current.clocks.Remove (this);
+				ClockSpawner.clocks.Remove (this);
 		}
 
 		// Update is called once per frame

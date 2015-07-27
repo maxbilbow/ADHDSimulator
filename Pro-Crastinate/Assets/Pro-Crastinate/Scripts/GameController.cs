@@ -164,6 +164,11 @@ namespace Procrastinate {
 		
 		}
 
+		public static GameController current {
+			get {
+				return _current;
+			}
+		}
 		void Update() {
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
