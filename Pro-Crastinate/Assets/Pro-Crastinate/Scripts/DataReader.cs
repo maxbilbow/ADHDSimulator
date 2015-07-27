@@ -76,12 +76,14 @@ namespace Procrastinate
 				InitDB ();
 		}
 		void InitDB() {
-			try {
-				_activities = CsvReader.Read (Database);
-				_ready = _activities != null && _activities.Count > 0;
-			} catch (Exception e) {
-				if (Bugger.WillLog (RMXTests.Exceptions, e.Message ) || Bugger.WillLog (RMXTests.Database, e.Message ))
-					Debug.LogWarning (Bugger.Last);
+			if (Database != null) {
+				try {
+					_activities = CsvReader.Read (Database);
+					_ready = _activities != null && _activities.Count > 0;
+				} catch (Exception e) {
+					if (Bugger.WillLog (RMXTests.Exceptions, e.Message) || Bugger.WillLog (RMXTests.Database, e.Message))
+						Debug.LogWarning (Bugger.Last);
+				}
 			}
 		}
 

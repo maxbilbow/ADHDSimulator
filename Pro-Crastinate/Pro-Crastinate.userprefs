@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/GameData.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Pro-Crastinate/Scripts/DataReader.cs">
     <Files>
       <File FileName="Assets/Plugins/RMXUnity/CsvReader.cs" Line="1" Column="1" />
       <File FileName="Assets/Pro-Crastinate/Scripts/GameController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="148" Column="42" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/PauseCanvas.cs" Line="1" Column="1" />
       <File FileName="Assets/Pro-Crastinate/Scripts/GameData.cs" Line="114" Column="1" />
-      <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="61" Column="49" />
+      <File FileName="Assets/Pro-Crastinate/Scripts/DataReader.cs" Line="87" Column="5" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,7 +14,7 @@
           <Node name="Assembly-CSharp" expanded="True">
             <Node name="Pro-Crastinate" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="GameData.cs" selected="True" />
+                <Node name="DataReader.cs" selected="True" />
               </Node>
             </Node>
           </Node>
