@@ -130,17 +130,12 @@ namespace Procrastinate {
 
 		string _wychd;
 
-//		void OnApplicationFocus(bool focusStatus) {
-//			if (!focusStatus) {
-//				PauseGame (true, null);
-//			}
-//		}
-
 		void Update () {
 			if (canvas != null)
 				canvas.enabled = GameController.current.isPaused;
 		}
-		//		bool newSession = true;
+
+
 		void OnGUI(){
 			if (canvas.enabled) {
 				if (_wychd == null) {// && _timeText == null) {

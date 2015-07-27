@@ -51,9 +51,6 @@ namespace Procrastinate {
 		}
 
 
-	
-
-//		public delegate ISingleton LateInit();
 
 
 		protected override void StartSingletons() {

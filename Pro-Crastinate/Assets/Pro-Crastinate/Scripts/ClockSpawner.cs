@@ -54,10 +54,9 @@ using RMX;  namespace Procrastinate {
 						if (Input.touchCount == 2) {
 							forTouch = 1;
 							if (!inflatableClock) {
-						WillBeginEvent(Event.SpawnInflatableClock);
+								WillBeginEvent(Event.SpawnInflatableClock);
 								inflatableClock = ClockBehaviour.New();
-						DidFinishEvent(Event.SpawnInflatableClock, inflatableClock);
-		//						inflatableClock.lastScale = inflatableClock.transform.localScale;
+								DidFinishEvent(Event.SpawnInflatableClock, inflatableClock);
 								inflatableClock.transform.localScale = new Vector3(0.1f,0.1f,0.1f);
 
 							} else {
