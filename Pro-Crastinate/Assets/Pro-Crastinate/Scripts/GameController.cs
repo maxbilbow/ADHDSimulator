@@ -14,7 +14,7 @@ namespace Procrastinate {
 		
 		public float FingerSize = 0.3f;
 		public ClockSpawner.SpawnMode ClockSpawnMode;// = ClockSpawner.SpawnMode.Inflate;
-		 bool willPauseOnLoad = false;
+		 bool _willPauseOnLoad = false;
 		public bool newPersonalBest = false;
 
 		public float updateScoresEvery = 1f;
@@ -110,9 +110,9 @@ namespace Procrastinate {
 
 
 		public void PauseGame(bool Pause) {
-			if (willPauseOnLoad) {
+			if (_willPauseOnLoad) {
 				PauseGame (true, Event.FirstPause);
-				willPauseOnLoad = false;
+				_willPauseOnLoad = false;
 			} else {
 				PauseGame(true, null);
 			}
@@ -146,7 +146,7 @@ namespace Procrastinate {
 			} else if (!pause && isPaused) {
 				WillBeginEvent (RMX.Event.ResumeSession, args);
 				Time.timeScale = 1;
-				willPauseOnLoad = false;
+				_willPauseOnLoad = false;
 				DidFinishEvent (RMX.Event.ResumeSession, args);
 			} else if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():args))) {
 					Debug.LogWarning ("Superflouous PauseGame(" + pause + ") call");

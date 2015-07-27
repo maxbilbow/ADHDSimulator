@@ -26,7 +26,7 @@ namespace RMX
 	{
 		private const char DoubleQuote = '"';
 		private const char Comma = ',';
-		static public readonly Encoding Windows1252Encoding = Encoding.GetEncoding(1252);
+//		static public readonly Encoding Windows1252Encoding = Encoding.GetEncoding(1252);
 		
 
 
@@ -74,8 +74,12 @@ namespace RMX
 		/// <returns></returns>
 		static public List<List<string> > Read(TextAsset file)
 		{
-			if (file == null)
-				throw new System.NullReferenceException ("Database file is null");
+			if (file == null) {
+				if (Bugger.WillLog (RMXTests.Exceptions, "Database file is null (in CsvReader)"))
+					Debug.LogWarning (Bugger.Last);
+				throw new Exception("DB was null");
+			}
+
 			var csvLines = file.text.Split ('\n');//System.IO.File.ReadAllLines(path, encoding);
 			var csvRecords = new List<List<string> >();
 			
@@ -94,12 +98,12 @@ namespace RMX
 		/// </summary>
 		/// <param name="path">The path.</param>
 		/// <returns></returns>
-		static public List<List<string> > Read(string path)
-		{
-			throw new System.Exception ("Balls.");
-//			return Read(path, Encoding.UTF8);
-
-		}
+//		static public List<List<string> > Read(string path)
+//		{
+//			throw new System.Exception ("Balls.");
+////			return Read(path, Encoding.UTF8);
+//
+//		}
 		
 		/// <summary>
 		/// Reads a single line from the the currently open reader.
@@ -124,9 +128,9 @@ namespace RMX
 		/// <param name="path">The path.</param>
 		/// <param name="encoding">The encoding.</param>
 		/// <returns></returns>
-		static public List<List<string> > Read(string path, Encoding encoding)
-		{
-			throw new System.Exception("Depricated");
+//		static public List<List<string> > Read(string path, Encoding encoding)
+//		{
+//			throw new System.Exception("Depricated");
 //
 //			var csvLines = System.IO.File.ReadAllLines(path, encoding);
 //			var csvRecords = new List<List<string> >();
@@ -139,16 +143,16 @@ namespace RMX
 //			}
 //			
 //			return csvRecords;
-		}
+//		}
 		
 		/// <summary>
 		/// Parses the line into a list of strings.
 		/// </summary>
 		/// <param name="line">The line.</param>
 		/// <returns></returns>
-		public static List<string> ParseLine(string line)
+		public static CsvRecord ParseLine(string line)
 		{
-			var values = new List<string>();
+			var values = new CsvRecord();
 			var currentValue = new StringBuilder(1024);
 			char currentChar;
 			Nullable<char> nextChar = null;

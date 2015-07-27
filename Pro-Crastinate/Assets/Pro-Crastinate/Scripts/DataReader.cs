@@ -7,7 +7,7 @@ using RMX;
 namespace Procrastinate
 {
 	public class Wychd : List<string> {}
-	public static class DataReader // : RMX.Singletons.ASingleton<DataReader>
+	public class DataReader : RMX.Singletons.ASingleton<DataReader>
 	{
 		public const float variation = 0.5f;
 		public const int csv_time = 2;
@@ -65,12 +65,33 @@ namespace Procrastinate
 				throw e;
 			} 
 		}
+		List<List<string> > _activities;
+
+		bool _ready = false;
+		void Start() {
+			InitDB ();
+		}
+		void Update(){
+			if (!_ready)
+				InitDB ();
+		}
+		void InitDB() {
+			try {
+				_activities = CsvReader.Read (Database);
+				_ready = _activities != null && _activities.Count > 0;
+			} catch (Exception e) {
+				if (Bugger.WillLog (RMXTests.Exceptions, e.Message ) || Bugger.WillLog (RMXTests.Database, e.Message ))
+					Debug.LogWarning (Bugger.Last);
+			}
+		}
+
 		
-		private static List<List<string>> GetActivities(float inTime) {
+		private static List<List<string> > GetActivities(float inTime) {
 //			Debug.Log (GameController.control.database.name);
 			var log = string.Format("Getting activities for time: {0:N2} Min", (inTime / 60));
+		
 			try {
-				var reader = CsvReader.Read (Database);
+				var reader = _current._activities != null ? _current._activities : CsvReader.Read (Database);
 		
 			
 				var list = reader.FindAll(match => {
@@ -109,6 +130,7 @@ namespace Procrastinate
 
 		public static Wychd GetActivityList(float forTime) {
 			var log = string.Format("Getting activities for time: {0:N2} Min", (forTime / 60));
+
 			Wychd list = new Wychd ();
 			List<List<string>> activities;
 			try {
@@ -123,6 +145,7 @@ namespace Procrastinate
 				}
 				if (Bugger.WillLog (RMXTests.Database, log ))
 					Debug.Log (Bugger.Last);// + ": " + match[csv_time]);
+
 				return list;
 			}catch (Exception e) {
 				log += "\n FAIL: " + e.Message;
