@@ -137,7 +137,6 @@ namespace Procrastinate {
 			}
 		}
 		public override void PauseGame(bool pause, object args) {
-			/*
 			if (Bugger.WillLog (RMXTests.Misc, "Pause: " + pause + ", args: " + (args != null ? args.ToString():"none")))
 				Debug.Log (Bugger.Last);
 			if (pause && !isPaused) {
@@ -153,7 +152,6 @@ namespace Procrastinate {
 					Debug.LogWarning ("Superflouous PauseGame(" + pause + ") call");
 			}
 			_firstLoad = false;
-			*/
 		}
 
 		public override bool IsDebugging(System.Enum feature) {
