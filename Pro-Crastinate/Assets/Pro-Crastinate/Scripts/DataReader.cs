@@ -9,7 +9,7 @@ namespace Procrastinate
 	public class Wychd : List<string> {}
 	public static class DataReader // : RMX.Singletons.ASingleton<DataReader>
 	{
-		public const float variation = 0.2f;
+		public const float variation = 0.5f;
 		public const int csv_time = 2;
 		public const int csv_text = 1;
 		public const int csv_approved = 3;
