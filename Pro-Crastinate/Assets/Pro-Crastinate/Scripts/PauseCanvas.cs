@@ -105,6 +105,10 @@ namespace Procrastinate {
 
 
 			infoButton = GetComponentInChildren<Button> ();
+			if (infoButton == null) {
+				//TODO: Create button
+				infoButton = gameObject.AddComponent<Button>();
+			}
 			infoButton.onClick.AddListener (toggleInfo);
 //			if (GameController.current.willPauseOnLoad) {
 //				BuildWychd();

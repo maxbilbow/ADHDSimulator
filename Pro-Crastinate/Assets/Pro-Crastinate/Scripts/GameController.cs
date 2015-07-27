@@ -90,8 +90,10 @@ namespace Procrastinate {
 
 		protected override void PostStart ()
 		{
-			if (safeMode)
+			if (safeMode) {
 				StartMobile ();
+//				Bugger.Initialize();
+			}
 		}
 		
 		void OnApplicationFocus(bool focusStatus) {
