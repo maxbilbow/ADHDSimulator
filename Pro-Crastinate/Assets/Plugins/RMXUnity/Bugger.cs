@@ -89,12 +89,12 @@ namespace RMX
 		static List<IRMXObject> watchList = new List<IRMXObject> ();
 
 		public static void AddToWatchList(IRMXObject o) {
-			if (Singletons.GameController.BuildForRelease)
-				return;
-			else if (o is ISingleton)
-				singletons.Add (o as ISingleton);
-			else
-				watchList.Add (o);
+			if (!Singletons.GameControllerInitialized || !Singletons.GameController.BuildForRelease) {
+				if (o is ISingleton)
+					singletons.Add (o as ISingleton);
+				else
+					watchList.Add (o);
+			} 
 		}
 
 
@@ -205,7 +205,7 @@ namespace RMX
 			{
 				get {
 					if (Singletons.GameController.BuildForRelease || !Singletons.GameController.DebugHUD) {
-						NotificationCenter.RemoveListener(this);
+//						NotificationCenter.RemoveListener(this);
 						return Init.DestroyCompletely;
 					} else {
 						return Init.Continue;
@@ -242,35 +242,46 @@ namespace RMX
 			protected override Init WillInitialize
 			{
 				get {
-					if (Singletons.GameController.BuildForRelease || !Singletons.GameController.DebugHUD) {
-						NotificationCenter.RemoveListener(this);
-						return Init.DestroyCompletely;
-					} else {
+					try {
+						if (Singletons.GameController.BuildForRelease || !Singletons.GameController.DebugHUD) {
+	//						NotificationCenter.RemoveListener(this);
+							return Init.DestroyCompletely;
+						} else {
+							return Init.Continue;
+						}
+					} catch (Exception e) {
+						Debug.LogWarning(e.Message);
 						return Init.Continue;
 					}
 				}
 			}
 			// Use this for initialization
 			void Start () {
-				Hide ();
-				if (!Singletons.GameController.DebugHUD) {
-					showButton.SetActive(false);
-				}
+				Show ();
 			}
 			
-			bool _show = false;
+			public bool _show = true;
 			public void Show() {
 				_show = true;
-				showButton.SetActive (false);
-				hideButton.SetActive (true);
+				try {
+					showButton.SetActive (false);
+					hideButton.SetActive (Singletons.GameController.DebugHUD);
+				} catch {
+					Debug.LogWarning("No Debug Button Present");
+				}
 				//			debugPanel.transform.position = new Vector3 (-slideX, 0, 0);
 				//			info.text = "Width: " + Camera.main.pixelWidth.ToString();
 			}
 			
 			public void Hide() {
 				_show = false;
-				showButton.SetActive (true);
-				hideButton.SetActive (false);
+				try {
+					showButton.SetActive (Singletons.GameController.DebugHUD);
+					hideButton.SetActive (false);
+				} catch {
+					Debug.LogWarning("No Debug Button Present");
+				}
+
 				//			debugPanel.transform.position = new Vector3 (slideX, 0, 0);
 				//			info.text = "Width: " + Camera.main.pixelWidth.ToString();
 			}
