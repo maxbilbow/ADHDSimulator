@@ -46,9 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
-     <None Include="Assets\Plugins\RabbitMQ.Client\obj\Release\RabbitMQ.Client.csproj.FileListAbsolute.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Plugins\RabbitMQ.Client\build\bin\RabbitMQ.Client.xml" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -91,11 +89,8 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
- <Reference Include="RabbitMQ.Client">
- <HintPath>/Users/Max/Gits/ADHDSimulator/Pro-Crastinate/Assets/Plugins/RabbitMQ.Client/obj/Release/RabbitMQ.Client.dll</HintPath>
- </Reference>
- <Reference Include="RabbitMQ.Client">
- <HintPath>/Users/Max/Gits/ADHDSimulator/Pro-Crastinate/Assets/Plugins/RabbitMQ.Client/build/bin/RabbitMQ.Client.dll</HintPath>
+ <Reference Include="websocket-sharp">
+ <HintPath>/Users/Max/Gits/Pro-Crastinate/Assets/Plugins/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -106,6 +101,8 @@
       <Project>{0C52FAFF-2FC8-A63D-8F11-768CCAA7E4BE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{D22B1380-28A4-D024-4E79-078C00C02FDE}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{208CA616-8BCE-2584-E528-2135159C8114}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

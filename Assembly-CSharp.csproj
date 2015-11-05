@@ -45,39 +45,35 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pro-Crastinate\Scripts\ABonus.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\BodyBecomesActive.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\ClockBehaviour.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\ClockSpawner.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\DataReader.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\DebugHUD.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\DragRigidbody.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\Events.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\GameCenter.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\GameController.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\GameData.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\GoAwayText.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\Gyro.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\PauseCanvas.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\RabbitMQClient.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\SoundEffects.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\Tests.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\Timer.cs" />
-     <Compile Include="Assets\Pro-Crastinate\Scripts\Version.cs" />
-     <None Include="Assets\Plugins\RabbitMQ.Client\obj\Release\RabbitMQ.Client.csproj.FileListAbsolute.txt" />
+     <Compile Include="Assets\Example\EchoTest.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\ABonus.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\BodyBecomesActive.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\ClockBehaviour.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\ClockSpawner.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\DataReader.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\DebugHUD.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\DragRigidbody.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\Events.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\GameCenter.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\GameController.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\GameData.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\GoAwayText.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\Gyro.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\PauseCanvas.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\RabbitMQClient.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\SoundEffects.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\Tests.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\Timer.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\Version.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
-     <None Include="Assets\Plugins\RabbitMQ.Client\build\bin\RabbitMQ.Client.xml" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="RabbitMQ.Client">
- <HintPath>/Users/Max/Gits/ADHDSimulator/Pro-Crastinate/Assets/Plugins/RabbitMQ.Client/obj/Release/RabbitMQ.Client.dll</HintPath>
- </Reference>
- <Reference Include="RabbitMQ.Client">
- <HintPath>/Users/Max/Gits/ADHDSimulator/Pro-Crastinate/Assets/Plugins/RabbitMQ.Client/build/bin/RabbitMQ.Client.dll</HintPath>
+ <Reference Include="websocket-sharp">
+ <HintPath>/Users/Max/Gits/Pro-Crastinate/Assets/Plugins/websocket-sharp.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
