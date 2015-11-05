@@ -5,7 +5,7 @@ namespace Procrastinate {
 	public abstract class ABonus<TComponent,T> : RMXObject
 	where T : System.IEquatable<T>
 	where TComponent : Object {
-
+//		 msa
 //		public enum UserData {
 //			CurrentSession, CurrentProcrastination, Total
 		//		}
