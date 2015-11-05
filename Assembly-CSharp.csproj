@@ -48,7 +48,7 @@
      <Compile Include="Assets\Example\EchoTest.cs" />
      <Compile Include="Assets\Pro-Crastinate\c#\ABonus.cs" />
      <Compile Include="Assets\Pro-Crastinate\c#\BodyBecomesActive.cs" />
-     <Compile Include="Assets\Pro-Crastinate\c#\ClockBehaviour.cs" />
+     <Compile Include="Assets\Pro-Crastinate\c#\ClockObject.cs" />
      <Compile Include="Assets\Pro-Crastinate\c#\ClockSpawner.cs" />
      <Compile Include="Assets\Pro-Crastinate\c#\DataReader.cs" />
      <Compile Include="Assets\Pro-Crastinate\c#\DebugHUD.cs" />
