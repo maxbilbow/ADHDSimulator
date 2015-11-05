@@ -1,0 +1,6 @@
+C:\cygwin64\var\tmp\rabbit-build.9429\rabbitmq-public-umbrella\rabbitmq-dotnet-client\projects\client\RabbitMQ.Client\build\bin\RabbitMQ.Client.xml
+C:\cygwin64\var\tmp\rabbit-build.9429\rabbitmq-public-umbrella\rabbitmq-dotnet-client\projects\client\RabbitMQ.Client\build\bin\RabbitMQ.Client.dll
+C:\cygwin64\var\tmp\rabbit-build.9429\rabbitmq-public-umbrella\rabbitmq-dotnet-client\projects\client\RabbitMQ.Client\build\bin\RabbitMQ.Client.pdb
+C:\cygwin64\var\tmp\rabbit-build.9429\rabbitmq-public-umbrella\rabbitmq-dotnet-client\projects\client\RabbitMQ.Client\obj\Release\RabbitMQ.Client.csprojResolveAssemblyReference.cache
+C:\cygwin64\var\tmp\rabbit-build.9429\rabbitmq-public-umbrella\rabbitmq-dotnet-client\projects\client\RabbitMQ.Client\obj\Release\RabbitMQ.Client.dll
+C:\cygwin64\var\tmp\rabbit-build.9429\rabbitmq-public-umbrella\rabbitmq-dotnet-client\projects\client\RabbitMQ.Client\obj\Release\RabbitMQ.Client.pdb
